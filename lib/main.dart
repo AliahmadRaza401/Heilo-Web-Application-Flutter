@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/screens/authentication/Intro/intro.dart';
+import 'package:heilo/screens/student%20profile/student_profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
               child: widget!,
             );
           },
-          home: const Intro(),
+          // home: const Intro(),
+          home: const StudentProfile(),
         );
       },
     );

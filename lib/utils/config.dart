@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-    static const blue = Color(0xff89ECFD);
+  static const blue = Color(0xff89ECFD);
   static const green = Color(0xff33E8A1);
   static const greenDark = Color(0xff01B489);
-  
+
   static const customGreen = Color(0xff4BC48F);
   static const customDarkGreen = Color(0xff00AD61);
   static const customBlue = Color(0xff60BCDF);
