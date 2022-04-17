@@ -25,29 +25,37 @@ class _StudentProfileState extends State<StudentProfile> {
             controller: page,
             style: SideMenuStyle(
               openSideMenuWidth: 240.w,
+              compactSideMenuWidth: 60.w,
               displayMode: SideMenuDisplayMode.auto,
-              hoverColor: AppColors.customWhite,
+              hoverColor: AppColors.customSkimColor,
               selectedColor: AppColors.customWhite,
-              selectedTitleTextStyle:
-                  const TextStyle(color: AppColors.customBlack),
+              selectedTitleTextStyle: TextStyle(
+                color: AppColors.customBlack,
+                fontWeight: FontWeight.bold,
+                fontSize: 16.sp,
+              ),
               selectedIconColor: AppColors.customBlack,
-              // decoration: BoxDecoration(
-              //   borderRadius: BorderRadius.all(Radius.circular(10)),
-              // ),
-              // backgroundColor: Colors.blueGrey[700]
+              unselectedIconColor: AppColors.customWhite,
+              unselectedTitleTextStyle: TextStyle(
+                color: AppColors.customWhite,
+                fontWeight: FontWeight.normal,
+                fontSize: 16.sp,
+              ),
             ),
-            title: Column(
-              children: [
-                ConstrainedBox(
-                  constraints: BoxConstraints(
-                    maxHeight: 46.h,
-                    maxWidth: 96.w,
-                  ),
-                  child: Image.asset(
-                    'assets/png/logoWhite.png',
-                  ),
+            title: Padding(
+              padding: EdgeInsets.only(
+                top: 50.h,
+                bottom: 80.h,
+              ),
+              child: ConstrainedBox(
+                constraints: BoxConstraints(
+                  maxHeight: 46.h,
+                  maxWidth: 96.w,
                 ),
-              ],
+                child: Image.asset(
+                  'assets/png/logoWhite.png',
+                ),
+              ),
             ),
             footer: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -84,11 +92,7 @@ class _StudentProfileState extends State<StudentProfile> {
                 onTap: () {
                   page.jumpToPage(0);
                 },
-                icon: Icon(Icons.home),
-                badgeContent: Text(
-                  '3',
-                  style: TextStyle(color: AppColors.customWhite),
-                ),
+                icon: const Icon(Icons.home),
               ),
               SideMenuItem(
                 priority: 1,
