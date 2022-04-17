@@ -16,7 +16,7 @@ Widget inputTextField(context, label, myController,
     color: AppColors.customGrey,
     shadowColor: AppColors.customGrey,
     elevation: 2,
-    borderRadius: BorderRadius.circular(AppSizes().dynamicWidth(context, 1)),
+    borderRadius: BorderRadius.circular(AppSizes.dynamicWidth(context, 1)),
     child: TextFormField(
       autovalidateMode: AutovalidateMode.onUserInteraction,
       validator: (function == "")
@@ -31,10 +31,10 @@ Widget inputTextField(context, label, myController,
       cursorColor:
           white == true ? AppColors.customWhite : AppColors.customBlack,
       cursorWidth: 2.0,
-      cursorHeight: AppSizes().dynamicHeight(context, .03),
+      cursorHeight: AppSizes.dynamicHeight(context, .03),
       style: TextStyle(
         color: white == true ? AppColors.customWhite : AppColors.customBlack,
-        fontSize: AppSizes().dynamicWidth(context, .04),
+        fontSize: AppSizes.dynamicWidth(context, .04),
       ),
       decoration: InputDecoration(
         labelText: label,
@@ -42,7 +42,7 @@ Widget inputTextField(context, label, myController,
         suffixIcon: icon == true
             ? Icon(
                 iconData,
-                size: AppSizes().dynamicHeight(context, 0.02),
+                size: AppSizes.dynamicHeight(context, 0.02),
                 color: AppColors.customGrey,
               )
             : const SizedBox(),
@@ -51,30 +51,30 @@ Widget inputTextField(context, label, myController,
                 white == true ? AppColors.customWhite : AppColors.customGrey),
         enabledBorder: OutlineInputBorder(
           borderRadius:
-              BorderRadius.circular(AppSizes().dynamicWidth(context, .1)),
+              BorderRadius.circular(AppSizes.dynamicWidth(context, .1)),
           borderSide: BorderSide(
-              width: AppSizes().dynamicWidth(context, 0.004),
+              width: AppSizes.dynamicWidth(context, 0.004),
               color:
                   white == true ? AppColors.customGrey : AppColors.customWhite),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius:
-              BorderRadius.circular(AppSizes().dynamicWidth(context, 1)),
+              BorderRadius.circular(AppSizes.dynamicWidth(context, 1)),
           borderSide: BorderSide(
-              width: AppSizes().dynamicWidth(context, 0.006),
+              width: AppSizes.dynamicWidth(context, 0.006),
               color:
                   white == true ? AppColors.customGrey : AppColors.customGreen),
         ),
         border: OutlineInputBorder(
           borderRadius:
-              BorderRadius.circular(AppSizes().dynamicWidth(context, 1)),
+              BorderRadius.circular(AppSizes.dynamicWidth(context, 1)),
           borderSide: BorderSide(
-              width: AppSizes().dynamicWidth(context, 0.004),
+              width: AppSizes.dynamicWidth(context, 0.004),
               color:
                   white == true ? AppColors.customGrey : AppColors.customWhite),
         ),
         contentPadding: EdgeInsets.symmetric(
-          horizontal: AppSizes().dynamicWidth(context, .05),
+          horizontal: AppSizes.dynamicWidth(context, .05),
         ),
       ),
     ),
@@ -103,10 +103,10 @@ Widget inputTextField3(context, label, myController,
     obscureText: password == true ? obscureText : false,
     cursorColor: white == true ? AppColors.customWhite : AppColors.customBlack,
     cursorWidth: 2.0,
-    cursorHeight: AppSizes().dynamicHeight(context, .03),
+    cursorHeight: AppSizes.dynamicHeight(context, .03),
     style: TextStyle(
       color: white == true ? AppColors.customWhite : AppColors.customBlack,
-      fontSize: AppSizes().dynamicWidth(context, .04),
+      fontSize: AppSizes.dynamicWidth(context, .04),
     ),
     maxLines: 5,
     decoration: InputDecoration(
@@ -115,7 +115,7 @@ Widget inputTextField3(context, label, myController,
       suffixIcon: icon == true
           ? Icon(
               iconData,
-              size: AppSizes().dynamicHeight(context, 0.02),
+              size: AppSizes.dynamicHeight(context, 0.02),
               color: AppColors.customGrey,
             )
           : const SizedBox(),
@@ -123,31 +123,31 @@ Widget inputTextField3(context, label, myController,
           color: white == true ? AppColors.customWhite : AppColors.customGrey),
       enabledBorder: OutlineInputBorder(
         borderRadius:
-            BorderRadius.circular(AppSizes().dynamicWidth(context, .01)),
+            BorderRadius.circular(AppSizes.dynamicWidth(context, .01)),
         borderSide: BorderSide(
-            width: AppSizes().dynamicWidth(context, 0),
+            width: AppSizes.dynamicWidth(context, 0),
             color:
                 white == true ? AppColors.customWhite : AppColors.customGrey),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius:
-            BorderRadius.circular(AppSizes().dynamicWidth(context, .01)),
+            BorderRadius.circular(AppSizes.dynamicWidth(context, .01)),
         borderSide: BorderSide(
-            width: AppSizes().dynamicWidth(context, 0.004),
+            width: AppSizes.dynamicWidth(context, 0.004),
             color:
                 white == true ? AppColors.customWhite : AppColors.customBlue),
       ),
       border: OutlineInputBorder(
         borderRadius:
-            BorderRadius.circular(AppSizes().dynamicWidth(context, 0.01)),
+            BorderRadius.circular(AppSizes.dynamicWidth(context, 0.01)),
         borderSide: BorderSide(
-            width: AppSizes().dynamicWidth(context, 0),
+            width: AppSizes.dynamicWidth(context, 0),
             color:
                 white == true ? AppColors.customWhite : AppColors.customGrey),
       ),
       contentPadding: EdgeInsets.symmetric(
-        horizontal: AppSizes().dynamicWidth(context, .05),
-        vertical: AppSizes().dynamicWidth(context, .025),
+        horizontal: AppSizes.dynamicWidth(context, .05),
+        vertical: AppSizes.dynamicWidth(context, .025),
       ),
     ),
   );

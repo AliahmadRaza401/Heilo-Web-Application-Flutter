@@ -12,7 +12,9 @@ Widget text(context, text, size, color,
     overflow: TextOverflow.ellipsis,
     style: TextStyle(
       color: color,
-      fontSize: AppSizes().dynamicWidth(context, size),
+      fontSize: size,
+      fontFamily: 'Poppins',
+      // fontSize: AppSizes.dynamicWidth(context, size),
       fontWeight: bold == true ? FontWeight.w600 : FontWeight.normal,
     ),
   );

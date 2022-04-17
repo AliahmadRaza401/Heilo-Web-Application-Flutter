@@ -15,23 +15,23 @@ Widget coloredButton(context, title, color,
   return GestureDetector(
     onTap: function == "" ? () {} : function,
     child: Container(
-      width: width == "" ? AppSizes().dynamicWidth(context, 1) : width,
-      height: height == "" ? AppSizes().dynamicHeight(context, .06) : height,
+      width: width == "" ? AppSizes.dynamicWidth(context, 1) : width,
+      height: height == "" ? AppSizes.dynamicHeight(context, .06) : height,
       decoration: color == AppColors.noColor
           ? BoxDecoration(
               color: color,
-              border: Border.all(width: 2, color: AppColors.customWhite),
+              border: Border.all(width: 2, color: Colors.white),
             )
           : BoxDecoration(
               color: color,
               borderRadius: BorderRadius.circular(
-                AppSizes().dynamicWidth(
+                AppSizes.dynamicWidth(
                   context,
                   1,
                 ),
               ),
               border: Border.all(
-                color: AppColors.customGreen,
+                color: AppColors.green,
                 width: 2,
               ),
             ),
@@ -42,16 +42,14 @@ Widget coloredButton(context, title, color,
                 children: [
                   Icon(
                     iconData,
-                    color: AppColors.customWhite,
-                    size: AppSizes().dynamicWidth(context, .05),
+                    color: Colors.white,
+                    size: AppSizes.dynamicWidth(context, .05),
                   ),
                   text(
                     context,
                     title,
                     fontSize,
-                    fontColor == true
-                        ? AppColors.customWhite
-                        : AppColors.customBlack,
+                    fontColor == true ? Colors.white : Colors.black,
                     bold: true,
                   ),
                 ],
@@ -60,9 +58,7 @@ Widget coloredButton(context, title, color,
                 context,
                 title,
                 fontSize,
-                fontColor == true
-                    ? AppColors.customWhite
-                    : AppColors.customBlack,
+                fontColor == true ? Colors.white : Colors.black,
                 bold: true,
               ),
       ),
@@ -77,18 +73,18 @@ Widget retry(context) {
       children: [
         // LottieBuilder.asset(
         //   "assets/retry.json",
-        //   width: dynamicWidth(context, 0.4),
+        //   widt dynamicWidth(context, 0.4),
         //   repeat: false,
         // ),
-        AppSizes().heightBox(context, 0.02),
+        AppSizes.heightBox(context, 0.02),
         text(context, "Check your internet or try again later", 0.03,
-            AppColors.customWhite),
-        AppSizes().heightBox(context, 0.1),
+            Colors.white),
+        AppSizes.heightBox(context, 0.1),
         coloredButton(
           context,
           "Retry",
-          AppColors.customWhite,
-          width: AppSizes().dynamicWidth(context, .4),
+          Colors.white,
+          width: AppSizes.dynamicWidth(context, .4),
           function: () {},
         ),
       ],
