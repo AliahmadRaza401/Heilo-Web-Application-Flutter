@@ -1,6 +1,7 @@
 import 'package:easy_sidemenu/easy_sidemenu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:heilo/screens/student%20profile/on_demand.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
@@ -142,18 +143,7 @@ class _StudentProfileState extends State<StudentProfile> {
               child: PageView(
                 controller: page,
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: AppColors.customWhite,
-                      borderRadius: BorderRadius.circular(30.r),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        'Dashboard',
-                        style: TextStyle(fontSize: 35),
-                      ),
-                    ),
-                  ),
+                  const OnDemand(),
                   Container(
                     decoration: BoxDecoration(
                       color: AppColors.customWhite,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/widgets/text_widget.dart';
 
 import '../utils/config.dart';
@@ -20,20 +21,17 @@ Widget coloredButton(context, title, color,
       decoration: color == AppColors.noColor
           ? BoxDecoration(
               color: color,
-              border: Border.all(width: 2, color: Colors.white),
+              // border: Border.all(width: 2, color: Colors.white),
             )
           : BoxDecoration(
               color: color,
               borderRadius: BorderRadius.circular(
-                AppSizes.dynamicWidth(
-                  context,
-                  1,
-                ),
+                10.r,
               ),
-              border: Border.all(
-                color: AppColors.green,
-                width: 2,
-              ),
+              // border: Border.all(
+              //   color: AppColors.green,
+              //   width: 2,
+              // ),
             ),
       child: Center(
         child: icon
@@ -58,7 +56,9 @@ Widget coloredButton(context, title, color,
                 context,
                 title,
                 fontSize,
-                fontColor == true ? Colors.white : Colors.black,
+                fontColor == true
+                    ? AppColors.customWhite
+                    : AppColors.customBlack,
                 bold: true,
               ),
       ),
