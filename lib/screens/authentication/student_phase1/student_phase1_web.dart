@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:heilo/screens/authentication/Popups/auth_popUp.dart';
 import 'package:heilo/screens/authentication/student_phase2/student_phase2.dart';
 import 'package:heilo/utils/app_routes.dart';
 import 'package:heilo/utils/config.dart';
@@ -42,32 +43,42 @@ class StudentPhase1Web extends StatelessWidget {
                       child: Row(
                         // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
-                            alignment: Alignment.center,
-                            width: 100.w,
-                            height: 25.h,
-                            decoration: BoxDecoration(
-                              color: AppColors.customWhite,
-                              borderRadius: BorderRadius.circular(20),
+                          InkWell(
+                                onTap: () {
+                              loginPopUp(context);
+                            },
+                            child: Container(
+                              alignment: Alignment.center,
+                              width: 100.w,
+                              height: 25.h,
+                              decoration: BoxDecoration(
+                                color: AppColors.customWhite,
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: text(
+                                  context, "LOG  IN", 18.sp, AppColors.blue,
+                                  bold: true),
                             ),
-                            child: text(
-                                context, "LOG  IN", 18.sp, AppColors.blue,
-                                bold: true),
                           ),
                           SizedBox(
                             width: 20,
                           ),
-                          Container(
-                            alignment: Alignment.center,
-                            width: 100.w,
-                            height: 25.h,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20),
+                          InkWell(
+                            onTap: () {
+                              signUpPopUp(context);
+                            },
+                            child: Container(
+                              alignment: Alignment.center,
+                              width: 100.w,
+                              height: 25.h,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: text(
+                                  context, "SIGN  UP", 18.sp, AppColors.blue,
+                                  bold: true),
                             ),
-                            child: text(
-                                context, "SIGN  UP", 18.sp, AppColors.blue,
-                                bold: true),
                           ),
                         ],
                       ),
