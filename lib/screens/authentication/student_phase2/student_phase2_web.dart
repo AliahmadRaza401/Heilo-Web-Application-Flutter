@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/screens/authentication/Popups/auth_popUp.dart';
+import 'package:heilo/screens/student%20profile/student_profile.dart';
 import 'package:heilo/utils/app_routes.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
+import 'package:heilo/utils/responsive.dart';
 import 'package:heilo/widgets/basic_widgets.dart';
 import 'package:heilo/widgets/text_widget.dart';
 
@@ -21,6 +23,9 @@ class StudentPhase2Web extends StatelessWidget {
             width: AppSizes.dynamicWidth(context, 1),
             height: AppSizes.dynamicHeight(context, 1),
             child: Column(
+              mainAxisAlignment: Responsive.isDesktop(context)
+                  ? MainAxisAlignment.spaceEvenly
+                  : MainAxisAlignment.start,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -41,7 +46,8 @@ class StudentPhase2Web extends StatelessWidget {
                             },
                             child: Container(
                               alignment: Alignment.center,
-                              width: 100.w,
+                              width:
+                                  Responsive.isDesktop(context) ? 100.w : 200.w,
                               height: 25.h,
                               decoration: BoxDecoration(
                                 color: AppColors.blue,
@@ -74,7 +80,8 @@ class StudentPhase2Web extends StatelessWidget {
                           ),
                           Container(
                             alignment: Alignment.center,
-                            width: 100.w,
+                            width:
+                                Responsive.isDesktop(context) ? 100.w : 200.w,
                             height: 25.h,
                             decoration: BoxDecoration(
                               color: AppColors.green,
@@ -89,8 +96,15 @@ class StudentPhase2Web extends StatelessWidget {
                     ),
                   ],
                 ),
+                Responsive.isDesktop(context)
+                    ? SizedBox(
+                        height: 40.h,
+                      )
+                    : SizedBox(),
                 Container(
-                  height: AppSizes.dynamicHeight(context, 0.8),
+                  height: Responsive.isDesktop(context)
+                      ? AppSizes.dynamicHeight(context, 0.8)
+                      : AppSizes.dynamicHeight(context, 0.5),
                   decoration: BoxDecoration(
                     // color: AppColors.green,
                     image: DecorationImage(
@@ -104,9 +118,21 @@ class StudentPhase2Web extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          TextBtn(title: "SSC"),
-                          TextBtn(title: "HSC"),
-                          TextBtn(title: "HSC"),
+                          InkWell(
+                              onTap: () {
+                                AppRoutes.push(context, StudentProfile());
+                              },
+                              child: TextBtn(title: "SSC")),
+                          InkWell(
+                              onTap: () {
+                                AppRoutes.push(context, StudentProfile());
+                              },
+                              child: TextBtn(title: "HSC")),
+                          InkWell(
+                              onTap: () {
+                                AppRoutes.push(context, StudentProfile());
+                              },
+                              child: TextBtn(title: "HSC")),
                         ],
                       ),
                     ],

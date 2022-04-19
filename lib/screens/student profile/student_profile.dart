@@ -1,7 +1,7 @@
 import 'package:easy_sidemenu/easy_sidemenu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:heilo/screens/student%20profile/on_demand.dart';
+import 'package:heilo/screens/student%20profile/onDemand/on_demand.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
@@ -25,8 +25,11 @@ class _StudentProfileState extends State<StudentProfile> {
           SideMenu(
             controller: page,
             style: SideMenuStyle(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
+              ),
               openSideMenuWidth: 250.w,
-              compactSideMenuWidth: 60.w,
+              compactSideMenuWidth: 50,
               displayMode: SideMenuDisplayMode.auto,
               hoverColor: AppColors.customSkimColor,
               selectedColor: AppColors.customWhite,
