@@ -108,7 +108,7 @@ class StudentPhase2Web extends StatelessWidget {
                   decoration: BoxDecoration(
                     // color: AppColors.green,
                     image: DecorationImage(
-                      image: AssetImage("assets/png/bg3.png"),
+                      image: AssetImage("assets/png/c3.png"),
                       fit: BoxFit.fill,
                     ),
                   ),

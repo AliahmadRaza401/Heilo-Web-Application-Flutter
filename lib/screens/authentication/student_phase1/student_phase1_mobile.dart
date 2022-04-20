@@ -24,7 +24,7 @@ class StudentPhase1Mobile extends StatelessWidget {
             decoration: BoxDecoration(
               // color: AppColors.green,
               image: DecorationImage(
-                image: AssetImage("assets/png/bg2.png"),
+                image: AssetImage("assets/png/c2.png"),
                 fit: BoxFit.fill,
               ),
             ),

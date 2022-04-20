@@ -99,7 +99,7 @@ class IntroWeb extends StatelessWidget {
             decoration: BoxDecoration(
               // color: Colors.amber,
               image: DecorationImage(
-                image: AssetImage("assets/png/bg1.png"),
+                image: AssetImage("assets/png/c1.png"),
                 fit: BoxFit.fill,
               ),
             ),
