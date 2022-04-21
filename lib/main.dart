@@ -33,8 +33,8 @@ class MyApp extends StatelessWidget {
               child: widget!,
             );
           },
-          home: const Intro(),
-          // home: const StudentProfile(),
+          // home: const Intro(),
+          home: const StudentProfile(),
         );
       },
     );

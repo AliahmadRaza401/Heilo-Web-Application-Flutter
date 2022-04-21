@@ -37,6 +37,7 @@ dependencies:
   responsive_builder: ^0.4.2
   flutter_screenutil: ^5.4.0
   easy_sidemenu: ^0.2.1
+  curved_navigation_bar: ^1.0.3
 
 dev_dependencies:
   flutter_test:
