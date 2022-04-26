@@ -2,6 +2,7 @@ import 'package:easy_sidemenu/easy_sidemenu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/screens/student%20profile/onDemand/on_demand.dart';
+import 'package:heilo/screens/student%20profile/quiz/quiz.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
@@ -147,18 +148,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                 controller: page,
                 children: [
                   const OnDemand(),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: AppColors.customWhite,
-                      borderRadius: BorderRadius.circular(30.r),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        'Dashboard1',
-                        style: TextStyle(fontSize: 35),
-                      ),
-                    ),
-                  ),
+                  Quizz(),
                   Container(
                     decoration: BoxDecoration(
                       color: AppColors.customWhite,

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../utils/dynamic_sizes.dart';
 
 Widget text(context, text, size, color,
-    {bold = false, alignText = TextAlign.start, maxLines = 2, font = false}) {
+    {bold = false, alignText = TextAlign.start, maxLines = 2, }) {
   return Text(
     text,
     textAlign: alignText,
