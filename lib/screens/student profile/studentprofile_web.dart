@@ -7,6 +7,8 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/screens/student%20profile/editProfile.dart/editProfile.dart';
 import 'package:heilo/screens/student%20profile/onDemand/on_demand.dart';
+import 'package:heilo/screens/student%20profile/quiz/quiz.dart';
+import 'package:heilo/screens/student%20profile/student_profile.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
@@ -154,21 +156,8 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                 controller: page,
                 children: [
                   const OnDemand(),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: AppColors.customWhite,
-                      borderRadius: BorderRadius.circular(30.r),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        'Dashboard1',
-                        style: TextStyle(fontSize: 35),
-                      ),
-                    ),
-                  ),
+                  Quizz(),
                   DashBoard(),
-                 
-                
                   Container(
                     decoration: BoxDecoration(
                       color: AppColors.customWhite,
@@ -373,31 +362,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                       ],
                     ),
                   ),
-             EditProfile(),
-              //  Container(
-              //       decoration: BoxDecoration(
-              //         color: AppColors.customWhite,
-              //         borderRadius: BorderRadius.circular(30.r),
-              //       ),
-              //       child: const Center(
-              //         child: Text(
-              //           'Dashboard22',
-              //           style: TextStyle(fontSize: 35),
-              //         ),
-              //       ),
-              //     ),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: AppColors.customWhite,
-                      borderRadius: BorderRadius.circular(30.r),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        'Dashboard4',
-                        style: TextStyle(fontSize: 35),
-                      ),
-                    ),
-                  ),
+                  EditProfile(),
                   Container(
                     decoration: BoxDecoration(
                       color: AppColors.customWhite,
