@@ -6,25 +6,27 @@ import 'package:easy_sidemenu/easy_sidemenu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:heilo/screens/student%20profile/Studentquiz/quiz.dart';
-import 'package:heilo/screens/student%20profile/editProfile.dart/editProfile.dart';
-import 'package:heilo/screens/student%20profile/onDemand/on_demand.dart';
-import 'package:heilo/screens/student%20profile/student_profile.dart';
+
+
+import 'package:heilo/screens/student/student_profile/student_profile.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
 
+import 'Studentquiz/quiz.dart';
 import 'dashBoard/dashBoard.dart';
+import 'editProfile.dart/editProfile.dart';
+import 'onDemand/on_demand.dart';
 import 'studentInbox/studentInbox.dart';
 
-class StudentProfileWeb extends StatefulWidget {
-  const StudentProfileWeb({Key? key}) : super(key: key);
+class StudentSideMenu extends StatefulWidget {
+  const StudentSideMenu({Key? key}) : super(key: key);
 
   @override
-  State<StudentProfileWeb> createState() => _StudentProfileWebState();
+  State<StudentSideMenu> createState() => _StudentSideMenuState();
 }
 
-class _StudentProfileWebState extends State<StudentProfileWeb> {
+class _StudentSideMenuState extends State<StudentSideMenu> {
   @override
   Widget build(BuildContext context) {
     PageController page = PageController();
@@ -165,259 +167,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                   const OnDemand(),
                   Quizz(),
                   DashBoard(),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: AppColors.customWhite,
-                      borderRadius: BorderRadius.circular(30.r),
-                    ),
-                    // child: const Center(
-                    //   child: Text(
-                    //     'Dashboard33',
-                    //     style: TextStyle(fontSize: 35),
-                    //   ),
-                    // ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          width: 526.w,
-                          height: 740.h,
-                          decoration: BoxDecoration(
-                            color: Colors.transparent,
-                            borderRadius: BorderRadius.circular(30.r),
-                          ),
-                          padding: EdgeInsets.only(
-                            left: 45.w,
-                            right: 45.w,
-                          ),
-                          // padding: EdgeInsets.symmetric(
-                          //   vertical: 16.h,
-                          //   horizontal: 25.w,
-                          // ),
-                          child: Stack(
-                            alignment: Alignment.center,
-                            children: <Widget>[
-                              // background image and bottom contents
-                              Column(
-                                children: <Widget>[
-                                  Container(
-                                    height: 0.0,
-                                  ),
-                                  Positioned(
-                                      top:
-                                          150.0, // (background container size) - (circle height / 2)
-                                      child: Container(
-                                        height: 170.h,
-                                        width: 183.w,
-                                        decoration: const BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          image: DecorationImage(
-                                            image: AssetImage(
-                                              "assets/png/wp2398385 1.png",
-                                            ),
-                                          ),
-                                        ),
-                                      )
-                                      // CircleAvatar(
-                                      //   radius: 80.r,
-                                      //   backgroundImage: const AssetImage(
-                                      //     "assets/png/wp2398385 1.png",
-                                      //   ),
-                                      // ),
-                                      ),
-                                  Expanded(
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        color: AppColors.customGrey,
-                                        borderRadius: BorderRadius.circular(14),
-                                      ),
-                                      padding: EdgeInsets.only(
-                                        top: 20.h,
-                                        left: 50.w,
-                                        right: 50.w,
-                                      ),
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          text(
-                                            context,
-                                            "Sakib Abdullah",
-                                            18.0,
-                                            AppColors.greyText,
-                                            bold: true,
-                                          ),
-                                          // textWidget(
-                                          //   "Sakib Abdullah",
-                                          //   FontWeight.w600,
-                                          //   0xff747474,
-                                          //   18,
-                                          // ),
-                                          SizedBox(
-                                            height: 10.h,
-                                          ),
-                                          text(
-                                            context,
-                                            "Maple Leaf International School and College",
-                                            14.0,
-                                            AppColors.greyText,
-                                          ),
-                                          // textWidget(
-                                          //   "Maple Leaf International School and College",
-                                          //   FontWeight.w300,
-                                          //   0xff747474,
-                                          //   14,
-                                          // ),
-                                          SizedBox(
-                                            height: 70.h,
-                                          ),
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Container(
-                                                height: 38.h,
-                                                width: 191.w,
-                                                // padding: const EdgeInsets.only(
-                                                //   top: 5,
-                                                //   bottom: 5,
-                                                // ),
-                                                decoration: BoxDecoration(
-                                                  color:
-                                                      AppColors.customDarkBlue,
-                                                  borderRadius:
-                                                      BorderRadius.circular(30),
-                                                ),
-                                                child: Align(
-                                                  alignment: Alignment.center,
-                                                  child: text(
-                                                    context,
-                                                    "Tutions completed",
-                                                    14.0,
-                                                    AppColors.customWhite,
-                                                    bold: true,
-                                                    // alignText: Alignment.center
-                                                  ),
-                                                ),
-                                              ),
-                                              text(
-                                                context,
-                                                "150",
-                                                14.0,
-                                                AppColors.greytextText,
-                                                bold: true,
-                                                // alignText: Alignment.center
-                                              ),
-                                              // textWidget(
-                                              //   "150",
-                                              //   FontWeight.w600,
-                                              //   0xff7D7D7D,
-                                              //   14,
-                                              // ),
-                                            ],
-                                          ),
-                                          SizedBox(
-                                            height: 10.h,
-                                          ),
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Container(
-                                                width: 191.w,
-                                                height: 38.h,
-                                                // padding: const EdgeInsets.only(
-                                                //   top: 5,
-                                                //   bottom: 5,
-                                                // ),
-                                                decoration: BoxDecoration(
-                                                  color: Color(0xffA279E6),
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                    30,
-                                                  ),
-                                                ),
-                                                child: Align(
-                                                  alignment: Alignment.center,
-                                                  child: text(
-                                                    context,
-                                                    "Tutors referred",
-                                                    14.0,
-                                                    AppColors.customWhite,
-                                                    bold: true,
-                                                    // alignText: Alignment.center
-                                                  ),
-                                                  // child: textWidget(
-                                                  //   "Tutors referred",
-                                                  //   FontWeight.w600,
-                                                  //   0xffffffff,
-                                                  //   14,
-                                                  // ),
-                                                ),
-                                              ),
-                                              text(
-                                                context,
-                                                "150",
-                                                14.0,
-                                                AppColors.greytextText,
-                                                bold: true,
-                                                // alignText: Alignment.center
-                                              ),
-                                            ],
-                                          ),
-                                          SizedBox(
-                                            height: 60.h,
-                                          ),
-                                          text(
-                                              context,
-                                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
-                                              14.0,
-                                              AppColors.customBlack,
-                                              // bold: true,
-                                              // alignText: Alignment.center
-                                              maxLines: 8),
-                                          // textWidget(
-                                          //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
-                                          //   FontWeight.w300,
-                                          //   0xff7000000,
-                                          //   14,
-                                          // ),
-                                        ],
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                              // Profile image
-                            ],
-                          ),
-                        ),
-                        SingleChildScrollView(
-                          child: Container(
-                            margin: EdgeInsets.only(
-                              top: 100.h,
-                              right: 45.w,
-                            ),
-                            child: Column(
-                              children: [
-                                greyWidget(),
-                                SizedBox(
-                                  height: 20.h,
-                                ),
-                                greyWidget1(),
-                                SizedBox(
-                                  height: 20.h,
-                                ),
-                                greyWidget2()
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                StudentProfile(),
                   EditProfile(),
                   StudentInbox(),
                   // Container(

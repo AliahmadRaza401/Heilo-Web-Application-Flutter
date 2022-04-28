@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:heilo/screens/student%20profile/editProfile.dart/editProfile_Mobile.dart';
-import 'package:heilo/screens/student%20profile/editProfile.dart/editProfile_web.dart';
+
 import 'package:responsive_builder/responsive_builder.dart';
+
+import 'editProfile_Mobile.dart';
+import 'editProfile_web.dart';
 
 
 class EditProfile extends StatefulWidget {

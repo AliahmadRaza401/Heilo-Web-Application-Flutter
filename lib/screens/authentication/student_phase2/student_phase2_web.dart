@@ -3,13 +3,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/screens/authentication/Popups/auth_popUp.dart';
-import 'package:heilo/screens/student%20profile/student_profile.dart';
+
 import 'package:heilo/utils/app_routes.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/utils/responsive.dart';
 import 'package:heilo/widgets/basic_widgets.dart';
 import 'package:heilo/widgets/text_widget.dart';
+
+import '../../student/student_sidemenu.dart';
 
 class StudentPhase2Web extends StatelessWidget {
   const StudentPhase2Web({Key? key}) : super(key: key);
@@ -122,17 +124,17 @@ class StudentPhase2Web extends StatelessWidget {
                         children: [
                           InkWell(
                               onTap: () {
-                                AppRoutes.push(context, StudentProfile());
+                                AppRoutes.push(context, StudentSideMenu());
                               },
                               child: TextBtn(title: "SSC")),
                           InkWell(
                               onTap: () {
-                                AppRoutes.push(context, StudentProfile());
+                                AppRoutes.push(context, StudentSideMenu());
                               },
                               child: TextBtn(title: "HSC")),
                           InkWell(
                               onTap: () {
-                                AppRoutes.push(context, StudentProfile());
+                                AppRoutes.push(context, StudentSideMenu());
                               },
                               child: TextBtn(title: "HSC")),
                         ],
