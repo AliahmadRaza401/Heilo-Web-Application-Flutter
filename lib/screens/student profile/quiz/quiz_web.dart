@@ -78,6 +78,7 @@ class _QuizzWebState extends State<QuizzWeb> {
                             ),
                           ],
                         ),
+                        
                         SizedBox(
                           height: 10.h,
                         ),
