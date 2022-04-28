@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/main.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
+import 'package:heilo/widgets/text_widget.dart';
 
 class DashBoaedWeb extends StatefulWidget {
   const DashBoaedWeb({Key? key}) : super(key: key);
@@ -23,133 +24,129 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
           width: AppSizes.dynamicWidth(context, 1),
           height: AppSizes.dynamicHeight(context, 1),
           padding: EdgeInsets.only(
-            left: 30.w,
-            right: 30.w,
+            left: 84.w,
+            right: 84.w,
             top: 20.h,
-            bottom: 20.h,
+            // bottom: 20.h,
           ),
-          decoration: BoxDecoration(
-            color: AppColors.customWhite,
-            borderRadius: BorderRadius.circular(30.r),
-          ),
+          // decoration: BoxDecoration(
+          //   color: AppColors.customWhite,
+          //   borderRadius: BorderRadius.circular(30.r),
+          // ),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  cardWidget(),
-                  cardWidget(),
-                  cardWidget(),
-                  cardWidget(),
+                  cardWidget('assets/png/card1.png', 0xffFFFFFF),
+                  cardWidget('assets/png/card2.png', 0xff000000),
+                  cardWidget('assets/png/card3.png', 0xff000000),
+                  cardWidget('assets/png/card4.png', 0xff000000),
                 ],
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    // height: 600.h,
-
-                    width: 550.w,
-                    margin: EdgeInsets.only(top: 40.h),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: AppColors.customGrey,
-                    ),
-                    padding: EdgeInsets.only(bottom: 20.h),
-
-                    child: SingleChildScrollView(
-                      scrollDirection: Axis.vertical,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            alignment: Alignment.centerLeft,
-                            width: 300.w,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(25)),
-                            child: const Align(
-                              alignment: Alignment.center,
-                              child: Text(
-                                'Upcoming Sessions',
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w400,
+              Container(
+                margin: EdgeInsets.only(top: 67.h),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      height: 573.h,
+                      width: 743.w,
+                      // margin: EdgeInsets.only(top: 40.h),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        color: Color(0xffF8F8F8),
+                      ),
+                      padding: EdgeInsets.only(bottom: 20.h),
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.vertical,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              alignment: Alignment.centerLeft,
+                              width: 300.w,
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(21)),
+                              child: const Align(
+                                alignment: Alignment.center,
+                                child: Text(
+                                  'Upcoming Sessions',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 21,
+                                    fontWeight: FontWeight.w500,
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                          SizedBox(
-                            height: 20.h,
-                          ),
-                          upcomingsessionData(),
-                          SizedBox(
-                            height: 20.h,
-                          ),
-                          upcomingsessionData(),
-                          SizedBox(
-                            height: 20.h,
-                          ),
-                          upcomingsessionData(),
-                        ],
+                            upcomingsessionData(),
+                            SizedBox(
+                              height: 20.h,
+                            ),
+                            upcomingsessionData(),
+                            SizedBox(
+                              height: 20.h,
+                            ),
+                            upcomingsessionData(),
+                            SizedBox(
+                              height: 20.h,
+                            ),
+                            upcomingsessionData(),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  Container(
-                    width: 526.w,
-                    // height: 760.h,
-                    decoration: BoxDecoration(
-                      color: AppColors.customGrey,
-                      borderRadius: BorderRadius.circular(30.r),
-                    ),
-                    padding: EdgeInsets.only(
-                      left: 45.w,
-                      right: 45.w,
-                      top: 20.h,
-                      // bottom: 5.h,
-                    ),
-                    // padding: EdgeInsets.symmetric(
-                    //   vertical: 5.h,
-                    //   horizontal: 25.w,
-                    // ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          padding: EdgeInsets.only(bottom: 10.h),
-                          child: const Text(
-                            "Notifications",
-                            style: TextStyle(
-                              color: AppColors.customGreen,
-                              fontSize: 18.0,
+                    Container(
+                      width: 700.w,
+                      height: 578.h,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        color: const Color(0xffF8F8F8),
+                      ),
+                      padding: EdgeInsets.only(
+                        left: 60.w,
+                        // right: 45.w,
+                        top: 17.h,
+                        // bottom: 5.h,
+                      ),
+                      // padding: EdgeInsets.symmetric(
+                      //   vertical: 5.h,
+                      //   horizontal: 25.w,
+                      // ),
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.vertical,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            text(
+                              context,
+                              "Notifications",
+                              18.0,
+                              AppColors.customGreen,
+                              bold: false,
                             ),
-                            // 18.sp,
-                            // AppColors.customGreen,
-                          ),
+                            SizedBox(
+                              height: 20.h,
+                            ),
+                            notificationCard(context),
+                            notificationCard(context),
+                            notificationCard(context),
+                            notificationCard(context),
+                            notificationCard(context),
+                            notificationCard(context),
+                            notificationCard(context),
+                          ],
                         ),
-                        notificationCard(context),
-                        notificationCard(context),
-                        notificationCard(context),
-                        notificationCard(context),
-                        // SizedBox(
-                        //   width: 460.w,
-                        //   height: 670.h,
-                        //   child: ListView.builder(
-                        //     itemCount: 5,
-                        //     itemBuilder: (context, i) {
-                        //       return notificationCard(context);
-                        //     },
-                        //   ),
-                        // ),
-                      ],
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               )
             ],
           ),
@@ -160,10 +157,10 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
 
   Widget upcomingsessionData() {
     return Container(
-      margin: EdgeInsets.only(
-        left: 15.w,
-        top: 5.h,
-      ),
+      // margin: EdgeInsets.only(
+      //   left: 15.w,
+      //   top: 5.h,
+      // ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -171,13 +168,19 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
           Container(
             alignment: Alignment.centerLeft,
             width: 170.w,
+            height: 35,
+            margin: EdgeInsets.only(
+              left: 63.w,
+              top: 20.h,
+            ),
             decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border.all(
-                  width: .5,
-                  color: Colors.black,
-                ),
-                borderRadius: BorderRadius.circular(25)),
+              color: Colors.white,
+              border: Border.all(
+                width: 0.5,
+                color: Colors.black,
+              ),
+              borderRadius: BorderRadius.circular(36),
+            ),
             child: const Align(
               alignment: Alignment.center,
               child: Text(
@@ -192,21 +195,32 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
           ),
           Padding(
             padding: EdgeInsets.only(
-              left: 40.w,
+              left: 142.w,
               top: 5.h,
             ),
             child: Row(
               children: [
-                CircleAvatar(
-                  radius: 32.r,
-                  backgroundColor: AppColors.green,
-                  child: CircleAvatar(
-                    radius: 28.r,
-                    backgroundImage: const AssetImage(
-                      "assets/png/wp2398385 1.png",
-                    ),
-                  ),
+                Container(
+                  height: 80.h,
+                  width: 93.w,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        image: AssetImage(
+                          "assets/png/wp2398385 1.png",
+                        ),
+                      )),
                 ),
+                // CircleAvatar(
+                //   radius: 32.r,
+                //   backgroundColor: AppColors.green,
+                //   child: CircleAvatar(
+                //     radius: 28.r,
+                //     backgroundImage: const AssetImage(
+                //       "assets/png/wp2398385 1.png",
+                //     ),
+                //   ),
+                // ),
                 SizedBox(
                   width: 20.w,
                 ),
@@ -216,11 +230,11 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
                   children: [
                     Row(
                       children: [
-                        Text(
+                        const Text(
                           'Ruhul Tusar',
                           style: TextStyle(
                             color: Color(0xff444F55),
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.w400,
                             fontSize: 18.0,
                           ),
                         ),
@@ -228,38 +242,56 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
                           width: 20.w,
                         ),
                         Container(
-                          padding: EdgeInsets.all(5),
+                          // padding: EdgeInsets.all(5),
+                          height: 26.h,
+                          width: 83.w,
+
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
+                              borderRadius: BorderRadius.circular(30),
                               border: Border.all(
                                 width: 1,
                                 color: Colors.red,
                               )),
-                          child: Text(
-                            'Ruhul Tusar',
-                            style: TextStyle(
-                              color: Color(0xff444F55),
-                              fontWeight: FontWeight.w600,
-                              fontSize: 18.0,
+                          child: const Align(
+                            alignment: Alignment.center,
+                            child: Text(
+                              'ID 1234',
+                              style: TextStyle(
+                                color: Color(0xff444F55),
+                                fontWeight: FontWeight.w500,
+                                fontSize: 14.0,
+                              ),
                             ),
                           ),
                         ),
                       ],
                     ),
-                    Text(
-                      'Topic- Polygons I Gerometry I Maths B',
-                      style: TextStyle(
-                        color: Color(0xff444F55),
-                        fontWeight: FontWeight.w600,
-                        fontSize: 15.0,
-                      ),
+                    Row(
+                      children: const [
+                        Text(
+                          'Topic- ',
+                          style: TextStyle(
+                            color: Color(0xff444F55),
+                            fontWeight: FontWeight.w600,
+                            fontSize: 18.0,
+                          ),
+                        ),
+                        Text(
+                          'Polygons I Gerometry I Maths B',
+                          style: TextStyle(
+                            color: Color(0xff444F55),
+                            fontWeight: FontWeight.w300,
+                            fontSize: 13.0,
+                          ),
+                        ),
+                      ],
                     ),
-                    Text(
+                    const Text(
                       'Time- 4:30-5.30 pm',
                       style: TextStyle(
                         color: Color(0xff1BE59D),
                         fontWeight: FontWeight.w600,
-                        fontSize: 15.0,
+                        fontSize: 18.0,
                       ),
                     ),
                   ],
@@ -272,27 +304,31 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
     );
   }
 
-  Widget cardWidget() {
+  Widget cardWidget(
+    String image,
+    textcolor,
+  ) {
     return Container(
-      height: 180.h,
-      width: 300.w,
+      height: 177.h,
+      width: 325.w,
       decoration: BoxDecoration(
-          color: Colors.black,
-          borderRadius: BorderRadius.circular(12),
-          image: const DecorationImage(
-            image: AssetImage('assets/png/card1.png'),
-            fit: BoxFit.cover,
-          )),
+        // color: Colors.black,
+        borderRadius: BorderRadius.circular(30),
+        image: DecorationImage(
+          image: AssetImage(image),
+          fit: BoxFit.cover,
+        ),
+      ),
       child: Column(
         children: [
           Padding(
-            padding: EdgeInsets.only(right: 8.w, top: 10.h),
-            child: const Align(
+            padding: EdgeInsets.only(right: 13.w, top: 13.h),
+            child: Align(
               alignment: Alignment.centerRight,
               child: Text(
                 'Upcoming Sessions',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Color(textcolor),
                   fontSize: 18,
                   fontWeight: FontWeight.w400,
                 ),
@@ -300,13 +336,13 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(right: 8.w, top: 10.h),
-            child: const Align(
+            padding: EdgeInsets.only(right: 13.w, top: 13.h),
+            child: Align(
               alignment: Alignment.centerRight,
               child: Text(
                 '03',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Color(textcolor),
                   fontSize: 18,
                   fontWeight: FontWeight.w800,
                 ),
@@ -341,7 +377,7 @@ Widget notificationCard(context) {
             "assets/png/wp2398385 1.png",
           ),
         ),
-        SizedBox(width:15.w),
+        SizedBox(width: 15.w),
         Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [

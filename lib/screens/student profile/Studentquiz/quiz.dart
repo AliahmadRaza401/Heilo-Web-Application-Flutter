@@ -3,9 +3,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:heilo/screens/student%20profile/Studentquiz/quiz_web.dart';
 import 'package:heilo/screens/student%20profile/onDemand/onDemand_web.dart';
 import 'package:heilo/screens/student%20profile/onDemand/on_demand_mobile.dart';
-import 'package:heilo/screens/student%20profile/quiz/quiz_web.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/buttons.dart';
 import 'package:heilo/widgets/text_widget.dart';
