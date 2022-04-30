@@ -19,6 +19,8 @@ class AppColors {
   static const customPurple = Color(0xff6A55DF);
   static const customPink = Color(0xffFF4D65);
   static const customYellow = Color(0xffFDD638);
+  static const lightGrey = Color(0xffEBEBEB);
+
   static const noColor = Colors.transparent;
 
   static const MaterialColor primaryColor = MaterialColor(

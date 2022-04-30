@@ -1,13 +1,13 @@
-import 'dart:html';
-import 'dart:js';
-import 'dart:ui';
+
+
+// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
 
 import 'package:easy_sidemenu/easy_sidemenu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:heilo/screens/admin/Dashboard/admin_/dashboard.dart';
 
-import 'package:heilo/screens/student/student_profile/student_profile.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
@@ -157,18 +157,7 @@ class _AdminSideMenuState extends State<AdminSideMenu> {
               child: PageView(
                 controller: page,
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: AppColors.customWhite,
-                      borderRadius: BorderRadius.circular(30.r),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        'Dashboard1',
-                        style: TextStyle(fontSize: 35),
-                      ),
-                    ),
-                  ),
+                 AdminDashboard(),
                   Container(
                     decoration: BoxDecoration(
                       color: AppColors.customWhite,
