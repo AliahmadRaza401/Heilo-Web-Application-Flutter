@@ -2,11 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:heilo/screens/admin/bar_chart.dart';
+import 'package:heilo/screens/admin/BarChart/bar_chart.dart';
 import 'package:heilo/widgets/text_widget.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import '../../../../utils/config.dart';
-
 
 class AdminDashboard extends StatefulWidget {
   const AdminDashboard({Key? key}) : super(key: key);
@@ -16,8 +15,6 @@ class AdminDashboard extends StatefulWidget {
 }
 
 class _AdminDashboardState extends State<AdminDashboard> {
-
-  
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -41,13 +38,11 @@ class _AdminDashboardState extends State<AdminDashboard> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      text(
-                          context, 'NUMBER OF STUDENTS', 30, AppColors.greyText,
+                      text(context, 'NUMBER OF STUDENTS', 30, Color(0xffC4C4C4),
                           bold: FontWeight.bold),
-                      text(context, '2511', 30, AppColors.customBlack,
+                      text(context, '2511', 30, Color(0xff7D7C7C),
                           bold: FontWeight.bold),
-                      text(
-                          context, 'NUMBER OF TEACHERS', 30, AppColors.greyText,
+                      text(context, 'NUMBER OF TEACHERS', 30, Color(0xffC4C4C4),
                           bold: FontWeight.bold),
                       text(context, '2511', 30, AppColors.customGreen,
                           bold: FontWeight.bold),
@@ -68,7 +63,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
                           lineWidth: 10,
                           percent: 0.2,
                           center: Text("20%"),
-                          progressColor: Colors.green,
+                          progressColor: AppColors.blue,
                           circularStrokeCap: CircularStrokeCap.round,
                           footer: text(
                               context,
@@ -81,7 +76,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
                           lineWidth: 10,
                           percent: 0.5,
                           center: Text("50%"),
-                          progressColor: Colors.green,
+                          progressColor: AppColors.green,
                           footer: text(
                               context,
                               'CONVERSION',
@@ -104,16 +99,12 @@ class _AdminDashboardState extends State<AdminDashboard> {
                         Positioned(
                           // bottom: 0,
                           child: Container(
-                            width: size.width * .55,
-                           
-                            padding: EdgeInsets.only(
-                                top: 30, left: 30, right: 30, bottom: 10),
-                            child:barChart()
-                            
-                          ),
+                              width: size.width * .55,
+                              padding: EdgeInsets.only(
+                                  top: 30, left: 30, right: 30, bottom: 10),
+                              child: barChart()),
                         ),
                         Container(
-                        
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -155,204 +146,196 @@ class _AdminDashboardState extends State<AdminDashboard> {
               ],
             ),
             Expanded(
-                child: Container(
-              // color: Colors.amber,
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Container(
-                    height: 400,
-                    width: size.width * .65,
-                    child: Stack(
-                      children: [
-                        Positioned(
-                          bottom: 0,
-                          child: Container(
-                              height: size.height * .58,
-                              width: size.width * .65,
-                              decoration: BoxDecoration(
-                                  color: AppColors.lightGrey,
-                                  borderRadius: BorderRadius.only(
-                                      bottomLeft: Radius.circular(30.r),
-                                      bottomRight: Radius.circular(30.r),
-                                      topRight: Radius.circular(30.r))),
-                              padding: EdgeInsets.only(
-                                  top: 30, left: 30, right: 30, bottom: 10),
-                              child: ListView.builder(
-                                  itemCount: 7,
-                                  itemBuilder: (context, index) {
-                                    return detailsRowa();
-                                  })),
-                        ),
-                        Container(
-                          height: 51.h,
-                          width: 262.w,
-                          decoration: BoxDecoration(
-                              color: AppColors.customWhite,
-                              borderRadius: BorderRadius.only(
-                                  topRight: Radius.circular(100),
-                                  bottomRight: Radius.circular(100))),
-                          child: Center(
-                            child: text(context, 'Upcoming Sessions', 15,
-                                AppColors.greyText),
-                          ),
-                        ),
-                        Positioned(
-                          right: 40,
-                          child: Container(
-                            height: 51.h,
-                            width: 262.w,
-                            decoration: BoxDecoration(
-                                border: Border.all(color: AppColors.green),
-                                color: AppColors.customWhite,
-                                borderRadius: BorderRadius.circular(100)),
-                            padding: EdgeInsets.symmetric(horizontal: 10),
-                            child: Align(
-                              alignment: Alignment.centerRight,
-                              child: Icon(Icons.search),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    child: Padding(
-                      padding: EdgeInsets.only(left: 10),
-                      child: Container(
-                        height: 400,
-                        // width: size.width * .65,
-                        child: Stack(
-                          children: [
-                            Positioned(
-                              bottom: 0,
-                              child: Container(
-                                  height: size.height * .58,
-                                  width: size.width * .28,
-                                  decoration: BoxDecoration(
-                                      color: AppColors.lightGrey,
-                                      borderRadius: BorderRadius.only(
-                                        bottomLeft: Radius.circular(30.r),
-                                        bottomRight: Radius.circular(30.r),
-                                      )),
-                                  padding: EdgeInsets.only(
-                                      top: 30, left: 30, right: 30, bottom: 10),
-                                  child: Padding(
-                                    padding:
-                                        const EdgeInsets.symmetric(vertical: 1),
-                                    child: Column(
-                                      children: [
-                                        Container(
-                                          // height: 30,
-                                          // color: Colors.amber,
-                                          child: Column(
-                                            children: [
-                                              Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceBetween,
-                                                children: [
-                                                  text(
-                                                      context,
-                                                      'Day',
-                                                      MediaQuery.of(context)
-                                                              .size
-                                                              .width *
-                                                          .01,
-                                                      AppColors.greyText),
-                                                  text(
-                                                      context,
-                                                      'Classes completed',
-                                                      MediaQuery.of(context)
-                                                              .size
-                                                              .width *
-                                                          .01,
-                                                      AppColors.greyText),
-                                                  text(
-                                                      context,
-                                                      'Growth',
-                                                      MediaQuery.of(context)
-                                                              .size
-                                                              .width *
-                                                          .01,
-                                                      AppColors.greyText),
-                                                ],
-                                              ),
-                                              Divider(
-                                                color: AppColors.green,
-                                              )
-                                            ],
-                                          ),
-                                        ),
-                                        Expanded(
-                                          child: ListView.builder(
-                                              itemCount: 14,
-                                              itemBuilder: (context, index) {
-                                                return totalCompleteRow(
-                                                    'Thursday', '15', '2.5%');
-                                              }),
-                                        )
-                                      ],
-                                    ),
-                                  )),
-                            ),
-                            Container(
-                              height: 51.h,
-                              width: 316.w,
-                              decoration: BoxDecoration(
-                                  color: AppColors.customWhite,
-                                  borderRadius: BorderRadius.only(
-                                      topRight: Radius.circular(100),
-                                      bottomRight: Radius.circular(100))),
-                              child: Center(
-                                child: richTextWidget(
-                                    context,
-                                    'Total Classes',
-                                    ' Completed',
-                                    14,
-                                    14,
-                                    null,
-                                    AppColors.greyText,
-                                    AppColors.green,
-                                    false),
-                              ),
-                            ),
-                            Positioned(
-                              right: 20,
-                              child: Container(
-                                height: 37.h,
-                                width: 156.w,
-                                decoration: BoxDecoration(
-                                    border: Border.all(color: AppColors.green),
-                                    color: AppColors.customWhite,
-                                    borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(100),
-                                        bottomLeft: Radius.circular(100))),
-                                padding: EdgeInsets.symmetric(horizontal: 10),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  children: [
-                                    text(context, 'Last 7 Days', 12,
-                                        AppColors.greyText),
-                                    Icon(
-                                      Icons.keyboard_arrow_down,
-                                      size: 20,
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  )
-                ],
-              ),
+                child: Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [upCommingSessions(), Expanded(child: totalClasses())],
             ))
           ],
         ));
+  }
+
+  Widget upCommingSessions() {
+    Size size = MediaQuery.of(context).size;
+
+    return Container(
+      height: 400,
+      width: size.width * .63,
+      child: Stack(
+        children: [
+          Positioned(
+            bottom: 0,
+            child: Container(
+                height: size.height * .58,
+                width: size.width * .63,
+                decoration: BoxDecoration(
+                    color: AppColors.lightGrey,
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(30.r),
+                        bottomRight: Radius.circular(30.r),
+                        topRight: Radius.circular(30.r))),
+                padding:
+                    EdgeInsets.only(top: 30, left: 30, right: 30, bottom: 10),
+                child: ListView.builder(
+                    itemCount: 7,
+                    itemBuilder: (context, index) {
+                      return detailsRowa();
+                    })),
+          ),
+          Container(
+            height: 51.h,
+            width: 262.w,
+            decoration: BoxDecoration(
+                color: AppColors.customWhite,
+                borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(100),
+                    bottomRight: Radius.circular(100))),
+            child: Center(
+              child: text(context, 'Upcoming Sessions', 15, AppColors.greyText),
+            ),
+          ),
+          Positioned(
+            right: 40,
+            child: Container(
+              height: 51.h,
+              width: 262.w,
+              decoration: BoxDecoration(
+                  border: Border.all(color: AppColors.green),
+                  color: AppColors.customWhite,
+                  borderRadius: BorderRadius.circular(100)),
+              padding: EdgeInsets.symmetric(horizontal: 10),
+              child: Align(
+                alignment: Alignment.centerRight,
+                child: TextField(
+                  cursorColor: AppColors.green,
+                  decoration: InputDecoration(
+                      border: InputBorder.none,
+                      suffixIcon: Icon(
+                        Icons.search,
+                        color: AppColors.green,
+                      ),
+                      contentPadding: EdgeInsets.only(top: 5, left: 10)),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget totalClasses() {
+    Size size = MediaQuery.of(context).size;
+
+    return Padding(
+      padding: EdgeInsets.only(left: 35),
+      child: Container(
+        height: 400,
+        // width: size.width * .65,
+        child: Stack(
+          children: [
+            Positioned(
+              bottom: 0,
+              child: Container(
+                  height: size.height * .58,
+                  width: size.width * .28,
+                  decoration: BoxDecoration(
+                      color: AppColors.lightGrey,
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(30.r),
+                        bottomRight: Radius.circular(30.r),
+                      )),
+                  padding:
+                      EdgeInsets.only(top: 30, left: 30, right: 30, bottom: 10),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 1),
+                    child: Column(
+                      children: [
+                        Container(
+                          // height: 30,
+                          // color: Colors.amber,
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  text(
+                                      context,
+                                      'Day',
+                                      MediaQuery.of(context).size.width * .01,
+                                      AppColors.greyText),
+                                  text(
+                                      context,
+                                      'Classes completed',
+                                      MediaQuery.of(context).size.width * .01,
+                                      AppColors.greyText),
+                                  text(
+                                      context,
+                                      'Growth',
+                                      MediaQuery.of(context).size.width * .01,
+                                      AppColors.greyText),
+                                ],
+                              ),
+                              Divider(
+                                color: AppColors.green,
+                              )
+                            ],
+                          ),
+                        ),
+                        Expanded(
+                          child: ListView.builder(
+                              itemCount: 14,
+                              itemBuilder: (context, index) {
+                                return totalCompleteRow(
+                                    'Thursday', '15', '2.5%');
+                              }),
+                        )
+                      ],
+                    ),
+                  )),
+            ),
+            Container(
+              height: 51.h,
+              width: 316.w,
+              decoration: BoxDecoration(
+                  color: AppColors.customWhite,
+                  borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(100),
+                      bottomRight: Radius.circular(100))),
+              child: Center(
+                child: richTextWidget(context, 'Total Classes', ' Completed',
+                    14, 14, null, AppColors.greyText, AppColors.green, false),
+              ),
+            ),
+            Positioned(
+              right: 20,
+              child: Container(
+                height: 37.h,
+                width: 156.w,
+                decoration: BoxDecoration(
+                    border: Border.all(color: AppColors.green),
+                    color: AppColors.customWhite,
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(100),
+                        bottomLeft: Radius.circular(100))),
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    text(context, 'Last 7 Days', 12, AppColors.greyText),
+                    Icon(
+                      Icons.keyboard_arrow_down,
+                      size: 20,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   Widget totalCompleteRow(String day, String clases, String growth) {
@@ -434,8 +417,6 @@ class _AdminDashboardState extends State<AdminDashboard> {
     );
   }
 }
-
-
 
 class _SalesData {
   _SalesData(this.year, this.sales);
