@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables
+
 import 'dart:html';
 
 import 'package:flutter/material.dart';
@@ -15,10 +17,11 @@ class DashBoaedWeb extends StatefulWidget {
 }
 
 class _DashBoaedWebState extends State<DashBoaedWeb> {
+  int SelectedCard = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.transparent,
       body: SingleChildScrollView(
         child: Container(
           width: AppSizes.dynamicWidth(context, 1),
@@ -29,10 +32,10 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
             top: 20.h,
             // bottom: 20.h,
           ),
-          // decoration: BoxDecoration(
-          //   color: AppColors.customWhite,
-          //   borderRadius: BorderRadius.circular(30.r),
-          // ),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(30.r),
+          ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -40,10 +43,58 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  cardWidget('assets/png/card1.png', 0xffFFFFFF),
-                  cardWidget('assets/png/card2.png', 0xff000000),
-                  cardWidget('assets/png/card3.png', 0xff000000),
-                  cardWidget('assets/png/card4.png', 0xff000000),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        SelectedCard = 1;
+                      });
+                    },
+                    child: cardWidget(
+                      'assets/png/g1.png',
+                      "Upcoming Sessions",
+                      SelectedCard == 1 ? 0xffFFFFFF : 0xff000000,
+                      SelectedCard == 1 ? Color(0xff5F5F5F) : Colors.white,
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        SelectedCard = 2;
+                      });
+                    },
+                    child: cardWidget(
+                      'assets/png/g1.png',
+                      "Tutions completed",
+                      SelectedCard == 2 ? 0xffFFFFFF : 0xff000000,
+                      SelectedCard == 2 ? Color(0xff5F5F5F) : Colors.white,
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        SelectedCard = 3;
+                      });
+                    },
+                    child: cardWidget(
+                      'assets/png/g3.png',
+                      "Quiz Appeared",
+                      SelectedCard == 3 ? 0xffFFFFFF : 0xff000000,
+                      SelectedCard == 3 ? Color(0xff5F5F5F) : Colors.white,
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        SelectedCard = 4;
+                      });
+                    },
+                    child: cardWidget(
+                      'assets/png/g4.png',
+                      "Favourite Tutors",
+                      SelectedCard == 4 ? 0xffFFFFFF : 0xff000000,
+                      SelectedCard == 4 ? Color(0xff5F5F5F) : Colors.white,
+                    ),
+                  ),
                 ],
               ),
               Container(
@@ -51,56 +102,13 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      height: 573.h,
-                      width: 743.w,
-                      // margin: EdgeInsets.only(top: 40.h),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Color(0xffF8F8F8),
-                      ),
-                      padding: EdgeInsets.only(bottom: 20.h),
-                      child: SingleChildScrollView(
-                        scrollDirection: Axis.vertical,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              alignment: Alignment.centerLeft,
-                              width: 300.w,
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(21)),
-                              child: const Align(
-                                alignment: Alignment.center,
-                                child: Text(
-                                  'Upcoming Sessions',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 21,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            upcomingsessionData(),
-                            SizedBox(
-                              height: 20.h,
-                            ),
-                            upcomingsessionData(),
-                            SizedBox(
-                              height: 20.h,
-                            ),
-                            upcomingsessionData(),
-                            SizedBox(
-                              height: 20.h,
-                            ),
-                            upcomingsessionData(),
-                          ],
-                        ),
-                      ),
-                    ),
+                    SelectedCard == 1
+                        ? upComingCard()
+                        : SelectedCard == 2
+                            ? tutionsCard()
+                            : SelectedCard == 3
+                                ? quizCard()
+                                : favoriteTutiCard(),
                     Container(
                       width: 700.w,
                       height: 578.h,
@@ -150,6 +158,175 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
               )
             ],
           ),
+        ),
+      ),
+    );
+  }
+
+  Widget upComingCard() {
+    return Container(
+      height: 573.h,
+      width: 743.w,
+      // margin: EdgeInsets.only(top: 40.h),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(30),
+        color: const Color(0xffF8F8F8),
+      ),
+      padding: EdgeInsets.only(bottom: 20.h),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              alignment: Alignment.centerLeft,
+              width: 300.w,
+              decoration: BoxDecoration(
+                  color: Colors.white, borderRadius: BorderRadius.circular(21)),
+              child: const Align(
+                alignment: Alignment.center,
+                child: Text(
+                  'Upcoming Sessions',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 21,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ),
+            upcomingsessionData(),
+            SizedBox(
+              height: 20.h,
+            ),
+            upcomingsessionData(),
+            SizedBox(
+              height: 20.h,
+            ),
+            upcomingsessionData(),
+            SizedBox(
+              height: 20.h,
+            ),
+            upcomingsessionData(),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget tutionsCard() {
+    return Container(
+      height: 573.h,
+      width: 743.w,
+      // margin: EdgeInsets.only(top: 40.h),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(30),
+        color: const Color(0xffF8F8F8),
+      ),
+      padding: EdgeInsets.only(bottom: 20.h),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              alignment: Alignment.centerLeft,
+              width: 300.w,
+              decoration: BoxDecoration(
+                  color: Colors.white, borderRadius: BorderRadius.circular(21)),
+              child: const Align(
+                alignment: Alignment.center,
+                child: Text(
+                  'Tutions Completed',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 21,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget quizCard() {
+    return Container(
+      height: 573.h,
+      width: 743.w,
+      // margin: EdgeInsets.only(top: 40.h),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(30),
+        color: const Color(0xffF8F8F8),
+      ),
+      padding: EdgeInsets.only(bottom: 20.h),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              alignment: Alignment.centerLeft,
+              width: 300.w,
+              decoration: BoxDecoration(
+                  color: Colors.white, borderRadius: BorderRadius.circular(21)),
+              child: const Align(
+                alignment: Alignment.center,
+                child: Text(
+                  'Quiz Appeared',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 21,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget favoriteTutiCard() {
+    return Container(
+      height: 573.h,
+      width: 743.w,
+      // margin: EdgeInsets.only(top: 40.h),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(30),
+        color: const Color(0xffF8F8F8),
+      ),
+      padding: EdgeInsets.only(bottom: 20.h),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              alignment: Alignment.centerLeft,
+              width: 300.w,
+              decoration: BoxDecoration(
+                  color: Colors.white, borderRadius: BorderRadius.circular(21)),
+              child: const Align(
+                alignment: Alignment.center,
+                child: Text(
+                  'Favourite Tutors',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 21,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -305,53 +482,77 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
   }
 
   Widget cardWidget(
-    String image,
+    image,
+    title,
     textcolor,
+    bgColor,
   ) {
     return Container(
-      height: 177.h,
-      width: 325.w,
-      decoration: BoxDecoration(
-        // color: Colors.black,
-        borderRadius: BorderRadius.circular(30),
-        image: DecorationImage(
-          image: AssetImage(image),
-          fit: BoxFit.cover,
+        height: 177.h,
+        width: 325.w,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(30),
+          color: bgColor,
         ),
-      ),
-      child: Column(
-        children: [
-          Padding(
-            padding: EdgeInsets.only(right: 13.w, top: 13.h),
-            child: Align(
-              alignment: Alignment.centerRight,
-              child: Text(
-                'Upcoming Sessions',
-                style: TextStyle(
-                  color: Color(textcolor),
-                  fontSize: 18,
-                  fontWeight: FontWeight.w400,
+        child: Stack(
+          overflow: Overflow.visible,
+          children: [
+            Positioned(
+              bottom: -13,
+              left: -12,
+              child:
+                  // Image.asset(image),
+                  Container(
+                height: 177.h,
+                width: 325.w,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(image),
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
             ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(right: 13.w, top: 13.h),
-            child: Align(
-              alignment: Alignment.centerRight,
-              child: Text(
-                '03',
-                style: TextStyle(
-                  color: Color(textcolor),
-                  fontSize: 18,
-                  fontWeight: FontWeight.w800,
-                ),
+            Container(
+              padding: EdgeInsets.only(
+                right: 10.w,
+                top: 10.h,
+              ),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(right: 13.w, top: 13.h),
+                    child: Align(
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        title,
+                        style: TextStyle(
+                          color: Color(textcolor),
+                          fontSize: 18.sp,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(right: 13.w, top: 13.h),
+                    child: Align(
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        '03',
+                        style: TextStyle(
+                          color: Color(textcolor),
+                          fontSize: 18,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
-          ),
-        ],
-      ),
-    );
+          ],
+        ));
   }
 }
 
@@ -360,7 +561,7 @@ Widget notificationCard(context) {
     width: 476.w,
     height: 76.h,
     decoration: BoxDecoration(
-      color: Color(0xff1BE59D),
+      color: const Color(0xff1BE59D),
       borderRadius: BorderRadius.circular(30.r),
     ),
     padding: EdgeInsets.symmetric(
@@ -381,7 +582,7 @@ Widget notificationCard(context) {
         Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Text(
+            const Text(
               'You have received a tution request from \nSalsabil Murshed',
               style: TextStyle(
                 color: Colors.black,

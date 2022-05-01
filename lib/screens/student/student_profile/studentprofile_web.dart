@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'dart:html';
 import 'dart:js';
 import 'dart:ui';
@@ -10,7 +12,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
-
 
 class StudentProfileWeb extends StatefulWidget {
   const StudentProfileWeb({Key? key}) : super(key: key);
@@ -26,7 +27,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(13.r),
+        borderRadius: BorderRadius.circular(30.r),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -54,8 +55,8 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                 Container(
                   height: 631.h,
                   decoration: BoxDecoration(
-                    color: AppColors.customGrey,
-                    borderRadius: BorderRadius.circular(14),
+                    color: Color(0xffF1F1F1),
+                    borderRadius: BorderRadius.circular(30.r),
                   ),
                   padding: EdgeInsets.only(
                     top: 130.h,
@@ -212,18 +213,57 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                     left: 0,
                     // (background container size) - (circle height / 2)
                     child: Center(
-                      child: Container(
-                        height: 170.h,
-                        width: 183.w,
-                        decoration: const BoxDecoration(
-                          shape: BoxShape.circle,
-                          image: DecorationImage(
-                            image: AssetImage(
-                              "assets/png/wp2398385 1.png",
+                      child: Stack(
+                        overflow: Overflow.visible,
+                        children: [
+                          Container(
+                            height: 170.h,
+                            width: 183.w,
+                            decoration: const BoxDecoration(
+                              shape: BoxShape.circle,
+                              image: DecorationImage(
+                                image: AssetImage(
+                                  "assets/png/wp2398385 1.png",
+                                ),
+                              ),
                             ),
                           ),
-                        ),
+                          // CircleAvatar(
+                          //   radius: 46.r,
+                          //   backgroundImage: const AssetImage(
+                          //     "assets/png/wp2398385 1.png",
+                          //   ),
+                          // ),
+                          Positioned(
+                            top: 0,
+                            right: -15,
+                            child: Container(
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 10,
+                                vertical: 3,
+                              ),
+                              decoration: BoxDecoration(
+                                color: Color(0xffC4C4C4).withOpacity(0.5),
+                                borderRadius: BorderRadius.circular(50),
+                              ),
+                              child: Row(
+                                children: [
+                                  Image.asset('assets/png/star.png'),
+                                  text(
+                                    context,
+                                    "4.5",
+                                    15,
+                                    Colors.black,
+                                    bold: true,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
+
+                      //
                     )
                     // CircleAvatar(
                     //   radius: 80.r,
@@ -266,8 +306,8 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
       width: 974.w,
       height: 163.h,
       decoration: BoxDecoration(
-        color: AppColors.customGrey,
-        borderRadius: BorderRadius.circular(30),
+        color: Color(0xffF1F1F1),
+        borderRadius: BorderRadius.circular(30.r),
       ),
       // padding: EdgeInsets.only(
       //   left: 60.w,
@@ -382,8 +422,8 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
       width: 974.w,
       height: 266.h,
       decoration: BoxDecoration(
-        color: AppColors.customGrey,
-        borderRadius: BorderRadius.circular(30),
+        color: Color(0xffF1F1F1),
+        borderRadius: BorderRadius.circular(30.r),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -570,126 +610,149 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
       decoration: BoxDecoration(
         border: Border.all(
           width: 2,
-          color: AppColors.customGrey,
+          color: Color(0xffF1F1F1),
         ),
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(30.r),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            width: 114.w,
-            height: 35.h,
-            margin: EdgeInsets.only(
-              left: 35.h,
-              top: 40.h,
-            ),
-            decoration: BoxDecoration(
-              color: AppColors.customDarkGreen,
-              borderRadius: BorderRadius.circular(20.r),
-            ),
-            child: Align(
-              alignment: Alignment.center,
-              child: text(
-                context,
-                "Reviews",
-                18.0,
-                AppColors.customWhite,
-                bold: false,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            // crossAxisAlignment: CrossAxisAlignment.,
+            children: [
+              Container(
+                width: 470.w,
+                height: 334.h,
+                decoration: BoxDecoration(
+                  border: Border(
+                      right: BorderSide(
+                    width: 2,
+                    color: Color(0xffF1F1F1),
+                  )),
+                  // border: Border.all(
+                  // width: 2,
+                  // color: Color(0xffF1F1F1),
+                  // ),
+                  // borderRadius: BorderRadius.circular(30.r),
+                ),
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Container(
+                            width: 114.w,
+                            height: 35.h,
+                            margin: EdgeInsets.only(
+                              left: 35.h,
+                              top: 40.h,
+                            ),
+                            decoration: BoxDecoration(
+                              color: Color(0xff3DDEA5),
+                              borderRadius: BorderRadius.circular(20.r),
+                            ),
+                            child: Align(
+                              alignment: Alignment.center,
+                              child: text(
+                                context,
+                                "Reviews",
+                                18.0,
+                                AppColors.customWhite,
+                                bold: false,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      listTileWidget(),
+                      SizedBox(
+                        height: 10.h,
+                      ),
+                      listTileWidget(),
+                      SizedBox(
+                        height: 10.h,
+                      ),
+                      listTileWidget(),
+                      SizedBox(
+                        height: 10.h,
+                      ),
+                    ],
+                  ),
+                ),
               ),
-            ),
-          ),
-          SizedBox(
-            height: 10.h,
-          ),
-          Padding(
-            padding: EdgeInsets.only(
-              left: 107.w,
-              right: 107.w,
-              top: 24.h,
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              // crossAxisAlignment: CrossAxisAlignment.,
-              children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    listTileWidget(),
-                    SizedBox(
-                      height: 10.h,
-                    ),
-                    listTileWidget(),
-                    SizedBox(
-                      height: 10.h,
-                    ),
-                    listTileWidget(),
-                    SizedBox(
-                      height: 10.h,
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  width: 28.w,
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        RatingBar.builder(
-                          initialRating: 5,
-                          minRating: 1,
-                          direction: Axis.horizontal,
-                          allowHalfRating: true,
-                          itemCount: 5,
-                          itemSize: 20,
-                          // itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-                          itemBuilder: (context, _) => const Icon(
-                            Icons.star,
-                            color: Colors.amber,
-                          ),
-                          onRatingUpdate: (rating) {
-                            print(rating);
-                          },
-                        ),
-                        const Text(
-                          '/4',
-                          style: TextStyle(
-                            color: Colors.black,
-                          ),
-                        ),
-                        Container(
-                          height: 91.h,
-                          width: 90.w,
-                          margin: EdgeInsets.only(
-                            left: 20.w,
-                          ),
-                          decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                              image: DecorationImage(
-                                image: AssetImage(
-                                  "assets/png/wp2398385 1.png",
+              Flexible(
+                child: Container(
+                  // color: Colors.amber,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        width: 200.w,
+                        child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                RatingBar.builder(
+                                  initialRating: 5,
+                                  minRating: 1,
+                                  direction: Axis.horizontal,
+                                  allowHalfRating: true,
+                                  itemCount: 5,
+                                  itemSize: 20,
+                                  // itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
+                                  itemBuilder: (context, _) => const Icon(
+                                    Icons.star,
+                                    color: Colors.amber,
+                                  ),
+                                  onRatingUpdate: (rating) {
+                                    print(rating);
+                                  },
                                 ),
-                              )),
+                                const Text(
+                                  '/4',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            text(
+                                context,
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                                14,
+                                AppColors.customBlack,
+                                bold: false,
+                                maxLines: 5),
+                          ],
                         ),
-                      ],
-                    ),
-                    text(
-                        context,
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                        14,
-                        AppColors.customBlack,
-                        bold: false,
-                        maxLines: 2),
-                  ],
+                      ),
+                      Container(
+                        height: 91.h,
+                        width: 90.w,
+                        margin: EdgeInsets.only(
+                          left: 20.w,
+                        ),
+                        decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                              image: AssetImage(
+                                "assets/png/wp2398385 1.png",
+                              ),
+                            )),
+                      ),
+                    ],
+                  ),
                 ),
-              ],
-            ),
+              ),
+            ],
           )
         ],
       ),

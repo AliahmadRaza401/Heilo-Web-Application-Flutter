@@ -78,7 +78,6 @@ class _QuizzWebState extends State<QuizzWeb> {
                             ),
                           ],
                         ),
-                        
                         SizedBox(
                           height: 10.h,
                         ),
@@ -101,6 +100,7 @@ class _QuizzWebState extends State<QuizzWeb> {
                                     width: 300.w,
                                     padding: EdgeInsets.only(
                                       left: 50.w,
+                                      bottom: 10.h,
                                     ),
                                     child: TextField(
                                       decoration: InputDecoration(
@@ -219,23 +219,30 @@ Widget courseCard(context) {
           ),
           child: Text(""),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Image.asset(
-              'assets/png/bookicon.png',
-              height: 30.w,
-              width: 30.h,
-            ),
-            text(context, "Chapter-1 : Speed", 16.sp, Colors.black),
-          ],
+        Container(
+          width: 250.w,
+          // color: Colors.amber,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Image.asset(
+                'assets/png/bookicon.png',
+                height: 30.w,
+                width: 30.h,
+              ),
+              text(context, "Chapter-1 : Speed", 16.sp, Colors.black),
+            ],
+          ),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            text(context, "Question: 25", 16.sp, Color(0xff6F6F6F)),
-            text(context, "Time : 25 minutes", 16.sp, Color(0xff6F6F6F)),
-          ],
+        Container(
+          width: 250.w,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              text(context, "Question: 25", 16.sp, Color(0xff6F6F6F)),
+              text(context, "Time : 25 minutes", 16.sp, Color(0xff6F6F6F)),
+            ],
+          ),
         ),
       ],
     ),
@@ -256,7 +263,7 @@ Widget notificationCard(context) {
     ),
     margin: EdgeInsets.only(bottom: 10.h),
     child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         CircleAvatar(
           radius: 26.r,
@@ -264,16 +271,16 @@ Widget notificationCard(context) {
             "assets/png/wp2398385 1.png",
           ),
         ),
-        Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            text(
-              context,
-              "You have received a tution request from \nSalsabil Murshed.",
-              16.sp,
-              AppColors.customBlack,
-            ),
-          ],
+        SizedBox(
+          width: 20.w,
+        ),
+        Expanded(
+          child: text(
+            context,
+            "You have received a tution request from Salsabil Murshed.",
+            16.sp,
+            AppColors.customBlack,
+          ),
         ),
       ],
     ),
