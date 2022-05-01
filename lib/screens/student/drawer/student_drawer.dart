@@ -7,7 +7,6 @@ import 'package:heilo/screens/student/studentInbox/studentInboxMobile.dart';
 import 'package:heilo/screens/student/student_profile/studentprofile_mobile.dart';
 
 import '../Main_SideMenu/student_sidemenu_mobile.dart';
-
 class StudentDrawer extends StatelessWidget {
   const StudentDrawer({Key? key}) : super(key: key);
 
@@ -36,8 +35,12 @@ class StudentDrawer extends StatelessWidget {
               ),
             ),
             onTap: () {
+  //             if (studentScafoldKey.currentState.isDrawerOpen) {
+  // studentScafoldKey.currentState.openEndDrawer();
+// }
               Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => OnDemandMobile()));
+                  MaterialPageRoute(builder: (context) => StudentSideMenuMobile()));
+                 
             },
           ),
           ListTile(
