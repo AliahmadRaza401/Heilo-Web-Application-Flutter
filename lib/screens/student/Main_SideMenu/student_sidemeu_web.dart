@@ -11,20 +11,20 @@ import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
 
-import 'Studentquiz/quiz.dart';
-import 'dashBoard/dashBoard.dart';
-import 'editProfile.dart/editProfile.dart';
-import 'onDemand/on_demand.dart';
-import 'studentInbox/studentInbox.dart';
+import '../Studentquiz/quiz.dart';
+import '../dashBoard/dashBoard.dart';
+import '../editProfile.dart/editProfile.dart';
+import '../onDemand/on_demand.dart';
+import '../studentInbox/studentInbox.dart';
 
-class StudentSideMenu extends StatefulWidget {
-  const StudentSideMenu({Key? key}) : super(key: key);
+class StudentSideMenuWeb extends StatefulWidget {
+  const StudentSideMenuWeb({Key? key}) : super(key: key);
 
   @override
-  State<StudentSideMenu> createState() => _StudentSideMenuState();
+  State<StudentSideMenuWeb> createState() => _StudentSideMenuWebState();
 }
 
-class _StudentSideMenuState extends State<StudentSideMenu> {
+class _StudentSideMenuWebState extends State<StudentSideMenuWeb> {
   @override
   Widget build(BuildContext context) {
     PageController page = PageController();

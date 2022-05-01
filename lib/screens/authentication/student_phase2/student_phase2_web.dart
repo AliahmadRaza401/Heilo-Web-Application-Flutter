@@ -11,7 +11,7 @@ import 'package:heilo/utils/responsive.dart';
 import 'package:heilo/widgets/basic_widgets.dart';
 import 'package:heilo/widgets/text_widget.dart';
 
-import '../../student/student_sidemenu.dart';
+import '../../student/Main_SideMenu/student_sidemenu.dart';
 
 class StudentPhase2Web extends StatelessWidget {
   const StudentPhase2Web({Key? key}) : super(key: key);
