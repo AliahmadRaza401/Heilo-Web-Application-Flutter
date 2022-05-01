@@ -5,7 +5,6 @@ import 'package:heilo/screens/admin/admin_sideMenu.dart';
 import 'package:heilo/screens/authentication/Intro/intro.dart';
 import 'package:heilo/screens/student/Main_SideMenu/student_sidemenu.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -36,10 +35,9 @@ class MyApp extends StatelessWidget {
               child: widget!,
             );
           },
-          // home: const Intro(),
-          home: const AdminSideMenu(),
+          home: const Intro(),
+          // home: const AdminSideMenu(),
           // home: StudentProfileWeb(),
-
         );
       },
     );
