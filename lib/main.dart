@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:heilo/screens/admin/Dashboard/admin_/dashboard.dart';
+import 'package:heilo/screens/admin/admin_sideMenu.dart';
 import 'package:heilo/screens/authentication/Intro/intro.dart';
 import 'package:heilo/screens/student/Main_SideMenu/student_sidemenu.dart';
 
@@ -35,7 +37,7 @@ class MyApp extends StatelessWidget {
             );
           },
           // home: const Intro(),
-          home: const StudentSideMenu(),
+          home: const AdminSideMenu(),
           // home: StudentProfileWeb(),
 
         );

@@ -1,5 +1,3 @@
-
-
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
 
 import 'package:easy_sidemenu/easy_sidemenu.dart';
@@ -8,6 +6,7 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/screens/admin/Dashboard/admin_/dashboard.dart';
 import 'package:heilo/screens/admin/Payment/payment_page.dart';
+import 'package:heilo/screens/admin/Profile/profile.dart';
 import 'package:heilo/screens/admin/QuizReport/quiz_report.dart';
 
 import 'package:heilo/utils/config.dart';
@@ -159,21 +158,10 @@ class _AdminSideMenuState extends State<AdminSideMenu> {
               child: PageView(
                 controller: page,
                 children: [
-                 AdminDashboard(),
+                  AdminDashboard(),
                   QuizReports(),
                   PaymentPage(),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: AppColors.customWhite,
-                      borderRadius: BorderRadius.circular(30.r),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        'Dashboard4',
-                        style: TextStyle(fontSize: 35),
-                      ),
-                    ),
-                  ),
+                  Profile(),
                   Container(
                     decoration: BoxDecoration(
                       color: AppColors.customWhite,
