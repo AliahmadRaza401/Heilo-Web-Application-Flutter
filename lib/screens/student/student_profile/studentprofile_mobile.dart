@@ -25,251 +25,260 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.yellow,
-        borderRadius: BorderRadius.circular(13.r),
-      ),
-      child: Column(
-        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Container(
-            alignment: Alignment.center,
-            width: 526.w,
-            height: 780.h,
-            decoration: BoxDecoration(
-              // color: Colors.amber,
-              borderRadius: BorderRadius.circular(30.r),
-            ),
-            padding: EdgeInsets.only(
-              left: 45.w,
-              right: 45.w,
-              // top: 50.h,
-            ),
-            // padding: EdgeInsets.symmetric(
-            //   vertical: 16.h,
-            //   horizontal: 25.w,
-            // ),
-            child: Stack(
-              overflow: Overflow.visible,
-              children: [
-                Container(
-                  height: 631.h,
-                  decoration: BoxDecoration(
-                    color: AppColors.customGrey,
-                    borderRadius: BorderRadius.circular(14),
-                  ),
-                  padding: EdgeInsets.only(
-                    top: 130.h,
-                    left: 50.w,
-                    right: 50.w,
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      text(
-                        context,
-                        "Sakib Abdullah",
-                        18.0,
-                        AppColors.greyText,
-                        bold: true,
-                      ),
-                      // textWidget(
-                      //   "Sakib Abdullah",
-                      //   FontWeight.w600,
-                      //   0xff747474,
-                      //   18,
-                      // ),
-                      SizedBox(
-                        height: 10.h,
-                      ),
-                      text(
-                        context,
-                        "Maple Leaf International School and College",
-                        14.0,
-                        AppColors.greyText,
-                      ),
-                      // textWidget(
-                      //   "Maple Leaf International School and College",
-                      //   FontWeight.w300,
-                      //   0xff747474,
-                      //   14,
-                      // ),
-                      SizedBox(
-                        height: 70.h,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            height: 38.h,
-                            width: 191.w,
-                            // padding: const EdgeInsets.only(
-                            //   top: 5,
-                            //   bottom: 5,
-                            // ),
-                            decoration: BoxDecoration(
-                              color: AppColors.customDarkBlue,
-                              borderRadius: BorderRadius.circular(30),
-                            ),
-                            child: Align(
-                              alignment: Alignment.center,
-                              child: text(
-                                context,
-                                "Tutions completed",
-                                14.0,
-                                AppColors.customWhite,
-                                bold: true,
-                                // alignText: Alignment.center
-                              ),
-                            ),
-                          ),
-                          text(
-                            context,
-                            "150",
-                            14.0,
-                            AppColors.greytextText,
-                            bold: true,
-                            // alignText: Alignment.center
-                          ),
-                          // textWidget(
-                          //   "150",
-                          //   FontWeight.w600,
-                          //   0xff7D7D7D,
-                          //   14,
-                          // ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10.h,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            width: 191.w,
-                            height: 38.h,
-                            // padding: const EdgeInsets.only(
-                            //   top: 5,
-                            //   bottom: 5,
-                            // ),
-                            decoration: BoxDecoration(
-                              color: Color(0xffA279E6),
-                              borderRadius: BorderRadius.circular(
-                                30,
-                              ),
-                            ),
-                            child: Align(
-                              alignment: Alignment.center,
-                              child: text(
-                                context,
-                                "Tutors referred",
-                                14.0,
-                                AppColors.customWhite,
-                                bold: true,
-                                // alignText: Alignment.center
-                              ),
-                              // child: textWidget(
-                              //   "Tutors referred",
-                              //   FontWeight.w600,
-                              //   0xffffffff,
-                              //   14,
-                              // ),
-                            ),
-                          ),
-                          text(
-                            context,
-                            "150",
-                            14.0,
-                            AppColors.greytextText,
-                            bold: true,
-                            // alignText: Alignment.center
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 60.h,
-                      ),
-                      text(
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.yellow,
+          borderRadius: BorderRadius.circular(13.r),
+        ),
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              alignment: Alignment.center,
+              // width: 526.w,
+              // height: 780.h,
+              decoration: BoxDecoration(
+                // color: Colors.green,
+                borderRadius: BorderRadius.circular(30.r),
+              ),
+              padding: EdgeInsets.only(
+                left: 45.w,
+                right: 45.w,
+                top: 50.h,
+              ),
+              margin: EdgeInsets.only(
+                // top: 130.h,
+                top: AppSizes.dynamicHeight(context, 0.04),
+              ),
+              // padding: EdgeInsets.symmetric(
+              //   vertical: 16.h,
+              //   horizontal: 25.w,
+              // ),
+              child: Stack(
+                overflow: Overflow.visible,
+                children: [
+                  Container(
+                    // height: 631.h,
+                    decoration: BoxDecoration(
+                      color: AppColors.customGrey,
+                      borderRadius: BorderRadius.circular(14),
+                    ),
+                    padding: EdgeInsets.only(
+                      // top: 130.h,
+                      top: AppSizes.dynamicHeight(context, 0.1),
+                      left: 50.w,
+                      right: 50.w,
+                      bottom: AppSizes.dynamicHeight(context, 0.02),
+                    ),
+
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        text(
                           context,
-                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
+                          "Sakib Abdullah",
+                          18.0,
+                          AppColors.greyText,
+                          bold: true,
+                        ),
+                        // textWidget(
+                        //   "Sakib Abdullah",
+                        //   FontWeight.w600,
+                        //   0xff747474,
+                        //   18,
+                        // ),
+                        SizedBox(
+                          height: 10.h,
+                        ),
+                        text(
+                          context,
+                          "Maple Leaf International School and College",
                           14.0,
-                          AppColors.customBlack,
-                          // bold: true,
-                          // alignText: Alignment.center
-                          maxLines: 8),
-                      // textWidget(
-                      //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
-                      //   FontWeight.w300,
-                      //   0xff7000000,
-                      //   14,
-                      // ),
-                    ],
+                          AppColors.greyText,
+                        ),
+                        // textWidget(
+                        //   "Maple Leaf International School and College",
+                        //   FontWeight.w300,
+                        //   0xff747474,
+                        //   14,
+                        // ),
+                        SizedBox(
+                          height: AppSizes.dynamicHeight(context, 0.03),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              height: AppSizes.dynamicHeight(context, 0.04),
+                              width: AppSizes.dynamicHeight(context, 0.2),
+                              // padding: const EdgeInsets.only(
+                              //   top: 5,
+                              //   bottom: 5,
+                              // ),
+                              decoration: BoxDecoration(
+                                color: AppColors.customDarkBlue,
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              child: Align(
+                                alignment: Alignment.center,
+                                child: text(
+                                  context,
+                                  "Tutions completed",
+                                  14.0,
+                                  AppColors.customWhite,
+                                  bold: true,
+                                  // alignText: Alignment.center
+                                ),
+                              ),
+                            ),
+                            text(
+                              context,
+                              "150",
+                              14.0,
+                              AppColors.greytextText,
+                              bold: true,
+                              // alignText: Alignment.center
+                            ),
+                            // textWidget(
+                            //   "150",
+                            //   FontWeight.w600,
+                            //   0xff7D7D7D,
+                            //   14,
+                            // ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10.h,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              height: AppSizes.dynamicHeight(context, 0.04),
+                              width: AppSizes.dynamicHeight(context, 0.2),
+                              // padding: const EdgeInsets.only(
+                              //   top: 5,
+                              //   bottom: 5,
+                              // ),
+                              decoration: BoxDecoration(
+                                color: Color(0xffA279E6),
+                                borderRadius: BorderRadius.circular(
+                                  30,
+                                ),
+                              ),
+                              child: Align(
+                                alignment: Alignment.center,
+                                child: text(
+                                  context,
+                                  "Tutors referred",
+                                  14.0,
+                                  AppColors.customWhite,
+                                  bold: true,
+                                  // alignText: Alignment.center
+                                ),
+                                // child: textWidget(
+                                //   "Tutors referred",
+                                //   FontWeight.w600,
+                                //   0xffffffff,
+                                //   14,
+                                // ),
+                              ),
+                            ),
+                            text(
+                              context,
+                              "150",
+                              14.0,
+                              AppColors.greytextText,
+                              bold: true,
+                              // alignText: Alignment.center
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: AppSizes.dynamicHeight(context, 0.05),
+                        ),
+                        text(
+                            context,
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
+                            14.0,
+                            AppColors.customBlack,
+                            // bold: true,
+                            // alignText: Alignment.center
+                            maxLines: 8),
+                        // textWidget(
+                        //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
+                        //   FontWeight.w300,
+                        //   0xff7000000,
+                        //   14,
+                        // ),
+                      ],
+                    ),
                   ),
-                ),
-                Positioned(
-                    top: -50.0,
-                    right: 0,
-                    left: 0,
-                    // (background container size) - (circle height / 2)
-                    child: Center(
-                      child: Container(
-                        height: 170.h,
-                        width: 183.w,
-                        decoration: const BoxDecoration(
-                          shape: BoxShape.circle,
-                          image: DecorationImage(
-                            image: AssetImage(
-                              "assets/png/wp2398385 1.png",
+                  Positioned(
+                      top: -100.0,
+                      right: 0,
+                      left: 0,
+                      // (background container size) - (circle height / 2)
+                      child: Center(
+                        child: Container(
+                          height: AppSizes.dynamicHeight(context, 0.2),
+                          width: AppSizes.dynamicWidth(context, 0.2),
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                              image: AssetImage(
+                                "assets/png/wp2398385 1.png",
+                              ),
                             ),
                           ),
                         ),
+                      )
+                      // CircleAvatar(
+                      //   radius: 80.r,
+                      //   backgroundImage: const AssetImage(
+                      //     "assets/png/wp2398385 1.png",
+                      //   ),
+                      // ),
                       ),
-                    )
-                    // CircleAvatar(
-                    //   radius: 80.r,
-                    //   backgroundImage: const AssetImage(
-                    //     "assets/png/wp2398385 1.png",
-                    //   ),
-                    // ),
-                    ),
-              ],
+                ],
+              ),
             ),
-          ),
-          SingleChildScrollView(
-            child: Container(
+            Container(
               margin: EdgeInsets.only(
-                top: 100.h,
+                top: AppSizes.dynamicHeight(context, 0.05),
+                left: 45.w,
                 right: 45.w,
               ),
               child: Column(
                 children: [
                   greyWidget(),
                   SizedBox(
-                    height: 20.h,
+                    height: 10.h,
                   ),
                   greyWidget1(),
                   SizedBox(
-                    height: 20.h,
+                    height: 10.h,
                   ),
                   greyWidget2()
                 ],
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
 
   Widget greyWidget() {
     return Container(
-      width: 974.w,
+      // width: 974.w,
       height: 163.h,
       decoration: BoxDecoration(
         color: AppColors.customGrey,
-        borderRadius: BorderRadius.circular(30),
+        borderRadius: BorderRadius.circular(10),
       ),
       // padding: EdgeInsets.only(
       //   left: 60.w,
@@ -282,15 +291,15 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            width: 218.w,
-            height: 35.h,
+            width: AppSizes.dynamicWidth(context, 0.45),
+            height: AppSizes.dynamicHeight(context, 0.04),
             margin: EdgeInsets.only(
               top: 21.h,
               left: 21.w,
             ),
             decoration: BoxDecoration(
                 color: Color(0xff3DDEA5),
-                borderRadius: BorderRadius.circular(20)),
+                borderRadius: BorderRadius.circular(8)),
             child: Align(
               alignment: Alignment.center,
               child: text(
@@ -320,6 +329,9 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                       AppColors.greytextText,
                       bold: false,
                     ),
+                  ),
+                  SizedBox(
+                    height: 10.h,
                   ),
                   Padding(
                     padding: EdgeInsets.only(
@@ -357,6 +369,9 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                       bold: false,
                     ),
                   ),
+                  SizedBox(
+                    height: 10.h,
+                  ),
                   Padding(
                     padding: EdgeInsets.only(
                       top: 2.h,
@@ -381,26 +396,27 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
 
   Widget greyWidget1() {
     return Container(
-      width: 974.w,
-      height: 266.h,
+      // width: 974.w,
+      // height: 266.h,
       decoration: BoxDecoration(
         color: AppColors.customGrey,
-        borderRadius: BorderRadius.circular(30),
+        borderRadius: BorderRadius.circular(10),
       ),
+      padding: EdgeInsets.only(bottom: AppSizes.dynamicHeight(context, 0.03)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            width: 218.w,
-            height: 35.h,
+            width: AppSizes.dynamicWidth(context, 0.45),
+            height: AppSizes.dynamicHeight(context, 0.04),
             margin: EdgeInsets.only(
               top: 21.h,
               left: 21.w,
             ),
             decoration: BoxDecoration(
                 color: Color(0xff3DDEA5),
-                borderRadius: BorderRadius.circular(20)),
+                borderRadius: BorderRadius.circular(8)),
             child: Align(
               alignment: Alignment.center,
               child: text(
@@ -425,7 +441,7 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                   Padding(
                     padding: EdgeInsets.only(
                       top: 10.h,
-                      left: 50.w,
+                      left: 30.w,
                     ),
                     child: text(
                       context,
@@ -438,15 +454,15 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                   Padding(
                     padding: EdgeInsets.only(
                       top: 10.h,
-                      left: 50.w,
+                      left: 30.w,
                     ),
                     child: text(
-                      context,
-                      "Maple Leaf International School And College",
-                      14.0,
-                      AppColors.greytextText,
-                      bold: true,
-                    ),
+                        context,
+                        "Maple Leaf International School And Colleg",
+                        11.0,
+                        AppColors.greytextText,
+                        bold: true,
+                        maxLines: 1),
                   ),
                 ],
               ),
@@ -457,7 +473,7 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                   Padding(
                     padding: EdgeInsets.only(
                       top: 10.h,
-                      left: 50.w,
+                      left: 30.w,
                     ),
                     child: text(
                       context,
@@ -470,7 +486,7 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                   Padding(
                     padding: EdgeInsets.only(
                       top: 10.h,
-                      left: 50.w,
+                      left: 30.w,
                     ),
                     child: text(
                       context,
@@ -498,7 +514,7 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                   Padding(
                     padding: EdgeInsets.only(
                       top: 10.h,
-                      left: 50.w,
+                      left: 30.w,
                     ),
                     child: text(
                       context,
@@ -511,7 +527,7 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                   Padding(
                     padding: EdgeInsets.only(
                       top: 10.h,
-                      left: 50.w,
+                      left: 30.w,
                     ),
                     child: text(
                       context,
@@ -524,7 +540,7 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                 ],
               ),
               SizedBox(
-                width: 240.w,
+                width: 200.w,
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -567,8 +583,8 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
 
   Widget greyWidget2() {
     return Container(
-      width: 974.w,
-      height: 354.h,
+      // width: 974.w,
+      // height: 354.h,
       decoration: BoxDecoration(
         border: Border.all(
           width: 2,
@@ -581,11 +597,11 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            width: 114.w,
-            height: 35.h,
+            width: AppSizes.dynamicWidth(context, 0.45),
+            height: AppSizes.dynamicHeight(context, 0.04),
             margin: EdgeInsets.only(
-              left: 35.h,
-              top: 40.h,
+              top: 21.h,
+              left: 21.w,
             ),
             decoration: BoxDecoration(
               color: AppColors.customDarkGreen,
@@ -611,9 +627,9 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
               right: 107.w,
               top: 24.h,
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              // crossAxisAlignment: CrossAxisAlignment.,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -633,9 +649,9 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                     ),
                   ],
                 ),
-                SizedBox(
-                  width: 28.w,
-                ),
+                 SizedBox(
+                      height: AppSizes.dynamicHeight(context, 0.04),
+                    ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -665,29 +681,51 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                             color: Colors.black,
                           ),
                         ),
+                        // Container(
+                        //   height: 91.h,
+                        //   width: 90.w,
+                        //   margin: EdgeInsets.only(
+                        //     left: 20.w,
+                        //   ),
+                        //   decoration: const BoxDecoration(
+                        //       shape: BoxShape.circle,
+                        //       image: DecorationImage(
+                        //         image: AssetImage(
+                        //           "assets/png/wp2398385 1.png",
+                        //         ),
+                        //       )),
+                        // ),
+
                         Container(
-                          height: 91.h,
-                          width: 90.w,
-                          margin: EdgeInsets.only(
-                            left: 20.w,
-                          ),
+                          height: AppSizes.dynamicHeight(context, 0.06),
+                          width: AppSizes.dynamicHeight(context, 0.15),
+                          // margin: EdgeInsets.only(
+                          //   top: 5.h,
+                          //   bottom: 5.h,
+                          //   // left: 2.w,
+                          // ),
                           decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                              image: DecorationImage(
-                                image: AssetImage(
-                                  "assets/png/wp2398385 1.png",
-                                ),
-                              )),
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                              image: AssetImage(
+                                "assets/png/wp2398385 1.png",
+                              ),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
                         ),
                       ],
                     ),
                     text(
                         context,
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor vulputate ut mauris sem. At platea erat diam sed proin.",
                         14,
                         AppColors.customBlack,
                         bold: false,
                         maxLines: 2),
+                    SizedBox(
+                      height: AppSizes.dynamicHeight(context, 0.02),
+                    )
                   ],
                 ),
               ],
@@ -739,10 +777,22 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
             SizedBox(
               width: 2.w,
             ),
-            CircleAvatar(
-              radius: 46.r,
-              backgroundImage: const AssetImage(
-                "assets/png/wp2398385 1.png",
+            Container(
+              height: AppSizes.dynamicHeight(context, 0.15),
+              width: AppSizes.dynamicHeight(context, 0.2),
+              // margin: EdgeInsets.only(
+              //   top: 5.h,
+              //   bottom: 5.h,
+              //   // left: 2.w,
+              // ),
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: AssetImage(
+                    "assets/png/wp2398385 1.png",
+                  ),
+                  fit: BoxFit.contain,
+                ),
               ),
             ),
           ],
@@ -759,13 +809,14 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
 
   Widget listTileWidget() {
     return Container(
-      width: 241.w,
-      height: 50.h,
+      // width: 241.w,
+      // height: 50.h,
       decoration: BoxDecoration(
         color: AppColors.customGrey,
         borderRadius: BorderRadius.circular(30),
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           // CircleAvatar(
           //   radius: 26.r,
@@ -774,12 +825,12 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
           //   ),
           // ),
           Container(
-            height: 33.h,
-            width: 33.w,
+            height: AppSizes.dynamicHeight(context, 0.07),
+            width: AppSizes.dynamicHeight(context, 0.2),
             margin: EdgeInsets.only(
               top: 5.h,
               bottom: 5.h,
-              left: 8.w,
+              // left: 2.w,
             ),
             decoration: const BoxDecoration(
               shape: BoxShape.circle,
@@ -787,6 +838,7 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                 image: AssetImage(
                   "assets/png/wp2398385 1.png",
                 ),
+                fit: BoxFit.contain,
               ),
             ),
           ),
@@ -795,7 +847,7 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
             margin: EdgeInsets.only(
               top: 5.h,
               bottom: 5.h,
-              left: 15.w,
+              left: 4.w,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

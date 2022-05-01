@@ -17,183 +17,284 @@ class OnDemandWeb extends StatefulWidget {
 }
 
 class _OnDemandWebState extends State<OnDemandWeb> {
+  String dropdownvalue = 'Subject';
+  String dropdownvalue1 = 'Topic';
+
+  // List of items in our dropdown menu
+  var items = [
+    'Subject',
+    'Item 2',
+    'Item 3',
+    'Item 4',
+    'Item 5',
+  ];
+
+
+    // List of items in our dropdown menu
+  var items1 = [
+    'Topic',
+    'Item 2',
+    'Item 3',
+    'Item 4',
+    'Item 5',
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 3,
-      child: Container(
-        width: AppSizes.dynamicWidth(context, 1),
-        height: AppSizes.dynamicHeight(context, 1),
-        decoration: BoxDecoration(
-          color: AppColors.customWhite,
-          borderRadius: BorderRadius.circular(30.r),
-        ),
-        padding: EdgeInsets.all(20.r),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Row(
+    return Container(
+      width: AppSizes.dynamicWidth(context, 1),
+      height: AppSizes.dynamicHeight(context, 1),
+      decoration: BoxDecoration(
+        color: AppColors.customWhite,
+        borderRadius: BorderRadius.circular(30.r),
+      ),
+      padding: EdgeInsets.all(20.r),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //   crossAxisAlignment: CrossAxisAlignment.start,
+            //   children: [
+            //     Padding(
+            //       padding: EdgeInsets.only(left: 180.w),
+            //       child: SizedBox(
+            //         width: 760.w,
+            //         height: 128.h,
+            //         child: Center(
+            //           child: Container(
+            //             width: 502.w,
+            //             height: 65.h,
+            //             decoration: BoxDecoration(
+            //               // color: Colors.amber,
+            //               borderRadius: BorderRadius.circular(100.r),
+            //               border: Border.all(
+            //                 color: AppColors.customGrey,
+            //                 width: 2.0,
+            //               ),
+            //             ),
+            //             child: TabBar(
+            //               indicator: BoxDecoration(
+            //                 borderRadius: BorderRadius.only(
+            //                   topLeft: Radius.circular(0.0),
+            //                   topRight: Radius.circular(100.0),
+            //                   bottomRight: Radius.circular(100.0),
+            //                   bottomLeft: Radius.circular(100.0),
+            //                 ),
+            //                 color: AppColors.greenDark,
+            //               ),
+            //               unselectedLabelStyle: TextStyle(
+            //                 color: AppColors.greenDark,
+            //               ),
+            //               unselectedLabelColor: Colors.black,
+            //               labelColor: AppColors.customWhite,
+            //               labelStyle: TextStyle(
+            //                 color: AppColors.customWhite,
+            //                 fontWeight: FontWeight.bold,
+            //               ),
+            //               tabs: [
+            //                 Tab(
+            //                   text: "Subject",
+            //                 ),
+            //                 Tab(
+            //                   text: "Topic",
+            //                 ),
+            //                 Tab(
+            //                   text: "Search",
+            //                 ),
+            //               ],
+            //             ),
+            //           ),
+            //         ),
+            //       ),
+            //     ),
+            //     Row(
+            //       mainAxisAlignment: MainAxisAlignment.center,
+            //       crossAxisAlignment: CrossAxisAlignment.center,
+            //       children: [
+            //         const Icon(
+            //           Icons.notifications,
+            //           color: AppColors.greenDark,
+            //         ),
+            //         AppSizes.widthBox(context, .01),
+            //         CircleAvatar(
+            //           radius: 32.r,
+            //           backgroundColor: AppColors.green,
+            //           child: CircleAvatar(
+            //             radius: 28.r,
+            //             backgroundImage: const AssetImage(
+            //               "assets/png/wp2398385 1.png",
+            //             ),
+            //           ),
+            //         ),
+            //       ],
+            //     ),
+            //   ],
+            // ),
+            Container(
+              width: 502.w,
+              height: 65.h,
+              decoration: BoxDecoration(
+                // borderRadius: BorderRadius.circular(20),
+                border: Border(
+                  bottom: BorderSide(width: 2, color: Color(0xffE4E4E4)),
+                  left: BorderSide(width: 2, color: Color(0xffE4E4E4)),
+                  top: BorderSide(width: 2, color: Color(0xffE4E4E4)),
+                  // right: BorderSide(width:0, color: Colors.transparent),
+                ),
+                // borderRadius: BorderRadius.circular(40),
+                // borderRadius: BorderRadius.only(
+                //   // topRight: Radius.circular(40.0),
+                //   // bottomRight: Radius.circular(40.0),
+                //   topLeft: Radius.circular(40.0),
+                //   bottomLeft: Radius.circular(64.0),
+                // ),
+              ),
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: EdgeInsets.only(left: 180.w),
-                    child: SizedBox(
-                      width: 760.w,
-                      height: 128.h,
-                      child: Center(
-                        child: Container(
-                          width: 502.w,
-                          height: 65.h,
-                          decoration: BoxDecoration(
-                            // color: Colors.amber,
-                            borderRadius: BorderRadius.circular(100.r),
-                            border: Border.all(
-                              color: AppColors.customGrey,
-                              width: 2.0,
-                            ),
-                          ),
-                          child: TabBar(
-                            indicator: BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(0.0),
-                                topRight: Radius.circular(100.0),
-                                bottomRight: Radius.circular(100.0),
-                                bottomLeft: Radius.circular(100.0),
-                              ),
-                              color: AppColors.greenDark,
-                            ),
-                            unselectedLabelStyle: TextStyle(
-                              color: AppColors.greenDark,
-                            ),
-                            unselectedLabelColor: Colors.black,
-                            labelColor: AppColors.customWhite,
-                            labelStyle: TextStyle(
-                              color: AppColors.customWhite,
-                              fontWeight: FontWeight.bold,
-                            ),
-                            tabs: [
-                              Tab(
-                                text: "Subject",
-                              ),
-                              Tab(
-                                text: "Topic",
-                              ),
-                              Tab(
-                                text: "Search",
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
+                  SizedBox(width: 20.w,),
+                  DropdownButton(
+                    // Initial Value
+                    value: dropdownvalue,
+                    underline: Container(color: Colors.transparent),
+                    // Down Arrow Icon
+                    icon: const Icon(Icons.keyboard_arrow_down),
+                    // Array list of items
+                    items: items.map((String items) {
+                      return DropdownMenuItem(
+                        value: items,
+                        child: Text(items),
+                      );
+                    }).toList(),
+                    // After selecting the desired option,it will
+                    // change button value to selected value
+                    onChanged: (String? newValue) {
+                      setState(() {
+                        dropdownvalue = newValue!;
+                      });
+                    },
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      const Icon(
-                        Icons.notifications,
-                        color: AppColors.greenDark,
+SizedBox(width: 20.w,),
+                    DropdownButton(
+                    // Initial Value
+                    value: dropdownvalue1,
+                    underline: Container(color: Colors.transparent),
+                    // Down Arrow Icon
+                    icon: const Icon(Icons.keyboard_arrow_down),
+                    // Array list of items
+                    items: items1.map((String items) {
+                      return DropdownMenuItem(
+                        value: items,
+                        child: Text(items),
+                      );
+                    }).toList(),
+                    // After selecting the desired option,it will
+                    // change button value to selected value
+                    onChanged: (String? newValue) {
+                      setState(() {
+                        dropdownvalue1 = newValue!;
+                      });
+                    },
+                  ),
+                  SizedBox(width: 20.w,),
+                  Container(
+                      height: 65.h,
+                      width: 182.w,
+                      decoration: BoxDecoration(
+                        color: Color(0xff01B489),
+                        borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(40.0),
+                            bottomRight: Radius.circular(40.0),
+                            // topLeft: Radius.circular(40.0),
+                            bottomLeft: Radius.circular(64.0)),
                       ),
-                      AppSizes.widthBox(context, .01),
-                      CircleAvatar(
-                        radius: 32.r,
-                        backgroundColor: AppColors.green,
-                        child: CircleAvatar(
-                          radius: 28.r,
-                          backgroundImage: const AssetImage(
-                            "assets/png/wp2398385 1.png",
-                          ),
+                      child: Align(
+                          alignment: Alignment.center,
+                          child: text(
+                              context, "SEARCH", 22.0, AppColors.customWhite,
+                              bold: false)))
+                ],
+              ),
+            ),
+            AppSizes.heightBox(context, .02),
+            Padding(
+              padding: EdgeInsets.only(left: 180.w),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    children: [
+                      SizedBox(
+                        width: 760.w,
+                        height: 700.h,
+                        child: ListView.builder(
+                          itemCount: 6,
+                          itemBuilder: (context, i) {
+                            return profileCard(context);
+                          },
                         ),
                       ),
+                      // SizedBox(
+                      //   width: 760.w,
+                      //   height: 700.h,
+                      //   child: ListView.builder(
+                      //     itemCount: 6,
+                      //     itemBuilder: (context, i) {
+                      //       return profileCard(context);
+                      //     },
+                      //   ),
+                      // ),
+                      // SizedBox(
+                      //   width: 760.w,
+                      //   height: 700.h,
+                      //   child: ListView.builder(
+                      //     itemCount: 6,
+                      //     itemBuilder: (context, i) {
+                      //       return profileCard(context);
+                      //     },
+                      //   ),
+                      // ),
                     ],
+                  ),
+                  Container(
+                    width: 526.w,
+                    height: 740.h,
+                    decoration: BoxDecoration(
+                      color: AppColors.customGrey,
+                      borderRadius: BorderRadius.circular(30.r),
+                    ),
+                    padding: EdgeInsets.symmetric(
+                      vertical: 16.h,
+                      horizontal: 25.w,
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        text(
+                          context,
+                          "Notifications",
+                          18.sp,
+                          AppColors.customGreen,
+                        ),
+                        SizedBox(
+                          width: 460.w,
+                          height: 660.h,
+                          child: ListView.builder(
+                            itemCount: 6,
+                            itemBuilder: (context, i) {
+                              return notificationCard(context);
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
-              AppSizes.heightBox(context, .02),
-              Padding(
-                padding: EdgeInsets.only(left: 180.w),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SizedBox(
-                      width: 760.w,
-                      height: 720.h,
-                      child: TabBarView(
-                        children: [
-                          SizedBox(
-                            width: 760.w,
-                            height: 700.h,
-                            child: ListView.builder(
-                              itemCount: 6,
-                              itemBuilder: (context, i) {
-                                return profileCard(context);
-                              },
-                            ),
-                          ),
-                          SizedBox(
-                            width: 760.w,
-                            height: 700.h,
-                            child: ListView.builder(
-                              itemCount: 6,
-                              itemBuilder: (context, i) {
-                                return profileCard(context);
-                              },
-                            ),
-                          ),
-                          SizedBox(
-                            width: 760.w,
-                            height: 700.h,
-                            child: ListView.builder(
-                              itemCount: 6,
-                              itemBuilder: (context, i) {
-                                return profileCard(context);
-                              },
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      width: 526.w,
-                      height: 740.h,
-                      decoration: BoxDecoration(
-                        color: AppColors.customGrey,
-                        borderRadius: BorderRadius.circular(30.r),
-                      ),
-                      padding: EdgeInsets.symmetric(
-                        vertical: 16.h,
-                        horizontal: 25.w,
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          text(
-                            context,
-                            "Notifications",
-                            18.sp,
-                            AppColors.customGreen,
-                          ),
-                          SizedBox(
-                            width: 460.w,
-                            height: 660.h,
-                            child: ListView.builder(
-                              itemCount: 6,
-                              itemBuilder: (context, i) {
-                                return notificationCard(context);
-                              },
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

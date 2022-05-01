@@ -275,7 +275,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
       width: 800.w,
       // height: 160.h,
       decoration: BoxDecoration(
-          color: AppColors.customGrey, borderRadius: BorderRadius.circular(10)),
+          color: Color(0xffE0E0E0), borderRadius: BorderRadius.circular(30.r)),
       padding: EdgeInsets.only(
         left: 60.w,
         right: 60.w,
