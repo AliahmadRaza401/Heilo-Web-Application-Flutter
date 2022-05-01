@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/screens/admin/admin_sideMenu.dart';
 import 'package:heilo/screens/authentication/Popups/auth_popUp.dart';
 import 'package:heilo/screens/authentication/student_phase1/student_phase1.dart';
+import 'package:heilo/screens/teacher/Main_SideMenu/teacher_sidemenu.dart';
 import 'package:heilo/utils/app_routes.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
@@ -132,24 +133,29 @@ class IntroWeb extends StatelessWidget {
                     ),
                   ),
                 ),
-                Container(
-                  alignment: Alignment.center,
-                  width: 350.w,
-                  height: 70.h,
-                  decoration: BoxDecoration(
-                    color: AppColors.customWhite,
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Image.asset(
-                        'assets/png/Group 528.png',
-                        width: 50.w,
-                        height: 50.h,
-                      ),
-                      text(context, "Teacher", 24.sp, Colors.black),
-                    ],
+                InkWell(
+                  onTap: () {
+                    AppRoutes.push(context, TeacherSideMenu());
+                  },
+                  child: Container(
+                    alignment: Alignment.center,
+                    width: 350.w,
+                    height: 70.h,
+                    decoration: BoxDecoration(
+                      color: AppColors.customWhite,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Image.asset(
+                          'assets/png/Group 528.png',
+                          width: 50.w,
+                          height: 50.h,
+                        ),
+                        text(context, "Teacher", 24.sp, Colors.black),
+                      ],
+                    ),
                   ),
                 ),
                 InkWell(

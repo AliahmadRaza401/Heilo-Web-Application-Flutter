@@ -35,19 +35,11 @@ class MyApp extends StatelessWidget {
               child: widget!,
             );
           },
-          home: const Intro(),
+          // home: const Intro(),
           // home: const AdminSideMenu(),
-          // home: StudentProfileWeb(),
+          home: StudentSideMenu(),
         );
       },
     );
-    // return MaterialApp(
-    //   debugShowCheckedModeBanner: false,
-    //   title: 'Heilo',
-    //   theme: ThemeData(
-    //     primarySwatch: Colors.blue,
-    //   ),
-    //   home: Intro(),
-    // );
   }
 }
