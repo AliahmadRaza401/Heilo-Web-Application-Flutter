@@ -10,11 +10,8 @@ class StudentDrawer extends StatelessWidget {
         // Important: Remove any padding from the ListView.
         padding: EdgeInsets.zero,
         children: [
-          const DrawerHeader(
-            decoration: BoxDecoration(
-              color: Colors.blue,
-            ),
-            child: Text('Drawer Header'),
+          DrawerHeader(
+            child: Image.asset("assets/png/logo.png"),
           ),
           ListTile(
             leading: Icon(
