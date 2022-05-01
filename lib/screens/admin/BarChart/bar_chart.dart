@@ -5,8 +5,8 @@ Widget barChart(){
   List<charts.Series<BarChartModel, String>> series = [
       charts.Series(
         id: "financial",
+        
         data: data,
-        displayName: 'name',
         domainFn: (BarChartModel series, _) => series.year,
         measureFn: (BarChartModel series, _) => series.financial,
         colorFn: (BarChartModel series, _) => series.color,

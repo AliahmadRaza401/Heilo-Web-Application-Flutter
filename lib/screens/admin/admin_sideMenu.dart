@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/screens/admin/Dashboard/admin_/dashboard.dart';
+import 'package:heilo/screens/admin/QuizReport/quiz_report.dart';
 
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
@@ -158,18 +159,7 @@ class _AdminSideMenuState extends State<AdminSideMenu> {
                 controller: page,
                 children: [
                  AdminDashboard(),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: AppColors.customWhite,
-                      borderRadius: BorderRadius.circular(30.r),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        'Dashboard2',
-                        style: TextStyle(fontSize: 35),
-                      ),
-                    ),
-                  ),
+                  QuizReports(),
                   Container(
                     decoration: BoxDecoration(
                       color: AppColors.customWhite,

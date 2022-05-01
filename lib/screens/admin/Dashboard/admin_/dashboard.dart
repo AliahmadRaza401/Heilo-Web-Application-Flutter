@@ -40,12 +40,20 @@ class _AdminDashboardState extends State<AdminDashboard> {
                     children: [
                       text(context, 'NUMBER OF STUDENTS', 30, Color(0xffC4C4C4),
                           bold: FontWeight.bold),
-                      text(context, '2511', 30, Color(0xff7D7C7C),
-                          bold: FontWeight.bold),
+                      Text( '2511',style:TextStyle(
+                        fontFamily: 'Poppins',
+                        color: Color(0xff7D7C7C),
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold
+                      ), ),//0xffC4C4C4
                       text(context, 'NUMBER OF TEACHERS', 30, Color(0xffC4C4C4),
                           bold: FontWeight.bold),
-                      text(context, '2511', 30, AppColors.customGreen,
-                          bold: FontWeight.bold),
+                       Text( '2511',style:TextStyle(
+                        fontFamily: 'Poppins',
+                        color: Color(0xff01B489),
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold
+                      ), ),//
                     ],
                   ),
                 ),
@@ -145,6 +153,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
                 )
               ],
             ),
+            
             Expanded(
                 child: Row(
               crossAxisAlignment: CrossAxisAlignment.end,

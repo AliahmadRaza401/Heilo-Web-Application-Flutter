@@ -20,6 +20,7 @@ class AppColors {
   static const customPink = Color(0xffFF4D65);
   static const customYellow = Color(0xffFDD638);
   static const lightGrey = Color(0xffEBEBEB);
+  static const darkGrey = Color(0xff8A8A8A);
 
   static const noColor = Colors.transparent;
 

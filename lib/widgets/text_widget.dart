@@ -1,13 +1,20 @@
-// ignore_for_file: unused_import
+// ignore_for_file: unused_import, prefer_const_constructors
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/dynamic_sizes.dart';
 
-Widget text(context, text, size, color,
-    {bold = false, alignText = TextAlign.start, maxLines = 2, }) {
-    return Text(
+Widget text(
+  context,
+  text,
+  size,
+  color, {
+  bold = false,
+  alignText = TextAlign.start,
+  maxLines = 2,
+}) {
+  return Text(
     text,
     textAlign: alignText,
     maxLines: maxLines,
@@ -15,7 +22,6 @@ Widget text(context, text, size, color,
     style: TextStyle(
       color: color,
       fontSize: size,
-      fontFamily: 'Poppins',
       // fontSize: AppSizes.dynamicWidth(context, size),
       fontWeight: bold == true ? FontWeight.w600 : FontWeight.normal,
     ),
@@ -64,5 +70,16 @@ Widget richTextWidget(
               ),
       ],
     ),
+  );
+}
+
+Widget boldPopinText(String text,double fontSize,Color poppinColor) {
+  return Text(
+    text,
+    style: TextStyle(
+        fontFamily: 'Poppins',
+        color: poppinColor,
+        fontSize: fontSize,
+        fontWeight: FontWeight.bold),
   );
 }
