@@ -10,6 +10,8 @@ class AppColors {
   static const greytextText = Color(0xff7D7D7D);
   static const customDarkBlue = Color(0xff48A6F0);
   static const customGreen = Color(0xff4BC48F);
+  static const lightGreen = Color(0xffD2F9EB);
+
   static const customDarkGreen = Color(0xff00AD61);
   static const customBlue = Color(0xff60BCDF);
   static const customWhite = Color(0xffffffff);
