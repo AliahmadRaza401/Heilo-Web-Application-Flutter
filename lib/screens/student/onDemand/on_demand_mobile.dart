@@ -3,12 +3,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:heilo/screens/student/drawer/student_drawer.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/buttons.dart';
 import 'package:heilo/widgets/text_widget.dart';
 
 import '../../../utils/config.dart';
 
+
+
+final GlobalKey<ScaffoldState> studentScafoldKey = GlobalKey(); 
 class OnDemandMobile extends StatefulWidget {
   const OnDemandMobile({Key? key}) : super(key: key);
 
@@ -19,149 +23,186 @@ class OnDemandMobile extends StatefulWidget {
 class _OnDemandMobileState extends State<OnDemandMobile> {
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 3,
-      child: Container(
-        width: AppSizes.dynamicWidth(context, 1),
-        height: AppSizes.dynamicHeight(context, 1),
-        decoration: BoxDecoration(
-          color: AppColors.customWhite,
-          borderRadius: BorderRadius.circular(30.r),
-        ),
-        padding: EdgeInsets.all(20.r),
-        child: SingleChildScrollView(
-          child: Column(
+    return Scaffold(
+        key: studentScafoldKey,
+        appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.white,
+          leading: Builder(
+            builder: (BuildContext context) {
+              return IconButton(
+                icon: const Icon(
+                  Icons.menu,
+                  color: Colors.black,
+                  size: 30, // Changing Drawer Icon Size
+                ),
+                onPressed: () {
+                 studentScafoldKey.currentState!.openDrawer();
+                },
+                tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+              );
+            },
+          ),
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(left: 180.w),
-                    child: SizedBox(
-                      width: AppSizes.dynamicWidth(context, 0.6),
-                      height: 128.h,
-                      child: Center(
-                        child: Container(
-                          width: AppSizes.dynamicWidth(context, 0.6),
-                          height: 40.h,
-                          decoration: BoxDecoration(
-                            // color: Colors.amber,
-                            borderRadius: BorderRadius.circular(100.r),
-                            border: Border.all(
-                              color: AppColors.customGrey,
-                              width: 2.0,
-                            ),
-                          ),
-                          child: TabBar(
-                            indicator: BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(0.0),
-                                topRight: Radius.circular(100.0),
-                                bottomRight: Radius.circular(100.0),
-                                bottomLeft: Radius.circular(100.0),
+              CircleAvatar(
+                radius: 20,
+                backgroundColor: AppColors.primaryColor,
+                child: Image.asset(
+                  'assets/png/wp2398385 1.png',
+                  height: AppSizes.dynamicHeight(context, 0.07),
+                  width: AppSizes.dynamicWidth(context, 0.07),
+                ),
+              ),
+            ],
+          ),
+        ),
+        drawer: StudentDrawer(),
+      body: DefaultTabController(
+        length: 3,
+        child: Container(
+          width: AppSizes.dynamicWidth(context, 1),
+          height: AppSizes.dynamicHeight(context, 1),
+          decoration: BoxDecoration(
+            color: AppColors.customWhite,
+            borderRadius: BorderRadius.circular(30.r),
+          ),
+          padding: EdgeInsets.all(20.r),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(left: 180.w),
+                      child: SizedBox(
+                        width: AppSizes.dynamicWidth(context, 0.6),
+                        height: 128.h,
+                        child: Center(
+                          child: Container(
+                            width: AppSizes.dynamicWidth(context, 0.6),
+                            height: 40.h,
+                            decoration: BoxDecoration(
+                              // color: Colors.amber,
+                              borderRadius: BorderRadius.circular(100.r),
+                              border: Border.all(
+                                color: AppColors.customGrey,
+                                width: 2.0,
                               ),
-                              color: AppColors.greenDark,
                             ),
-                            unselectedLabelStyle: TextStyle(
-                              fontSize: AppSizes.dynamicWidth(context, 0.03),
-                              color: AppColors.greenDark,
+                            child: TabBar(
+                              indicator: BoxDecoration(
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(0.0),
+                                  topRight: Radius.circular(100.0),
+                                  bottomRight: Radius.circular(100.0),
+                                  bottomLeft: Radius.circular(100.0),
+                                ),
+                                color: AppColors.greenDark,
+                              ),
+                              unselectedLabelStyle: TextStyle(
+                                fontSize: AppSizes.dynamicWidth(context, 0.03),
+                                color: AppColors.greenDark,
+                              ),
+                              unselectedLabelColor: Colors.black,
+                              labelColor: AppColors.customWhite,
+                              labelStyle: TextStyle(
+                                color: AppColors.customWhite,
+                                fontWeight: FontWeight.bold,
+                                fontSize: AppSizes.dynamicWidth(context, 0.03),
+                              ),
+                              tabs: [
+                                Tab(
+                                  text: "Subject",
+                                ),
+                                Tab(
+                                  text: "Topic",
+                                ),
+                                Tab(
+                                  text: "Search",
+                                ),
+                              ],
                             ),
-                            unselectedLabelColor: Colors.black,
-                            labelColor: AppColors.customWhite,
-                            labelStyle: TextStyle(
-                              color: AppColors.customWhite,
-                              fontWeight: FontWeight.bold,
-                              fontSize: AppSizes.dynamicWidth(context, 0.03),
-                            ),
-                            tabs: [
-                              Tab(
-                                text: "Subject",
-                              ),
-                              Tab(
-                                text: "Topic",
-                              ),
-                              Tab(
-                                text: "Search",
-                              ),
-                            ],
                           ),
                         ),
                       ),
                     ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        InkWell(
+                          onTap: () {
+                            notificationPopUp(context);
+                          },
+                          child: const Icon(
+                            Icons.notifications,
+                            color: AppColors.greenDark,
+                            size: 20,
+                          ),
+                        ),
+                        AppSizes.widthBox(context, .01),
+                        CircleAvatar(
+                          radius: 32.r,
+                          backgroundColor: AppColors.green,
+                          child: CircleAvatar(
+                            radius: 28.r,
+                            backgroundImage: const AssetImage(
+                              "assets/png/wp2398385 1.png",
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                AppSizes.heightBox(context, .02),
+                Container(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 20.w,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                  // width: 760.w,
+                  height: 720.h,
+                  child: TabBarView(
                     children: [
-                      InkWell(
-                        onTap: () {
-                          notificationPopUp(context);
-                        },
-                        child: const Icon(
-                          Icons.notifications,
-                          color: AppColors.greenDark,
-                          size: 20,
+                      SizedBox(
+                        // width: 760.w,
+                        height: 700.h,
+                        child: ListView.builder(
+                          itemCount: 6,
+                          itemBuilder: (context, i) {
+                            return profileCard(context);
+                          },
                         ),
                       ),
-                      AppSizes.widthBox(context, .01),
-                      CircleAvatar(
-                        radius: 32.r,
-                        backgroundColor: AppColors.green,
-                        child: CircleAvatar(
-                          radius: 28.r,
-                          backgroundImage: const AssetImage(
-                            "assets/png/wp2398385 1.png",
-                          ),
+                      SizedBox(
+                        // width: 760.w,
+                        height: 700.h,
+                        child: ListView.builder(
+                          itemCount: 6,
+                          itemBuilder: (context, i) {
+                            return profileCard(context);
+                          },
+                        ),
+                      ),
+                      SizedBox(
+                        // width: 760.w,
+                        height: 700.h,
+                        child: ListView.builder(
+                          itemCount: 6,
+                          itemBuilder: (context, i) {
+                            return profileCard(context);
+                          },
                         ),
                       ),
                     ],
                   ),
-                ],
-              ),
-              AppSizes.heightBox(context, .02),
-              Container(
-                padding: EdgeInsets.symmetric(
-                  horizontal: 20.w,
                 ),
-                // width: 760.w,
-                height: 720.h,
-                child: TabBarView(
-                  children: [
-                    SizedBox(
-                      // width: 760.w,
-                      height: 700.h,
-                      child: ListView.builder(
-                        itemCount: 6,
-                        itemBuilder: (context, i) {
-                          return profileCard(context);
-                        },
-                      ),
-                    ),
-                    SizedBox(
-                      // width: 760.w,
-                      height: 700.h,
-                      child: ListView.builder(
-                        itemCount: 6,
-                        itemBuilder: (context, i) {
-                          return profileCard(context);
-                        },
-                      ),
-                    ),
-                    SizedBox(
-                      // width: 760.w,
-                      height: 700.h,
-                      child: ListView.builder(
-                        itemCount: 6,
-                        itemBuilder: (context, i) {
-                          return profileCard(context);
-                        },
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

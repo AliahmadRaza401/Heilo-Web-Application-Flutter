@@ -161,8 +161,8 @@ class _StudentSideMenuWebState extends State<StudentSideMenuWeb> {
               ),
               child: PageView(
                 controller: page,
-                children: [
-                  const OnDemand(),
+                children:const [
+                   OnDemand(),
                   Quizz(),
                   DashBoard(),
                 StudentProfile(),
