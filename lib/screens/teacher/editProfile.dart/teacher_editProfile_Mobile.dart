@@ -5,19 +5,19 @@ import 'package:heilo/utils/dynamic_sizes.dart';
 
 
 
-final GlobalKey<ScaffoldState> studentScafoldKey = GlobalKey();
-class EditProfileMobile extends StatefulWidget {
-  const EditProfileMobile({ Key? key }) : super(key: key);
+final GlobalKey<ScaffoldState> teacherScafoldKey = GlobalKey();
+class TeacherEditProfileMobile extends StatefulWidget {
+  const TeacherEditProfileMobile({ Key? key }) : super(key: key);
 
   @override
-  State<EditProfileMobile> createState() => _EditProfileMobileState();
+  State<TeacherEditProfileMobile> createState() => _TeacherEditProfileMobileState();
 }
 
-class _EditProfileMobileState extends State<EditProfileMobile> {
+class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        key: studentScafoldKey,
+        key: teacherScafoldKey,
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
@@ -30,7 +30,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                 size: 30, // Changing Drawer Icon Size
               ),
               onPressed: () {
-                studentScafoldKey.currentState!.openDrawer();
+                teacherScafoldKey.currentState!.openDrawer();
               },
               tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
             );

@@ -9,14 +9,14 @@ import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
 
-class DashBoaedWeb extends StatefulWidget {
-  const DashBoaedWeb({Key? key}) : super(key: key);
+class TeacherDashBoaedWeb extends StatefulWidget {
+  const TeacherDashBoaedWeb({Key? key}) : super(key: key);
 
   @override
-  State<DashBoaedWeb> createState() => _DashBoaedWebState();
+  State<TeacherDashBoaedWeb> createState() => _TeacherDashBoaedWebState();
 }
 
-class _DashBoaedWebState extends State<DashBoaedWeb> {
+class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
   int SelectedCard = 1;
   @override
   Widget build(BuildContext context) {
@@ -224,26 +224,21 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
         borderRadius: BorderRadius.circular(30),
         color: const Color(0xffF8F8F8),
       ),
-      padding:
-          EdgeInsets.only(bottom: 20.h, top: 20.h, left: 10.w, right: 10.w),
+      padding: EdgeInsets.only(bottom: 20.h),
       child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: [
-                Container(
-                  height: AppSizes.dynamicHeight(context, 0.06),
-                  width: AppSizes.dynamicWidth(context, 0.05),
-                  decoration: const BoxDecoration(
-                      image: DecorationImage(
-                    image: AssetImage('assets/png/trophy.png'),
-                    fit: BoxFit.contain,
-                  )),
-                ),
-                const Text(
+            Container(
+              alignment: Alignment.centerLeft,
+              width: 300.w,
+              decoration: BoxDecoration(
+                  color: Colors.white, borderRadius: BorderRadius.circular(21)),
+              child: const Align(
+                alignment: Alignment.center,
+                child: Text(
                   'Tutions Completed',
                   style: TextStyle(
                     color: Colors.black,
@@ -251,86 +246,10 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-              ],
+              ),
             ),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
           ],
         ),
-      ),
-    );
-  }
-
-  Widget tutionInerWidget() {
-    return Container(
-      margin: EdgeInsets.only(top: 10.h),
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
-          border: Border.all(width: 2, color: Color(0xffC4C4C4))),
-      padding: EdgeInsets.only(left: 10.w, top: 3.h, bottom: 3.h, right: 5.w),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Container(
-            height: 60.h,
-            width: 50.w,
-            decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                image: DecorationImage(
-                  image: AssetImage('assets/png/wp2398385 1.png'),
-                  fit: BoxFit.cover,
-                )),
-          ),
-          text(
-            context,
-            'Ruhul Amin Tushar',
-            16,
-            AppColors.greenDark,
-            bold: true,
-          ),
-          Container(
-            height: 50.h,
-            // width: 156.w,
-            padding: EdgeInsets.only(
-              left: 10.w,
-              right: 10.w,
-            ),
-            decoration: BoxDecoration(
-                color: Color(0xffB4F4DD),
-                borderRadius: BorderRadius.circular(7)),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                text(
-                  context,
-                  'Topic- Mathematics',
-                  12,
-                  AppColors.bblackText,
-                  bold: false,
-                ),
-                SizedBox(
-                  width: 15.w,
-                ),
-                text(
-                  context,
-                  '11-03-2022 (4pm- 6:30 pm)',
-                  12,
-                  AppColors.bblackText,
-                  bold: false,
-                ),
-              ],
-            ),
-          )
-        ],
       ),
     );
   }
@@ -348,14 +267,14 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
       child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
               alignment: Alignment.centerLeft,
               width: 300.w,
-              // decoration: BoxDecoration(
-              //     color: Colors.white, borderRadius: BorderRadius.circular(21)),
+              decoration: BoxDecoration(
+                  color: Colors.white, borderRadius: BorderRadius.circular(21)),
               child: const Align(
                 alignment: Alignment.center,
                 child: Text(
@@ -368,108 +287,8 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
                 ),
               ),
             ),
-            Wrap(
-              spacing: 50.w,
-              runSpacing: 20.h,
-              children: [
-                courseCard(context),
-                courseCard(context),
-                courseCard(context),
-                courseCard(context),
-              ],
-            ),
           ],
         ),
-      ),
-    );
-  }
-
-  Widget courseCard(context) {
-    return Container(
-      width: 300.w,
-      height: 300.h,
-      decoration: BoxDecoration(
-        color: AppColors.lightgreyborder,
-        borderRadius: BorderRadius.circular(30.r),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Container(
-                // margin: EdgeInsets.symmetric(
-                //   vertical: 10.h,
-                // ),
-                width: 150.w,
-                height: 150.h,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30.r),
-                  image: const DecorationImage(
-                    image: AssetImage("assets/png/bluebook.png"),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                child: Text(""),
-              ),
-                Column(
-                  children: [
-                     text(context, "Total Mark", 15.sp, Color(0xff6F6F6F)),
-                      text(context, "23", 48.sp, Color(0xff000000),bold: true),
-                  ],
-                )
-            ],
-          ),
-          Container(
-            padding: EdgeInsets.all(6.h),
-            decoration: BoxDecoration(
-              
-              borderRadius: BorderRadius.circular(15),
-              color: Color(0xffFFFFFF)
-            ),
-            child: Column(
-              children: [
-                Container(
-                  width: 250.w,
-                  // color: Colors.amber,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Image.asset(
-                        'assets/png/bookicon.png',
-                        height: 30.w,
-                        width: 30.h,
-                      ),
-                      text(context, "Chapter-1 : Speed", 16.sp, Colors.black),
-                    ],
-                  ),
-                ),
-                      Container(
-            width: 250.w,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                text(context, "Question: 25", 16.sp, Color(0xff6F6F6F)),
-                text(context, "Time : 25 minutes", 16.sp, Color(0xff6F6F6F)),
-              ],
-            ),
-          ),
-                 Container(
-                   margin:EdgeInsets.only(top: 5.h),
-            width: 250.w,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                text(context, "27th July, 2021", 16.sp, Color(0xff444F55)),
-              ],
-            ),
-          ),
-              ],
-            ),
-          ),
-         
-        ],
       ),
     );
   }
@@ -490,18 +309,14 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: [
-                Container(
-                  height: AppSizes.dynamicHeight(context, 0.06),
-                  width: AppSizes.dynamicWidth(context, 0.05),
-                  decoration: const BoxDecoration(
-                      image: DecorationImage(
-                    image: AssetImage('assets/png/favouriteIcon.png'),
-                    fit: BoxFit.contain,
-                  )),
-                ),
-                const Text(
+            Container(
+              alignment: Alignment.centerLeft,
+              width: 300.w,
+              decoration: BoxDecoration(
+                  color: Colors.white, borderRadius: BorderRadius.circular(21)),
+              child: const Align(
+                alignment: Alignment.center,
+                child: Text(
                   'Favourite Tutors',
                   style: TextStyle(
                     color: Colors.black,
@@ -509,79 +324,10 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-              ],
-            ),
-            favouriteInerWidet(),
-            favouriteInerWidet(),
-            favouriteInerWidet(),
-            favouriteInerWidet(),
-            favouriteInerWidet(),
-            favouriteInerWidet(),
-            favouriteInerWidet(),
-            favouriteInerWidet(),
-            favouriteInerWidet(),
-            favouriteInerWidet(),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget favouriteInerWidet() {
-    return Container(
-      margin: EdgeInsets.only(left: 20.w, right: 20.w, top: 20.h),
-      padding: EdgeInsets.only(top: 20.h, bottom: 20.h),
-      decoration: const BoxDecoration(
-        border: Border(
-          bottom: BorderSide(
-            width: 2.0,
-            color: AppColors.customGrey,
-          ),
-          // bottom: BorderSide(width: 16.0, color: Colors.lightBlue.shade900),
-        ),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          text(
-            context,
-            '1. Adnan Ali',
-            18,
-            AppColors.bblackText,
-            bold: false,
-          ),
-          RichText(
-              text: TextSpan(children: [
-            WidgetSpan(
-                child: Icon(
-              Icons.star,
-              color: Color(0xffFEDB41),
-            )),
-            WidgetSpan(
-              child: text(
-                context,
-                '4.5',
-                18,
-                AppColors.bblackText,
-                bold: false,
               ),
             ),
-          ])),
-          text(
-            context,
-            'Topic- Mathematics',
-            18,
-            AppColors.bblackText,
-            bold: false,
-          ),
-          text(
-            context,
-            'BUET',
-            18,
-            AppColors.bblackText,
-            bold: false,
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

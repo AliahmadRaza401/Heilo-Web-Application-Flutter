@@ -7,20 +7,20 @@ import 'package:heilo/widgets/text_widget.dart';
 
 
 
-final GlobalKey<ScaffoldState> studentScafoldKey = GlobalKey(); 
-class DashBoardMobile extends StatefulWidget {
-  const DashBoardMobile({Key? key}) : super(key: key);
+final GlobalKey<ScaffoldState> teacherScafoldKey = GlobalKey(); 
+class TeacherDashBoardMobile extends StatefulWidget {
+  const TeacherDashBoardMobile({Key? key}) : super(key: key);
 
   @override
-  State<DashBoardMobile> createState() => _DashBoardMobileState();
+  State<TeacherDashBoardMobile> createState() => _TeacherDashBoardMobileState();
 }
 
-class _DashBoardMobileState extends State<DashBoardMobile> {
+class _TeacherDashBoardMobileState extends State<TeacherDashBoardMobile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-       key: studentScafoldKey,
+       key: teacherScafoldKey,
         appBar: AppBar(
           elevation: 0,
           backgroundColor: Colors.white,
@@ -33,7 +33,7 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
                   size: 30, // Changing Drawer Icon Size
                 ),
                 onPressed: () {
-                 studentScafoldKey.currentState!.openDrawer();
+                 teacherScafoldKey.currentState!.openDrawer();
                 },
                 tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
               );

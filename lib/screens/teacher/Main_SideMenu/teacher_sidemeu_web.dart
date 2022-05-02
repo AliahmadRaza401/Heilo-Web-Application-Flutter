@@ -7,24 +7,24 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 import 'package:heilo/screens/student/student_profile/student_profile.dart';
+import 'package:heilo/screens/teacher/dashBoard/teacher_dashBoard.dart';
+import 'package:heilo/screens/teacher/editProfile.dart/teacher_editProfile.dart';
+import 'package:heilo/screens/teacher/teacher_Inbox/teacher_Inbox.dart';
+import 'package:heilo/screens/teacher/teacher_profile/teacher_profile.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
 
-import '../Studentquiz/quiz.dart';
-import '../dashBoard/dashBoard.dart';
-import '../editProfile.dart/editProfile.dart';
-import '../onDemand/on_demand.dart';
-import '../studentInbox/studentInbox.dart';
 
-class StudentSideMenuWeb extends StatefulWidget {
-  const StudentSideMenuWeb({Key? key}) : super(key: key);
+
+class TeacherSideMenuWeb extends StatefulWidget {
+  const TeacherSideMenuWeb({Key? key}) : super(key: key);
 
   @override
-  State<StudentSideMenuWeb> createState() => _StudentSideMenuWebState();
+  State<TeacherSideMenuWeb> createState() => _TeacherSideMenuWebState();
 }
 
-class _StudentSideMenuWebState extends State<StudentSideMenuWeb> {
+class _TeacherSideMenuWebState extends State<TeacherSideMenuWeb> {
   @override
   Widget build(BuildContext context) {
     PageController page = PageController();
@@ -103,7 +103,7 @@ class _StudentSideMenuWebState extends State<StudentSideMenuWeb> {
             items: [
               SideMenuItem(
                 priority: 0,
-                title: 'On Demand',
+                title: 'Dashboard',
                 onTap: () {
                   page.jumpToPage(0);
                 },
@@ -111,7 +111,7 @@ class _StudentSideMenuWebState extends State<StudentSideMenuWeb> {
               ),
               SideMenuItem(
                 priority: 1,
-                title: 'Quiz',
+                title: 'Profile',
                 onTap: () {
                   page.jumpToPage(1);
                 },
@@ -119,7 +119,7 @@ class _StudentSideMenuWebState extends State<StudentSideMenuWeb> {
               ),
               SideMenuItem(
                 priority: 2,
-                title: 'DashBoard',
+                title: 'Edit Profile',
                 onTap: () {
                   page.jumpToPage(2);
                 },
@@ -127,25 +127,18 @@ class _StudentSideMenuWebState extends State<StudentSideMenuWeb> {
               ),
               SideMenuItem(
                 priority: 3,
-                title: 'Profile',
+                title: 'Wallet',
                 onTap: () {
                   page.jumpToPage(3);
                 },
                 icon: Icon(Icons.download),
               ),
-              SideMenuItem(
-                priority: 4,
-                title: 'Edit Profile',
-                onTap: () {
-                  page.jumpToPage(4);
-                },
-                icon: Icon(Icons.settings),
-              ),
+             
               SideMenuItem(
                 priority: 5,
                 title: 'Inbox',
                 onTap: () {
-                  page.jumpToPage(5);
+                  page.jumpToPage(4);
                 },
                 icon: Icon(Icons.exit_to_app),
               ),
@@ -162,12 +155,16 @@ class _StudentSideMenuWebState extends State<StudentSideMenuWeb> {
               child: PageView(
                 controller: page,
                 children:const [
-                   OnDemand(),
-                  Quizz(),
-                  DashBoard(),
-                StudentProfile(),
-                  EditProfile(),
-                  StudentInbox(),
+                 TeacherDashBoard(),
+                 TeacherProfile(),
+                 TeacherEditProfile(),
+                  TeacherEditProfile(),
+                  TeacherInbox(),
+                //   Quizz(),
+                //   DashBoard(),
+                // StudentProfile(),
+                //   EditProfile(),
+                // //   StudentInbox(),
                   // Container(
                   //   decoration: BoxDecoration(
                   //     color: AppColors.customWhite,

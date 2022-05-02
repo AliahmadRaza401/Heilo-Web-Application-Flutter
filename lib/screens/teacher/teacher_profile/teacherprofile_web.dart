@@ -13,14 +13,14 @@ import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
 
-class StudentProfileWeb extends StatefulWidget {
-  const StudentProfileWeb({Key? key}) : super(key: key);
+class TeacherProfileWeb extends StatefulWidget {
+  const TeacherProfileWeb({Key? key}) : super(key: key);
 
   @override
-  State<StudentProfileWeb> createState() => _StudentProfileWebState();
+  State<TeacherProfileWeb> createState() => _TeacherProfileWebState();
 }
 
-class _StudentProfileWebState extends State<StudentProfileWeb> {
+class _TeacherProfileWebState extends State<TeacherProfileWeb> {
   @override
   Widget build(BuildContext context) {
     PageController page = PageController();
@@ -320,23 +320,20 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            width: 230.w,
-            height: 36.h,
+            width: 218.w,
+            height: 35.h,
             margin: EdgeInsets.only(
-              top: 20.h,
-              left: 20.h,
+              top: 21.h,
+              left: 21.w,
             ),
             decoration: BoxDecoration(
-                color: const Color(0xff3DDEA5),
+                color: Color(0xff3DDEA5),
                 borderRadius: BorderRadius.circular(20)),
             child: Align(
               alignment: Alignment.center,
-              child: textWidget(
-                "Basic Information",
-                FontWeight.w600,
-                0xffffffff,
-                18.sp,
-              ),
+              child: text(
+                  context, "Basic Information", 18.0, AppColors.customWhite,
+                  bold: false),
             ),
           ),
           SizedBox(
@@ -433,22 +430,23 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
+            width: 218.w,
+            height: 35.h,
             margin: EdgeInsets.only(
-              top: 20.h,
-              left: 20.h,
+              top: 21.h,
+              left: 21.w,
             ),
-            width: 230.w,
-            height: 36.h,
             decoration: BoxDecoration(
-                color: const Color(0xff3DDEA5),
+                color: Color(0xff3DDEA5),
                 borderRadius: BorderRadius.circular(20)),
             child: Align(
               alignment: Alignment.center,
-              child: textWidget(
+              child: text(
+                context,
                 "Education",
-                FontWeight.w600,
-                0xffffffff,
-                18.sp,
+                18.0,
+                AppColors.customWhite,
+                bold: false,
               ),
             ),
           ),
@@ -648,22 +646,24 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Container(
-                            width: 230.w,
-                            height: 36.h,
+                            width: 114.w,
+                            height: 35.h,
                             margin: EdgeInsets.only(
-                              top: 20.h,
-                              left: 20.h,
+                              left: 35.h,
+                              top: 40.h,
                             ),
                             decoration: BoxDecoration(
-                                color: const Color(0xff3DDEA5),
-                                borderRadius: BorderRadius.circular(20)),
+                              color: Color(0xff3DDEA5),
+                              borderRadius: BorderRadius.circular(20.r),
+                            ),
                             child: Align(
                               alignment: Alignment.center,
-                              child: textWidget(
+                              child: text(
+                                context,
                                 "Reviews",
-                                FontWeight.w600,
-                                0xffffffff,
-                                18.sp,
+                                18.0,
+                                AppColors.customWhite,
+                                bold: false,
                               ),
                             ),
                           ),

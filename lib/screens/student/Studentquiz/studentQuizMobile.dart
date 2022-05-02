@@ -2,22 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:heilo/screens/student/drawer/student_drawer.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
-
-
+import 'package:heilo/widgets/text_widget.dart';
 
 final GlobalKey<ScaffoldState> studentScafoldKey = GlobalKey();
-class EditProfileMobile extends StatefulWidget {
-  const EditProfileMobile({ Key? key }) : super(key: key);
+
+class StudentQuizMobile extends StatefulWidget {
+  const StudentQuizMobile({Key? key}) : super(key: key);
 
   @override
-  State<EditProfileMobile> createState() => _EditProfileMobileState();
+  State<StudentQuizMobile> createState() => _StudentQuizMobileState();
 }
 
-class _EditProfileMobileState extends State<EditProfileMobile> {
+class _StudentQuizMobileState extends State<StudentQuizMobile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        key: studentScafoldKey,
+      backgroundColor: Colors.white,
+      key: studentScafoldKey,
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
@@ -52,7 +53,25 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
         ),
       ),
       drawer: StudentDrawer(),
-      
+      body: Container(
+        padding: EdgeInsets.only(
+          left: AppSizes.dynamicWidth(context, 0.02),
+          right: AppSizes.dynamicWidth(context, 0.02),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            text(
+              context,
+              'TEST YOURSELF KNOW YOURSELF',
+              14.0,
+              AppColors.greenDark,
+              bold: true,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

@@ -2,16 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/utils/config.dart';
 
-import '../../../widgets/text_widget.dart';
-
-class EditProfileWeb extends StatefulWidget {
-  const EditProfileWeb({Key? key}) : super(key: key);
+class TeacherEditProfileWeb extends StatefulWidget {
+  const TeacherEditProfileWeb({Key? key}) : super(key: key);
 
   @override
-  State<EditProfileWeb> createState() => _EditProfileWebState();
+  State<TeacherEditProfileWeb> createState() => _TeacherEditProfileWebState();
 }
 
-class _EditProfileWebState extends State<EditProfileWeb> {
+class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
   // Initial Selected Value
   String dropdownvalue = 'Item 1';
 
@@ -26,287 +24,232 @@ class _EditProfileWebState extends State<EditProfileWeb> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent,
-      body: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(30.r),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Container(
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Container(
+            width: 526.w,
+            height: 740.h,
+            decoration: BoxDecoration(
+              color: Colors.transparent,
+              borderRadius: BorderRadius.circular(30.r),
+            ),
+            margin: EdgeInsets.only(left: 150.w),
+            // padding: EdgeInsets.symmetric(
+            //   vertical: 16.h,
+            //   horizontal: 25.w,
+            // ),
+            child: Stack(
               alignment: Alignment.center,
-              width: 526.w,
-              height: 780.h,
-              decoration: BoxDecoration(
-                // color: Colors.amber,
-                borderRadius: BorderRadius.circular(30.r),
-              ),
-              padding: EdgeInsets.only(
-                left: 45.w,
-                right: 45.w,
-                // top: 50.h,
-              ),
-              // padding: EdgeInsets.symmetric(
-              //   vertical: 16.h,
-              //   horizontal: 25.w,
-              // ),
-              child: Stack(
-                overflow: Overflow.visible,
-                children: [
-                  Container(
-                    height: 631.h,
-                    decoration: BoxDecoration(
-                      color: Color(0xffF1F1F1),
-                      borderRadius: BorderRadius.circular(30.r),
+              children: <Widget>[
+                // background image and bottom contents
+                Column(
+                  children: <Widget>[
+                    Container(
+                      height: 0.0,
                     ),
-                    padding: EdgeInsets.only(
-                      top: 130.h,
-                      left: 50.w,
-                      right: 50.w,
+                    Positioned(
+                      top:
+                          150.0, // (background container size) - (circle height / 2)
+                      child: CircleAvatar(
+                        radius: 80.r,
+                        backgroundImage: const AssetImage(
+                          "assets/png/wp2398385 1.png",
+                        ),
+                      ),
                     ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        text(
-                          context,
-                          "Sakib Abdullah",
-                          18.0,
-                          AppColors.greyText,
-                          bold: true,
+                    Expanded(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: AppColors.customGrey,
+                          borderRadius: BorderRadius.circular(14),
                         ),
-                        // textWidget(
-                        //   "Sakib Abdullah",
-                        //   FontWeight.w600,
-                        //   0xff747474,
-                        //   18,
-                        // ),
-                        SizedBox(
-                          height: 10.h,
+                        padding: EdgeInsets.only(
+                          top: 20.h,
+                          left: 50.w,
+                          right: 50.w,
                         ),
-                        text(
-                          context,
-                          "Maple Leaf International School and College",
-                          14.0,
-                          AppColors.greyText,
-                        ),
-                        // textWidget(
-                        //   "Maple Leaf International School and College",
-                        //   FontWeight.w300,
-                        //   0xff747474,
-                        //   14,
-                        // ),
-                        SizedBox(
-                          height: 70.h,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                              height: 38.h,
-                              width: 191.w,
-                              // padding: const EdgeInsets.only(
-                              //   top: 5,
-                              //   bottom: 5,
-                              // ),
+                              padding: EdgeInsets.all(6),
                               decoration: BoxDecoration(
-                                color: AppColors.customDarkBlue,
-                                borderRadius: BorderRadius.circular(30),
+                                borderRadius: BorderRadius.circular(62),
+                                border: Border.all(
+                                    width: 0.5, color: Color(0xffC4C4C4)),
                               ),
-                              child: Align(
-                                alignment: Alignment.center,
-                                child: text(
-                                  context,
-                                  "Tutions completed",
-                                  14.0,
-                                  AppColors.customWhite,
-                                  bold: true,
-                                  // alignText: Alignment.center
-                                ),
+                              child: textWidget(
+                                "Sakib Abdullah",
+                                FontWeight.w600,
+                                0xff747474,
+                                18,
                               ),
                             ),
-                            text(
-                              context,
-                              "150",
-                              14.0,
-                              AppColors.greytextText,
-                              bold: true,
-                              // alignText: Alignment.center
+                            SizedBox(
+                              height: 10.h,
                             ),
-                            // textWidget(
-                            //   "150",
-                            //   FontWeight.w600,
-                            //   0xff7D7D7D,
-                            //   14,
-                            // ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 10.h,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
                             Container(
-                              width: 191.w,
-                              height: 38.h,
-                              // padding: const EdgeInsets.only(
-                              //   top: 5,
-                              //   bottom: 5,
-                              // ),
+                              padding: EdgeInsets.all(6),
                               decoration: BoxDecoration(
-                                color: Color(0xffA279E6),
-                                borderRadius: BorderRadius.circular(
-                                  30,
-                                ),
+                                borderRadius: BorderRadius.circular(62),
+                                border: Border.all(
+                                    width: 0.5, color: Color(0xffC4C4C4)),
                               ),
-                              child: Align(
-                                alignment: Alignment.center,
-                                child: text(
-                                  context,
-                                  "Tutors referred",
-                                  14.0,
-                                  AppColors.customWhite,
-                                  bold: true,
-                                  // alignText: Alignment.center
-                                ),
-                                // child: textWidget(
-                                //   "Tutors referred",
-                                //   FontWeight.w600,
-                                //   0xffffffff,
-                                //   14,
-                                // ),
+                              child: textWidget(
+                                "Maple Leaf International School and College",
+                                FontWeight.w300,
+                                0xff747474,
+                                14,
                               ),
                             ),
-                            text(
-                              context,
-                              "150",
-                              14.0,
-                              AppColors.greytextText,
-                              bold: true,
-                              // alignText: Alignment.center
+                            SizedBox(
+                              height: 70.h,
                             ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 60.h,
-                        ),
-                        text(
-                            context,
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
-                            14.0,
-                            AppColors.customBlack,
-                            // bold: true,
-                            // alignText: Alignment.center
-                            maxLines: 8),
-                        // textWidget(
-                        //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
-                        //   FontWeight.w300,
-                        //   0xff7000000,
-                        //   14,
-                        // ),
-                      ],
-                    ),
-                  ),
-                  Positioned(
-                      top: -50.0,
-                      right: 0,
-                      left: 0,
-                      // (background container size) - (circle height / 2)
-                      child: Center(
-                        child: Stack(
-                          overflow: Overflow.visible,
-                          children: [
-                            Container(
-                              height: 170.h,
-                              width: 183.w,
-                              decoration: const BoxDecoration(
-                                shape: BoxShape.circle,
-                                image: DecorationImage(
-                                  image: AssetImage(
-                                    "assets/png/wp2398385 1.png",
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(
+                                  width: 190.w,
+                                  padding: const EdgeInsets.only(
+                                    top: 5,
+                                    bottom: 5,
+                                  ),
+                                  decoration: BoxDecoration(
+                                      color: Color(0xff48A6F0),
+                                      borderRadius: BorderRadius.circular(20)),
+                                  child: Align(
+                                    alignment: Alignment.center,
+                                    child: textWidget(
+                                      "Tutions completed",
+                                      FontWeight.w600,
+                                      0xffffffff,
+                                      14,
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ),
-                            // CircleAvatar(
-                            //   radius: 46.r,
-                            //   backgroundImage: const AssetImage(
-                            //     "assets/png/wp2398385 1.png",
-                            //   ),
-                            // ),
-                            Positioned(
-                              top: 0,
-                              right: -15,
-                              child: Container(
-                                padding: EdgeInsets.symmetric(
-                                  horizontal: 10,
-                                  vertical: 3,
-                                ),
-                                decoration: BoxDecoration(
-                                  color: Color(0xffC4C4C4).withOpacity(0.5),
-                                  borderRadius: BorderRadius.circular(50),
-                                ),
-                                child: Row(
-                                  children: [
-                                    Image.asset('assets/png/star.png'),
-                                    text(
-                                      context,
-                                      "4.5",
-                                      15,
-                                      Colors.black,
-                                      bold: true,
+                                Container(
+                                  padding: const EdgeInsets.only(
+                                      top: 6, bottom: 6, left: 10, right: 10),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(22),
+                                    border: Border.all(
+                                      width: 0.5,
+                                      color: Color(0xffC4C4C4),
                                     ),
-                                  ],
+                                  ),
+                                  child: textWidget(
+                                    "150",
+                                    FontWeight.w600,
+                                    0xff7D7D7D,
+                                    14,
+                                  ),
                                 ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10.h,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(
+                                  width: 190.w,
+                                  padding: const EdgeInsets.only(
+                                    top: 5,
+                                    bottom: 5,
+                                  ),
+                                  decoration: BoxDecoration(
+                                      color: Color(0xffA279E6),
+                                      borderRadius: BorderRadius.circular(20)),
+                                  child: Align(
+                                    alignment: Alignment.center,
+                                    child: textWidget(
+                                      "Tutors referred",
+                                      FontWeight.w600,
+                                      0xffffffff,
+                                      14,
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  padding: const EdgeInsets.only(
+                                      top: 6, bottom: 6, left: 10, right: 10),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(22),
+                                    border: Border.all(
+                                      width: 0.5,
+                                      color: Color(0xffC4C4C4),
+                                    ),
+                                  ),
+                                  child: textWidget(
+                                    "150",
+                                    FontWeight.w600,
+                                    0xff7D7D7D,
+                                    14,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 60.h,
+                            ),
+                            Container(
+                              padding: const EdgeInsets.only(
+                                  top: 6, bottom: 6, left: 10, right: 10),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(22),
+                                border: Border.all(
+                                  width: 0.5,
+                                  color: Color(0xffC4C4C4),
+                                ),
+                              ),
+                              child: textWidget(
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
+                                FontWeight.w300,
+                                0xff7000000,
+                                14,
                               ),
                             ),
                           ],
                         ),
-
-                        //
-                      )
-                      // CircleAvatar(
-                      //   radius: 80.r,
-                      //   backgroundImage: const AssetImage(
-                      //     "assets/png/wp2398385 1.png",
-                      //   ),
-                      // ),
                       ),
+                    )
+                  ],
+                ),
+                // Profile image
+              ],
+            ),
+          ),
+          SingleChildScrollView(
+            child: Container(
+              padding: EdgeInsets.only(
+                right: 20.w,
+                top: 20.h,
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  greyWidget1(),
+                  SizedBox(
+                    height: 40.h,
+                  ),
+                  greyWidget2(),
+                  SizedBox(
+                    height: 40.h,
+                  ),
+                  greyWidget3(),
+                  SizedBox(
+                    height: 40.h,
+                  ),
+                  greyWidget4(),
                 ],
               ),
             ),
-            SingleChildScrollView(
-              child: Container(
-                padding: EdgeInsets.only(
-                  right: 20.w,
-                  top: 20.h,
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    greyWidget1(),
-                    SizedBox(
-                      height: 40.h,
-                    ),
-                    greyWidget2(),
-                    SizedBox(
-                      height: 40.h,
-                    ),
-                    greyWidget3(),
-                    SizedBox(
-                      height: 40.h,
-                    ),
-                    greyWidget4(),
-                  ],
-                ),
-              ),
-            )
-          ],
-        ),
+          )
+        ],
       ),
     );
   }
@@ -329,10 +272,10 @@ class _EditProfileWebState extends State<EditProfileWeb> {
 
   Widget greyWidget1() {
     return Container(
-      width: 980.w,
+      width: 800.w,
       // height: 160.h,
       decoration: BoxDecoration(
-          color: Color(0xffF1F1F1), borderRadius: BorderRadius.circular(30.r)),
+          color: Color(0xffE0E0E0), borderRadius: BorderRadius.circular(30.r)),
       padding: EdgeInsets.only(
         left: 60.w,
         right: 60.w,
@@ -348,7 +291,6 @@ class _EditProfileWebState extends State<EditProfileWeb> {
             children: [
               Container(
                 width: 230.w,
-                height: 36.h,
                 decoration: BoxDecoration(
                     color: const Color(0xff3DDEA5),
                     borderRadius: BorderRadius.circular(20)),
@@ -358,7 +300,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                     "Basic Information",
                     FontWeight.w600,
                     0xffffffff,
-                    18.sp,
+                    18,
                   ),
                 ),
               ),
@@ -590,10 +532,10 @@ class _EditProfileWebState extends State<EditProfileWeb> {
 
   Widget greyWidget2() {
     return Container(
-      width: 980.w,
+      width: 800.w,
       // height: 160.h,
       decoration: BoxDecoration(
-          color: Color(0xffF1F1F1), borderRadius: BorderRadius.circular(10)),
+          color: AppColors.customGrey, borderRadius: BorderRadius.circular(10)),
       padding: EdgeInsets.only(
         left: 60.w,
         right: 60.w,
@@ -609,7 +551,6 @@ class _EditProfileWebState extends State<EditProfileWeb> {
             children: [
               Container(
                 width: 230.w,
-                height: 36.h,
                 decoration: BoxDecoration(
                     color: const Color(0xff3DDEA5),
                     borderRadius: BorderRadius.circular(20)),
@@ -619,7 +560,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                     "Education",
                     FontWeight.w600,
                     0xffffffff,
-                    18.sp,
+                    18,
                   ),
                 ),
               ),
@@ -814,10 +755,10 @@ class _EditProfileWebState extends State<EditProfileWeb> {
 
   Widget greyWidget3() {
     return Container(
-      width: 980.w,
+      width: 800.w,
       // height: 160.h,
       decoration: BoxDecoration(
-          color: Color(0xffF1F1F1), borderRadius: BorderRadius.circular(10)),
+          color: AppColors.customGrey, borderRadius: BorderRadius.circular(10)),
       padding: EdgeInsets.only(
         left: 60.w,
         right: 60.w,
@@ -833,7 +774,6 @@ class _EditProfileWebState extends State<EditProfileWeb> {
             children: [
               Container(
                 width: 230.w,
-                height: 36.h,
                 decoration: BoxDecoration(
                     color: const Color(0xff3DDEA5),
                     borderRadius: BorderRadius.circular(20)),
@@ -843,7 +783,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                     "Account Details",
                     FontWeight.w600,
                     0xffffffff,
-                    18.sp,
+                    18,
                   ),
                 ),
               ),
@@ -915,10 +855,10 @@ class _EditProfileWebState extends State<EditProfileWeb> {
 
   Widget greyWidget4() {
     return Container(
-      width: 980.w,
+      width: 800.w,
       // height: 160.h,
       decoration: BoxDecoration(
-          color: Color(0xffF1F1F1), borderRadius: BorderRadius.circular(10)),
+          color: AppColors.customGrey, borderRadius: BorderRadius.circular(10)),
       padding: EdgeInsets.only(
         left: 60.w,
         right: 60.w,
@@ -934,7 +874,6 @@ class _EditProfileWebState extends State<EditProfileWeb> {
             children: [
               Container(
                 width: 230.w,
-                height: 36.h,
                 decoration: BoxDecoration(
                     color: const Color(0xff3DDEA5),
                     borderRadius: BorderRadius.circular(20)),
@@ -944,7 +883,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                     "Attachments",
                     FontWeight.w600,
                     0xffffffff,
-                    18.sp,
+                    18,
                   ),
                 ),
               ),
@@ -971,27 +910,29 @@ class _EditProfileWebState extends State<EditProfileWeb> {
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
+            
               Column(
                 children: [
-                  Row(
-                    children: [
-                      Container(
-                        child: textWidget(
-                          "Student ID",
-                          FontWeight.w300,
-                          0xff7d7d7d,
-                          12,
-                        ),
-                      ),
-                      const Icon(
-                        Icons.schema_rounded,
-                        color: Color(
-                          0xff3DDEA5,
-                        ),
-                        size: 30,
-                      )
-                    ],
+                   Row(
+                children: [
+                  Container(
+                    
+                    child: textWidget(
+                      "Student ID",
+                      FontWeight.w300,
+                      0xff7d7d7d,
+                      12,
+                    ),
                   ),
+                  const Icon(
+                    Icons.schema_rounded,
+                    color: Color(
+                      0xff3DDEA5,
+                    ),
+                    size: 30,
+                  )
+                ],
+              ),
                   Container(
                     padding: EdgeInsets.all(6),
                     decoration: BoxDecoration(
