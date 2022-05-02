@@ -10,6 +10,7 @@ import 'package:heilo/screens/admin/Payment/payment_page.dart';
 import 'package:heilo/screens/admin/Profile/profile.dart';
 import 'package:heilo/screens/admin/Profit/profit.dart';
 import 'package:heilo/screens/admin/QuizReport/quiz_report.dart';
+import 'package:heilo/screens/teacher/TeacherWallet/teacher_wallet.dart';
 
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
@@ -165,6 +166,7 @@ class _AdminSideMenuState extends State<AdminSideMenu> {
                   PaymentPage(),
                   Profile(),
                  Profit(),
+                //  TeacherWallet()
                  AdminContact()
                 ],
               ),

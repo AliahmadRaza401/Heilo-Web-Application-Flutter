@@ -191,7 +191,7 @@ class _ProfitState extends State<Profit> {
                                       borderRadius: BorderRadius.circular(100)),
                                   child: Center(
                                     child: text(context, 'Confirm.', 13,
-                                        AppColors.customBlack),
+                                        AppColors.customWhite),
                                   ),
                                 ),
                               ),
@@ -485,7 +485,7 @@ class _ProfitState extends State<Profit> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             text(
-              context, 'Enter amount\n    to withrdraw',
+              context, 'Enter amount\nto withrdraw',
               AppSizes.dynamicWidth(context, .012), AppColors.customWhite,
               // alignText: TextAlign.center
             ),
