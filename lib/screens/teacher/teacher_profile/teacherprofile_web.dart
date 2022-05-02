@@ -45,10 +45,6 @@ class _TeacherProfileWebState extends State<TeacherProfileWeb> {
               right: 45.w,
               // top: 50.h,
             ),
-            // padding: EdgeInsets.symmetric(
-            //   vertical: 16.h,
-            //   horizontal: 25.w,
-            // ),
             child: Stack(
               overflow: Overflow.visible,
               children: [
@@ -74,12 +70,6 @@ class _TeacherProfileWebState extends State<TeacherProfileWeb> {
                         AppColors.greyText,
                         bold: true,
                       ),
-                      // textWidget(
-                      //   "Sakib Abdullah",
-                      //   FontWeight.w600,
-                      //   0xff747474,
-                      //   18,
-                      // ),
                       SizedBox(
                         height: 10.h,
                       ),
@@ -89,12 +79,6 @@ class _TeacherProfileWebState extends State<TeacherProfileWeb> {
                         14.0,
                         AppColors.greyText,
                       ),
-                      // textWidget(
-                      //   "Maple Leaf International School and College",
-                      //   FontWeight.w300,
-                      //   0xff747474,
-                      //   14,
-                      // ),
                       SizedBox(
                         height: 70.h,
                       ),
@@ -104,10 +88,6 @@ class _TeacherProfileWebState extends State<TeacherProfileWeb> {
                           Container(
                             height: 38.h,
                             width: 191.w,
-                            // padding: const EdgeInsets.only(
-                            //   top: 5,
-                            //   bottom: 5,
-                            // ),
                             decoration: BoxDecoration(
                               color: AppColors.customDarkBlue,
                               borderRadius: BorderRadius.circular(30),

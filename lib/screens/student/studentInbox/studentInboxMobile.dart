@@ -124,7 +124,7 @@ class _StudentInboxMobileState extends State<StudentInboxMobile> {
                       height: 15.h,
                     ),
                     messageWidget(),
-                      SizedBox(
+                    SizedBox(
                       height: 15.h,
                     ),
                     messageWidget(),
@@ -140,148 +140,6 @@ class _StudentInboxMobileState extends State<StudentInboxMobile> {
                 ),
               ),
             ),
-            // Container(
-            //   margin: EdgeInsets.only(
-            //     top: 88.h,
-            //     left: 33.w,
-            //   ),
-            //   child: Column(
-            //     // mainAxisAlignment: MainAxisAlignment.start,
-            //     // crossAxisAlignment: CrossAxisAlignment.start,
-            //     children: [
-            //       Container(
-            //         height: 57.h,
-            //         width: 487.w,
-            //         child: ListTile(
-            //           leading: Container(
-            //             height: 54.h,
-            //             width: 54.w,
-            //             // margin: EdgeInsets.only(
-            //             //   left: 20.w,
-            //             // ),
-            //             decoration: const BoxDecoration(
-            //               shape: BoxShape.circle,
-            //               image: DecorationImage(
-            //                 image: AssetImage(
-            //                   "assets/png/wp2398385 1.png",
-            //                 ),
-            //               ),
-            //             ),
-            //           ),
-            //           title: text(
-            //               context, 'Ruhul Tusar', 18.0, AppColors.customBlack),
-            //           subtitle: text(
-            //             context,
-            //             'Maple Leaf International School',
-            //             13.0,
-            //             AppColors.greyText,
-            //           ),
-            //         ),
-            //       ),
-            //       Row(
-            //         mainAxisAlignment: MainAxisAlignment.start,
-            //         children: [
-            //           Container(
-            //             height: 109.h,
-            //             width: 453.w,
-            //             margin: EdgeInsets.only(
-            //               top: 30.h,
-            //               left: 20.w,
-            //             ),
-            //             child: ListTile(
-            //               leading: Container(
-            //                 height: 54.h,
-            //                 width: 54.w,
-            //                 // margin: EdgeInsets.only(
-            //                 //   left: 20.w,
-            //                 // ),
-            //                 decoration: const BoxDecoration(
-            //                   shape: BoxShape.circle,
-            //                   image: DecorationImage(
-            //                     image: AssetImage(
-            //                       "assets/png/wp2398385 1.png",
-            //                     ),
-            //                   ),
-            //                 ),
-            //               ),
-            //               // title: text(context, 'Ruhul Tusar', 18.0,
-            //               //     AppColors.customBlack),
-            //               subtitle: Container(
-            //                 padding: EdgeInsets.only(
-            //                   left: 18.w,
-            //                   right: 18.w,
-            //                   top: 16.h,
-            //                   bottom: 16.h,
-            //                 ),
-            //                 decoration: BoxDecoration(
-            //                     borderRadius: BorderRadius.circular(18),
-            //                     color: Color(0xffF8F8F8)),
-            //                 child: text(
-            //                   context,
-            //                   'Dear Sir, I would like to study the genetics part of biology. To be precise the DNA replication. Can you help me?',
-            //                   14.0,
-            //                   AppColors.greyText,
-            //                   bold: false,
-            //                 ),
-            //               ),
-            //             ),
-            //           )
-            //         ],
-            //       ),
-            //       Row(
-            //         mainAxisAlignment: MainAxisAlignment.end,
-            //         children: [
-            //           Container(
-            //             height: 109.h,
-            //             width: 453.w,
-            //             margin: EdgeInsets.only(
-            //               top: 5.h,
-            //               left: 20.w,
-            //             ),
-            //             child: ListTile(
-            //               leading: Container(
-            //                 height: 54.h,
-            //                 width: 54.w,
-            //                 // margin: EdgeInsets.only(
-            //                 //   left: 20.w,
-            //                 // ),
-            //                 decoration: const BoxDecoration(
-            //                   shape: BoxShape.circle,
-            //                   image: DecorationImage(
-            //                     image: AssetImage(
-            //                       "assets/png/wp2398385 1.png",
-            //                     ),
-            //                   ),
-            //                 ),
-            //               ),
-            //               // title: text(context, 'Ruhul Tusar', 18.0,
-            //               //     AppColors.customBlack),
-            //               subtitle: Container(
-            //                 padding: EdgeInsets.only(
-            //                   left: 18.w,
-            //                   right: 18.w,
-            //                   top: 16.h,
-            //                   bottom: 16.h,
-            //                 ),
-            //                 decoration: BoxDecoration(
-            //                     borderRadius: BorderRadius.circular(18),
-            //                     color: Color(0xffB8F3DE)),
-            //                 child: text(
-            //                   context,
-            //                   'Dear Sir, I would like to study the genetics part of biology. To be precise the DNA replication. Can you help me?',
-            //                   14.0,
-            //                   AppColors.greyText,
-            //                   bold: false,
-            //                 ),
-            //               ),
-            //             ),
-            //           )
-            //         ],
-            //       ),
-            //     ],
-            //   ),
-            // )
-       
           ],
         ),
       ),
@@ -291,8 +149,8 @@ class _StudentInboxMobileState extends State<StudentInboxMobile> {
   Widget messageWidget() {
     return InkWell(
       onTap: () {
-         Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => StudentChatMain()));
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => StudentChatMain()));
       },
       child: Container(
         decoration: const BoxDecoration(
@@ -363,84 +221,6 @@ class _StudentInboxMobileState extends State<StudentInboxMobile> {
             ),
           ),
         ),
-        //   child: Row(
-        //     children: [
-        //       Container(
-        //         height: AppSizes.dynamicHeight(context, 0.11),
-        //         width: AppSizes.dynamicWidth(context, 0.15),
-        //         // margin: EdgeInsets.only(
-        //         //   left: 20.w,
-        //         // ),
-        //         decoration: const BoxDecoration(
-        //             shape: BoxShape.circle,
-        //             image: DecorationImage(
-        //               image: AssetImage(
-        //                 "assets/png/wp2398385 1.png",
-        //               ),
-        //               fit: BoxFit.cover,
-        //             )),
-        //       ),
-        //       SizedBox(
-        //         width:  AppSizes.dynamicWidth(context, 0.01),
-        //       ),
-    
-        //  RichText(
-        //   text: TextSpan(
-        //     text: 'Hello ',
-        //     style: DefaultTextStyle.of(context).style,
-        //     children: <TextSpan>[
-        //       TextSpan(
-        //           text: 'bold',
-        //           style: TextStyle(fontWeight: FontWeight.bold)),
-        //       TextSpan(text: ' world!'),
-        //     ],
-        //   ),
-        // ),
-        //       Column(
-        //         mainAxisAlignment: MainAxisAlignment.start,
-        //         crossAxisAlignment: CrossAxisAlignment.start,
-        //         children: [
-        //           text(
-        //             context,
-        //             'Sakib Abdullah',
-        //             18.0,
-        //             AppColors.customBlack,
-        //             bold: false,
-        //           ),
-        //           text(
-        //             context,
-        //             'Last seen at 5:32',
-        //             14.0,
-        //             AppColors.customGrey,
-        //             bold: false,
-        //           )
-        //         ],
-        //       ),
-        //       SizedBox(
-        //         width: 25.w,
-        //       ),
-        //       Column(
-        //         mainAxisAlignment: MainAxisAlignment.start,
-        //         crossAxisAlignment: CrossAxisAlignment.start,
-        //         children: [
-        //           text(
-        //             context,
-        //             'You: Bhaiya kalke 5 tay set koro',
-        //             14.0,
-        //             AppColors.customGrey,
-        //             bold: false,
-        //           ),
-        //           text(
-        //             context,
-        //             '(6:15 pm)',
-        //             14.0,
-        //             AppColors.customBlack,
-        //             bold: true,
-        //           )
-        //         ],
-        //       )
-        //     ],
-        //   ),
       ),
     );
   }

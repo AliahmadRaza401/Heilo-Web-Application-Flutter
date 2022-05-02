@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/utils/config.dart';
+import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
 
 class StudentInboxWeb extends StatefulWidget {
@@ -246,6 +247,42 @@ class _StudentInboxWebState extends State<StudentInboxWeb> {
                         )
                       ],
                     ),
+                     Expanded(child: Container()),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Icon(
+                  Icons.file_present_outlined,
+                  color: Color(0xff1BE59D),
+                  size: 25,
+                ),
+                SizedBox(width: 20.w,),
+                Container(
+                  width: 670.w,
+                  height: 57.h,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: AppColors.customGrey,
+                  ),
+                  // padding: EdgeInsets.only(left: 12),
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                        // hintText: "You phone number here...",
+                        border: InputBorder.none,
+                        fillColor: Colors.white,
+                        // suffixIcon: Icon(Icons.search)
+                        ),
+                  ),
+                ),
+                   SizedBox(width: 20.w,),
+                const Icon(
+                  Icons.send,
+                  color: Color(0xff1BE59D),
+                  size: 25,
+                ),
+              ],
+            ),
+               SizedBox(height: 20.h,),
                   ],
                 ),
               )
