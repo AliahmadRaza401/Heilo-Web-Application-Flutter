@@ -7,14 +7,14 @@ import 'package:heilo/utils/config.dart';
 import '../../../utils/dynamic_sizes.dart';
 import '../../../widgets/text_widget.dart';
 
-class Profile extends StatefulWidget {
-  const Profile({Key? key}) : super(key: key);
+class ProfileMobile extends StatefulWidget {
+  const ProfileMobile({Key? key}) : super(key: key);
 
   @override
-  State<Profile> createState() => _ProfileState();
+  State<ProfileMobile> createState() => _ProfileMobileState();
 }
 
-class _ProfileState extends State<Profile> {
+class _ProfileMobileState extends State<ProfileMobile> {
   @override
   Widget build(BuildContext context) {
     return Container(

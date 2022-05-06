@@ -1,11 +1,10 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:heilo/screens/admin/Dashboard/admin_/dashboard.dart';
 import 'package:heilo/screens/admin/admin_sideMenu.dart';
-import 'package:heilo/screens/authentication/Intro/intro.dart';
-import 'package:heilo/screens/student/Main_SideMenu/student_sidemenu.dart';
 
-import 'screens/teacher/Main_SideMenu/teacher_sidemenu.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -37,8 +36,8 @@ class MyApp extends StatelessWidget {
               child: widget!,
             );
           },
-          home: const Intro(),
-          // home: const AdminSideMenu(),
+          // home: const Intro(),
+          home: const AdminSideMenu(),
           // home: AdminSideMenu(),
           //  home: const StudentSideMenu(),
         );
