@@ -39,8 +39,8 @@ class MyApp extends StatelessWidget {
           },
           home: const Intro(),
           // home: const AdminSideMenu(),
-          // home: StudentSideMenu(),
-          // home: TeacherSideMenu(),
+          // home: AdminSideMenu(),
+          //  home: const StudentSideMenu(),
         );
       },
     );

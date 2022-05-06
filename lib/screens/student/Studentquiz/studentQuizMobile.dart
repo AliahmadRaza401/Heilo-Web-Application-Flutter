@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/screens/student/drawer/student_drawer.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
@@ -53,21 +54,188 @@ class _StudentQuizMobileState extends State<StudentQuizMobile> {
         ),
       ),
       drawer: StudentDrawer(),
-      body: Container(
-        padding: EdgeInsets.only(
-          left: AppSizes.dynamicWidth(context, 0.02),
-          right: AppSizes.dynamicWidth(context, 0.02),
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Container(
+          padding: EdgeInsets.only(
+            left: AppSizes.dynamicWidth(context, 0.02),
+            right: AppSizes.dynamicWidth(context, 0.02),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: AppSizes.dynamicHeight(context, 0.05)
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: text(
+                  context,
+                  'TEST YOURSELF KNOW YOURSELF',
+                  95.sp,
+                  AppColors.greenDark,
+                  bold: true,
+                ),
+              ),
+              SizedBox(
+                height: AppSizes.dynamicHeight(context, 0.05)
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 65.h,
+                    // width: 510.w,
+                    // width: AppSizes.dynamicWidth(context, 1),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(160.w),
+                      border:
+                          Border.all(color: AppColors.lightgreyborder, width: 4),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          width: AppSizes.dynamicWidth(context, 0.6),
+                          padding: EdgeInsets.only(
+                            left: 50.w,
+                            bottom: 10.h,
+                          ),
+                          child: const TextField(
+                            decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: 'Enter Your Subject',
+                                hintStyle: TextStyle(
+                                  color: AppColors.greyText,
+                                )),
+                          ),
+                        ),
+                        Container(
+                            width: AppSizes.dynamicWidth(context, 0.3),
+                            height: 65.h,
+                            decoration: BoxDecoration(
+                                color: AppColors.greenDark,
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(0),
+                                  topRight: Radius.circular(40.r),
+                                  bottomRight: Radius.circular(40.r),
+                                  bottomLeft: Radius.circular(180.r),
+                                )),
+                            child: Center(
+                              child: text(
+                                context,
+                                "SEARCH",
+                                65.sp,
+                                AppColors.customWhite,
+                              ),
+                            )),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 30.h,
+              ),
+              Wrap(
+                spacing: 50.w,
+                runSpacing: 20.h,
+                children: [
+                  courseCard(context),
+                  courseCard(context),
+                  courseCard(context),
+                  courseCard(context),
+                  courseCard(context),
+                  courseCard(context),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget courseCard(context) {
+    return InkWell(
+      onTap: () {},
+      child: Container(
+        width: AppSizes.dynamicWidth(context, 0.4),
+        height: AppSizes.dynamicHeight(context, 0.32),
+        decoration: BoxDecoration(
+          color: AppColors.lightgreyborder,
+          borderRadius: BorderRadius.circular(30.r),
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            text(
-              context,
-              'TEST YOURSELF KNOW YOURSELF',
-              14.0,
-              AppColors.greenDark,
-              bold: true,
+            Container(
+              // margin: EdgeInsets.symmetric(
+              //   vertical: 10.h,
+              // ),
+              width: AppSizes.dynamicWidth(context, 0.35),
+              height: AppSizes.dynamicHeight(context, 0.2),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30.r),
+                image: const DecorationImage(
+                  image: AssetImage("assets/png/bluebook.png"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: AppSizes.dynamicHeight(context, 0.01),
+            ),
+            Container(
+              // width: 250.w,
+              // color: Colors.amber,
+              padding: EdgeInsets.only(
+                left: AppSizes.dynamicWidth(context, 0.02),
+                right: AppSizes.dynamicWidth(context, 0.02),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Image.asset('assets/png/bookicon.png',
+                      fit: BoxFit.cover,
+                      height: AppSizes.dynamicHeight(context, 0.04),
+                      width: AppSizes.dynamicWidth(context, 0.1)),
+                  text(context, "Chapter-1 : Speed", 65.sp, Colors.black),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: AppSizes.dynamicHeight(context, 0.01),
+            ),
+            Container(
+              // width: 250.w,
+              padding: EdgeInsets.only(
+                left: AppSizes.dynamicWidth(context, 0.02),
+                right: AppSizes.dynamicWidth(context, 0.02),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  text(context, "Question: 25", 75.sp, const Color(0xff6F6F6F)),
+                ],
+              ),
+            ),
+            Container(
+              // width: 250.w,
+              padding: EdgeInsets.only(
+                left: AppSizes.dynamicWidth(context, 0.02),
+                right: AppSizes.dynamicWidth(context, 0.02),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  text(context, "Time : 25 minutes", 75.sp, Color(0xff6F6F6F)),
+                ],
+              ),
+            ),
+             SizedBox(
+              height: AppSizes.dynamicHeight(context, 0.01),
             ),
           ],
         ),

@@ -56,91 +56,94 @@ class _StudentInboxMobileState extends State<StudentInboxMobile> {
         ),
       ),
       drawer: StudentDrawer(),
-      body: Container(
-        padding: EdgeInsets.only(
-          top: 3.h,
-          right: AppSizes.dynamicWidth(context, 0.03),
-          left: AppSizes.dynamicWidth(context, 0.03),
-        ),
-        child: Column(
-          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              margin: EdgeInsets.only(
-                top: 30.h,
-              ),
-
-              // width: 594.w,
-              height: 60.h,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(25),
-                color: AppColors.customGrey,
-              ),
-              // padding: EdgeInsets.only(left: 12),
-              child: TextFormField(
-                decoration: const InputDecoration(
-                    // hintText: "You phone number here...",
-                    border: InputBorder.none,
-                    fillColor: Colors.white,
-                    suffixIcon: Icon(Icons.search)),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(
-                top: 30.h,
-              ),
-              child: text(
-                context,
-                'All Messages ( 41)',
-                18.0,
-                AppColors.greyText,
-                bold: false,
-              ),
-            ),
-            SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              child: Container(
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Container(
+          padding: EdgeInsets.only(
+            top: 3.h,
+            right: AppSizes.dynamicWidth(context, 0.03),
+            left: AppSizes.dynamicWidth(context, 0.03),
+          ),
+          child: Column(
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
                 margin: EdgeInsets.only(
                   top: 30.h,
                 ),
-                child: Column(
-                  children: [
-                    messageWidget(),
-                    SizedBox(
-                      height: 15.h,
-                    ),
-                    messageWidget(),
-                    SizedBox(
-                      height: 15.h,
-                    ),
-                    messageWidget(),
-                    SizedBox(
-                      height: 15.h,
-                    ),
-                    messageWidget(),
-                    SizedBox(
-                      height: 15.h,
-                    ),
-                    messageWidget(),
-                    SizedBox(
-                      height: 15.h,
-                    ),
-                    messageWidget(),
-                    SizedBox(
-                      height: 15.h,
-                    ),
-                    messageWidget(),
-                    SizedBox(
-                      height: 15.h,
-                    ),
-                    messageWidget(),
-                  ],
+      
+                // width: 594.w,
+                height: 60.h,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  color: AppColors.customGrey,
+                ),
+                // padding: EdgeInsets.only(left: 12),
+                child: TextFormField(
+                  decoration: const InputDecoration(
+                      // hintText: "You phone number here...",
+                      border: InputBorder.none,
+                      fillColor: Colors.white,
+                      suffixIcon: Icon(Icons.search)),
                 ),
               ),
-            ),
-          ],
+              Container(
+                margin: EdgeInsets.only(
+                  top: 30.h,
+                ),
+                child: text(
+                  context,
+                  'All Messages ( 41)',
+                  18.0,
+                  AppColors.greyText,
+                  bold: false,
+                ),
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                child: Container(
+                  margin: EdgeInsets.only(
+                    top: 30.h,
+                  ),
+                  child: Column(
+                    children: [
+                      messageWidget(),
+                      SizedBox(
+                        height: 15.h,
+                      ),
+                      messageWidget(),
+                      SizedBox(
+                        height: 15.h,
+                      ),
+                      messageWidget(),
+                      SizedBox(
+                        height: 15.h,
+                      ),
+                      messageWidget(),
+                      SizedBox(
+                        height: 15.h,
+                      ),
+                      messageWidget(),
+                      SizedBox(
+                        height: 15.h,
+                      ),
+                      messageWidget(),
+                      SizedBox(
+                        height: 15.h,
+                      ),
+                      messageWidget(),
+                      SizedBox(
+                        height: 15.h,
+                      ),
+                      messageWidget(),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

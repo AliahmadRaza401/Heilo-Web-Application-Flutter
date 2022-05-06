@@ -7,6 +7,7 @@ class AppColors {
   static const lightgreyborder = Color(0xffF1F1F1);
   static const greyText = Color(0xffA8A8A8);
   static const bblackText = Color(0xff444F55);
+  static const navyBlue = Color(0xff090F64);
 
   static const greytextText = Color(0xff7D7D7D);
   static const customDarkBlue = Color(0xff48A6F0);

@@ -1,13 +1,16 @@
-// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
+// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:easy_sidemenu/easy_sidemenu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:heilo/screens/admin/AdminContact/admin_contact.dart';
 import 'package:heilo/screens/admin/Dashboard/admin_/dashboard.dart';
 import 'package:heilo/screens/admin/Payment/payment_page.dart';
 import 'package:heilo/screens/admin/Profile/profile.dart';
+import 'package:heilo/screens/admin/Profit/profit.dart';
 import 'package:heilo/screens/admin/QuizReport/quiz_report.dart';
+import 'package:heilo/screens/teacher/TeacherWallet/teacher_wallet.dart';
 
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
@@ -162,18 +165,9 @@ class _AdminSideMenuState extends State<AdminSideMenu> {
                   QuizReports(),
                   PaymentPage(),
                   Profile(),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: AppColors.customWhite,
-                      borderRadius: BorderRadius.circular(30.r),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        'Dashboard5',
-                        style: TextStyle(fontSize: 35),
-                      ),
-                    ),
-                  ),
+                 Profit(),
+                //  TeacherWallet()
+                 AdminContact()
                 ],
               ),
             ),

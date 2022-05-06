@@ -153,10 +153,6 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                               Container(
                                 height: AppSizes.dynamicHeight(context, 0.04),
                                 width: AppSizes.dynamicHeight(context, 0.2),
-                                // padding: const EdgeInsets.only(
-                                //   top: 5,
-                                //   bottom: 5,
-                                // ),
                                 decoration: BoxDecoration(
                                   color: AppColors.customDarkBlue,
                                   borderRadius: BorderRadius.circular(30),
@@ -169,7 +165,6 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                                     14.0,
                                     AppColors.customWhite,
                                     bold: true,
-                                    // alignText: Alignment.center
                                   ),
                                 ),
                               ),
@@ -179,14 +174,8 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                                 14.0,
                                 AppColors.greytextText,
                                 bold: true,
-                                // alignText: Alignment.center
                               ),
-                              // textWidget(
-                              //   "150",
-                              //   FontWeight.w600,
-                              //   0xff7D7D7D,
-                              //   14,
-                              // ),
+                             
                             ],
                           ),
                           SizedBox(
@@ -244,15 +233,7 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                               "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
                               14.0,
                               AppColors.customBlack,
-                              // bold: true,
-                              // alignText: Alignment.center
                               maxLines: 8),
-                          // textWidget(
-                          //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
-                          //   FontWeight.w300,
-                          //   0xff7000000,
-                          //   14,
-                          // ),
                         ],
                       ),
                     ),
@@ -260,7 +241,6 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                         top: -100.0,
                         right: 0,
                         left: 0,
-                        // (background container size) - (circle height / 2)
                         child: Center(
                           child: Container(
                             height: AppSizes.dynamicHeight(context, 0.2),
@@ -275,12 +255,7 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                             ),
                           ),
                         )
-                        // CircleAvatar(
-                        //   radius: 80.r,
-                        //   backgroundImage: const AssetImage(
-                        //     "assets/png/wp2398385 1.png",
-                        //   ),
-                        // ),
+                      
                         ),
                   ],
                 ),
