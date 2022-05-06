@@ -23,7 +23,7 @@ class _AdminContactState extends State<AdminContact> {
         borderRadius: BorderRadius.circular(30.r),
       ),
       padding:
-          EdgeInsets.symmetric(horizontal: AppSizes.dynamicWidth(context, .03)),
+          EdgeInsets.symmetric(horizontal: AppSizes.dynamicWidth(context, .03,),vertical: AppSizes.dynamicHeight(context, .02)),
       child: Column(
         children: [
           Expanded(
@@ -113,18 +113,21 @@ class _AdminContactState extends State<AdminContact> {
                                 ],
                               ),
                               Expanded(
-                                  child: ListView.builder(
-                                      itemCount: 5,
-                                      itemBuilder: ((context, index) {
-                                        return messageRow(
-                                            'assets/png/26170505_879427062237691_7434598743530738532_o 1.png',
-                                            'Sakib Abdullah',
-                                            'Dhaka University ',
-                                            '01824696900',
-                                            'write2ratusar@gmail.com',
-                                            'You: Bhaiya kalke 5 tay set koro',
-                                            '11-09-2021 (6:15 pm)');
-                                      })))
+                                  child: Padding(
+                                    padding:  EdgeInsets.only(bottom:AppSizes.dynamicHeight(context, .02)),
+                                    child: ListView.builder(
+                                        itemCount: 5,
+                                        itemBuilder: ((context, index) {
+                                          return messageRow(
+                                              'assets/png/26170505_879427062237691_7434598743530738532_o 1.png',
+                                              'Sakib Abdullah',
+                                              'Dhaka University ',
+                                              '01824696900',
+                                              'write2ratusar@gmail.com',
+                                              'You: Bhaiya kalke 5 tay set koro',
+                                              '11-09-2021 (6:15 pm)');
+                                        })),
+                                  ))
                             ],
                           ),
                         ),
@@ -176,7 +179,7 @@ class _AdminContactState extends State<AdminContact> {
                                     padding: const EdgeInsets.only(left: 8.0),
                                     child: CircleAvatar(
                                       radius:
-                                          AppSizes.dynamicHeight(context, .05),
+                                          AppSizes.dynamicHeight(context, .04),
                                       backgroundImage:
                                           AssetImage('assets/png/charles.png'),
                                     ),
@@ -301,18 +304,21 @@ class _AdminContactState extends State<AdminContact> {
                                 ],
                               ),
                               Expanded(
-                                  child: ListView.builder(
-                                      itemCount: 5,
-                                      itemBuilder: ((context, index) {
-                                        return messageRow(
-                                            'assets/png/26170505_879427062237691_7434598743530738532_o 1.png',
-                                            'Sakib Abdullah',
-                                            'Dhaka University ',
-                                            '01824696900',
-                                            'write2ratusar@gmail.com',
-                                            'You: Bhaiya kalke 5 tay set koro',
-                                            '11-09-2021 (6:15 pm)');
-                                      })))
+                                  child: Padding(
+                                    padding:  EdgeInsets.only(bottom:AppSizes.dynamicHeight(context, .02)),
+                                    child: ListView.builder(
+                                        itemCount: 5,
+                                        itemBuilder: ((context, index) {
+                                          return messageRow(
+                                              'assets/png/26170505_879427062237691_7434598743530738532_o 1.png',
+                                              'Sakib Abdullah',
+                                              'Dhaka University ',
+                                              '01824696900',
+                                              'write2ratusar@gmail.com',
+                                              'You: Bhaiya kalke 5 tay set koro',
+                                              '11-09-2021 (6:15 pm)');
+                                        })),
+                                  ))
                             ],
                           ),
                         ),
@@ -364,7 +370,7 @@ class _AdminContactState extends State<AdminContact> {
                                     padding: const EdgeInsets.only(left: 8.0),
                                     child: CircleAvatar(
                                       radius:
-                                          AppSizes.dynamicHeight(context, .05),
+                                          AppSizes.dynamicHeight(context, .04),
                                       backgroundImage:
                                           AssetImage('assets/png/charles.png'),
                                     ),

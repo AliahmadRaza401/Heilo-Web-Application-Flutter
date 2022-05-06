@@ -45,14 +45,22 @@ class _ProfileState extends State<Profile> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              CircleAvatar(
-                                backgroundColor: AppColors.green,
-                                radius: AppSizes.dynamicHeight(context, .07),
-                                child: CircleAvatar(
-                                  radius: AppSizes.dynamicHeight(context, .065),
-                                  backgroundImage:
-                                      AssetImage('assets/png/charles.png'),
-                                ),
+                              Column(
+                                children: [
+                                  Spacer(flex: 1,),
+                                  CircleAvatar(
+                                    backgroundColor: AppColors.green,
+                                    radius: AppSizes.dynamicHeight(context, .07),
+                                    child: CircleAvatar(
+                                      radius: AppSizes.dynamicHeight(context, .065),
+                                      backgroundImage:
+                                          AssetImage('assets/png/charles.png'),
+                                    ),
+
+                                  ),
+                                  Spacer(flex: 3),
+
+                                ],
                               ),
                               Spacer(
                                 flex: 1,
@@ -164,7 +172,7 @@ class _ProfileState extends State<Profile> {
                         ),
                       ),
                       Expanded(
-                        flex: 1,
+                        flex: 2,
                         child: Container(
                           width: double.infinity,
                           padding: EdgeInsets.symmetric(
@@ -181,11 +189,14 @@ class _ProfileState extends State<Profile> {
                                   text(
                                       context,
                                       'TUITION AVAIL',
-                                      AppSizes.dynamicWidth(context, .015),
+                                      30.sp,
+                                      // AppSizes.dynamicWidth(context, .015),
                                       AppColors.green),
                                   boldPopinText(
                                       '41',
-                                      AppSizes.dynamicWidth(context, .018),
+                                      65.sp,
+
+                                      // AppSizes.dynamicWidth(context, .018),
                                       AppColors.darkGrey)
                                 ],
                               ),
@@ -196,11 +207,15 @@ class _ProfileState extends State<Profile> {
                                   text(
                                       context,
                                       'QUIZ APPEARED ',
-                                      AppSizes.dynamicWidth(context, .015),
+                                      30.sp,
+
+                                      // AppSizes.dynamicWidth(context, .015),
                                       AppColors.green),
                                   boldPopinText(
                                       '25',
-                                      AppSizes.dynamicWidth(context, .018),
+                                      65.sp,
+
+                                      // AppSizes.dynamicWidth(context, .018),
                                       AppColors.darkGrey)
                                 ],
                               ),
@@ -211,11 +226,14 @@ class _ProfileState extends State<Profile> {
                                   text(
                                       context,
                                       'TOTAL MONEY SPEND ',
-                                      AppSizes.dynamicWidth(context, .015),
+                                      31.sp,
+
+                                      // AppSizes.dynamicWidth(context, .015),
                                       AppColors.darkGrey),
                                   boldPopinText(
                                       'TK. 2511',
-                                      AppSizes.dynamicWidth(context, .018),
+                                      65.sp,
+                                      // AppSizes.dynamicWidth(context, .018),
                                       AppColors.green)
                                 ],
                               ),
@@ -295,7 +313,7 @@ class _ProfileState extends State<Profile> {
           Positioned(
             bottom: 0,
             child: Container(
-                height: size.height * .47,
+                height: size.height * .41,
                 width: size.width * .63,
                 decoration: BoxDecoration(
                     color: AppColors.lightGrey,
@@ -323,31 +341,31 @@ class _ProfileState extends State<Profile> {
               child: text(context, 'Upcoming Sessions', 15, AppColors.greyText),
             ),
           ),
-          Positioned(
-            right: 40,
-            child: Container(
-              height: 51.h,
-              width: 262.w,
-              decoration: BoxDecoration(
-                  border: Border.all(color: AppColors.green),
-                  color: AppColors.customWhite,
-                  borderRadius: BorderRadius.circular(100)),
-              padding: EdgeInsets.symmetric(horizontal: 10),
-              child: Align(
-                alignment: Alignment.centerRight,
-                child: TextField(
-                  cursorColor: AppColors.green,
-                  decoration: InputDecoration(
-                      border: InputBorder.none,
-                      suffixIcon: Icon(
-                        Icons.search,
-                        color: AppColors.green,
-                      ),
-                      contentPadding: EdgeInsets.only(top: 5, left: 10)),
-                ),
-              ),
-            ),
-          ),
+          // Positioned(
+          //   right: 40,
+          //   child: Container(
+          //     height: 51.h,
+          //     width: 262.w,
+          //     decoration: BoxDecoration(
+          //         border: Border.all(color: AppColors.green),
+          //         color: AppColors.customWhite,
+          //         borderRadius: BorderRadius.circular(100)),
+          //     padding: EdgeInsets.symmetric(horizontal: 10),
+          //     child: Align(
+          //       alignment: Alignment.centerRight,
+          //       child: TextField(
+          //         cursorColor: AppColors.green,
+          //         decoration: InputDecoration(
+          //             border: InputBorder.none,
+          //             suffixIcon: Icon(
+          //               Icons.search,
+          //               color: AppColors.green,
+          //             ),
+          //             contentPadding: EdgeInsets.only(top: 5, left: 10)),
+          //       ),
+          //     ),
+          //   ),
+          // ),
         ],
       ),
     );

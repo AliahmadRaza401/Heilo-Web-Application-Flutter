@@ -63,7 +63,7 @@ class _ProfitState extends State<Profit> {
                         ],
                       ),
                       Expanded(
-                        child: SizedBox(
+                        child: Container(
                           height: double.infinity,
                           // color: Colors.amber,
                           child: Stack(
@@ -72,7 +72,8 @@ class _ProfitState extends State<Profit> {
                                 alignment: Alignment.bottomCenter,
                                 child: Container(
                                   height: AppSizes.dynamicHeight(context, .56),
-                                  width: double.infinity,
+
+                                  width: AppSizes.dynamicWidth(context, .63),
                                   padding: EdgeInsets.all(30),
                                   decoration: BoxDecoration(
                                       color: AppColors.lightGrey,
@@ -89,6 +90,7 @@ class _ProfitState extends State<Profit> {
                                       ),
                                       Expanded(
                                           child: Container(
+                                          width: AppSizes.dynamicWidth(context, .6),
                                         decoration: BoxDecoration(
                                             color: AppColors.customWhite,
                                             borderRadius:
@@ -121,7 +123,7 @@ class _ProfitState extends State<Profit> {
                                         topRight: Radius.circular(100),
                                         bottomRight: Radius.circular(100))),
                                 child: Center(
-                                  child: text(context, 'Upcoming Sessions', 15,
+                                  child: text(context, 'Payment history', 18.sp,
                                       AppColors.greyText),
                                 ),
                               ),
@@ -135,12 +137,17 @@ class _ProfitState extends State<Profit> {
             Expanded(
                 flex: 2,
                 child: Container(
-                  padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+                  padding: EdgeInsets.only(
+                    top: AppSizes.dynamicHeight(context, .02),
+                    bottom: AppSizes.dynamicHeight(context, .02),
+                    left: AppSizes.dynamicWidth(context, .02),
+                    right: AppSizes.dynamicWidth(context, .01),
+                  ),
                   height: double.infinity,
                   decoration: BoxDecoration(
                       color: AppColors.lightGrey,
                       borderRadius:
-                          BorderRadius.only(topLeft: Radius.circular(30.r))),
+                          BorderRadius.only(topLeft: Radius.circular(30.r),bottomLeft:  Radius.circular(30.r))),
                   child: Column(
                     children: [
                       Expanded(
@@ -201,7 +208,7 @@ class _ProfitState extends State<Profit> {
                       )),
                       Expanded(
                           child: Padding(
-                        padding: const EdgeInsets.only(top: 8.0),
+                        padding: EdgeInsets.only(top: AppSizes.dynamicHeight(context, .02)),
                         child: Container(
                           width: double.infinity,
                           decoration: BoxDecoration(
@@ -233,7 +240,11 @@ class _ProfitState extends State<Profit> {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceEvenly,
                                       children: [
-                                        text(context, 'Last 7 Days', AppSizes.dynamicWidth(context, .007),
+                                        text(
+                                            context,
+                                            'Last 7 Days',
+                                            AppSizes.dynamicWidth(
+                                                context, .007),
                                             AppColors.greyText),
                                         Icon(
                                           Icons.keyboard_arrow_down,
@@ -277,13 +288,13 @@ class _ProfitState extends State<Profit> {
                               ),
                               Expanded(
                                   child: Padding(
-                                    padding: const EdgeInsets.only(top:8.0),
-                                    child: ListView.builder(
-                                        itemCount: 10,
-                                        itemBuilder: ((context, index) {
-                                          return statusRow('Barishal','200');
-                                        })),
-                                  ))
+                                padding: const EdgeInsets.only(top: 8.0),
+                                child: ListView.builder(
+                                    itemCount: 10,
+                                    itemBuilder: ((context, index) {
+                                      return statusRow('Barishal', '200');
+                                    })),
+                              ))
                             ],
                           ),
                         ),
@@ -295,7 +306,7 @@ class _ProfitState extends State<Profit> {
         ));
   }
 
-  Widget statusRow(String division,String count) {
+  Widget statusRow(String division, String count) {
     return Column(
       children: [
         Row(
@@ -349,9 +360,8 @@ class _ProfitState extends State<Profit> {
               color: AppColors.customWhite,
             ),
             text(context, 'Total Balance.', 13, AppColors.customBlack),
-            VerticalDivider(
-              color: AppColors.customWhite,
-            ),
+            SizedBox(width: AppSizes.dynamicWidth(context, .01),)
+           
           ],
         ),
       ),
@@ -378,14 +388,18 @@ class _ProfitState extends State<Profit> {
               children: [
                 Expanded(
                   flex: 2,
-                  child: Container(
-                      // color: AppColors.blue,
-                      child: text(context, serial, 13, AppColors.customBlack)),
+                  child: Padding(
+                    
+                    padding:  EdgeInsets.only(left: AppSizes.dynamicWidth(context, .01)),
+                    child: Container(
+                        // color: AppColors.blue,
+                        child: text(context, serial, 13, AppColors.customBlack)),
+                  ),
                 ),
                 Expanded(
                   flex: 3,
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
+                    padding:  EdgeInsets.only(left: AppSizes.dynamicWidth(context, .01)),
                     child: Container(
                         // color: Colors.pink,
                         child:
@@ -395,7 +409,7 @@ class _ProfitState extends State<Profit> {
                 Expanded(
                   flex: 3,
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
+                    padding:  EdgeInsets.only(left: AppSizes.dynamicWidth(context, .01)),
                     child: Container(
                         // color: Colors.red,
                         child:
@@ -405,16 +419,16 @@ class _ProfitState extends State<Profit> {
                 Expanded(
                   flex: 3,
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 15),
+                    padding:  EdgeInsets.only(left: AppSizes.dynamicWidth(context, .02)),
                     child: Container(
                         // color: Colors.amber,
                         child: text(context, amount, 13, AppColors.green)),
                   ),
                 ),
                 Expanded(
-                  flex: 4,
+                  flex: 3,
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 25),
+                    padding:  EdgeInsets.only(left: AppSizes.dynamicWidth(context, .045)),
                     child: Container(
                         // color: Colors.brown,
                         child: Row(
@@ -445,8 +459,10 @@ class _ProfitState extends State<Profit> {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      width: size.width * .15,
-      height: size.height * .15,
+      height: 139.h,
+      width: 240.w,
+      // width:size.width * .15,
+      // height:size.height * .15,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15.r),
           border: Border.all(color: AppColors.darkGrey, width: 2.w)),
@@ -456,9 +472,9 @@ class _ProfitState extends State<Profit> {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          text(context, normaltext, 17, AppColors.greyText,
+          text(context, normaltext, 24.sp, AppColors.greyText,
               alignText: TextAlign.center),
-          boldPopinText(boldText, 30, boldtextColor),
+          boldPopinText(boldText, 48.sp, boldtextColor),
         ],
       ),
     );

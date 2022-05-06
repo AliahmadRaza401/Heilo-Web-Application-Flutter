@@ -76,7 +76,7 @@ class _QuizReportsState extends State<QuizReports> {
                                 color: AppColors.green,
                               ),
                               VerticalDivider(
-                                thickness: 4,
+                                thickness: 3,
                               ),
                               text(context, 'Class', 10, AppColors.greyText),
                               Icon(
@@ -145,7 +145,7 @@ class _QuizReportsState extends State<QuizReports> {
                         center: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            boldPopinText('4.8',size.width *.02, AppColors.green),
+                            boldPopinText('4.8',58.sp, AppColors.green),
                             Icon(
                               Icons.star,
                               color: AppColors.customYellow,
@@ -266,7 +266,7 @@ class _QuizReportsState extends State<QuizReports> {
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: text(context, name, 10, AppColors.customBlack),
+                child: text(context, name, 14.sp, AppColors.customBlack),
               )
             ],
           ),
@@ -299,7 +299,7 @@ class _QuizReportsState extends State<QuizReports> {
                     width:  AppSizes.dynamicWidth(context, .16),
                     child: Wrap(
                       children: [
-                        text(context, review, 10, AppColors.greyText,maxLines: 3,alignText: TextAlign.justify),
+                        text(context, review, 14.sp, AppColors.greyText,maxLines: 3,alignText: TextAlign.justify),
                       ],
                     ),
                   ),
@@ -317,17 +317,21 @@ class _QuizReportsState extends State<QuizReports> {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      width: size.width * .19,
-      height: size.height * .15,
+      width: 304.w,
+      height: 150.h,
+      // width: size.width * .19,
+      // height: size.height * .15,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15.r),
+          // color: AppColors.customYellow,
           border: Border.all(color: AppColors.darkGrey, width: 4.w)),
+      // padding: EdgeInsets.symmetric(vertical: 5),
       child: Column(
         // crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          boldPopinText(boldText, 30, boldtextColor),
-          text(context, normaltext, 17, AppColors.greyText,
+          boldPopinText(boldText, 72.sp, boldtextColor),
+          text(context, normaltext, 22.sp, AppColors.greyText,
               alignText: TextAlign.center),
         ],
       ),
