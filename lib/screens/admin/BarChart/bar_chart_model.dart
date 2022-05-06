@@ -18,37 +18,37 @@ class BarChartModel {
 
 final List<BarChartModel> data = [
     BarChartModel(
-      year: "SUNDAY",
+      year: "SUN",
       financial: 250,
       color: charts.ColorUtil.fromDartColor(Color(0xff01B489)),
     ),
     BarChartModel(
-      year: "MONDAY",
+      year: "MON",
       financial: 300,
       color: charts.ColorUtil.fromDartColor(Color(0xff01B489))),
     
     BarChartModel(
-      year: "TUESDAY",
+      year: "TUE",
       financial: 100,
       color: charts.ColorUtil.fromDartColor(Color(0xff01B489)),
     ),
     BarChartModel(
-      year: "WEDNESDAY",
+      year: "WED",
       financial: 450,
       color: charts.ColorUtil.fromDartColor(Color(0xff01B489)),
     ),
     BarChartModel(
-      year: "THURSDAY",
+      year: "THU",
       financial: 630,
       color: charts.ColorUtil.fromDartColor(Color(0xff01B489)),
     ),
     BarChartModel(
-      year: "FRIDAY",
+      year: "FRI",
       financial: 950,
       color: charts.ColorUtil.fromDartColor(Color(0xff01B489)),
     ),
     BarChartModel(
-      year: "SATURDAY",
+      year: "SAT",
       financial: 400,
       color: charts.ColorUtil.fromDartColor(Color(0xff01B489)),
     ),

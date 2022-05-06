@@ -33,11 +33,11 @@ class _QuizReportWebState extends State<QuizReportWeb> {
               child: Container(
                 height: double.infinity,
                 // color: Colors.amber,
-                padding: EdgeInsets.all(25),
+                padding: EdgeInsets.symmetric(vertical:25,horizontal: 25),
                 child: Column(
                   children: [
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         quizContainer(
                             '2011', 'TOTAL QUIZ CONDUCTED', AppColors.greyText),
@@ -62,7 +62,7 @@ class _QuizReportWebState extends State<QuizReportWeb> {
                           width: size.width * .11,
                           decoration: BoxDecoration(
                               border: Border.all(
-                                  color: AppColors.darkGrey, width: 2),
+                                  color: AppColors.greyBorder, width: 2),
                               color: AppColors.customWhite,
                               borderRadius: BorderRadius.circular(100)),
                           padding: EdgeInsets.symmetric(horizontal: 10),
@@ -117,7 +117,7 @@ class _QuizReportWebState extends State<QuizReportWeb> {
                     Expanded(
                       flex: 5,
                       child: Container(
-                          width: size.width * .55,
+                          width: size.width ,
                           padding: EdgeInsets.only(
                               top: 30, left: 30, right: 30, bottom: 10),
                           child: barChart()),
@@ -154,11 +154,14 @@ class _QuizReportWebState extends State<QuizReportWeb> {
                         ),
                         progressColor: AppColors.green,
                         circularStrokeCap: CircularStrokeCap.round,
-                        footer: text(
-                            context,
-                            'AVERAGE RATING ',
-                            MediaQuery.of(context).size.width * .01,
-                            AppColors.greyText),
+                        footer: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: text(
+                              context,
+                              'AVERAGE RATING ',
+                              MediaQuery.of(context).size.width * .01,
+                              AppColors.greyText),
+                        ),
                       ),
                     ),
 
@@ -174,7 +177,7 @@ class _QuizReportWebState extends State<QuizReportWeb> {
                               width: size.width * .11,
                               decoration: BoxDecoration(
                                   border: Border.all(
-                                      color: AppColors.darkGrey, width: 2),
+                                  color: AppColors.greyBorder, width: 2),
                                   color: AppColors.customWhite,
                                   borderRadius: BorderRadius.circular(100)),
                               padding: EdgeInsets.symmetric(horizontal: 10),

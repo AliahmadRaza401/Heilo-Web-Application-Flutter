@@ -56,16 +56,15 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
                       ),
                     ),
                     Container(
-
-                      height: 400,
+                              height: AppSizes.dynamicHeight(context, .42),
                       width: double.infinity,
-                      color: Colors.amber,
+                      // color: Colors.amber,
                       child: Stack(
                         children: [
                           Align(
                             alignment: Alignment.bottomCenter,
                             child: Container(
-                              height: AppSizes.dynamicHeight(context, .42),
+                              height: AppSizes.dynamicHeight(context, .35),
                               width: double.infinity,
                               padding: EdgeInsets.all(10),
                               decoration: BoxDecoration(
@@ -76,12 +75,12 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
                                   Padding(
                                     padding: EdgeInsets.only(
                                         top: AppSizes.dynamicHeight(
-                                            context, .06)),
+                                            context, .03)),
                                     child: headingRow(AppColors.customWhite),
                                   ),
                                   Container(
-                                    height: 200,
-                                    width: 700,
+                              height: AppSizes.dynamicHeight(context, .35),
+                                    width: double.infinity,
                                     child: ListView.builder(
                                         itemCount: 10,
                                         itemBuilder: ((context, index) {
@@ -247,8 +246,8 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      width: 294.w,
-      height: 103.h,
+      width: 394.w,
+      height: 60.h,
       padding: EdgeInsets.symmetric(horizontal: 10),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15.r),
@@ -260,23 +259,24 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              text(context, normaltext, 17, AppColors.customWhite,
+              text(context, normaltext, 33.sp, AppColors.customWhite,
                   alignText: TextAlign.center),
               Container(
                 child: Row(
                   children: [
-                    text(context, 'last 7 days', 12, AppColors.customBlack,
+                    text(context, 'last 7 days', 22.sp, AppColors.customBlack,
                         alignText: TextAlign.center),
                     Icon(
                       Icons.keyboard_arrow_down,
                       color: AppColors.customWhite,
+                      size: 10,
                     )
                   ],
                 ),
               )
             ],
           ),
-          boldPopinText(boldText, 30, boldtextColor),
+          boldPopinText(boldText, 33.sp, boldtextColor),
         ],
       ),
     );
@@ -383,21 +383,21 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Container(
-        width: size.width * .62,
-        height: 51.h,
+        width: size.width ,
+        height: 31.h,
         decoration: BoxDecoration(
             color: bgColor, borderRadius: BorderRadius.circular(100)),
         padding: EdgeInsets.symmetric(horizontal: 10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            text(context, 'Serial  no.', 13, AppColors.customBlack),
+            text(context, 'Serial  no.', 34.sp, AppColors.customBlack),
             VerticalDivider(),
-            text(context, 'Details', 13, AppColors.customBlack),
+            text(context, 'Details', 34.sp, AppColors.customBlack),
             VerticalDivider(),
-            text(context, 'Date', 13, AppColors.customBlack),
+            text(context, 'Date', 34.sp,AppColors.customBlack),
             VerticalDivider(),
-            text(context, 'Amount', 13, AppColors.customBlack),
+            text(context, 'Amount',34.sp, AppColors.customBlack),
           ],
         ),
       ),
@@ -411,8 +411,8 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Container(
-        width: size.width * .62,
-        height: 51.h,
+        width: size.width ,
+        height: 40.h,
         decoration: BoxDecoration(
             // color:bgColor ,
             borderRadius: BorderRadius.circular(100)),
@@ -422,10 +422,10 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                text(context, serial, 13, AppColors.customBlack),
-                text(context, details, 13, AppColors.customBlack),
-                text(context, date, 13, AppColors.customBlack),
-                text(context, amount, 13, AppColors.customBlack),
+                text(context, serial, 34.sp, AppColors.customBlack),
+                text(context, details,34.sp, AppColors.customBlack),
+                text(context, date, 34.sp, AppColors.customBlack),
+                text(context, amount, 34.sp, AppColors.customBlack),
               ],
             ),
             Divider(color: dividerColor)

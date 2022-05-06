@@ -338,7 +338,7 @@ class _ProfileWebState extends State<ProfileWeb> {
                     topRight: Radius.circular(100),
                     bottomRight: Radius.circular(100))),
             child: Center(
-              child: text(context, 'Upcoming Sessions', 15, AppColors.greyText),
+              child: text(context, 'Upcoming Sessions', 15, AppColors.greyText,bold: true),
             ),
           ),
           // Positioned(
@@ -394,7 +394,7 @@ class _ProfileWebState extends State<ProfileWeb> {
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Center(
                   child:
-                      text(context, '27th July, 2021', 10, AppColors.greyText),
+                      text(context, '27th July, 2021', 10, AppColors.darkGrey),
                 )),
             SizedBox(
               width: size.width * .008,
@@ -402,19 +402,24 @@ class _ProfileWebState extends State<ProfileWeb> {
             VerticalDivider(
               color: AppColors.green,
             ),
-            text(context, 'ID 11121', 15, AppColors.greyText),
+            text(context, 'ID 11121', 15, AppColors.darkGrey),
             VerticalDivider(
               color: AppColors.green,
             ),
-            text(context, 'Ruhul Tusar', 15, AppColors.greyText),
+            text(context, 'Ruhul Tusar', 15, AppColors.darkGrey),
             VerticalDivider(
               color: AppColors.green,
             ),
             Expanded(
               child: Container(
                 child: Center(
-                  child: text(context, 'Topic- Polygons I Gerometry I Maths B',
-                      15, AppColors.greyText),
+                  child: Row(
+                    children: [
+                      text(context, 'Topic- ', 15, AppColors.bblackText),
+                      text(context, 'Polygons I Gerometry I Maths B',
+                          15, AppColors.greyText),
+                    ],
+                  ),
                 ),
               ),
             ),

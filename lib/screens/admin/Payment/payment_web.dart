@@ -45,7 +45,9 @@ class _PaymentPageWebState extends State<PaymentPageWeb> {
                                       context,
                                       'Payment Request ',
                                       AppSizes.dynamicWidth(context, .015),
-                                      AppColors.green),
+                                      AppColors.green,
+                                      bold: true
+                                      ),
                                   Expanded(
                                       child: Padding(
                                         padding: EdgeInsets.only(bottom: AppSizes.dynamicHeight(context, .01)),
@@ -397,7 +399,7 @@ class _PaymentPageWebState extends State<PaymentPageWeb> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  text(context, status, 10, AppColors.greyText),
+                  text(context, status, 10, AppColors.bblackText),
                   Icon(
                     Icons.keyboard_arrow_down,
                     size: 20,
@@ -536,7 +538,7 @@ class _PaymentPageWebState extends State<PaymentPageWeb> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  text(context, status, 10, AppColors.greyText),
+                  text(context, status, 10, AppColors.bblackText),
                   Icon(
                     Icons.keyboard_arrow_down,
                     size: 20,

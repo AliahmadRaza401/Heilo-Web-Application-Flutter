@@ -5,6 +5,7 @@ import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/main.dart';
+import 'package:heilo/screens/admin/BarChart/bar_chart.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
@@ -572,6 +573,15 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                 ),
               ),
             ),
+
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                width: double.infinity,
+                height: AppSizes.dynamicHeight(context, .55),
+                child: barChart(),
+              ),
+            )
           ],
         ),
       ),

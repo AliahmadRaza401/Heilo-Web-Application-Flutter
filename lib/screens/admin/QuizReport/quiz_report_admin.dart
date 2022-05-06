@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:heilo/screens/admin/QuizReport/quiz_report.dart';
+import 'package:heilo/screens/admin/QuizReport/quiz_report_web.dart';
 import 'package:heilo/screens/admin/QuizReport/quiz_report_mobile.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
