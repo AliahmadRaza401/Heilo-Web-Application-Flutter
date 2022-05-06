@@ -5,13 +5,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/screens/admin/AdminContact/admin_contact.dart';
-import 'package:heilo/screens/admin/Dashboard/admin_/dashboard.dart';
-import 'package:heilo/screens/admin/Mobile/dash_board_mobile.dart';
-import 'package:heilo/screens/admin/Mobile/quiz_report_mobile.dart';
-import 'package:heilo/screens/admin/Payment/payment_page.dart';
-import 'package:heilo/screens/admin/Profile/profile.dart';
-import 'package:heilo/screens/admin/Profit/profit.dart';
-import 'package:heilo/screens/admin/QuizReport/quiz_report.dart';
+import 'package:heilo/screens/admin/AdminContact/admin_contact_web.dart';
+import 'package:heilo/screens/admin/Dashboard/dash_board.dart';
+import 'package:heilo/screens/admin/Payment/admin_payment.dart';
+import 'package:heilo/screens/admin/Profile/admin_profile.dart';
+import 'package:heilo/screens/admin/Profit/admin_profit.dart';
+import 'package:heilo/screens/admin/QuizReport/quiz_report_admin.dart';
+import 'package:heilo/screens/admin/QuizReport/quiz_report_mobile.dart';
+import 'package:heilo/screens/admin/Payment/payment_web.dart';
+import 'package:heilo/screens/admin/Profile/profile_web.dart';
+import 'package:heilo/screens/admin/Profit/profit_web.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
@@ -161,13 +164,11 @@ class _AdminSideMenuState extends State<AdminSideMenu> {
               child: PageView(
                 controller: page,
                 children: [
-                  AdminDashboardMobile(),
-                  QuizReportMobile(),
-                //  AdminDashboard(),
-                  // QuizReports(),
-                  PaymentPage(),
-                  Profile(),
-                 Profit(),
+                  AdminDashBoard(),
+                  AdminQuizReport(),
+                  AdminPayment(),
+                  AdminProfile(),
+                 AdminProfit(),
                  AdminContact()                 
                 ],
               ),

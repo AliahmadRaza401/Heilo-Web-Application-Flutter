@@ -9,14 +9,14 @@ import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
-class QuizReports extends StatefulWidget {
-  const QuizReports({Key? key}) : super(key: key);
+class QuizReportWeb extends StatefulWidget {
+  const QuizReportWeb({Key? key}) : super(key: key);
 
   @override
-  State<QuizReports> createState() => _QuizReportsState();
+  State<QuizReportWeb> createState() => _QuizReportWebState();
 }
 
-class _QuizReportsState extends State<QuizReports> {
+class _QuizReportWebState extends State<QuizReportWeb> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;

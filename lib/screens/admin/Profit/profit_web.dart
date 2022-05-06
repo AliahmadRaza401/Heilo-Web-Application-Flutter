@@ -8,14 +8,14 @@ import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
-class Profit extends StatefulWidget {
-  const Profit({Key? key}) : super(key: key);
+class ProfitWeb extends StatefulWidget {
+  const ProfitWeb({Key? key}) : super(key: key);
 
   @override
-  State<Profit> createState() => _ProfitState();
+  State<ProfitWeb> createState() => _ProfitWebState();
 }
 
-class _ProfitState extends State<Profit> {
+class _ProfitWebState extends State<ProfitWeb> {
   @override
   Widget build(BuildContext context) {
     return Container(

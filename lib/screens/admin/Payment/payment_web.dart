@@ -6,14 +6,14 @@ import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
 
-class PaymentPage extends StatefulWidget {
-  const PaymentPage({Key? key}) : super(key: key);
+class PaymentPageWeb extends StatefulWidget {
+  const PaymentPageWeb({Key? key}) : super(key: key);
 
   @override
-  State<PaymentPage> createState() => _PaymentPageState();
+  State<PaymentPageWeb> createState() => _PaymentPageWebState();
 }
 
-class _PaymentPageState extends State<PaymentPage> {
+class _PaymentPageWebState extends State<PaymentPageWeb> {
   @override
   Widget build(BuildContext context) {
     return Container(

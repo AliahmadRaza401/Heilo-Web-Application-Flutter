@@ -5,16 +5,16 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/screens/admin/BarChart/bar_chart.dart';
 import 'package:heilo/widgets/text_widget.dart';
 import 'package:percent_indicator/percent_indicator.dart';
-import '../../../../utils/config.dart';
+import '../../../utils/config.dart';
 
-class AdminDashboard extends StatefulWidget {
-  const AdminDashboard({Key? key}) : super(key: key);
+class AdminDashboardWeb extends StatefulWidget {
+  const AdminDashboardWeb({Key? key}) : super(key: key);
 
   @override
-  State<AdminDashboard> createState() => _AdminDashboardState();
+  State<AdminDashboardWeb> createState() => _AdminDashboardWebState();
 }
 
-class _AdminDashboardState extends State<AdminDashboard> {
+class _AdminDashboardWebState extends State<AdminDashboardWeb> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
