@@ -68,7 +68,7 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
         scrollDirection: Axis.vertical,
         child: Container(
           decoration: BoxDecoration(
-            color: Colors.yellow,
+            // color: Colors.yellow,
             borderRadius: BorderRadius.circular(13.r),
           ),
           child: Column(

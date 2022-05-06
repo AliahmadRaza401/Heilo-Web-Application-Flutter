@@ -202,7 +202,7 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
               right: 10.w,
             ),
             decoration: BoxDecoration(
-                color: Color(0xffB4F4DD),
+                color: const Color(0xffB4F4DD),
                 borderRadius: BorderRadius.circular(7)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

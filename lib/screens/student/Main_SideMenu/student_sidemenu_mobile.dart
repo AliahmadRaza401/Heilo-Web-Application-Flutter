@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/screens/student/drawer/student_drawer.dart';
+import 'package:heilo/screens/student/onDemand/on_demand_mobile.dart';
+import 'package:heilo/screens/student/studentInbox/studentInboxMobile.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
@@ -14,7 +16,7 @@ class StudentSideMenuMobile extends StatefulWidget {
 }
 
 class _StudentSideMenuMobileState extends State<StudentSideMenuMobile> {
-  int _selectedIndex = 0;
+  int _selectedIndex = 1;
   GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
 
   @override
@@ -28,42 +30,44 @@ class _StudentSideMenuMobileState extends State<StudentSideMenuMobile> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         key: studentScafoldKey,
-        appBar: AppBar(
-          elevation: 0,
-          backgroundColor: Colors.white,
-          leading: Builder(
-            builder: (BuildContext context) {
-              return IconButton(
-                icon: const Icon(
-                  Icons.menu,
-                  color: Colors.black,
-                  size: 30, // Changing Drawer Icon Size
-                ),
-                onPressed: () {
-                 studentScafoldKey.currentState!.openDrawer();
-                },
-                tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-              );
-            },
-          ),
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              CircleAvatar(
-                radius: 20,
-                backgroundColor: AppColors.primaryColor,
-                child: Image.asset(
-                  'assets/png/wp2398385 1.png',
-                  height: AppSizes.dynamicHeight(context, 0.07),
-                  width: AppSizes.dynamicWidth(context, 0.07),
-                ),
-              ),
-            ],
-          ),
-        ),
-        drawer: StudentDrawer(),
+        // appBar: AppBar(
+        //   elevation: 0,
+        //   backgroundColor: Colors.white,
+        //   leading: Builder(
+        //     builder: (BuildContext context) {
+        //       return IconButton(
+        //         icon: const Icon(
+        //           Icons.menu,
+        //           color: Colors.black,
+        //           size: 30, // Changing Drawer Icon Size
+        //         ),
+        //         onPressed: () {
+        //           studentScafoldKey.currentState!.openDrawer();
+        //         },
+        //         tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+        //       );
+        //     },
+        //   ),
+        //   title: Row(
+        //     mainAxisAlignment: MainAxisAlignment.end,
+        //     children: [
+        //       CircleAvatar(
+        //         radius: 20,
+        //         backgroundColor: AppColors.primaryColor,
+        //         child: Image.asset(
+        //           'assets/png/wp2398385 1.png',
+        //           height: AppSizes.dynamicHeight(context, 0.07),
+        //           width: AppSizes.dynamicWidth(context, 0.07),
+        //         ),
+        //       ),
+        //     ],
+        //   ),
+        // ),
+        // drawer: StudentDrawer(),
+
         backgroundColor: Colors.transparent,
         bottomNavigationBar: CurvedNavigationBar(
           key: _bottomNavigationKey,
@@ -159,54 +163,9 @@ class _StudentSideMenuMobileState extends State<StudentSideMenuMobile> {
         ),
         // body: IndexedStack(index: activeIndex, children: pageList),
         body: _selectedIndex == 0
-            ? Container(
-                color: Colors.white,
-              )
+            ? StudentInboxMobile()
             : _selectedIndex == 1
-                ? Container(
-                    margin: EdgeInsets.symmetric(
-                      horizontal: 30.w,
-                    ),
-                    color: Colors.white,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          height: 10,
-                        ),
-                        text(
-                          context,
-                          "Notifications",
-                          18.sp,
-                          AppColors.customGreen,
-                        ),
-                        Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                text(
-                                  context,
-                                  "Profile",
-                                  20,
-                                  Color(0xff3DDEA5),
-                                  bold: true,
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            profileCard(context),
-                            profileCard(context),
-                            profileCard(context),
-                            profileCard(context),
-                          ],
-                        ),
-                      ],
-                    ),
-                  )
+                ? OnDemandMobile()
                 : Container(
                     margin: EdgeInsets.symmetric(
                       horizontal: 30.w,
