@@ -665,6 +665,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
               ),
               Container(
                 width: 120.w,
+                height: 35.h,
                 decoration: BoxDecoration(
                     color: const Color(0xffC4C4C4),
                     borderRadius: BorderRadius.circular(20)),
@@ -903,6 +904,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
               Expanded(child: Container()),
               Container(
                 width: 120.w,
+                  height: 35.h,
                 decoration: BoxDecoration(
                     color: const Color(0xffC4C4C4),
                     borderRadius: BorderRadius.circular(20)),
@@ -1010,6 +1012,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
               ),
               Container(
                 width: 120.w,
+                  height: 35.h,
                 decoration: BoxDecoration(
                     color: const Color(0xffC4C4C4),
                     borderRadius: BorderRadius.circular(20)),
