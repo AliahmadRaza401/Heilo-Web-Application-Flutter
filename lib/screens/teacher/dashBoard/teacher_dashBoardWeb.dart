@@ -139,7 +139,7 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                             text(
                               context,
                               "Notifications",
-                              18.0,
+                              18.sp,
                               AppColors.customGreen,
                               bold: false,
                             ),
@@ -560,13 +560,13 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
               width: 300.w,
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(21)),
-              child: const Align(
+              child:  Align(
                 alignment: Alignment.center,
                 child: Text(
                   'Favourite Tutors',
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 21,
+                    fontSize: 21.sp,
                     fontWeight: FontWeight.w500,
                   ),
                 ),

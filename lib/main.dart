@@ -37,9 +37,14 @@ class MyApp extends StatelessWidget {
             );
           },
           // home: const Intro(),
+<<<<<<< HEAD
           home: const AdminSideMenu(),
+=======
+          // home: const AdminSideMenu(),
+>>>>>>> 51a3dd780f8ac7613dffa3e6be2ccfe49ba6a089
           // home: AdminSideMenu(),
           //  home: const StudentSideMenu(),
+          home:const TeacherSideMenu(),
         );
       },
     );

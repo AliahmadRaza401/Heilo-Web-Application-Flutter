@@ -56,7 +56,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                 overflow: Overflow.visible,
                 children: [
                   Container(
-                    height: 510.h,
+                    height: 530.h,
                     decoration: BoxDecoration(
                       color: Color(0xffF1F1F1),
                       borderRadius: BorderRadius.circular(30.r),
@@ -71,12 +71,12 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
-                             padding: EdgeInsets.all(6),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(30.r),
-                                border: Border.all(
-                                    width: 0.5, color: Color(0xffC4C4C4)),
-                              ),
+                          padding: EdgeInsets.all(6),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30.r),
+                            border: Border.all(
+                                width: 0.5, color: Color(0xffC4C4C4)),
+                          ),
                           child: text(
                             context,
                             "Sakib Abdullah",
@@ -95,12 +95,12 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                           height: 10.h,
                         ),
                         Container(
-                             padding: EdgeInsets.all(6),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(30.r),
-                                border: Border.all(
-                                    width: 0.5, color: Color(0xffC4C4C4)),
-                              ),
+                          padding: EdgeInsets.all(6),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30.r),
+                            border: Border.all(
+                                width: 0.5, color: Color(0xffC4C4C4)),
+                          ),
                           child: text(
                             context,
                             "Maple Leaf International School and College",
@@ -384,7 +384,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                width:221.w,
+                width: 221.w,
                 height: 33.h,
                 decoration: BoxDecoration(
                     color: const Color(0xff3DDEA5),
@@ -672,7 +672,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                     "Edit",
                     FontWeight.w600,
                     0xff3DDEA5,
-                    18,
+                    18.sp,
                   ),
                 ),
               ),
@@ -698,13 +698,13 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                       "Current Instituite",
                       FontWeight.w300,
                       0xff7d7d7d,
-                      12,
+                      12.sp,
                     ),
                     textWidget(
                       "Maple Leaf International School and College",
                       FontWeight.w600,
                       0xff7d7d7d,
-                      15,
+                      15.sp,
                     ),
                   ],
                 ),
@@ -723,7 +723,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                       "Class",
                       FontWeight.w300,
                       0xff7d7d7d,
-                      12,
+                      12.sp,
                     ),
                     DropdownButton(
                       // Initial Value
@@ -772,7 +772,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                       "Medium",
                       FontWeight.w600,
                       0xff7d7d7d,
-                      15,
+                      15.sp,
                     ),
                     DropdownButton(
                       // Initial Value
@@ -816,7 +816,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                       "Background",
                       FontWeight.w600,
                       0xff7d7d7d,
-                      14,
+                      14.sp,
                     ),
                     DropdownButton(
                       // Initial Value
@@ -888,11 +888,14 @@ class _EditProfileWebState extends State<EditProfileWeb> {
               SizedBox(
                 width: 20.w,
               ),
-              textWidget(
-                "Change Password",
-                FontWeight.w600,
-                0xff3DDEA5,
-                18,
+              Container(
+             
+                child: textWidget(
+                  "Change Password",
+                  FontWeight.w600,
+                  0xff3DDEA5,
+                  18.sp,
+                ),
               ),
               Expanded(child: Container()),
               Container(
@@ -906,7 +909,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                     "Edit",
                     FontWeight.w600,
                     0xff3DDEA5,
-                    18,
+                    18.sp,
                   ),
                 ),
               ),
@@ -919,29 +922,45 @@ class _EditProfileWebState extends State<EditProfileWeb> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Container(
-                padding: EdgeInsets.all(6),
+                width: 224.w,
+                height: 45.h,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(width: 0.5, color: Color(0xffC4C4C4)),
+                  borderRadius: BorderRadius.circular(15.r),
+                  border: Border.all(
+                    width: 0.5,
+                    color: const Color(0xffC4C4C4),
+                  ),
                 ),
-                child: textWidget(
-                  "Current Password",
-                  FontWeight.w300,
-                  0xff7d7d7d,
-                  12,
+              
+                child: Align(
+              alignment: Alignment.center,
+                  child: textWidget(
+                    "Current Password",
+                    FontWeight.w300,
+                    0xff7d7d7d,
+                    12.sp,
+                  ),
                 ),
               ),
               Container(
-                padding: EdgeInsets.all(6),
+                 width: 224.w,
+                height: 45.h,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(width: 0.5, color: Color(0xffC4C4C4)),
+                  borderRadius: BorderRadius.circular(15.r),
+                  border: Border.all(
+                    width: 0.5,
+                    color: const Color(0xffC4C4C4),
+                  ),
                 ),
-                child: textWidget(
-                  "New Password",
-                  FontWeight.w300,
-                  0xff7d7d7d,
-                  12,
+              
+                child: Align(
+               alignment: Alignment.center,
+                  child: textWidget(
+                    "New Password",
+                    FontWeight.w300,
+                    0xff7d7d7d,
+                    12.sp,
+                  ),
                 ),
               ),
             ],
@@ -997,7 +1016,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                     "Edit",
                     FontWeight.w600,
                     0xff3DDEA5,
-                    18,
+                    18.sp,
                   ),
                 ),
               ),
@@ -1018,8 +1037,11 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                           "Student ID",
                           FontWeight.w300,
                           0xff7d7d7d,
-                          12,
+                          14.sp,
                         ),
+                      ),
+                      SizedBox(
+                        width: 15.w,
                       ),
                       const Icon(
                         Icons.schema_rounded,
@@ -1030,17 +1052,26 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                       )
                     ],
                   ),
+                  SizedBox(
+                    height: 15.h,
+                  ),
                   Container(
-                    padding: EdgeInsets.all(6),
+                    width: 361.w,
+                    height: 39.h,
+                    // padding: EdgeInsets.all(6),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(width: 0.5, color: Color(0xffC4C4C4)),
+                      borderRadius: BorderRadius.circular(15.r),
+                      border: Border.all(
+                          width: 0.5, color: const Color(0xffC4C4C4)),
                     ),
-                    child: textWidget(
-                      "Attachment",
-                      FontWeight.w300,
-                      0xff7d7d7d,
-                      12,
+                    child: Align(
+                      alignment: Alignment.center,
+                      child: textWidget(
+                        "Attachment",
+                        FontWeight.w300,
+                        0xff7d7d7d,
+                        12.sp,
+                      ),
                     ),
                   ),
                 ],
