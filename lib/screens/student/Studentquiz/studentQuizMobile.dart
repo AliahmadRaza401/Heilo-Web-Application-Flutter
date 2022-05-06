@@ -58,8 +58,8 @@ class _StudentQuizMobileState extends State<StudentQuizMobile> {
         scrollDirection: Axis.vertical,
         child: Container(
           padding: EdgeInsets.only(
-            left: AppSizes.dynamicWidth(context, 0.02),
-            right: AppSizes.dynamicWidth(context, 0.02),
+            left: AppSizes.dynamicWidth(context, 0.01),
+            right: AppSizes.dynamicWidth(context, 0.01),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -68,14 +68,17 @@ class _StudentQuizMobileState extends State<StudentQuizMobile> {
               SizedBox(
                 height: AppSizes.dynamicHeight(context, 0.05)
               ),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: text(
-                  context,
-                  'TEST YOURSELF KNOW YOURSELF',
-                  95.sp,
-                  AppColors.greenDark,
-                  bold: true,
+              Container(
+                padding: EdgeInsets.only(left: AppSizes.dynamicWidth(context, 0.03)),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: text(
+                    context,
+                    'TEST YOURSELF KNOW YOURSELF',
+                    95.sp,
+                    AppColors.greenDark,
+                    bold: true,
+                  ),
                 ),
               ),
               SizedBox(
@@ -118,8 +121,8 @@ class _StudentQuizMobileState extends State<StudentQuizMobile> {
                                 color: AppColors.greenDark,
                                 borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(0),
-                                  topRight: Radius.circular(40.r),
-                                  bottomRight: Radius.circular(40.r),
+                                  topRight: Radius.circular(180.r),
+                                  bottomRight: Radius.circular(180.r),
                                   bottomLeft: Radius.circular(180.r),
                                 )),
                             child: Center(
@@ -139,7 +142,7 @@ class _StudentQuizMobileState extends State<StudentQuizMobile> {
                 height: 30.h,
               ),
               Wrap(
-                spacing: 50.w,
+                spacing: 20.w,
                 runSpacing: 20.h,
                 children: [
                   courseCard(context),
@@ -161,26 +164,26 @@ class _StudentQuizMobileState extends State<StudentQuizMobile> {
     return InkWell(
       onTap: () {},
       child: Container(
-        width: AppSizes.dynamicWidth(context, 0.4),
-        height: AppSizes.dynamicHeight(context, 0.32),
+        padding: EdgeInsets.all(AppSizes.dynamicHeight(context, 0.02)),
+        width: AppSizes.dynamicWidth(context, 0.47),
+        height: AppSizes.dynamicHeight(context, 0.37),
         decoration: BoxDecoration(
           color: AppColors.lightgreyborder,
-          borderRadius: BorderRadius.circular(30.r),
+          borderRadius: BorderRadius.circular(120.r),
+          
         ),
         child: Column(
-          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              // margin: EdgeInsets.symmetric(
-              //   vertical: 10.h,
-              // ),
-              width: AppSizes.dynamicWidth(context, 0.35),
               height: AppSizes.dynamicHeight(context, 0.2),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30.r),
+               borderRadius: BorderRadius.circular(120.r),
                 image: const DecorationImage(
                   image: AssetImage("assets/png/bluebook.png"),
                   fit: BoxFit.cover,
+                  
                 ),
               ),
             ),
@@ -201,42 +204,23 @@ class _StudentQuizMobileState extends State<StudentQuizMobile> {
                       fit: BoxFit.cover,
                       height: AppSizes.dynamicHeight(context, 0.04),
                       width: AppSizes.dynamicWidth(context, 0.07)),
-                  text(context, "Chapter-1 : Speed", 65.sp, Colors.black),
+                  Wrap(children:[ text(context, "Chapter-1 : Speed", 65.sp, Colors.black)]),
                 ],
               ),
             ),
             SizedBox(
               height: AppSizes.dynamicHeight(context, 0.01),
             ),
-            Container(
-              // width: 250.w,
-              padding: EdgeInsets.only(
-                left: AppSizes.dynamicWidth(context, 0.02),
-                right: AppSizes.dynamicWidth(context, 0.02),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  text(context, "Question: 25", 75.sp, const Color(0xff6F6F6F)),
-                ],
-              ),
+            Wrap(
+              children: [text(context, "Question: 25", 75.sp, const Color(0xff6F6F6F)),],
             ),
-            Container(
-              // width: 250.w,
-              padding: EdgeInsets.only(
-                left: AppSizes.dynamicWidth(context, 0.02),
-                right: AppSizes.dynamicWidth(context, 0.02),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  text(context, "Time : 25 minutes", 75.sp, Color(0xff6F6F6F)),
-                ],
-              ),
+             Wrap(
+              children: [text(context, "Time : 25 minutes", 75.sp, const Color(0xff6F6F6F)),],
             ),
-             SizedBox(
-              height: AppSizes.dynamicHeight(context, 0.01),
-            ),
+          
+            //  SizedBox(
+            //   height: AppSizes.dynamicHeight(context, 0.01),
+            // ),
           ],
         ),
       ),
