@@ -37,10 +37,11 @@ class MyApp extends StatelessWidget {
               child: widget!,
             );
           },
-          home: const Intro(),
+          // home: const Intro(),
           // home: const AdminSideMenu(),
           // home: AdminSideMenu(),
           //  home: const StudentSideMenu(),
+          home:const TeacherSideMenu(),
         );
       },
     );
