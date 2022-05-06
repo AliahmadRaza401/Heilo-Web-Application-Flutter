@@ -352,12 +352,9 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              alignment: Alignment.centerLeft,
-              width: 300.w,
-              // decoration: BoxDecoration(
-              //     color: Colors.white, borderRadius: BorderRadius.circular(21)),
+              margin: EdgeInsets.only(left: 20.w, top: 10.h),
               child: const Align(
-                alignment: Alignment.center,
+                alignment: Alignment.centerLeft,
                 child: Text(
                   'Quiz Appeared',
                   style: TextStyle(
@@ -413,21 +410,19 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
                 ),
                 child: Text(""),
               ),
-                Column(
-                  children: [
-                     text(context, "Total Mark", 15.sp, Color(0xff6F6F6F)),
-                      text(context, "23", 48.sp, Color(0xff000000),bold: true),
-                  ],
-                )
+              Column(
+                children: [
+                  text(context, "Total Mark", 15.sp, Color(0xff6F6F6F)),
+                  text(context, "23", 48.sp, Color(0xff000000), bold: true),
+                ],
+              )
             ],
           ),
           Container(
             padding: EdgeInsets.all(6.h),
             decoration: BoxDecoration(
-              
-              borderRadius: BorderRadius.circular(15),
-              color: Color(0xffFFFFFF)
-            ),
+                borderRadius: BorderRadius.circular(15),
+                color: Color(0xffFFFFFF)),
             child: Column(
               children: [
                 Container(
@@ -445,30 +440,31 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
                     ],
                   ),
                 ),
-                      Container(
-            width: 250.w,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                text(context, "Question: 25", 16.sp, Color(0xff6F6F6F)),
-                text(context, "Time : 25 minutes", 16.sp, Color(0xff6F6F6F)),
+                Container(
+                  width: 250.w,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      text(context, "Question: 25", 16.sp, Color(0xff6F6F6F)),
+                      text(context, "Time : 25 minutes", 16.sp,
+                          Color(0xff6F6F6F)),
+                    ],
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 5.h),
+                  width: 250.w,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      text(
+                          context, "27th July, 2021", 16.sp, Color(0xff444F55)),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
-                 Container(
-                   margin:EdgeInsets.only(top: 5.h),
-            width: 250.w,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                text(context, "27th July, 2021", 16.sp, Color(0xff444F55)),
-              ],
-            ),
-          ),
-              ],
-            ),
-          ),
-         
         ],
       ),
     );

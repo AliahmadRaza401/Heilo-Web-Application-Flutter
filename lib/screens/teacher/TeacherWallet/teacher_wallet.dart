@@ -41,6 +41,7 @@ class _TeacherWalletState extends State<TeacherWallet> {
                       height: 232.h,
                       width: 424.w,
                       decoration: BoxDecoration(
+                        image: DecorationImage(image: AssetImage('assets/png/card2.png')),
                           color: AppColors.navyBlue,
                           borderRadius: BorderRadius.circular(30.w)),
                       padding: EdgeInsets.symmetric(
@@ -235,6 +236,7 @@ class _TeacherWalletState extends State<TeacherWallet> {
       width: 369.w,
       height: 215.h,
       decoration: BoxDecoration(
+        image: DecorationImage(image: AssetImage('assets/png/card1.png')),
         color: AppColors.green,
         borderRadius: BorderRadius.circular(15.r),
         // border: Border.all(color: AppColors.darkGrey, width: 2.w)

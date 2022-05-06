@@ -56,7 +56,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                 overflow: Overflow.visible,
                 children: [
                   Container(
-                    height: 631.h,
+                    height: 510.h,
                     decoration: BoxDecoration(
                       color: Color(0xffF1F1F1),
                       borderRadius: BorderRadius.circular(30.r),
@@ -70,12 +70,20 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        text(
-                          context,
-                          "Sakib Abdullah",
-                          18.0,
-                          AppColors.greyText,
-                          bold: true,
+                        Container(
+                             padding: EdgeInsets.all(6),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(30.r),
+                                border: Border.all(
+                                    width: 0.5, color: Color(0xffC4C4C4)),
+                              ),
+                          child: text(
+                            context,
+                            "Sakib Abdullah",
+                            18.sp,
+                            AppColors.greyText,
+                            bold: true,
+                          ),
                         ),
                         // textWidget(
                         //   "Sakib Abdullah",
@@ -86,11 +94,19 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                         SizedBox(
                           height: 10.h,
                         ),
-                        text(
-                          context,
-                          "Maple Leaf International School and College",
-                          14.0,
-                          AppColors.greyText,
+                        Container(
+                             padding: EdgeInsets.all(6),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(30.r),
+                                border: Border.all(
+                                    width: 0.5, color: Color(0xffC4C4C4)),
+                              ),
+                          child: text(
+                            context,
+                            "Maple Leaf International School and College",
+                            14.sp,
+                            AppColors.greyText,
+                          ),
                         ),
                         // textWidget(
                         //   "Maple Leaf International School and College",
@@ -99,7 +115,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                         //   14,
                         // ),
                         SizedBox(
-                          height: 70.h,
+                          height: 40.h,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -120,27 +136,34 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                                 child: text(
                                   context,
                                   "Tutions completed",
-                                  14.0,
+                                  14.sp,
                                   AppColors.customWhite,
                                   bold: true,
                                   // alignText: Alignment.center
                                 ),
                               ),
                             ),
-                            text(
-                              context,
-                              "150",
-                              14.0,
-                              AppColors.greytextText,
-                              bold: true,
-                              // alignText: Alignment.center
+                            Container(
+                              width: 123.w,
+                              height: 38.h,
+                              //  padding: EdgeInsets.all(6),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(30.r),
+                                border: Border.all(
+                                    width: 0.5, color: Color(0xffC4C4C4)),
+                              ),
+                              child: Align(
+                                alignment: Alignment.center,
+                                child: text(
+                                  context,
+                                  "48",
+                                  14.sp,
+                                  AppColors.greytextText,
+                                  bold: true,
+                                  // alignText: Alignment.center
+                                ),
+                              ),
                             ),
-                            // textWidget(
-                            //   "150",
-                            //   FontWeight.w600,
-                            //   0xff7D7D7D,
-                            //   14,
-                            // ),
                           ],
                         ),
                         SizedBox(
@@ -159,7 +182,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                               decoration: BoxDecoration(
                                 color: Color(0xffA279E6),
                                 borderRadius: BorderRadius.circular(
-                                  30,
+                                  30.r,
                                 ),
                               ),
                               child: Align(
@@ -167,40 +190,54 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                                 child: text(
                                   context,
                                   "Tutors referred",
-                                  14.0,
+                                  14.sp,
                                   AppColors.customWhite,
                                   bold: true,
                                   // alignText: Alignment.center
                                 ),
-                                // child: textWidget(
-                                //   "Tutors referred",
-                                //   FontWeight.w600,
-                                //   0xffffffff,
-                                //   14,
-                                // ),
                               ),
                             ),
-                            text(
-                              context,
-                              "150",
-                              14.0,
-                              AppColors.greytextText,
-                              bold: true,
-                              // alignText: Alignment.center
+                            Container(
+                              width: 123.w,
+                              height: 38.h,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(30),
+                                border: Border.all(
+                                    width: 0.5, color: Color(0xffC4C4C4)),
+                              ),
+                              child: Align(
+                                alignment: Alignment.center,
+                                child: text(
+                                  context,
+                                  "27",
+                                  14.sp,
+                                  AppColors.greytextText,
+                                  bold: true,
+                                  // alignText: Alignment.center
+                                ),
+                              ),
                             ),
                           ],
                         ),
                         SizedBox(
-                          height: 60.h,
+                          height: 30.h,
                         ),
-                        text(
-                            context,
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
-                            14.0,
-                            AppColors.customBlack,
-                            // bold: true,
-                            // alignText: Alignment.center
-                            maxLines: 8),
+                        Container(
+                          padding: EdgeInsets.all(6),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                                width: 0.5, color: Color(0xffC4C4C4)),
+                          ),
+                          child: text(
+                              context,
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
+                              14.sp,
+                              AppColors.customBlack,
+                              // bold: true,
+                              // alignText: Alignment.center
+                              maxLines: 8),
+                        ),
                         // textWidget(
                         //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
                         //   FontWeight.w300,
@@ -255,7 +292,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                                     text(
                                       context,
                                       "4.5",
-                                      15,
+                                      15.sp,
                                       Colors.black,
                                       bold: true,
                                     ),
@@ -347,8 +384,8 @@ class _EditProfileWebState extends State<EditProfileWeb> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                width: 230.w,
-                height: 36.h,
+                width:221.w,
+                height: 33.h,
                 decoration: BoxDecoration(
                     color: const Color(0xff3DDEA5),
                     borderRadius: BorderRadius.circular(20)),
@@ -363,17 +400,18 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                 ),
               ),
               Container(
-                width: 120.w,
+                width: 96.w,
+                height: 35.h,
                 decoration: BoxDecoration(
                     color: const Color(0xffC4C4C4),
-                    borderRadius: BorderRadius.circular(20)),
+                    borderRadius: BorderRadius.circular(30.r)),
                 child: Align(
                   alignment: Alignment.center,
                   child: textWidget(
                     "Edit",
                     FontWeight.w600,
                     0xff3DDEA5,
-                    18,
+                    18.sp,
                   ),
                 ),
               ),
@@ -399,13 +437,13 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                       "Name",
                       FontWeight.w300,
                       0xff7d7d7d,
-                      12,
+                      12.sp,
                     ),
                     textWidget(
                       "Sakib  Abdullah",
                       FontWeight.w600,
                       0xff7d7d7d,
-                      15,
+                      15.sp,
                     ),
                   ],
                 ),
@@ -424,13 +462,13 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                       "Email",
                       FontWeight.w300,
                       0xff7d7d7d,
-                      12,
+                      12.sp,
                     ),
                     textWidget(
                       "sakib.abdullah@gmail.com",
                       FontWeight.w600,
                       0xff7d7d7d,
-                      15,
+                      15.sp,
                     ),
                   ],
                 ),
@@ -449,13 +487,13 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                       "Contact Number",
                       FontWeight.w300,
                       0xff7d7d7d,
-                      12,
+                      12.sp,
                     ),
                     textWidget(
                       "01765646564",
                       FontWeight.w600,
                       0xff7d7d7d,
-                      15,
+                      15.sp,
                     ),
                   ],
                 ),
@@ -504,7 +542,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                       "Rajshahi",
                       FontWeight.w600,
                       0xff7d7d7d,
-                      15,
+                      15.sp,
                     ),
                   ],
                 ),
@@ -526,13 +564,13 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                       "Village, Upazila",
                       FontWeight.w600,
                       0xff7d7d7d,
-                      14,
+                      14.sp,
                     ),
                     textWidget(
                       "Meherchun..",
                       FontWeight.w600,
                       0xff7d7d7d,
-                      15,
+                      15.sp,
                     ),
                   ],
                 ),
@@ -554,7 +592,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                       "Gender",
                       FontWeight.w600,
                       0xff7d7d7d,
-                      14,
+                      14.sp,
                     ),
                     DropdownButton(
                       // Initial Value

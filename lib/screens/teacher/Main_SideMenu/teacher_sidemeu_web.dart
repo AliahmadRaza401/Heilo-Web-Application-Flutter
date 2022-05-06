@@ -7,6 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 import 'package:heilo/screens/student/student_profile/student_profile.dart';
+import 'package:heilo/screens/teacher/TeacherWallet/teacher_wallet.dart';
 import 'package:heilo/screens/teacher/dashBoard/teacher_dashBoard.dart';
 import 'package:heilo/screens/teacher/editProfile.dart/teacher_editProfile.dart';
 import 'package:heilo/screens/teacher/teacher_Inbox/teacher_Inbox.dart';
@@ -158,7 +159,8 @@ class _TeacherSideMenuWebState extends State<TeacherSideMenuWeb> {
                  TeacherDashBoard(),
                  TeacherProfile(),
                  TeacherEditProfile(),
-                  TeacherEditProfile(),
+                  // TeacherEditProfile(),
+                  TeacherWallet(),
                   TeacherInbox(),
                 //   Quizz(),
                 //   DashBoard(),

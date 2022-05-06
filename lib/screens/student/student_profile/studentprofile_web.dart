@@ -35,7 +35,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
           Container(
             alignment: Alignment.center,
             width: 526.w,
-            height: 780.h,
+            height: 700.h,
             decoration: BoxDecoration(
               // color: Colors.amber,
               borderRadius: BorderRadius.circular(30.r),
@@ -43,19 +43,15 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
             padding: EdgeInsets.only(
               left: 45.w,
               right: 45.w,
-              // top: 50.h,
             ),
-            // padding: EdgeInsets.symmetric(
-            //   vertical: 16.h,
-            //   horizontal: 25.w,
-            // ),
             child: Stack(
               overflow: Overflow.visible,
               children: [
                 Container(
-                  height: 631.h,
+                  height: 500.h,
                   decoration: BoxDecoration(
                     color: Color(0xffF1F1F1),
+                    // color: Colors.green,
                     borderRadius: BorderRadius.circular(30.r),
                   ),
                   padding: EdgeInsets.only(
@@ -70,33 +66,21 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                       text(
                         context,
                         "Sakib Abdullah",
-                        18.0,
+                        18.sp,
                         AppColors.greyText,
                         bold: true,
                       ),
-                      // textWidget(
-                      //   "Sakib Abdullah",
-                      //   FontWeight.w600,
-                      //   0xff747474,
-                      //   18,
-                      // ),
                       SizedBox(
                         height: 10.h,
                       ),
                       text(
                         context,
                         "Maple Leaf International School and College",
-                        14.0,
+                        14.sp,
                         AppColors.greyText,
                       ),
-                      // textWidget(
-                      //   "Maple Leaf International School and College",
-                      //   FontWeight.w300,
-                      //   0xff747474,
-                      //   14,
-                      // ),
                       SizedBox(
-                        height: 70.h,
+                        height: 40.h,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -104,10 +88,6 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                           Container(
                             height: 38.h,
                             width: 191.w,
-                            // padding: const EdgeInsets.only(
-                            //   top: 5,
-                            //   bottom: 5,
-                            // ),
                             decoration: BoxDecoration(
                               color: AppColors.customDarkBlue,
                               borderRadius: BorderRadius.circular(30),
@@ -117,7 +97,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                               child: text(
                                 context,
                                 "Tutions completed",
-                                14.0,
+                                14.sp,
                                 AppColors.customWhite,
                                 bold: true,
                                 // alignText: Alignment.center
@@ -127,17 +107,10 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                           text(
                             context,
                             "150",
-                            14.0,
+                            14.sp,
                             AppColors.greytextText,
                             bold: true,
-                            // alignText: Alignment.center
                           ),
-                          // textWidget(
-                          //   "150",
-                          //   FontWeight.w600,
-                          //   0xff7D7D7D,
-                          //   14,
-                          // ),
                         ],
                       ),
                       SizedBox(
@@ -149,14 +122,10 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                           Container(
                             width: 191.w,
                             height: 38.h,
-                            // padding: const EdgeInsets.only(
-                            //   top: 5,
-                            //   bottom: 5,
-                            // ),
                             decoration: BoxDecoration(
                               color: Color(0xffA279E6),
                               borderRadius: BorderRadius.circular(
-                                30,
+                                30.r,
                               ),
                             ),
                             child: Align(
@@ -164,46 +133,32 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                               child: text(
                                 context,
                                 "Tutors referred",
-                                14.0,
+                                14.sp,
                                 AppColors.customWhite,
                                 bold: true,
                                 // alignText: Alignment.center
                               ),
-                              // child: textWidget(
-                              //   "Tutors referred",
-                              //   FontWeight.w600,
-                              //   0xffffffff,
-                              //   14,
-                              // ),
                             ),
                           ),
                           text(
                             context,
                             "150",
-                            14.0,
+                            14.sp,
                             AppColors.greytextText,
                             bold: true,
-                            // alignText: Alignment.center
                           ),
                         ],
                       ),
                       SizedBox(
-                        height: 60.h,
+                        height: 30.h,
                       ),
                       text(
-                          context,
-                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
-                          14.0,
-                          AppColors.customBlack,
-                          // bold: true,
-                          // alignText: Alignment.center
-                          maxLines: 8),
-                      // textWidget(
-                      //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
-                      //   FontWeight.w300,
-                      //   0xff7000000,
-                      //   14,
-                      // ),
+                        context,
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
+                        14.sp,
+                        AppColors.customBlack,
+                        maxLines: 8,
+                      ),
                     ],
                   ),
                 ),
@@ -228,12 +183,6 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                               ),
                             ),
                           ),
-                          // CircleAvatar(
-                          //   radius: 46.r,
-                          //   backgroundImage: const AssetImage(
-                          //     "assets/png/wp2398385 1.png",
-                          //   ),
-                          // ),
                           Positioned(
                             top: 0,
                             right: -15,
@@ -244,7 +193,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                               ),
                               decoration: BoxDecoration(
                                 color: Color(0xffC4C4C4).withOpacity(0.5),
-                                borderRadius: BorderRadius.circular(50),
+                                borderRadius: BorderRadius.circular(50.r),
                               ),
                               child: Row(
                                 children: [
@@ -252,7 +201,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                                   text(
                                     context,
                                     "4.5",
-                                    15,
+                                    15.sp,
                                     Colors.black,
                                     bold: true,
                                   ),
@@ -262,16 +211,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                           ),
                         ],
                       ),
-
-                      //
-                    )
-                    // CircleAvatar(
-                    //   radius: 80.r,
-                    //   backgroundImage: const AssetImage(
-                    //     "assets/png/wp2398385 1.png",
-                    //   ),
-                    // ),
-                    ),
+                    )),
               ],
             ),
           ),
@@ -291,7 +231,10 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                   SizedBox(
                     height: 20.h,
                   ),
-                  greyWidget2()
+                  greyWidget2(),
+                  SizedBox(
+                    height: 20.h,
+                  ),
                 ],
               ),
             ),
@@ -357,7 +300,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                     child: text(
                       context,
                       "Address",
-                      14.0,
+                      14.sp,
                       AppColors.greytextText,
                       bold: false,
                     ),
@@ -370,7 +313,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                     child: text(
                       context,
                       "274, sher-e-bangla road, Dhaka- 1209",
-                      14.0,
+                      14.sp,
                       AppColors.greytextText,
                       bold: true,
                     ),
@@ -393,7 +336,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                     child: text(
                       context,
                       "Gender",
-                      14.0,
+                      14.sp,
                       AppColors.greytextText,
                       bold: false,
                     ),
@@ -406,7 +349,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                     child: text(
                       context,
                       "Male",
-                      14.0,
+                      14.sp,
                       AppColors.greytextText,
                       bold: true,
                     ),
@@ -437,7 +380,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
               top: 20.h,
               left: 20.h,
             ),
-            width: 230.w,
+            width: 145.w,
             height: 36.h,
             decoration: BoxDecoration(
                 color: const Color(0xff3DDEA5),
@@ -470,7 +413,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                     child: text(
                       context,
                       "Current Institute",
-                      14.0,
+                      14.sp,
                       AppColors.greytextText,
                       bold: false,
                     ),
@@ -483,7 +426,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                     child: text(
                       context,
                       "Maple Leaf International School And College",
-                      14.0,
+                      14.sp,
                       AppColors.greytextText,
                       bold: true,
                     ),
@@ -502,7 +445,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                     child: text(
                       context,
                       "class",
-                      14.0,
+                      14.sp,
                       AppColors.greytextText,
                       bold: false,
                     ),
@@ -515,7 +458,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                     child: text(
                       context,
                       "Std- VI",
-                      14.0,
+                      14.sp,
                       AppColors.greytextText,
                       bold: true,
                     ),
@@ -543,7 +486,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                     child: text(
                       context,
                       "Medium",
-                      14.0,
+                      14.sp,
                       AppColors.greytextText,
                       bold: false,
                     ),
@@ -556,7 +499,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                     child: text(
                       context,
                       "English Medium",
-                      14.0,
+                      14.sp,
                       AppColors.greytextText,
                       bold: true,
                     ),
@@ -578,7 +521,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                     child: text(
                       context,
                       "Background ",
-                      14.0,
+                      14.sp,
                       AppColors.greytextText,
                       bold: false,
                     ),
@@ -591,7 +534,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                     child: text(
                       context,
                       "Science",
-                      14.0,
+                      14.sp,
                       AppColors.greytextText,
                       bold: true,
                     ),
@@ -648,7 +591,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Container(
-                            width: 230.w,
+                            width: 114.w,
                             height: 36.h,
                             margin: EdgeInsets.only(
                               top: 20.h,

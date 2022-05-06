@@ -39,7 +39,7 @@ class StudentDrawer extends StatelessWidget {
   // studentScafoldKey.currentState.openEndDrawer();
 // }
               Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => StudentSideMenuMobile()));
+                  MaterialPageRoute(builder: (context) => OnDemandMobile()));
                  
             },
           ),

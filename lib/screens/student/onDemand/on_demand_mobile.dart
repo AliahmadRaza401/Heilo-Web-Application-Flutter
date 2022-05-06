@@ -10,9 +10,8 @@ import 'package:heilo/widgets/text_widget.dart';
 
 import '../../../utils/config.dart';
 
+final GlobalKey<ScaffoldState> studentScafoldKey = GlobalKey();
 
-
-final GlobalKey<ScaffoldState> studentScafoldKey = GlobalKey(); 
 class OnDemandMobile extends StatefulWidget {
   const OnDemandMobile({Key? key}) : super(key: key);
 
@@ -24,41 +23,41 @@ class _OnDemandMobileState extends State<OnDemandMobile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        key: studentScafoldKey,
-        appBar: AppBar(
-          elevation: 0,
-          backgroundColor: Colors.white,
-          leading: Builder(
-            builder: (BuildContext context) {
-              return IconButton(
-                icon: const Icon(
-                  Icons.menu,
-                  color: Colors.black,
-                  size: 30, // Changing Drawer Icon Size
-                ),
-                onPressed: () {
-                 studentScafoldKey.currentState!.openDrawer();
-                },
-                tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-              );
-            },
-          ),
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              CircleAvatar(
-                radius: 20,
-                backgroundColor: AppColors.primaryColor,
-                child: Image.asset(
-                  'assets/png/wp2398385 1.png',
-                  height: AppSizes.dynamicHeight(context, 0.07),
-                  width: AppSizes.dynamicWidth(context, 0.07),
-                ),
+      key: studentScafoldKey,
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: const Icon(
+                Icons.menu,
+                color: Colors.black,
+                size: 30, // Changing Drawer Icon Size
               ),
-            ],
-          ),
+              onPressed: () {
+                studentScafoldKey.currentState!.openDrawer();
+              },
+              tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+            );
+          },
         ),
-        drawer: StudentDrawer(),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            CircleAvatar(
+              radius: 20,
+              backgroundColor: AppColors.primaryColor,
+              child: Image.asset(
+                'assets/png/wp2398385 1.png',
+                height: AppSizes.dynamicHeight(context, 0.07),
+                width: AppSizes.dynamicWidth(context, 0.07),
+              ),
+            ),
+          ],
+        ),
+      ),
+      drawer: StudentDrawer(),
       body: DefaultTabController(
         length: 3,
         child: Container(
@@ -130,7 +129,7 @@ class _OnDemandMobileState extends State<OnDemandMobile> {
                         ),
                       ),
                     ),
-                    Row(
+                    Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -138,18 +137,18 @@ class _OnDemandMobileState extends State<OnDemandMobile> {
                           onTap: () {
                             notificationPopUp(context);
                           },
-                          child: const Icon(
+                          child:  Icon(
                             Icons.notifications,
                             color: AppColors.greenDark,
-                            size: 20,
+                            size:130.r,
                           ),
                         ),
                         AppSizes.widthBox(context, .01),
                         CircleAvatar(
-                          radius: 32.r,
-                          backgroundColor: AppColors.green,
+                          // radius: 90.r,
+                          // backgroundColor: AppColors.green,
                           child: CircleAvatar(
-                            radius: 28.r,
+                            radius: 80.r,
                             backgroundImage: const AssetImage(
                               "assets/png/wp2398385 1.png",
                             ),
@@ -225,18 +224,13 @@ Widget profileCard(context) {
       ),
       margin: EdgeInsets.only(bottom: 14.h),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              CircleAvatar(
-                radius: 66.r,
-                backgroundImage: const AssetImage(
-                  "assets/png/wp2398385 1.png",
-                ),
-              ),
-            ],
+          CircleAvatar(
+            radius: 130.r,
+            backgroundImage: const AssetImage(
+              "assets/png/wp2398385 1.png",
+            ),
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -244,15 +238,19 @@ Widget profileCard(context) {
               text(
                 context,
                 "SAKIB ABDULLAH",
-                25.sp,
+                65.sp,
                 AppColors.customBlack,
                 bold: true,
               ),
-              text(
-                context,
-                "bangladesh University Of Professionals\nAccounting , Finance, English, ICT ",
-                19.sp,
-                AppColors.customBlack,
+              Wrap(
+                children: [
+                  text(
+                      context,
+                      "bangladesh University Of Professionals\nAccounting , Finance, English, ICT ",
+                      65.sp,
+                      AppColors.customBlack,
+                      maxLines: 1),
+                ],
               ),
             ],
           ),
@@ -261,7 +259,7 @@ Widget profileCard(context) {
             children: [
               Container(
                 height: 25.h,
-                width: 146.w,
+                width: AppSizes.dynamicWidth(context, 0.2),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10.r),
@@ -271,7 +269,7 @@ Widget profileCard(context) {
               ),
               Container(
                 height: 25.h,
-                width: 146.w,
+                width: AppSizes.dynamicWidth(context, 0.2),
                 decoration: BoxDecoration(
                   color: AppColors.greenDark,
                   borderRadius: BorderRadius.circular(10.r),
@@ -279,21 +277,6 @@ Widget profileCard(context) {
                 child: Center(
                     child: text(context, "Message", 18.sp, Colors.white)),
               ),
-              // coloredButton(
-              //   context,
-              //   "450/Hr",
-              //   AppColors.customWhite,
-              //   width: 146.w,
-              //   height: 42.h,
-              // ),
-              // coloredButton(
-              //   context,
-              //   "Message",
-              //   AppColors.greenDark,
-              //   width: 146.w,
-              //   height: 42.h,
-              //   fontColor: true,
-              // ),
             ],
           ),
         ],
@@ -306,10 +289,10 @@ Widget notificationCard(context) {
   return Flexible(
     child: Container(
       // width: 476.w,
-      height: 56.h,
+      height: AppSizes.dynamicHeight(context, 0.1),
       decoration: BoxDecoration(
         color: Color(0xffD5EFE6),
-        borderRadius: BorderRadius.circular(50.r),
+        borderRadius: BorderRadius.circular(60.r),
       ),
       padding: EdgeInsets.symmetric(
         horizontal: 18.w,
@@ -320,7 +303,7 @@ Widget notificationCard(context) {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           CircleAvatar(
-            radius: 60.r,
+           radius: 130.r,
             backgroundImage: const AssetImage(
               "assets/png/wp2398385 1.png",
             ),
@@ -334,7 +317,7 @@ Widget notificationCard(context) {
               text(
                 context,
                 "You have received a tution request from \nSalsabil Murshed.",
-                35.sp,
+                65.sp,
                 AppColors.customBlack,
               ),
             ],
@@ -374,7 +357,7 @@ notificationPopUp(BuildContext context) {
                   text(
                     context,
                     "Notifications",
-                    50.sp,
+                    95.sp,
                     AppColors.customGreen,
                   ),
                   SizedBox(

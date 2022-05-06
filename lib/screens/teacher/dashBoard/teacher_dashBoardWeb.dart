@@ -52,6 +52,7 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                     child: cardWidget(
                       'assets/png/g1.png',
                       "Upcoming Sessions",
+                      "03",
                       SelectedCard == 1 ? 0xffFFFFFF : 0xff000000,
                       SelectedCard == 1 ? Color(0xff5F5F5F) : Colors.white,
                     ),
@@ -65,6 +66,7 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                     child: cardWidget(
                       'assets/png/g1.png',
                       "Tutions completed",
+                      "03",
                       SelectedCard == 2 ? 0xffFFFFFF : 0xff000000,
                       SelectedCard == 2 ? Color(0xff5F5F5F) : Colors.white,
                     ),
@@ -77,7 +79,8 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                     },
                     child: cardWidget(
                       'assets/png/g3.png',
-                      "Quiz Appeared",
+                      "Tution Request",
+                       "03",
                       SelectedCard == 3 ? 0xffFFFFFF : 0xff000000,
                       SelectedCard == 3 ? Color(0xff5F5F5F) : Colors.white,
                     ),
@@ -91,7 +94,8 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                     child: cardWidget(
                       'assets/png/g4.png',
                       "Favourite Tutors",
-                      SelectedCard == 4 ? 0xffFFFFFF : 0xff000000,
+                      "+20%",
+                      SelectedCard == 4 ? 0xFF312828 : 0xff000000,
                       SelectedCard == 4 ? Color(0xff5F5F5F) : Colors.white,
                     ),
                   ),
@@ -103,11 +107,11 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     SelectedCard == 1
-                        ? upComingCard()
+                        ? tutionsCard()
                         : SelectedCard == 2
-                            ? tutionsCard()
+                            ? upComingCard()
                             : SelectedCard == 3
-                                ? quizCard()
+                                ? tutionRequest()
                                 : favoriteTutiCard(),
                     Container(
                       width: 700.w,
@@ -158,6 +162,233 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
               )
             ],
           ),
+        ),
+      ),
+    );
+  }
+
+  Widget tutionInerWidget() {
+    return Container(
+      margin: EdgeInsets.only(top: 10.h),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15),
+          border: Border.all(width: 2, color: Color(0xffC4C4C4))),
+      padding: EdgeInsets.only(left: 10.w, top: 3.h, bottom: 3.h, right: 5.w),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Container(
+            height: 60.h,
+            width: 50.w,
+            decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: AssetImage('assets/png/wp2398385 1.png'),
+                  fit: BoxFit.cover,
+                )),
+          ),
+          text(
+            context,
+            'Ruhul Amin Tushar',
+            16,
+            AppColors.greenDark,
+            bold: true,
+          ),
+          Container(
+            height: 50.h,
+            // width: 156.w,
+            padding: EdgeInsets.only(
+              left: 10.w,
+              right: 10.w,
+            ),
+            decoration: BoxDecoration(
+                color: Color(0xffB4F4DD),
+                borderRadius: BorderRadius.circular(7)),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                text(
+                  context,
+                  'Topic- Mathematics',
+                  12,
+                  AppColors.bblackText,
+                  bold: false,
+                ),
+                SizedBox(
+                  width: 15.w,
+                ),
+                text(
+                  context,
+                  '11-03-2022 (4pm- 6:30 pm)',
+                  12,
+                  AppColors.bblackText,
+                  bold: false,
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
+    );
+  }
+
+  Widget tutionRequestInnerWidget() {
+    return Container(
+      margin: EdgeInsets.only(left: 40.w, right: 40.w, top: 30.h),
+    
+      child: Row(
+        children: [
+          CircleAvatar(
+            radius: 26.r,
+            backgroundImage: const AssetImage(
+              "assets/png/wp2398385 1.png",
+            ),
+          ),
+          Container(
+            width: 30.w,
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              text(context, 'Ruhul Tusar', 16.sp, Color(0xff444F55),
+                  bold: true),
+              Container(
+                height: 6.w,
+              ),
+              text(context, 'Class- 10', 15.sp, Color(0xff444F55), bold: false)
+            ],
+          ),
+          Container(
+            width: 30.w,
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              text(context, 'Date : 10-22 -2021   I   5:30 pm', 13.sp,
+                  Color(0xff01B489),
+                  bold: true),
+              Container(
+                height: 6.w,
+              ),
+              text(context, 'Polygons I Gerometry I Maths B', 15.sp,
+                  Color(0xff444F55),
+                  bold: false)
+            ],
+          ),
+          Expanded(child: Container()),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Icon(
+                Icons.cancel,
+                color: Color(0xffD7443E),
+                size: 25,
+              ),
+              const Icon(
+                Icons.check_circle,
+                color: Color(0xff3BB54A),
+                size: 25,
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget tutionRequest() {
+    return Container(
+      height: 573.h,
+      width: 743.w,
+
+      // margin: EdgeInsets.only(top: 40.h),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(30),
+        color: const Color(0xffF8F8F8),
+
+      ),
+      padding: EdgeInsets.only(bottom: 20.h),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              margin: EdgeInsets.only(top: 20.h, left: 20.w),
+              alignment: Alignment.centerLeft,
+              width: 300.w,
+              // decoration: BoxDecoration(
+              //     color: Colors.white, borderRadius: BorderRadius.circular(21)),
+              child: const Align(
+                alignment: Alignment.center,
+                child: Text(
+                  'Upcoming Sessions',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 21,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ),
+            tutionRequestInnerWidget(),
+           Container(
+                   margin: EdgeInsets.only(left: 40.w, right: 40.w,),
+             child: const Divider(
+               thickness: 1.5,
+               color: Color(0xffE9E9E9),
+              ),
+           ),
+            tutionRequestInnerWidget(),
+             Container(
+                   margin: EdgeInsets.only(left: 40.w, right: 40.w,),
+             child: const Divider(
+               thickness:1.5,
+               color: Color(0xffE9E9E9),
+              ),
+           ),
+            tutionRequestInnerWidget(),
+             Container(
+                   margin: EdgeInsets.only(left: 40.w, right: 40.w,),
+             child: const Divider(
+               thickness:1.5,
+               color: Color(0xffE9E9E9),
+              ),
+           ),
+            tutionRequestInnerWidget(),
+             Container(
+                   margin: EdgeInsets.only(left: 40.w, right: 40.w,),
+             child: const Divider(
+               thickness:1.5,
+               color: Color(0xffE9E9E9),
+              ),
+           ),
+            tutionRequestInnerWidget(),
+             Container(
+                   margin: EdgeInsets.only(left: 40.w, right: 40.w,),
+             child: const Divider(
+               thickness: 1.5,
+               color: Color(0xffE9E9E9),
+              ),
+           ),
+            tutionRequestInnerWidget(),
+            // SizedBox(
+            //   height: 20.h,
+            // ),
+            // upcomingsessionData(),
+            // SizedBox(
+            //   height: 20.h,
+            // ),
+            // upcomingsessionData(),
+            // SizedBox(
+            //   height: 20.h,
+            // ),
+            // upcomingsessionData(),
+          ],
         ),
       ),
     );
@@ -231,14 +462,18 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              alignment: Alignment.centerLeft,
-              width: 300.w,
-              decoration: BoxDecoration(
-                  color: Colors.white, borderRadius: BorderRadius.circular(21)),
-              child: const Align(
-                alignment: Alignment.center,
-                child: Text(
+            Row(
+              children: [
+                Container(
+                  height: AppSizes.dynamicHeight(context, 0.06),
+                  width: AppSizes.dynamicWidth(context, 0.05),
+                  decoration: const BoxDecoration(
+                      image: DecorationImage(
+                    image: AssetImage('assets/png/trophy.png'),
+                    fit: BoxFit.contain,
+                  )),
+                ),
+                const Text(
                   'Tutions Completed',
                   style: TextStyle(
                     color: Colors.black,
@@ -246,8 +481,19 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-              ),
+              ],
             ),
+            tutionInerWidget(),
+            tutionInerWidget(),
+            tutionInerWidget(),
+            tutionInerWidget(),
+            tutionInerWidget(),
+            tutionInerWidget(),
+            tutionInerWidget(),
+            tutionInerWidget(),
+            tutionInerWidget(),
+            tutionInerWidget(),
+            tutionInerWidget(),
           ],
         ),
       ),
@@ -484,6 +730,7 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
   Widget cardWidget(
     image,
     title,
+    title1,
     textcolor,
     bgColor,
   ) {
@@ -539,7 +786,7 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                     child: Align(
                       alignment: Alignment.centerRight,
                       child: Text(
-                        '03',
+                        title1,
                         style: TextStyle(
                           color: Color(textcolor),
                           fontSize: 18,

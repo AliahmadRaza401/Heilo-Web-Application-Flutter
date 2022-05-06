@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/utils/config.dart';
+import 'package:heilo/widgets/buttons.dart';
+import 'package:heilo/widgets/text_widget.dart';
 
 class TeacherEditProfileWeb extends StatefulWidget {
   const TeacherEditProfileWeb({Key? key}) : super(key: key);
@@ -27,45 +29,36 @@ class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
       body: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Container(
-            width: 526.w,
-            height: 740.h,
-            decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.circular(30.r),
-            ),
-            margin: EdgeInsets.only(left: 150.w),
-            // padding: EdgeInsets.symmetric(
-            //   vertical: 16.h,
-            //   horizontal: 25.w,
-            // ),
-            child: Stack(
-              alignment: Alignment.center,
-              children: <Widget>[
-                // background image and bottom contents
-                Column(
-                  children: <Widget>[
-                    Container(
-                      height: 0.0,
-                    ),
-                    Positioned(
-                      top:
-                          150.0, // (background container size) - (circle height / 2)
-                      child: CircleAvatar(
-                        radius: 80.r,
-                        backgroundImage: const AssetImage(
-                          "assets/png/wp2398385 1.png",
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
+          SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 110.h,
+                ),
+                Container(
+                  alignment: Alignment.center,
+                  width: 526.w,
+                  // height: 780.h,
+                  decoration: BoxDecoration(
+                    // color: Colors.amber,
+                    borderRadius: BorderRadius.circular(30.r),
+                  ),
+                  padding: EdgeInsets.only(
+                    left: 45.w,
+                    right: 45.w,
+                    // top: 50.h,
+                  ),
+                  child: Stack(
+                    overflow: Overflow.visible,
+                    children: [
+                      Container(
+                        // height: 710.h,
                         decoration: BoxDecoration(
-                          color: AppColors.customGrey,
-                          borderRadius: BorderRadius.circular(14),
+                          color: Color(0xffF1F1F1),
+                          borderRadius: BorderRadius.circular(30.r),
                         ),
                         padding: EdgeInsets.only(
-                          top: 20.h,
+                          top: 130.h,
                           left: 50.w,
                           right: 50.w,
                         ),
@@ -74,151 +67,332 @@ class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                              padding: EdgeInsets.all(6),
+                              padding: EdgeInsets.all(10.h),
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(62),
-                                border: Border.all(
-                                    width: 0.5, color: Color(0xffC4C4C4)),
-                              ),
-                              child: textWidget(
+                                  borderRadius: BorderRadius.circular(30.r),
+                                  border: Border.all(
+                                      width: 1, color: Color(0xffE0E0E0))),
+                              child: text(
+                                context,
                                 "Sakib Abdullah",
-                                FontWeight.w600,
-                                0xff747474,
-                                18,
+                                18.0.sp,
+                                AppColors.greyText,
+                                bold: true,
                               ),
                             ),
                             SizedBox(
                               height: 10.h,
                             ),
                             Container(
-                              padding: EdgeInsets.all(6),
+                              padding: EdgeInsets.all(10.h),
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(62),
-                                border: Border.all(
-                                    width: 0.5, color: Color(0xffC4C4C4)),
-                              ),
-                              child: textWidget(
+                                  borderRadius: BorderRadius.circular(30.r),
+                                  border: Border.all(
+                                      width: 1, color: Color(0xffE0E0E0))),
+                              child: text(
+                                context,
                                 "Maple Leaf International School and College",
-                                FontWeight.w300,
-                                0xff747474,
-                                14,
+                                14.0.sp,
+                                AppColors.greyText,
                               ),
                             ),
                             SizedBox(
-                              height: 70.h,
+                              height: 25.h,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Container(
-                                  width: 190.w,
-                                  padding: const EdgeInsets.only(
-                                    top: 5,
-                                    bottom: 5,
-                                  ),
+                                  // padding: EdgeInsets.all(10.h),
                                   decoration: BoxDecoration(
-                                      color: Color(0xff48A6F0),
-                                      borderRadius: BorderRadius.circular(20)),
+                                      borderRadius: BorderRadius.circular(30.r),
+                                      color: Color(0xffF5F5F5)),
+                                  height: 35.h,
+                                  width: 167.w,
                                   child: Align(
                                     alignment: Alignment.center,
-                                    child: textWidget(
-                                      "Tutions completed",
-                                      FontWeight.w600,
-                                      0xffffffff,
-                                      14,
+                                    child: text(
+                                      context,
+                                      "Hourly Rate",
+                                      14.0.sp,
+                                      Color(0xff747474),
+                                      bold: true,
+                                      // alignText: Alignment.center
                                     ),
                                   ),
                                 ),
                                 Container(
-                                  padding: const EdgeInsets.only(
-                                      top: 6, bottom: 6, left: 10, right: 10),
+                                  // padding: EdgeInsets.all(10.h),
                                   decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(22),
-                                    border: Border.all(
-                                      width: 0.5,
-                                      color: Color(0xffC4C4C4),
+                                      borderRadius: BorderRadius.circular(30.r),
+                                      border: Border.all(
+                                        color: Color(0xffF5F5F5),
+                                        width: 1.5
+                                      )),
+                                  height: 35.h,
+                                  width: 138.w,
+                                  child: Align(
+                                    alignment: Alignment.center,
+                                    child: text(
+                                      context,
+                                      "250 BDT",
+                                      14.0.sp,
+                                      Color(0xff747474),
+                                      bold: true,
+                                      // alignText: Alignment.center
                                     ),
-                                  ),
-                                  child: textWidget(
-                                    "150",
-                                    FontWeight.w600,
-                                    0xff7D7D7D,
-                                    14,
                                   ),
                                 ),
                               ],
+                            ),
+                            SizedBox(
+                              height: 35.h,
+                            ),
+                            
+                            Container(
+                              padding: EdgeInsets.all(10.h),
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(30.r),
+                                  border: Border.all(
+                                      width: 1, color: Color(0xffE0E0E0))),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Align(
+                                    alignment: Alignment.bottomLeft,
+                                    child: text(
+                                      context,
+                                      "About Me",
+                                      18.0.sp,
+                                      Color(0xff1BE59D),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 5.h,
+                                  ),
+                                  Align(
+                                    alignment: Alignment.bottomLeft,
+                                    child: text(
+                                        context,
+                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
+                                        14.0.sp,
+                                        AppColors.customBlack,
+                                        maxLines: 8),
+                                  ),
+                                ],
+                              ),
                             ),
                             SizedBox(
                               height: 10.h,
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  width: 190.w,
-                                  padding: const EdgeInsets.only(
-                                    top: 5,
-                                    bottom: 5,
-                                  ),
-                                  decoration: BoxDecoration(
-                                      color: Color(0xffA279E6),
-                                      borderRadius: BorderRadius.circular(20)),
-                                  child: Align(
-                                    alignment: Alignment.center,
-                                    child: textWidget(
-                                      "Tutors referred",
-                                      FontWeight.w600,
-                                      0xffffffff,
-                                      14,
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  padding: const EdgeInsets.only(
-                                      top: 6, bottom: 6, left: 10, right: 10),
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(22),
-                                    border: Border.all(
-                                      width: 0.5,
-                                      color: Color(0xffC4C4C4),
-                                    ),
-                                  ),
-                                  child: textWidget(
-                                    "150",
-                                    FontWeight.w600,
-                                    0xff7D7D7D,
-                                    14,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 60.h,
-                            ),
                             Container(
-                              padding: const EdgeInsets.only(
-                                  top: 6, bottom: 6, left: 10, right: 10),
+                              padding: EdgeInsets.all(10.h),
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(22),
-                                border: Border.all(
-                                  width: 0.5,
-                                  color: Color(0xffC4C4C4),
-                                ),
+                                  borderRadius: BorderRadius.circular(30.r),
+                                  border: Border.all(
+                                      width: 1, color: Color(0xffE0E0E0))),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  text(context, 'Subjects Willing to Teach',
+                                      18.sp, Color(0xff1BE59D)),
+                                  SizedBox(
+                                    height: 10.h,
+                                  ),
+                                  Wrap(
+                                    spacing: 10.h,
+                                    runSpacing: 10.h,
+                                    children: [
+                                      coloredButton(
+                                          context, 'math', Color(0xff1BE59D),
+                                          width: 137.w,
+                                          height: 35.h,
+                                          fontSize: 14.sp,
+                                          fontColor: Color(0xffffffff),
+                                          function: () {},
+                                          radious: 25.r),
+                                      coloredButton(
+                                          context, 'maths', Color(0xffF37171),
+                                          width: 156.w,
+                                          height: 35.h,
+                                          fontSize: 14.sp,
+                                          fontColor: Color(0xffffffff),
+                                          function: () {},
+                                          radious: 25.r),
+                                      coloredButton(
+                                          context, 'maths', Color(0xff2196F3),
+                                          width: 113.w,
+                                          height: 35.h,
+                                          fontSize: 14.sp,
+                                          fontColor: Color(0xffffffff),
+                                          function: () {},
+                                          radious: 25.r),
+                                      coloredButton(
+                                          context, 'maths', Color(0xffFEDB41),
+                                          width: 190.w,
+                                          height: 35.h,
+                                          fontSize: 14.sp,
+                                          fontColor: Color(0xffffffff),
+                                          function: () {},
+                                          radious: 25.r),
+                                      coloredButton(
+                                          context, 'maths', Color(0xff915DE7),
+                                          width: 213.w,
+                                          height: 35.h,
+                                          fontSize: 14.sp,
+                                          fontColor: Color(0xffffffff),
+                                          function: () {},
+                                          radious: 25.r),
+                                    ],
+                                  ),
+                                ],
                               ),
-                              child: textWidget(
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
-                                FontWeight.w300,
-                                0xff7000000,
-                                14,
-                              ),
-                            ),
+                            )
                           ],
                         ),
                       ),
-                    )
-                  ],
+                      Positioned(
+                          top: -50.0,
+                          right: 0,
+                          left: 0,
+                          // (background container size) - (circle height / 2)
+                          child: Center(
+                            child: Stack(
+                              overflow: Overflow.visible,
+                              children: [
+                                Container(
+                                  height: 170.h,
+                                  width: 183.w,
+                                  decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                        "assets/png/wp2398385 1.png",
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Positioned(
+                                  top: 0,
+                                  right: -15,
+                                  child: Container(
+                                    padding: EdgeInsets.symmetric(
+                                      horizontal: 10,
+                                      vertical: 3,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      color: Color(0xffC4C4C4).withOpacity(0.5),
+                                      borderRadius: BorderRadius.circular(50),
+                                    ),
+                                    child: Row(
+                                      children: [
+                                        Image.asset('assets/png/star.png'),
+                                        text(
+                                          context,
+                                          "4.5",
+                                          15.sp,
+                                          Colors.black,
+                                          bold: true,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+
+                            //
+                          )),
+                    ],
+                  ),
                 ),
-                // Profile image
+                SizedBox(
+                  height: 25.h,
+                ),
+                Container(
+                  // alignment: Alignment.center,
+                  width: 400.w,
+                  height: 200.h,
+                  decoration: BoxDecoration(
+                    color: Color(0xffF8F8F8),
+                    borderRadius: BorderRadius.circular(30.r),
+                  ),
+                  margin: EdgeInsets.only(
+                    left: 45.w,
+                    right: 45.w,
+                    // top: 50.h,
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            width: 160.w,
+                            height: 35.h,
+                            margin: EdgeInsets.only(
+                              top: 21.h,
+                              left: 25.w,
+                            ),
+                            decoration: BoxDecoration(
+                                color: Color(0xff3DDEA5),
+                                borderRadius: BorderRadius.circular(20)),
+                            child: Align(
+                              alignment: Alignment.center,
+                              child: text(context, "Availability", 18.0.sp,
+                                  AppColors.customWhite,
+                                  bold: false),
+                            ),
+                          ),
+                          Container(
+                            width: 93.9.w,
+                            height: 35.h,
+                            margin: EdgeInsets.only(
+                              top: 21.h,
+                              right: 25.w,
+                            ),
+                            decoration: BoxDecoration(
+                                color: Color(0xffC4C4C4),
+                                borderRadius: BorderRadius.circular(20)),
+                            child: Align(
+                              alignment: Alignment.center,
+                              child: text(context, "Edit", 18.0.sp,
+                                  Color(0xff1BE59D),
+                                  bold: false),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10.h,
+                      ),
+                      Container(
+                        width: 132.w,
+                        height: 35.h,
+                        margin: EdgeInsets.only(
+                          top: 15.h,
+                          left: 45.w,
+                        ),
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Color(0xff3DDEA5),
+                            width: 2,
+                          ),
+                          borderRadius: BorderRadius.circular(4.r),
+                        ),
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: text(
+                              context, 'Pre 12pm ', 18.r, Color(0xff000000)),
+                        ),
+                      ),
+                    ],
+                  ),
+                )
               ],
             ),
           ),
@@ -910,29 +1084,27 @@ class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-            
               Column(
                 children: [
-                   Row(
-                children: [
-                  Container(
-                    
-                    child: textWidget(
-                      "Student ID",
-                      FontWeight.w300,
-                      0xff7d7d7d,
-                      12,
-                    ),
+                  Row(
+                    children: [
+                      Container(
+                        child: textWidget(
+                          "Student ID",
+                          FontWeight.w300,
+                          0xff7d7d7d,
+                          12,
+                        ),
+                      ),
+                      const Icon(
+                        Icons.schema_rounded,
+                        color: Color(
+                          0xff3DDEA5,
+                        ),
+                        size: 30,
+                      )
+                    ],
                   ),
-                  const Icon(
-                    Icons.schema_rounded,
-                    color: Color(
-                      0xff3DDEA5,
-                    ),
-                    size: 30,
-                  )
-                ],
-              ),
                   Container(
                     padding: EdgeInsets.all(6),
                     decoration: BoxDecoration(
