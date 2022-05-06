@@ -29,7 +29,7 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
           padding: EdgeInsets.only(
             left: 84.w,
             right: 84.w,
-            top: 20.h,
+            top: 0.h,
             // bottom: 20.h,
           ),
           decoration: BoxDecoration(
@@ -40,6 +40,30 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const Icon(
+                    Icons.notifications,
+                    color: AppColors.greenDark,
+                  ),
+                  AppSizes.widthBox(context, .01),
+                  CircleAvatar(
+                    radius: 32.r,
+                    backgroundColor: AppColors.green,
+                    child: CircleAvatar(
+                      radius: 28.r,
+                      backgroundImage: const AssetImage(
+                        "assets/png/wp2398385 1.png",
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 10.h,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -293,7 +317,7 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
           text(
             context,
             'Ruhul Amin Tushar',
-            16,
+            16.sp,
             AppColors.greenDark,
             bold: true,
           ),
@@ -313,7 +337,7 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
                 text(
                   context,
                   'Topic- Mathematics',
-                  12,
+                  12.sp,
                   AppColors.bblackText,
                   bold: false,
                 ),
@@ -365,6 +389,9 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
                 ),
               ),
             ),
+            SizedBox(
+              height: 10.h,
+            ),
             Wrap(
               spacing: 50.w,
               runSpacing: 20.h,
@@ -374,6 +401,9 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
                 courseCard(context),
                 courseCard(context),
               ],
+            ),
+            SizedBox(
+              height: 10.h,
             ),
           ],
         ),
@@ -388,6 +418,14 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
       decoration: BoxDecoration(
         color: AppColors.lightgreyborder,
         borderRadius: BorderRadius.circular(30.r),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 1,
+            blurRadius: 5,
+            offset: Offset(0, 0), // changes position of shadow
+          ),
+        ],
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -419,7 +457,10 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
             ],
           ),
           Container(
-            padding: EdgeInsets.all(6.h),
+            padding: EdgeInsets.symmetric(
+              vertical: 6.h,
+              horizontal: 20.w,
+            ),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
                 color: Color(0xffFFFFFF)),
@@ -429,12 +470,15 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
                   width: 250.w,
                   // color: Colors.amber,
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Image.asset(
                         'assets/png/bookicon.png',
                         height: 30.w,
                         width: 30.h,
+                      ),
+                      SizedBox(
+                        width: 10.w,
                       ),
                       text(context, "Chapter-1 : Speed", 16.sp, Colors.black),
                     ],
@@ -657,12 +701,12 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
                   children: [
                     Row(
                       children: [
-                        const Text(
+                        Text(
                           'Ruhul Tusar',
                           style: TextStyle(
                             color: Color(0xff444F55),
                             fontWeight: FontWeight.w400,
-                            fontSize: 18.0,
+                            fontSize: 18.sp,
                           ),
                         ),
                         SizedBox(
@@ -694,13 +738,13 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
                       ],
                     ),
                     Row(
-                      children: const [
+                      children: [
                         Text(
                           'Topic- ',
                           style: TextStyle(
                             color: Color(0xff444F55),
                             fontWeight: FontWeight.w600,
-                            fontSize: 18.0,
+                            fontSize: 18.sp,
                           ),
                         ),
                         Text(
@@ -713,12 +757,12 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
                         ),
                       ],
                     ),
-                    const Text(
+                    Text(
                       'Time- 4:30-5.30 pm',
                       style: TextStyle(
                         color: Color(0xff1BE59D),
                         fontWeight: FontWeight.w600,
-                        fontSize: 18.0,
+                        fontSize: 18.sp,
                       ),
                     ),
                   ],

@@ -25,14 +25,14 @@ class _TeacherWalletState extends State<TeacherWallet> {
       padding: EdgeInsets.symmetric(
           horizontal: AppSizes.dynamicWidth(context, .03),
           vertical: AppSizes.dynamicHeight(context, .02)),
-          
       child: Row(
         children: [
           Expanded(
               flex: 5,
               child: Container(
                 height: double.infinity,
-                padding: EdgeInsets.only(top: AppSizes.dynamicHeight(context, .05)),
+                padding:
+                    EdgeInsets.only(top: AppSizes.dynamicHeight(context, .05)),
                 // color: AppColors.customYellow,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,7 +41,8 @@ class _TeacherWalletState extends State<TeacherWallet> {
                       height: 232.h,
                       width: 424.w,
                       decoration: BoxDecoration(
-                        image: DecorationImage(image: AssetImage('assets/png/card2.png')),
+                          image: DecorationImage(
+                              image: AssetImage('assets/png/card2.png')),
                           color: AppColors.navyBlue,
                           borderRadius: BorderRadius.circular(30.w)),
                       padding: EdgeInsets.symmetric(
@@ -82,7 +83,7 @@ class _TeacherWalletState extends State<TeacherWallet> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top:15),
+                      padding: const EdgeInsets.only(top: 15),
                       child: text(
                           context,
                           'Transaction History',
@@ -107,8 +108,8 @@ class _TeacherWalletState extends State<TeacherWallet> {
                               children: [
                                 Padding(
                                   padding: EdgeInsets.only(
-                                      top: AppSizes.dynamicHeight(
-                                          context, .01)),
+                                      top:
+                                          AppSizes.dynamicHeight(context, .01)),
                                   child: headingRow(AppColors.lightGrey),
                                 ),
                                 Expanded(
@@ -118,8 +119,8 @@ class _TeacherWalletState extends State<TeacherWallet> {
                                       borderRadius:
                                           BorderRadius.circular(30.r)),
                                   padding: EdgeInsets.symmetric(
-                                      horizontal: AppSizes.dynamicWidth(
-                                          context, .01)),
+                                      horizontal:
+                                          AppSizes.dynamicWidth(context, .01)),
                                   child: ListView.builder(
                                       itemCount: 10,
                                       itemBuilder: ((context, index) {
@@ -150,21 +151,25 @@ class _TeacherWalletState extends State<TeacherWallet> {
                 child: Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(bottom:8.0),
+                      padding: const EdgeInsets.only(bottom: 8.0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                        Icon(Icons.notification_important_sharp,color: AppColors.green,),
-                         CircleAvatar(
-                                  backgroundColor: AppColors.green,
-                                  radius: AppSizes.dynamicHeight(context, .03),
-                                  child: CircleAvatar(
-                                    radius: AppSizes.dynamicHeight(context, .028),
-                                    backgroundImage:
-                                        AssetImage('assets/png/charles.png'),
-                                  ),
-                                ),
-                      ],),
+                          Icon(
+                            Icons.notification_important_sharp,
+                            color: AppColors.green,
+                          ),
+                          CircleAvatar(
+                            backgroundColor: AppColors.green,
+                            radius: AppSizes.dynamicHeight(context, .03),
+                            child: CircleAvatar(
+                              radius: AppSizes.dynamicHeight(context, .028),
+                              backgroundImage:
+                                  AssetImage('assets/png/charles.png'),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                     Expanded(
                         child: Container(
@@ -185,7 +190,7 @@ class _TeacherWalletState extends State<TeacherWallet> {
                                 simpleContainer('00.00'),
                                 amoutEnter('Total Balance'),
                                 amoutEnter('Amount to\nbewithdrawn'),
-                                amoutEnter('Remaining balance'),
+                                amoutEnter('Remaining \n Balance'),
                                 amoutEnter('Transfer to '),
                                 amoutEnter('Account number'),
                                 Row(
@@ -241,10 +246,9 @@ class _TeacherWalletState extends State<TeacherWallet> {
         borderRadius: BorderRadius.circular(15.r),
         // border: Border.all(color: AppColors.darkGrey, width: 2.w)
       ),
-      padding:
-          EdgeInsets.symmetric(horizontal: AppSizes.dynamicWidth(context, .01),
-          vertical: AppSizes.dynamicHeight(context, .05)
-          ),
+      padding: EdgeInsets.symmetric(
+          horizontal: AppSizes.dynamicWidth(context, .01),
+          vertical: AppSizes.dynamicHeight(context, .05)),
       child: Center(
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.end,
@@ -265,7 +269,10 @@ class _TeacherWalletState extends State<TeacherWallet> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 8.0),
-                  child: text(context, amount, AppSizes.dynamicWidth(context, .012),
+                  child: text(
+                      context,
+                      amount,
+                      AppSizes.dynamicWidth(context, .012),
                       AppColors.customWhite,
                       alignText: TextAlign.center),
                 ),
