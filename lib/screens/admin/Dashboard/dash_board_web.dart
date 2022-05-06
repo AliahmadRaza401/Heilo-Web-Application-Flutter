@@ -171,14 +171,14 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      height: 400,
+      height: size.height *.5,
       width: size.width * .63,
       child: Stack(
         children: [
           Positioned(
             bottom: 0,
             child: Container(
-                height: size.height * .545,
+                height: size.height * .475,
                 width: size.width * .63,
                 decoration: BoxDecoration(
                     color: AppColors.lightGrey,

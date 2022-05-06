@@ -20,10 +20,11 @@ class AppColors {
   static const customSkimColor = Colors.white60;
   static const customGrey = Color(0xffe4e8ec);
   static const customBlack = Color(0xff000000);
-  static const customPurple = Color(0xff6A55DF);
+  static const customPurple = Color(0xffC1126B);
   static const customPink = Color(0xffFF4D65);
   static const customYellow = Color(0xffFDD638);
   static const lightGrey = Color(0xffEBEBEB);
+  static const greyBorder = Color(0xffE4E4E4);
   static const darkGrey = Color(0xff8A8A8A);
    static const borderColor = Color(0xffC4C4C4);
 

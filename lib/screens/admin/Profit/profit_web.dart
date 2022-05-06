@@ -173,9 +173,9 @@ class _ProfitWebState extends State<ProfitWeb> {
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
                                       simpleContainer('00.00'),
-                                      amoutEnter('Total Balance'),
-                                      amoutEnter('Amount to\nbewithdrawn'),
-                                      amoutEnter('Remaining balance'),
+                                      amoutEnter('Total Balance',AppColors.bblackText),
+                                      amoutEnter('Amount to\nbewithdrawn',AppColors.greyText),
+                                      amoutEnter('Remaining balance',AppColors.greyText),
                                     ],
                                   ),
                                 ),
@@ -517,7 +517,7 @@ class _ProfitWebState extends State<ProfitWeb> {
     );
   }
 
-  Widget amoutEnter(String title) {
+  Widget amoutEnter(String title,Color textColor) {
     return Padding(
       padding:
           EdgeInsets.symmetric(horizontal: AppSizes.dynamicWidth(context, .03)),
@@ -526,7 +526,7 @@ class _ProfitWebState extends State<ProfitWeb> {
         children: [
           text(
             context, title, AppSizes.dynamicWidth(context, .01),
-            AppColors.greyText,
+            textColor,
             // alignText: TextAlign.center
           ),
           Container(
