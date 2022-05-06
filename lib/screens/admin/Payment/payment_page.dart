@@ -47,19 +47,22 @@ class _PaymentPageState extends State<PaymentPage> {
                                       AppSizes.dynamicWidth(context, .015),
                                       AppColors.green),
                                   Expanded(
-                                      child: ListView.builder(
-                                          itemCount: 5,
-                                          itemBuilder: ((context, index) {
-                                            return paymentsRow(
-                                                'assets/png/charles.png',
-                                                'Ruhul Amin Tusar',
-                                                '11/08/2021 12:30 pm',
-                                                'Bkash',
-                                                '01824696900',
-                                                '500',
-                                                '510',
-                                                'Pending');
-                                          })))
+                                      child: Padding(
+                                        padding: EdgeInsets.only(bottom: AppSizes.dynamicHeight(context, .01)),
+                                        child: ListView.builder(
+                                            itemCount: 5,
+                                            itemBuilder: ((context, index) {
+                                              return paymentsRow(
+                                                  'assets/png/charles.png',
+                                                  'Ruhul Amin Tusar',
+                                                  '11/08/2021 12:30 pm',
+                                                  'Bkash',
+                                                  '01824696900',
+                                                  '500',
+                                                  '510',
+                                                  'Pending');
+                                            })),
+                                      ))
                                 ],
                               ),
                             ),
@@ -73,7 +76,7 @@ class _PaymentPageState extends State<PaymentPage> {
                               children: [
                                 Expanded(
                                   child: Padding(
-                                    padding: const EdgeInsets.only(right: 5),
+                                    padding:EdgeInsets.only(right: AppSizes.dynamicWidth(context, .01)),
                                     child: SizedBox(
                                       height: double.infinity,
                                       // color: Colors.amber,
@@ -82,8 +85,9 @@ class _PaymentPageState extends State<PaymentPage> {
                                           Align(
                                             alignment: Alignment.bottomCenter,
                                             child: Container(
+                                               
                                               height: AppSizes.dynamicHeight(
-                                                  context, .46),
+                                                  context, .42),
                                               width: double.infinity,
                                               padding: EdgeInsets.all(10),
                                               decoration: BoxDecoration(
@@ -118,15 +122,20 @@ class _PaymentPageState extends State<PaymentPage> {
                                               ),
                                             ),
                                           ),
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              paymentStatus(
-                                                  'TK. 50,000',
-                                                  'Total Paid',
-                                                  AppColors.customWhite),
-                                            ],
+                                          Positioned(
+                                            top: AppSizes.dynamicHeight(context, .035),
+                                            left: 0,
+                                            right: 0,
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                paymentStatus(
+                                                    'TK. 50,000',
+                                                    'Total Paid',
+                                                    AppColors.customWhite),
+                                              ],
+                                            ),
                                           )
                                         ],
                                       ),
@@ -134,8 +143,9 @@ class _PaymentPageState extends State<PaymentPage> {
                                   ),
                                 ),
                                 Expanded(
+                                  
                                   child: Padding(
-                                    padding: const EdgeInsets.only(left: 5),
+                                    padding:EdgeInsets.only(left: AppSizes.dynamicWidth(context, .01)),
                                     child: SizedBox(
                                       height: double.infinity,
                                       // color: Colors.amber,
@@ -145,7 +155,7 @@ class _PaymentPageState extends State<PaymentPage> {
                                             alignment: Alignment.bottomCenter,
                                             child: Container(
                                               height: AppSizes.dynamicHeight(
-                                                  context, .46),
+                                                  context, .42),
                                               width: double.infinity,
                                               padding: EdgeInsets.all(10),
                                               decoration: BoxDecoration(
@@ -181,15 +191,20 @@ class _PaymentPageState extends State<PaymentPage> {
                                               ),
                                             ),
                                           ),
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              paymentStatus(
-                                                  'TK. 50,000',
-                                                  'Total Due',
-                                                  AppColors.customWhite),
-                                            ],
+                                          Positioned(
+                                             top: AppSizes.dynamicHeight(context, .035),
+                                            left: 0,
+                                            right: 0,
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                paymentStatus(
+                                                    'TK. 50,000',
+                                                    'Total Due',
+                                                    AppColors.customWhite),
+                                              ],
+                                            ),
                                           )
                                         ],
                                       ),

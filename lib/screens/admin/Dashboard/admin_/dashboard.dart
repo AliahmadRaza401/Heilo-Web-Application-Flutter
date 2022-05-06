@@ -25,7 +25,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
         ),
         padding: EdgeInsets.only(
           top: MediaQuery.of(context).size.height * .03,
-          bottom: MediaQuery.of(context).size.height * .02,
+          bottom: MediaQuery.of(context).size.height * .05,
           left: MediaQuery.of(context).size.width * .02,
         ),
         child: Column(
@@ -38,20 +38,20 @@ class _AdminDashboardState extends State<AdminDashboard> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      text(context, 'NUMBER OF STUDENTS', 30, Color(0xffC4C4C4),
+                      text(context, 'NUMBER OF STUDENTS', 36.sp, Color(0xffC4C4C4),
                           bold: FontWeight.bold),
                       Text( '2511',style:TextStyle(
                         fontFamily: 'Poppins',
                         color: Color(0xff7D7C7C),
-                        fontSize: 30,
+                        fontSize: 72.sp,
                         fontWeight: FontWeight.bold
                       ), ),//0xffC4C4C4
-                      text(context, 'NUMBER OF TEACHERS', 30, Color(0xffC4C4C4),
+                      text(context, 'NUMBER OF TEACHERS', 36.sp, Color(0xffC4C4C4),
                           bold: FontWeight.bold),
                        Text( '2511',style:TextStyle(
                         fontFamily: 'Poppins',
                         color: Color(0xff01B489),
-                        fontSize: 30,
+                        fontSize: 72.sp,
                         fontWeight: FontWeight.bold
                       ), ),//
                     ],
@@ -70,9 +70,10 @@ class _AdminDashboardState extends State<AdminDashboard> {
                           radius: 60.0,
                           lineWidth: 10,
                           percent: 0.2,
-                          center: Text("20%"),
+                          center: Text("20%",style: TextStyle(fontSize: 48.sp),),
                           progressColor: AppColors.blue,
                           circularStrokeCap: CircularStrokeCap.round,
+                          
                           footer: text(
                               context,
                               'GROWTH',
@@ -83,12 +84,13 @@ class _AdminDashboardState extends State<AdminDashboard> {
                           radius: 60.0,
                           lineWidth: 10,
                           percent: 0.5,
-                          center: Text("50%"),
+                          center: Text("50%",style: TextStyle(fontSize: 48.sp),),
                           progressColor: AppColors.green,
                           footer: text(
                               context,
                               'CONVERSION',
-                              MediaQuery.of(context).size.width * .013,
+                              24.sp,
+                              // MediaQuery.of(context).size.width * .013,
                               AppColors.greyText),
                         )
                       ],
@@ -116,9 +118,9 @@ class _AdminDashboardState extends State<AdminDashboard> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              text(context, 'ACTIVITY SCALE ', 18,
+                              text(context, 'ACTIVITY SCALE ', 24.sp,
                                   AppColors.greyText),
-                              text(context, 'in hours', 16, AppColors.greyText),
+                              text(context, 'in hours', 24.sp, AppColors.greyText),
                             ],
                           ),
                         ),
@@ -137,11 +139,12 @@ class _AdminDashboardState extends State<AdminDashboard> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                text(context, 'Last 7 Days', 12,
+                                text(context, 'Last 7 Days', 14.sp,
                                     AppColors.greyText),
                                 Icon(
                                   Icons.keyboard_arrow_down,
                                   size: 20,
+                                  color: AppColors.green,
                                 ),
                               ],
                             ),
@@ -175,7 +178,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
           Positioned(
             bottom: 0,
             child: Container(
-                height: size.height * .58,
+                height: size.height * .545,
                 width: size.width * .63,
                 decoration: BoxDecoration(
                     color: AppColors.lightGrey,
@@ -200,7 +203,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
                     topRight: Radius.circular(100),
                     bottomRight: Radius.circular(100))),
             child: Center(
-              child: text(context, 'Upcoming Sessions', 15, AppColors.greyText),
+              child: text(context, 'Upcoming Sessions', 18.sp, AppColors.greyText),
             ),
           ),
           Positioned(
@@ -246,7 +249,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
             Positioned(
               bottom: 0,
               child: Container(
-                  height: size.height * .58,
+                  height: size.height * .54,
                   width: size.width * .28,
                   decoration: BoxDecoration(
                       color: AppColors.lightGrey,
@@ -314,7 +317,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
                       bottomRight: Radius.circular(100))),
               child: Center(
                 child: richTextWidget(context, 'Total Classes', ' Completed',
-                    14, 14, null, AppColors.greyText, AppColors.green, false),
+                    18.sp, 18.sp, null, AppColors.greyText, AppColors.green, false),
               ),
             ),
             Positioned(

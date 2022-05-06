@@ -6,12 +6,12 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/screens/admin/AdminContact/admin_contact.dart';
 import 'package:heilo/screens/admin/Dashboard/admin_/dashboard.dart';
+import 'package:heilo/screens/admin/Mobile/dash_board_mobile.dart';
+import 'package:heilo/screens/admin/Mobile/quiz_report_mobile.dart';
 import 'package:heilo/screens/admin/Payment/payment_page.dart';
 import 'package:heilo/screens/admin/Profile/profile.dart';
 import 'package:heilo/screens/admin/Profit/profit.dart';
 import 'package:heilo/screens/admin/QuizReport/quiz_report.dart';
-import 'package:heilo/screens/teacher/TeacherWallet/teacher_wallet.dart';
-
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
@@ -161,13 +161,14 @@ class _AdminSideMenuState extends State<AdminSideMenu> {
               child: PageView(
                 controller: page,
                 children: [
-                  AdminDashboard(),
-                  QuizReports(),
+                  AdminDashboardMobile(),
+                  QuizReportMobile(),
+                //  AdminDashboard(),
+                  // QuizReports(),
                   PaymentPage(),
                   Profile(),
                  Profit(),
-                //  TeacherWallet()
-                 AdminContact()
+                 AdminContact()                 
                 ],
               ),
             ),
