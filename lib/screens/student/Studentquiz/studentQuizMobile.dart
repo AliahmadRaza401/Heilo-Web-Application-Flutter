@@ -200,7 +200,7 @@ class _StudentQuizMobileState extends State<StudentQuizMobile> {
                   Image.asset('assets/png/bookicon.png',
                       fit: BoxFit.cover,
                       height: AppSizes.dynamicHeight(context, 0.04),
-                      width: AppSizes.dynamicWidth(context, 0.1)),
+                      width: AppSizes.dynamicWidth(context, 0.07)),
                   text(context, "Chapter-1 : Speed", 65.sp, Colors.black),
                 ],
               ),

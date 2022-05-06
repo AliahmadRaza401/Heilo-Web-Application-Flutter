@@ -7,6 +7,7 @@ import 'package:heilo/screens/student/studentInbox/studentInboxMobile.dart';
 import 'package:heilo/screens/student/student_profile/studentprofile_mobile.dart';
 
 import '../Main_SideMenu/student_sidemenu_mobile.dart';
+
 class StudentDrawer extends StatelessWidget {
   const StudentDrawer({Key? key}) : super(key: key);
 
@@ -35,12 +36,11 @@ class StudentDrawer extends StatelessWidget {
               ),
             ),
             onTap: () {
-  //             if (studentScafoldKey.currentState.isDrawerOpen) {
-  // studentScafoldKey.currentState.openEndDrawer();
+              //             if (studentScafoldKey.currentState.isDrawerOpen) {
+              // studentScafoldKey.currentState.openEndDrawer();
 // }
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => OnDemandMobile()));
-                 
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => StudentSideMenuMobile()));
             },
           ),
           ListTile(
@@ -81,7 +81,7 @@ class StudentDrawer extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => DashBoardMobile()));
             },
           ),
-           ListTile(
+          ListTile(
             leading: const ImageIcon(
               AssetImage(
                 'assets/png/profile.png',
@@ -96,11 +96,11 @@ class StudentDrawer extends StatelessWidget {
               ),
             ),
             onTap: () {
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => StudentProfileMobile()));
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => StudentProfileMobile()));
             },
           ),
-           ListTile(
+          ListTile(
             leading: const ImageIcon(
               AssetImage(
                 'assets/png/editProfile.png',
@@ -119,7 +119,7 @@ class StudentDrawer extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => EditProfileMobile()));
             },
           ),
-            ListTile(
+          ListTile(
             leading: const ImageIcon(
               AssetImage(
                 'assets/png/inbox.png',
@@ -134,8 +134,8 @@ class StudentDrawer extends StatelessWidget {
               ),
             ),
             onTap: () {
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => StudentInboxMobile()));
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => StudentInboxMobile()));
             },
           ),
         ],

@@ -252,12 +252,6 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
         color: Color(0xffF1F1F1),
         borderRadius: BorderRadius.circular(30.r),
       ),
-      // padding: EdgeInsets.only(
-      //   left: 60.w,
-      //   right: 60.w,
-      //   top: 20.h,
-      //   bottom: 20.h,
-      // ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,

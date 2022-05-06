@@ -323,7 +323,7 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
                 text(
                   context,
                   '11-03-2022 (4pm- 6:30 pm)',
-                  12,
+                  18.sp,
                   AppColors.bblackText,
                   bold: false,
                 ),
