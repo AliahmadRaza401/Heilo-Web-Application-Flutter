@@ -109,7 +109,7 @@ class _AdminContactWebState extends State<AdminContactWeb> {
                                       context,
                                       'All Messages ( 41)',
                                       AppSizes.dynamicWidth(context, .009),
-                                      AppColors.greyText),
+                                      AppColors.bblackText),
                                 ],
                               ),
                               Expanded(
@@ -300,7 +300,7 @@ class _AdminContactWebState extends State<AdminContactWeb> {
                                       context,
                                       'All Messages ( 41)',
                                       AppSizes.dynamicWidth(context, .009),
-                                      AppColors.greyText),
+                                      AppColors.bblackText),
                                 ],
                               ),
                               Expanded(
@@ -475,12 +475,12 @@ class _AdminContactWebState extends State<AdminContactWeb> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                text(context, message, AppSizes.dynamicWidth(context, .009),
+                text(context, message, 14.sp,
                     AppColors.greyText),
                 Padding(
                   padding: const EdgeInsets.only(top: 2),
                   child: text(context, date,
-                      AppSizes.dynamicWidth(context, .009), AppColors.greyText),
+                      14.sp, AppColors.bblackText),
                 ),
               ],
             ),

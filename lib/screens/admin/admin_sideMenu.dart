@@ -168,8 +168,8 @@ class _AdminSideMenuState extends State<AdminSideMenu> {
                   AdminQuizReport(),
                   AdminPayment(),
                   AdminProfile(),
-                 AdminProfit(),
-                 AdminContact()                 
+                  AdminProfit(),
+                  AdminContact()
                 ],
               ),
             ),
