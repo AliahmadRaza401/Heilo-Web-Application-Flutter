@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:heilo/screens/admin/Dashboard/dash_board_mobile.dart';
+import 'package:heilo/screens/admin/admin_drawer.dart';
 import 'package:heilo/utils/config.dart';
 
 import '../../../utils/dynamic_sizes.dart';
@@ -17,289 +19,326 @@ class ProfileMobile extends StatefulWidget {
 class _ProfileMobileState extends State<ProfileMobile> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-        decoration: BoxDecoration(
-          color: AppColors.customWhite,
-          borderRadius: BorderRadius.circular(30.r),
+    return Scaffold(
+        key: adminScafoldKey,
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: const Icon(
+                Icons.menu,
+                color: Colors.black,
+                size: 30, // Changing Drawer Icon Size
+              ),
+              onPressed: () {
+                adminScafoldKey.currentState!.openDrawer();
+              },
+              tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+            );
+          },
         ),
-        child: Row(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Expanded(
-                flex: 5,
-                child: Container(
-                  padding: EdgeInsets.all(30),
-                  height: double.infinity,
-                  // color: AppColors.customYellow,
-                  child: Column(
-                    children: [
-                      Expanded(
-                        flex: 2,
-                        child: Container(
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                              color: AppColors.customWhite,
-                              border: Border.all(color: AppColors.green),
-                              borderRadius: BorderRadius.circular(30.r)),
-                          padding: EdgeInsets.symmetric(
-                              horizontal: AppSizes.dynamicWidth(context, .02)),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Column(
-                                children: [
-                                  Spacer(flex: 1,),
-                                  CircleAvatar(
-                                    backgroundColor: AppColors.green,
-                                    radius: AppSizes.dynamicHeight(context, .07),
-                                    child: CircleAvatar(
-                                      radius: AppSizes.dynamicHeight(context, .065),
-                                      backgroundImage:
-                                          AssetImage('assets/png/charles.png'),
-                                    ),
-
-                                  ),
-                                  Spacer(flex: 3),
-
-                                ],
-                              ),
-                              Spacer(
-                                flex: 1,
-                              ),
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Spacer(),
-                                  text(
-                                      context,
-                                      'Zarin Tajnim ',
-                                      AppSizes.dynamicWidth(context, .01),
-                                      AppColors.darkGrey,
-                                      bold: true),
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 2),
-                                    child: text(
-                                        context,
-                                        'Maple Leaf International School and College',
-                                        AppSizes.dynamicWidth(context, .008),
-                                        AppColors.greyText),
-                                  ),
-                                  Spacer(),
-                                  text(
-                                      context,
-                                      'Address',
-                                      AppSizes.dynamicWidth(context, .01),
-                                      AppColors.green),
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 2),
-                                    child: text(
-                                        context,
-                                        '274, sher-e-bangla road, Dhaka- 1209',
-                                        AppSizes.dynamicWidth(context, .009),
-                                        AppColors.greyText),
-                                  ),
-                                  Spacer(),
-                                  Row(
-                                    children: [
-                                      Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          text(
-                                              context,
-                                              'Gender',
-                                              AppSizes.dynamicWidth(
-                                                  context, .009),
-                                              AppColors.green),
-                                          Padding(
-                                            padding:
-                                                const EdgeInsets.only(top: 2),
-                                            child: text(
-                                                context,
-                                                'Femalr ',
-                                                AppSizes.dynamicWidth(
-                                                    context, .009),
-                                                AppColors.greyText),
-                                          ),
-                                        ],
+            CircleAvatar(
+              radius: 20,
+              backgroundColor: AppColors.primaryColor,
+              child: Image.asset(
+                'assets/png/wp2398385 1.png',
+                height: AppSizes.dynamicHeight(context, 0.07),
+                width: AppSizes.dynamicWidth(context, 0.07),
+              ),
+            ),
+          ],
+        ),
+      ),
+      drawer: AdminDrawer(),
+      body: Container(
+          decoration: BoxDecoration(
+            color: AppColors.customWhite,
+            borderRadius: BorderRadius.circular(30.r),
+          ),
+          child: Row(
+            children: [
+              Expanded(
+                  flex: 5,
+                  child: Container(
+                    padding: EdgeInsets.all(30),
+                    height: double.infinity,
+                    // color: AppColors.customYellow,
+                    child: Column(
+                      children: [
+                        Expanded(
+                          flex: 2,
+                          child: Container(
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                                color: AppColors.customWhite,
+                                border: Border.all(color: AppColors.green),
+                                borderRadius: BorderRadius.circular(30.r)),
+                            padding: EdgeInsets.symmetric(
+                                horizontal: AppSizes.dynamicWidth(context, .02)),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Column(
+                                  children: [
+                                    Spacer(flex: 1,),
+                                    CircleAvatar(
+                                      backgroundColor: AppColors.green,
+                                      radius: AppSizes.dynamicHeight(context, .07),
+                                      child: CircleAvatar(
+                                        radius: AppSizes.dynamicHeight(context, .065),
+                                        backgroundImage:
+                                            AssetImage('assets/png/charles.png'),
                                       ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(left: 2),
-                                        child: Column(
+    
+                                    ),
+                                    Spacer(flex: 3),
+    
+                                  ],
+                                ),
+                                Spacer(
+                                  flex: 1,
+                                ),
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Spacer(),
+                                    text(
+                                        context,
+                                        'Zarin Tajnim ',
+                                        AppSizes.dynamicWidth(context, .01),
+                                        AppColors.darkGrey,
+                                        bold: true),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 2),
+                                      child: text(
+                                          context,
+                                          'Maple Leaf International School and College',
+                                          AppSizes.dynamicWidth(context, .008),
+                                          AppColors.greyText),
+                                    ),
+                                    Spacer(),
+                                    text(
+                                        context,
+                                        'Address',
+                                        AppSizes.dynamicWidth(context, .01),
+                                        AppColors.green),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 2),
+                                      child: text(
+                                          context,
+                                          '274, sher-e-bangla road, Dhaka- 1209',
+                                          AppSizes.dynamicWidth(context, .009),
+                                          AppColors.greyText),
+                                    ),
+                                    Spacer(),
+                                    Row(
+                                      children: [
+                                        Column(
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
                                           children: [
                                             text(
                                                 context,
-                                                'Join Date',
+                                                'Gender',
                                                 AppSizes.dynamicWidth(
                                                     context, .009),
                                                 AppColors.green),
                                             Padding(
-                                              padding: const EdgeInsets.only(
-                                                  top: 8.0),
+                                              padding:
+                                                  const EdgeInsets.only(top: 2),
                                               child: text(
                                                   context,
-                                                  '11/09/2020',
+                                                  'Femalr ',
                                                   AppSizes.dynamicWidth(
                                                       context, .009),
                                                   AppColors.greyText),
                                             ),
                                           ],
                                         ),
-                                      )
-                                    ],
-                                  ),
-                                  Spacer(),
-                                ],
-                              ),
-                              Spacer(
-                                flex: 9,
-                              ),
-                              Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  smallContainer(
-                                      'Email', 'sakib.abdullah@gmail.com'),
-                                  smallContainer(
-                                      'Contact Number', '01765646564'),
-                                  smallContainer('Medium', 'English Medium'),
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 2,
-                        child: Container(
-                          width: double.infinity,
-                          padding: EdgeInsets.symmetric(
-                            horizontal: AppSizes.dynamicWidth(context, .018),
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  text(
-                                      context,
-                                      'TUITION AVAIL',
-                                      30.sp,
-                                      // AppSizes.dynamicWidth(context, .015),
-                                      AppColors.green),
-                                  boldPopinText(
-                                      '41',
-                                      65.sp,
-
-                                      // AppSizes.dynamicWidth(context, .018),
-                                      AppColors.darkGrey)
-                                ],
-                              ),
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  text(
-                                      context,
-                                      'QUIZ APPEARED ',
-                                      30.sp,
-
-                                      // AppSizes.dynamicWidth(context, .015),
-                                      AppColors.green),
-                                  boldPopinText(
-                                      '25',
-                                      65.sp,
-
-                                      // AppSizes.dynamicWidth(context, .018),
-                                      AppColors.darkGrey)
-                                ],
-                              ),
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  text(
-                                      context,
-                                      'TOTAL MONEY SPEND ',
-                                      31.sp,
-
-                                      // AppSizes.dynamicWidth(context, .015),
-                                      AppColors.darkGrey),
-                                  boldPopinText(
-                                      'TK. 2511',
-                                      65.sp,
-                                      // AppSizes.dynamicWidth(context, .018),
-                                      AppColors.green)
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 4,
-                        child: upCommingSessions()
-                      ),
-                    ],
-                  ),
-                )),
-            Expanded(
-                flex: 2,
-                child: Container(
-                  padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-                  height: double.infinity,
-                  decoration: BoxDecoration(
-                      color: AppColors.lightGrey,
-                      borderRadius:
-                          BorderRadius.only(topLeft: Radius.circular(30.r))),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 15),
-                        child: Container(
-                          height: 60.h,
-                          width: 407.w,
-                          decoration: BoxDecoration(
-                              // border: Border.all(color: AppColors.green),
-                              color: AppColors.customWhite,
-                              borderRadius: BorderRadius.circular(100)),
-                          padding: EdgeInsets.symmetric(horizontal: 10),
-                          child: Align(
-                            alignment: Alignment.centerRight,
-                            child: TextField(
-                              cursorColor: AppColors.green,
-                              decoration: InputDecoration(
-                                  border: InputBorder.none,
-                                  suffixIcon: Icon(
-                                    Icons.search,
-                                    color: AppColors.greyText,
-                                  ),
-                                  contentPadding:
-                                      EdgeInsets.only(top: 5, left: 10)),
+                                        Padding(
+                                          padding: const EdgeInsets.only(left: 2),
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              text(
+                                                  context,
+                                                  'Join Date',
+                                                  AppSizes.dynamicWidth(
+                                                      context, .009),
+                                                  AppColors.green),
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top: 8.0),
+                                                child: text(
+                                                    context,
+                                                    '11/09/2020',
+                                                    AppSizes.dynamicWidth(
+                                                        context, .009),
+                                                    AppColors.greyText),
+                                              ),
+                                            ],
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    Spacer(),
+                                  ],
+                                ),
+                                Spacer(
+                                  flex: 9,
+                                ),
+                                Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    smallContainer(
+                                        'Email', 'sakib.abdullah@gmail.com'),
+                                    smallContainer(
+                                        'Contact Number', '01765646564'),
+                                    smallContainer('Medium', 'English Medium'),
+                                  ],
+                                )
+                              ],
                             ),
                           ),
                         ),
-                      ),
-                      Expanded(
-                          child: ListView.builder(
-                              itemCount: 15,
-                              itemBuilder: ((context, index) {
-                                return searchResultsRow(
-                                    'Ruhul Amin Tusar ',
-                                    '01824696930',
-                                    'writetusar@gmail.com',
-                                    'active');
-                              })))
-                    ],
-                  ),
-                )),
-          ],
-        ));
+                        Expanded(
+                          flex: 2,
+                          child: Container(
+                            width: double.infinity,
+                            padding: EdgeInsets.symmetric(
+                              horizontal: AppSizes.dynamicWidth(context, .018),
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    text(
+                                        context,
+                                        'TUITION AVAIL',
+                                        30.sp,
+                                        // AppSizes.dynamicWidth(context, .015),
+                                        AppColors.green),
+                                    boldPopinText(
+                                        '41',
+                                        65.sp,
+    
+                                        // AppSizes.dynamicWidth(context, .018),
+                                        AppColors.darkGrey)
+                                  ],
+                                ),
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    text(
+                                        context,
+                                        'QUIZ APPEARED ',
+                                        30.sp,
+    
+                                        // AppSizes.dynamicWidth(context, .015),
+                                        AppColors.green),
+                                    boldPopinText(
+                                        '25',
+                                        65.sp,
+    
+                                        // AppSizes.dynamicWidth(context, .018),
+                                        AppColors.darkGrey)
+                                  ],
+                                ),
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    text(
+                                        context,
+                                        'TOTAL MONEY SPEND ',
+                                        31.sp,
+    
+                                        // AppSizes.dynamicWidth(context, .015),
+                                        AppColors.darkGrey),
+                                    boldPopinText(
+                                        'TK. 2511',
+                                        65.sp,
+                                        // AppSizes.dynamicWidth(context, .018),
+                                        AppColors.green)
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 4,
+                          child: upCommingSessions()
+                        ),
+                      ],
+                    ),
+                  )),
+              Expanded(
+                  flex: 2,
+                  child: Container(
+                    padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+                    height: double.infinity,
+                    decoration: BoxDecoration(
+                        color: AppColors.lightGrey,
+                        borderRadius:
+                            BorderRadius.only(topLeft: Radius.circular(30.r))),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 15),
+                          child: Container(
+                            height: 60.h,
+                            width: 407.w,
+                            decoration: BoxDecoration(
+                                // border: Border.all(color: AppColors.green),
+                                color: AppColors.customWhite,
+                                borderRadius: BorderRadius.circular(100)),
+                            padding: EdgeInsets.symmetric(horizontal: 10),
+                            child: Align(
+                              alignment: Alignment.centerRight,
+                              child: TextField(
+                                cursorColor: AppColors.green,
+                                decoration: InputDecoration(
+                                    border: InputBorder.none,
+                                    suffixIcon: Icon(
+                                      Icons.search,
+                                      color: AppColors.greyText,
+                                    ),
+                                    contentPadding:
+                                        EdgeInsets.only(top: 5, left: 10)),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                            child: ListView.builder(
+                                itemCount: 15,
+                                itemBuilder: ((context, index) {
+                                  return searchResultsRow(
+                                      'Ruhul Amin Tusar ',
+                                      '01824696930',
+                                      'writetusar@gmail.com',
+                                      'active');
+                                })))
+                      ],
+                    ),
+                  )),
+            ],
+          )),
+    );
   }
 
     Widget upCommingSessions() {
