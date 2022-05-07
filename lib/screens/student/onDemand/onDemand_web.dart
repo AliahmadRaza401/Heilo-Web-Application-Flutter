@@ -326,7 +326,8 @@ class _OnDemandWebState extends State<OnDemandWeb> {
                           context,
                           "Notifications",
                           18.sp,
-                          AppColors.customGreen,
+                          Color(0xff3DDEA5),
+                          bold: true,
                         ),
                         SizedBox(
                           width: 460.w,
@@ -334,7 +335,7 @@ class _OnDemandWebState extends State<OnDemandWeb> {
                           child: ListView.builder(
                             itemCount: 6,
                             itemBuilder: (context, i) {
-                              return notificationCard(context);
+                              return notificationCardforall(context);
                             },
                           ),
                         ),
@@ -473,12 +474,12 @@ Widget profileCard(context) {
   );
 }
 
-Widget notificationCard(context) {
+Widget notificationCardforall(context) {
   return Container(
     width: 476.w,
     height: 76.h,
     decoration: BoxDecoration(
-      color: Color(0xff1BE59D),
+      color: Color(0xffB4F4DD),
       borderRadius: BorderRadius.circular(30.r),
     ),
     padding: EdgeInsets.symmetric(

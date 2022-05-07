@@ -264,6 +264,9 @@ class _StudentInboxWebState extends State<StudentInboxWeb> {
                         Container(
                           width: 670.w,
                           height: 57.h,
+                          padding: EdgeInsets.only(
+                            left: 30.w,
+                          ),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25),
                             color: AppColors.customGrey,
@@ -274,6 +277,11 @@ class _StudentInboxWebState extends State<StudentInboxWeb> {
                               // hintText: "You phone number here...",
                               border: InputBorder.none,
                               fillColor: Colors.white,
+                              hintText: "Write message",
+                              hintStyle: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
                               // suffixIcon: Icon(Icons.search)
                             ),
                           ),

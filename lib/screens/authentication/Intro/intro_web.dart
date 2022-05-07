@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:heilo/screens/admin/admin_sideMenu.dart';
+import 'package:heilo/screens/admin/sideMenu/admin_sideMenu.dart';
 import 'package:heilo/screens/authentication/Popups/auth_popUp.dart';
 import 'package:heilo/screens/authentication/student_phase1/student_phase1.dart';
 import 'package:heilo/screens/teacher/Main_SideMenu/teacher_sidemenu.dart';
@@ -10,6 +10,8 @@ import 'package:heilo/utils/app_routes.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
+
+import '../../admin/sideMenu/admin_sidemenu_main.dart';
 
 class IntroWeb extends StatelessWidget {
   const IntroWeb({Key? key}) : super(key: key);
@@ -160,7 +162,7 @@ class IntroWeb extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    AppRoutes.push(context, AdminSideMenu());
+                    AppRoutes.push(context, AdminSideMenuMain());
                   },
                   child: Container(
                     alignment: Alignment.center,

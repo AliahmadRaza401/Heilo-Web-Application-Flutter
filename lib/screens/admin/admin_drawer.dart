@@ -44,6 +44,7 @@ class AdminDrawer extends StatelessWidget {
               //             if (studentScafoldKey.currentState.isDrawerOpen) {
               // studentScafoldKey.currentState.openEndDrawer();
 // }
+              adminScafoldKey.currentState!.openEndDrawer();
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => AdminDashboardMobile()));
             },
@@ -63,6 +64,7 @@ class AdminDrawer extends StatelessWidget {
               ),
             ),
             onTap: () {
+              adminScafoldKey.currentState!.openEndDrawer();
               Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) => QuizReportMobile()));
             },
@@ -82,6 +84,7 @@ class AdminDrawer extends StatelessWidget {
               ),
             ),
             onTap: () {
+              adminScafoldKey.currentState!.openEndDrawer();
               Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) => PaymentPageMobile()));
             },
@@ -101,8 +104,9 @@ class AdminDrawer extends StatelessWidget {
               ),
             ),
             onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => ProfileMobile()));
+              adminScafoldKey.currentState!.openEndDrawer();
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => ProfileMobile()));
             },
           ),
           ListTile(
@@ -120,6 +124,7 @@ class AdminDrawer extends StatelessWidget {
               ),
             ),
             onTap: () {
+              adminScafoldKey.currentState!.openEndDrawer();
               Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) => ProfitMobile()));
             },
@@ -139,6 +144,7 @@ class AdminDrawer extends StatelessWidget {
               ),
             ),
             onTap: () {
+              adminScafoldKey.currentState!.openEndDrawer();
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => AdminContactMobile()));
             },

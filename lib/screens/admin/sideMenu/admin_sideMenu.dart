@@ -65,8 +65,13 @@ class _AdminSideMenuState extends State<AdminSideMenu> {
                   maxHeight: 46.h,
                   maxWidth: 80.w,
                 ),
-                child: Image.asset(
-                  'assets/png/logoWhite.png',
+                child: Container(
+                  margin: EdgeInsets.symmetric(
+                    horizontal: 5,
+                  ),
+                  child: Image.asset(
+                    'assets/png/logoWhite.png',
+                  ),
                 ),
               ),
             ),
@@ -116,13 +121,12 @@ class _AdminSideMenuState extends State<AdminSideMenu> {
                 icon: Icon(Icons.report),
               ),
               SideMenuItem(
-                priority: 2,
-                title: 'DashBoard',
-                onTap: () {
-                  page.jumpToPage(2);
-                },
-                icon: Icon(Icons.request_page_sharp)
-              ),
+                  priority: 2,
+                  title: 'DashBoard',
+                  onTap: () {
+                    page.jumpToPage(2);
+                  },
+                  icon: Icon(Icons.request_page_sharp)),
               SideMenuItem(
                 priority: 3,
                 title: 'Profile',

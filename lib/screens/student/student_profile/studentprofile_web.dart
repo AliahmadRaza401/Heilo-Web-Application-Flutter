@@ -13,6 +13,8 @@ import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
 
+import '../../../widgets/top_iconavatar.dart';
+
 class StudentProfileWeb extends StatefulWidget {
   const StudentProfileWeb({Key? key}) : super(key: key);
 
@@ -31,7 +33,8 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
       ),
       child: Column(
         children: [
-           SizedBox(
+          topIconAvatar(context),
+          SizedBox(
             height: 0.h,
           ),
           Row(
@@ -220,27 +223,30 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                   ],
                 ),
               ),
-              SingleChildScrollView(
-                child: Container(
-                  margin: EdgeInsets.only(
-                    top: 100.h,
-                    right: 45.w,
-                  ),
-                  child: Column(
-                    children: [
-                      greyWidget(),
-                      SizedBox(
-                        height: 20.h,
-                      ),
-                      greyWidget1(),
-                      SizedBox(
-                        height: 20.h,
-                      ),
-                      greyWidget2(),
-                      SizedBox(
-                        height: 20.h,
-                      ),
-                    ],
+              Container(
+                height: AppSizes.dynamicHeight(context, 0.8),
+                child: SingleChildScrollView(
+                  child: Container(
+                    margin: EdgeInsets.only(
+                      top: 0.h,
+                      right: 45.w,
+                    ),
+                    child: Column(
+                      children: [
+                        greyWidget(),
+                        SizedBox(
+                          height: 20.h,
+                        ),
+                        greyWidget1(),
+                        SizedBox(
+                          height: 20.h,
+                        ),
+                        greyWidget2(),
+                        SizedBox(
+                          height: 20.h,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),

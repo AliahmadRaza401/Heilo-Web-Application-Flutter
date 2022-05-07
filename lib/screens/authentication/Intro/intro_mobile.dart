@@ -9,6 +9,8 @@ import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
 
+import '../../admin/sideMenu/admin_sidemenu_main.dart';
+
 class IntroMobile extends StatelessWidget {
   const IntroMobile({Key? key}) : super(key: key);
 
@@ -153,6 +155,31 @@ class IntroMobile extends StatelessWidget {
                           ),
                           text(context, "Teacher", 24.sp, Colors.black),
                         ],
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        AppRoutes.push(context, AdminSideMenuMain());
+                      },
+                      child: Container(
+                        alignment: Alignment.center,
+                        width: 350.w,
+                        height: 70.h,
+                        decoration: BoxDecoration(
+                          color: AppColors.customWhite,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Image.asset(
+                              'assets/png/Group 528.png',
+                              width: 50.w,
+                              height: 50.h,
+                            ),
+                            text(context, "Admin", 24.sp, Colors.black),
+                          ],
+                        ),
                       ),
                     ),
                   ],
