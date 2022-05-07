@@ -15,7 +15,12 @@ class _StudentInboxWebState extends State<StudentInboxWeb> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.transparent,
       body: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(30.r),
+          ),
           padding: EdgeInsets.only(
             top: 3.h,
             right: 30.w,
@@ -194,10 +199,7 @@ class _StudentInboxWebState extends State<StudentInboxWeb> {
                         )
                       ],
                     ),
-                   
-
-
-                       Row(
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Container(
@@ -247,42 +249,48 @@ class _StudentInboxWebState extends State<StudentInboxWeb> {
                         )
                       ],
                     ),
-                     Expanded(child: Container()),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Icon(
-                  Icons.file_present_outlined,
-                  color: Color(0xff1BE59D),
-                  size: 25,
-                ),
-                SizedBox(width: 20.w,),
-                Container(
-                  width: 670.w,
-                  height: 57.h,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25),
-                    color: AppColors.customGrey,
-                  ),
-                  // padding: EdgeInsets.only(left: 12),
-                  child: TextFormField(
-                    decoration: const InputDecoration(
-                        // hintText: "You phone number here...",
-                        border: InputBorder.none,
-                        fillColor: Colors.white,
-                        // suffixIcon: Icon(Icons.search)
+                    Expanded(child: Container()),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Icon(
+                          Icons.file_present_outlined,
+                          color: Color(0xff1BE59D),
+                          size: 25,
                         ),
-                  ),
-                ),
-                   SizedBox(width: 20.w,),
-                const Icon(
-                  Icons.send,
-                  color: Color(0xff1BE59D),
-                  size: 25,
-                ),
-              ],
-            ),
-               SizedBox(height: 20.h,),
+                        SizedBox(
+                          width: 20.w,
+                        ),
+                        Container(
+                          width: 670.w,
+                          height: 57.h,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(25),
+                            color: AppColors.customGrey,
+                          ),
+                          // padding: EdgeInsets.only(left: 12),
+                          child: TextFormField(
+                            decoration: const InputDecoration(
+                              // hintText: "You phone number here...",
+                              border: InputBorder.none,
+                              fillColor: Colors.white,
+                              // suffixIcon: Icon(Icons.search)
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 20.w,
+                        ),
+                        const Icon(
+                          Icons.send,
+                          color: Color(0xff1BE59D),
+                          size: 25,
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20.h,
+                    ),
                   ],
                 ),
               )

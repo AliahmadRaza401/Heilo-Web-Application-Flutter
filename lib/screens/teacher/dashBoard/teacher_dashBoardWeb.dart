@@ -81,7 +81,7 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                     child: cardWidget(
                       'assets/png/g3.png',
                       "Tution Request",
-                       "03",
+                      "03",
                       SelectedCard == 3 ? 0xffFFFFFF : 0xff000000,
                       SelectedCard == 3 ? Color(0xff5F5F5F) : Colors.white,
                     ),
@@ -96,7 +96,7 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                       'assets/png/g4.png',
                       "Favourite Tutors",
                       "+20%",
-                      SelectedCard == 4 ? 0xFF312828 : 0xff000000,
+                      SelectedCard == 4 ? 0xffFFFFFF : 0xff000000,
                       SelectedCard == 4 ? Color(0xff5F5F5F) : Colors.white,
                     ),
                   ),
@@ -236,7 +236,6 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
   Widget tutionRequestInnerWidget() {
     return Container(
       margin: EdgeInsets.only(left: 40.w, right: 40.w, top: 30.h),
-    
       child: Row(
         children: [
           CircleAvatar(
@@ -309,7 +308,6 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
         color: const Color(0xffF8F8F8),
-
       ),
       padding: EdgeInsets.only(bottom: 20.h),
       child: SingleChildScrollView(
@@ -337,45 +335,60 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
               ),
             ),
             tutionRequestInnerWidget(),
-           Container(
-                   margin: EdgeInsets.only(left: 40.w, right: 40.w,),
-             child: const Divider(
-               thickness: 1.5,
-               color: Color(0xffE9E9E9),
+            Container(
+              margin: EdgeInsets.only(
+                left: 40.w,
+                right: 40.w,
               ),
-           ),
+              child: const Divider(
+                thickness: 1.5,
+                color: Color(0xffE9E9E9),
+              ),
+            ),
             tutionRequestInnerWidget(),
-             Container(
-                   margin: EdgeInsets.only(left: 40.w, right: 40.w,),
-             child: const Divider(
-               thickness:1.5,
-               color: Color(0xffE9E9E9),
+            Container(
+              margin: EdgeInsets.only(
+                left: 40.w,
+                right: 40.w,
               ),
-           ),
+              child: const Divider(
+                thickness: 1.5,
+                color: Color(0xffE9E9E9),
+              ),
+            ),
             tutionRequestInnerWidget(),
-             Container(
-                   margin: EdgeInsets.only(left: 40.w, right: 40.w,),
-             child: const Divider(
-               thickness:1.5,
-               color: Color(0xffE9E9E9),
+            Container(
+              margin: EdgeInsets.only(
+                left: 40.w,
+                right: 40.w,
               ),
-           ),
+              child: const Divider(
+                thickness: 1.5,
+                color: Color(0xffE9E9E9),
+              ),
+            ),
             tutionRequestInnerWidget(),
-             Container(
-                   margin: EdgeInsets.only(left: 40.w, right: 40.w,),
-             child: const Divider(
-               thickness:1.5,
-               color: Color(0xffE9E9E9),
+            Container(
+              margin: EdgeInsets.only(
+                left: 40.w,
+                right: 40.w,
               ),
-           ),
+              child: const Divider(
+                thickness: 1.5,
+                color: Color(0xffE9E9E9),
+              ),
+            ),
             tutionRequestInnerWidget(),
-             Container(
-                   margin: EdgeInsets.only(left: 40.w, right: 40.w,),
-             child: const Divider(
-               thickness: 1.5,
-               color: Color(0xffE9E9E9),
+            Container(
+              margin: EdgeInsets.only(
+                left: 40.w,
+                right: 40.w,
               ),
-           ),
+              child: const Divider(
+                thickness: 1.5,
+                color: Color(0xffE9E9E9),
+              ),
+            ),
             tutionRequestInnerWidget(),
             // SizedBox(
             //   height: 20.h,
@@ -561,7 +574,7 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
               width: 300.w,
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(21)),
-              child:  Align(
+              child: Align(
                 alignment: Alignment.center,
                 child: Text(
                   'Favourite Tutors',
@@ -573,7 +586,6 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                 ),
               ),
             ),
-
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
