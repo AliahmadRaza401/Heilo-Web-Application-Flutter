@@ -12,6 +12,7 @@ import 'package:heilo/widgets/form_fields.dart';
 import 'package:heilo/widgets/text_widget.dart';
 
 import '../../../utils/config.dart';
+import '../onDemand/onDemand_web.dart';
 
 class QuizzWeb extends StatefulWidget {
   const QuizzWeb({Key? key}) : super(key: key);
@@ -188,7 +189,7 @@ class _QuizzWebState extends State<QuizzWeb> {
                         child: ListView.builder(
                           itemCount: 6,
                           itemBuilder: (context, i) {
-                            return notificationCard(context);
+                            return notificationCardforall(context);
                           },
                         ),
                       ),
@@ -273,7 +274,7 @@ class _QuizzWebState extends State<QuizzWeb> {
             child: text(
                 context,
                 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not?',
-                20,
+                20.sp,
                 Color(0xffFFFFFF),
                 bold: true,
                 maxLines: 6),
@@ -335,9 +336,9 @@ class _QuizzWebState extends State<QuizzWeb> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              text(context, 'Congratulations!!', 28, Color(0xff01B489),
-                  bold: false),
-              text(context, 'You have successfully completed the exam.', 14,
+              text(context, 'Congratulations!!', 28.sp, Color(0xff01B489),
+                  bold: true),
+              text(context, 'You have successfully completed the exam.', 14.sp,
                   Color(0xff000000),
                   bold: false),
             ],
@@ -378,7 +379,7 @@ class _QuizzWebState extends State<QuizzWeb> {
                 child: text(
                     context,
                     'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not?',
-                    20,
+                    20.sp,
                     Color(0xffFFFFFF),
                     bold: true,
                     maxLines: 6),
@@ -391,9 +392,9 @@ class _QuizzWebState extends State<QuizzWeb> {
         ),
         InkWell(
           onTap: () {
-            // setState(() {
-            //   state3 = true;
-            // });
+            setState(() {
+              state3 = true;
+            });
           },
           child: Container(
             height: 50.h,
@@ -415,7 +416,11 @@ class _QuizzWebState extends State<QuizzWeb> {
         SizedBox(
           height: 50.h,
         ),
-        // state3 ? chapteraInnerWidget3() : SizedBox(),
+        // chapteraInnerWidget3(),
+        state3 ? chapteraInnerWidget3() : SizedBox(),
+        SizedBox(
+          height: 40.h,
+        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
@@ -466,10 +471,10 @@ class _QuizzWebState extends State<QuizzWeb> {
             alignment: Alignment.center,
             child: text(
                 context,
-                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not?',
-                20,
+                'Question: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not?',
+                20.sp,
                 Color(0xffFFFFFF),
-                bold: true,
+                bold: false,
                 maxLines: 6),
           ),
         ),
@@ -480,7 +485,8 @@ class _QuizzWebState extends State<QuizzWeb> {
           ),
           child: Row(
             children: [
-              text(context, 'Correct Answer:          ', 14, Color(0xff000000)),
+              text(context, 'Correct Answer:          ', 14.sp,
+                  Color(0xff000000)),
               Container(
                   padding: EdgeInsets.all(10.h),
                   decoration: BoxDecoration(
@@ -489,9 +495,9 @@ class _QuizzWebState extends State<QuizzWeb> {
                   child: text(
                       context,
                       'It is a long established fact that a reader will be distracted by the readable ',
-                      14,
+                      14.sp,
                       Color(0xff000000),
-                      bold: true)),
+                      bold: false)),
             ],
           ),
         ),
@@ -505,55 +511,76 @@ class _QuizzWebState extends State<QuizzWeb> {
             borderRadius: BorderRadius.circular(10),
           ),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    height: 40.h,
-                    width: 120.w,
-                    // padding: EdgeInsets.all(10.h),
-                    // alignment: Alignment.centerRight,
-                    decoration: BoxDecoration(
-                        color: Color(0xffFFFFFF),
-                        borderRadius: BorderRadius.circular(10)),
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Text(
-                        'Explanations:',
-                        style: TextStyle(color: Color(0xff9B9B9B)),
+              Container(
+                height: 240.h,
+                child: Column(
+                  // mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: 40.h,
+                      width: 130.w,
+                      // padding: EdgeInsets.all(10.h),
+                      // alignment: Alignment.centerRight,
+                      decoration: BoxDecoration(
+                          color: Color(0xffFFFFFF),
+                          borderRadius: BorderRadius.circular(20.r)),
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: Text(
+                          'Explanations:',
+                          style: TextStyle(color: Color(0xff9B9B9B)),
+                        ),
                       ),
                     ),
-                  ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: text(
-                        context,
-                        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
-                        12,
-                        Color(0xffFFFFFF),
-                        bold: true,
-                        maxLines: 2),
-                  ),
-                  SizedBox(
-                    height: 30.h,
-                  ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: text(
-                        context,
-                        'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-                        12,
-                        Color(0xffFFFFFF),
-                        bold: true,
-                        maxLines: 2),
-                  ),
-                ],
+                    SizedBox(
+                      height: 20.h,
+                    ),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Container(
+                        width: 548.w,
+                        child: Wrap(
+                          children: [
+                            text(
+                                context,
+                                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been theand scrambled it to make a type specimen book. It has survived not? ',
+                                20.sp,
+                                Color(0xffFFFFFF),
+                                bold: false,
+                                maxLines: 5),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 30.h,
+                    ),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Container(
+                        width: 548.w,
+                        child: Wrap(
+                          children: [
+                            text(
+                                context,
+                                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been theand scrambled it to make a type specimen book. It has survived not? ',
+                                20.sp,
+                                Color(0xffFFFFFF),
+                                bold: false,
+                                maxLines: 5),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
               Container(
                 height: 276.h,
-                width: 346,
+                width: 346.w,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15)),
@@ -643,14 +670,14 @@ class _QuizzWebState extends State<QuizzWeb> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            text(context, 'PHYSICS', 30, Color(0xff01B489), bold: true),
+            text(context, 'PHYSICS', 30.sp, Color(0xff01B489), bold: true),
             SizedBox(
               height: 5.h,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                text(context, 'CHAPTER - 1: SPEED', 30, Color(0xff01B489),
+                text(context, 'CHAPTER - 1: SPEED', 30.sp, Color(0xff01B489),
                     bold: false),
                 Container(
                   child: Row(
@@ -711,7 +738,7 @@ class _QuizzWebState extends State<QuizzWeb> {
             text(
                 context,
                 'NOTE: As you proceed further, the questions get tricker, but you can crack it, if you try hard. Godspeed!',
-                14,
+                14.sp,
                 Color(0xffA8A8A8),
                 bold: true),
             SizedBox(
@@ -732,40 +759,40 @@ class _QuizzWebState extends State<QuizzWeb> {
   }
 }
 
-Widget notificationCard(context) {
-  return Container(
-    width: 476.w,
-    height: 76.h,
-    decoration: BoxDecoration(
-      color: Color(0xff1BE59D),
-      borderRadius: BorderRadius.circular(30.r),
-    ),
-    padding: EdgeInsets.symmetric(
-      horizontal: 18.w,
-      vertical: 10.h,
-    ),
-    margin: EdgeInsets.only(bottom: 10.h),
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        CircleAvatar(
-          radius: 26.r,
-          backgroundImage: const AssetImage(
-            "assets/png/wp2398385 1.png",
-          ),
-        ),
-        SizedBox(
-          width: 20.w,
-        ),
-        Expanded(
-          child: text(
-            context,
-            "You have received a tution request from Salsabil Murshed.",
-            16.sp,
-            AppColors.customBlack,
-          ),
-        ),
-      ],
-    ),
-  );
-}
+// Widget notificationCard(context) {
+//   return Container(
+//     width: 476.w,
+//     height: 76.h,
+//     decoration: BoxDecoration(
+//       color: Color(0xff1BE59D),
+//       borderRadius: BorderRadius.circular(30.r),
+//     ),
+//     padding: EdgeInsets.symmetric(
+//       horizontal: 18.w,
+//       vertical: 10.h,
+//     ),
+//     margin: EdgeInsets.only(bottom: 10.h),
+//     child: Row(
+//       mainAxisAlignment: MainAxisAlignment.start,
+//       children: [
+//         CircleAvatar(
+//           radius: 26.r,
+//           backgroundImage: const AssetImage(
+//             "assets/png/wp2398385 1.png",
+//           ),
+//         ),
+//         SizedBox(
+//           width: 20.w,
+//         ),
+//         Expanded(
+//           child: text(
+//             context,
+//             "You have received a tution request from Salsabil Murshed.",
+//             16.sp,
+//             AppColors.customBlack,
+//           ),
+//         ),
+//       ],
+//     ),
+//   );
+// }

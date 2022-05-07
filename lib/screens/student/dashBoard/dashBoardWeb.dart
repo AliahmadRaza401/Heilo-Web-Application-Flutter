@@ -9,6 +9,8 @@ import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
 
+import '../onDemand/onDemand_web.dart';
+
 class DashBoaedWeb extends StatefulWidget {
   const DashBoaedWeb({Key? key}) : super(key: key);
 
@@ -77,7 +79,7 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
                       'assets/png/g1.png',
                       "Upcoming Sessions",
                       SelectedCard == 1 ? 0xffFFFFFF : 0xff000000,
-                      SelectedCard == 1 ? Color(0xff5F5F5F) : Colors.white,
+                      SelectedCard == 1 ? Color(0xff5F5F5F) : AppColors.customGrey,
                     ),
                   ),
                   InkWell(
@@ -90,7 +92,7 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
                       'assets/png/g1.png',
                       "Tutions completed",
                       SelectedCard == 2 ? 0xffFFFFFF : 0xff000000,
-                      SelectedCard == 2 ? Color(0xff5F5F5F) : Colors.white,
+                      SelectedCard == 2 ? Color(0xff5F5F5F) : AppColors.customGrey,
                     ),
                   ),
                   InkWell(
@@ -103,7 +105,7 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
                       'assets/png/g3.png',
                       "Quiz Appeared",
                       SelectedCard == 3 ? 0xffFFFFFF : 0xff000000,
-                      SelectedCard == 3 ? Color(0xff5F5F5F) : Colors.white,
+                      SelectedCard == 3 ? Color(0xff5F5F5F) : AppColors.customGrey,
                     ),
                   ),
                   InkWell(
@@ -116,7 +118,7 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
                       'assets/png/g4.png',
                       "Favourite Tutors",
                       SelectedCard == 4 ? 0xffFFFFFF : 0xff000000,
-                      SelectedCard == 4 ? Color(0xff5F5F5F) : Colors.white,
+                      SelectedCard == 4 ? Color(0xff5F5F5F) : AppColors.customGrey,
                     ),
                   ),
                 ],
@@ -166,13 +168,13 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
                             SizedBox(
                               height: 20.h,
                             ),
-                            notificationCard(context),
-                            notificationCard(context),
-                            notificationCard(context),
-                            notificationCard(context),
-                            notificationCard(context),
-                            notificationCard(context),
-                            notificationCard(context),
+                            notificationCardforall(context),
+                            notificationCardforall(context),
+                            notificationCardforall(context),
+                            notificationCardforall(context),
+                            notificationCardforall(context),
+                            notificationCardforall(context),
+                            notificationCardforall(context),
                           ],
                         ),
                       ),
@@ -787,6 +789,14 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
           color: bgColor,
+            boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.5),
+              spreadRadius: 0.5,
+              blurRadius: 1,
+              offset: Offset(0, 7), // changes position of shadow
+            ),
+          ],
         ),
         child: Stack(
           overflow: Overflow.visible,

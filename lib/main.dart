@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:heilo/screens/admin/admin_sideMenu.dart';
+import 'package:heilo/screens/admin/sideMenu/admin_sideMenu.dart';
 import 'package:heilo/screens/teacher/Main_SideMenu/teacher_sidemenu.dart';
 
 import 'screens/authentication/Intro/intro.dart';
@@ -41,8 +41,14 @@ class MyApp extends StatelessWidget {
           // home: Intro(),
           // home: const AdminSideMenu(),
           // home: AdminSideMenu(),
+<<<<<<< HEAD
            home: const StudentSideMenu(),
           // home:const TeacherSideMenu(),
+=======
+
+          // home: const StudentSideMenu(),
+          // home: const TeacherSideMenu(),
+>>>>>>> 2236b6ae83e1b2daa2565fbe560f5d726af10f08
         );
       },
     );

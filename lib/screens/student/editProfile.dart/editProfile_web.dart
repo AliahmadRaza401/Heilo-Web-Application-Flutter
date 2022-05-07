@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/utils/config.dart';
 
+import '../../../utils/dynamic_sizes.dart';
 import '../../../widgets/text_widget.dart';
+import '../../../widgets/top_iconavatar.dart';
 
 class EditProfileWeb extends StatefulWidget {
   const EditProfileWeb({Key? key}) : super(key: key);
@@ -28,320 +30,329 @@ class _EditProfileWebState extends State<EditProfileWeb> {
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: Container(
+        // height: AppSizes.dynamicHeight(context, 0.95),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(30.r),
         ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: Column(
           children: [
-            Container(
-              alignment: Alignment.center,
-              width: 526.w,
-              height: 780.h,
-              decoration: BoxDecoration(
-                // color: Colors.amber,
-                borderRadius: BorderRadius.circular(30.r),
-              ),
-              padding: EdgeInsets.only(
-                left: 45.w,
-                right: 45.w,
-                // top: 50.h,
-              ),
-              // padding: EdgeInsets.symmetric(
-              //   vertical: 16.h,
-              //   horizontal: 25.w,
-              // ),
-              child: Stack(
-                overflow: Overflow.visible,
-                children: [
-                  Container(
-                    height: 530.h,
-                    decoration: BoxDecoration(
-                      color: Color(0xffF1F1F1),
-                      borderRadius: BorderRadius.circular(30.r),
-                    ),
-                    padding: EdgeInsets.only(
-                      top: 130.h,
-                      left: 50.w,
-                      right: 50.w,
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          padding: EdgeInsets.all(6),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(30.r),
-                            border: Border.all(
-                                width: 0.5, color: const Color(0xffC4C4C4)),
-                          ),
-                          child: text(
-                            context,
-                            "Sakib Abdullah",
-                            18.sp,
-                            AppColors.greyText,
-                            bold: true,
-                          ),
+            topIconAvatar(context),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  alignment: Alignment.center,
+                  width: 526.w,
+                  height: 780.h,
+                  decoration: BoxDecoration(
+                    // color: Colors.amber,
+                    borderRadius: BorderRadius.circular(30.r),
+                  ),
+                  padding: EdgeInsets.only(
+                    left: 45.w,
+                    right: 45.w,
+                    // top: 50.h,
+                  ),
+                  // padding: EdgeInsets.symmetric(
+                  //   vertical: 16.h,
+                  //   horizontal: 25.w,
+                  // ),
+                  child: Stack(
+                    overflow: Overflow.visible,
+                    children: [
+                      Container(
+                        height: 530.h,
+                        decoration: BoxDecoration(
+                          color: Color(0xffF1F1F1),
+                          borderRadius: BorderRadius.circular(30.r),
                         ),
-                        // textWidget(
-                        //   "Sakib Abdullah",
-                        //   FontWeight.w600,
-                        //   0xff747474,
-                        //   18,
-                        // ),
-                        SizedBox(
-                          height: 10.h,
+                        padding: EdgeInsets.only(
+                          top: 130.h,
+                          left: 50.w,
+                          right: 50.w,
                         ),
-                        Container(
-                          padding: EdgeInsets.all(6),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(30.r),
-                            border: Border.all(
-                                width: 0.5, color: Color(0xffC4C4C4)),
-                          ),
-                          child: text(
-                            context,
-                            "Maple Leaf International School and College",
-                            14.sp,
-                            AppColors.greyText,
-                          ),
-                        ),
-                        // textWidget(
-                        //   "Maple Leaf International School and College",
-                        //   FontWeight.w300,
-                        //   0xff747474,
-                        //   14,
-                        // ),
-                        SizedBox(
-                          height: 40.h,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                              height: 38.h,
-                              width: 191.w,
-                              // padding: const EdgeInsets.only(
-                              //   top: 5,
-                              //   bottom: 5,
-                              // ),
-                              decoration: BoxDecoration(
-                                color: AppColors.customDarkBlue,
-                                borderRadius: BorderRadius.circular(30),
-                              ),
-                              child: Align(
-                                alignment: Alignment.center,
-                                child: text(
-                                  context,
-                                  "Tutions completed",
-                                  14.sp,
-                                  AppColors.customWhite,
-                                  bold: true,
-                                  // alignText: Alignment.center
-                                ),
-                              ),
-                            ),
-                            Container(
-                              width: 123.w,
-                              height: 38.h,
-                              //  padding: EdgeInsets.all(6),
+                              padding: EdgeInsets.all(6),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(30.r),
                                 border: Border.all(
                                     width: 0.5, color: Color(0xffC4C4C4)),
                               ),
-                              child: Align(
-                                alignment: Alignment.center,
-                                child: text(
-                                  context,
-                                  "48",
-                                  14.sp,
-                                  AppColors.greytextText,
-                                  bold: true,
-                                  // alignText: Alignment.center
-                                ),
+                              child: text(
+                                context,
+                                "Sakib Abdullah",
+                                18.sp,
+                                AppColors.greyText,
+                                bold: true,
                               ),
                             ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 10.h,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Container(
-                              width: 191.w,
-                              height: 38.h,
-                              // padding: const EdgeInsets.only(
-                              //   top: 5,
-                              //   bottom: 5,
-                              // ),
-                              decoration: BoxDecoration(
-                                color: Color(0xffA279E6),
-                                borderRadius: BorderRadius.circular(
-                                  30.r,
-                                ),
-                              ),
-                              child: Align(
-                                alignment: Alignment.center,
-                                child: text(
-                                  context,
-                                  "Tutors referred",
-                                  14.sp,
-                                  AppColors.customWhite,
-                                  bold: true,
-                                  // alignText: Alignment.center
-                                ),
-                              ),
+                            // textWidget(
+                            //   "Sakib Abdullah",
+                            //   FontWeight.w600,
+                            //   0xff747474,
+                            //   18,
+                            // ),
+                            SizedBox(
+                              height: 10.h,
                             ),
                             Container(
-                              width: 123.w,
-                              height: 38.h,
+                              padding: EdgeInsets.all(6),
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(30),
+                                borderRadius: BorderRadius.circular(30.r),
                                 border: Border.all(
                                     width: 0.5, color: Color(0xffC4C4C4)),
                               ),
-                              child: Align(
-                                alignment: Alignment.center,
-                                child: text(
-                                  context,
-                                  "27",
-                                  14.sp,
-                                  AppColors.greytextText,
-                                  bold: true,
-                                  // alignText: Alignment.center
-                                ),
+                              child: text(
+                                context,
+                                "Maple Leaf International School and College",
+                                14.sp,
+                                AppColors.greyText,
                               ),
                             ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 30.h,
-                        ),
-                        Container(
-                          padding: EdgeInsets.all(6),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(
-                                width: 0.5, color: Color(0xffC4C4C4)),
-                          ),
-                          child: text(
-                              context,
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
-                              14.sp,
-                              AppColors.customBlack,
-                              // bold: true,
-                              // alignText: Alignment.center
-                              maxLines: 8),
-                        ),
-                        // textWidget(
-                        //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
-                        //   FontWeight.w300,
-                        //   0xff7000000,
-                        //   14,
-                        // ),
-                      ],
-                    ),
-                  ),
-                  Positioned(
-                      top: -50.0,
-                      right: 0,
-                      left: 0,
-                      // (background container size) - (circle height / 2)
-                      child: Center(
-                        child: Stack(
-                          overflow: Overflow.visible,
-                          children: [
-                            Container(
-                              height: 170.h,
-                              width: 183.w,
-                              decoration: const BoxDecoration(
-                                shape: BoxShape.circle,
-                                image: DecorationImage(
-                                  image: AssetImage(
-                                    "assets/png/wp2398385 1.png",
+                            // textWidget(
+                            //   "Maple Leaf International School and College",
+                            //   FontWeight.w300,
+                            //   0xff747474,
+                            //   14,
+                            // ),
+                            SizedBox(
+                              height: 40.h,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(
+                                  height: 38.h,
+                                  width: 191.w,
+                                  // padding: const EdgeInsets.only(
+                                  //   top: 5,
+                                  //   bottom: 5,
+                                  // ),
+                                  decoration: BoxDecoration(
+                                    color: AppColors.customDarkBlue,
+                                    borderRadius: BorderRadius.circular(30),
+                                  ),
+                                  child: Align(
+                                    alignment: Alignment.center,
+                                    child: text(
+                                      context,
+                                      "Tutions completed",
+                                      14.sp,
+                                      AppColors.customWhite,
+                                      bold: true,
+                                      // alignText: Alignment.center
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ),
-                            // CircleAvatar(
-                            //   radius: 46.r,
-                            //   backgroundImage: const AssetImage(
-                            //     "assets/png/wp2398385 1.png",
-                            //   ),
-                            // ),
-                            Positioned(
-                              top: 0,
-                              right: -15,
-                              child: Container(
-                                padding: EdgeInsets.symmetric(
-                                  horizontal: 10,
-                                  vertical: 3,
-                                ),
-                                decoration: BoxDecoration(
-                                  color: Color(0xffC4C4C4).withOpacity(0.5),
-                                  borderRadius: BorderRadius.circular(50),
-                                ),
-                                child: Row(
-                                  children: [
-                                    Image.asset('assets/png/star.png'),
-                                    text(
+                                Container(
+                                  width: 123.w,
+                                  height: 38.h,
+                                  //  padding: EdgeInsets.all(6),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(30.r),
+                                    border: Border.all(
+                                        width: 0.5, color: Color(0xffC4C4C4)),
+                                  ),
+                                  child: Align(
+                                    alignment: Alignment.center,
+                                    child: text(
                                       context,
-                                      "4.5",
-                                      15.sp,
-                                      Colors.black,
+                                      "48",
+                                      14.sp,
+                                      AppColors.greytextText,
                                       bold: true,
+                                      // alignText: Alignment.center
                                     ),
-                                  ],
+                                  ),
                                 ),
-                              ),
+                              ],
                             ),
+                            SizedBox(
+                              height: 10.h,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(
+                                  width: 191.w,
+                                  height: 38.h,
+                                  // padding: const EdgeInsets.only(
+                                  //   top: 5,
+                                  //   bottom: 5,
+                                  // ),
+                                  decoration: BoxDecoration(
+                                    color: Color(0xffA279E6),
+                                    borderRadius: BorderRadius.circular(
+                                      30.r,
+                                    ),
+                                  ),
+                                  child: Align(
+                                    alignment: Alignment.center,
+                                    child: text(
+                                      context,
+                                      "Tutors referred",
+                                      14.sp,
+                                      AppColors.customWhite,
+                                      bold: true,
+                                      // alignText: Alignment.center
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  width: 123.w,
+                                  height: 38.h,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(30),
+                                    border: Border.all(
+                                        width: 0.5, color: Color(0xffC4C4C4)),
+                                  ),
+                                  child: Align(
+                                    alignment: Alignment.center,
+                                    child: text(
+                                      context,
+                                      "27",
+                                      14.sp,
+                                      AppColors.greytextText,
+                                      bold: true,
+                                      // alignText: Alignment.center
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 30.h,
+                            ),
+                            Container(
+                              padding: EdgeInsets.all(6),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                border: Border.all(
+                                    width: 0.5, color: Color(0xffC4C4C4)),
+                              ),
+                              child: text(
+                                  context,
+                                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
+                                  14.sp,
+                                  AppColors.customBlack,
+                                  // bold: true,
+                                  // alignText: Alignment.center
+                                  maxLines: 8),
+                            ),
+                            // textWidget(
+                            //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
+                            //   FontWeight.w300,
+                            //   0xff7000000,
+                            //   14,
+                            // ),
                           ],
                         ),
-
-                        //
-                      )
-                      // CircleAvatar(
-                      //   radius: 80.r,
-                      //   backgroundImage: const AssetImage(
-                      //     "assets/png/wp2398385 1.png",
-                      //   ),
-                      // ),
                       ),
-                ],
-              ),
+                      Positioned(
+                          top: -50.0,
+                          right: 0,
+                          left: 0,
+                          // (background container size) - (circle height / 2)
+                          child: Center(
+                            child: Stack(
+                              overflow: Overflow.visible,
+                              children: [
+                                Container(
+                                  height: 170.h,
+                                  width: 183.w,
+                                  decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                        "assets/png/wp2398385 1.png",
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                // CircleAvatar(
+                                //   radius: 46.r,
+                                //   backgroundImage: const AssetImage(
+                                //     "assets/png/wp2398385 1.png",
+                                //   ),
+                                // ),
+                                Positioned(
+                                  top: 0,
+                                  right: -15,
+                                  child: Container(
+                                    padding: EdgeInsets.symmetric(
+                                      horizontal: 10,
+                                      vertical: 3,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      color: Color(0xffC4C4C4).withOpacity(0.5),
+                                      borderRadius: BorderRadius.circular(50),
+                                    ),
+                                    child: Row(
+                                      children: [
+                                        Image.asset('assets/png/star.png'),
+                                        text(
+                                          context,
+                                          "4.5",
+                                          15.sp,
+                                          Colors.black,
+                                          bold: true,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+
+                            //
+                          )
+                          // CircleAvatar(
+                          //   radius: 80.r,
+                          //   backgroundImage: const AssetImage(
+                          //     "assets/png/wp2398385 1.png",
+                          //   ),
+                          // ),
+                          ),
+                    ],
+                  ),
+                ),
+                Container(
+                  height: AppSizes.dynamicHeight(context, 0.8),
+                  child: SingleChildScrollView(
+                    child: Container(
+                      padding: EdgeInsets.only(
+                        right: 20.w,
+                        top: 0.h,
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          greyWidget1(),
+                          SizedBox(
+                            height: 40.h,
+                          ),
+                          greyWidget2(),
+                          SizedBox(
+                            height: 40.h,
+                          ),
+                          greyWidget3(),
+                          SizedBox(
+                            height: 40.h,
+                          ),
+                          greyWidget4(),
+                        ],
+                      ),
+                    ),
+                  ),
+                )
+              ],
             ),
-            SingleChildScrollView(
-              child: Container(
-                padding: EdgeInsets.only(
-                  right: 20.w,
-                  top: 50.h,
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    greyWidget1(),
-                    SizedBox(
-                      height: 40.h,
-                    ),
-                    greyWidget2(),
-                    SizedBox(
-                      height: 40.h,
-                    ),
-                    greyWidget3(),
-                    SizedBox(
-                      height: 40.h,
-                    ),
-                    greyWidget4(),
-                  ],
-                ),
-              ),
-            )
           ],
         ),
       ),
@@ -403,14 +414,14 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                 width: 96.w,
                 height: 35.h,
                 decoration: BoxDecoration(
-                    color: const Color(0xffC4C4C4),
+                    color: const Color(0xffC4C4C4).withOpacity(0.5),
                     borderRadius: BorderRadius.circular(30.r)),
                 child: Align(
                   alignment: Alignment.center,
                   child: textWidget(
                     "Edit",
                     FontWeight.w600,
-                    0xff3DDEA5,
+                    0xff1BE59D,
                     18.sp,
                   ),
                 ),
@@ -424,7 +435,12 @@ class _EditProfileWebState extends State<EditProfileWeb> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: EdgeInsets.all(6),
+                padding: EdgeInsets.only(
+                  top: 6.h,
+                  bottom: 6.h,
+                  left: 20.w,
+                  right: 160.w,
+                ),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(width: 0.5, color: Color(0xffC4C4C4)),
@@ -507,7 +523,10 @@ class _EditProfileWebState extends State<EditProfileWeb> {
             // mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: EdgeInsets.all(6),
+                padding: EdgeInsets.symmetric(
+                  vertical: 0.h,
+                  horizontal: 30.w,
+                ),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(width: 0.5, color: Color(0xffC4C4C4)),
@@ -516,33 +535,45 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    DropdownButton(
-                      // Initial Value
-                      value: dropdownvalue,
+                    Container(
+                      height: 30.h,
+                      child: DropdownButton(
+                        underline: SizedBox(),
+                        // Initial Value
+                        value: dropdownvalue,
 
-                      // Down Arrow Icon
-                      icon: const Icon(Icons.keyboard_arrow_down),
+                        // Down Arrow Icon
+                        icon: const Icon(Icons.keyboard_arrow_down),
 
-                      // Array list of items
-                      items: items.map((String items) {
-                        return DropdownMenuItem(
-                          value: items,
-                          child: Text(items),
-                        );
-                      }).toList(),
-                      // After selecting the desired option,it will
-                      // change button value to selected value
-                      onChanged: (String? newValue) {
-                        setState(() {
-                          dropdownvalue = newValue!;
-                        });
-                      },
+                        // Array list of items
+                        items: items.map((String items) {
+                          return DropdownMenuItem(
+                            value: items,
+                            child: Text(
+                              items,
+                              style: TextStyle(
+                                fontSize: 14.sp,
+                              ),
+                            ),
+                          );
+                        }).toList(),
+                        // After selecting the desired option,it will
+                        // change button value to selected value
+                        onChanged: (String? newValue) {
+                          setState(() {
+                            dropdownvalue = newValue!;
+                          });
+                        },
+                      ),
                     ),
                     textWidget(
                       "Rajshahi",
                       FontWeight.w600,
                       0xff7d7d7d,
-                      15.sp,
+                      13.sp,
+                    ),
+                    SizedBox(
+                      height: 10.h,
                     ),
                   ],
                 ),
@@ -551,13 +582,14 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                 width: 25.w,
               ),
               Container(
+                height: 60.h,
                 padding: EdgeInsets.all(6),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(width: 0.5, color: Color(0xffC4C4C4)),
                 ),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     textWidget(
@@ -576,10 +608,13 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                 ),
               ),
               SizedBox(
-                width: 25.w,
+                width: 50.w,
               ),
               Container(
-                padding: EdgeInsets.all(6),
+                padding: EdgeInsets.symmetric(
+                  vertical: 0.h,
+                  horizontal: 20.w,
+                ),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(width: 0.5, color: Color(0xffC4C4C4)),
@@ -588,33 +623,48 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    SizedBox(
+                      height: 10.h,
+                    ),
                     textWidget(
                       "Gender",
                       FontWeight.w600,
                       0xff7d7d7d,
-                      14.sp,
+                      13.sp,
                     ),
-                    DropdownButton(
-                      // Initial Value
-                      value: dropdownvalue,
+                    Container(
+                      height: 30.h,
+                      width: 300.w,
+                      child: DropdownButton(
+                        isExpanded: true,
 
-                      // Down Arrow Icon
-                      icon: const Icon(Icons.keyboard_arrow_down),
+                        underline: SizedBox(),
+                        // Initial Value
+                        value: dropdownvalue,
 
-                      // Array list of items
-                      items: items.map((String items) {
-                        return DropdownMenuItem(
-                          value: items,
-                          child: Text(items),
-                        );
-                      }).toList(),
-                      // After selecting the desired option,it will
-                      // change button value to selected value
-                      onChanged: (String? newValue) {
-                        setState(() {
-                          dropdownvalue = newValue!;
-                        });
-                      },
+                        // Down Arrow Icon
+                        icon: const Icon(Icons.keyboard_arrow_down),
+
+                        // Array list of items
+                        items: items.map((String items) {
+                          return DropdownMenuItem(
+                            value: items,
+                            child: Text(
+                              items,
+                              style: TextStyle(
+                                fontSize: 14.sp,
+                              ),
+                            ),
+                          );
+                        }).toList(),
+                        // After selecting the desired option,it will
+                        // change button value to selected value
+                        onChanged: (String? newValue) {
+                          setState(() {
+                            dropdownvalue = newValue!;
+                          });
+                        },
+                      ),
                     ),
                   ],
                 ),
@@ -667,7 +717,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                 width: 120.w,
                 height: 35.h,
                 decoration: BoxDecoration(
-                    color: const Color(0xffC4C4C4),
+                    color: const Color(0xffC4C4C4).withOpacity(0.5),
                     borderRadius: BorderRadius.circular(20)),
                 child: Align(
                   alignment: Alignment.center,
@@ -688,7 +738,11 @@ class _EditProfileWebState extends State<EditProfileWeb> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: EdgeInsets.all(6),
+                width: 390.w,
+                padding: EdgeInsets.symmetric(
+                  vertical: 10,
+                  horizontal: 30.w,
+                ),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(width: 0.5, color: Color(0xffC4C4C4)),
@@ -713,7 +767,10 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                 ),
               ),
               Container(
-                padding: EdgeInsets.all(6),
+                padding: EdgeInsets.symmetric(
+                  vertical: 0.h,
+                  horizontal: 20.w,
+                ),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(width: 0.5, color: Color(0xffC4C4C4)),
@@ -722,33 +779,45 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    textWidget(
-                      "Class",
-                      FontWeight.w300,
-                      0xff7d7d7d,
-                      12.sp,
+                    SizedBox(
+                      height: 10.h,
                     ),
-                    DropdownButton(
-                      // Initial Value
-                      value: dropdownvalue,
-
-                      // Down Arrow Icon
-                      icon: const Icon(Icons.keyboard_arrow_down),
-
-                      // Array list of items
-                      items: items.map((String items) {
-                        return DropdownMenuItem(
-                          value: items,
-                          child: Text(items),
-                        );
-                      }).toList(),
-                      // After selecting the desired option,it will
-                      // change button value to selected value
-                      onChanged: (String? newValue) {
-                        setState(() {
-                          dropdownvalue = newValue!;
-                        });
-                      },
+                    textWidget(
+                      "Gender",
+                      FontWeight.w600,
+                      0xff7d7d7d,
+                      13.sp,
+                    ),
+                    Container(
+                      height: 30.h,
+                      width: 350.w,
+                      child: DropdownButton(
+                        isExpanded: true,
+                        underline: SizedBox(),
+                        // Initial Value
+                        value: dropdownvalue,
+                        // Down Arrow Icon
+                        icon: const Icon(Icons.keyboard_arrow_down),
+                        // Array list of items
+                        items: items.map((String items) {
+                          return DropdownMenuItem(
+                            value: items,
+                            child: Text(
+                              items,
+                              style: TextStyle(
+                                fontSize: 14.sp,
+                              ),
+                            ),
+                          );
+                        }).toList(),
+                        // After selecting the desired option,it will
+                        // change button value to selected value
+                        onChanged: (String? newValue) {
+                          setState(() {
+                            dropdownvalue = newValue!;
+                          });
+                        },
+                      ),
                     ),
                   ],
                 ),
@@ -762,7 +831,10 @@ class _EditProfileWebState extends State<EditProfileWeb> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: EdgeInsets.all(6),
+                padding: EdgeInsets.symmetric(
+                  vertical: 0.h,
+                  horizontal: 20.w,
+                ),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(width: 0.5, color: Color(0xffC4C4C4)),
@@ -771,42 +843,57 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    SizedBox(
+                      height: 10.h,
+                    ),
                     textWidget(
-                      "Medium",
+                      "Gender",
                       FontWeight.w600,
                       0xff7d7d7d,
-                      15.sp,
+                      13.sp,
                     ),
-                    DropdownButton(
-                      // Initial Value
-                      value: dropdownvalue,
+                    Container(
+                      height: 30.h,
+                      width: 350.w,
+                      child: DropdownButton(
+                        isExpanded: true,
 
-                      // Down Arrow Icon
-                      icon: const Icon(Icons.keyboard_arrow_down),
+                        underline: SizedBox(),
+                        // Initial Value
+                        value: dropdownvalue,
 
-                      // Array list of items
-                      items: items.map((String items) {
-                        return DropdownMenuItem(
-                          value: items,
-                          child: Text(items),
-                        );
-                      }).toList(),
-                      // After selecting the desired option,it will
-                      // change button value to selected value
-                      onChanged: (String? newValue) {
-                        setState(() {
-                          dropdownvalue = newValue!;
-                        });
-                      },
+                        // Down Arrow Icon
+                        icon: const Icon(Icons.keyboard_arrow_down),
+
+                        // Array list of items
+                        items: items.map((String items) {
+                          return DropdownMenuItem(
+                            value: items,
+                            child: Text(
+                              items,
+                              style: TextStyle(
+                                fontSize: 14.sp,
+                              ),
+                            ),
+                          );
+                        }).toList(),
+                        // After selecting the desired option,it will
+                        // change button value to selected value
+                        onChanged: (String? newValue) {
+                          setState(() {
+                            dropdownvalue = newValue!;
+                          });
+                        },
+                      ),
                     ),
                   ],
                 ),
               ),
-              SizedBox(
-                width: 25.w,
-              ),
               Container(
-                padding: EdgeInsets.all(6),
+                padding: EdgeInsets.symmetric(
+                  vertical: 0.h,
+                  horizontal: 20.w,
+                ),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(width: 0.5, color: Color(0xffC4C4C4)),
@@ -815,33 +902,48 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    SizedBox(
+                      height: 10.h,
+                    ),
                     textWidget(
-                      "Background",
+                      "Gender",
                       FontWeight.w600,
                       0xff7d7d7d,
-                      14.sp,
+                      13.sp,
                     ),
-                    DropdownButton(
-                      // Initial Value
-                      value: dropdownvalue,
+                    Container(
+                      height: 30.h,
+                      width: 350.w,
+                      child: DropdownButton(
+                        isExpanded: true,
 
-                      // Down Arrow Icon
-                      icon: const Icon(Icons.keyboard_arrow_down),
+                        underline: SizedBox(),
+                        // Initial Value
+                        value: dropdownvalue,
 
-                      // Array list of items
-                      items: items.map((String items) {
-                        return DropdownMenuItem(
-                          value: items,
-                          child: Text(items),
-                        );
-                      }).toList(),
-                      // After selecting the desired option,it will
-                      // change button value to selected value
-                      onChanged: (String? newValue) {
-                        setState(() {
-                          dropdownvalue = newValue!;
-                        });
-                      },
+                        // Down Arrow Icon
+                        icon: const Icon(Icons.keyboard_arrow_down),
+
+                        // Array list of items
+                        items: items.map((String items) {
+                          return DropdownMenuItem(
+                            value: items,
+                            child: Text(
+                              items,
+                              style: TextStyle(
+                                fontSize: 14.sp,
+                              ),
+                            ),
+                          );
+                        }).toList(),
+                        // After selecting the desired option,it will
+                        // change button value to selected value
+                        onChanged: (String? newValue) {
+                          setState(() {
+                            dropdownvalue = newValue!;
+                          });
+                        },
+                      ),
                     ),
                   ],
                 ),
@@ -904,9 +1006,9 @@ class _EditProfileWebState extends State<EditProfileWeb> {
               Expanded(child: Container()),
               Container(
                 width: 120.w,
-                  height: 35.h,
+                height: 35.h,
                 decoration: BoxDecoration(
-                    color: const Color(0xffC4C4C4),
+                    color: const Color(0xffC4C4C4).withOpacity(0.5),
                     borderRadius: BorderRadius.circular(20)),
                 child: Align(
                   alignment: Alignment.center,
@@ -1012,9 +1114,9 @@ class _EditProfileWebState extends State<EditProfileWeb> {
               ),
               Container(
                 width: 120.w,
-                  height: 35.h,
+                height: 35.h,
                 decoration: BoxDecoration(
-                    color: const Color(0xffC4C4C4),
+                    color: const Color(0xffC4C4C4).withOpacity(0.5),
                     borderRadius: BorderRadius.circular(20)),
                 child: Align(
                   alignment: Alignment.center,
@@ -1088,4 +1190,5 @@ class _EditProfileWebState extends State<EditProfileWeb> {
       ),
     );
   }
+
 }

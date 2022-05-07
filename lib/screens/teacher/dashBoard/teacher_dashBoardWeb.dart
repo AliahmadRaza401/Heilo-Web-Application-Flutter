@@ -9,6 +9,9 @@ import 'package:heilo/screens/admin/BarChart/bar_chart.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
+import 'package:heilo/widgets/top_iconavatar.dart';
+
+import '../../student/onDemand/onDemand_web.dart';
 
 class TeacherDashBoaedWeb extends StatefulWidget {
   const TeacherDashBoaedWeb({Key? key}) : super(key: key);
@@ -28,9 +31,9 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
           width: AppSizes.dynamicWidth(context, 1),
           height: AppSizes.dynamicHeight(context, 1),
           padding: EdgeInsets.only(
-            left: 84.w,
-            right: 84.w,
-            top: 20.h,
+            left: 50.w,
+            right: 50.w,
+            top: 0.h,
             // bottom: 20.h,
           ),
           decoration: BoxDecoration(
@@ -41,6 +44,7 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              topIconAvatar(context),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -55,7 +59,9 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                       "Upcoming Sessions",
                       "03",
                       SelectedCard == 1 ? 0xffFFFFFF : 0xff000000,
-                      SelectedCard == 1 ? Color(0xff5F5F5F) : Colors.white,
+                      SelectedCard == 1
+                          ? Color(0xff5F5F5F)
+                          : AppColors.customGrey,
                     ),
                   ),
                   InkWell(
@@ -69,7 +75,9 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                       "Tutions completed",
                       "03",
                       SelectedCard == 2 ? 0xffFFFFFF : 0xff000000,
-                      SelectedCard == 2 ? Color(0xff5F5F5F) : Colors.white,
+                      SelectedCard == 2
+                          ? Color(0xff5F5F5F)
+                          : AppColors.customGrey,
                     ),
                   ),
                   InkWell(
@@ -81,9 +89,11 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                     child: cardWidget(
                       'assets/png/g3.png',
                       "Tution Request",
-                       "03",
+                      "03",
                       SelectedCard == 3 ? 0xffFFFFFF : 0xff000000,
-                      SelectedCard == 3 ? Color(0xff5F5F5F) : Colors.white,
+                      SelectedCard == 3
+                          ? Color(0xff5F5F5F)
+                          : AppColors.customGrey,
                     ),
                   ),
                   InkWell(
@@ -96,8 +106,10 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                       'assets/png/g4.png',
                       "Favourite Tutors",
                       "+20%",
-                      SelectedCard == 4 ? 0xFF312828 : 0xff000000,
-                      SelectedCard == 4 ? Color(0xff5F5F5F) : Colors.white,
+                      SelectedCard == 4 ? 0xffFFFFFF : 0xff01B489,
+                      SelectedCard == 4
+                          ? Color(0xff5F5F5F)
+                          : AppColors.customGrey,
                     ),
                   ),
                 ],
@@ -108,9 +120,9 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     SelectedCard == 1
-                        ? tutionsCard()
+                        ? upComingCard()
                         : SelectedCard == 2
-                            ? upComingCard()
+                            ? tutionsCard()
                             : SelectedCard == 3
                                 ? tutionRequest()
                                 : favoriteTutiCard(),
@@ -142,18 +154,18 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                               "Notifications",
                               18.sp,
                               AppColors.customGreen,
-                              bold: false,
+                              bold: true,
                             ),
                             SizedBox(
                               height: 20.h,
                             ),
-                            notificationCard(context),
-                            notificationCard(context),
-                            notificationCard(context),
-                            notificationCard(context),
-                            notificationCard(context),
-                            notificationCard(context),
-                            notificationCard(context),
+                            notificationCardforall(context),
+                            notificationCardforall(context),
+                            notificationCardforall(context),
+                            notificationCardforall(context),
+                            notificationCardforall(context),
+                            notificationCardforall(context),
+                            notificationCardforall(context),
                           ],
                         ),
                       ),
@@ -236,7 +248,6 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
   Widget tutionRequestInnerWidget() {
     return Container(
       margin: EdgeInsets.only(left: 40.w, right: 40.w, top: 30.h),
-    
       child: Row(
         children: [
           CircleAvatar(
@@ -309,7 +320,6 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
         color: const Color(0xffF8F8F8),
-
       ),
       padding: EdgeInsets.only(bottom: 20.h),
       child: SingleChildScrollView(
@@ -324,58 +334,73 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
               width: 300.w,
               // decoration: BoxDecoration(
               //     color: Colors.white, borderRadius: BorderRadius.circular(21)),
-              child: const Align(
+              child: Align(
                 alignment: Alignment.center,
                 child: Text(
-                  'Upcoming Sessions',
+                  'Tution Request',
                   style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 21,
-                    fontWeight: FontWeight.w500,
+                    color: Colors.red,
+                    fontSize: 24.sp,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
             ),
             tutionRequestInnerWidget(),
-           Container(
-                   margin: EdgeInsets.only(left: 40.w, right: 40.w,),
-             child: const Divider(
-               thickness: 1.5,
-               color: Color(0xffE9E9E9),
+            Container(
+              margin: EdgeInsets.only(
+                left: 40.w,
+                right: 40.w,
               ),
-           ),
+              child: const Divider(
+                thickness: 1.5,
+                color: Color(0xffE9E9E9),
+              ),
+            ),
             tutionRequestInnerWidget(),
-             Container(
-                   margin: EdgeInsets.only(left: 40.w, right: 40.w,),
-             child: const Divider(
-               thickness:1.5,
-               color: Color(0xffE9E9E9),
+            Container(
+              margin: EdgeInsets.only(
+                left: 40.w,
+                right: 40.w,
               ),
-           ),
+              child: const Divider(
+                thickness: 1.5,
+                color: Color(0xffE9E9E9),
+              ),
+            ),
             tutionRequestInnerWidget(),
-             Container(
-                   margin: EdgeInsets.only(left: 40.w, right: 40.w,),
-             child: const Divider(
-               thickness:1.5,
-               color: Color(0xffE9E9E9),
+            Container(
+              margin: EdgeInsets.only(
+                left: 40.w,
+                right: 40.w,
               ),
-           ),
+              child: const Divider(
+                thickness: 1.5,
+                color: Color(0xffE9E9E9),
+              ),
+            ),
             tutionRequestInnerWidget(),
-             Container(
-                   margin: EdgeInsets.only(left: 40.w, right: 40.w,),
-             child: const Divider(
-               thickness:1.5,
-               color: Color(0xffE9E9E9),
+            Container(
+              margin: EdgeInsets.only(
+                left: 40.w,
+                right: 40.w,
               ),
-           ),
+              child: const Divider(
+                thickness: 1.5,
+                color: Color(0xffE9E9E9),
+              ),
+            ),
             tutionRequestInnerWidget(),
-             Container(
-                   margin: EdgeInsets.only(left: 40.w, right: 40.w,),
-             child: const Divider(
-               thickness: 1.5,
-               color: Color(0xffE9E9E9),
+            Container(
+              margin: EdgeInsets.only(
+                left: 40.w,
+                right: 40.w,
               ),
-           ),
+              child: const Divider(
+                thickness: 1.5,
+                color: Color(0xffE9E9E9),
+              ),
+            ),
             tutionRequestInnerWidget(),
            
           ],
@@ -405,14 +430,14 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
               width: 300.w,
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(21)),
-              child: const Align(
+              child: Align(
                 alignment: Alignment.center,
                 child: Text(
                   'Upcoming Sessions',
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 21,
-                    fontWeight: FontWeight.w500,
+                    fontSize: 24.sp,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
@@ -463,12 +488,12 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                     fit: BoxFit.contain,
                   )),
                 ),
-                const Text(
+                Text(
                   'Tutions Completed',
                   style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 21,
-                    fontWeight: FontWeight.w500,
+                    color: Colors.red,
+                    fontSize: 24.sp,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ],
@@ -548,21 +573,23 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
             Container(
               alignment: Alignment.centerLeft,
               width: 300.w,
+              padding: EdgeInsets.symmetric(
+                vertical: 10.h,
+              ),
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(21)),
-              child:  Align(
+              child: Align(
                 alignment: Alignment.center,
                 child: Text(
                   'Favourite Tutors',
                   style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 21.sp,
-                    fontWeight: FontWeight.w500,
+                    color: Colors.red,
+                    fontSize: 24.sp,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
             ),
-
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -689,13 +716,13 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                       ],
                     ),
                     Row(
-                      children: const [
+                      children: [
                         Text(
                           'Topic- ',
                           style: TextStyle(
                             color: Color(0xff444F55),
                             fontWeight: FontWeight.w600,
-                            fontSize: 18.0,
+                            fontSize: 18.sp,
                           ),
                         ),
                         Text(
@@ -703,17 +730,17 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                           style: TextStyle(
                             color: Color(0xff444F55),
                             fontWeight: FontWeight.w300,
-                            fontSize: 13.0,
+                            fontSize: 18.sp,
                           ),
                         ),
                       ],
                     ),
-                    const Text(
+                    Text(
                       'Time- 4:30-5.30 pm',
                       style: TextStyle(
                         color: Color(0xff1BE59D),
                         fontWeight: FontWeight.w600,
-                        fontSize: 18.0,
+                        fontSize: 18.sp,
                       ),
                     ),
                   ],
@@ -739,6 +766,14 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
           color: bgColor,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.5),
+              spreadRadius: 0.5,
+              blurRadius: 1,
+              offset: Offset(0, 7), // changes position of shadow
+            ),
+          ],
         ),
         child: Stack(
           overflow: Overflow.visible,
@@ -767,7 +802,7 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
               child: Column(
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(right: 13.w, top: 13.h),
+                    padding: EdgeInsets.only(right: 23.w, top: 13.h),
                     child: Align(
                       alignment: Alignment.centerRight,
                       child: Text(
@@ -781,14 +816,14 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(right: 13.w, top: 13.h),
+                    padding: EdgeInsets.only(right: 23.w, top: 13.h),
                     child: Align(
                       alignment: Alignment.centerRight,
                       child: Text(
                         title1,
                         style: TextStyle(
                           color: Color(textcolor),
-                          fontSize: 18,
+                          fontSize: 48.sp,
                           fontWeight: FontWeight.w800,
                         ),
                       ),

@@ -110,15 +110,16 @@ class _TeacherWalletState extends State<TeacherWallet> {
                                   padding: EdgeInsets.only(
                                       top:
                                           AppSizes.dynamicHeight(context, .01)),
-                                  child: headingRow(AppColors.lightGrey),
+                                  child: headingRow(Color(0xffEBEBEB)),
                                 ),
                                 Expanded(
                                     child: Container(
                                   decoration: BoxDecoration(
-                                      color: AppColors.lightGrey,
+                                      color: AppColors.customGrey,
                                       borderRadius:
                                           BorderRadius.circular(30.r)),
                                   padding: EdgeInsets.symmetric(
+                                      vertical: 10.h,
                                       horizontal:
                                           AppSizes.dynamicWidth(context, .01)),
                                   child: ListView.builder(
@@ -180,7 +181,7 @@ class _TeacherWalletState extends State<TeacherWallet> {
                         child: Container(
                           width: double.infinity,
                           decoration: BoxDecoration(
-                              color: AppColors.lightGrey,
+                              color: AppColors.customGrey,
                               borderRadius: BorderRadius.circular(30.r)),
                           child: Padding(
                             padding: EdgeInsets.only(bottom: 30),
@@ -301,7 +302,7 @@ class _TeacherWalletState extends State<TeacherWallet> {
             width: 168.w,
             decoration: BoxDecoration(
                 // border: Border.all(color: AppColors.lightGrey),
-                color: AppColors.greyText,
+                color: Color(0xffEBEBEB),
                 borderRadius: BorderRadius.circular(100)),
             padding: EdgeInsets.symmetric(horizontal: 10),
             child: Align(

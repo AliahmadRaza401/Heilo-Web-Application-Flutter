@@ -2,9 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:heilo/screens/admin/admin_drawer.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
+
+import '../Dashboard/dash_board_mobile.dart';
 
 class PaymentPageMobile extends StatefulWidget {
   const PaymentPageMobile({Key? key}) : super(key: key);
@@ -16,229 +19,264 @@ class PaymentPageMobile extends StatefulWidget {
 class _PaymentPageMobileState extends State<PaymentPageMobile> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-        decoration: BoxDecoration(
-          color: AppColors.customWhite,
-          borderRadius: BorderRadius.circular(30.r),
+    return Scaffold(
+      key: adminScafoldKey,
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: const Icon(
+                Icons.menu,
+                color: Colors.black,
+                size: 30, // Changing Drawer Icon Size
+              ),
+              onPressed: () {
+                adminScafoldKey.currentState!.openDrawer();
+              },
+              tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+            );
+          },
         ),
-        // height: AppSizes.dynamicHeight(context, .7),
-        child: Column(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Container(
-              // color: Colors.amber,
-              height: AppSizes.dynamicHeight(context, .95),
-              padding: EdgeInsets.all(5),
-              child: SingleChildScrollView(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    text(context, 'Payment Request ', 46.sp, AppColors.green),
-                    Container(
-                      width: AppSizes.dynamicWidth(context, 1),
-                      height: AppSizes.dynamicHeight(context, .3),
-                      // color: Colors.amber,
-                      child: Padding(
-                        padding: EdgeInsets.only(
-                            bottom: AppSizes.dynamicHeight(context, .01)),
-                        child: ListView.builder(
-                            itemCount: 5,
-                            itemBuilder: ((context, index) {
-                              return paymentsRow(
-                                  'assets/png/charles.png',
-                                  'Ruhul Amin Tusar',
-                                  '11/08/2021 12:30 pm',
-                                  'Bkash',
-                                  '01824696900',
-                                  '500',
-                                  '510',
-                                  'Pending');
-                            })),
-                      ),
-                    ),
-                    Container(
-                              height: AppSizes.dynamicHeight(context, .42),
-                      width: double.infinity,
-                      // color: Colors.amber,
-                      child: Stack(
-                        children: [
-                          Align(
-                            alignment: Alignment.bottomCenter,
-                            child: Container(
-                              height: AppSizes.dynamicHeight(context, .35),
-                              width: double.infinity,
-                              padding: EdgeInsets.all(10),
-                              decoration: BoxDecoration(
-                                  color: AppColors.lightGrey,
-                                  borderRadius: BorderRadius.circular(30.r)),
-                              child: Column(
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        top: AppSizes.dynamicHeight(
-                                            context, .03)),
-                                    child: headingRow(AppColors.customWhite),
-                                  ),
-                                  Container(
-                              height: AppSizes.dynamicHeight(context, .35),
-                                    width: double.infinity,
-                                    child: ListView.builder(
-                                        itemCount: 10,
-                                        itemBuilder: ((context, index) {
-                                          return paymentDetailsRow(
-                                              AppColors.customWhite,
-                                              '#1112',
-                                              'Safin Riaz',
-                                              '11-09-2021',
-                                              'Tk. 1000');
-                                        })),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            top: AppSizes.dynamicHeight(context, .035),
-                            left: 0,
-                            right: 0,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                paymentStatus('TK. 50,000', 'Total Paid',
-                                    AppColors.customWhite),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                    // SizedBox(
-                    //   width: double.infinity,
-                    //   height: AppSizes.dynamicHeight(context, .3),
-
-                    //   // color: Colors.pink,
-                    //   child: Row(
-                    //     children: [
-                    //       Padding(
-                    //         padding: EdgeInsets.only(
-                    //             right: AppSizes.dynamicWidth(context, .01)),
-                    //         child:
-                    //       ),
-                    //       Padding(
-                    //         padding: EdgeInsets.only(
-                    //             left: AppSizes.dynamicWidth(context, .01)),
-                    //         child: SizedBox(
-                    //           height: AppSizes.dynamicHeight(context, .3),
-                    //           // height: double.infinity,
-                    //           // color: Colors.amber,
-                    //           child: Stack(
-                    //             children: [
-                    //               Align(
-                    //                 alignment: Alignment.bottomCenter,
-                    //                 child: Container(
-                    //                   height:
-                    //                       AppSizes.dynamicHeight(context, .42),
-                    //                   width: double.infinity,
-                    //                   padding: EdgeInsets.all(10),
-                    //                   decoration: BoxDecoration(
-                    //                       color: AppColors.customWhite,
-                    //                       border: Border.all(
-                    //                           color: AppColors.green),
-                    //                       borderRadius:
-                    //                           BorderRadius.circular(30.r)),
-                    //                   child: Column(
-                    //                     children: [
-                    //                       Padding(
-                    //                         padding: EdgeInsets.only(
-                    //                             top: AppSizes.dynamicHeight(
-                    //                                 context, .06)),
-                    //                         child:
-                    //                             headingRow(AppColors.noColor),
-                    //                       ),
-                    //                       Expanded(
-                    //                           child: ListView.builder(
-                    //                               itemCount: 10,
-                    //                               itemBuilder:
-                    //                                   ((context, index) {
-                    //                                 return paymentDetailsRow(
-                    //                                     AppColors.lightGrey,
-                    //                                     '#1112',
-                    //                                     'Safin Riaz',
-                    //                                     '11-09-2021',
-                    //                                     'Tk. 1000');
-                    //                               })))
-                    //                     ],
-                    //                   ),
-                    //                 ),
-                    //               ),
-                    //               Positioned(
-                    //                 top: AppSizes.dynamicHeight(context, .035),
-                    //                 left: 0,
-                    //                 right: 0,
-                    //                 child: Row(
-                    //                   mainAxisAlignment:
-                    //                       MainAxisAlignment.center,
-                    //                   children: [
-                    //                     paymentStatus('TK. 50,000', 'Total Due',
-                    //                         AppColors.customWhite),
-                    //                   ],
-                    //                 ),
-                    //               )
-                    //             ],
-                    //           ),
-                    //         ),
-                    //       ),
-                    //     ],
-                    //   ),
-                    // ),
-                  ],
-                ),
+            CircleAvatar(
+              radius: 20,
+              backgroundColor: AppColors.primaryColor,
+              child: Image.asset(
+                'assets/png/wp2398385 1.png',
+                height: AppSizes.dynamicHeight(context, 0.07),
+                width: AppSizes.dynamicWidth(context, 0.07),
               ),
             ),
-            // Expanded(
-            //     flex: 2,
-            //     child: Container(
-            //       padding: EdgeInsets.symmetric(vertical: 20,horizontal: 10),
-            //       height: double.infinity,
-            //       decoration: BoxDecoration(
-            //           color: AppColors.lightGrey,
-            //           borderRadius:
-            //               BorderRadius.only(topLeft: Radius.circular(30.r))),
-
-            //   child: Column(children: [
-            //     Padding(
-            //       padding: const EdgeInsets.symmetric(vertical:15),
-            //       child: Container(
-            //   height: 60.h,
-            //   width: 407.w,
-            //   decoration: BoxDecoration(
-            //         // border: Border.all(color: AppColors.green),
-            //         color: AppColors.customWhite,
-            //         borderRadius: BorderRadius.circular(100)),
-            //   padding: EdgeInsets.symmetric(horizontal: 10),
-            //   child: Align(
-            //       alignment: Alignment.centerRight,
-            //       child: TextField(
-            //         cursorColor: AppColors.green,
-            //         decoration: InputDecoration(
-            //             border: InputBorder.none,
-            //             suffixIcon: Icon(
-            //               Icons.search,
-            //               color: AppColors.greyText,
-            //             ),
-            //             contentPadding: EdgeInsets.only(top: 5, left: 10)),
-            //       ),
-            //   ),
-            // ),
-            //     ),
-            // Expanded(child: ListView.builder(
-            //   itemCount: 15,
-            //   itemBuilder:((context, index) {
-            //     return searchResultsRow('Ruhul Amin Tusar ', '01824696930', 'writetusar@gmail.com', 'active');
-            //   })))
-            //   ],),
-            //     )),
           ],
-        ));
+        ),
+      ),
+      drawer: AdminDrawer(),
+      body: Container(
+          decoration: BoxDecoration(
+            color: AppColors.customWhite,
+            borderRadius: BorderRadius.circular(30.r),
+          ),
+          // height: AppSizes.dynamicHeight(context, .7),
+          child: Column(
+            children: [
+              Container(
+                // color: Colors.amber,
+                height: AppSizes.dynamicHeight(context, .9),
+                padding: EdgeInsets.all(5),
+                child: SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      text(context, 'Payment Request ', 46.sp, AppColors.green),
+                      Container(
+                        width: AppSizes.dynamicWidth(context, 1),
+                        height: AppSizes.dynamicHeight(context, .3),
+                        // color: Colors.amber,
+                        child: Padding(
+                          padding: EdgeInsets.only(
+                              bottom: AppSizes.dynamicHeight(context, .01)),
+                          child: ListView.builder(
+                              itemCount: 5,
+                              itemBuilder: ((context, index) {
+                                return paymentsRow(
+                                    'assets/png/charles.png',
+                                    'Ruhul Amin Tusar',
+                                    '11/08/2021 12:30 pm',
+                                    'Bkash',
+                                    '01824696900',
+                                    '500',
+                                    '510',
+                                    'Pending');
+                              })),
+                        ),
+                      ),
+                      Container(
+                        height: AppSizes.dynamicHeight(context, .4),
+                        width: double.infinity,
+                        // color: Colors.amber,
+                        child: Stack(
+                          children: [
+                            Align(
+                              alignment: Alignment.bottomCenter,
+                              child: Container(
+                                height: AppSizes.dynamicHeight(context, .35),
+                                width: double.infinity,
+                                padding: EdgeInsets.all(10),
+                                decoration: BoxDecoration(
+                                    color: AppColors.lightGrey,
+                                    borderRadius: BorderRadius.circular(30.r)),
+                                child: Column(
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                          top: AppSizes.dynamicHeight(
+                                              context, .03)),
+                                      child: headingRow(AppColors.customWhite),
+                                    ),
+                                    Container(
+                                      height:
+                                          AppSizes.dynamicHeight(context, .21),
+                                      // color: Colors.blue,
+                                      width: double.infinity,
+                                      child: ListView.builder(
+                                          itemCount: 10,
+                                          itemBuilder: ((context, index) {
+                                            return paymentDetailsRow(
+                                                AppColors.customWhite,
+                                                '#1112',
+                                                'Safin Riaz',
+                                                '11-09-2021',
+                                                'Tk. 1000');
+                                          })),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              top: AppSizes.dynamicHeight(context, .008),
+                              left: 0,
+                              right: 0,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  paymentStatus('TK. 50,000', 'Total Paid',
+                                      AppColors.customWhite),
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      AppSizes.heightBox(context, .02),
+                      Container(
+                        height: AppSizes.dynamicHeight(context, .4),
+                        width: double.infinity,
+                        // color: Colors.amber,
+                        child: Stack(
+                          children: [
+                            Align(
+                              alignment: Alignment.bottomCenter,
+                              child: Container(
+                                height: AppSizes.dynamicHeight(context, .35),
+                                width: double.infinity,
+                                padding: EdgeInsets.all(10),
+                                decoration: BoxDecoration(
+                                    color: AppColors.customWhite,
+                                    border: Border.all(color: AppColors.green),
+                                    borderRadius: BorderRadius.circular(30.r)),
+                                child: Column(
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                          top: AppSizes.dynamicHeight(
+                                              context, .03)),
+                                      child: headingRow(AppColors.noColor),
+                                    ),
+                                    Container(
+                                      height:
+                                          AppSizes.dynamicHeight(context, .21),
+                                      // color: Colors.blue,
+                                      width: double.infinity,
+                                      child: ListView.builder(
+                                          itemCount: 10,
+                                          itemBuilder: ((context, index) {
+                                            return paymentDetailsRow(
+                                                AppColors.customWhite,
+                                                '#1112',
+                                                'Safin Riaz',
+                                                '11-09-2021',
+                                                'Tk. 1000');
+                                          })),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              top: AppSizes.dynamicHeight(context, .008),
+                              left: 0,
+                              right: 0,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  paymentStatus('TK. 50,000', 'Total Due',
+                                      AppColors.customWhite),
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      AppSizes.heightBox(context, .02),
+
+                      Container(
+                        
+                        height:AppSizes.dynamicHeight(context, .4),
+                        padding: EdgeInsets.symmetric(
+                            vertical: 20, horizontal: 10),
+                        decoration: BoxDecoration(
+                            color: AppColors.lightGrey,
+                            borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(30.r))),
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(vertical: 15),
+                              child: Container(
+                                height: 20.h,
+                                width: AppSizes.dynamicWidth(context, .8),
+                                decoration: BoxDecoration(
+                                    // border: Border.all(color: AppColors.green),
+                                    color: AppColors.customWhite,
+                                    borderRadius:
+                                        BorderRadius.circular(100)),
+                                padding:
+                                    EdgeInsets.symmetric(horizontal: 10),
+                                child: Align(
+                                  alignment: Alignment.centerRight,
+                                  child: TextField(
+                                    cursorColor: AppColors.green,
+                                    decoration: InputDecoration(
+                                        border: InputBorder.none,
+                                        // suffixIcon: Icon(
+                                        //   Icons.search,
+                                        //   color: AppColors.greyText,
+                                        // ),
+                                        contentPadding: EdgeInsets.only(
+                                            top: 5, left: 10)),
+                                  ),
+                                ),
+                              ),
+                            ),
+
+                            Container(
+                        height:AppSizes.dynamicHeight(context, .25),
+                              child: ListView.builder(
+                                  itemCount: 15,
+                                  itemBuilder: ((context, index) {
+                                    return searchResultsRow(
+                                        'Ruhul Amin Tusar ',
+                                        '01824696930',
+                                        'writetusar@gmail.com',
+                                        'active');
+                                  })),
+                            )
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          )),
+    );
   }
 
   Widget paymentStatus(
@@ -246,7 +284,7 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      width: 394.w,
+      width: 594.w,
       height: 60.h,
       padding: EdgeInsets.symmetric(horizontal: 10),
       decoration: BoxDecoration(
@@ -383,7 +421,7 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Container(
-        width: size.width ,
+        width: size.width,
         height: 31.h,
         decoration: BoxDecoration(
             color: bgColor, borderRadius: BorderRadius.circular(100)),
@@ -395,9 +433,9 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
             VerticalDivider(),
             text(context, 'Details', 34.sp, AppColors.customBlack),
             VerticalDivider(),
-            text(context, 'Date', 34.sp,AppColors.customBlack),
+            text(context, 'Date', 34.sp, AppColors.customBlack),
             VerticalDivider(),
-            text(context, 'Amount',34.sp, AppColors.customBlack),
+            text(context, 'Amount', 34.sp, AppColors.customBlack),
           ],
         ),
       ),
@@ -411,7 +449,7 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Container(
-        width: size.width ,
+        width: size.width,
         height: 40.h,
         decoration: BoxDecoration(
             // color:bgColor ,
@@ -423,7 +461,7 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 text(context, serial, 34.sp, AppColors.customBlack),
-                text(context, details,34.sp, AppColors.customBlack),
+                text(context, details, 34.sp, AppColors.customBlack),
                 text(context, date, 34.sp, AppColors.customBlack),
                 text(context, amount, 34.sp, AppColors.customBlack),
               ],
@@ -441,8 +479,8 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Container(
-        width: size.width * .3,
-        height: 47.h,
+        width: size.width * .9,
+        height: 37.h,
         decoration: BoxDecoration(
             color: AppColors.customWhite,
             borderRadius: BorderRadius.circular(30)),
@@ -456,7 +494,7 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
               children: [
                 Row(
                   children: [
-                    text(context, name, AppSizes.dynamicWidth(context, .006),
+                    text(context, name, AppSizes.dynamicWidth(context, .02),
                         AppColors.customBlack,
                         bold: true),
                   ],
@@ -468,7 +506,7 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
                       child: text(
                           context,
                           id,
-                          AppSizes.dynamicWidth(context, .006),
+                          AppSizes.dynamicWidth(context, .02),
                           AppColors.greyText),
                     ),
                     Padding(
@@ -476,7 +514,7 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
                       child: text(
                           context,
                           gmial,
-                          AppSizes.dynamicWidth(context, .006),
+                          AppSizes.dynamicWidth(context, .02),
                           AppColors.greyText),
                     ),
                   ],
@@ -484,8 +522,8 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
               ],
             ),
             Container(
-              height: 35.h,
-              width: 126.w,
+              height: 30.h,
+              width: AppSizes.dynamicWidth(context, .2),
               decoration: BoxDecoration(
                   // border: Border.all(color: AppColors.green),
                   color: AppColors.lightGrey,
@@ -497,7 +535,7 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
                   text(context, status, 10, AppColors.greyText),
                   Icon(
                     Icons.keyboard_arrow_down,
-                    size: 20,
+                    size: 10,
                     color: AppColors.green,
                   ),
                 ],
