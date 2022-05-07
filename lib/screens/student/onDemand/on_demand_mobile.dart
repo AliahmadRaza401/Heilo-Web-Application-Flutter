@@ -334,8 +334,8 @@ class _OnDemandMobileState extends State<OnDemandMobile> {
                   ),
                 ),
                 SizedBox(
-                        height: AppSizes.dynamicHeight(context, 0.01),
-                      ),
+                  height: AppSizes.dynamicHeight(context, 0.01),
+                ),
                 Container(
                   // width: 771.w,
                   child: Row(
@@ -359,7 +359,6 @@ class _OnDemandMobileState extends State<OnDemandMobile> {
                           ),
                         ],
                       ),
-                    
                       Row(
                         children: [
                           Radio(
@@ -375,7 +374,7 @@ class _OnDemandMobileState extends State<OnDemandMobile> {
                           Text(
                             'FeMale',
                             style: TextStyle(
-                              fontSize:85.sp,
+                              fontSize: 85.sp,
                             ),
                           ),
                         ],
@@ -490,60 +489,6 @@ class _OnDemandMobileState extends State<OnDemandMobile> {
                     },
                   ),
                 ),
-                // Row(
-                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                //   children: [
-                //     Column(
-                //       children: [
-                //         SizedBox(
-                //           // width: AppSizes.dynamicWidth(context, 0.9),
-                //           height: 700.h,
-                //           child: ListView.builder(
-                //             itemCount: 6,
-                //             itemBuilder: (context, i) {
-                //               return profileCard(context);
-                //             },
-                //           ),
-                //         ),
-                //       ],
-                //     ),
-                //     // Container(
-                //     //   width: 526.w,
-                //     //   height: 740.h,
-                //     //   decoration: BoxDecoration(
-                //     //     color: AppColors.customGrey,
-                //     //     borderRadius: BorderRadius.circular(30.r),
-                //     //   ),
-                //     //   padding: EdgeInsets.symmetric(
-                //     //     vertical: 16.h,
-                //     //     horizontal: 25.w,
-                //     //   ),
-                //     //   child: Column(
-                //     //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                //     //     crossAxisAlignment: CrossAxisAlignment.start,
-                //     //     children: [
-                //     //       text(
-                //     //         context,
-                //     //         "Notifications",
-                //     //         18.sp,
-                //     //         AppColors.customGreen,
-                //     //       ),
-                //     //       SizedBox(
-                //     //         width: 460.w,
-                //     //         height: 660.h,
-                //     //         child: ListView.builder(
-                //     //           itemCount: 6,
-                //     //           itemBuilder: (context, i) {
-                //     //             return notificationCard(context);
-                //     //           },
-                //     //         ),
-                //     //       ),
-                //     //     ],
-                //     //   ),
-                //     // ),
-
-                //   ],
-                // ),
               ],
             ),
           ),
@@ -568,47 +513,98 @@ Widget profileCard(context) {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          CircleAvatar(
-            radius: 130.r,
-            backgroundImage: const AssetImage(
-              "assets/png/wp2398385 1.png",
-            ),
-          ),
           Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              text(
-                context,
-                "SAKIB ABDULLAH",
-                65.sp,
-                AppColors.customBlack,
-                bold: true,
-              ),
-              Wrap(
+              Stack(
+                overflow: Overflow.visible,
                 children: [
-                  text(
-                      context,
-                      "bangladesh University Of Professionals\nAccounting , Finance, English, ICT ",
-                      65.sp,
-                      AppColors.customBlack,
-                      maxLines: 1),
+                  CircleAvatar(
+                    radius: 130.r,
+                    backgroundImage: const AssetImage(
+                      "assets/png/wp2398385 1.png",
+                    ),
+                  ),
+                  Positioned(
+                    top: -5,
+                    right: -40,
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 7,
+                        vertical: 3,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Color(0xffC4C4C4).withOpacity(0.5),
+                        borderRadius: BorderRadius.circular(50),
+                      ),
+                      child: Row(
+                        children: [
+                          Image.asset('assets/png/star.png'),
+                          text(
+                            context,
+                            "4.5",
+                            65.sp,
+                            Colors.black,
+                            bold: true,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ],
           ),
+          // CircleAvatar(
+          //   radius: 130.r,
+          //   backgroundImage: const AssetImage(
+          //     "assets/png/wp2398385 1.png",
+          //   ),
+          // ),
+          SizedBox(
+            width: AppSizes.dynamicWidth(context, 0.03),
+          ),
+          Padding(
+            padding:
+                EdgeInsets.only(top: AppSizes.dynamicHeight(context, 0.03)),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                text(
+                  context,
+                  "SAKIB ABDULLAH",
+                  70.sp,
+                  AppColors.customBlack,
+                  bold: true,
+                ),
+                Wrap(
+                  children: [
+                    text(context, "bangladesh University Of Professionals",
+                        65.sp, AppColors.customBlack,
+                        maxLines: 1),
+                  ],
+                ),
+               
+              ],
+            ),
+          ),
+           SizedBox(
+                  width: AppSizes.dynamicWidth(context, 0.01),
+                ),
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Container(
-                height: 25.h,
-                width: AppSizes.dynamicWidth(context, 0.2),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10.r),
+                  height: 25.h,
+                  width: AppSizes.dynamicWidth(context, 0.2),
+                  decoration: BoxDecoration(
+               color: Colors.white,
+               borderRadius: BorderRadius.circular(10.r),
+                  ),
+                  child:
+                 Center(child: text(context, "450/hr", 65.sp, Colors.black)),
                 ),
-                child:
-                    Center(child: text(context, "450/hr", 65.sp, Colors.black)),
-              ),
               Container(
                 height: 25.h,
                 width: AppSizes.dynamicWidth(context, 0.2),

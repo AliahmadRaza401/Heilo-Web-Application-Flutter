@@ -75,7 +75,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30.r),
                             border: Border.all(
-                                width: 0.5, color: Color(0xffC4C4C4)),
+                                width: 0.5, color: const Color(0xffC4C4C4)),
                           ),
                           child: text(
                             context,

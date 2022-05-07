@@ -192,17 +192,25 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                           SizedBox(
                             height: 60.h,
                           ),
-                          text(
-                              context,
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
-                              14.0,
-                              AppColors.customBlack,
-                              maxLines: 8),
+                          Container(
+                            padding: EdgeInsets.all(
+                                AppSizes.dynamicHeight(context, 0.01)),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(60.r),
+                                border: Border.all(
+                                    width: 2, color: const Color(0xffE0E0E0))),
+                            child: text(
+                                context,
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
+                                14.0,
+                                AppColors.customBlack,
+                                maxLines: 8),
+                          ),
                         ],
                       ),
                     ),
                     Positioned(
-                        top: -80.0,
+                        top: -120.0,
                         right: 0,
                         left: 0,
                         // (background container size) - (circle height / 2)
@@ -223,8 +231,8 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                                 ),
                               ),
                               Positioned(
-                                top: 50,
-                                right: -10,
+                                top: 70,
+                                right: -32,
                                 child: Container(
                                   padding: const EdgeInsets.symmetric(
                                     horizontal: 10,
@@ -307,15 +315,15 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
 
   Widget greyWidget1() {
     return Container(
-      // width: 980.w,
-      // height: 160.h,
       decoration: BoxDecoration(
-          color: Color(0xffF1F1F1), borderRadius: BorderRadius.circular(30.r)),
+        color: const Color(0xffF1F1F1),
+        borderRadius: BorderRadius.circular(90.r),
+      ),
       padding: EdgeInsets.only(
-        left: 60.w,
-        right: 60.w,
-        top: 20.h,
-        bottom: 20.h,
+        left: AppSizes.dynamicHeight(context, 0.02),
+        right: AppSizes.dynamicHeight(context, 0.02),
+        top: AppSizes.dynamicHeight(context, 0.03),
+        bottom: AppSizes.dynamicHeight(context, 0.03),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -325,23 +333,26 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                width: AppSizes.dynamicWidth(context, 0.3),
-                height: AppSizes.dynamicHeight(context, 0.020),
+                width: AppSizes.dynamicWidth(context, 0.45),
+                height: AppSizes.dynamicHeight(context, 0.04),
                 decoration: BoxDecoration(
-                    color: const Color(0xff3DDEA5),
-                    borderRadius: BorderRadius.circular(20)),
+                  color: const Color(0xff3DDEA5),
+                  borderRadius: BorderRadius.circular(130.r),
+                ),
                 child: Align(
                   alignment: Alignment.center,
-                  child: textWidget(
+                  child: text(
+                    context,
                     "Basic Information",
-                    FontWeight.w600,
-                    0xffffffff,
-                    55.sp,
+                    79.sp,
+                    AppColors.customWhite,
+                    bold: false,
                   ),
                 ),
               ),
               Container(
-                width: AppSizes.dynamicWidth(context, 0.3),
+                width: AppSizes.dynamicWidth(context, 0.15),
+                height: AppSizes.dynamicHeight(context, 0.04),
                 decoration: BoxDecoration(
                     color: const Color(0xffC4C4C4),
                     borderRadius: BorderRadius.circular(20)),
@@ -351,7 +362,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                     "Edit",
                     FontWeight.w600,
                     0xff3DDEA5,
-                    18,
+                    79.sp,
                   ),
                 ),
               ),
@@ -361,17 +372,21 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
             height: 20.h,
           ),
           Container(
-            padding: const EdgeInsets.only(top: 4, bottom: 4, left: 10),
+            padding: EdgeInsets.only(
+              left: AppSizes.dynamicWidth(context, 0.02),
+              // top: AppSizes.dynamicHeight(context, 0.01),
+            ),
             width: AppSizes.dynamicWidth(context, 0.9),
+            height: AppSizes.dynamicHeight(context, 0.09),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
-                width: 1,
+                width: 2,
                 color: const Color(0xffC4C4C4),
               ),
             ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 textWidget(
@@ -379,6 +394,9 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                   FontWeight.w300,
                   0xff7d7d7d,
                   45.sp,
+                ),
+                SizedBox(
+                  height: AppSizes.dynamicHeight(context, 0.02),
                 ),
                 textWidget(
                   "Sakib  Abdullah",
@@ -397,19 +415,20 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
             children: [
               Container(
                 padding: EdgeInsets.only(
-                  left: AppSizes.dynamicWidth(context, 0.03),
-                  top: AppSizes.dynamicWidth(context, 0.01),
+                  left: AppSizes.dynamicWidth(context, 0.02),
+                  top: AppSizes.dynamicHeight(context, 0.01),
                 ),
+                height: AppSizes.dynamicHeight(context, 0.09),
                 width: AppSizes.dynamicWidth(context, 0.4),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(
-                    width: 1,
+                    width: 2,
                     color: const Color(0xffC4C4C4),
                   ),
                 ),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
@@ -417,7 +436,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                         "Division",
                         FontWeight.w300,
                         0xff7d7d7d,
-                        45.sp,
+                        65.sp,
                       ),
                     ),
                     DropdownButton(
@@ -435,7 +454,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                             items,
                             style: TextStyle(
                               color: Colors.black,
-                              fontSize: 45.sp,
+                              fontSize: 65.sp,
                             ),
                           ),
                         );
@@ -452,22 +471,21 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                 ),
               ),
               Container(
-                padding: EdgeInsets.all(
-                  AppSizes.dynamicWidth(
-                    context,
-                    0.04,
-                  ),
+                padding: EdgeInsets.only(
+                  left: AppSizes.dynamicWidth(context, 0.02),
+                  top: AppSizes.dynamicHeight(context, 0.01),
                 ),
-                width: AppSizes.dynamicWidth(context, 0.39),
+                height: AppSizes.dynamicHeight(context, 0.09),
+                width: AppSizes.dynamicWidth(context, 0.4),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(
-                    width: 1,
+                    width: 2,
                     color: const Color(0xffC4C4C4),
                   ),
                 ),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     textWidget(
@@ -495,19 +513,20 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
           ),
           Container(
             padding: EdgeInsets.only(
-              left: AppSizes.dynamicWidth(context, 0.03),
-              top: AppSizes.dynamicWidth(context, 0.01),
+              left: AppSizes.dynamicWidth(context, 0.02),
+              top: AppSizes.dynamicHeight(context, 0.01),
             ),
+            height: AppSizes.dynamicHeight(context, 0.09),
             width: AppSizes.dynamicWidth(context, 0.9),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
-                width: 1,
+                width: 2,
                 color: const Color(0xffC4C4C4),
               ),
             ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
@@ -555,20 +574,20 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
           ),
           Container(
             padding: EdgeInsets.only(
-              top: AppSizes.dynamicWidth(context, 0.02),
-              bottom: AppSizes.dynamicWidth(context, 0.02),
-              left: AppSizes.dynamicWidth(context, 0.03),
+              left: AppSizes.dynamicWidth(context, 0.02),
+              // top: AppSizes.dynamicHeight(context, 0.01),
             ),
             width: AppSizes.dynamicWidth(context, 0.9),
+            height: AppSizes.dynamicHeight(context, 0.09),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
-                width: 1,
+                width: 2,
                 color: const Color(0xffC4C4C4),
               ),
             ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 textWidget(
@@ -594,20 +613,20 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
           ),
           Container(
             padding: EdgeInsets.only(
-              top: AppSizes.dynamicWidth(context, 0.02),
-              bottom: AppSizes.dynamicWidth(context, 0.02),
-              left: AppSizes.dynamicWidth(context, 0.03),
+              left: AppSizes.dynamicWidth(context, 0.02),
+              top: AppSizes.dynamicHeight(context, 0.01),
             ),
             width: AppSizes.dynamicWidth(context, 0.9),
+            height: AppSizes.dynamicHeight(context, 0.09),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
-                width: 1,
+                width: 2,
                 color: const Color(0xffC4C4C4),
               ),
             ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 textWidget(
@@ -635,15 +654,15 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
 
   Widget greyWidget2() {
     return Container(
-      // width: 980.w,
-      // height: 160.h,
       decoration: BoxDecoration(
-          color: Color(0xffF1F1F1), borderRadius: BorderRadius.circular(30.r)),
+        color: const Color(0xffF1F1F1),
+        borderRadius: BorderRadius.circular(90.r),
+      ),
       padding: EdgeInsets.only(
-        left: 60.w,
-        right: 60.w,
-        top: 20.h,
-        bottom: 20.h,
+        left: AppSizes.dynamicHeight(context, 0.02),
+        right: AppSizes.dynamicHeight(context, 0.02),
+        top: AppSizes.dynamicHeight(context, 0.03),
+        bottom: AppSizes.dynamicHeight(context, 0.03),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -653,23 +672,26 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                width: AppSizes.dynamicWidth(context, 0.3),
-                height: AppSizes.dynamicHeight(context, 0.020),
+                width: AppSizes.dynamicWidth(context, 0.45),
+                height: AppSizes.dynamicHeight(context, 0.04),
                 decoration: BoxDecoration(
-                    color: const Color(0xff3DDEA5),
-                    borderRadius: BorderRadius.circular(20)),
+                  color: const Color(0xff3DDEA5),
+                  borderRadius: BorderRadius.circular(130.r),
+                ),
                 child: Align(
                   alignment: Alignment.center,
-                  child: textWidget(
+                  child: text(
+                    context,
                     "Education",
-                    FontWeight.w600,
-                    0xffffffff,
-                    55.sp,
+                    79.sp,
+                    AppColors.customWhite,
+                    bold: false,
                   ),
                 ),
               ),
               Container(
-                width: AppSizes.dynamicWidth(context, 0.3),
+                width: AppSizes.dynamicWidth(context, 0.15),
+                height: AppSizes.dynamicHeight(context, 0.04),
                 decoration: BoxDecoration(
                     color: const Color(0xffC4C4C4),
                     borderRadius: BorderRadius.circular(20)),
@@ -679,7 +701,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                     "Edit",
                     FontWeight.w600,
                     0xff3DDEA5,
-                    18,
+                    79.sp,
                   ),
                 ),
               ),
@@ -689,17 +711,21 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
             height: 20.h,
           ),
           Container(
-            padding: const EdgeInsets.only(top: 4, bottom: 4, left: 10),
+            padding: EdgeInsets.only(
+              left: AppSizes.dynamicWidth(context, 0.02),
+              // top: AppSizes.dynamicHeight(context, 0.01),
+            ),
             width: AppSizes.dynamicWidth(context, 0.9),
+            height: AppSizes.dynamicHeight(context, 0.09),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
-                width: 1,
+                width: 2,
                 color: const Color(0xffC4C4C4),
               ),
             ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 textWidget(
@@ -707,6 +733,9 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                   FontWeight.w300,
                   0xff7d7d7d,
                   45.sp,
+                ),
+                SizedBox(
+                  height: AppSizes.dynamicHeight(context, 0.02),
                 ),
                 textWidget(
                   "Maple Leaf International School and College",
@@ -722,19 +751,20 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
           ),
           Container(
             padding: EdgeInsets.only(
-              left: AppSizes.dynamicWidth(context, 0.03),
-              top: AppSizes.dynamicWidth(context, 0.01),
+              left: AppSizes.dynamicWidth(context, 0.02),
+              // top: AppSizes.dynamicHeight(context, 0.01),
             ),
             width: AppSizes.dynamicWidth(context, 0.9),
+            height: AppSizes.dynamicHeight(context, 0.09),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
-                width: 1,
+                width: 2,
                 color: const Color(0xffC4C4C4),
               ),
             ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
@@ -751,7 +781,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
 
                   // Down Arrow Icon
                   icon: const Icon(Icons.keyboard_arrow_down),
-
+                  isExpanded: true,
                   // Array list of items
                   items: items.map((String items) {
                     return DropdownMenuItem(
@@ -781,19 +811,23 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
           ),
           Container(
             padding: EdgeInsets.only(
-              left: AppSizes.dynamicWidth(context, 0.03),
-              top: AppSizes.dynamicWidth(context, 0.01),
+              left: AppSizes.dynamicWidth(context, 0.02),
+              top: AppSizes.dynamicHeight(context, 0.01),
             ),
             width: AppSizes.dynamicWidth(context, 0.9),
+            height: AppSizes.dynamicHeight(context, 0.09),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
-                width: 1,
+                width: 2,
                 color: const Color(0xffC4C4C4),
               ),
             ),
+            //  SizedBox(
+            //       height: AppSizes.dynamicHeight(context, 0.02),
+            //     ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
@@ -804,6 +838,9 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                     45.sp,
                   ),
                 ),
+                // SizedBox(
+                //   height: AppSizes.dynamicHeight(context, 0.02),
+                // ),
                 DropdownButton(
                   iconDisabledColor: const Color(0xff11B990),
                   // Initial Value
@@ -840,20 +877,24 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
             height: 20.h,
           ),
           Container(
-            padding: EdgeInsets.only(
-              left: AppSizes.dynamicWidth(context, 0.03),
-              top: AppSizes.dynamicWidth(context, 0.01),
+             padding: EdgeInsets.only(
+              left: AppSizes.dynamicWidth(context, 0.02),
+              top: AppSizes.dynamicHeight(context, 0.01),
             ),
             width: AppSizes.dynamicWidth(context, 0.9),
+            height: AppSizes.dynamicHeight(context, 0.09),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
-                width: 1,
+                width: 2,
                 color: const Color(0xffC4C4C4),
               ),
             ),
+            //  SizedBox(
+            //       height: AppSizes.dynamicHeight(context, 0.02),
+            //     ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
@@ -900,20 +941,24 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
             height: 20.h,
           ),
           Container(
-            padding: EdgeInsets.only(
-              left: AppSizes.dynamicWidth(context, 0.03),
-              top: AppSizes.dynamicWidth(context, 0.01),
+             padding: EdgeInsets.only(
+              left: AppSizes.dynamicWidth(context, 0.02),
+              top: AppSizes.dynamicHeight(context, 0.01),
             ),
             width: AppSizes.dynamicWidth(context, 0.9),
+            height: AppSizes.dynamicHeight(context, 0.09),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
-                width: 1,
+                width: 2,
                 color: const Color(0xffC4C4C4),
               ),
             ),
+            //  SizedBox(
+            //       height: AppSizes.dynamicHeight(context, 0.02),
+            //     ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
@@ -963,17 +1008,15 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
 
   Widget greyWidget3() {
     return Container(
-      // width: 980.w,
-      // height: 160.h,
       decoration: BoxDecoration(
-        color: Color(0xffF1F1F1),
-        borderRadius: BorderRadius.circular(10),
+        color: const Color(0xffF1F1F1),
+        borderRadius: BorderRadius.circular(90.r),
       ),
       padding: EdgeInsets.only(
-        left: AppSizes.dynamicWidth(context, 0.05),
-        right: AppSizes.dynamicWidth(context, 0.05),
-        top: AppSizes.dynamicHeight(context, 0.01),
-        bottom: AppSizes.dynamicHeight(context, 0.01),
+        left: AppSizes.dynamicHeight(context, 0.02),
+        right: AppSizes.dynamicHeight(context, 0.02),
+        top: AppSizes.dynamicHeight(context, 0.03),
+        bottom: AppSizes.dynamicHeight(context, 0.03),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -983,33 +1026,25 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                width: AppSizes.dynamicWidth(context, 0.3),
+                width: AppSizes.dynamicWidth(context, 0.45),
                 height: AppSizes.dynamicHeight(context, 0.04),
                 decoration: BoxDecoration(
-                    color: const Color(0xff3DDEA5),
-                    borderRadius: BorderRadius.circular(20)),
+                  color: const Color(0xff3DDEA5),
+                  borderRadius: BorderRadius.circular(130.r),
+                ),
                 child: Align(
                   alignment: Alignment.center,
-                  child: textWidget(
+                  child: text(
+                    context,
                     "Account Details",
-                    FontWeight.w600,
-                    0xffffffff,
-                    60.sp,
+                    79.sp,
+                    AppColors.customWhite,
+                    bold: false,
                   ),
                 ),
               ),
-              // SizedBox(
-              //   width: 20.w,
-              // ),
-              // textWidget(
-              //   "Change Password",
-              //   FontWeight.w600,
-              //   0xff3DDEA5,
-              //   50.sp,
-              // ),
-              // Expanded(child: Container()),
               Container(
-                width: AppSizes.dynamicWidth(context, 0.3),
+                width: AppSizes.dynamicWidth(context, 0.15),
                 height: AppSizes.dynamicHeight(context, 0.04),
                 decoration: BoxDecoration(
                     color: const Color(0xffC4C4C4),
@@ -1020,12 +1055,13 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                     "Edit",
                     FontWeight.w600,
                     0xff3DDEA5,
-                    60.sp,
+                    79.sp,
                   ),
                 ),
               ),
             ],
           ),
+
           SizedBox(height: AppSizes.dynamicHeight(context, 0.02)),
           // SizedBox(
           //   width: 20.w,
@@ -1038,12 +1074,22 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
           ),
           SizedBox(height: AppSizes.dynamicHeight(context, 0.02)),
           Container(
-            padding: EdgeInsets.all(6),
+            padding: EdgeInsets.only(
+              left: AppSizes.dynamicWidth(context, 0.02),
+              top: AppSizes.dynamicHeight(context, 0.01),
+            ),
             width: AppSizes.dynamicWidth(context, 0.9),
+            height: AppSizes.dynamicHeight(context, 0.09),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              border: Border.all(width: 0.5, color: Color(0xffC4C4C4)),
+              border: Border.all(
+                width: 2,
+                color: const Color(0xffC4C4C4),
+              ),
             ),
+            //  SizedBox(
+            //       height: AppSizes.dynamicHeight(context, 0.02),
+            //     ),
             child: textWidget(
               "Current Password",
               FontWeight.w300,
@@ -1054,12 +1100,22 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
           SizedBox(height: AppSizes.dynamicHeight(context, 0.02)),
 
           Container(
-            padding: EdgeInsets.all(6),
+              padding: EdgeInsets.only(
+              left: AppSizes.dynamicWidth(context, 0.02),
+              top: AppSizes.dynamicHeight(context, 0.01),
+            ),
             width: AppSizes.dynamicWidth(context, 0.9),
+            height: AppSizes.dynamicHeight(context, 0.09),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              border: Border.all(width: 0.5, color: Color(0xffC4C4C4)),
+              border: Border.all(
+                width: 2,
+                color: const Color(0xffC4C4C4),
+              ),
             ),
+            //  SizedBox(
+            //       height: AppSizes.dynamicHeight(context, 0.02),
+            //     ),
             child: textWidget(
               "New Password",
               FontWeight.w300,
@@ -1076,13 +1132,13 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
     return Container(
       decoration: BoxDecoration(
         color: const Color(0xffF1F1F1),
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(90.r),
       ),
       padding: EdgeInsets.only(
-        left: AppSizes.dynamicWidth(context, 0.05),
-        right: AppSizes.dynamicWidth(context, 0.05),
-        top: AppSizes.dynamicHeight(context, 0.01),
-        bottom: AppSizes.dynamicHeight(context, 0.01),
+        left: AppSizes.dynamicHeight(context, 0.02),
+        right: AppSizes.dynamicHeight(context, 0.02),
+        top: AppSizes.dynamicHeight(context, 0.03),
+        bottom: AppSizes.dynamicHeight(context, 0.03),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -1095,20 +1151,22 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                 width: AppSizes.dynamicWidth(context, 0.3),
                 height: AppSizes.dynamicHeight(context, 0.04),
                 decoration: BoxDecoration(
-                    color: const Color(0xff3DDEA5),
-                    borderRadius: BorderRadius.circular(20)),
+                  color: const Color(0xff3DDEA5),
+                  borderRadius: BorderRadius.circular(130.r),
+                ),
                 child: Align(
                   alignment: Alignment.center,
-                  child: textWidget(
+                  child: text(
+                    context,
                     "Attachments",
-                    FontWeight.w600,
-                    0xffffffff,
-                    60.sp,
+                    79.sp,
+                    AppColors.customWhite,
+                    bold: false,
                   ),
                 ),
               ),
               Container(
-                width: AppSizes.dynamicWidth(context, 0.3),
+                width: AppSizes.dynamicWidth(context, 0.15),
                 height: AppSizes.dynamicHeight(context, 0.04),
                 decoration: BoxDecoration(
                     color: const Color(0xffC4C4C4),
@@ -1119,7 +1177,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                     "Edit",
                     FontWeight.w600,
                     0xff3DDEA5,
-                    60.sp,
+                    79.sp,
                   ),
                 ),
               ),
@@ -1134,11 +1192,11 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
           ),
           SizedBox(height: AppSizes.dynamicHeight(context, 0.02)),
           Container(
-            padding: EdgeInsets.all(6),
+          // height: AppSizes.dynamicWidth(context, 0.09),
             width: AppSizes.dynamicWidth(context, 0.9),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              border: Border.all(width: 0.5, color: Color(0xffC4C4C4)),
+              border: Border.all(width: 2, color: Color(0xffC4C4C4)),
             ),
             // child: textWidget(
             //   "Current Password",
@@ -1148,25 +1206,28 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
             // ),
             child: Container(
               width: AppSizes.dynamicWidth(context, 0.7),
-              height: AppSizes.dynamicHeight(context, 0.03),
+              // height: AppSizes.dynamicHeight(context, 0.03),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25),
                 // color: AppColors.customGrey,
               ),
-              // padding: EdgeInsets.only(left: 12),
-              child: TextFormField(
-                decoration: InputDecoration(
-                    hintText: "Attachment...",
-                    hintStyle: TextStyle(
-                      color: const Color(0xff747474),
-                      fontSize: 60.sp,
-                    ),
-                    border: InputBorder.none,
-                    fillColor: Colors.white,
-                    suffixIcon: const Icon(
-                      Icons.attach_file,
-                      color: Color(0xff3DDEA5),
-                    )),
+              padding: EdgeInsets.only(left: AppSizes.dynamicWidth(context, 0.01)),
+              child: Align(
+                alignment: Alignment.center,
+                child: TextFormField(
+                  decoration: InputDecoration(
+                      hintText: "Attachment...",
+                      hintStyle: TextStyle(
+                        color: const Color(0xff747474),
+                        fontSize: 60.sp,
+                      ),
+                      border: InputBorder.none,
+                      fillColor: Colors.white,
+                      suffixIcon: const Icon(
+                        Icons.attach_file,
+                        color: Color(0xff3DDEA5),
+                      )),
+                ),
               ),
             ),
           ),

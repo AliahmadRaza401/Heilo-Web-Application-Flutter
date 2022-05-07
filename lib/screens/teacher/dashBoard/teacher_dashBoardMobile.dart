@@ -82,11 +82,6 @@ class _TeacherDashBoardMobileState extends State<TeacherDashBoardMobile> {
                     physics: const NeverScrollableScrollPhysics(),
                     itemCount: 8,
                     itemBuilder: (context, index) {
-                      // if (index == 0) {
-                      //   return Text("Information");
-                      // }
-                      // int listIndex = index - 1;
-                      // then you could use: widget.match.players[listIndex];
                       return Row(
                         children: [
                           cardWidget('assets/png/card1.png', 0xff000000),
@@ -176,16 +171,7 @@ class _TeacherDashBoardMobileState extends State<TeacherDashBoardMobile> {
                         borderRadius: BorderRadius.circular(30),
                         color: const Color(0xffF8F8F8),
                       ),
-                      // padding: EdgeInsets.only(
-                      //   left: 60.w,
-                      //   // right: 45.w,
-                      //   top: 17.h,
-                      //   // bottom: 5.h,
-                      // ),
-                      // padding: EdgeInsets.symmetric(
-                      //   vertical: 5.h,
-                      //   horizontal: 25.w,
-                      // ),
+                   
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
