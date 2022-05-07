@@ -80,7 +80,7 @@ class _QuizzWebState extends State<QuizzWeb> {
                                     "TEST YOURSELF \n KNOW YOURSELF",
                                     40.sp,
                                     AppColors.greenDark,
-                                    bold: FontWeight.bold,
+                                    bold: FontWeight.w900,
                                   ),
                                 ],
                               ),
@@ -505,7 +505,6 @@ class _QuizzWebState extends State<QuizzWeb> {
             borderRadius: BorderRadius.circular(10),
           ),
           child: Row(
-
             children: [
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -552,16 +551,14 @@ class _QuizzWebState extends State<QuizzWeb> {
                   ),
                 ],
               ),
-           
-           
-           Container(
-             height: 276.h,
-             width: 346,
-             decoration: BoxDecoration(
-               color: Colors.white,
-               borderRadius: BorderRadius.circular(15)
-             ),
-           ) ],
+              Container(
+                height: 276.h,
+                width: 346,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15)),
+              )
+            ],
           ),
         ),
       ],

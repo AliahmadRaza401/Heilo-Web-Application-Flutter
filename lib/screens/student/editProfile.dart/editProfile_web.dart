@@ -319,7 +319,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
               child: Container(
                 padding: EdgeInsets.only(
                   right: 20.w,
-                  top: 20.h,
+                  top: 50.h,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -631,7 +631,9 @@ class _EditProfileWebState extends State<EditProfileWeb> {
       width: 980.w,
       // height: 160.h,
       decoration: BoxDecoration(
-          color: Color(0xffF1F1F1), borderRadius: BorderRadius.circular(10)),
+        color: Color(0xffF1F1F1),
+        borderRadius: BorderRadius.circular(30.r),
+      ),
       padding: EdgeInsets.only(
         left: 60.w,
         right: 60.w,
@@ -663,6 +665,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
               ),
               Container(
                 width: 120.w,
+                height: 35.h,
                 decoration: BoxDecoration(
                     color: const Color(0xffC4C4C4),
                     borderRadius: BorderRadius.circular(20)),
@@ -855,7 +858,9 @@ class _EditProfileWebState extends State<EditProfileWeb> {
       width: 980.w,
       // height: 160.h,
       decoration: BoxDecoration(
-          color: Color(0xffF1F1F1), borderRadius: BorderRadius.circular(10)),
+        color: Color(0xffF1F1F1),
+        borderRadius: BorderRadius.circular(30.r),
+      ),
       padding: EdgeInsets.only(
         left: 60.w,
         right: 60.w,
@@ -889,7 +894,6 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                 width: 20.w,
               ),
               Container(
-             
                 child: textWidget(
                   "Change Password",
                   FontWeight.w600,
@@ -900,6 +904,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
               Expanded(child: Container()),
               Container(
                 width: 120.w,
+                  height: 35.h,
                 decoration: BoxDecoration(
                     color: const Color(0xffC4C4C4),
                     borderRadius: BorderRadius.circular(20)),
@@ -931,9 +936,8 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                     color: const Color(0xffC4C4C4),
                   ),
                 ),
-              
                 child: Align(
-              alignment: Alignment.center,
+                  alignment: Alignment.center,
                   child: textWidget(
                     "Current Password",
                     FontWeight.w300,
@@ -943,7 +947,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                 ),
               ),
               Container(
-                 width: 224.w,
+                width: 224.w,
                 height: 45.h,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15.r),
@@ -952,9 +956,8 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                     color: const Color(0xffC4C4C4),
                   ),
                 ),
-              
                 child: Align(
-               alignment: Alignment.center,
+                  alignment: Alignment.center,
                   child: textWidget(
                     "New Password",
                     FontWeight.w300,
@@ -975,7 +978,9 @@ class _EditProfileWebState extends State<EditProfileWeb> {
       width: 980.w,
       // height: 160.h,
       decoration: BoxDecoration(
-          color: Color(0xffF1F1F1), borderRadius: BorderRadius.circular(10)),
+        color: Color(0xffF1F1F1),
+        borderRadius: BorderRadius.circular(30.r),
+      ),
       padding: EdgeInsets.only(
         left: 60.w,
         right: 60.w,
@@ -1007,6 +1012,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
               ),
               Container(
                 width: 120.w,
+                  height: 35.h,
                 decoration: BoxDecoration(
                     color: const Color(0xffC4C4C4),
                     borderRadius: BorderRadius.circular(20)),

@@ -126,9 +126,8 @@ class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(30.r),
                                       border: Border.all(
-                                        color: Color(0xffF5F5F5),
-                                        width: 1.5
-                                      )),
+                                          color: Color(0xffF5F5F5),
+                                          width: 1.5)),
                                   height: 35.h,
                                   width: 138.w,
                                   child: Align(
@@ -148,7 +147,6 @@ class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
                             SizedBox(
                               height: 35.h,
                             ),
-                            
                             Container(
                               padding: EdgeInsets.all(10.h),
                               decoration: BoxDecoration(
@@ -360,8 +358,8 @@ class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
                                 borderRadius: BorderRadius.circular(20)),
                             child: Align(
                               alignment: Alignment.center,
-                              child: text(context, "Edit", 18.0.sp,
-                                  Color(0xff1BE59D),
+                              child: text(
+                                  context, "Edit", 18.0.sp, Color(0xff1BE59D),
                                   bold: false),
                             ),
                           ),
@@ -406,6 +404,9 @@ class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  SizedBox(
+                    height: 40.h,
+                  ),
                   greyWidget1(),
                   SizedBox(
                     height: 40.h,
@@ -447,13 +448,14 @@ class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
   Widget greyWidget1() {
     return Container(
       width: 800.w,
+
       // height: 160.h,
       decoration: BoxDecoration(
-          color: Color(0xffE0E0E0), borderRadius: BorderRadius.circular(30.r)),
+          color: Color(0xffF1F1F1), borderRadius: BorderRadius.circular(30.r)),
       padding: EdgeInsets.only(
         left: 60.w,
         right: 60.w,
-        top: 20.h,
+        top: 60.h,
         bottom: 20.h,
       ),
       child: Column(
@@ -709,7 +711,7 @@ class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
       width: 800.w,
       // height: 160.h,
       decoration: BoxDecoration(
-          color: AppColors.customGrey, borderRadius: BorderRadius.circular(10)),
+          color: Color(0xffF1F1F1), borderRadius: BorderRadius.circular(10)),
       padding: EdgeInsets.only(
         left: 60.w,
         right: 60.w,
@@ -932,7 +934,7 @@ class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
       width: 800.w,
       // height: 160.h,
       decoration: BoxDecoration(
-          color: AppColors.customGrey, borderRadius: BorderRadius.circular(10)),
+          color: Color(0xffF1F1F1), borderRadius: BorderRadius.circular(10)),
       padding: EdgeInsets.only(
         left: 60.w,
         right: 60.w,
@@ -1032,7 +1034,7 @@ class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
       width: 800.w,
       // height: 160.h,
       decoration: BoxDecoration(
-          color: AppColors.customGrey, borderRadius: BorderRadius.circular(10)),
+          color: Color(0xffF1F1F1), borderRadius: BorderRadius.circular(10)),
       padding: EdgeInsets.only(
         left: 60.w,
         right: 60.w,

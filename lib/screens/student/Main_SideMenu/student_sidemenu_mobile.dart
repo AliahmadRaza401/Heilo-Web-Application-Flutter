@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/screens/student/drawer/student_drawer.dart';
 import 'package:heilo/screens/student/onDemand/on_demand_mobile.dart';
 import 'package:heilo/screens/student/studentInbox/studentInboxMobile.dart';
+import 'package:heilo/screens/student/studentInbox/studentInboxMobile.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';

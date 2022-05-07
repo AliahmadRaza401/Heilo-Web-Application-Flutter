@@ -5,9 +5,8 @@ import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
 
+final GlobalKey<ScaffoldState> studentScafoldKey = GlobalKey();
 
-
-final GlobalKey<ScaffoldState> studentScafoldKey = GlobalKey(); 
 class DashBoardMobile extends StatefulWidget {
   const DashBoardMobile({Key? key}) : super(key: key);
 
@@ -20,41 +19,41 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-       key: studentScafoldKey,
-        appBar: AppBar(
-          elevation: 0,
-          backgroundColor: Colors.white,
-          leading: Builder(
-            builder: (BuildContext context) {
-              return IconButton(
-                icon: const Icon(
-                  Icons.menu,
-                  color: Colors.black,
-                  size: 30, // Changing Drawer Icon Size
-                ),
-                onPressed: () {
-                 studentScafoldKey.currentState!.openDrawer();
-                },
-                tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-              );
-            },
-          ),
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              CircleAvatar(
-                radius: 20,
-                backgroundColor: AppColors.primaryColor,
-                child: Image.asset(
-                  'assets/png/wp2398385 1.png',
-                  height: AppSizes.dynamicHeight(context, 0.07),
-                  width: AppSizes.dynamicWidth(context, 0.07),
-                ),
+      key: studentScafoldKey,
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: const Icon(
+                Icons.menu,
+                color: Colors.black,
+                size: 30, // Changing Drawer Icon Size
               ),
-            ],
-          ),
+              onPressed: () {
+                studentScafoldKey.currentState!.openDrawer();
+              },
+              tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+            );
+          },
         ),
-        drawer: StudentDrawer(),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            CircleAvatar(
+              radius: 20,
+              backgroundColor: AppColors.primaryColor,
+              child: Image.asset(
+                'assets/png/wp2398385 1.png',
+                height: AppSizes.dynamicHeight(context, 0.07),
+                width: AppSizes.dynamicWidth(context, 0.07),
+              ),
+            ),
+          ],
+        ),
+      ),
+      drawer: StudentDrawer(),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
@@ -89,28 +88,21 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
                       // then you could use: widget.match.players[listIndex];
                       return Row(
                         children: [
-                          cardWidget('assets/png/card1.png', 0xff000000),
-                          cardWidget('assets/png/card2.png', 0xff000000),
-                          cardWidget('assets/png/card3.png', 0xff000000),
-                          cardWidget('assets/png/card4.png', 0xff000000),
-                          cardWidget('assets/png/card1.png', 0xffFFFFFF),
-                          cardWidget('assets/png/card2.png', 0xff000000),
-                          cardWidget('assets/png/card3.png', 0xff000000),
-                          cardWidget('assets/png/card4.png', 0xff000000),
+                          cardWidget('assets/png/g1.png', 0xff000000),
+                          cardWidget('assets/png/g2.png', 0xff000000),
+                          cardWidget('assets/png/g3.png', 0xff000000),
+                          cardWidget('assets/png/g4.png', 0xff000000),
+                           cardWidget('assets/png/g1.png', 0xff000000),
+                          cardWidget('assets/png/g2.png', 0xff000000),
+                          cardWidget('assets/png/g3.png', 0xff000000),
+                          cardWidget('assets/png/g4.png', 0xff000000),
                         ],
                       );
                     }),
               ),
-
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //   children: [
-              //     cardWidget('assets/png/card1.png', 0xffFFFFFF),
-              //     cardWidget('assets/png/card2.png', 0xff000000),
-              //     cardWidget('assets/png/card3.png', 0xff000000),
-              //     cardWidget('assets/png/card4.png', 0xff000000),
-              //   ],
-              // ),
+              SizedBox(
+                      height: 20.h,
+                    ),
               Container(
                 // height: 556.h,
                 // width: 333.w,
@@ -131,19 +123,18 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(21)),
-                      child: const Align(
+                      child:  Align(
                         alignment: Alignment.center,
                         child: Text(
                           'Upcoming Sessions',
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 12,
+                            fontSize: 90.sp,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
                       ),
                     ),
-                    upcomingsessionData(),
                     SizedBox(
                       height: 20.h,
                     ),
@@ -156,13 +147,14 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
                       height: 20.h,
                     ),
                     upcomingsessionData(),
-                     SizedBox(
+                    SizedBox(
                       height: 20.h,
                     ),
+                    upcomingsessionData(),
+                   
                   ],
                 ),
               ),
-
               Container(
                 margin:
                     EdgeInsets.only(top: AppSizes.dynamicHeight(context, 0.1)),
