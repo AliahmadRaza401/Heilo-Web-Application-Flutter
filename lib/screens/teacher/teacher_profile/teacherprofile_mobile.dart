@@ -6,6 +6,7 @@ import 'package:heilo/screens/student/drawer/student_drawer.dart';
 import 'package:heilo/screens/teacher/drawer/teacher_drawer.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
+import 'package:heilo/widgets/buttons.dart';
 import 'package:heilo/widgets/text_widget.dart';
 
 class TeacherProfileMobile extends StatefulWidget {
@@ -106,8 +107,8 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
                       padding: EdgeInsets.only(
                         // top: 130.h,
                         top: AppSizes.dynamicHeight(context, 0.1),
-                        left: AppSizes.dynamicWidth(context, 0.02),
-                        right: 50.w,
+                        left: AppSizes.dynamicWidth(context, 0.2),
+                        right: AppSizes.dynamicWidth(context, 0.2),
                         bottom: AppSizes.dynamicHeight(context, 0.02),
                       ),
 
@@ -119,7 +120,7 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
                             context,
                             "Sakib Abdullah",
                             18.0,
-                            AppColors.greyText,
+                            AppColors.bblackText,
                             bold: true,
                           ),
                           // textWidget(
@@ -144,6 +145,44 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
                           //   14,
                           // ),
                           SizedBox(
+                            height: 25.h,
+                          ),
+
+                          Container(
+                            height: AppSizes.dynamicHeight(context, 0.04),
+                            width: AppSizes.dynamicHeight(context, 0.2),
+                            // padding: const EdgeInsets.only(
+                            //   top: 5,
+                            //   bottom: 5,
+                            // ),
+                            decoration: BoxDecoration(
+                              color: Color(0xff3DDEA5),
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                            child: Align(
+                              alignment: Alignment.center,
+                              child: text(
+                                context,
+                                "Hire Now",
+                                14.0,
+                                AppColors.bblackText,
+                                bold: true,
+                                // alignText: Alignment.center
+                              ),
+                            ),
+                          ),
+                          // Align(
+                          //   alignment: Alignment.center,
+                          //   child: coloredButton(
+                          //       context, 'Hire Now', Color(0xff3DDEA5),
+                          //       height: AppSizes.dynamicHeight(context, 0.04),
+                          //       width: AppSizes.dynamicHeight(context, 0.2),
+                          //       fontSize: 14.sp,
+                          //       fontColor: Color(0xffffffff),
+                          //       function: () {},
+                          //       radious: 10.r),
+                          // ),
+                          SizedBox(
                             height: AppSizes.dynamicHeight(context, 0.03),
                           ),
                           Row(
@@ -157,16 +196,16 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
                                 //   bottom: 5,
                                 // ),
                                 decoration: BoxDecoration(
-                                  color: AppColors.customDarkBlue,
+                                  color: Color(0xffEBEBEB),
                                   borderRadius: BorderRadius.circular(30),
                                 ),
                                 child: Align(
                                   alignment: Alignment.center,
                                   child: text(
                                     context,
-                                    "Tutions completed",
+                                    "Hourly Rate",
                                     14.0,
-                                    AppColors.customWhite,
+                                    AppColors.bblackText,
                                     bold: true,
                                     // alignText: Alignment.center
                                   ),
@@ -176,15 +215,14 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
                                 context,
                                 "150",
                                 14.0,
-                                AppColors.greytextText,
+                                Colors.black,
                                 bold: true,
                                 // alignText: Alignment.center
                               ),
                               // textWidget(
                               //   "150",
                               //   FontWeight.w600,
-                              //   0xff7D7D7D,
-                              //   14,
+                              // /Colors.black                   //   14,
                               // ),
                             ],
                           ),
@@ -202,7 +240,7 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
                                 //   bottom: 5,
                                 // ),
                                 decoration: BoxDecoration(
-                                  color: Color(0xffA279E6),
+                                  color: Color(0xffEBEBEB),
                                   borderRadius: BorderRadius.circular(
                                     30,
                                   ),
@@ -211,9 +249,9 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
                                   alignment: Alignment.center,
                                   child: text(
                                     context,
-                                    "Tutors referred",
+                                    "Students Reffered",
                                     14.0,
-                                    AppColors.customWhite,
+                                    AppColors.bblackText,
                                     bold: true,
                                     // alignText: Alignment.center
                                   ),
@@ -229,12 +267,60 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
                                 context,
                                 "150",
                                 14.0,
-                                AppColors.greytextText,
+                                Colors.black,
                                 bold: true,
                                 // alignText: Alignment.center
                               ),
                             ],
                           ),
+                          SizedBox(
+                            height: 10.h,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                height: AppSizes.dynamicHeight(context, 0.04),
+                                width: AppSizes.dynamicHeight(context, 0.2),
+                                // padding: const EdgeInsets.only(
+                                //   top: 5,
+                                //   bottom: 5,
+                                // ),
+                                decoration: BoxDecoration(
+                                  color: Color(0xffEBEBEB),
+                                  borderRadius: BorderRadius.circular(
+                                    30,
+                                  ),
+                                ),
+                                child: Align(
+                                  alignment: Alignment.center,
+                                  child: text(
+                                    context,
+                                    "Tution Completed",
+                                    14.0,
+                                    AppColors.bblackText,
+                                    bold: true,
+                                    // alignText: Alignment.center
+                                  ),
+                                  // child: textWidget(
+                                  //   "Tutors referred",
+                                  //   FontWeight.w600,
+                                  //   0xffffffff,
+                                  //   14,
+                                  // ),
+                                ),
+                              ),
+                              text(
+                                context,
+                                "150",
+                                14.0,
+                                Colors.black,
+                                bold: true,
+                                // alignText: Alignment.center
+                              ),
+                            ],
+                          ),
+
                           SizedBox(
                             height: AppSizes.dynamicHeight(context, 0.05),
                           ),
