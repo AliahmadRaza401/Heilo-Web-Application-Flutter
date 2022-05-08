@@ -9,7 +9,9 @@ import 'package:heilo/screens/teacher/Main_SideMenu/teacher_sidemenu_mobile.dart
 import 'package:heilo/screens/teacher/TeacherWallet/teacher_wallet.dart';
 import 'package:heilo/screens/teacher/TeacherWallet/teacher_wallet_mobile.dart';
 import 'package:heilo/screens/teacher/editProfile.dart/teacher_editProfile_Mobile.dart';
+import 'package:heilo/screens/teacher/teacher_Inbox/teacher_InboxMobile.dart';
 import 'package:heilo/screens/teacher/teacher_profile/teacherprofile_mobile.dart';
+import 'package:heilo/utils/config.dart';
 
 class TeacherDrawer extends StatelessWidget {
   const TeacherDrawer({Key? key}) : super(key: key);
@@ -42,6 +44,7 @@ class TeacherDrawer extends StatelessWidget {
               //             if (studentScafoldKey.currentState.isDrawerOpen) {
               // studentScafoldKey.currentState.openEndDrawer();
 // }
+              teacherScafoldKey.currentState!.openEndDrawer();
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => TeacherSideMenuMobile()));
             },
@@ -61,6 +64,7 @@ class TeacherDrawer extends StatelessWidget {
               ),
             ),
             onTap: () {
+              teacherScafoldKey.currentState!.openEndDrawer();
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => TeacherProfileMobile()));
             },
@@ -80,6 +84,7 @@ class TeacherDrawer extends StatelessWidget {
               ),
             ),
             onTap: () {
+              teacherScafoldKey.currentState!.openEndDrawer();
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => TeacherEditProfileMobile()));
             },
@@ -99,6 +104,7 @@ class TeacherDrawer extends StatelessWidget {
               ),
             ),
             onTap: () {
+              teacherScafoldKey.currentState!.openEndDrawer();
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => TeacherWalletMobile()));
             },
@@ -118,8 +124,9 @@ class TeacherDrawer extends StatelessWidget {
               ),
             ),
             onTap: () {
+              teacherScafoldKey.currentState!.openEndDrawer();
               Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => StudentInboxMobile()));
+                  builder: (context) => TeacherInboxMobile()));
             },
           ),
         ],

@@ -9,7 +9,6 @@ import 'package:heilo/widgets/text_widget.dart';
 import '../../student/studentInbox/studentChatMain.dart';
 import 'teacher_ChatMain.dart';
 
-final GlobalKey<ScaffoldState> teacherScafoldKey = GlobalKey();
 
 class TeacherInboxMobile extends StatefulWidget {
   const TeacherInboxMobile({Key? key}) : super(key: key);

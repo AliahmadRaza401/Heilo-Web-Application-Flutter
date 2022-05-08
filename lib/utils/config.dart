@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+ GlobalKey<ScaffoldState> teacherScafoldKey = GlobalKey();
 
 class AppColors {
   static const blue = Color(0xff89ECFD);

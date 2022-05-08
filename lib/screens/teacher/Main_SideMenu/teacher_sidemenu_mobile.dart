@@ -9,7 +9,6 @@ import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
 
-final GlobalKey<ScaffoldState> teacherScafoldKey = GlobalKey(); // Create a key
 
 class TeacherSideMenuMobile extends StatefulWidget {
   @override

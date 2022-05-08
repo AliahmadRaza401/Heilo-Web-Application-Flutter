@@ -8,7 +8,6 @@ import 'package:heilo/widgets/text_widget.dart';
 
 
 
-final GlobalKey<ScaffoldState> teacherScafoldKey = GlobalKey(); 
 class TeacherDashBoardMobile extends StatefulWidget {
   const TeacherDashBoardMobile({Key? key}) : super(key: key);
 

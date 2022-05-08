@@ -5,7 +5,6 @@ import 'package:heilo/utils/dynamic_sizes.dart';
 
 
 
-final GlobalKey<ScaffoldState> teacherScafoldKey = GlobalKey();
 class TeacherEditProfileMobile extends StatefulWidget {
   const TeacherEditProfileMobile({ Key? key }) : super(key: key);
 

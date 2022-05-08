@@ -5,7 +5,6 @@ import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
 
-final GlobalKey<ScaffoldState> teacherScafoldKey = GlobalKey();
 
 class TeacherChatMain extends StatefulWidget {
   const TeacherChatMain({Key? key}) : super(key: key);
