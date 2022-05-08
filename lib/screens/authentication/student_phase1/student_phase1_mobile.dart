@@ -45,7 +45,7 @@ class StudentPhase1Mobile extends StatelessWidget {
                         children: [
                           InkWell(
                             onTap: () {
-                              loginPopUp(context);
+                              loginPopUpMobile(context);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -56,7 +56,10 @@ class StudentPhase1Mobile extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               child: text(
-                                  context, "LOG  IN", 18.sp, AppColors.blue,
+                                  context,
+                                  "LOG  IN",
+                                  AppSizes.dynamicWidth(context, 0.02),
+                                  AppColors.blue,
                                   bold: true),
                             ),
                           ),
@@ -65,7 +68,7 @@ class StudentPhase1Mobile extends StatelessWidget {
                           ),
                           InkWell(
                             onTap: () {
-                              signUpPopUp(context);
+                              signUpPopUpMobile(context);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -76,7 +79,10 @@ class StudentPhase1Mobile extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               child: text(
-                                  context, "SIGN  UP", 18.sp, AppColors.blue,
+                                  context,
+                                  "SIGN  UP",
+                                  AppSizes.dynamicWidth(context, 0.02),
+                                  AppColors.blue,
                                   bold: true),
                             ),
                           ),

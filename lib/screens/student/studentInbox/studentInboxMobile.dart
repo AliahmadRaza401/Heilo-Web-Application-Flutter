@@ -73,7 +73,10 @@ class _StudentInboxMobileState extends State<StudentInboxMobile> {
                 margin: EdgeInsets.only(
                   top: 30.h,
                 ),
-      
+                padding: EdgeInsets.symmetric(
+                  horizontal: 20,
+                ),
+
                 // width: 594.w,
                 height: 60.h,
                 decoration: BoxDecoration(
@@ -193,13 +196,14 @@ class _StudentInboxMobileState extends State<StudentInboxMobile> {
               text(
                 context,
                 'Sakib Abdullah      ',
-                18.0,
+                AppSizes.dynamicWidth(context, 0.03),
                 AppColors.customBlack,
                 bold: false,
               ),
               const Icon(
                 Icons.circle,
-                color: Colors.green,
+                color: Color(0xff1BE59D),
+                size: 10,
               )
             ],
           ),

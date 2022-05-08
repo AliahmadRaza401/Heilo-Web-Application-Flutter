@@ -46,7 +46,7 @@ class StudentPhase2Web extends StatelessWidget {
                         children: [
                           InkWell(
                             onTap: () {
-                              loginPopUp(context);
+                              loginPopUpMobile(context);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -58,7 +58,12 @@ class StudentPhase2Web extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               child: text(
-                                  context, "LOG  IN", 18.sp, Colors.white,
+                                  context,
+                                  "LOG  IN",
+                                  Responsive.isDesktop(context)
+                                      ? 18.sp
+                                      : AppSizes.dynamicWidth(context, 0.02),
+                                  Colors.white,
                                   bold: true),
                             ),
                           ),
@@ -67,7 +72,7 @@ class StudentPhase2Web extends StatelessWidget {
                           ),
                           InkWell(
                             onTap: () {
-                              signUpPopUp(context);
+                              signUpPopUpMobile(context);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -92,7 +97,12 @@ class StudentPhase2Web extends StatelessWidget {
                               borderRadius: BorderRadius.circular(20),
                             ),
                             child: text(
-                                context, "SIGN  UP", 18.sp, Colors.white,
+                                context,
+                                "SIGN  UP",
+                                Responsive.isDesktop(context)
+                                    ? 18.sp
+                                    : AppSizes.dynamicWidth(context, 0.02),
+                                Colors.white,
                                 bold: true),
                           ),
                         ],

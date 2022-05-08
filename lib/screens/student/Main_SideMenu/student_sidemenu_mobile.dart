@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:heilo/screens/student/Main_SideMenu/notification_mobile.dart';
 import 'package:heilo/screens/student/drawer/student_drawer.dart';
+import 'package:heilo/screens/student/onDemand/onDemand_web.dart';
 import 'package:heilo/screens/student/onDemand/on_demand_mobile.dart';
 import 'package:heilo/screens/student/studentInbox/studentInboxMobile.dart';
 import 'package:heilo/screens/student/studentInbox/studentInboxMobile.dart';
@@ -167,90 +169,7 @@ class _StudentSideMenuMobileState extends State<StudentSideMenuMobile> {
             ? StudentInboxMobile()
             : _selectedIndex == 1
                 ? OnDemandMobile()
-                : Container(
-                    margin: EdgeInsets.symmetric(
-                      horizontal: 30.w,
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          height: 10,
-                        ),
-                        text(
-                          context,
-                          "Notifications",
-                          18.sp,
-                          AppColors.customGreen,
-                        ),
-                        Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                text(
-                                  context,
-                                  "Notification",
-                                  20,
-                                  Color(0xff3DDEA5),
-                                  bold: true,
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            notificationCard(context),
-                            notificationCard(context),
-                            notificationCard(context),
-                            notificationCard(context),
-                            notificationCard(context),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-      ),
-    );
-  }
-
-  Widget notificationCard(context) {
-    return Container(
-      width: AppSizes.dynamicWidth(context, 1),
-      height: AppSizes.dynamicHeight(context, 0.1),
-      decoration: BoxDecoration(
-        color: Color(0xff1BE59D),
-        borderRadius: BorderRadius.circular(30.r),
-      ),
-      padding: EdgeInsets.symmetric(
-        horizontal: 18.w,
-        vertical: 10.h,
-      ),
-      margin: EdgeInsets.only(
-        bottom: 10.h,
-        left: 30.w,
-        right: 30.w,
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          CircleAvatar(
-            radius: 66.r,
-            backgroundImage: const AssetImage(
-              "assets/png/wp2398385 1.png",
-            ),
-          ),
-          SizedBox(
-            width: 15,
-          ),
-          text(
-            context,
-            "You have received a tution request from \nSalsabil Murshed.",
-            30.sp,
-            AppColors.customBlack,
-          ),
-        ],
+                : NotificationMobile(),
       ),
     );
   }
