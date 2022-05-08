@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/screens/admin/sideMenu/admin_sideMenu.dart';
 import 'package:heilo/screens/teacher/Main_SideMenu/teacher_sidemenu.dart';
 import 'package:heilo/screens/teacher/TeacherWallet/teacher_wallet.dart';
+import 'package:heilo/screens/teacher/editProfile.dart/teacher_editProfile.dart';
 import 'package:heilo/screens/teacher/teacher_profile/teacher_profile.dart';
 
 import 'screens/authentication/Intro/intro.dart';
@@ -40,13 +41,13 @@ class MyApp extends StatelessWidget {
               child: widget!,
             );
           },
-          // home: Intro(),
+          home: Intro(),
           // home: const AdminSideMenu(),
           // home: AdminSideMenu(),
 
           // home: const StudentSideMenu(),
           // home: const TeacherSideMenu(),
-          home: TeacherProfile(),
+          // home: TeacherEditProfile(),
         );
       },
     );
