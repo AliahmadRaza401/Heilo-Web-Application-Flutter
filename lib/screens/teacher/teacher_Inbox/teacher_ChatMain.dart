@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/screens/student/drawer/student_drawer.dart';
+import 'package:heilo/screens/teacher/drawer/teacher_drawer.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
-
 
 class TeacherChatMain extends StatefulWidget {
   const TeacherChatMain({Key? key}) : super(key: key);
@@ -52,7 +52,7 @@ class _TeacherChatMainState extends State<TeacherChatMain> {
           ],
         ),
       ),
-      drawer: StudentDrawer(),
+      drawer: TeacherDrawer(),
       body: Container(
         margin: EdgeInsets.only(
           // top: 88.h,
@@ -187,11 +187,11 @@ class _TeacherChatMainState extends State<TeacherChatMain> {
                   // padding: EdgeInsets.only(left: 12),
                   child: TextFormField(
                     decoration: const InputDecoration(
-                        // hintText: "You phone number here...",
-                        border: InputBorder.none,
-                        fillColor: Colors.white,
-                        // suffixIcon: Icon(Icons.search)
-                        ),
+                      // hintText: "You phone number here...",
+                      border: InputBorder.none,
+                      fillColor: Colors.white,
+                      // suffixIcon: Icon(Icons.search)
+                    ),
                   ),
                 ),
                 const Icon(
