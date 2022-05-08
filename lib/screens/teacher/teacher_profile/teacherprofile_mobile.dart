@@ -66,6 +66,11 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
+           padding: EdgeInsets.only(
+                  left: AppSizes.dynamicWidth(context, 0.03),
+                  right: AppSizes.dynamicWidth(context, 0.03),
+                
+                ),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(13.r),
