@@ -80,7 +80,7 @@ class _AdminDashboardMobileState extends State<AdminDashboardMobile> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          text(context, 'NUMBER OF STUDENTS', 36.sp,
+                          text(context, 'NUMBER OF STUDENTS', 46.sp,
                               Color(0xffC4C4C4),
                               bold: FontWeight.bold),
                           Text(
@@ -91,7 +91,7 @@ class _AdminDashboardMobileState extends State<AdminDashboardMobile> {
                                 fontSize: 72.sp,
                                 fontWeight: FontWeight.bold),
                           ), //0xffC4C4C4
-                          text(context, 'NUMBER OF TEACHERS', 36.sp,
+                          text(context, 'NUMBER OF TEACHERS', 46.sp,
                               Color(0xffC4C4C4),
                               bold: FontWeight.bold),
                           Text(
@@ -120,7 +120,7 @@ class _AdminDashboardMobileState extends State<AdminDashboardMobile> {
                               percent: 0.2,
                               center: Text(
                                 "20%",
-                                style: TextStyle(fontSize: 35.sp),
+                                style: TextStyle(fontSize: 45.sp),
                               ),
                               progressColor: AppColors.blue,
                               circularStrokeCap: CircularStrokeCap.round,
@@ -137,13 +137,14 @@ class _AdminDashboardMobileState extends State<AdminDashboardMobile> {
                               percent: 0.5,
                               center: Text(
                                 "50%",
-                                style: TextStyle(fontSize: 35.sp),
+                                style: TextStyle(fontSize: 45.sp),
                               ),
                               progressColor: AppColors.green,
                               // footer: text(
                               //     context,
                               //     'CONVERSION',
-                              //     MediaQuery.of(context).size.width * .005,
+                              //     40.sp,
+                              //     // MediaQuery.of(context).size.width * .005,
                               //     // MediaQuery.of(context).size.width * .013,
                               //     AppColors.greyText),
                             )
@@ -249,7 +250,7 @@ class _AdminDashboardMobileState extends State<AdminDashboardMobile> {
           ),
           Container(
             height: 21.h,
-            width: 250.w,
+            width: 450.w,
             decoration: BoxDecoration(
                 color: AppColors.customWhite,
                 borderRadius: BorderRadius.only(
@@ -257,7 +258,7 @@ class _AdminDashboardMobileState extends State<AdminDashboardMobile> {
                     bottomRight: Radius.circular(100))),
             child: Center(
               child:
-                  text(context, 'Upcoming Sessions', 20.sp, AppColors.greyText),
+                  text(context, 'Upcoming Sessions', 40.sp, AppColors.greyText),
             ),
           ),
           // Positioned(
@@ -302,7 +303,7 @@ class _AdminDashboardMobileState extends State<AdminDashboardMobile> {
           Positioned(
             bottom: 0,
             child: Container(
-                height: size.height * .336,
+                height: size.height * .33,
                 width: size.width * .95,
                 decoration: BoxDecoration(
                     color: AppColors.lightGrey,
@@ -359,8 +360,8 @@ class _AdminDashboardMobileState extends State<AdminDashboardMobile> {
                 )),
           ),
           Container(
-            height: 21.h,
-            width: 316.w,
+            height: 31.h,
+            width: 516.w,
             decoration: BoxDecoration(
                 color: AppColors.customWhite,
                 borderRadius: BorderRadius.only(
@@ -371,8 +372,8 @@ class _AdminDashboardMobileState extends State<AdminDashboardMobile> {
                   context,
                   'Total Classes',
                   ' Completed',
-                  18.sp,
-                  18.sp,
+                  38.sp,
+                  38.sp,
                   null,
                   AppColors.greyText,
                   AppColors.green,

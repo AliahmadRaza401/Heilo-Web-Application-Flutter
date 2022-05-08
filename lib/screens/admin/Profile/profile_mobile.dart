@@ -219,7 +219,7 @@ class _ProfileMobileState extends State<ProfileMobile> {
                           text(
                               context,
                               'TUITION AVAIL',
-                              30.sp,
+                              40.sp,
                               // AppSizes.dynamicWidth(context, .015),
                               AppColors.green),
                           boldPopinText(
@@ -237,7 +237,7 @@ class _ProfileMobileState extends State<ProfileMobile> {
                           text(
                               context,
                               'QUIZ APPEARED ',
-                              30.sp,
+                              40.sp,
               
                               // AppSizes.dynamicWidth(context, .015),
                               AppColors.green),
@@ -256,7 +256,7 @@ class _ProfileMobileState extends State<ProfileMobile> {
                           text(
                               context,
                               'TOTAL MONEY SPEND ',
-                              31.sp,
+                              40.sp,
               
                               // AppSizes.dynamicWidth(context, .015),
                               AppColors.darkGrey),
@@ -450,9 +450,9 @@ class _ProfileMobileState extends State<ProfileMobile> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          text(context, greenText, AppSizes.dynamicWidth(context, .012),
+          text(context, greenText, AppSizes.dynamicWidth(context, .015),
               AppColors.green),
-          text(context, greyText, AppSizes.dynamicWidth(context, .012),
+          text(context, greyText, AppSizes.dynamicWidth(context, .015),
               AppColors.greyText),
         ],
       ),
