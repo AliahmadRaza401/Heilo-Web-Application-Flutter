@@ -65,7 +65,6 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
             left: 84.w,
             right: 84.w,
             top: 20.h,
-            // bottom: 20.h,
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -85,28 +84,48 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
                               selectedcard = 1;
                             });
                           },
-                          child: cardWidget('assets/png/g1.png', 0xff000000,'Upcoming Sessions')),
+                          child: cardWidget(
+                            'assets/png/g1.png',
+                            0xff000000,
+                            'Upcoming Sessions',
+                         selectedcard   == 1  ? Color(0xff5F5F5F) : AppColors.customGrey,
+                          )),
                       InkWell(
                           onTap: () {
                             setState(() {
                               selectedcard = 2;
                             });
                           },
-                          child: cardWidget('assets/png/g2.png', 0xff000000,'Tutions completed')),
+                          child: cardWidget(
+                            'assets/png/g2.png',
+                            0xff000000,
+                            'Tutions completed',
+                             selectedcard   == 2  ? Color(0xff5F5F5F) : AppColors.customGrey,
+                          )),
                       InkWell(
                           onTap: () {
                             setState(() {
                               selectedcard = 3;
                             });
                           },
-                          child: cardWidget('assets/png/g3.png', 0xff000000,'Quiz Appeared')),
+                          child: cardWidget(
+                            'assets/png/g3.png',
+                            0xff000000,
+                            'Quiz Appeared',
+                             selectedcard   == 3  ? Color(0xff5F5F5F) : AppColors.customGrey,
+                          )),
                       InkWell(
                           onTap: () {
                             setState(() {
                               selectedcard = 4;
                             });
                           },
-                          child: cardWidget('assets/png/g4.png', 0xff000000,"Favourite Tutors")),
+                          child: cardWidget(
+                            'assets/png/g4.png',
+                            0xff000000,
+                            "Favourite Tutors",
+                             selectedcard   == 4  ? Color(0xff5F5F5F) : AppColors.customGrey,
+                          )),
                     ]),
               ),
               SizedBox(
@@ -114,7 +133,11 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
               ),
               selectedcard == 1
                   ? upcommingMainSession()
-                  : tutionRequest() ,
+                  : selectedcard == 2
+                      ? tutionsCompleteCard()
+                      : selectedcard == 3
+                          ? quizCard()
+                          : favoriteTutiCard(),
               notificationMain(),
             ],
           ),
@@ -123,18 +146,18 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
     );
   }
 
-
- Widget cardWidget(
+  Widget cardWidget(
     String image,
     textcolor,
-    String text
+    String text,
+    bgColor,
   ) {
     return Container(
       height: AppSizes.dynamicHeight(context, 0.3),
       width: AppSizes.dynamicWidth(context, 0.8),
       margin: EdgeInsets.only(left: 20.w),
       decoration: BoxDecoration(
-        // color: Colors.black,
+        color: bgColor,
         borderRadius: BorderRadius.circular(30),
         image: DecorationImage(
           image: AssetImage(image),
@@ -150,8 +173,8 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
             ),
             child: Align(
               alignment: Alignment.centerRight,
-              child: Text(text
-               ,
+              child: Text(
+                text,
                 style: TextStyle(
                   color: Color(textcolor),
                   fontSize: 18,
@@ -321,7 +344,6 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
     );
   }
 
- 
   Widget upcommingMainSession() {
     return Container(
       decoration: BoxDecoration(
@@ -372,66 +394,117 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
     );
   }
 
-
-   Widget tutionRequestInnerWidget() {
+  Widget quizCard() {
     return Container(
-      margin: EdgeInsets.only(left: 40.w, right: 40.w, top: 30.h),
-    
-      child: Row(
+      // height: AppSizes.dynamicHeight(context, 0.28),
+      // width: 743.w,
+      // margin: EdgeInsets.only(top: 40.h),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(30),
+        // color: const Color(0xffF8F8F8),
+      ),
+      padding: EdgeInsets.only(bottom: 20.h),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          CircleAvatar(
-            radius: 26.r,
-            backgroundImage: const AssetImage(
-              "assets/png/wp2398385 1.png",
+          Container(
+            margin: EdgeInsets.only(left: 20.w, top: 10.h),
+            child: const Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Quiz Appeared',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 21,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
             ),
           ),
-          Container(
-            width: 30.w,
+          SizedBox(
+            height: 10.h,
           ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
+          Wrap(
+            spacing: 50.w,
+            runSpacing: 20.h,
             children: [
-              text(context, 'Ruhul Tusar', 16.sp, Color(0xff444F55),
-                  bold: true),
-              Container(
-                height: 6.w,
-              ),
-              text(context, 'Class- 10', 15.sp, Color(0xff444F55), bold: false)
+              courseCard(context),
+              courseCard(context),
+              courseCard(context),
+              courseCard(context),
             ],
           ),
-          Container(
-            width: 30.w,
+          SizedBox(
+            height: 10.h,
           ),
+        ],
+      ),
+    );
+  }
+
+  Widget favouriteInerWidet() {
+    return Container(
+      margin: EdgeInsets.only(
+          left: AppSizes.dynamicWidth(context, 0.02),
+          right: AppSizes.dynamicWidth(context, 0.02),
+          top: AppSizes.dynamicHeight(context, 0.02)),
+      padding: EdgeInsets.only(
+          top: AppSizes.dynamicHeight(context, 0.02),
+          bottom: AppSizes.dynamicHeight(context, 0.02)),
+      decoration: const BoxDecoration(
+        border: Border(
+          bottom: BorderSide(
+            width: 2.0,
+            color: AppColors.customGrey,
+          ),
+          // bottom: BorderSide(width: 16.0, color: Colors.lightBlue.shade900),
+        ),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          text(
+            context,
+            '1. Adnan Ali',
+            AppSizes.dynamicWidth(context, 0.04),
+            AppColors.bblackText,
+            bold: false,
+          ),
+          RichText(
+              text: TextSpan(children: [
+            WidgetSpan(
+                child: Icon(
+              Icons.star,
+              color: Color(0xffFEDB41),
+            )),
+            WidgetSpan(
+              child: text(
+                context,
+                '4.5',
+                AppSizes.dynamicWidth(context, 0.04),
+                AppColors.bblackText,
+                bold: false,
+              ),
+            ),
+          ])),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              text(context, 'Date : 10-22 -2021   I   5:30 pm', 13.sp,
-                  Color(0xff01B489),
-                  bold: true),
-              Container(
-                height: 6.w,
+              text(
+                context,
+                'Topic- Mathematics',
+                AppSizes.dynamicWidth(context, 0.04),
+                AppColors.bblackText,
+                bold: false,
               ),
-              text(context, 'Polygons I Gerometry I Maths B', 15.sp,
-                  Color(0xff444F55),
-                  bold: false)
-            ],
-          ),
-          Expanded(child: Container()),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Icon(
-                Icons.cancel,
-                color: Color(0xffD7443E),
-                size: 25,
-              ),
-              const Icon(
-                Icons.check_circle,
-                color: Color(0xff3BB54A),
-                size: 25,
+              text(
+                context,
+                'BUET',
+                AppSizes.dynamicWidth(context, 0.04),
+                AppColors.bblackText,
+                bold: false,
               ),
             ],
           ),
@@ -440,16 +513,69 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
     );
   }
 
-  Widget tutionRequest() {
+  Widget favoriteTutiCard() {
     return Container(
-      height: 573.h,
-      width: 743.w,
-
+      // height: 573.h,
+      // width: 743.w,
       // margin: EdgeInsets.only(top: 40.h),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
         color: const Color(0xffF8F8F8),
+      ),
+      padding: EdgeInsets.only(bottom: AppSizes.dynamicWidth(context, 0.02)),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            padding: EdgeInsets.only(
+              left: AppSizes.dynamicWidth(context, 0.02),
+            ),
+            child: Row(
+              children: [
+                Container(
+                  height: AppSizes.dynamicHeight(context, 0.06),
+                  width: AppSizes.dynamicWidth(context, 0.05),
+                  decoration: const BoxDecoration(
+                      image: DecorationImage(
+                    image: AssetImage('assets/png/favouriteIcon.png'),
+                    fit: BoxFit.contain,
+                  )),
+                ),
+                const Text(
+                  'Favourite Tutors',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 21,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          favouriteInerWidet(),
+          favouriteInerWidet(),
+          favouriteInerWidet(),
+          favouriteInerWidet(),
+          favouriteInerWidet(),
+          favouriteInerWidet(),
+          favouriteInerWidet(),
+          favouriteInerWidet(),
+          favouriteInerWidet(),
+          favouriteInerWidet(),
+        ],
+      ),
+    );
+  }
 
+  Widget tutionsCompleteCard() {
+    return Container(
+      height: 573.h,
+      // width: 743.w,
+      // margin: EdgeInsets.only(top: 40.h),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(30),
+        color: const Color(0xffF8F8F8),
       ),
       padding: EdgeInsets.only(bottom: 20.h),
       child: SingleChildScrollView(
@@ -458,74 +584,132 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              margin: EdgeInsets.only(top: 20.h, left: 20.w),
-              alignment: Alignment.centerLeft,
-              width: 300.w,
-              // decoration: BoxDecoration(
-              //     color: Colors.white, borderRadius: BorderRadius.circular(21)),
-              child: const Align(
-                alignment: Alignment.center,
-                child: Text(
-                  'Upcoming Sessions',
+            Row(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(
+                      right: AppSizes.dynamicWidth(context, 0.02)),
+                  height: AppSizes.dynamicHeight(context, 0.09),
+                  width: AppSizes.dynamicWidth(context, 0.09),
+                  decoration: const BoxDecoration(
+                      image: DecorationImage(
+                    image: AssetImage('assets/png/trophy.png'),
+                    fit: BoxFit.contain,
+                  )),
+                ),
+                Text(
+                  'Tutions Completed',
                   style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 21,
-                    fontWeight: FontWeight.w500,
+                    color: Colors.red,
+                    fontSize: 90.sp,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-              ),
+              ],
             ),
-            tutionRequestInnerWidget(),
-           Container(
-                   margin: EdgeInsets.only(left: 40.w, right: 40.w,),
-             child: const Divider(
-               thickness: 1.5,
-               color: Color(0xffE9E9E9),
-              ),
-           ),
-            tutionRequestInnerWidget(),
-             Container(
-                   margin: EdgeInsets.only(left: 40.w, right: 40.w,),
-             child: const Divider(
-               thickness:1.5,
-               color: Color(0xffE9E9E9),
-              ),
-           ),
-            tutionRequestInnerWidget(),
-             Container(
-                   margin: EdgeInsets.only(left: 40.w, right: 40.w,),
-             child: const Divider(
-               thickness:1.5,
-               color: Color(0xffE9E9E9),
-              ),
-           ),
-            tutionRequestInnerWidget(),
-             Container(
-                   margin: EdgeInsets.only(left: 40.w, right: 40.w,),
-             child: const Divider(
-               thickness:1.5,
-               color: Color(0xffE9E9E9),
-              ),
-           ),
-            tutionRequestInnerWidget(),
-             Container(
-                   margin: EdgeInsets.only(left: 40.w, right: 40.w,),
-             child: const Divider(
-               thickness: 1.5,
-               color: Color(0xffE9E9E9),
-              ),
-           ),
-            tutionRequestInnerWidget(),
-           
+            tutionInerWidget(),
+            tutionInerWidget(),
+            tutionInerWidget(),
+            tutionInerWidget(),
+            tutionInerWidget(),
+            tutionInerWidget(),
+            tutionInerWidget(),
+            tutionInerWidget(),
+            tutionInerWidget(),
+            tutionInerWidget(),
+            tutionInerWidget(),
           ],
         ),
       ),
     );
   }
 
-
-
+  Widget tutionInerWidget() {
+    return Container(
+      // padding: EdgeInsets.all(AppSizes.dynamicHeight(context, 0.01)),
+      margin: EdgeInsets.only(top: 10.h),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15),
+          border: Border.all(width: 2, color: Color(0xffC4C4C4))),
+      // padding: EdgeInsets.only(left: 10.w, top: 3.h, bottom: 3.h, right: 5.w),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          // Container(
+          //   height: 60.h,
+          //   width: 50.w,
+          //   decoration: const BoxDecoration(
+          //       shape: BoxShape.circle,
+          //       image: DecorationImage(
+          //         image: AssetImage('assets/png/wp2398385 1.png'),
+          //         fit: BoxFit.cover,
+          //       )),
+          // ),
+          Container(
+            height: AppSizes.dynamicHeight(context, 0.07),
+            width: AppSizes.dynamicWidth(context, 0.12),
+            decoration: const BoxDecoration(
+                color: Colors.black,
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: AssetImage("assets/png/wp2398385 1.png"),
+                  fit: BoxFit.cover,
+                )),
+          ),
+          Wrap(
+            children: [
+              text(
+                context,
+                'Ruhul Amin Tushar',
+                AppSizes.dynamicWidth(context, 0.03),
+                AppColors.greenDark,
+                bold: true,
+              ),
+            ],
+          ),
+          Container(
+            height: AppSizes.dynamicHeight(context, 0.06),
+            // width: 156.w,
+            padding: EdgeInsets.only(
+              top: AppSizes.dynamicHeight(context, 0.01),
+              left: AppSizes.dynamicWidth(context, 0.01),
+              right: AppSizes.dynamicWidth(context, 0.01),
+            ),
+            decoration: BoxDecoration(
+                color: const Color(0xffB4F4DD),
+                borderRadius: BorderRadius.circular(120.r)),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Wrap(children: [
+                  text(
+                    context,
+                    'Topic- Mathematics',
+                    65.sp,
+                    AppColors.bblackText,
+                    bold: false,
+                  ),
+                ]),
+                SizedBox(width: AppSizes.dynamicHeight(context, 0.02)),
+                Wrap(
+                  children: [
+                    text(
+                      context,
+                      '11-03-2022 (4pm- 6:30 pm)',
+                      65.sp,
+                      AppColors.bblackText,
+                      bold: false,
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
+    );
+  }
 
   Widget notificationMain() {
     return Container(
@@ -567,8 +751,6 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
     );
   }
 
-
-
   Widget notificationCard() {
     return Container(
       height: AppSizes.dynamicHeight(context, 0.09),
@@ -605,4 +787,114 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
       ),
     );
   }
+}
+
+Widget courseCard(context) {
+  return Container(
+    // width: 300.w,
+    // padding: EdgeInsets.all(AppSizes.dynamicHeight(context, 0.01)),
+    height: AppSizes.dynamicHeight(context, 0.33),
+    decoration: BoxDecoration(
+      color: AppColors.lightgreyborder,
+      borderRadius: BorderRadius.circular(30.r),
+      boxShadow: [
+        BoxShadow(
+          color: Colors.grey.withOpacity(0.5),
+          spreadRadius: 1,
+          blurRadius: 5,
+          offset: Offset(0, 0), // changes position of shadow
+        ),
+      ],
+    ),
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          // mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Container(
+              margin: EdgeInsets.all(AppSizes.dynamicWidth(context, 0.02)),
+              width: AppSizes.dynamicWidth(context, 0.6),
+              height: AppSizes.dynamicHeight(context, 0.17),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(130.r),
+                image: const DecorationImage(
+                  image: AssetImage("assets/png/bluebook.png"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+              child: Text(""),
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                text(context, "Total Mark", 76.sp, Color(0xff6F6F6F)),
+                text(context, "23", 90.sp, Color(0xff000000), bold: true),
+              ],
+            )
+          ],
+        ),
+        Container(
+          margin: EdgeInsets.only(
+            top: AppSizes.dynamicWidth(context, 0.02),
+            left: AppSizes.dynamicWidth(context, 0.05),
+            right: AppSizes.dynamicWidth(context, 0.05),
+            bottom: AppSizes.dynamicWidth(context, 0.02),
+          ),
+          padding: EdgeInsets.all(AppSizes.dynamicWidth(context, 0.02)),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(80.r),
+              color: Color(0xffFFFFFF)),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                // width: 250.w,
+                // color: Colors.amber,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Image.asset(
+                      'assets/png/bookicon.png',
+                      height: AppSizes.dynamicHeight(context, 0.05),
+                      width: AppSizes.dynamicWidth(context, 0.08),
+                    ),
+                    SizedBox(
+                      width: 10.w,
+                    ),
+                    text(context, "Chapter-1 : Speed", 90.sp, Colors.black),
+                  ],
+                ),
+              ),
+              Container(
+                // width: 250.w,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    text(context, "Question: 25", 78.sp, Color(0xff6F6F6F)),
+                    text(
+                        context, "Time : 25 minutes", 78.sp, Color(0xff6F6F6F)),
+                  ],
+                ),
+              ),
+              Container(
+                margin:
+                    EdgeInsets.only(top: AppSizes.dynamicWidth(context, 0.01)),
+                // width: 250.w,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    text(context, "27th July, 2021", 78.sp, Color(0xff444F55)),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    ),
+  );
 }
