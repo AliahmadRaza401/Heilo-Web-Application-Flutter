@@ -129,14 +129,14 @@ class _ProfitMobileState extends State<ProfitMobile> {
                       ),
                       Container(
                         height: 25.h,
-                        width: 562.w,
+                        width: 600.w,
                         decoration: BoxDecoration(
                             color: AppColors.customWhite,
                             borderRadius: BorderRadius.only(
                                 topRight: Radius.circular(100),
                                 bottomRight: Radius.circular(100))),
                         child: Center(
-                          child: text(context, 'Payment history', 39.sp,
+                          child: text(context, 'Payment history', 49.sp,
                               AppColors.greyText),
                         ),
                       ),
@@ -189,7 +189,7 @@ class _ProfitMobileState extends State<ProfitMobile> {
                               ),
                             ),
                             Positioned(
-                              bottom: 0,
+                              bottom: AppSizes.dynamicHeight(context, .01),
                               right: 0,
                               child: Padding(
                                 padding: EdgeInsets.only(
@@ -204,7 +204,7 @@ class _ProfitMobileState extends State<ProfitMobile> {
                                           width: 2.w),
                                       borderRadius: BorderRadius.circular(100)),
                                   child: Center(
-                                    child: text(context, 'Confirm.', 40.sp,
+                                    child: text(context, 'Confirm.', 46.sp,
                                         AppColors.customWhite),
                                   ),
                                 ),
@@ -281,7 +281,7 @@ class _ProfitMobileState extends State<ProfitMobile> {
                                       child: text(
                                           context,
                                           'Division Wise Stats.',
-                                          AppSizes.dynamicWidth(context, .015),
+                                          AppSizes.dynamicWidth(context, .017),
                                           AppColors.customBlack),
                                     ),
                                   ),
@@ -290,7 +290,7 @@ class _ProfitMobileState extends State<ProfitMobile> {
                                         right: AppSizes.dynamicWidth(
                                             context, .03)),
                                     child: text(
-                                        context, 'Count.', 40.sp, AppColors.green),
+                                        context, 'Count.', 45.sp, AppColors.green),
                                   )
                                 ],
                               ),
@@ -518,12 +518,12 @@ class _ProfitMobileState extends State<ProfitMobile> {
           children: [
             text(
               context, 'Enter amount\nto withrdraw',
-              AppSizes.dynamicWidth(context, .02), AppColors.customWhite,
+              AppSizes.dynamicWidth(context, .025), AppColors.customWhite,
               // alignText: TextAlign.center
             ),
             Padding(
               padding: const EdgeInsets.only(left: 8.0),
-              child: text(context, amount, AppSizes.dynamicWidth(context, .02),
+              child: text(context, amount, AppSizes.dynamicWidth(context, .03),
                   AppColors.customWhite,
                   alignText: TextAlign.center),
             ),

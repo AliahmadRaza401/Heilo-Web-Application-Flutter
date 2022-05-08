@@ -307,7 +307,7 @@ class _QuizReportMobileState extends State<QuizReportMobile> {
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: text(context, name, 24.sp, AppColors.customBlack),
+                child: text(context, name, 40.sp, AppColors.customBlack),
               )
             ],
           ),
@@ -340,7 +340,7 @@ class _QuizReportMobileState extends State<QuizReportMobile> {
                     width:  AppSizes.dynamicWidth(context, .7),
                     child: Wrap(
                       children: [
-                        text(context, review, 24.sp, AppColors.greyText,maxLines: 3,alignText: TextAlign.justify),
+                        text(context, review, 40.sp, AppColors.greyText,maxLines: 3,alignText: TextAlign.justify),
                       ],
                     ),
                   ),
