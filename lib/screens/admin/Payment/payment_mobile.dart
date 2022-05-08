@@ -71,7 +71,7 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      text(context, 'Payment Request ', 46.sp, AppColors.green),
+                      text(context, 'Payment Request ', 56.sp, AppColors.green),
                       Container(
                         width: AppSizes.dynamicWidth(context, 1),
                         height: AppSizes.dynamicHeight(context, .3),
@@ -297,12 +297,12 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              text(context, normaltext, 33.sp, AppColors.customWhite,
+              text(context, normaltext, 43.sp, AppColors.customWhite,
                   alignText: TextAlign.center),
               Container(
                 child: Row(
                   children: [
-                    text(context, 'last 7 days', 22.sp, AppColors.customBlack,
+                    text(context, 'last 7 days', 42.sp, AppColors.customBlack,
                         alignText: TextAlign.center),
                     Icon(
                       Icons.keyboard_arrow_down,
@@ -314,7 +314,7 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
               )
             ],
           ),
-          boldPopinText(boldText, 33.sp, boldtextColor),
+          boldPopinText(boldText, 43.sp, boldtextColor),
         ],
       ),
     );

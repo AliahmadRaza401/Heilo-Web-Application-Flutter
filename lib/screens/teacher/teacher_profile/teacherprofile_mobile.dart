@@ -3,11 +3,10 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/screens/student/drawer/student_drawer.dart';
+import 'package:heilo/screens/teacher/drawer/teacher_drawer.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
-
-final GlobalKey<ScaffoldState> teacherScafoldKey = GlobalKey();
 
 class TeacherProfileMobile extends StatefulWidget {
   @override
@@ -63,12 +62,12 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
           ],
         ),
       ),
-      drawer: StudentDrawer(),
+      drawer: TeacherDrawer(),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
           decoration: BoxDecoration(
-            color: Colors.yellow,
+            color: Colors.white,
             borderRadius: BorderRadius.circular(13.r),
           ),
           child: Column(
@@ -107,7 +106,7 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
                       padding: EdgeInsets.only(
                         // top: 130.h,
                         top: AppSizes.dynamicHeight(context, 0.1),
-                        left: 50.w,
+                        left: AppSizes.dynamicWidth(context, 0.02),
                         right: 50.w,
                         bottom: AppSizes.dynamicHeight(context, 0.02),
                       ),
@@ -257,31 +256,57 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
                       ),
                     ),
                     Positioned(
-                        top: -100.0,
+                        top: -80.0,
                         right: 0,
                         left: 0,
                         // (background container size) - (circle height / 2)
                         child: Center(
-                          child: Container(
-                            height: AppSizes.dynamicHeight(context, 0.2),
-                            width: AppSizes.dynamicWidth(context, 0.2),
-                            decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                              image: DecorationImage(
-                                image: AssetImage(
-                                  "assets/png/wp2398385 1.png",
+                          child: Stack(
+                            overflow: Overflow.visible,
+                            children: [
+                              Container(
+                                height: AppSizes.dynamicHeight(context, 0.2),
+                                width: AppSizes.dynamicWidth(context, 0.2),
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  image: DecorationImage(
+                                    image: AssetImage(
+                                      "assets/png/wp2398385 1.png",
+                                    ),
+                                  ),
                                 ),
                               ),
-                            ),
+                              Positioned(
+                                top: 40,
+                                right: -15,
+                                child: Container(
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: 10,
+                                    vertical: 3,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: Color(0xffC4C4C4).withOpacity(0.5),
+                                    borderRadius: BorderRadius.circular(50),
+                                  ),
+                                  child: Row(
+                                    children: [
+                                      Image.asset('assets/png/star.png'),
+                                      text(
+                                        context,
+                                        "4.5",
+                                        AppSizes.dynamicWidth(context, 0.02),
+                                        Colors.black,
+                                        bold: true,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                        )
-                        // CircleAvatar(
-                        //   radius: 80.r,
-                        //   backgroundImage: const AssetImage(
-                        //     "assets/png/wp2398385 1.png",
-                        //   ),
-                        // ),
-                        ),
+
+                          //
+                        )),
                   ],
                 ),
               ),

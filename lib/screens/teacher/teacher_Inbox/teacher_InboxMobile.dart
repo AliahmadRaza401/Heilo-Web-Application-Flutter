@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/screens/student/drawer/student_drawer.dart';
+import 'package:heilo/screens/teacher/drawer/teacher_drawer.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
@@ -8,7 +9,6 @@ import 'package:heilo/widgets/text_widget.dart';
 import '../../student/studentInbox/studentChatMain.dart';
 import 'teacher_ChatMain.dart';
 
-final GlobalKey<ScaffoldState> teacherScafoldKey = GlobalKey();
 
 class TeacherInboxMobile extends StatefulWidget {
   const TeacherInboxMobile({Key? key}) : super(key: key);
@@ -56,234 +56,235 @@ class _TeacherInboxMobileState extends State<TeacherInboxMobile> {
           ],
         ),
       ),
-      drawer: StudentDrawer(),
+      drawer: TeacherDrawer(),
       body: Container(
         padding: EdgeInsets.only(
           top: 3.h,
           right: AppSizes.dynamicWidth(context, 0.03),
           left: AppSizes.dynamicWidth(context, 0.03),
         ),
-        child: Column(
-          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              margin: EdgeInsets.only(
-                top: 30.h,
-              ),
-
-              // width: 594.w,
-              height: 60.h,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(25),
-                color: AppColors.customGrey,
-              ),
-              // padding: EdgeInsets.only(left: 12),
-              child: TextFormField(
-                decoration: const InputDecoration(
-                    // hintText: "You phone number here...",
-                    border: InputBorder.none,
-                    fillColor: Colors.white,
-                    suffixIcon: Icon(Icons.search)),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(
-                top: 30.h,
-              ),
-              child: text(
-                context,
-                'All Messages ( 41)',
-                18.0,
-                AppColors.greyText,
-                bold: false,
-              ),
-            ),
-            SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              child: Container(
+        child: SingleChildScrollView(
+          child: Column(
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
                 margin: EdgeInsets.only(
                   top: 30.h,
                 ),
-                child: Column(
-                  children: [
-                    messageWidget(),
-                    SizedBox(
-                      height: 15.h,
-                    ),
-                    messageWidget(),
-                    SizedBox(
-                      height: 15.h,
-                    ),
-                    messageWidget(),
-                    SizedBox(
-                      height: 15.h,
-                    ),
-                    messageWidget(),
-                    SizedBox(
-                      height: 15.h,
-                    ),
-                    messageWidget(),
-                      SizedBox(
-                      height: 15.h,
-                    ),
-                    messageWidget(),
-                    SizedBox(
-                      height: 15.h,
-                    ),
-                    messageWidget(),
-                    SizedBox(
-                      height: 15.h,
-                    ),
-                    messageWidget(),
-                  ],
+
+                // width: 594.w,
+                height: 60.h,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  color: AppColors.customGrey,
+                ),
+                // padding: EdgeInsets.only(left: 12),
+                child: TextFormField(
+                  decoration: const InputDecoration(
+                      // hintText: "You phone number here...",
+                      border: InputBorder.none,
+                      fillColor: Colors.white,
+                      suffixIcon: Icon(Icons.search)),
                 ),
               ),
-            ),
-            // Container(
-            //   margin: EdgeInsets.only(
-            //     top: 88.h,
-            //     left: 33.w,
-            //   ),
-            //   child: Column(
-            //     // mainAxisAlignment: MainAxisAlignment.start,
-            //     // crossAxisAlignment: CrossAxisAlignment.start,
-            //     children: [
-            //       Container(
-            //         height: 57.h,
-            //         width: 487.w,
-            //         child: ListTile(
-            //           leading: Container(
-            //             height: 54.h,
-            //             width: 54.w,
-            //             // margin: EdgeInsets.only(
-            //             //   left: 20.w,
-            //             // ),
-            //             decoration: const BoxDecoration(
-            //               shape: BoxShape.circle,
-            //               image: DecorationImage(
-            //                 image: AssetImage(
-            //                   "assets/png/wp2398385 1.png",
-            //                 ),
-            //               ),
-            //             ),
-            //           ),
-            //           title: text(
-            //               context, 'Ruhul Tusar', 18.0, AppColors.customBlack),
-            //           subtitle: text(
-            //             context,
-            //             'Maple Leaf International School',
-            //             13.0,
-            //             AppColors.greyText,
-            //           ),
-            //         ),
-            //       ),
-            //       Row(
-            //         mainAxisAlignment: MainAxisAlignment.start,
-            //         children: [
-            //           Container(
-            //             height: 109.h,
-            //             width: 453.w,
-            //             margin: EdgeInsets.only(
-            //               top: 30.h,
-            //               left: 20.w,
-            //             ),
-            //             child: ListTile(
-            //               leading: Container(
-            //                 height: 54.h,
-            //                 width: 54.w,
-            //                 // margin: EdgeInsets.only(
-            //                 //   left: 20.w,
-            //                 // ),
-            //                 decoration: const BoxDecoration(
-            //                   shape: BoxShape.circle,
-            //                   image: DecorationImage(
-            //                     image: AssetImage(
-            //                       "assets/png/wp2398385 1.png",
-            //                     ),
-            //                   ),
-            //                 ),
-            //               ),
-            //               // title: text(context, 'Ruhul Tusar', 18.0,
-            //               //     AppColors.customBlack),
-            //               subtitle: Container(
-            //                 padding: EdgeInsets.only(
-            //                   left: 18.w,
-            //                   right: 18.w,
-            //                   top: 16.h,
-            //                   bottom: 16.h,
-            //                 ),
-            //                 decoration: BoxDecoration(
-            //                     borderRadius: BorderRadius.circular(18),
-            //                     color: Color(0xffF8F8F8)),
-            //                 child: text(
-            //                   context,
-            //                   'Dear Sir, I would like to study the genetics part of biology. To be precise the DNA replication. Can you help me?',
-            //                   14.0,
-            //                   AppColors.greyText,
-            //                   bold: false,
-            //                 ),
-            //               ),
-            //             ),
-            //           )
-            //         ],
-            //       ),
-            //       Row(
-            //         mainAxisAlignment: MainAxisAlignment.end,
-            //         children: [
-            //           Container(
-            //             height: 109.h,
-            //             width: 453.w,
-            //             margin: EdgeInsets.only(
-            //               top: 5.h,
-            //               left: 20.w,
-            //             ),
-            //             child: ListTile(
-            //               leading: Container(
-            //                 height: 54.h,
-            //                 width: 54.w,
-            //                 // margin: EdgeInsets.only(
-            //                 //   left: 20.w,
-            //                 // ),
-            //                 decoration: const BoxDecoration(
-            //                   shape: BoxShape.circle,
-            //                   image: DecorationImage(
-            //                     image: AssetImage(
-            //                       "assets/png/wp2398385 1.png",
-            //                     ),
-            //                   ),
-            //                 ),
-            //               ),
-            //               // title: text(context, 'Ruhul Tusar', 18.0,
-            //               //     AppColors.customBlack),
-            //               subtitle: Container(
-            //                 padding: EdgeInsets.only(
-            //                   left: 18.w,
-            //                   right: 18.w,
-            //                   top: 16.h,
-            //                   bottom: 16.h,
-            //                 ),
-            //                 decoration: BoxDecoration(
-            //                     borderRadius: BorderRadius.circular(18),
-            //                     color: Color(0xffB8F3DE)),
-            //                 child: text(
-            //                   context,
-            //                   'Dear Sir, I would like to study the genetics part of biology. To be precise the DNA replication. Can you help me?',
-            //                   14.0,
-            //                   AppColors.greyText,
-            //                   bold: false,
-            //                 ),
-            //               ),
-            //             ),
-            //           )
-            //         ],
-            //       ),
-            //     ],
-            //   ),
-            // )
-       
-          ],
+              Container(
+                margin: EdgeInsets.only(
+                  top: 30.h,
+                ),
+                child: text(
+                  context,
+                  'All Messages ( 41)',
+                  18.0,
+                  AppColors.greyText,
+                  bold: false,
+                ),
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                child: Container(
+                  margin: EdgeInsets.only(
+                    top: 30.h,
+                  ),
+                  child: Column(
+                    children: [
+                      messageWidget(),
+                      SizedBox(
+                        height: 15.h,
+                      ),
+                      messageWidget(),
+                      SizedBox(
+                        height: 15.h,
+                      ),
+                      messageWidget(),
+                      SizedBox(
+                        height: 15.h,
+                      ),
+                      messageWidget(),
+                      SizedBox(
+                        height: 15.h,
+                      ),
+                      messageWidget(),
+                      SizedBox(
+                        height: 15.h,
+                      ),
+                      messageWidget(),
+                      SizedBox(
+                        height: 15.h,
+                      ),
+                      messageWidget(),
+                      SizedBox(
+                        height: 15.h,
+                      ),
+                      messageWidget(),
+                    ],
+                  ),
+                ),
+              ),
+              // Container(
+              //   margin: EdgeInsets.only(
+              //     top: 88.h,
+              //     left: 33.w,
+              //   ),
+              //   child: Column(
+              //     // mainAxisAlignment: MainAxisAlignment.start,
+              //     // crossAxisAlignment: CrossAxisAlignment.start,
+              //     children: [
+              //       Container(
+              //         height: 57.h,
+              //         width: 487.w,
+              //         child: ListTile(
+              //           leading: Container(
+              //             height: 54.h,
+              //             width: 54.w,
+              //             // margin: EdgeInsets.only(
+              //             //   left: 20.w,
+              //             // ),
+              //             decoration: const BoxDecoration(
+              //               shape: BoxShape.circle,
+              //               image: DecorationImage(
+              //                 image: AssetImage(
+              //                   "assets/png/wp2398385 1.png",
+              //                 ),
+              //               ),
+              //             ),
+              //           ),
+              //           title: text(
+              //               context, 'Ruhul Tusar', 18.0, AppColors.customBlack),
+              //           subtitle: text(
+              //             context,
+              //             'Maple Leaf International School',
+              //             13.0,
+              //             AppColors.greyText,
+              //           ),
+              //         ),
+              //       ),
+              //       Row(
+              //         mainAxisAlignment: MainAxisAlignment.start,
+              //         children: [
+              //           Container(
+              //             height: 109.h,
+              //             width: 453.w,
+              //             margin: EdgeInsets.only(
+              //               top: 30.h,
+              //               left: 20.w,
+              //             ),
+              //             child: ListTile(
+              //               leading: Container(
+              //                 height: 54.h,
+              //                 width: 54.w,
+              //                 // margin: EdgeInsets.only(
+              //                 //   left: 20.w,
+              //                 // ),
+              //                 decoration: const BoxDecoration(
+              //                   shape: BoxShape.circle,
+              //                   image: DecorationImage(
+              //                     image: AssetImage(
+              //                       "assets/png/wp2398385 1.png",
+              //                     ),
+              //                   ),
+              //                 ),
+              //               ),
+              //               // title: text(context, 'Ruhul Tusar', 18.0,
+              //               //     AppColors.customBlack),
+              //               subtitle: Container(
+              //                 padding: EdgeInsets.only(
+              //                   left: 18.w,
+              //                   right: 18.w,
+              //                   top: 16.h,
+              //                   bottom: 16.h,
+              //                 ),
+              //                 decoration: BoxDecoration(
+              //                     borderRadius: BorderRadius.circular(18),
+              //                     color: Color(0xffF8F8F8)),
+              //                 child: text(
+              //                   context,
+              //                   'Dear Sir, I would like to study the genetics part of biology. To be precise the DNA replication. Can you help me?',
+              //                   14.0,
+              //                   AppColors.greyText,
+              //                   bold: false,
+              //                 ),
+              //               ),
+              //             ),
+              //           )
+              //         ],
+              //       ),
+              //       Row(
+              //         mainAxisAlignment: MainAxisAlignment.end,
+              //         children: [
+              //           Container(
+              //             height: 109.h,
+              //             width: 453.w,
+              //             margin: EdgeInsets.only(
+              //               top: 5.h,
+              //               left: 20.w,
+              //             ),
+              //             child: ListTile(
+              //               leading: Container(
+              //                 height: 54.h,
+              //                 width: 54.w,
+              //                 // margin: EdgeInsets.only(
+              //                 //   left: 20.w,
+              //                 // ),
+              //                 decoration: const BoxDecoration(
+              //                   shape: BoxShape.circle,
+              //                   image: DecorationImage(
+              //                     image: AssetImage(
+              //                       "assets/png/wp2398385 1.png",
+              //                     ),
+              //                   ),
+              //                 ),
+              //               ),
+              //               // title: text(context, 'Ruhul Tusar', 18.0,
+              //               //     AppColors.customBlack),
+              //               subtitle: Container(
+              //                 padding: EdgeInsets.only(
+              //                   left: 18.w,
+              //                   right: 18.w,
+              //                   top: 16.h,
+              //                   bottom: 16.h,
+              //                 ),
+              //                 decoration: BoxDecoration(
+              //                     borderRadius: BorderRadius.circular(18),
+              //                     color: Color(0xffB8F3DE)),
+              //                 child: text(
+              //                   context,
+              //                   'Dear Sir, I would like to study the genetics part of biology. To be precise the DNA replication. Can you help me?',
+              //                   14.0,
+              //                   AppColors.greyText,
+              //                   bold: false,
+              //                 ),
+              //               ),
+              //             ),
+              //           )
+              //         ],
+              //       ),
+              //     ],
+              //   ),
+              // )
+            ],
+          ),
         ),
       ),
     );
@@ -292,8 +293,8 @@ class _TeacherInboxMobileState extends State<TeacherInboxMobile> {
   Widget messageWidget() {
     return InkWell(
       onTap: () {
-         Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => TeacherChatMain()));
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => TeacherChatMain()));
       },
       child: Container(
         decoration: const BoxDecoration(
@@ -384,7 +385,7 @@ class _TeacherInboxMobileState extends State<TeacherInboxMobile> {
         //       SizedBox(
         //         width:  AppSizes.dynamicWidth(context, 0.01),
         //       ),
-    
+
         //  RichText(
         //   text: TextSpan(
         //     text: 'Hello ',

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/screens/student/drawer/student_drawer.dart';
+import 'package:heilo/screens/teacher/drawer/teacher_drawer.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
 
 
 
-final GlobalKey<ScaffoldState> teacherScafoldKey = GlobalKey(); 
 class TeacherDashBoardMobile extends StatefulWidget {
   const TeacherDashBoardMobile({Key? key}) : super(key: key);
 
@@ -54,7 +54,7 @@ class _TeacherDashBoardMobileState extends State<TeacherDashBoardMobile> {
             ],
           ),
         ),
-        drawer: StudentDrawer(),
+        drawer: TeacherDrawer(),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(

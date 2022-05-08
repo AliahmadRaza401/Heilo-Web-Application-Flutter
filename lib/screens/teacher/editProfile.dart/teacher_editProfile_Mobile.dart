@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:heilo/screens/student/drawer/student_drawer.dart';
+import 'package:heilo/screens/teacher/drawer/teacher_drawer.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 
-
-
-final GlobalKey<ScaffoldState> teacherScafoldKey = GlobalKey();
 class TeacherEditProfileMobile extends StatefulWidget {
-  const TeacherEditProfileMobile({ Key? key }) : super(key: key);
+  const TeacherEditProfileMobile({Key? key}) : super(key: key);
 
   @override
-  State<TeacherEditProfileMobile> createState() => _TeacherEditProfileMobileState();
+  State<TeacherEditProfileMobile> createState() =>
+      _TeacherEditProfileMobileState();
 }
 
 class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        key: teacherScafoldKey,
+      key: teacherScafoldKey,
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
@@ -51,11 +50,7 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
           ],
         ),
       ),
-      drawer: StudentDrawer(),
-
-
-      
-      
+      drawer: TeacherDrawer(),
     );
   }
 }

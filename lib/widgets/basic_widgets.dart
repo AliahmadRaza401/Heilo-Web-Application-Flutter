@@ -5,6 +5,8 @@ import 'package:heilo/utils/responsive.dart';
 import 'package:heilo/widgets/text_widget.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 
+import '../utils/dynamic_sizes.dart';
+
 class TextBtn extends StatelessWidget {
   String title;
   TextBtn({required this.title});
@@ -27,7 +29,13 @@ class TextBtn extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(50.r),
       ),
-      child: text(context, title, 24.sp, Colors.black),
+      child: text(
+          context,
+          title,
+          Responsive.isDesktop(context)
+              ? 24.sp
+              : AppSizes.dynamicWidth(context, 0.02),
+          Colors.black),
     );
   }
 }

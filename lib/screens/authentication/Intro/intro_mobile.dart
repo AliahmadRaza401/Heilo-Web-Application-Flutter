@@ -37,7 +37,7 @@ class IntroMobile extends StatelessWidget {
                   children: [
                     InkWell(
                       onTap: () {
-                        loginPopUp(context);
+                        loginPopUpMobile(context);
                       },
                       child: Container(
                         alignment: Alignment.center,
@@ -47,7 +47,8 @@ class IntroMobile extends StatelessWidget {
                           color: AppColors.blue,
                           borderRadius: BorderRadius.circular(20),
                         ),
-                        child: text(context, "LOG  IN", 18.sp, Colors.white,
+                        child: text(context, "LOG  IN",
+                            AppSizes.dynamicWidth(context, 0.02), Colors.white,
                             bold: true),
                       ),
                     ),
@@ -68,7 +69,7 @@ class IntroMobile extends StatelessWidget {
                     ),
                     InkWell(
                       onTap: () {
-                        signUpPopUp(context);
+                        signUpPopUpMobile(context);
                       },
                       child: Container(
                         alignment: Alignment.center,
@@ -78,7 +79,8 @@ class IntroMobile extends StatelessWidget {
                           color: AppColors.green,
                           borderRadius: BorderRadius.circular(20),
                         ),
-                        child: text(context, "SIGN  UP", 18.sp, Colors.white,
+                        child: text(context, "SIGN  UP",
+                            AppSizes.dynamicWidth(context, 0.02), Colors.white,
                             bold: true),
                       ),
                     ),
@@ -122,7 +124,7 @@ class IntroMobile extends StatelessWidget {
                         height: 40.h,
                         decoration: BoxDecoration(
                           color: AppColors.customWhite,
-                          borderRadius: BorderRadius.circular(20.r),
+                          borderRadius: BorderRadius.circular(50.r),
                         ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -132,7 +134,11 @@ class IntroMobile extends StatelessWidget {
                               width: 50.w,
                               height: 50.h,
                             ),
-                            text(context, "Student", 24.sp, Colors.black),
+                            text(
+                                context,
+                                "Student",
+                                AppSizes.dynamicWidth(context, 0.025),
+                                Colors.black),
                           ],
                         ),
                       ),
@@ -143,7 +149,7 @@ class IntroMobile extends StatelessWidget {
                       height: 40.h,
                       decoration: BoxDecoration(
                         color: AppColors.customWhite,
-                        borderRadius: BorderRadius.circular(20.r),
+                        borderRadius: BorderRadius.circular(50.r),
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -153,7 +159,11 @@ class IntroMobile extends StatelessWidget {
                             width: 50.w,
                             height: 50.h,
                           ),
-                          text(context, "Teacher", 24.sp, Colors.black),
+                          text(
+                              context,
+                              "Teacher",
+                              AppSizes.dynamicWidth(context, 0.025),
+                              Colors.black),
                         ],
                       ),
                     ),
@@ -164,10 +174,10 @@ class IntroMobile extends StatelessWidget {
                       child: Container(
                         alignment: Alignment.center,
                         width: 350.w,
-                        height: 70.h,
+                        height: 40.h,
                         decoration: BoxDecoration(
                           color: AppColors.customWhite,
-                          borderRadius: BorderRadius.circular(20),
+                          borderRadius: BorderRadius.circular(50.r),
                         ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -177,7 +187,11 @@ class IntroMobile extends StatelessWidget {
                               width: 50.w,
                               height: 50.h,
                             ),
-                            text(context, "Admin", 24.sp, Colors.black),
+                            text(
+                                context,
+                                "Admin",
+                                AppSizes.dynamicWidth(context, 0.025),
+                                Colors.black),
                           ],
                         ),
                       ),
