@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -19,7 +21,6 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
   }
 

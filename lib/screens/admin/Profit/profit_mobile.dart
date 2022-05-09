@@ -455,7 +455,7 @@ class _ProfitMobileState extends State<ProfitMobile> {
                             child: Icon(
                               Icons.arrow_downward,
                               color: AppColors.green,
-                              size: AppSizes.dynamicHeight(context, .025),
+                              size: AppSizes.dynamicHeight(context, .015),
                             ))
                       ],
                     )),
