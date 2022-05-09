@@ -5,10 +5,11 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/screens/student/drawer/student_drawer.dart';
+import 'package:heilo/screens/teacher/drawer/teacher_drawer.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
+import 'package:heilo/widgets/buttons.dart';
 import 'package:heilo/widgets/text_widget.dart';
-
 
 class TeacherProfileMobile extends StatefulWidget {
   @override
@@ -63,12 +64,17 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
           ],
         ),
       ),
-      drawer: StudentDrawer(),
+      drawer: TeacherDrawer(),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
+           padding: EdgeInsets.only(
+                  left: AppSizes.dynamicWidth(context, 0.03),
+                  right: AppSizes.dynamicWidth(context, 0.03),
+                
+                ),
           decoration: BoxDecoration(
-            color: Colors.yellow,
+            color: Colors.white,
             borderRadius: BorderRadius.circular(13.r),
           ),
           child: Column(
@@ -107,8 +113,8 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
                       padding: EdgeInsets.only(
                         // top: 130.h,
                         top: AppSizes.dynamicHeight(context, 0.1),
-                        left: 50.w,
-                        right: 50.w,
+                        left: AppSizes.dynamicWidth(context, 0.17),
+                        right: AppSizes.dynamicWidth(context, 0.17),
                         bottom: AppSizes.dynamicHeight(context, 0.02),
                       ),
 
@@ -120,7 +126,7 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
                             context,
                             "Sakib Abdullah",
                             18.0,
-                            AppColors.greyText,
+                            AppColors.bblackText,
                             bold: true,
                           ),
                           // textWidget(
@@ -145,6 +151,44 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
                           //   14,
                           // ),
                           SizedBox(
+                            height: 25.h,
+                          ),
+
+                          Container(
+                            height: AppSizes.dynamicHeight(context, 0.04),
+                            width: AppSizes.dynamicHeight(context, 0.15),
+                            // padding: const EdgeInsets.only(
+                            //   top: 5,
+                            //   bottom: 5,
+                            // ),
+                            decoration: BoxDecoration(
+                              color: Color(0xff3DDEA5),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Align(
+                              alignment: Alignment.center,
+                              child: text(
+                                context,
+                                "Hire Now",
+                                14.0,
+                                Colors.white,
+                                bold: true,
+                                // alignText: Alignment.center
+                              ),
+                            ),
+                          ),
+                          // Align(
+                          //   alignment: Alignment.center,
+                          //   child: coloredButton(
+                          //       context, 'Hire Now', Color(0xff3DDEA5),
+                          //       height: AppSizes.dynamicHeight(context, 0.04),
+                          //       width: AppSizes.dynamicHeight(context, 0.2),
+                          //       fontSize: 14.sp,
+                          //       fontColor: Color(0xffffffff),
+                          //       function: () {},
+                          //       radious: 10.r),
+                          // ),
+                          SizedBox(
                             height: AppSizes.dynamicHeight(context, 0.03),
                           ),
                           Row(
@@ -158,16 +202,16 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
                                 //   bottom: 5,
                                 // ),
                                 decoration: BoxDecoration(
-                                  color: AppColors.customDarkBlue,
+                                  color: Color(0xffEBEBEB),
                                   borderRadius: BorderRadius.circular(30),
                                 ),
                                 child: Align(
                                   alignment: Alignment.center,
                                   child: text(
                                     context,
-                                    "Tutions completed",
+                                    "Hourly Rate",
                                     14.0,
-                                    AppColors.customWhite,
+                                    AppColors.bblackText,
                                     bold: true,
                                     // alignText: Alignment.center
                                   ),
@@ -177,15 +221,14 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
                                 context,
                                 "150",
                                 14.0,
-                                AppColors.greytextText,
+                                Colors.black,
                                 bold: true,
                                 // alignText: Alignment.center
                               ),
                               // textWidget(
                               //   "150",
                               //   FontWeight.w600,
-                              //   0xff7D7D7D,
-                              //   14,
+                              // /Colors.black                   //   14,
                               // ),
                             ],
                           ),
@@ -203,7 +246,7 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
                                 //   bottom: 5,
                                 // ),
                                 decoration: BoxDecoration(
-                                  color: Color(0xffA279E6),
+                                  color: Color(0xffEBEBEB),
                                   borderRadius: BorderRadius.circular(
                                     30,
                                   ),
@@ -212,9 +255,9 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
                                   alignment: Alignment.center,
                                   child: text(
                                     context,
-                                    "Tutors referred",
+                                    "Students Reffered",
                                     14.0,
-                                    AppColors.customWhite,
+                                    AppColors.bblackText,
                                     bold: true,
                                     // alignText: Alignment.center
                                   ),
@@ -230,12 +273,60 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
                                 context,
                                 "150",
                                 14.0,
-                                AppColors.greytextText,
+                                Colors.black,
                                 bold: true,
                                 // alignText: Alignment.center
                               ),
                             ],
                           ),
+                          SizedBox(
+                            height: 10.h,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                height: AppSizes.dynamicHeight(context, 0.04),
+                                width: AppSizes.dynamicHeight(context, 0.2),
+                                // padding: const EdgeInsets.only(
+                                //   top: 5,
+                                //   bottom: 5,
+                                // ),
+                                decoration: BoxDecoration(
+                                  color: Color(0xffEBEBEB),
+                                  borderRadius: BorderRadius.circular(
+                                    30,
+                                  ),
+                                ),
+                                child: Align(
+                                  alignment: Alignment.center,
+                                  child: text(
+                                    context,
+                                    "Tution Completed",
+                                    14.0,
+                                    AppColors.bblackText,
+                                    bold: true,
+                                    // alignText: Alignment.center
+                                  ),
+                                  // child: textWidget(
+                                  //   "Tutors referred",
+                                  //   FontWeight.w600,
+                                  //   0xffffffff,
+                                  //   14,
+                                  // ),
+                                ),
+                              ),
+                              text(
+                                context,
+                                "150",
+                                14.0,
+                                Colors.black,
+                                bold: true,
+                                // alignText: Alignment.center
+                              ),
+                            ],
+                          ),
+
                           SizedBox(
                             height: AppSizes.dynamicHeight(context, 0.05),
                           ),
@@ -247,41 +338,201 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
                               // bold: true,
                               // alignText: Alignment.center
                               maxLines: 8),
-                          // textWidget(
-                          //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
-                          //   FontWeight.w300,
-                          //   0xff7000000,
-                          //   14,
-                          // ),
+
+                          SizedBox(
+                            height: AppSizes.dynamicHeight(context, 0.02),
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                height: AppSizes.dynamicHeight(context, 0.04),
+                                width: AppSizes.dynamicHeight(context, 0.12),
+                                // padding: const EdgeInsets.only(
+                                //   top: 5,
+                                //   bottom: 5,
+                                // ),
+                                decoration: BoxDecoration(
+                                  color: Color(0xff3DDEA5),
+                                  borderRadius: BorderRadius.circular(50),
+                                ),
+                                child: Align(
+                                  alignment: Alignment.center,
+                                  child: text(
+                                    context,
+                                    "Math",
+                                    14.0,
+                                    Colors.white,
+                                    bold: true,
+                                    // alignText: Alignment.center
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                height: AppSizes.dynamicHeight(context, 0.04),
+                                width: AppSizes.dynamicHeight(context, 0.15),
+                                // padding: const EdgeInsets.only(
+                                //   top: 5,
+                                //   bottom: 5,
+                                // ),
+                                decoration: BoxDecoration(
+                                  color: Color(0xffF37171),
+                                  borderRadius: BorderRadius.circular(50),
+                                ),
+                                child: Align(
+                                  alignment: Alignment.center,
+                                  child: text(
+                                    context,
+                                    "Math",
+                                    14.0,
+                                    Colors.white,
+                                    bold: true,
+                                    // alignText: Alignment.center
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: AppSizes.dynamicHeight(context, 0.02),
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                height: AppSizes.dynamicHeight(context, 0.04),
+                                width: AppSizes.dynamicHeight(context, 0.12),
+                                // padding: const EdgeInsets.only(
+                                //   top: 5,
+                                //   bottom: 5,
+                                // ),
+                                decoration: BoxDecoration(
+                                  color: Color(0xff2196F3),
+                                  borderRadius: BorderRadius.circular(50),
+                                ),
+                                child: Align(
+                                  alignment: Alignment.center,
+                                  child: text(
+                                    context,
+                                    "Math",
+                                    14.0,
+                                    Colors.white,
+                                    bold: true,
+                                    // alignText: Alignment.center
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                height: AppSizes.dynamicHeight(context, 0.04),
+                                width: AppSizes.dynamicHeight(context, 0.15),
+                                // padding: const EdgeInsets.only(
+                                //   top: 5,
+                                //   bottom: 5,
+                                // ),
+                                decoration: BoxDecoration(
+                                  color: Color(0xffFEDB41),
+                                  borderRadius: BorderRadius.circular(50),
+                                ),
+                                child: Align(
+                                  alignment: Alignment.center,
+                                  child: text(
+                                    context,
+                                    "Math",
+                                    14.0,
+                                    Colors.white,
+                                    bold: true,
+                                    // alignText: Alignment.center
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: AppSizes.dynamicHeight(context, 0.02),
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                height: AppSizes.dynamicHeight(context, 0.04),
+                                width: AppSizes.dynamicHeight(context, 0.2),
+                                // padding: const EdgeInsets.only(
+                                //   top: 5,
+                                //   bottom: 5,
+                                // ),
+                                decoration: BoxDecoration(
+                                  color: Color(0xff915DE7),
+                                  borderRadius: BorderRadius.circular(50),
+                                ),
+                                child: Align(
+                                  alignment: Alignment.center,
+                                  child: text(
+                                    context,
+                                    "Math",
+                                    14.0,
+                                    Colors.white,
+                                    bold: true,
+                                    // alignText: Alignment.center
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ],
                       ),
                     ),
                     Positioned(
-                        top: -100.0,
+                        top: -120.0,
                         right: 0,
                         left: 0,
                         // (background container size) - (circle height / 2)
                         child: Center(
-                          child: Container(
-                            height: AppSizes.dynamicHeight(context, 0.2),
-                            width: AppSizes.dynamicWidth(context, 0.2),
-                            decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                              image: DecorationImage(
-                                image: AssetImage(
-                                  "assets/png/wp2398385 1.png",
+                          child: Stack(
+                            overflow: Overflow.visible,
+                            children: [
+                              Container(
+                                height: AppSizes.dynamicHeight(context, 0.30),
+                                width: AppSizes.dynamicWidth(context, 0.30),
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  image: DecorationImage(
+                                    image: AssetImage(
+                                      "assets/png/wp2398385 1.png",
+                                    ),
+                                  ),
                                 ),
                               ),
-                            ),
+                              Positioned(
+                                top: 70,
+                                right: -32,
+                                child: Container(
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: 10,
+                                    vertical: 3,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: Color(0xffC4C4C4).withOpacity(0.5),
+                                    borderRadius: BorderRadius.circular(50),
+                                  ),
+                                  child: Row(
+                                    children: [
+                                      Image.asset('assets/png/star.png'),
+                                      text(
+                                        context,
+                                        "4.5",
+                                        AppSizes.dynamicWidth(context, 0.02),
+                                        Colors.black,
+                                        bold: true,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                        )
-                        // CircleAvatar(
-                        //   radius: 80.r,
-                        //   backgroundImage: const AssetImage(
-                        //     "assets/png/wp2398385 1.png",
-                        //   ),
-                        // ),
-                        ),
+
+                          //
+                        )),
                   ],
                 ),
               ),
@@ -339,7 +590,7 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
             ),
             decoration: BoxDecoration(
                 color: Color(0xff3DDEA5),
-                borderRadius: BorderRadius.circular(8)),
+                borderRadius: BorderRadius.circular(50)),
             child: Align(
               alignment: Alignment.center,
               child: text(
@@ -456,7 +707,7 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
             ),
             decoration: BoxDecoration(
                 color: Color(0xff3DDEA5),
-                borderRadius: BorderRadius.circular(8)),
+                borderRadius: BorderRadius.circular(50)),
             child: Align(
               alignment: Alignment.center,
               child: text(
@@ -644,18 +895,12 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
               left: 21.w,
             ),
             decoration: BoxDecoration(
-              color: AppColors.customDarkGreen,
-              borderRadius: BorderRadius.circular(20.r),
-            ),
+                color: Color(0xff3DDEA5),
+                borderRadius: BorderRadius.circular(50)),
             child: Align(
               alignment: Alignment.center,
-              child: text(
-                context,
-                "Reviews",
-                18.0,
-                AppColors.customWhite,
-                bold: false,
-              ),
+              child: text(context, "Reviws", 18.0, AppColors.customWhite,
+                  bold: false),
             ),
           ),
           SizedBox(

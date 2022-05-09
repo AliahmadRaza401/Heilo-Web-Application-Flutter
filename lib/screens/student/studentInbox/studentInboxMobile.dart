@@ -231,4 +231,6 @@ class _StudentInboxMobileState extends State<StudentInboxMobile> {
       ),
     );
   }
+
+
 }
