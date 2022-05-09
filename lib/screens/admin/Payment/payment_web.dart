@@ -271,8 +271,8 @@ class _PaymentPageWebState extends State<PaymentPageWeb> {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      width: size.width * .17,
-      height: size.height * .14,
+      width: 294.w,
+      height: 103.h,
       padding: EdgeInsets.symmetric(horizontal: 10),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15.r),
@@ -284,12 +284,12 @@ class _PaymentPageWebState extends State<PaymentPageWeb> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              text(context, normaltext, 17, AppColors.customWhite,
+              text(context, normaltext, 20.sp, AppColors.customWhite,
                   alignText: TextAlign.center),
               Container(
                 child: Row(
                   children: [
-                    text(context, 'last 7 days', 12, AppColors.customBlack,
+                    text(context, 'last 7 days', 12.sp, AppColors.customBlack,
                         alignText: TextAlign.center),
                     Icon(
                       Icons.keyboard_arrow_down,
@@ -300,7 +300,7 @@ class _PaymentPageWebState extends State<PaymentPageWeb> {
               )
             ],
           ),
-          boldPopinText(boldText, 30, boldtextColor),
+          boldPopinText(boldText, 33.sp, boldtextColor),
         ],
       ),
     );
@@ -421,20 +421,20 @@ class _PaymentPageWebState extends State<PaymentPageWeb> {
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Container(
         width: size.width * .62,
-        height: 51.h,
+        height: 41.h,
         decoration: BoxDecoration(
             color: bgColor, borderRadius: BorderRadius.circular(100)),
         padding: EdgeInsets.symmetric(horizontal: 10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            text(context, 'Serial  no.', 13, AppColors.customBlack),
+            text(context, 'Serial  no.', 14.sp, AppColors.customBlack),
             VerticalDivider(),
-            text(context, 'Details', 13, AppColors.customBlack),
+            text(context, 'Details', 14.sp, AppColors.customBlack),
             VerticalDivider(),
-            text(context, 'Date', 13, AppColors.customBlack),
+            text(context, 'Date', 14.sp, AppColors.customBlack),
             VerticalDivider(),
-            text(context, 'Amount', 13, AppColors.customBlack),
+            text(context, 'Amount', 14.sp, AppColors.customBlack),
           ],
         ),
       ),
@@ -459,10 +459,10 @@ class _PaymentPageWebState extends State<PaymentPageWeb> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                text(context, serial, 13, AppColors.customBlack),
-                text(context, details, 13, AppColors.customBlack),
-                text(context, date, 13, AppColors.customBlack),
-                text(context, amount, 13, AppColors.customBlack),
+                text(context, serial, 14.sp, AppColors.customBlack),
+                text(context, details, 14.sp, AppColors.customBlack),
+                text(context, date, 14.sp, AppColors.customBlack),
+                text(context, amount, 14.sp, AppColors.customBlack),
               ],
             ),
             Divider(color: dividerColor)

@@ -33,7 +33,7 @@ class _ProfileWebState extends State<ProfileWeb> {
                   child: Column(
                     children: [
                       Expanded(
-                        flex: 2,
+                        flex: 3,
                         child: Container(
                           width: double.infinity,
                           decoration: BoxDecoration(
@@ -262,7 +262,7 @@ class _ProfileWebState extends State<ProfileWeb> {
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 15),
                         child: Container(
-                          height: 60.h,
+                          height: 40.h,
                           width: 407.w,
                           decoration: BoxDecoration(
                               // border: Border.all(color: AppColors.green),
@@ -277,6 +277,7 @@ class _ProfileWebState extends State<ProfileWeb> {
                                   border: InputBorder.none,
                                   suffixIcon: Icon(
                                     Icons.search,
+                                    size: AppSizes.dynamicHeight(context, .03),
                                     color: AppColors.greyText,
                                   ),
                                   contentPadding:
@@ -394,7 +395,7 @@ class _ProfileWebState extends State<ProfileWeb> {
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Center(
                   child:
-                      text(context, '27th July, 2021', 10, AppColors.darkGrey),
+                      text(context, '27th July, 2021', 14.sp, AppColors.greyText),
                 )),
             SizedBox(
               width: size.width * .008,
@@ -402,37 +403,31 @@ class _ProfileWebState extends State<ProfileWeb> {
             VerticalDivider(
               color: AppColors.green,
             ),
-            text(context, 'ID 11121', 15, AppColors.darkGrey),
+            text(context, 'ID 11121', 18.sp, AppColors.greyText),
             VerticalDivider(
               color: AppColors.green,
             ),
-            text(context, 'Ruhul Tusar', 15, AppColors.darkGrey),
+            text(context, 'Ruhul Tusar', 18.sp, AppColors.greyText),
             VerticalDivider(
               color: AppColors.green,
             ),
             Expanded(
               child: Container(
                 child: Center(
-                  child: Row(
-                    children: [
-                      text(context, 'Topic- ', 15, AppColors.bblackText),
-                      text(context, 'Polygons I Gerometry I Maths B',
-                          15, AppColors.greyText),
-                    ],
-                  ),
+                  child: text(context, 'Topic- Polygons I Gerometry I Maths B',
+                      18.sp, AppColors.greyText),
                 ),
               ),
             ),
             VerticalDivider(
               color: AppColors.green,
             ),
-            text(context, 'Time- 4:30-5.30 pm', 15, AppColors.green),
+            text(context, 'Time- 4:30-5.30 pm', 18.sp, AppColors.green),
           ],
         ),
       ),
     );
   }
-
 
   Widget smallContainer(String greenText, String greyText) {
     return Container(

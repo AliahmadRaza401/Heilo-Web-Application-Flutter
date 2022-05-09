@@ -41,23 +41,12 @@ class MyApp extends StatelessWidget {
               child: widget!,
             );
           },
-<<<<<<< HEAD
           // home: Intro(),
           home: const AdminSideMenu(),
-=======
-          home: Intro(),
-          // home: const AdminSideMenu(),
->>>>>>> 096864843690abe2d7048254adcf2f273700830e
           // home: AdminSideMenu(),
 
           // home: const StudentSideMenu(),
           // home: const TeacherSideMenu(),
-<<<<<<< HEAD
-=======
-          // home: TeacherProfile(),
-          // home: const TeacherSideMenu(),
-          // home: TeacherEditProfile(),
->>>>>>> 096864843690abe2d7048254adcf2f273700830e
         );
       },
     );

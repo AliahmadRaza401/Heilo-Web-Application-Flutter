@@ -186,7 +186,7 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
           Positioned(
             bottom: 0,
             child: Container(
-                height: size.height * .475,
+                height: size.height * .465,
                 width: size.width * .63,
                 decoration: BoxDecoration(
                     color: AppColors.lightGrey,
@@ -412,7 +412,7 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Center(
                   child:
-                      text(context, '27th July, 2021', 10, AppColors.greyText),
+                      text(context, '27th July, 2021', 14.sp, AppColors.greyText),
                 )),
             SizedBox(
               width: size.width * .008,
@@ -420,11 +420,11 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
             VerticalDivider(
               color: AppColors.green,
             ),
-            text(context, 'ID 11121', 15, AppColors.greyText),
+            text(context, 'ID 11121', 18.sp, AppColors.greyText),
             VerticalDivider(
               color: AppColors.green,
             ),
-            text(context, 'Ruhul Tusar', 15, AppColors.greyText),
+            text(context, 'Ruhul Tusar', 18.sp, AppColors.greyText),
             VerticalDivider(
               color: AppColors.green,
             ),
@@ -432,14 +432,14 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
               child: Container(
                 child: Center(
                   child: text(context, 'Topic- Polygons I Gerometry I Maths B',
-                      15, AppColors.greyText),
+                      18.sp, AppColors.greyText),
                 ),
               ),
             ),
             VerticalDivider(
               color: AppColors.green,
             ),
-            text(context, 'Time- 4:30-5.30 pm', 15, AppColors.green),
+            text(context, 'Time- 4:30-5.30 pm', 18.sp, AppColors.green),
           ],
         ),
       ),
@@ -447,9 +447,3 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
   }
 }
 
-class _SalesData {
-  _SalesData(this.year, this.sales);
-
-  final String year;
-  final double sales;
-}
