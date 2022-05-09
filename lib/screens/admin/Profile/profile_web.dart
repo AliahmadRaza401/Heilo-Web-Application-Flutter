@@ -307,21 +307,24 @@ class _ProfileWebState extends State<ProfileWeb> {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      height: AppSizes.dynamicHeight(context, .4),
+      height: 51.h,
       width: size.width * .63,
+      // color: Colors.blue,
       child: Stack(
         children: [
           Positioned(
             bottom: 0,
             child: Container(
-                height: size.height * .41,
-                width: size.width * .63,
+                height: size.height * .34,
+                width: size.width * .62,
                 decoration: BoxDecoration(
                     color: AppColors.lightGrey,
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(30.r),
                         bottomRight: Radius.circular(30.r),
-                        topRight: Radius.circular(30.r))),
+                        topRight: Radius.circular(30.r),
+                        
+                        )),
                 padding:
                     EdgeInsets.only(top: 30, left: 30, right: 30, bottom: 10),
                 child: ListView.builder(
@@ -339,7 +342,7 @@ class _ProfileWebState extends State<ProfileWeb> {
                     topRight: Radius.circular(100),
                     bottomRight: Radius.circular(100))),
             child: Center(
-              child: text(context, 'Upcoming Sessions', 15, AppColors.greyText,bold: true),
+              child: text(context, 'Completed Sessions', 18.sp, AppColors.greyText,bold: true),
             ),
           ),
           // Positioned(
