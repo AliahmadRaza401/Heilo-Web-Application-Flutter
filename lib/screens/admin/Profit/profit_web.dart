@@ -188,7 +188,7 @@ class _ProfitWebState extends State<ProfitWeb> {
                                 padding: EdgeInsets.only(
                                     right: AppSizes.dynamicWidth(context, .03)),
                                 child: Container(
-                                  height: 54.h,
+                                  height: 44.h,
                                   width: 168.w,
                                   decoration: BoxDecoration(
                                       color: AppColors.green,
@@ -236,22 +236,23 @@ class _ProfitWebState extends State<ProfitWeb> {
                                             bottomLeft: Radius.circular(100))),
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 10),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: [
-                                        text(
-                                            context,
-                                            'Last 7 Days',
-                                            AppSizes.dynamicWidth(
-                                                context, .007),
-                                            AppColors.greyText),
-                                        Icon(
-                                          Icons.keyboard_arrow_down,
-                                          size: 20,
-                                        ),
-                                      ],
-                                    ),
+                                    child: dropDown(context, 'Last 7 days')
+                                    // Row(
+                                    //   mainAxisAlignment:
+                                    //       MainAxisAlignment.spaceEvenly,
+                                    //   children: [
+                                    //     text(
+                                    //         context,
+                                    //         'Last 7 Days',
+                                    //         AppSizes.dynamicWidth(
+                                    //             context, .007),
+                                    //         AppColors.greyText),
+                                    //     Icon(
+                                    //       Icons.keyboard_arrow_down,
+                                    //       size: 20,
+                                    //     ),
+                                    //   ],
+                                    // ),
                                   ),
                                 ],
                               ),
@@ -530,7 +531,7 @@ class _ProfitWebState extends State<ProfitWeb> {
             // alignText: TextAlign.center
           ),
           Container(
-            height: 54.h,
+            height: 34.h,
             width: 168.w,
             decoration: BoxDecoration(
                 // border: Border.all(color: AppColors.lightGrey),

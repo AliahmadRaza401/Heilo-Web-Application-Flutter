@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:heilo/screens/admin/BarChart/bar_chart.dart';
 import 'package:heilo/screens/admin/Dashboard/dash_board_mobile.dart';
 import 'package:heilo/screens/admin/admin_drawer.dart';
 import 'package:heilo/utils/config.dart';
@@ -515,17 +516,18 @@ class _ProfileMobileState extends State<ProfileMobile> {
                   color: AppColors.lightGrey,
                   borderRadius: BorderRadius.circular(100)),
               padding: EdgeInsets.symmetric(horizontal: 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  text(context, status, 10, AppColors.greyText),
-                  Icon(
-                    Icons.keyboard_arrow_down,
-                    size: 10,
-                    color: AppColors.green,
-                  ),
-                ],
-              ),
+              child: dropDownMobile(context, 'Active')
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              //   children: [
+              //     text(context, status, 10, AppColors.greyText),
+              //     Icon(
+              //       Icons.keyboard_arrow_down,
+              //       size: 10,
+              //       color: AppColors.green,
+              //     ),
+              //   ],
+              // ),
             ),
           ],
         ),

@@ -69,21 +69,31 @@ class _QuizReportWebState extends State<QuizReportWeb> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              text(context, 'Subject', 16.sp, AppColors.greyText),
-                              Icon(
-                                Icons.keyboard_arrow_down,
-                                size: 15,
-                                color: AppColors.green,
-                              ),
+                              Container(
+                                 height: 34.75.h,
+                              width: 75.5.w,
+                                child:
+                              dropDown(context, 'Subject')
+                              //  text(context, 'Subject', 16.sp, AppColors.greyText)
+                               ),
+                              // Icon(
+                              //   Icons.keyboard_arrow_down,
+                              //   size: 15,
+                              //   color: AppColors.green,
+                              // ),
                               VerticalDivider(
                                 thickness: 2,
                               ),
-                              text(context, 'Class', 16.sp, AppColors.greyText),
-                              Icon(
-                                Icons.keyboard_arrow_down,
-                                size: 15,
-                                color: AppColors.green,
-                              ),
+                              Container(
+                                 height: 34.75.h,
+                              width: 70.5.w,
+                                child: dropDown(context, 'Class'),)
+                              // text(context, 'Class', 16.sp, AppColors.greyText),
+                              // Icon(
+                              //   Icons.keyboard_arrow_down,
+                              //   size: 15,
+                              //   color: AppColors.green,
+                              // ),
                             ],
                           ),
                         ),
@@ -98,18 +108,19 @@ class _QuizReportWebState extends State<QuizReportWeb> {
                               color: AppColors.customWhite,
                               borderRadius: BorderRadius.circular(100)),
                           padding: EdgeInsets.symmetric(horizontal: 10),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              text(context, 'Last 7 Days', 14.sp,
-                                  AppColors.greyText),
-                              Icon(
-                                Icons.keyboard_arrow_down,
-                                size: 15,
-                                color: AppColors.green,
-                              ),
-                            ],
-                          ),
+                          child: dropDown(context, 'Last 7 Days')
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          //   children: [
+                          //     text(context, 'Last 7 Days', 14.sp,
+                          //         AppColors.greyText),
+                          //     Icon(
+                          //       Icons.keyboard_arrow_down,
+                          //       size: 15,
+                          //       color: AppColors.green,
+                          //     ),
+                          //   ],
+                          // ),
                         ),
                         Spacer(flex: 1),
                       ],
@@ -181,25 +192,37 @@ class _QuizReportWebState extends State<QuizReportWeb> {
                                   color: AppColors.customWhite,
                                   borderRadius: BorderRadius.circular(100)),
                               padding: EdgeInsets.symmetric(horizontal: 10),
-                              child: Row(
+                              child: 
+                              Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: [
-                                  text(
-                                      context, 'Subject',16.sp , AppColors.greyText),
-                                  Icon(
-                                    Icons.keyboard_arrow_down,
-                                    size: 12,
-                                    color: AppColors.green,
-                                  ),
+                              Container(
+                                 height: 34.75.h,
+                              width: 75.5.w,
+                                child: dropDown(context, 'Subject'),
+                              ),
+
+                                  // text(
+                                  //     context, 'Subject',16.sp , AppColors.greyText),
+                                  // Icon(
+                                  //   Icons.keyboard_arrow_down,
+                                  //   size: 12,
+                                  //   color: AppColors.green,
+                                  // ),
                                   VerticalDivider(
                                     thickness: 2,
                                   ),
-                                  text(context, 'Class', 16.sp, AppColors.greyText),
-                                  Icon(
-                                    Icons.keyboard_arrow_down,
-                                    size: 12,
-                                    color: AppColors.green,
-                                  ),
+                              Container(
+                                 height: 34.75.h,
+                              width: 70.5.w,
+                                child: dropDown(context, 'Class'),)
+
+                                  // text(context, 'Class', 16.sp, AppColors.greyText),
+                                  // Icon(
+                                  //   Icons.keyboard_arrow_down,
+                                  //   size: 12,
+                                  //   color: AppColors.green,
+                                  // ),
                                 ],
                               ),
                             ),
@@ -214,18 +237,19 @@ class _QuizReportWebState extends State<QuizReportWeb> {
                                   color: AppColors.customWhite,
                                   borderRadius: BorderRadius.circular(100)),
                               padding: EdgeInsets.symmetric(horizontal: 10),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  text(context, 'Last 7 Days', 14.sp,
-                                      AppColors.greyText),
-                                  Icon(
-                                    Icons.keyboard_arrow_down,
-                                    size: 10,
-                                    color: AppColors.green,
-                                  ),
-                                ],
-                              ),
+                              child: dropDown(context, 'Last 7 Days')
+                              // Row(
+                              //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              //   children: [
+                              //     text(context, 'Last 7 Days', 14.sp,
+                              //         AppColors.greyText),
+                              //     Icon(
+                              //       Icons.keyboard_arrow_down,
+                              //       size: 10,
+                              //       color: AppColors.green,
+                              //     ),
+                              //   ],
+                              // ),
                             ),
                           ),
                         ],

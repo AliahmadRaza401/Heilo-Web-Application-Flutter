@@ -145,18 +145,20 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
                                     topLeft: Radius.circular(100),
                                     bottomLeft: Radius.circular(100))),
                             padding: EdgeInsets.symmetric(horizontal: 10),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                text(context, 'Last 7 Days', 14.sp,
-                                    AppColors.greyText),
-                                Icon(
-                                  Icons.keyboard_arrow_down,
-                                  size: 15,
-                                  color: AppColors.green,
-                                ),
-                              ],
-                            ),
+                            child: dropDown(context,'Last 7 days')
+                            
+                            // Row(
+                            //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            //   children: [
+                            //     text(context, 'Last 7 Days', 14.sp,
+                            //         AppColors.greyText),
+                            //     Icon(
+                            //       Icons.keyboard_arrow_down,
+                            //       size: 15,
+                            //       color: AppColors.green,
+                            //     ),
+                            //   ],
+                            // ),
                           ),
                         ),
                       ],
@@ -349,16 +351,17 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
                         topLeft: Radius.circular(100),
                         bottomLeft: Radius.circular(100))),
                 padding: EdgeInsets.symmetric(horizontal: 10),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    text(context, 'Last 7 Days', 15.sp, AppColors.greyText),
-                    Icon(
-                      Icons.keyboard_arrow_down,
-                      size: 15,
-                    ),
-                  ],
-                ),
+                child: dropDown(context, 'Last 7 days')
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                //   children: [
+                //     text(context, 'Last 7 Days', 15.sp, AppColors.greyText),
+                //     Icon(
+                //       Icons.keyboard_arrow_down,
+                //       size: 15,
+                //     ),
+                //   ],
+                // ),
               ),
             ),
           ],

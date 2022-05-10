@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:heilo/screens/admin/BarChart/bar_chart.dart';
 import 'package:heilo/utils/config.dart';
 
 import '../../../utils/dynamic_sizes.dart';
@@ -47,19 +48,21 @@ class _ProfileWebState extends State<ProfileWeb> {
                             children: [
                               Column(
                                 children: [
-                                  Spacer(flex: 1,),
+                                  Spacer(
+                                    flex: 1,
+                                  ),
                                   CircleAvatar(
                                     backgroundColor: AppColors.green,
-                                    radius: AppSizes.dynamicHeight(context, .07),
+                                    radius:
+                                        AppSizes.dynamicHeight(context, .07),
                                     child: CircleAvatar(
-                                      radius: AppSizes.dynamicHeight(context, .065),
+                                      radius:
+                                          AppSizes.dynamicHeight(context, .065),
                                       backgroundImage:
                                           AssetImage('assets/png/charles.png'),
                                     ),
-
                                   ),
                                   Spacer(flex: 3),
-
                                 ],
                               ),
                               Spacer(
@@ -241,10 +244,7 @@ class _ProfileWebState extends State<ProfileWeb> {
                           ),
                         ),
                       ),
-                      Expanded(
-                        flex: 4,
-                        child: upCommingSessions()
-                      ),
+                      Expanded(flex: 4, child: upCommingSessions()),
                     ],
                   ),
                 )),
@@ -303,7 +303,7 @@ class _ProfileWebState extends State<ProfileWeb> {
         ));
   }
 
-    Widget upCommingSessions() {
+  Widget upCommingSessions() {
     Size size = MediaQuery.of(context).size;
 
     return Container(
@@ -320,11 +320,10 @@ class _ProfileWebState extends State<ProfileWeb> {
                 decoration: BoxDecoration(
                     color: AppColors.lightGrey,
                     borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(30.r),
-                        bottomRight: Radius.circular(30.r),
-                        topRight: Radius.circular(30.r),
-                        
-                        )),
+                      bottomLeft: Radius.circular(30.r),
+                      bottomRight: Radius.circular(30.r),
+                      topRight: Radius.circular(30.r),
+                    )),
                 padding:
                     EdgeInsets.only(top: 30, left: 30, right: 30, bottom: 10),
                 child: ListView.builder(
@@ -342,7 +341,9 @@ class _ProfileWebState extends State<ProfileWeb> {
                     topRight: Radius.circular(100),
                     bottomRight: Radius.circular(100))),
             child: Center(
-              child: text(context, 'Completed Sessions', 18.sp, AppColors.greyText,bold: true),
+              child: text(
+                  context, 'Completed Sessions', 18.sp, AppColors.greyText,
+                  bold: true),
             ),
           ),
           // Positioned(
@@ -374,7 +375,9 @@ class _ProfileWebState extends State<ProfileWeb> {
       ),
     );
   }
-   Widget detailsRowa() {
+
+ 
+  Widget detailsRowa() {
     Size size = MediaQuery.of(context).size;
 
     return Padding(
@@ -397,8 +400,8 @@ class _ProfileWebState extends State<ProfileWeb> {
                     borderRadius: BorderRadius.circular(100)),
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Center(
-                  child:
-                      text(context, '27th July, 2021', 14.sp, AppColors.greyText),
+                  child: text(
+                      context, '27th July, 2021', 14.sp, AppColors.greyText),
                 )),
             SizedBox(
               width: size.width * .008,
@@ -509,17 +512,19 @@ class _ProfileWebState extends State<ProfileWeb> {
                   color: AppColors.lightGrey,
                   borderRadius: BorderRadius.circular(100)),
               padding: EdgeInsets.symmetric(horizontal: 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  text(context, status, 10, AppColors.greyText),
-                  Icon(
-                    Icons.keyboard_arrow_down,
-                    size: 20,
-                    color: AppColors.green,
-                  ),
-                ],
-              ),
+              child: dropDown(context, 'Active')
+              
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              //   children: [
+              //     text(context, status, 10, AppColors.greyText),
+              //     Icon(
+              //       Icons.keyboard_arrow_down,
+              //       size: 20,
+              //       color: AppColors.green,
+              //     ),
+              //   ],
+              // ),
             ),
           ],
         ),

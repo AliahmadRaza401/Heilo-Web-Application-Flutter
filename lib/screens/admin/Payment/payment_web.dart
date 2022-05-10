@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:heilo/screens/admin/BarChart/bar_chart.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
@@ -396,17 +397,7 @@ class _PaymentPageWebState extends State<PaymentPageWeb> {
                   color: AppColors.customWhite,
                   borderRadius: BorderRadius.circular(100)),
               padding: EdgeInsets.symmetric(horizontal: 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  text(context, status, 10, AppColors.bblackText),
-                  Icon(
-                    Icons.keyboard_arrow_down,
-                    size: 20,
-                    color: AppColors.green,
-                  ),
-                ],
-              ),
+              child: Container(child: dropDown(context, 'Pending'),),
             ),
           ],
         ),
@@ -535,17 +526,22 @@ class _PaymentPageWebState extends State<PaymentPageWeb> {
                   color: AppColors.lightGrey,
                   borderRadius: BorderRadius.circular(100)),
               padding: EdgeInsets.symmetric(horizontal: 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  text(context, status, 10, AppColors.bblackText),
-                  Icon(
-                    Icons.keyboard_arrow_down,
-                    size: 20,
-                    color: AppColors.green,
-                  ),
-                ],
-              ),
+              child:
+                              Container(child: dropDown(context, 'Active'),)
+
+              
+              //  Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              //   children: [
+
+              //     // text(context, status, 10, AppColors.bblackText),
+              //     // Icon(
+              //     //   Icons.keyboard_arrow_down,
+              //     //   size: 20,
+              //     //   color: AppColors.green,
+              //     // ),
+              //   ],
+              // ),
             ),
           ],
         ),
