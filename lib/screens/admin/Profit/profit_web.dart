@@ -526,7 +526,7 @@ class _ProfitWebState extends State<ProfitWeb> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           text(
-            context, title, AppSizes.dynamicWidth(context, .01),
+            context, title, AppSizes.dynamicWidth(context, .008),
             textColor,
             // alignText: TextAlign.center
           ),

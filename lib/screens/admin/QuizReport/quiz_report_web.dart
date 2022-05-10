@@ -323,7 +323,7 @@ class _QuizReportWebState extends State<QuizReportWeb> {
                   padding: const EdgeInsets.only(top:15),
                   child: Container(
                     // color:Colors.amber,
-                    width:  AppSizes.dynamicWidth(context, .16),
+                    width:  AppSizes.dynamicWidth(context, .14),
                     child: Wrap(
                       children: [
                         text(context, review, 14.sp, AppColors.greyText,maxLines: 3,alignText: TextAlign.justify),
