@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/buttons.dart';
+import 'package:heilo/widgets/notification_container.dart';
 import 'package:heilo/widgets/text_widget.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
@@ -49,13 +50,14 @@ class _OnDemandWebState extends State<OnDemandWeb> {
     'Item 4',
     'Item 5',
   ];
-
+  int _value = 6;
   @override
   Widget build(BuildContext context) {
     return Container(
       width: AppSizes.dynamicWidth(context, 1),
       height: AppSizes.dynamicHeight(context, 1),
       decoration: BoxDecoration(
+        // color: Colors.amber,
         color: AppColors.customWhite,
         borderRadius: BorderRadius.circular(30.r),
       ),
@@ -85,10 +87,11 @@ class _OnDemandWebState extends State<OnDemandWeb> {
                 ),
               ],
             ),
-            Padding(
-              padding: EdgeInsets.only(left: 180.w),
+            Container(
+              // color: Colors.yellow,
+              padding: EdgeInsets.only(left: 0.w),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Column(
                     children: [
@@ -178,14 +181,29 @@ class _OnDemandWebState extends State<OnDemandWeb> {
                       ),
                       Container(
                         width: 771.w,
+                        // color: Colors.amber,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            new LinearPercentIndicator(
-                              width: 100.0,
-                              lineHeight: 5.0,
-                              percent: 0.7,
-                              progressColor: AppColors.primaryColor,
+                            SizedBox(
+                              width: 180.w,
+                              height: 10.h,
+                              child: Slider(
+                                  value: _value.toDouble(),
+                                  min: 1.0,
+                                  max: 20.0,
+                                  divisions: 10,
+                                  activeColor: AppColors.primaryColor,
+                                  inactiveColor: Colors.grey,
+                                  label: 'Set Price value',
+                                  onChanged: (double newValue) {
+                                    setState(() {
+                                      _value = newValue.round();
+                                    });
+                                  },
+                                  semanticFormatterCallback: (double newValue) {
+                                    return '${newValue.round()} dollars';
+                                  }),
                             ),
                             Row(
                               children: [
@@ -225,35 +243,46 @@ class _OnDemandWebState extends State<OnDemandWeb> {
                                 ),
                               ],
                             ),
-                            DropdownButton(
-                              // Initial Value
-                              value: dropdownvalueavail,
-                              underline: Container(color: Colors.transparent),
-                              // Down Arrow Icon
-                              icon: const Icon(Icons.keyboard_arrow_down),
-                              // Array list of items
-                              items: availitem.map((String items) {
-                                return DropdownMenuItem(
-                                  value: items,
-                                  child: Text(
-                                    items,
-                                    style: TextStyle(
-                                      fontSize: 16.sp,
+                            Container(
+                              height: 33.h,
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 30.w,
+                              ),
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                    width: 1, color: AppColors.lightgreyborder),
+                                borderRadius: BorderRadius.circular(16.r),
+                              ),
+                              child: DropdownButton(
+                                // Initial Value
+                                value: dropdownvalueavail,
+                                underline: Container(color: Colors.transparent),
+                                // Down Arrow Icon
+                                icon: const Icon(Icons.keyboard_arrow_down),
+                                // Array list of items
+                                items: availitem.map((String items) {
+                                  return DropdownMenuItem(
+                                    value: items,
+                                    child: Text(
+                                      items,
+                                      style: TextStyle(
+                                        fontSize: 16.sp,
+                                      ),
                                     ),
-                                  ),
-                                );
-                              }).toList(),
-                              // After selecting the desired option,it will
-                              // change button value to selected value
-                              onChanged: (String? newValue) {
-                                setState(() {
-                                  dropdownvalueavail = newValue!;
-                                });
-                              },
+                                  );
+                                }).toList(),
+                                // After selecting the desired option,it will
+                                // change button value to selected value
+                                onChanged: (String? newValue) {
+                                  setState(() {
+                                    dropdownvalueavail = newValue!;
+                                  });
+                                },
+                              ),
                             ),
                             Container(
                               width: 170.w,
-                              height: 56.h,
+                              height: 46.h,
                               padding: EdgeInsets.only(
                                 left: 10.w,
                               ),
@@ -267,14 +296,14 @@ class _OnDemandWebState extends State<OnDemandWeb> {
                                 children: [
                                   Icon(
                                     Icons.search,
-                                    size: 20,
+                                    size: 17,
                                   ),
                                   Container(
                                     alignment: Alignment.topCenter,
                                     width: 128.w,
                                     padding: EdgeInsets.only(
                                       left: 10.w,
-                                      bottom: 20.h,
+                                      bottom: 15.h,
                                     ),
                                     child: TextField(
                                       decoration: InputDecoration(
@@ -295,53 +324,25 @@ class _OnDemandWebState extends State<OnDemandWeb> {
                       SizedBox(
                         height: 30.h,
                       ),
-                      SizedBox(
+                      Container(
+                        // color: Colors.amber,
+
                         width: 760.w,
                         height: 670.h,
                         child: ListView.builder(
                           itemCount: 6,
                           itemBuilder: (context, i) {
-                            return profileCard(context);
+                            return Container(
+                                padding: EdgeInsets.only(
+                                  right: 20.w,
+                                ),
+                                child: profileCard(context));
                           },
                         ),
                       ),
                     ],
                   ),
-                  Container(
-                    width: 526.w,
-                    height: 740.h,
-                    decoration: BoxDecoration(
-                      color: AppColors.customGrey,
-                      borderRadius: BorderRadius.circular(30.r),
-                    ),
-                    padding: EdgeInsets.symmetric(
-                      vertical: 16.h,
-                      horizontal: 25.w,
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        text(
-                          context,
-                          "Notifications",
-                          18.sp,
-                          Color(0xff3DDEA5),
-                          bold: true,
-                        ),
-                        SizedBox(
-                          width: 460.w,
-                          height: 660.h,
-                          child: ListView.builder(
-                            itemCount: 6,
-                            itemBuilder: (context, i) {
-                              return notificationCardforall(context);
-                            },
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  notificationContainer(context),
                 ],
               ),
             ),
@@ -483,7 +484,7 @@ Widget notificationCardforall(context) {
       borderRadius: BorderRadius.circular(30.r),
     ),
     padding: EdgeInsets.symmetric(
-      horizontal: AppSizes.dynamicWidth(context, 0.01),
+      horizontal: 20.w,
       vertical: 10.h,
     ),
     margin: EdgeInsets.only(bottom: 10.h),
