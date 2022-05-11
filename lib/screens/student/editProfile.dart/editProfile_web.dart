@@ -29,331 +29,337 @@ class _EditProfileWebState extends State<EditProfileWeb> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.transparent,
-      body: Container(
-        // height: AppSizes.dynamicHeight(context, 0.95),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(30.r),
-        ),
-        child: Column(
-          children: [
-            topIconAvatar(context),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  alignment: Alignment.center,
-                  width: 526.w,
-                  height: 780.h,
-                  decoration: BoxDecoration(
-                    // color: Colors.amber,
-                    borderRadius: BorderRadius.circular(30.r),
-                  ),
-                  padding: EdgeInsets.only(
-                    left: 45.w,
-                    right: 45.w,
-                    // top: 50.h,
-                  ),
-                  // padding: EdgeInsets.symmetric(
-                  //   vertical: 16.h,
-                  //   horizontal: 25.w,
-                  // ),
-                  child: Stack(
-                    overflow: Overflow.visible,
-                    children: [
-                      Container(
-                        height: 530.h,
-                        decoration: BoxDecoration(
-                          color: Color(0xffF1F1F1),
-                          borderRadius: BorderRadius.circular(30.r),
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Container(
+          // height: AppSizes.dynamicHeight(context, 0.95),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(30.r),
+          ),
+          child: Column(
+            children: [
+              topIconAvatar(context),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 526.w,
+                    height: 780.h,
+                    decoration: BoxDecoration(
+                      // color: Colors.amber,
+                      borderRadius: BorderRadius.circular(30.r),
+                    ),
+                    padding: EdgeInsets.only(
+                      left: 45.w,
+                      right: 45.w,
+                      // top: 50.h,
+                    ),
+                    // padding: EdgeInsets.symmetric(
+                    //   vertical: 16.h,
+                    //   horizontal: 25.w,
+                    // ),
+                    child: Stack(
+                      overflow: Overflow.visible,
+                      children: [
+                        Container(
+                          height: 530.h,
+                          decoration: BoxDecoration(
+                            color: Color(0xffF1F1F1),
+                            borderRadius: BorderRadius.circular(30.r),
+                          ),
+                          padding: EdgeInsets.only(
+                            top: 130.h,
+                            left: 50.w,
+                            right: 50.w,
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                padding: EdgeInsets.all(6),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(30.r),
+                                  border: Border.all(
+                                      width: 0.5, color: Color(0xffC4C4C4)),
+                                ),
+                                child: text(
+                                  context,
+                                  "Sakib Abdullah",
+                                  18.sp,
+                                  AppColors.greyText,
+                                  bold: true,
+                                ),
+                              ),
+                              // textWidget(
+                              //   "Sakib Abdullah",
+                              //   FontWeight.w600,
+                              //   0xff747474,
+                              //   18,
+                              // ),
+                              SizedBox(
+                                height: 10.h,
+                              ),
+                              Container(
+                                padding: EdgeInsets.all(6),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(30.r),
+                                  border: Border.all(
+                                      width: 0.5, color: Color(0xffC4C4C4)),
+                                ),
+                                child: text(
+                                  context,
+                                  "Maple Leaf International School and College",
+                                  14.sp,
+                                  AppColors.greyText,
+                                ),
+                              ),
+                              // textWidget(
+                              //   "Maple Leaf International School and College",
+                              //   FontWeight.w300,
+                              //   0xff747474,
+                              //   14,
+                              // ),
+                              SizedBox(
+                                height: 40.h,
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Container(
+                                    height: 38.h,
+                                    width: 191.w,
+                                    // padding: const EdgeInsets.only(
+                                    //   top: 5,
+                                    //   bottom: 5,
+                                    // ),
+                                    decoration: BoxDecoration(
+                                      color: AppColors.customDarkBlue,
+                                      borderRadius: BorderRadius.circular(30),
+                                    ),
+                                    child: Align(
+                                      alignment: Alignment.center,
+                                      child: text(
+                                        context,
+                                        "Tutions completed",
+                                        14.sp,
+                                        AppColors.customWhite,
+                                        bold: true,
+                                        // alignText: Alignment.center
+                                      ),
+                                    ),
+                                  ),
+                                  Container(
+                                    width: 123.w,
+                                    height: 38.h,
+                                    //  padding: EdgeInsets.all(6),
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(30.r),
+                                      border: Border.all(
+                                          width: 0.5, color: Color(0xffC4C4C4)),
+                                    ),
+                                    child: Align(
+                                      alignment: Alignment.center,
+                                      child: text(
+                                        context,
+                                        "48",
+                                        14.sp,
+                                        AppColors.greytextText,
+                                        bold: true,
+                                        // alignText: Alignment.center
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 10.h,
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Container(
+                                    width: 191.w,
+                                    height: 38.h,
+                                    // padding: const EdgeInsets.only(
+                                    //   top: 5,
+                                    //   bottom: 5,
+                                    // ),
+                                    decoration: BoxDecoration(
+                                      color: Color(0xffA279E6),
+                                      borderRadius: BorderRadius.circular(
+                                        30.r,
+                                      ),
+                                    ),
+                                    child: Align(
+                                      alignment: Alignment.center,
+                                      child: text(
+                                        context,
+                                        "Tutors referred",
+                                        14.sp,
+                                        AppColors.customWhite,
+                                        bold: true,
+                                        // alignText: Alignment.center
+                                      ),
+                                    ),
+                                  ),
+                                  Container(
+                                    width: 123.w,
+                                    height: 38.h,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(30),
+                                      border: Border.all(
+                                          width: 0.5, color: Color(0xffC4C4C4)),
+                                    ),
+                                    child: Align(
+                                      alignment: Alignment.center,
+                                      child: text(
+                                        context,
+                                        "27",
+                                        14.sp,
+                                        AppColors.greytextText,
+                                        bold: true,
+                                        // alignText: Alignment.center
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 30.h,
+                              ),
+                              Container(
+                                padding: EdgeInsets.all(6),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  border: Border.all(
+                                      width: 0.5, color: Color(0xffC4C4C4)),
+                                ),
+                                child: text(
+                                    context,
+                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
+                                    14.sp,
+                                    AppColors.customBlack,
+                                    // bold: true,
+                                    // alignText: Alignment.center
+                                    maxLines: 8),
+                              ),
+                              // textWidget(
+                              //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
+                              //   FontWeight.w300,
+                              //   0xff7000000,
+                              //   14,
+                              // ),
+                            ],
+                          ),
                         ),
+                        Positioned(
+                            top: -50.0,
+                            right: 0,
+                            left: 0,
+                            // (background container size) - (circle height / 2)
+                            child: Center(
+                              child: Stack(
+                                overflow: Overflow.visible,
+                                children: [
+                                  Container(
+                                    height: 170.h,
+                                    width: 183.w,
+                                    decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                          "assets/png/wp2398385 1.png",
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  // CircleAvatar(
+                                  //   radius: 46.r,
+                                  //   backgroundImage: const AssetImage(
+                                  //     "assets/png/wp2398385 1.png",
+                                  //   ),
+                                  // ),
+                                  Positioned(
+                                    top: 0,
+                                    right: -15,
+                                    child: Container(
+                                      padding: EdgeInsets.symmetric(
+                                        horizontal: 10,
+                                        vertical: 3,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        color:
+                                            Color(0xffC4C4C4).withOpacity(0.5),
+                                        borderRadius: BorderRadius.circular(50),
+                                      ),
+                                      child: Row(
+                                        children: [
+                                          Image.asset('assets/png/star.png'),
+                                          text(
+                                            context,
+                                            "4.5",
+                                            15.sp,
+                                            Colors.black,
+                                            bold: true,
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+
+                              //
+                            )
+                            // CircleAvatar(
+                            //   radius: 80.r,
+                            //   backgroundImage: const AssetImage(
+                            //     "assets/png/wp2398385 1.png",
+                            //   ),
+                            // ),
+                            ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: AppSizes.dynamicHeight(context, 0.8),
+                    child: SingleChildScrollView(
+                      child: Container(
                         padding: EdgeInsets.only(
-                          top: 130.h,
-                          left: 50.w,
-                          right: 50.w,
+                          right: 20.w,
+                          top: 0.h,
                         ),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Container(
-                              padding: EdgeInsets.all(6),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(30.r),
-                                border: Border.all(
-                                    width: 0.5, color: Color(0xffC4C4C4)),
-                              ),
-                              child: text(
-                                context,
-                                "Sakib Abdullah",
-                                18.sp,
-                                AppColors.greyText,
-                                bold: true,
-                              ),
-                            ),
-                            // textWidget(
-                            //   "Sakib Abdullah",
-                            //   FontWeight.w600,
-                            //   0xff747474,
-                            //   18,
-                            // ),
-                            SizedBox(
-                              height: 10.h,
-                            ),
-                            Container(
-                              padding: EdgeInsets.all(6),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(30.r),
-                                border: Border.all(
-                                    width: 0.5, color: Color(0xffC4C4C4)),
-                              ),
-                              child: text(
-                                context,
-                                "Maple Leaf International School and College",
-                                14.sp,
-                                AppColors.greyText,
-                              ),
-                            ),
-                            // textWidget(
-                            //   "Maple Leaf International School and College",
-                            //   FontWeight.w300,
-                            //   0xff747474,
-                            //   14,
-                            // ),
+                            greyWidget1(),
                             SizedBox(
                               height: 40.h,
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  height: 38.h,
-                                  width: 191.w,
-                                  // padding: const EdgeInsets.only(
-                                  //   top: 5,
-                                  //   bottom: 5,
-                                  // ),
-                                  decoration: BoxDecoration(
-                                    color: AppColors.customDarkBlue,
-                                    borderRadius: BorderRadius.circular(30),
-                                  ),
-                                  child: Align(
-                                    alignment: Alignment.center,
-                                    child: text(
-                                      context,
-                                      "Tutions completed",
-                                      14.sp,
-                                      AppColors.customWhite,
-                                      bold: true,
-                                      // alignText: Alignment.center
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  width: 123.w,
-                                  height: 38.h,
-                                  //  padding: EdgeInsets.all(6),
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(30.r),
-                                    border: Border.all(
-                                        width: 0.5, color: Color(0xffC4C4C4)),
-                                  ),
-                                  child: Align(
-                                    alignment: Alignment.center,
-                                    child: text(
-                                      context,
-                                      "48",
-                                      14.sp,
-                                      AppColors.greytextText,
-                                      bold: true,
-                                      // alignText: Alignment.center
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
+                            greyWidget2(),
                             SizedBox(
-                              height: 10.h,
+                              height: 40.h,
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  width: 191.w,
-                                  height: 38.h,
-                                  // padding: const EdgeInsets.only(
-                                  //   top: 5,
-                                  //   bottom: 5,
-                                  // ),
-                                  decoration: BoxDecoration(
-                                    color: Color(0xffA279E6),
-                                    borderRadius: BorderRadius.circular(
-                                      30.r,
-                                    ),
-                                  ),
-                                  child: Align(
-                                    alignment: Alignment.center,
-                                    child: text(
-                                      context,
-                                      "Tutors referred",
-                                      14.sp,
-                                      AppColors.customWhite,
-                                      bold: true,
-                                      // alignText: Alignment.center
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  width: 123.w,
-                                  height: 38.h,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(30),
-                                    border: Border.all(
-                                        width: 0.5, color: Color(0xffC4C4C4)),
-                                  ),
-                                  child: Align(
-                                    alignment: Alignment.center,
-                                    child: text(
-                                      context,
-                                      "27",
-                                      14.sp,
-                                      AppColors.greytextText,
-                                      bold: true,
-                                      // alignText: Alignment.center
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
+                            greyWidget3(),
                             SizedBox(
-                              height: 30.h,
+                              height: 40.h,
                             ),
-                            Container(
-                              padding: EdgeInsets.all(6),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                border: Border.all(
-                                    width: 0.5, color: Color(0xffC4C4C4)),
-                              ),
-                              child: text(
-                                  context,
-                                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
-                                  14.sp,
-                                  AppColors.customBlack,
-                                  // bold: true,
-                                  // alignText: Alignment.center
-                                  maxLines: 8),
-                            ),
-                            // textWidget(
-                            //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
-                            //   FontWeight.w300,
-                            //   0xff7000000,
-                            //   14,
-                            // ),
+                            greyWidget4(),
                           ],
                         ),
                       ),
-                      Positioned(
-                          top: -50.0,
-                          right: 0,
-                          left: 0,
-                          // (background container size) - (circle height / 2)
-                          child: Center(
-                            child: Stack(
-                              overflow: Overflow.visible,
-                              children: [
-                                Container(
-                                  height: 170.h,
-                                  width: 183.w,
-                                  decoration: const BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    image: DecorationImage(
-                                      image: AssetImage(
-                                        "assets/png/wp2398385 1.png",
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                // CircleAvatar(
-                                //   radius: 46.r,
-                                //   backgroundImage: const AssetImage(
-                                //     "assets/png/wp2398385 1.png",
-                                //   ),
-                                // ),
-                                Positioned(
-                                  top: 0,
-                                  right: -15,
-                                  child: Container(
-                                    padding: EdgeInsets.symmetric(
-                                      horizontal: 10,
-                                      vertical: 3,
-                                    ),
-                                    decoration: BoxDecoration(
-                                      color: Color(0xffC4C4C4).withOpacity(0.5),
-                                      borderRadius: BorderRadius.circular(50),
-                                    ),
-                                    child: Row(
-                                      children: [
-                                        Image.asset('assets/png/star.png'),
-                                        text(
-                                          context,
-                                          "4.5",
-                                          15.sp,
-                                          Colors.black,
-                                          bold: true,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-
-                            //
-                          )
-                          // CircleAvatar(
-                          //   radius: 80.r,
-                          //   backgroundImage: const AssetImage(
-                          //     "assets/png/wp2398385 1.png",
-                          //   ),
-                          // ),
-                          ),
-                    ],
-                  ),
-                ),
-                Container(
-                  height: AppSizes.dynamicHeight(context, 0.8),
-                  child: SingleChildScrollView(
-                    child: Container(
-                      padding: EdgeInsets.only(
-                        right: 20.w,
-                        top: 0.h,
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          greyWidget1(),
-                          SizedBox(
-                            height: 40.h,
-                          ),
-                          greyWidget2(),
-                          SizedBox(
-                            height: 40.h,
-                          ),
-                          greyWidget3(),
-                          SizedBox(
-                            height: 40.h,
-                          ),
-                          greyWidget4(),
-                        ],
-                      ),
                     ),
-                  ),
-                )
-              ],
-            ),
-          ],
+                  )
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -1190,5 +1196,4 @@ class _EditProfileWebState extends State<EditProfileWeb> {
       ),
     );
   }
-
 }

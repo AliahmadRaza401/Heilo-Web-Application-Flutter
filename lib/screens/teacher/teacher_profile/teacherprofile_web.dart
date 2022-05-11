@@ -36,7 +36,7 @@ class _TeacherProfileWebState extends State<TeacherProfileWeb> {
         children: [
           topIconAvatar(context),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Container(
                 height: AppSizes.dynamicHeight(context, 0.8),

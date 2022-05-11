@@ -9,6 +9,7 @@ import 'package:heilo/screens/student/studentInbox/studentInboxMobile.dart';
 import 'package:heilo/screens/student/studentInbox/studentInboxMobile.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
+import 'package:heilo/widgets/notification_Container_mobile.dart';
 import 'package:heilo/widgets/text_widget.dart';
 
 final GlobalKey<ScaffoldState> studentScafoldKey = GlobalKey(); // Create a key
@@ -169,7 +170,7 @@ class _StudentSideMenuMobileState extends State<StudentSideMenuMobile> {
             ? StudentInboxMobile()
             : _selectedIndex == 1
                 ? OnDemandMobile()
-                : NotificationMobile(),
+                : notificationMobileContainer(context),
       ),
     );
   }

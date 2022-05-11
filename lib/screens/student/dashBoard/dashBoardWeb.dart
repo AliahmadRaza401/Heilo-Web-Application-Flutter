@@ -7,6 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/main.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
+import 'package:heilo/widgets/notification_container.dart';
 import 'package:heilo/widgets/text_widget.dart';
 
 import '../onDemand/onDemand_web.dart';
@@ -27,7 +28,7 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
       body: SingleChildScrollView(
         child: Container(
           width: AppSizes.dynamicWidth(context, 1),
-          height: AppSizes.dynamicHeight(context, 1),
+          // height: AppSizes.dynamicHeight(context, 1),
           padding: EdgeInsets.only(
             left: 84.w,
             right: 84.w,
@@ -135,50 +136,53 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
                             : SelectedCard == 3
                                 ? quizCard()
                                 : favoriteTutiCard(),
-                    Container(
-                      width: 700.w,
-                      height: 578.h,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: const Color(0xffF8F8F8),
-                      ),
-                      padding: EdgeInsets.only(
-                        left: 60.w,
-                        // right: 45.w,
-                        top: 17.h,
-                        // bottom: 5.h,
-                      ),
-                      // padding: EdgeInsets.symmetric(
-                      //   vertical: 5.h,
-                      //   horizontal: 25.w,
-                      // ),
-                      child: SingleChildScrollView(
-                        scrollDirection: Axis.vertical,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            text(
-                              context,
-                              "Notifications",
-                              18.0,
-                              AppColors.customGreen,
-                              bold: false,
-                            ),
-                            SizedBox(
-                              height: 20.h,
-                            ),
-                            notificationCardforall(context),
-                            notificationCardforall(context),
-                            notificationCardforall(context),
-                            notificationCardforall(context),
-                            notificationCardforall(context),
-                            notificationCardforall(context),
-                            notificationCardforall(context),
-                          ],
-                        ),
-                      ),
-                    ),
+                    // Container(
+                    //   width: 700.w,
+                    //   height: 578.h,
+                    //   decoration: BoxDecoration(
+                    //     borderRadius: BorderRadius.circular(30),
+                    //     color: const Color(0xffF8F8F8),
+                    //   ),
+                    //   padding: EdgeInsets.only(
+                    //     left: 60.w,
+                    //     // right: 45.w,
+                    //     top: 17.h,
+                    //     // bottom: 5.h,
+                    //   ),
+                    //   // padding: EdgeInsets.symmetric(
+                    //   //   vertical: 5.h,
+                    //   //   horizontal: 25.w,
+                    //   // ),
+                    //   child: SingleChildScrollView(
+                    //     scrollDirection: Axis.vertical,
+                    //     child: Column(
+                    //       mainAxisAlignment: MainAxisAlignment.start,
+                    //       crossAxisAlignment: CrossAxisAlignment.start,
+                    //       children: [
+                    //         text(
+                    //           context,
+                    //           "Notifications",
+                    //           18.0,
+                    //           AppColors.customGreen,
+                    //           bold: false,
+                    //         ),
+                    //         SizedBox(
+                    //           height: 20.h,
+                    //         ),
+                    //         notificationCardforall(context),
+                    //         notificationCardforall(context),
+                    //         notificationCardforall(context),
+                    //         notificationCardforall(context),
+                    //         notificationCardforall(context),
+                    //         notificationCardforall(context),
+                    //         notificationCardforall(context),
+                    //       ],
+                    //     ),
+                    //   ),
+                    // ),
+                 
+                    notificationContainer(context),
+
                   ],
                 ),
               )

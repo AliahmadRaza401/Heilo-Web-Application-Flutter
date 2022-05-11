@@ -26,6 +26,7 @@ class _TeacherWalletWebState extends State<TeacherWalletWeb> {
           horizontal: AppSizes.dynamicWidth(context, .03),
           vertical: AppSizes.dynamicHeight(context, .02)),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Expanded(
               flex: 5,

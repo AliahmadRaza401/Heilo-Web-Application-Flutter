@@ -9,6 +9,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/buttons.dart';
 import 'package:heilo/widgets/form_fields.dart';
+import 'package:heilo/widgets/notification_container.dart';
 import 'package:heilo/widgets/text_widget.dart';
 
 import '../../../utils/config.dart';
@@ -162,40 +163,43 @@ class _QuizzWebState extends State<QuizzWeb> {
                         ),
                       )
                     : chapterTestWidget(),
-                Container(
-                  width: 526.w,
-                  height: 740.h,
-                  decoration: BoxDecoration(
-                    color: AppColors.customGrey,
-                    borderRadius: BorderRadius.circular(30.r),
-                  ),
-                  padding: EdgeInsets.symmetric(
-                    vertical: 16.h,
-                    horizontal: 25.w,
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      text(
-                        context,
-                        "Notifications",
-                        18.sp,
-                        AppColors.customGreen,
-                      ),
-                      SizedBox(
-                        width: 460.w,
-                        height: 660.h,
-                        child: ListView.builder(
-                          itemCount: 6,
-                          itemBuilder: (context, i) {
-                            return notificationCardforall(context);
-                          },
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                // Container(
+                //   width: 526.w,
+                //   height: 740.h,
+                //   decoration: BoxDecoration(
+                //     color: AppColors.customGrey,
+                //     borderRadius: BorderRadius.circular(30.r),
+                //   ),
+                //   padding: EdgeInsets.symmetric(
+                //     vertical: 16.h,
+                //     horizontal: 25.w,
+                //   ),
+                //   child: Column(
+                //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //     crossAxisAlignment: CrossAxisAlignment.start,
+                //     children: [
+                //       text(
+                //         context,
+                //         "Notifications",
+                //         18.sp,
+                //         AppColors.customGreen,
+                //       ),
+                //       SizedBox(
+                //         width: 460.w,
+                //         height: 660.h,
+                //         child: ListView.builder(
+                //           itemCount: 6,
+                //           itemBuilder: (context, i) {
+                //             return notificationCardforall(context);
+                //           },
+                //         ),
+                //       ),
+                //     ],
+                //   ),
+                // ),
+           
+
+           notificationContainer(context),
               ],
             ),
           ],

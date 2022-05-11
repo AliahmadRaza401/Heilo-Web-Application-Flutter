@@ -8,6 +8,7 @@ import 'package:heilo/main.dart';
 import 'package:heilo/screens/admin/BarChart/bar_chart.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
+import 'package:heilo/widgets/notification_container.dart';
 import 'package:heilo/widgets/text_widget.dart';
 import 'package:heilo/widgets/top_iconavatar.dart';
 
@@ -27,9 +28,10 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         child: Container(
           width: AppSizes.dynamicWidth(context, 1),
-          height: AppSizes.dynamicHeight(context, 1),
+          // height: AppSizes.dynamicHeight(context, 1),
           padding: EdgeInsets.only(
             left: 50.w,
             right: 50.w,
@@ -117,7 +119,7 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
               Container(
                 margin: EdgeInsets.only(top: 67.h),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     SelectedCard == 1
                         ? upComingCard()
@@ -126,50 +128,52 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                             : SelectedCard == 3
                                 ? tutionRequest()
                                 : favoriteTutiCard(),
-                    Container(
-                      width: 700.w,
-                      height: 578.h,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: const Color(0xffF8F8F8),
-                      ),
-                      padding: EdgeInsets.only(
-                        left: 60.w,
-                        // right: 45.w,
-                        top: 17.h,
-                        // bottom: 5.h,
-                      ),
-                      // padding: EdgeInsets.symmetric(
-                      //   vertical: 5.h,
-                      //   horizontal: 25.w,
-                      // ),
-                      child: SingleChildScrollView(
-                        scrollDirection: Axis.vertical,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            text(
-                              context,
-                              "Notifications",
-                              18.sp,
-                              AppColors.customGreen,
-                              bold: true,
-                            ),
-                            SizedBox(
-                              height: 20.h,
-                            ),
-                            notificationCardforall(context),
-                            notificationCardforall(context),
-                            notificationCardforall(context),
-                            notificationCardforall(context),
-                            notificationCardforall(context),
-                            notificationCardforall(context),
-                            notificationCardforall(context),
-                          ],
-                        ),
-                      ),
-                    ),
+                    // Container(
+                    //   width: 700.w,
+                    //   height: 578.h,
+                    //   decoration: BoxDecoration(
+                    //     borderRadius: BorderRadius.circular(30),
+                    //     color: const Color(0xffF8F8F8),
+                    //   ),
+                    //   padding: EdgeInsets.only(
+                    //     left: 60.w,
+                    //     // right: 45.w,
+                    //     top: 17.h,
+                    //     // bottom: 5.h,
+                    //   ),
+                    //   // padding: EdgeInsets.symmetric(
+                    //   //   vertical: 5.h,
+                    //   //   horizontal: 25.w,
+                    //   // ),
+                    //   child: SingleChildScrollView(
+                    //     scrollDirection: Axis.vertical,
+                    //     child: Column(
+                    //       mainAxisAlignment: MainAxisAlignment.start,
+                    //       crossAxisAlignment: CrossAxisAlignment.start,
+                    //       children: [
+                    //         text(
+                    //           context,
+                    //           "Notifications",
+                    //           18.sp,
+                    //           AppColors.customGreen,
+                    //           bold: true,
+                    //         ),
+                    //         SizedBox(
+                    //           height: 20.h,
+                    //         ),
+                    //         notificationCardforall(context),
+                    //         notificationCardforall(context),
+                    //         notificationCardforall(context),
+                    //         notificationCardforall(context),
+                    //         notificationCardforall(context),
+                    //         notificationCardforall(context),
+                    //         notificationCardforall(context),
+                    //       ],
+                    //     ),
+                    //   ),
+                    // ),
+               
+               notificationContainer(context),
                   ],
                 ),
               )

@@ -7,6 +7,8 @@ import 'package:heilo/screens/teacher/dashBoard/teacher_dashBoardMobile.dart';
 import 'package:heilo/screens/teacher/teacher_Inbox/teacher_InboxMobile.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
+import 'package:heilo/widgets/notification_Container_mobile.dart';
+import 'package:heilo/widgets/notification_container.dart';
 import 'package:heilo/widgets/text_widget.dart';
 
 class TeacherSideMenuMobile extends StatefulWidget {
@@ -167,7 +169,7 @@ class _TeacherSideMenuMobileState extends State<TeacherSideMenuMobile> {
               ? TeacherInboxMobile()
               : _selectedIndex == 1
                   ? TeacherDashBoardMobile()
-                  : NotificationMobile()),
+                  : notificationMobileContainer(context)),
     );
   }
 
