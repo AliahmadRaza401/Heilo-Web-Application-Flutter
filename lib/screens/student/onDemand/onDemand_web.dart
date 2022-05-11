@@ -59,7 +59,7 @@ class _OnDemandWebState extends State<OnDemandWeb> {
         color: AppColors.customWhite,
         borderRadius: BorderRadius.circular(30.r),
       ),
-      padding: EdgeInsets.all(20.r),
+      padding: EdgeInsets.all(AppSizes.dynamicWidth(context, 0.03)),
       child: SingleChildScrollView(
         child: Column(
           children: [
@@ -354,7 +354,7 @@ class _OnDemandWebState extends State<OnDemandWeb> {
 
 Widget profileCard(context) {
   return Container(
-    width: 700.w,
+    // width: 700.w,
     height: 130.h,
     decoration: BoxDecoration(
       color: AppColors.customGrey,
