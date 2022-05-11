@@ -10,6 +10,7 @@ Widget text(
   text,
   size,
   color, {
+  fontfamily='RegularPopins',
   bold = false,
   alignText = TextAlign.start,
   maxLines = 2,
@@ -22,6 +23,7 @@ Widget text(
     style: TextStyle(
       color: color,
       fontSize: size,
+      fontFamily: fontfamily,
       // fontSize: AppSizes.dynamicWidth(context, size),
       fontWeight: bold == true ? FontWeight.w600 : FontWeight.normal,
     ),

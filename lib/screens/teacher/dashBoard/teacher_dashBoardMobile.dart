@@ -76,7 +76,7 @@ class _TeacherDashBoardMobileState extends State<TeacherDashBoardMobile> {
             children: [
               Container(
                 width: AppSizes.dynamicWidth(context, 1),
-                height: AppSizes.dynamicHeight(context, 0.3),
+                height: AppSizes.dynamicHeight(context, 0.2),
                 // color: Colors.yellow,
                 child: ListView(
                     scrollDirection: Axis.horizontal,
@@ -88,9 +88,9 @@ class _TeacherDashBoardMobileState extends State<TeacherDashBoardMobile> {
                               selectedcard = 1;
                             });
                           },
-                          child: cardWidget(
+                          child: cardWidget1(
                             'assets/png/g1.png',
-                            0xff000000,
+                            selectedcard == 1 ? 0xffFFFFFF : 0xff000000,
                             'Upcoming Sessions',
                             selectedcard == 1
                                 ? Color(0xff5F5F5F)
@@ -102,9 +102,9 @@ class _TeacherDashBoardMobileState extends State<TeacherDashBoardMobile> {
                               selectedcard = 2;
                             });
                           },
-                          child: cardWidget(
+                          child: cardWidget1(
                             'assets/png/g2.png',
-                            0xff000000,
+                            selectedcard == 2 ? 0xffFFFFFF : 0xff000000,
                             'Tution Request',
                             selectedcard == 2
                                 ? Color(0xff5F5F5F)
@@ -116,9 +116,9 @@ class _TeacherDashBoardMobileState extends State<TeacherDashBoardMobile> {
                               selectedcard = 3;
                             });
                           },
-                          child: cardWidget(
+                          child: cardWidget1(
                             'assets/png/g3.png',
-                            0xff000000,
+                            selectedcard == 3 ? 0xffFFFFFF : 0xff000000,
                             'Tutions Completed',
                             selectedcard == 3
                                 ? Color(0xff5F5F5F)
@@ -130,9 +130,9 @@ class _TeacherDashBoardMobileState extends State<TeacherDashBoardMobile> {
                               selectedcard = 4;
                             });
                           },
-                          child: cardWidget(
+                          child: cardWidget1(
                             'assets/png/g4.png',
-                            0xff000000,
+                            selectedcard == 4 ? 0xffFFFFFF : 0xff000000,
                             "Weekly Contribution",
                             selectedcard == 4
                                 ? Color(0xff5F5F5F)
@@ -292,6 +292,89 @@ class _TeacherDashBoardMobileState extends State<TeacherDashBoardMobile> {
         ],
       ),
     );
+  }
+
+  Widget cardWidget1(
+    image,
+    textcolor,
+    title,
+    bgColor,
+  ) {
+    return Container(
+        height: AppSizes.dynamicHeight(context, 0.2),
+        width: AppSizes.dynamicWidth(context, 0.8),
+        margin: EdgeInsets.only(left: AppSizes.dynamicWidth(context, 0.03)),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(30),
+          color: bgColor,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.5),
+              spreadRadius: 0.5,
+              blurRadius: 1,
+              offset: Offset(0, 7), // changes position of shadow
+            ),
+          ],
+        ),
+        child: Stack(
+          overflow: Overflow.visible,
+          children: [
+            Positioned(
+              bottom: -23,
+              left: -13,
+              child:
+                  // Image.asset(image),
+                  Container(
+                height: AppSizes.dynamicHeight(context, 0.25),
+                width: AppSizes.dynamicWidth(context, 0.8),
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(image),
+                    fit: BoxFit.fill,
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(
+                right: 40.w,
+                top: 10.h,
+              ),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(right: 13.w, top: 13.h),
+                    child: Align(
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        title,
+                        style: TextStyle(
+                          color: Color(textcolor),
+                          fontSize: AppSizes.dynamicWidth(context, 0.045),
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(right: 13.w, top: 13.h),
+                    child: Align(
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        '03',
+                        style: TextStyle(
+                          color: Color(textcolor),
+                          fontSize: AppSizes.dynamicWidth(context, 0.05),
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ));
   }
 
   Widget upcomingsessionData() {
@@ -792,7 +875,7 @@ class _TeacherDashBoardMobileState extends State<TeacherDashBoardMobile> {
     );
   }
 
- Widget favoriteTutiCard() {
+  Widget favoriteTutiCard() {
     return Container(
       height: 573.h,
       // width: 743.w,
@@ -841,5 +924,4 @@ class _TeacherDashBoardMobileState extends State<TeacherDashBoardMobile> {
       ),
     );
   }
-
 }

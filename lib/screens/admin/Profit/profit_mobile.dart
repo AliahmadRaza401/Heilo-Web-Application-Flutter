@@ -243,22 +243,23 @@ class _ProfitMobileState extends State<ProfitMobile> {
                                             bottomLeft: Radius.circular(10))),
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 10),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: [
-                                        text(
-                                            context,
-                                            'Last 7 Days',
-                                            AppSizes.dynamicWidth(
-                                                context, .02),
-                                            AppColors.greyText),
-                                        Icon(
-                                          Icons.keyboard_arrow_down,
-                                          size: 10,
-                                        ),
-                                      ],
-                                    ),
+                                    child: dropDownMobile(context, 'Last 7 days')
+                                    // Row(
+                                    //   mainAxisAlignment:
+                                    //       MainAxisAlignment.spaceEvenly,
+                                    //   children: [
+                                    //     text(
+                                    //         context,
+                                    //         'Last 7 Days',
+                                    //         AppSizes.dynamicWidth(
+                                    //             context, .02),
+                                    //         AppColors.greyText),
+                                    //     Icon(
+                                    //       Icons.keyboard_arrow_down,
+                                    //       size: 10,
+                                    //     ),
+                                    //   ],
+                                    // ),
                                   ),
                                 ],
                               ),
@@ -455,7 +456,7 @@ class _ProfitMobileState extends State<ProfitMobile> {
                             child: Icon(
                               Icons.arrow_downward,
                               color: AppColors.green,
-                              size: AppSizes.dynamicHeight(context, .025),
+                              size: AppSizes.dynamicHeight(context, .015),
                             ))
                       ],
                     )),

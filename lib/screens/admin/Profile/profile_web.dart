@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:heilo/screens/admin/BarChart/bar_chart.dart';
 import 'package:heilo/utils/config.dart';
 
 import '../../../utils/dynamic_sizes.dart';
@@ -33,7 +34,7 @@ class _ProfileWebState extends State<ProfileWeb> {
                   child: Column(
                     children: [
                       Expanded(
-                        flex: 2,
+                        flex: 3,
                         child: Container(
                           width: double.infinity,
                           decoration: BoxDecoration(
@@ -47,19 +48,21 @@ class _ProfileWebState extends State<ProfileWeb> {
                             children: [
                               Column(
                                 children: [
-                                  Spacer(flex: 1,),
+                                  Spacer(
+                                    flex: 1,
+                                  ),
                                   CircleAvatar(
                                     backgroundColor: AppColors.green,
-                                    radius: AppSizes.dynamicHeight(context, .07),
+                                    radius:
+                                        AppSizes.dynamicHeight(context, .07),
                                     child: CircleAvatar(
-                                      radius: AppSizes.dynamicHeight(context, .065),
+                                      radius:
+                                          AppSizes.dynamicHeight(context, .065),
                                       backgroundImage:
                                           AssetImage('assets/png/charles.png'),
                                     ),
-
                                   ),
                                   Spacer(flex: 3),
-
                                 ],
                               ),
                               Spacer(
@@ -241,10 +244,7 @@ class _ProfileWebState extends State<ProfileWeb> {
                           ),
                         ),
                       ),
-                      Expanded(
-                        flex: 4,
-                        child: upCommingSessions()
-                      ),
+                      Expanded(flex: 4, child: upCommingSessions()),
                     ],
                   ),
                 )),
@@ -262,7 +262,7 @@ class _ProfileWebState extends State<ProfileWeb> {
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 15),
                         child: Container(
-                          height: 60.h,
+                          height: 40.h,
                           width: 407.w,
                           decoration: BoxDecoration(
                               // border: Border.all(color: AppColors.green),
@@ -277,6 +277,7 @@ class _ProfileWebState extends State<ProfileWeb> {
                                   border: InputBorder.none,
                                   suffixIcon: Icon(
                                     Icons.search,
+                                    size: AppSizes.dynamicHeight(context, .03),
                                     color: AppColors.greyText,
                                   ),
                                   contentPadding:
@@ -302,25 +303,27 @@ class _ProfileWebState extends State<ProfileWeb> {
         ));
   }
 
-    Widget upCommingSessions() {
+  Widget upCommingSessions() {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      height: AppSizes.dynamicHeight(context, .4),
+      height: 51.h,
       width: size.width * .63,
+      // color: Colors.blue,
       child: Stack(
         children: [
           Positioned(
             bottom: 0,
             child: Container(
-                height: size.height * .41,
-                width: size.width * .63,
+                height: size.height * .34,
+                width: size.width * .62,
                 decoration: BoxDecoration(
                     color: AppColors.lightGrey,
                     borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(30.r),
-                        bottomRight: Radius.circular(30.r),
-                        topRight: Radius.circular(30.r))),
+                      bottomLeft: Radius.circular(30.r),
+                      bottomRight: Radius.circular(30.r),
+                      topRight: Radius.circular(30.r),
+                    )),
                 padding:
                     EdgeInsets.only(top: 30, left: 30, right: 30, bottom: 10),
                 child: ListView.builder(
@@ -338,7 +341,9 @@ class _ProfileWebState extends State<ProfileWeb> {
                     topRight: Radius.circular(100),
                     bottomRight: Radius.circular(100))),
             child: Center(
-              child: text(context, 'Upcoming Sessions', 15, AppColors.greyText,bold: true),
+              child: text(
+                  context, 'Completed Sessions', 18.sp, AppColors.greyText,
+                  bold: true),
             ),
           ),
           // Positioned(
@@ -370,7 +375,9 @@ class _ProfileWebState extends State<ProfileWeb> {
       ),
     );
   }
-   Widget detailsRowa() {
+
+ 
+  Widget detailsRowa() {
     Size size = MediaQuery.of(context).size;
 
     return Padding(
@@ -393,8 +400,8 @@ class _ProfileWebState extends State<ProfileWeb> {
                     borderRadius: BorderRadius.circular(100)),
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Center(
-                  child:
-                      text(context, '27th July, 2021', 10, AppColors.darkGrey),
+                  child: text(
+                      context, '27th July, 2021', 14.sp, AppColors.greyText),
                 )),
             SizedBox(
               width: size.width * .008,
@@ -402,37 +409,31 @@ class _ProfileWebState extends State<ProfileWeb> {
             VerticalDivider(
               color: AppColors.green,
             ),
-            text(context, 'ID 11121', 15, AppColors.darkGrey),
+            text(context, 'ID 11121', 18.sp, AppColors.greyText),
             VerticalDivider(
               color: AppColors.green,
             ),
-            text(context, 'Ruhul Tusar', 15, AppColors.darkGrey),
+            text(context, 'Ruhul Tusar', 18.sp, AppColors.greyText),
             VerticalDivider(
               color: AppColors.green,
             ),
             Expanded(
               child: Container(
                 child: Center(
-                  child: Row(
-                    children: [
-                      text(context, 'Topic- ', 15, AppColors.bblackText),
-                      text(context, 'Polygons I Gerometry I Maths B',
-                          15, AppColors.greyText),
-                    ],
-                  ),
+                  child: text(context, 'Topic- Polygons I Gerometry I Maths B',
+                      18.sp, AppColors.greyText),
                 ),
               ),
             ),
             VerticalDivider(
               color: AppColors.green,
             ),
-            text(context, 'Time- 4:30-5.30 pm', 15, AppColors.green),
+            text(context, 'Time- 4:30-5.30 pm', 18.sp, AppColors.green),
           ],
         ),
       ),
     );
   }
-
 
   Widget smallContainer(String greenText, String greyText) {
     return Container(
@@ -511,17 +512,19 @@ class _ProfileWebState extends State<ProfileWeb> {
                   color: AppColors.lightGrey,
                   borderRadius: BorderRadius.circular(100)),
               padding: EdgeInsets.symmetric(horizontal: 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  text(context, status, 10, AppColors.greyText),
-                  Icon(
-                    Icons.keyboard_arrow_down,
-                    size: 20,
-                    color: AppColors.green,
-                  ),
-                ],
-              ),
+              child: dropDown(context, 'Active')
+              
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              //   children: [
+              //     text(context, status, 10, AppColors.greyText),
+              //     Icon(
+              //       Icons.keyboard_arrow_down,
+              //       size: 20,
+              //       color: AppColors.green,
+              //     ),
+              //   ],
+              // ),
             ),
           ],
         ),

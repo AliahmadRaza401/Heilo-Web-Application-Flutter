@@ -9,14 +9,13 @@ import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
 
-
 class TeacherSideMenuMobile extends StatefulWidget {
   @override
   _TeacherSideMenuMobileState createState() => _TeacherSideMenuMobileState();
 }
 
 class _TeacherSideMenuMobileState extends State<TeacherSideMenuMobile> {
-  int _selectedIndex = 0;
+  int _selectedIndex = 1;
   GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
 
   @override

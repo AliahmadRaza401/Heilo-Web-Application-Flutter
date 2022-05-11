@@ -38,22 +38,28 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      text(context, 'NUMBER OF STUDENTS', 36.sp, Color(0xffC4C4C4),
+                      text(context, 'NUMBER OF STUDENTS', 36.sp,
+                          Color(0xffC4C4C4),
                           bold: FontWeight.bold),
-                      Text( '2511',style:TextStyle(
-                        fontFamily: 'Poppins',
-                        color: Color(0xff7D7C7C),
-                        fontSize: 72.sp,
-                        fontWeight: FontWeight.bold
-                      ), ),//0xffC4C4C4
-                      text(context, 'NUMBER OF TEACHERS', 36.sp, Color(0xffC4C4C4),
+                      Text(
+                        '2511',
+                        style: TextStyle(
+                            fontFamily: 'Poppins',
+                            color: Color(0xff7D7C7C),
+                            fontSize: 72.sp,
+                            fontWeight: FontWeight.bold),
+                      ), //0xffC4C4C4
+                      text(context, 'NUMBER OF TEACHERS', 36.sp,
+                          Color(0xffC4C4C4),
                           bold: FontWeight.bold),
-                       Text( '2511',style:TextStyle(
-                        fontFamily: 'Poppins',
-                        color: Color(0xff01B489),
-                        fontSize: 72.sp,
-                        fontWeight: FontWeight.bold
-                      ), ),//
+                      Text(
+                        '2511',
+                        style: TextStyle(
+                            fontFamily: 'Poppins',
+                            color: Color(0xff01B489),
+                            fontSize: 72.sp,
+                            fontWeight: FontWeight.bold),
+                      ), //
                     ],
                   ),
                 ),
@@ -70,21 +76,23 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
                           radius: 60.0,
                           lineWidth: 10,
                           percent: 0.2,
-                          center: Text("20%",style: TextStyle(fontSize: 48.sp),),
+                          center: Text(
+                            "20%",
+                            style: TextStyle(fontSize: 48.sp),
+                          ),
                           progressColor: AppColors.blue,
                           circularStrokeCap: CircularStrokeCap.round,
-                          
                           footer: text(
-                              context,
-                              'GROWTH',
-                              MediaQuery.of(context).size.width * .013,
-                              AppColors.greyText),
+                              context, 'GROWTH', 24.sp, AppColors.greyText),
                         ),
                         CircularPercentIndicator(
                           radius: 60.0,
                           lineWidth: 10,
                           percent: 0.5,
-                          center: Text("50%",style: TextStyle(fontSize: 48.sp),),
+                          center: Text(
+                            "50%",
+                            style: TextStyle(fontSize: 48.sp),
+                          ),
                           progressColor: AppColors.green,
                           footer: text(
                               context,
@@ -120,15 +128,16 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
                             children: [
                               text(context, 'ACTIVITY SCALE ', 24.sp,
                                   AppColors.greyText),
-                              text(context, 'in hours', 24.sp, AppColors.greyText),
+                              text(context, 'in hours', 24.sp,
+                                  AppColors.greyText),
                             ],
                           ),
                         ),
                         Positioned(
                           right: 20,
                           child: Container(
-                            height: 37.h,
-                            width: 156.w,
+                            height: 35.h,
+                            width: 146.w,
                             decoration: BoxDecoration(
                                 border: Border.all(color: AppColors.green),
                                 color: AppColors.customWhite,
@@ -136,18 +145,20 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
                                     topLeft: Radius.circular(100),
                                     bottomLeft: Radius.circular(100))),
                             padding: EdgeInsets.symmetric(horizontal: 10),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                text(context, 'Last 7 Days', 14.sp,
-                                    AppColors.greyText),
-                                Icon(
-                                  Icons.keyboard_arrow_down,
-                                  size: 20,
-                                  color: AppColors.green,
-                                ),
-                              ],
-                            ),
+                            child: dropDown(context,'Last 7 days')
+                            
+                            // Row(
+                            //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            //   children: [
+                            //     text(context, 'Last 7 Days', 14.sp,
+                            //         AppColors.greyText),
+                            //     Icon(
+                            //       Icons.keyboard_arrow_down,
+                            //       size: 15,
+                            //       color: AppColors.green,
+                            //     ),
+                            //   ],
+                            // ),
                           ),
                         ),
                       ],
@@ -156,7 +167,6 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
                 )
               ],
             ),
-            
             Expanded(
                 child: Row(
               crossAxisAlignment: CrossAxisAlignment.end,
@@ -171,14 +181,14 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      height: size.height *.5,
+      height: size.height * .5,
       width: size.width * .63,
       child: Stack(
         children: [
           Positioned(
             bottom: 0,
             child: Container(
-                height: size.height * .475,
+                height: size.height * .465,
                 width: size.width * .63,
                 decoration: BoxDecoration(
                     color: AppColors.lightGrey,
@@ -203,7 +213,8 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
                     topRight: Radius.circular(100),
                     bottomRight: Radius.circular(100))),
             child: Center(
-              child: text(context, 'Upcoming Sessions', 18.sp, AppColors.greyText),
+              child:
+                  text(context, 'Upcoming Sessions', 18.sp, AppColors.greyText),
             ),
           ),
           Positioned(
@@ -249,7 +260,7 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
             Positioned(
               bottom: 0,
               child: Container(
-                  height: size.height * .54,
+                  height: size.height * .53,
                   width: size.width * .28,
                   decoration: BoxDecoration(
                       color: AppColors.lightGrey,
@@ -308,22 +319,30 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
                   )),
             ),
             Container(
-              height: 51.h,
-              width: 316.w,
+              height: 41.h,
+              width: 216.w,
               decoration: BoxDecoration(
                   color: AppColors.customWhite,
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(100),
                       bottomRight: Radius.circular(100))),
               child: Center(
-                child: richTextWidget(context, 'Total Classes', ' Completed',
-                    18.sp, 18.sp, null, AppColors.greyText, AppColors.green, false),
+                child: richTextWidget(
+                    context,
+                    'Total Classes',
+                    ' Completed',
+                    15.sp,
+                    15.sp,
+                    null,
+                    AppColors.greyText,
+                    AppColors.green,
+                    false),
               ),
             ),
             Positioned(
               right: 20,
               child: Container(
-                height: 37.h,
+                height: 41.h,
                 width: 156.w,
                 decoration: BoxDecoration(
                     border: Border.all(color: AppColors.green),
@@ -332,16 +351,17 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
                         topLeft: Radius.circular(100),
                         bottomLeft: Radius.circular(100))),
                 padding: EdgeInsets.symmetric(horizontal: 10),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    text(context, 'Last 7 Days', 12, AppColors.greyText),
-                    Icon(
-                      Icons.keyboard_arrow_down,
-                      size: 20,
-                    ),
-                  ],
-                ),
+                child: dropDown(context, 'Last 7 days')
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                //   children: [
+                //     text(context, 'Last 7 Days', 15.sp, AppColors.greyText),
+                //     Icon(
+                //       Icons.keyboard_arrow_down,
+                //       size: 15,
+                //     ),
+                //   ],
+                // ),
               ),
             ),
           ],
@@ -395,7 +415,7 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Center(
                   child:
-                      text(context, '27th July, 2021', 10, AppColors.greyText),
+                      text(context, '27th July, 2021', 14.sp, AppColors.greyText),
                 )),
             SizedBox(
               width: size.width * .008,
@@ -403,11 +423,11 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
             VerticalDivider(
               color: AppColors.green,
             ),
-            text(context, 'ID 11121', 15, AppColors.greyText),
+            text(context, 'ID 11121', 18.sp, AppColors.greyText),
             VerticalDivider(
               color: AppColors.green,
             ),
-            text(context, 'Ruhul Tusar', 15, AppColors.greyText),
+            text(context, 'Ruhul Tusar', 18.sp, AppColors.greyText),
             VerticalDivider(
               color: AppColors.green,
             ),
@@ -415,14 +435,14 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
               child: Container(
                 child: Center(
                   child: text(context, 'Topic- Polygons I Gerometry I Maths B',
-                      15, AppColors.greyText),
+                      18.sp, AppColors.greyText),
                 ),
               ),
             ),
             VerticalDivider(
               color: AppColors.green,
             ),
-            text(context, 'Time- 4:30-5.30 pm', 15, AppColors.green),
+            text(context, 'Time- 4:30-5.30 pm', 18.sp, AppColors.green),
           ],
         ),
       ),
@@ -430,9 +450,3 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
   }
 }
 
-class _SalesData {
-  _SalesData(this.year, this.sales);
-
-  final String year;
-  final double sales;
-}

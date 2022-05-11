@@ -58,8 +58,8 @@ class _QuizReportWebState extends State<QuizReportWeb> {
                           flex: 6,
                         ),
                         Container(
-                          height: 37.h,
-                          width: size.width * .11,
+                          height: 52.h,
+                          width: 248.w,
                           decoration: BoxDecoration(
                               border: Border.all(
                                   color: AppColors.greyBorder, width: 2),
@@ -69,21 +69,31 @@ class _QuizReportWebState extends State<QuizReportWeb> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              text(context, 'Subject', 10, AppColors.greyText),
-                              Icon(
-                                Icons.keyboard_arrow_down,
-                                size: 20,
-                                color: AppColors.green,
-                              ),
+                              Container(
+                                 height: 34.75.h,
+                              width: 75.5.w,
+                                child:
+                              dropDown(context, 'Subject')
+                              //  text(context, 'Subject', 16.sp, AppColors.greyText)
+                               ),
+                              // Icon(
+                              //   Icons.keyboard_arrow_down,
+                              //   size: 15,
+                              //   color: AppColors.green,
+                              // ),
                               VerticalDivider(
-                                thickness: 3,
+                                thickness: 2,
                               ),
-                              text(context, 'Class', 10, AppColors.greyText),
-                              Icon(
-                                Icons.keyboard_arrow_down,
-                                size: 20,
-                                color: AppColors.green,
-                              ),
+                              Container(
+                                 height: 34.75.h,
+                              width: 70.5.w,
+                                child: dropDown(context, 'Class'),)
+                              // text(context, 'Class', 16.sp, AppColors.greyText),
+                              // Icon(
+                              //   Icons.keyboard_arrow_down,
+                              //   size: 15,
+                              //   color: AppColors.green,
+                              // ),
                             ],
                           ),
                         ),
@@ -98,18 +108,19 @@ class _QuizReportWebState extends State<QuizReportWeb> {
                               color: AppColors.customWhite,
                               borderRadius: BorderRadius.circular(100)),
                           padding: EdgeInsets.symmetric(horizontal: 10),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              text(context, 'Last 7 Days', 10,
-                                  AppColors.greyText),
-                              Icon(
-                                Icons.keyboard_arrow_down,
-                                size: 20,
-                                color: AppColors.green,
-                              ),
-                            ],
-                          ),
+                          child: dropDown(context, 'Last 7 Days')
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          //   children: [
+                          //     text(context, 'Last 7 Days', 14.sp,
+                          //         AppColors.greyText),
+                          //     Icon(
+                          //       Icons.keyboard_arrow_down,
+                          //       size: 15,
+                          //       color: AppColors.green,
+                          //     ),
+                          //   ],
+                          // ),
                         ),
                         Spacer(flex: 1),
                       ],
@@ -173,33 +184,45 @@ class _QuizReportWebState extends State<QuizReportWeb> {
                           Padding(
                             padding: const EdgeInsets.only(right: 20),
                             child: Container(
-                              height: 37.h,
-                              width: size.width * .11,
+                              height: 52.h,
+                              width: 248.w,
                               decoration: BoxDecoration(
                                   border: Border.all(
                                   color: AppColors.greyBorder, width: 2),
                                   color: AppColors.customWhite,
                                   borderRadius: BorderRadius.circular(100)),
                               padding: EdgeInsets.symmetric(horizontal: 10),
-                              child: Row(
+                              child: 
+                              Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: [
-                                  text(
-                                      context, 'Subject', 10, AppColors.greyText),
-                                  Icon(
-                                    Icons.keyboard_arrow_down,
-                                    size: 20,
-                                    color: AppColors.green,
-                                  ),
+                              Container(
+                                 height: 34.75.h,
+                              width: 75.5.w,
+                                child: dropDown(context, 'Subject'),
+                              ),
+
+                                  // text(
+                                  //     context, 'Subject',16.sp , AppColors.greyText),
+                                  // Icon(
+                                  //   Icons.keyboard_arrow_down,
+                                  //   size: 12,
+                                  //   color: AppColors.green,
+                                  // ),
                                   VerticalDivider(
-                                    thickness: 3,
+                                    thickness: 2,
                                   ),
-                                  text(context, 'Class', 10, AppColors.greyText),
-                                  Icon(
-                                    Icons.keyboard_arrow_down,
-                                    size: 20,
-                                    color: AppColors.green,
-                                  ),
+                              Container(
+                                 height: 34.75.h,
+                              width: 70.5.w,
+                                child: dropDown(context, 'Class'),)
+
+                                  // text(context, 'Class', 16.sp, AppColors.greyText),
+                                  // Icon(
+                                  //   Icons.keyboard_arrow_down,
+                                  //   size: 12,
+                                  //   color: AppColors.green,
+                                  // ),
                                 ],
                               ),
                             ),
@@ -214,18 +237,19 @@ class _QuizReportWebState extends State<QuizReportWeb> {
                                   color: AppColors.customWhite,
                                   borderRadius: BorderRadius.circular(100)),
                               padding: EdgeInsets.symmetric(horizontal: 10),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  text(context, 'Last 7 Days', 10,
-                                      AppColors.greyText),
-                                  Icon(
-                                    Icons.keyboard_arrow_down,
-                                    size: 20,
-                                    color: AppColors.green,
-                                  ),
-                                ],
-                              ),
+                              child: dropDown(context, 'Last 7 Days')
+                              // Row(
+                              //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              //   children: [
+                              //     text(context, 'Last 7 Days', 14.sp,
+                              //         AppColors.greyText),
+                              //     Icon(
+                              //       Icons.keyboard_arrow_down,
+                              //       size: 10,
+                              //       color: AppColors.green,
+                              //     ),
+                              //   ],
+                              // ),
                             ),
                           ),
                         ],
@@ -299,7 +323,7 @@ class _QuizReportWebState extends State<QuizReportWeb> {
                   padding: const EdgeInsets.only(top:15),
                   child: Container(
                     // color:Colors.amber,
-                    width:  AppSizes.dynamicWidth(context, .16),
+                    width:  AppSizes.dynamicWidth(context, .14),
                     child: Wrap(
                       children: [
                         text(context, review, 14.sp, AppColors.greyText,maxLines: 3,alignText: TextAlign.justify),

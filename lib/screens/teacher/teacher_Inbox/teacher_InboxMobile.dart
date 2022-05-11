@@ -9,7 +9,6 @@ import 'package:heilo/widgets/text_widget.dart';
 import '../../student/studentInbox/studentChatMain.dart';
 import 'teacher_ChatMain.dart';
 
-
 class TeacherInboxMobile extends StatefulWidget {
   const TeacherInboxMobile({Key? key}) : super(key: key);
 
@@ -294,7 +293,7 @@ class _TeacherInboxMobileState extends State<TeacherInboxMobile> {
     return InkWell(
       onTap: () {
         Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => TeacherChatMain()));
+            .push(MaterialPageRoute(builder: (context) => StudentChatMain()));
       },
       child: Container(
         decoration: const BoxDecoration(
@@ -334,13 +333,14 @@ class _TeacherInboxMobileState extends State<TeacherInboxMobile> {
               text(
                 context,
                 'Sakib Abdullah      ',
-                18.0,
+                AppSizes.dynamicWidth(context, 0.03),
                 AppColors.customBlack,
                 bold: false,
               ),
               const Icon(
                 Icons.circle,
-                color: Colors.green,
+                color: Color(0xff1BE59D),
+                size: 10,
               )
             ],
           ),
@@ -365,84 +365,6 @@ class _TeacherInboxMobileState extends State<TeacherInboxMobile> {
             ),
           ),
         ),
-        //   child: Row(
-        //     children: [
-        //       Container(
-        //         height: AppSizes.dynamicHeight(context, 0.11),
-        //         width: AppSizes.dynamicWidth(context, 0.15),
-        //         // margin: EdgeInsets.only(
-        //         //   left: 20.w,
-        //         // ),
-        //         decoration: const BoxDecoration(
-        //             shape: BoxShape.circle,
-        //             image: DecorationImage(
-        //               image: AssetImage(
-        //                 "assets/png/wp2398385 1.png",
-        //               ),
-        //               fit: BoxFit.cover,
-        //             )),
-        //       ),
-        //       SizedBox(
-        //         width:  AppSizes.dynamicWidth(context, 0.01),
-        //       ),
-
-        //  RichText(
-        //   text: TextSpan(
-        //     text: 'Hello ',
-        //     style: DefaultTextStyle.of(context).style,
-        //     children: <TextSpan>[
-        //       TextSpan(
-        //           text: 'bold',
-        //           style: TextStyle(fontWeight: FontWeight.bold)),
-        //       TextSpan(text: ' world!'),
-        //     ],
-        //   ),
-        // ),
-        //       Column(
-        //         mainAxisAlignment: MainAxisAlignment.start,
-        //         crossAxisAlignment: CrossAxisAlignment.start,
-        //         children: [
-        //           text(
-        //             context,
-        //             'Sakib Abdullah',
-        //             18.0,
-        //             AppColors.customBlack,
-        //             bold: false,
-        //           ),
-        //           text(
-        //             context,
-        //             'Last seen at 5:32',
-        //             14.0,
-        //             AppColors.customGrey,
-        //             bold: false,
-        //           )
-        //         ],
-        //       ),
-        //       SizedBox(
-        //         width: 25.w,
-        //       ),
-        //       Column(
-        //         mainAxisAlignment: MainAxisAlignment.start,
-        //         crossAxisAlignment: CrossAxisAlignment.start,
-        //         children: [
-        //           text(
-        //             context,
-        //             'You: Bhaiya kalke 5 tay set koro',
-        //             14.0,
-        //             AppColors.customGrey,
-        //             bold: false,
-        //           ),
-        //           text(
-        //             context,
-        //             '(6:15 pm)',
-        //             14.0,
-        //             AppColors.customBlack,
-        //             bold: true,
-        //           )
-        //         ],
-        //       )
-        //     ],
-        //   ),
       ),
     );
   }

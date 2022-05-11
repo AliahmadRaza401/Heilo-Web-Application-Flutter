@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:heilo/screens/admin/BarChart/bar_chart.dart';
 import 'package:heilo/screens/admin/admin_drawer.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
@@ -396,18 +397,20 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
                   color: AppColors.customWhite,
                   borderRadius: BorderRadius.circular(100)),
               padding: EdgeInsets.symmetric(horizontal: 10),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  text(context, status, 24.sp, AppColors.greyText),
-                  Icon(
-                    Icons.keyboard_arrow_down,
-                    size: 10,
-                    color: AppColors.green,
-                  ),
-                ],
-              ),
+              child: dropDown(context, 'pending')
+              
+              // Row(
+              //   crossAxisAlignment: CrossAxisAlignment.center,
+              //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              //   children: [
+              //     text(context, status, 24.sp, AppColors.greyText),
+              //     Icon(
+              //       Icons.keyboard_arrow_down,
+              //       size: 10,
+              //       color: AppColors.green,
+              //     ),
+              //   ],
+              // ),
             ),
           ],
         ),
