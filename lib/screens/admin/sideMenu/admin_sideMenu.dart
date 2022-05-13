@@ -34,11 +34,12 @@ class _AdminSideMenuState extends State<AdminSideMenu> {
           SideMenu(
             controller: page,
             style: SideMenuStyle(
+              
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(50),
               ),
               openSideMenuWidth: 250.w,
-              compactSideMenuWidth: 50,
+              compactSideMenuWidth: 70,
               displayMode: SideMenuDisplayMode.compact,
               hoverColor: AppColors.customSkimColor,
               selectedColor: AppColors.customWhite,
