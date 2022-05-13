@@ -10,7 +10,7 @@ Widget text(
   text,
   size,
   color, {
-  fontfamily='RegularPopins',
+  fontfamily = 'RegularPopins',
   bold = false,
   alignText = TextAlign.start,
   maxLines = 2,
@@ -75,13 +75,14 @@ Widget richTextWidget(
   );
 }
 
-Widget boldPopinText(String text,double fontSize,Color poppinColor) {
+Widget boldPopinText(String text, double fontSize, Color poppinColor) {
   return Text(
     text,
     style: TextStyle(
-        fontFamily: 'Poppins',
-        color: poppinColor,
-        fontSize: fontSize,
-        fontWeight: FontWeight.bold),
+      fontFamily: 'Poppins',
+      color: poppinColor,
+      fontSize: fontSize,
+      fontWeight: FontWeight.bold,
+    ),
   );
 }
