@@ -828,10 +828,10 @@ Widget courseCard(context) {
   return Container(
     // width: 300.w,
     // padding: EdgeInsets.all(AppSizes.dynamicHeight(context, 0.01)),
-    height: AppSizes.dynamicHeight(context, 0.33),
+    height: AppSizes.dynamicHeight(context, 0.35),
     decoration: BoxDecoration(
       color: AppColors.lightgreyborder,
-      borderRadius: BorderRadius.circular(30.r),
+      borderRadius: BorderRadius.circular(130.r),
       boxShadow: [
         BoxShadow(
           color: Colors.grey.withOpacity(0.5),
@@ -866,7 +866,7 @@ Widget courseCard(context) {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 text(context, "Total Mark", 76.sp, Color(0xff6F6F6F)),
-                text(context, "23", 90.sp, Color(0xff000000), bold: true),
+                text(context, "23", 200.sp, Color(0xff000000), bold: true),
               ],
             )
           ],

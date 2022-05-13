@@ -74,7 +74,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
           ),
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(30.r),
+            borderRadius: BorderRadius.circular(90.r),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -877,7 +877,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
             height: 20.h,
           ),
           Container(
-             padding: EdgeInsets.only(
+            padding: EdgeInsets.only(
               left: AppSizes.dynamicWidth(context, 0.02),
               top: AppSizes.dynamicHeight(context, 0.01),
             ),
@@ -941,7 +941,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
             height: 20.h,
           ),
           Container(
-             padding: EdgeInsets.only(
+            padding: EdgeInsets.only(
               left: AppSizes.dynamicWidth(context, 0.02),
               top: AppSizes.dynamicHeight(context, 0.01),
             ),
@@ -1100,7 +1100,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
           SizedBox(height: AppSizes.dynamicHeight(context, 0.02)),
 
           Container(
-              padding: EdgeInsets.only(
+            padding: EdgeInsets.only(
               left: AppSizes.dynamicWidth(context, 0.02),
               top: AppSizes.dynamicHeight(context, 0.01),
             ),
@@ -1192,7 +1192,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
           ),
           SizedBox(height: AppSizes.dynamicHeight(context, 0.02)),
           Container(
-          // height: AppSizes.dynamicWidth(context, 0.09),
+            // height: AppSizes.dynamicWidth(context, 0.09),
             width: AppSizes.dynamicWidth(context, 0.9),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
@@ -1211,7 +1211,8 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                 borderRadius: BorderRadius.circular(25),
                 // color: AppColors.customGrey,
               ),
-              padding: EdgeInsets.only(left: AppSizes.dynamicWidth(context, 0.01)),
+              padding:
+                  EdgeInsets.only(left: AppSizes.dynamicWidth(context, 0.01)),
               child: Align(
                 alignment: Alignment.center,
                 child: TextFormField(

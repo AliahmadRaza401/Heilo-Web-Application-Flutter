@@ -28,165 +28,169 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
       body: SingleChildScrollView(
         child: Container(
           width: AppSizes.dynamicWidth(context, 1),
-          // height: AppSizes.dynamicHeight(context, 1),
-          padding: EdgeInsets.only(
-            left: 84.w,
-            right: 84.w,
-            top: 0.h,
-            // bottom: 20.h,
-          ),
+          height: AppSizes.dynamicHeight(context, 0.96),
+          padding: EdgeInsets.all(AppSizes.dynamicWidth(context, 0.02)),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(30.r),
           ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  const Icon(
-                    Icons.notifications,
-                    color: AppColors.greenDark,
-                  ),
-                  AppSizes.widthBox(context, .01),
-                  CircleAvatar(
-                    radius: 32.r,
-                    backgroundColor: AppColors.green,
-                    child: CircleAvatar(
-                      radius: 28.r,
-                      backgroundImage: const AssetImage(
-                        "assets/png/wp2398385 1.png",
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    const Icon(
+                      Icons.notifications,
+                      color: AppColors.greenDark,
+                    ),
+                    AppSizes.widthBox(context, .01),
+                    CircleAvatar(
+                      radius: 32.r,
+                      backgroundColor: AppColors.green,
+                      child: CircleAvatar(
+                        radius: 28.r,
+                        backgroundImage: const AssetImage(
+                          "assets/png/wp2398385 1.png",
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 10.h,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        SelectedCard = 1;
-                      });
-                    },
-                    child: cardWidget(
-                      'assets/png/g1.png',
-                      "Upcoming Sessions",
-                      SelectedCard == 1 ? 0xffFFFFFF : 0xff000000,
-                      SelectedCard == 1 ? Color(0xff5F5F5F) : AppColors.customGrey,
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        SelectedCard = 2;
-                      });
-                    },
-                    child: cardWidget(
-                      'assets/png/g1.png',
-                      "Tutions completed",
-                      SelectedCard == 2 ? 0xffFFFFFF : 0xff000000,
-                      SelectedCard == 2 ? Color(0xff5F5F5F) : AppColors.customGrey,
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        SelectedCard = 3;
-                      });
-                    },
-                    child: cardWidget(
-                      'assets/png/g3.png',
-                      "Quiz Appeared",
-                      SelectedCard == 3 ? 0xffFFFFFF : 0xff000000,
-                      SelectedCard == 3 ? Color(0xff5F5F5F) : AppColors.customGrey,
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        SelectedCard = 4;
-                      });
-                    },
-                    child: cardWidget(
-                      'assets/png/g4.png',
-                      "Favourite Tutors",
-                      SelectedCard == 4 ? 0xffFFFFFF : 0xff000000,
-                      SelectedCard == 4 ? Color(0xff5F5F5F) : AppColors.customGrey,
-                    ),
-                  ),
-                ],
-              ),
-              Container(
-                margin: EdgeInsets.only(top: 67.h),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SelectedCard == 1
-                        ? upComingCard()
-                        : SelectedCard == 2
-                            ? tutionsCard()
-                            : SelectedCard == 3
-                                ? quizCard()
-                                : favoriteTutiCard(),
-                    // Container(
-                    //   width: 700.w,
-                    //   height: 578.h,
-                    //   decoration: BoxDecoration(
-                    //     borderRadius: BorderRadius.circular(30),
-                    //     color: const Color(0xffF8F8F8),
-                    //   ),
-                    //   padding: EdgeInsets.only(
-                    //     left: 60.w,
-                    //     // right: 45.w,
-                    //     top: 17.h,
-                    //     // bottom: 5.h,
-                    //   ),
-                    //   // padding: EdgeInsets.symmetric(
-                    //   //   vertical: 5.h,
-                    //   //   horizontal: 25.w,
-                    //   // ),
-                    //   child: SingleChildScrollView(
-                    //     scrollDirection: Axis.vertical,
-                    //     child: Column(
-                    //       mainAxisAlignment: MainAxisAlignment.start,
-                    //       crossAxisAlignment: CrossAxisAlignment.start,
-                    //       children: [
-                    //         text(
-                    //           context,
-                    //           "Notifications",
-                    //           18.0,
-                    //           AppColors.customGreen,
-                    //           bold: false,
-                    //         ),
-                    //         SizedBox(
-                    //           height: 20.h,
-                    //         ),
-                    //         notificationCardforall(context),
-                    //         notificationCardforall(context),
-                    //         notificationCardforall(context),
-                    //         notificationCardforall(context),
-                    //         notificationCardforall(context),
-                    //         notificationCardforall(context),
-                    //         notificationCardforall(context),
-                    //       ],
-                    //     ),
-                    //   ),
-                    // ),
-                 
-                    notificationContainer(context),
-
                   ],
                 ),
-              )
-            ],
+                SizedBox(
+                  height: 10.h,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        setState(() {
+                          SelectedCard = 1;
+                        });
+                      },
+                      child: cardWidget(
+                        'assets/png/g1.png',
+                        "Upcoming Sessions",
+                        SelectedCard == 1 ? 0xffFFFFFF : 0xff000000,
+                        SelectedCard == 1
+                            ? Color(0xff5F5F5F)
+                            : AppColors.customGrey,
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        setState(() {
+                          SelectedCard = 2;
+                        });
+                      },
+                      child: cardWidget(
+                        'assets/png/g1.png',
+                        "Tutions completed",
+                        SelectedCard == 2 ? 0xffFFFFFF : 0xff000000,
+                        SelectedCard == 2
+                            ? Color(0xff5F5F5F)
+                            : AppColors.customGrey,
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        setState(() {
+                          SelectedCard = 3;
+                        });
+                      },
+                      child: cardWidget(
+                        'assets/png/g3.png',
+                        "Quiz Appeared",
+                        SelectedCard == 3 ? 0xffFFFFFF : 0xff000000,
+                        SelectedCard == 3
+                            ? Color(0xff5F5F5F)
+                            : AppColors.customGrey,
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        setState(() {
+                          SelectedCard = 4;
+                        });
+                      },
+                      child: cardWidget(
+                        'assets/png/g4.png',
+                        "Favourite Tutors",
+                        SelectedCard == 4 ? 0xffFFFFFF : 0xff000000,
+                        SelectedCard == 4
+                            ? Color(0xff5F5F5F)
+                            : AppColors.customGrey,
+                      ),
+                    ),
+                  ],
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 67.h),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      SelectedCard == 1
+                          ? upComingCard()
+                          : SelectedCard == 2
+                              ? tutionsCard()
+                              : SelectedCard == 3
+                                  ? quizCard()
+                                  : favoriteTutiCard(),
+                      // Container(
+                      //   width: 700.w,
+                      //   height: 578.h,
+                      //   decoration: BoxDecoration(
+                      //     borderRadius: BorderRadius.circular(30),
+                      //     color: const Color(0xffF8F8F8),
+                      //   ),
+                      //   padding: EdgeInsets.only(
+                      //     left: 60.w,
+                      //     // right: 45.w,
+                      //     top: 17.h,
+                      //     // bottom: 5.h,
+                      //   ),
+                      //   // padding: EdgeInsets.symmetric(
+                      //   //   vertical: 5.h,
+                      //   //   horizontal: 25.w,
+                      //   // ),
+                      //   child: SingleChildScrollView(
+                      //     scrollDirection: Axis.vertical,
+                      //     child: Column(
+                      //       mainAxisAlignment: MainAxisAlignment.start,
+                      //       crossAxisAlignment: CrossAxisAlignment.start,
+                      //       children: [
+                      //         text(
+                      //           context,
+                      //           "Notifications",
+                      //           18.0,
+                      //           AppColors.customGreen,
+                      //           bold: false,
+                      //         ),
+                      //         SizedBox(
+                      //           height: 20.h,
+                      //         ),
+                      //         notificationCardforall(context),
+                      //         notificationCardforall(context),
+                      //         notificationCardforall(context),
+                      //         notificationCardforall(context),
+                      //         notificationCardforall(context),
+                      //         notificationCardforall(context),
+                      //         notificationCardforall(context),
+                      //       ],
+                      //     ),
+                      //   ),
+                      // ),
+
+                      notificationContainer(context),
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
@@ -203,51 +207,57 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
         color: const Color(0xffF8F8F8),
       ),
       padding: EdgeInsets.only(bottom: 20.h),
-      child: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              alignment: Alignment.centerLeft,
-              width: 300.w,
-              decoration: BoxDecoration(
-                  color: Colors.white, borderRadius: BorderRadius.circular(21)),
-              child: const Align(
-                alignment: Alignment.center,
-                child: Text(
-                  'Upcoming Sessions',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 21,
-                    fontWeight: FontWeight.w500,
-                  ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            alignment: Alignment.centerLeft,
+            width: 300.w,
+            decoration: BoxDecoration(
+                color: Colors.white, borderRadius: BorderRadius.circular(21)),
+            child: const Align(
+              alignment: Alignment.center,
+              child: Text(
+                'Upcoming Sessions',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 21,
+                  fontWeight: FontWeight.w500,
                 ),
               ),
             ),
-            upcomingsessionData(),
-            SizedBox(
-              height: 20.h,
+          ),
+          Container(
+            height: AppSizes.dynamicHeight(context, 0.5),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  upcomingsessionData(),
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  upcomingsessionData(),
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  upcomingsessionData(),
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  upcomingsessionData(),
+                ],
+              ),
             ),
-            upcomingsessionData(),
-            SizedBox(
-              height: 20.h,
-            ),
-            upcomingsessionData(),
-            SizedBox(
-              height: 20.h,
-            ),
-            upcomingsessionData(),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
 
   Widget tutionsCard() {
     return Container(
-      height: 573.h,
+      // height: 573.h,
       width: 743.w,
       // margin: EdgeInsets.only(top: 40.h),
       decoration: BoxDecoration(
@@ -256,46 +266,52 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
       ),
       padding:
           EdgeInsets.only(bottom: 20.h, top: 20.h, left: 10.w, right: 10.w),
-      child: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                Container(
-                  height: AppSizes.dynamicHeight(context, 0.06),
-                  width: AppSizes.dynamicWidth(context, 0.05),
-                  decoration: const BoxDecoration(
-                      image: DecorationImage(
-                    image: AssetImage('assets/png/trophy.png'),
-                    fit: BoxFit.contain,
-                  )),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                height: AppSizes.dynamicHeight(context, 0.06),
+                width: AppSizes.dynamicWidth(context, 0.05),
+                decoration: const BoxDecoration(
+                    image: DecorationImage(
+                  image: AssetImage('assets/png/trophy.png'),
+                  fit: BoxFit.contain,
+                )),
+              ),
+              const Text(
+                'Tutions Completed',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 21,
+                  fontWeight: FontWeight.w500,
                 ),
-                const Text(
-                  'Tutions Completed',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 21,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              ],
+              ),
+            ],
+          ),
+          Container(
+            height: AppSizes.dynamicHeight(context, 0.5),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                ],
+              ),
             ),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -367,7 +383,7 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
 
   Widget quizCard() {
     return Container(
-      height: 573.h,
+      // height: 573.h,
       width: 743.w,
       // margin: EdgeInsets.only(top: 40.h),
       decoration: BoxDecoration(
@@ -390,7 +406,7 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 21,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
@@ -398,15 +414,24 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
             SizedBox(
               height: 10.h,
             ),
-            Wrap(
-              spacing: 50.w,
-              runSpacing: 20.h,
-              children: [
-                courseCard(context),
-                courseCard(context),
-                courseCard(context),
-                courseCard(context),
-              ],
+            Container(
+              height: AppSizes.dynamicHeight(context, 0.5),
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Wrap(
+                      spacing: 50.w,
+                      runSpacing: 20.h,
+                      children: [
+                        courseCard(context),
+                        courseCard(context),
+                        courseCard(context),
+                        courseCard(context),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
             ),
             SizedBox(
               height: 10.h,
@@ -421,6 +446,7 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
     return Container(
       width: 300.w,
       height: 300.h,
+      margin: EdgeInsets.all(10),
       decoration: BoxDecoration(
         color: AppColors.lightgreyborder,
         borderRadius: BorderRadius.circular(30.r),
@@ -522,7 +548,7 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
 
   Widget favoriteTutiCard() {
     return Container(
-      height: 573.h,
+      // height: 573.h,
       width: 743.w,
       // margin: EdgeInsets.only(top: 40.h),
       decoration: BoxDecoration(
@@ -530,45 +556,51 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
         color: const Color(0xffF8F8F8),
       ),
       padding: EdgeInsets.only(bottom: 20.h),
-      child: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                Container(
-                  height: AppSizes.dynamicHeight(context, 0.06),
-                  width: AppSizes.dynamicWidth(context, 0.05),
-                  decoration: const BoxDecoration(
-                      image: DecorationImage(
-                    image: AssetImage('assets/png/favouriteIcon.png'),
-                    fit: BoxFit.contain,
-                  )),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                height: AppSizes.dynamicHeight(context, 0.06),
+                width: AppSizes.dynamicWidth(context, 0.05),
+                decoration: const BoxDecoration(
+                    image: DecorationImage(
+                  image: AssetImage('assets/png/favouriteIcon.png'),
+                  fit: BoxFit.contain,
+                )),
+              ),
+              const Text(
+                'Favourite Tutors',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 21,
+                  fontWeight: FontWeight.w500,
                 ),
-                const Text(
-                  'Favourite Tutors',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 21,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              ],
+              ),
+            ],
+          ),
+          Container(
+            height: AppSizes.dynamicHeight(context, 0.5),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  favouriteInerWidet(),
+                  favouriteInerWidet(),
+                  favouriteInerWidet(),
+                  favouriteInerWidet(),
+                  favouriteInerWidet(),
+                  favouriteInerWidet(),
+                  favouriteInerWidet(),
+                  favouriteInerWidet(),
+                  favouriteInerWidet(),
+                  favouriteInerWidet(),
+                ],
+              ),
             ),
-            favouriteInerWidet(),
-            favouriteInerWidet(),
-            favouriteInerWidet(),
-            favouriteInerWidet(),
-            favouriteInerWidet(),
-            favouriteInerWidet(),
-            favouriteInerWidet(),
-            favouriteInerWidet(),
-            favouriteInerWidet(),
-            favouriteInerWidet(),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -793,7 +825,7 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
           color: bgColor,
-            boxShadow: [
+          boxShadow: [
             BoxShadow(
               color: Colors.grey.withOpacity(0.5),
               spreadRadius: 0.5,

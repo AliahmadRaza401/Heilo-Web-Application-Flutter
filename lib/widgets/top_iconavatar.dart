@@ -7,10 +7,10 @@ import '../utils/dynamic_sizes.dart';
 
 Widget topIconAvatar(BuildContext context) {
   return Container(
-    margin: EdgeInsets.symmetric(
-      horizontal: 30.w,
-      vertical: 30.h,
-    ),
+    // margin: EdgeInsets.symmetric(
+    //   horizontal: 30.w,
+    //   vertical: 30.h,
+    // ),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.end,
       crossAxisAlignment: CrossAxisAlignment.center,

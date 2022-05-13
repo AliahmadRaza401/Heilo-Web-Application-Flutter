@@ -580,31 +580,30 @@ Widget profileCard(context) {
                 ),
                 Wrap(
                   children: [
-                    text(context, "bangladesh University Of Professionals",
-                        65.sp, AppColors.customBlack,
+                    text(context, "bangladesh University", 65.sp,
+                        AppColors.customBlack,
                         maxLines: 1),
                   ],
                 ),
-               
               ],
             ),
           ),
-           SizedBox(
-                  width: AppSizes.dynamicWidth(context, 0.01),
-                ),
+          SizedBox(
+            width: AppSizes.dynamicWidth(context, 0.01),
+          ),
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Container(
-                  height: 25.h,
-                  width: AppSizes.dynamicWidth(context, 0.2),
-                  decoration: BoxDecoration(
-               color: Colors.white,
-               borderRadius: BorderRadius.circular(10.r),
-                  ),
-                  child:
-                 Center(child: text(context, "450/hr", 65.sp, Colors.black)),
+                height: 25.h,
+                width: AppSizes.dynamicWidth(context, 0.2),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10.r),
                 ),
+                child:
+                    Center(child: text(context, "450/hr", 65.sp, Colors.black)),
+              ),
               Container(
                 height: 25.h,
                 width: AppSizes.dynamicWidth(context, 0.2),

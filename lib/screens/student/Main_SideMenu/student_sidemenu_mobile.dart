@@ -170,7 +170,7 @@ class _StudentSideMenuMobileState extends State<StudentSideMenuMobile> {
             ? StudentInboxMobile()
             : _selectedIndex == 1
                 ? OnDemandMobile()
-                : notificationMobileContainer(context),
+                : NotificationMobile(),
       ),
     );
   }

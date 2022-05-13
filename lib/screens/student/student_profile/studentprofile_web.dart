@@ -31,14 +31,15 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
         color: Colors.white,
         borderRadius: BorderRadius.circular(30.r),
       ),
+      padding: EdgeInsets.all(AppSizes.dynamicWidth(context, 0.02)),
       child: Column(
         children: [
           topIconAvatar(context),
           SizedBox(
-            height: 0.h,
+            height: 10.h,
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Container(
                 alignment: Alignment.center,
@@ -56,7 +57,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                   overflow: Overflow.visible,
                   children: [
                     Container(
-                      height: 500.h,
+                      height: 650.h,
                       decoration: BoxDecoration(
                         color: Color(0xffF1F1F1),
                         // color: Colors.green,
@@ -171,7 +172,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                       ),
                     ),
                     Positioned(
-                        top: -50.0,
+                        top: -100.0.h,
                         right: 0,
                         left: 0,
                         // (background container size) - (circle height / 2)
@@ -771,7 +772,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
   Widget listTileWidget() {
     return Container(
       width: 241.w,
-      height: 50.h,
+      height: 60.h,
       decoration: BoxDecoration(
         color: AppColors.customGrey,
         borderRadius: BorderRadius.circular(30),
@@ -785,8 +786,8 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
           //   ),
           // ),
           Container(
-            height: 33.h,
-            width: 33.w,
+            height: 43.h,
+            width: 43.w,
             margin: EdgeInsets.only(
               top: 5.h,
               bottom: 5.h,

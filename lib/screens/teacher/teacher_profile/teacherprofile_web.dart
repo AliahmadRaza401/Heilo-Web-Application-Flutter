@@ -32,9 +32,14 @@ class _TeacherProfileWebState extends State<TeacherProfileWeb> {
         color: Colors.white,
         borderRadius: BorderRadius.circular(30.r),
       ),
+      padding: EdgeInsets.all(AppSizes.dynamicWidth(context, 0.02)),
+
       child: Column(
         children: [
           topIconAvatar(context),
+          SizedBox(
+            height: 10.h,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -49,7 +54,7 @@ class _TeacherProfileWebState extends State<TeacherProfileWeb> {
                       Container(
                         alignment: Alignment.center,
                         width: 526.w,
-                        height: 720.h,
+                        height: 860.h,
                         decoration: BoxDecoration(
                           // color: Colors.amber,
                           borderRadius: BorderRadius.circular(30.r),
@@ -63,8 +68,9 @@ class _TeacherProfileWebState extends State<TeacherProfileWeb> {
                           overflow: Overflow.visible,
                           children: [
                             Container(
-                              height: 710.h,
+                              height: 800.h,
                               decoration: BoxDecoration(
+                                // color: Colors.amber,
                                 color: Color(0xffF1F1F1),
                                 borderRadius: BorderRadius.circular(30.r),
                               ),
@@ -968,7 +974,7 @@ class _TeacherProfileWebState extends State<TeacherProfileWeb> {
   Widget listTileWidget() {
     return Container(
       width: 241.w,
-      height: 50.h,
+      height: 60.h,
       decoration: BoxDecoration(
         color: AppColors.customGrey,
         borderRadius: BorderRadius.circular(30),
@@ -982,8 +988,8 @@ class _TeacherProfileWebState extends State<TeacherProfileWeb> {
           //   ),
           // ),
           Container(
-            height: 33.h,
-            width: 33.w,
+            height: 43.h,
+            width: 43.w,
             margin: EdgeInsets.only(
               top: 5.h,
               bottom: 5.h,

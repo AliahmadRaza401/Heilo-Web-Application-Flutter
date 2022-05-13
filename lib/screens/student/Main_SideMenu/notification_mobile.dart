@@ -104,10 +104,10 @@ class _NotificationMobileState extends State<NotificationMobile> {
   Widget notificationCardforMobile(context) {
     return Container(
       width: AppSizes.dynamicWidth(context, 0.9),
-      height: 40.h,
+      height: 60.h,
       decoration: BoxDecoration(
         color: Color(0xffB4F4DD),
-        borderRadius: BorderRadius.circular(30.r),
+        borderRadius: BorderRadius.circular(90.r),
       ),
       padding: EdgeInsets.symmetric(
         horizontal: AppSizes.dynamicWidth(context, 0.01),
@@ -118,7 +118,7 @@ class _NotificationMobileState extends State<NotificationMobile> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           CircleAvatar(
-            radius: 46.r,
+            radius: 90.r,
             backgroundImage: const AssetImage(
               "assets/png/wp2398385 1.png",
             ),
@@ -130,7 +130,7 @@ class _NotificationMobileState extends State<NotificationMobile> {
             child: text(
               context,
               "You have received a tution request from Salsabil Murshed.",
-              AppSizes.dynamicWidth(context, 0.02),
+              AppSizes.dynamicWidth(context, 0.03),
               AppColors.customBlack,
             ),
           ),

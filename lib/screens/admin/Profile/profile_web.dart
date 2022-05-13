@@ -376,7 +376,6 @@ class _ProfileWebState extends State<ProfileWeb> {
     );
   }
 
- 
   Widget detailsRowa() {
     Size size = MediaQuery.of(context).size;
 
@@ -437,7 +436,7 @@ class _ProfileWebState extends State<ProfileWeb> {
 
   Widget smallContainer(String greenText, String greyText) {
     return Container(
-      height: 50.h,
+      height: 60.h,
       width: 300.w,
       decoration: BoxDecoration(
           border: Border.all(color: AppColors.greyText),
@@ -505,27 +504,27 @@ class _ProfileWebState extends State<ProfileWeb> {
               ],
             ),
             Container(
-              height: 35.h,
-              width: 126.w,
-              decoration: BoxDecoration(
-                  // border: Border.all(color: AppColors.green),
-                  color: AppColors.lightGrey,
-                  borderRadius: BorderRadius.circular(100)),
-              padding: EdgeInsets.symmetric(horizontal: 10),
-              child: dropDown(context, 'Active')
-              
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              //   children: [
-              //     text(context, status, 10, AppColors.greyText),
-              //     Icon(
-              //       Icons.keyboard_arrow_down,
-              //       size: 20,
-              //       color: AppColors.green,
-              //     ),
-              //   ],
-              // ),
-            ),
+                height: 35.h,
+                width: 126.w,
+                decoration: BoxDecoration(
+                    // border: Border.all(color: AppColors.green),
+                    color: AppColors.lightGrey,
+                    borderRadius: BorderRadius.circular(100)),
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                child: dropDown(context, 'Active')
+
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                //   children: [
+                //     text(context, status, 10, AppColors.greyText),
+                //     Icon(
+                //       Icons.keyboard_arrow_down,
+                //       size: 20,
+                //       color: AppColors.green,
+                //     ),
+                //   ],
+                // ),
+                ),
           ],
         ),
       ),

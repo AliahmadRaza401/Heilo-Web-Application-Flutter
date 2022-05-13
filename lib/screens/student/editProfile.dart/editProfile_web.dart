@@ -32,7 +32,8 @@ class _EditProfileWebState extends State<EditProfileWeb> {
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
-          // height: AppSizes.dynamicHeight(context, 0.95),
+          height: AppSizes.dynamicHeight(context, 0.96),
+          padding: EdgeInsets.all(AppSizes.dynamicWidth(context, 0.02)),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(30.r),
@@ -40,6 +41,9 @@ class _EditProfileWebState extends State<EditProfileWeb> {
           child: Column(
             children: [
               topIconAvatar(context),
+              SizedBox(
+                height: 10.h,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -64,7 +68,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                       overflow: Overflow.visible,
                       children: [
                         Container(
-                          height: 530.h,
+                          height: 630.h,
                           decoration: BoxDecoration(
                             color: Color(0xffF1F1F1),
                             borderRadius: BorderRadius.circular(30.r),

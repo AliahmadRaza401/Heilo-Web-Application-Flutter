@@ -31,153 +31,154 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
         scrollDirection: Axis.vertical,
         child: Container(
           width: AppSizes.dynamicWidth(context, 1),
-          // height: AppSizes.dynamicHeight(context, 1),
-          padding: EdgeInsets.only(
-            left: 50.w,
-            right: 50.w,
-            top: 0.h,
-            // bottom: 20.h,
-          ),
+          height: AppSizes.dynamicHeight(context, 0.97),
+          padding: EdgeInsets.all(AppSizes.dynamicWidth(context, 0.02)),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(30.r),
           ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              topIconAvatar(context),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        SelectedCard = 1;
-                      });
-                    },
-                    child: cardWidget(
-                      'assets/png/g1.png',
-                      "Upcoming Sessions",
-                      "03",
-                      SelectedCard == 1 ? 0xffFFFFFF : 0xff000000,
-                      SelectedCard == 1
-                          ? Color(0xff5F5F5F)
-                          : AppColors.customGrey,
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        SelectedCard = 2;
-                      });
-                    },
-                    child: cardWidget(
-                      'assets/png/g1.png',
-                      "Tutions completed",
-                      "03",
-                      SelectedCard == 2 ? 0xffFFFFFF : 0xff000000,
-                      SelectedCard == 2
-                          ? Color(0xff5F5F5F)
-                          : AppColors.customGrey,
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        SelectedCard = 3;
-                      });
-                    },
-                    child: cardWidget(
-                      'assets/png/g3.png',
-                      "Tution Request",
-                      "03",
-                      SelectedCard == 3 ? 0xffFFFFFF : 0xff000000,
-                      SelectedCard == 3
-                          ? Color(0xff5F5F5F)
-                          : AppColors.customGrey,
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        SelectedCard = 4;
-                      });
-                    },
-                    child: cardWidget(
-                      'assets/png/g4.png',
-                      "Favourite Tutors",
-                      "+20%",
-                      SelectedCard == 4 ? 0xffFFFFFF : 0xff01B489,
-                      SelectedCard == 4
-                          ? Color(0xff5F5F5F)
-                          : AppColors.customGrey,
-                    ),
-                  ),
-                ],
-              ),
-              Container(
-                margin: EdgeInsets.only(top: 67.h),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                topIconAvatar(context),
+                SizedBox(
+                  height: 10.h,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    SelectedCard == 1
-                        ? upComingCard()
-                        : SelectedCard == 2
-                            ? tutionsCard()
-                            : SelectedCard == 3
-                                ? tutionRequest()
-                                : favoriteTutiCard(),
-                    // Container(
-                    //   width: 700.w,
-                    //   height: 578.h,
-                    //   decoration: BoxDecoration(
-                    //     borderRadius: BorderRadius.circular(30),
-                    //     color: const Color(0xffF8F8F8),
-                    //   ),
-                    //   padding: EdgeInsets.only(
-                    //     left: 60.w,
-                    //     // right: 45.w,
-                    //     top: 17.h,
-                    //     // bottom: 5.h,
-                    //   ),
-                    //   // padding: EdgeInsets.symmetric(
-                    //   //   vertical: 5.h,
-                    //   //   horizontal: 25.w,
-                    //   // ),
-                    //   child: SingleChildScrollView(
-                    //     scrollDirection: Axis.vertical,
-                    //     child: Column(
-                    //       mainAxisAlignment: MainAxisAlignment.start,
-                    //       crossAxisAlignment: CrossAxisAlignment.start,
-                    //       children: [
-                    //         text(
-                    //           context,
-                    //           "Notifications",
-                    //           18.sp,
-                    //           AppColors.customGreen,
-                    //           bold: true,
-                    //         ),
-                    //         SizedBox(
-                    //           height: 20.h,
-                    //         ),
-                    //         notificationCardforall(context),
-                    //         notificationCardforall(context),
-                    //         notificationCardforall(context),
-                    //         notificationCardforall(context),
-                    //         notificationCardforall(context),
-                    //         notificationCardforall(context),
-                    //         notificationCardforall(context),
-                    //       ],
-                    //     ),
-                    //   ),
-                    // ),
-               
-               notificationContainer(context),
+                    InkWell(
+                      onTap: () {
+                        setState(() {
+                          SelectedCard = 1;
+                        });
+                      },
+                      child: cardWidget(
+                        'assets/png/g1.png',
+                        "Upcoming Sessions",
+                        "03",
+                        SelectedCard == 1 ? 0xffFFFFFF : 0xff000000,
+                        SelectedCard == 1
+                            ? Color(0xff5F5F5F)
+                            : AppColors.customGrey,
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        setState(() {
+                          SelectedCard = 2;
+                        });
+                      },
+                      child: cardWidget(
+                        'assets/png/g1.png',
+                        "Tutions completed",
+                        "03",
+                        SelectedCard == 2 ? 0xffFFFFFF : 0xff000000,
+                        SelectedCard == 2
+                            ? Color(0xff5F5F5F)
+                            : AppColors.customGrey,
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        setState(() {
+                          SelectedCard = 3;
+                        });
+                      },
+                      child: cardWidget(
+                        'assets/png/g3.png',
+                        "Tution Request",
+                        "03",
+                        SelectedCard == 3 ? 0xffFFFFFF : 0xff000000,
+                        SelectedCard == 3
+                            ? Color(0xff5F5F5F)
+                            : AppColors.customGrey,
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        setState(() {
+                          SelectedCard = 4;
+                        });
+                      },
+                      child: cardWidget(
+                        'assets/png/g4.png',
+                        "Favourite Tutors",
+                        "+20%",
+                        SelectedCard == 4 ? 0xffFFFFFF : 0xff01B489,
+                        SelectedCard == 4
+                            ? Color(0xff5F5F5F)
+                            : AppColors.customGrey,
+                      ),
+                    ),
                   ],
                 ),
-              )
-            ],
+                Container(
+                  // color: Colors.amber,
+                  margin: EdgeInsets.only(top: 67.h),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      SelectedCard == 1
+                          ? upComingCard()
+                          : SelectedCard == 2
+                              ? tutionsCard()
+                              : SelectedCard == 3
+                                  ? tutionRequest()
+                                  : favoriteTutiCard(),
+                      // Container(
+                      //   width: 700.w,
+                      //   height: 578.h,
+                      //   decoration: BoxDecoration(
+                      //     borderRadius: BorderRadius.circular(30),
+                      //     color: const Color(0xffF8F8F8),
+                      //   ),
+                      //   padding: EdgeInsets.only(
+                      //     left: 60.w,
+                      //     // right: 45.w,
+                      //     top: 17.h,
+                      //     // bottom: 5.h,
+                      //   ),
+                      //   // padding: EdgeInsets.symmetric(
+                      //   //   vertical: 5.h,
+                      //   //   horizontal: 25.w,
+                      //   // ),
+                      //   child: SingleChildScrollView(
+                      //     scrollDirection: Axis.vertical,
+                      //     child: Column(
+                      //       mainAxisAlignment: MainAxisAlignment.start,
+                      //       crossAxisAlignment: CrossAxisAlignment.start,
+                      //       children: [
+                      //         text(
+                      //           context,
+                      //           "Notifications",
+                      //           18.sp,
+                      //           AppColors.customGreen,
+                      //           bold: true,
+                      //         ),
+                      //         SizedBox(
+                      //           height: 20.h,
+                      //         ),
+                      //         notificationCardforall(context),
+                      //         notificationCardforall(context),
+                      //         notificationCardforall(context),
+                      //         notificationCardforall(context),
+                      //         notificationCardforall(context),
+                      //         notificationCardforall(context),
+                      //         notificationCardforall(context),
+                      //       ],
+                      //     ),
+                      //   ),
+                      // ),
+
+                      notificationContainer(context),
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
@@ -317,7 +318,7 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
 
   Widget tutionRequest() {
     return Container(
-      height: 573.h,
+      height: 673.h,
       width: 743.w,
 
       // margin: EdgeInsets.only(top: 40.h),
@@ -406,7 +407,6 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
               ),
             ),
             tutionRequestInnerWidget(),
-           
           ],
         ),
       ),
@@ -415,7 +415,7 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
 
   Widget upComingCard() {
     return Container(
-      height: 573.h,
+      height: 673.h,
       width: 743.w,
       // margin: EdgeInsets.only(top: 40.h),
       decoration: BoxDecoration(
@@ -521,7 +521,7 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
 
   Widget quizCard() {
     return Container(
-      height: 573.h,
+      height: 673.h,
       width: 743.w,
       // margin: EdgeInsets.only(top: 40.h),
       decoration: BoxDecoration(
@@ -560,7 +560,7 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
 
   Widget favoriteTutiCard() {
     return Container(
-      height: 573.h,
+      height: 673.h,
       width: 743.w,
       // margin: EdgeInsets.only(top: 40.h),
       decoration: BoxDecoration(
