@@ -96,8 +96,8 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
                       ),
                       padding: EdgeInsets.only(
                         top: 130.h,
-                        left: AppSizes.dynamicWidth(context, 0.12),
-                        right: AppSizes.dynamicWidth(context, 0.12),
+                        left: AppSizes.dynamicWidth(context, 0.03),
+                        right: AppSizes.dynamicWidth(context, 0.03),
                         bottom: AppSizes.dynamicHeight(context, 0.020),
                       ),
                       child: Column(
