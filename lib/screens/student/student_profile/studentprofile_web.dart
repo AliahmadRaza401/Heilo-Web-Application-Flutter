@@ -38,220 +38,224 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
           SizedBox(
             height: 10.h,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Container(
-                alignment: Alignment.center,
-                width: 526.w,
-                height: 700.h,
-                decoration: BoxDecoration(
-                  // color: Colors.amber,
-                  borderRadius: BorderRadius.circular(30.r),
-                ),
-                padding: EdgeInsets.only(
-                  left: 45.w,
-                  right: 45.w,
-                ),
-                child: Stack(
-                  overflow: Overflow.visible,
-                  children: [
-                    Container(
-                      height: 650.h,
-                      decoration: BoxDecoration(
-                        color: Color(0xffF1F1F1),
-                        // color: Colors.green,
-                        borderRadius: BorderRadius.circular(30.r),
+          Container(
+            // color: Colors.amber,
+            width: AppSizes.dynamicWidth(context, 1),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  alignment: Alignment.center,
+                  width: 426.w,
+                  height: 650.h,
+                  decoration: BoxDecoration(
+                    // color: Colors.amber,
+                    borderRadius: BorderRadius.circular(30.r),
+                  ),
+                  // padding: EdgeInsets.only(
+                  //   left: 45.w,
+                  //   right: 45.w,
+                  // ),
+                  child: Stack(
+                    overflow: Overflow.visible,
+                    children: [
+                      Container(
+                        height: 650.h,
+                        decoration: BoxDecoration(
+                          color: Color(0xffF1F1F1),
+                          // color: Colors.green,
+                          borderRadius: BorderRadius.circular(30.r),
+                        ),
+                        padding: EdgeInsets.only(
+                          top: 130.h,
+                          left: 50.w,
+                          right: 50.w,
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            text(
+                              context,
+                              "Sakib Abdullah",
+                              18.sp,
+                              AppColors.greyText,
+                              bold: true,
+                            ),
+                            SizedBox(
+                              height: 10.h,
+                            ),
+                            text(
+                              context,
+                              "Maple Leaf International School and College",
+                              14.sp,
+                              AppColors.greyText,
+                            ),
+                            SizedBox(
+                              height: 40.h,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(
+                                  height: 38.h,
+                                  width: 191.w,
+                                  decoration: BoxDecoration(
+                                    color: AppColors.customDarkBlue,
+                                    borderRadius: BorderRadius.circular(30),
+                                  ),
+                                  child: Align(
+                                    alignment: Alignment.center,
+                                    child: text(
+                                      context,
+                                      "Tutions completed",
+                                      14.sp,
+                                      AppColors.customWhite,
+                                      bold: true,
+                                      // alignText: Alignment.center
+                                    ),
+                                  ),
+                                ),
+                                text(
+                                  context,
+                                  "150",
+                                  14.sp,
+                                  AppColors.greytextText,
+                                  bold: true,
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10.h,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(
+                                  width: 191.w,
+                                  height: 38.h,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xffA279E6),
+                                    borderRadius: BorderRadius.circular(
+                                      30.r,
+                                    ),
+                                  ),
+                                  child: Align(
+                                    alignment: Alignment.center,
+                                    child: text(
+                                      context,
+                                      "Tutors referred",
+                                      14.sp,
+                                      AppColors.customWhite,
+                                      bold: true,
+                                      // alignText: Alignment.center
+                                    ),
+                                  ),
+                                ),
+                                text(
+                                  context,
+                                  "150",
+                                  14.sp,
+                                  AppColors.greytextText,
+                                  bold: true,
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 30.h,
+                            ),
+                            text(
+                              context,
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
+                              14.sp,
+                              AppColors.customBlack,
+                              maxLines: 8,
+                            ),
+                          ],
+                        ),
                       ),
-                      padding: EdgeInsets.only(
-                        top: 130.h,
-                        left: 50.w,
-                        right: 50.w,
+                      Positioned(
+                          top: -80.0,
+                          right: 0,
+                          left: 0,
+                          // (background container size) - (circle height / 2)
+                          child: Center(
+                            child: Stack(
+                              overflow: Overflow.visible,
+                              children: [
+                                Container(
+                                  height: 170.h,
+                                  width: 183.w,
+                                  decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                        "assets/png/wp2398385 1.png",
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Positioned(
+                                  top: 0,
+                                  right: -15,
+                                  child: Container(
+                                    padding: EdgeInsets.symmetric(
+                                      horizontal: 10,
+                                      vertical: 3,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      color: Color(0xffC4C4C4).withOpacity(0.5),
+                                      borderRadius: BorderRadius.circular(50.r),
+                                    ),
+                                    child: Row(
+                                      children: [
+                                        Image.asset('assets/png/star.png'),
+                                        text(
+                                          context,
+                                          "4.5",
+                                          15.sp,
+                                          Colors.black,
+                                          bold: true,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )),
+                    ],
+                  ),
+                ),
+                Container(
+                  height: AppSizes.dynamicHeight(context, 0.8),
+                  child: SingleChildScrollView(
+                    child: Container(
+                      margin: EdgeInsets.only(
+                        top: 0.h,
+                        // right: 45.w,
                       ),
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          text(
-                            context,
-                            "Sakib Abdullah",
-                            18.sp,
-                            AppColors.greyText,
-                            bold: true,
-                          ),
+                          greyWidget(),
                           SizedBox(
-                            height: 10.h,
+                            height: 20.h,
                           ),
-                          text(
-                            context,
-                            "Maple Leaf International School and College",
-                            14.sp,
-                            AppColors.greyText,
-                          ),
+                          greyWidget1(),
                           SizedBox(
-                            height: 40.h,
+                            height: 20.h,
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                height: 38.h,
-                                width: 191.w,
-                                decoration: BoxDecoration(
-                                  color: AppColors.customDarkBlue,
-                                  borderRadius: BorderRadius.circular(30),
-                                ),
-                                child: Align(
-                                  alignment: Alignment.center,
-                                  child: text(
-                                    context,
-                                    "Tutions completed",
-                                    14.sp,
-                                    AppColors.customWhite,
-                                    bold: true,
-                                    // alignText: Alignment.center
-                                  ),
-                                ),
-                              ),
-                              text(
-                                context,
-                                "150",
-                                14.sp,
-                                AppColors.greytextText,
-                                bold: true,
-                              ),
-                            ],
-                          ),
+                          greyWidget2(),
                           SizedBox(
-                            height: 10.h,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                width: 191.w,
-                                height: 38.h,
-                                decoration: BoxDecoration(
-                                  color: Color(0xffA279E6),
-                                  borderRadius: BorderRadius.circular(
-                                    30.r,
-                                  ),
-                                ),
-                                child: Align(
-                                  alignment: Alignment.center,
-                                  child: text(
-                                    context,
-                                    "Tutors referred",
-                                    14.sp,
-                                    AppColors.customWhite,
-                                    bold: true,
-                                    // alignText: Alignment.center
-                                  ),
-                                ),
-                              ),
-                              text(
-                                context,
-                                "150",
-                                14.sp,
-                                AppColors.greytextText,
-                                bold: true,
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 30.h,
-                          ),
-                          text(
-                            context,
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
-                            14.sp,
-                            AppColors.customBlack,
-                            maxLines: 8,
+                            height: 20.h,
                           ),
                         ],
                       ),
                     ),
-                    Positioned(
-                        top: -100.0.h,
-                        right: 0,
-                        left: 0,
-                        // (background container size) - (circle height / 2)
-                        child: Center(
-                          child: Stack(
-                            overflow: Overflow.visible,
-                            children: [
-                              Container(
-                                height: 170.h,
-                                width: 183.w,
-                                decoration: const BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                      "assets/png/wp2398385 1.png",
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Positioned(
-                                top: 0,
-                                right: -15,
-                                child: Container(
-                                  padding: EdgeInsets.symmetric(
-                                    horizontal: 10,
-                                    vertical: 3,
-                                  ),
-                                  decoration: BoxDecoration(
-                                    color: Color(0xffC4C4C4).withOpacity(0.5),
-                                    borderRadius: BorderRadius.circular(50.r),
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      Image.asset('assets/png/star.png'),
-                                      text(
-                                        context,
-                                        "4.5",
-                                        15.sp,
-                                        Colors.black,
-                                        bold: true,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        )),
-                  ],
-                ),
-              ),
-              Container(
-                height: AppSizes.dynamicHeight(context, 0.8),
-                child: SingleChildScrollView(
-                  child: Container(
-                    margin: EdgeInsets.only(
-                      top: 0.h,
-                      right: 45.w,
-                    ),
-                    child: Column(
-                      children: [
-                        greyWidget(),
-                        SizedBox(
-                          height: 20.h,
-                        ),
-                        greyWidget1(),
-                        SizedBox(
-                          height: 20.h,
-                        ),
-                        greyWidget2(),
-                        SizedBox(
-                          height: 20.h,
-                        ),
-                      ],
-                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),

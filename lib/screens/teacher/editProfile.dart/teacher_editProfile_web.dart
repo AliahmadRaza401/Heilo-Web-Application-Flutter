@@ -58,7 +58,7 @@ class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
                             Container(
                               alignment: Alignment.center,
                               width: 526.w,
-                              // height: 780.h,
+                              height: 810.h,
                               decoration: BoxDecoration(
                                 // color: Colors.amber,
                                 borderRadius: BorderRadius.circular(30.r),
@@ -67,6 +67,9 @@ class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
                                 left: 45.w,
                                 right: 45.w,
                                 // top: 50.h,
+                              ),
+                              margin: EdgeInsets.only(
+                                top: 30,
                               ),
                               child: Stack(
                                 overflow: Overflow.visible,
@@ -307,7 +310,7 @@ class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
                                     ),
                                   ),
                                   Positioned(
-                                      top: -50.0,
+                                      top: -80.0,
                                       right: 0,
                                       left: 0,
                                       // (background container size) - (circle height / 2)
@@ -369,7 +372,7 @@ class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
                             ),
                             Container(
                               // alignment: Alignment.center,
-                              width: 400.w,
+                              width: 440.w,
                               height: 200.h,
                               decoration: BoxDecoration(
                                 color: Color(0xffF8F8F8),

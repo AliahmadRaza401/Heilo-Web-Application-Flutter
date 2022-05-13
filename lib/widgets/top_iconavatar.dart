@@ -18,6 +18,7 @@ Widget topIconAvatar(BuildContext context) {
         const Icon(
           Icons.notifications,
           color: AppColors.greenDark,
+          size: 38,
         ),
         AppSizes.widthBox(context, .01),
         CircleAvatar(

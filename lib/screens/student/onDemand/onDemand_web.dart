@@ -7,6 +7,7 @@ import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/buttons.dart';
 import 'package:heilo/widgets/notification_container.dart';
 import 'package:heilo/widgets/text_widget.dart';
+import 'package:heilo/widgets/top_iconavatar.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
 import '../../../utils/config.dart';
@@ -67,27 +68,7 @@ class _OnDemandWebState extends State<OnDemandWeb> {
         child: Column(
           children: [
             // AppSizes.heightBox(context, .02),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const Icon(
-                  Icons.notifications,
-                  color: AppColors.greenDark,
-                ),
-                AppSizes.widthBox(context, .01),
-                CircleAvatar(
-                  radius: 32.r,
-                  backgroundColor: AppColors.green,
-                  child: CircleAvatar(
-                    radius: 28.r,
-                    backgroundImage: const AssetImage(
-                      "assets/png/wp2398385 1.png",
-                    ),
-                  ),
-                ),
-              ],
-            ),
+          topIconAvatar(context),
             Container(
               // color: Colors.yellow,
               padding: EdgeInsets.only(left: 0.w),

@@ -31,8 +31,11 @@ class _TeacherWalletWebState extends State<TeacherWalletWeb> {
               flex: 5,
               child: Container(
                 height: double.infinity,
-                padding:
-                    EdgeInsets.only(top: AppSizes.dynamicHeight(context, .05)),
+                padding: EdgeInsets.only(
+                  top: AppSizes.dynamicHeight(context, .05),
+                  right: 100.w,
+                  left: 50.w,
+                ),
                 // color: AppColors.customYellow,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -83,59 +86,51 @@ class _TeacherWalletWebState extends State<TeacherWalletWeb> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 15),
+                      padding: const EdgeInsets.only(top: 20),
                       child: text(
-                          context,
-                          'Transaction History',
-                          AppSizes.dynamicWidth(context, .015),
-                          AppColors.customBlack),
+                        context,
+                        'Transaction History',
+                        AppSizes.dynamicWidth(context, .015),
+                        AppColors.customBlack,
+                        bold: true,
+                      ),
                     ),
                     Expanded(
                       child: SizedBox(
                         height: double.infinity,
+
                         // color: Colors.amber,
                         child: Align(
                           alignment: Alignment.bottomCenter,
-                          child: Container(
-                            height: AppSizes.dynamicHeight(context, .56),
-                            width: double.infinity,
-                            padding: EdgeInsets.all(30),
-                            decoration: BoxDecoration(
-                                color: AppColors.customWhite,
-                                // border: Border.all(color: AppColors.green),
-                                borderRadius: BorderRadius.circular(30.r)),
-                            child: Column(
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.only(
-                                      top:
-                                          AppSizes.dynamicHeight(context, .01)),
-                                  child: headingRow(Color(0xffEBEBEB)),
-                                ),
-                                Expanded(
-                                    child: Container(
-                                  decoration: BoxDecoration(
-                                      color: AppColors.customGrey,
-                                      borderRadius:
-                                          BorderRadius.circular(30.r)),
-                                  padding: EdgeInsets.symmetric(
-                                      vertical: 10.h,
-                                      horizontal:
-                                          AppSizes.dynamicWidth(context, .01)),
-                                  child: ListView.builder(
-                                      itemCount: 10,
-                                      itemBuilder: ((context, index) {
-                                        return paymentDetailsRow(
-                                            AppColors.lightGrey,
-                                            '#1112',
-                                            'Safin Riaz',
-                                            '2 hours',
-                                            'Tk. 600.00',
-                                            'Tk. 1750');
-                                      })),
-                                ))
-                              ],
-                            ),
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(
+                                    top: AppSizes.dynamicHeight(context, .01)),
+                                child: headingRow(Color(0xffEBEBEB)),
+                              ),
+                              Expanded(
+                                  child: Container(
+                                decoration: BoxDecoration(
+                                    color: AppColors.customGrey,
+                                    borderRadius: BorderRadius.circular(30.r)),
+                                padding: EdgeInsets.symmetric(
+                                    vertical: 10.h,
+                                    horizontal:
+                                        AppSizes.dynamicWidth(context, .01)),
+                                child: ListView.builder(
+                                    itemCount: 10,
+                                    itemBuilder: ((context, index) {
+                                      return paymentDetailsRow(
+                                          AppColors.lightGrey,
+                                          '#1112',
+                                          'Safin Riaz',
+                                          '2 hours',
+                                          'Tk. 600.00',
+                                          'Tk. 1750');
+                                    })),
+                              ))
+                            ],
                           ),
                         ),
                       ),

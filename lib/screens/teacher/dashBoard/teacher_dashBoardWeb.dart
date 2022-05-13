@@ -72,7 +72,7 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                         });
                       },
                       child: cardWidget(
-                        'assets/png/g1.png',
+                        'assets/png/g2.png',
                         "Tutions completed",
                         "03",
                         SelectedCard == 2 ? 0xffFFFFFF : 0xff000000,
@@ -105,7 +105,7 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                       },
                       child: cardWidget(
                         'assets/png/g4.png',
-                        "Favourite Tutors",
+                        "Weekly Contribution",
                         "+20%",
                         SelectedCard == 4 ? 0xffFFFFFF : 0xff01B489,
                         SelectedCard == 4
@@ -128,51 +128,6 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                               : SelectedCard == 3
                                   ? tutionRequest()
                                   : favoriteTutiCard(),
-                      // Container(
-                      //   width: 700.w,
-                      //   height: 578.h,
-                      //   decoration: BoxDecoration(
-                      //     borderRadius: BorderRadius.circular(30),
-                      //     color: const Color(0xffF8F8F8),
-                      //   ),
-                      //   padding: EdgeInsets.only(
-                      //     left: 60.w,
-                      //     // right: 45.w,
-                      //     top: 17.h,
-                      //     // bottom: 5.h,
-                      //   ),
-                      //   // padding: EdgeInsets.symmetric(
-                      //   //   vertical: 5.h,
-                      //   //   horizontal: 25.w,
-                      //   // ),
-                      //   child: SingleChildScrollView(
-                      //     scrollDirection: Axis.vertical,
-                      //     child: Column(
-                      //       mainAxisAlignment: MainAxisAlignment.start,
-                      //       crossAxisAlignment: CrossAxisAlignment.start,
-                      //       children: [
-                      //         text(
-                      //           context,
-                      //           "Notifications",
-                      //           18.sp,
-                      //           AppColors.customGreen,
-                      //           bold: true,
-                      //         ),
-                      //         SizedBox(
-                      //           height: 20.h,
-                      //         ),
-                      //         notificationCardforall(context),
-                      //         notificationCardforall(context),
-                      //         notificationCardforall(context),
-                      //         notificationCardforall(context),
-                      //         notificationCardforall(context),
-                      //         notificationCardforall(context),
-                      //         notificationCardforall(context),
-                      //       ],
-                      //     ),
-                      //   ),
-                      // ),
-
                       notificationContainer(context),
                     ],
                   ),
@@ -318,7 +273,7 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
 
   Widget tutionRequest() {
     return Container(
-      height: 673.h,
+      height: 740.h,
       width: 743.w,
 
       // margin: EdgeInsets.only(top: 40.h),
@@ -327,95 +282,99 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
         color: const Color(0xffF8F8F8),
       ),
       padding: EdgeInsets.only(bottom: 20.h),
-      child: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              margin: EdgeInsets.only(top: 20.h, left: 20.w),
-              alignment: Alignment.centerLeft,
-              width: 300.w,
-              // decoration: BoxDecoration(
-              //     color: Colors.white, borderRadius: BorderRadius.circular(21)),
-              child: Align(
-                alignment: Alignment.center,
-                child: Text(
-                  'Tution Request',
-                  style: TextStyle(
-                    color: Colors.red,
-                    fontSize: 24.sp,
-                    fontWeight: FontWeight.bold,
-                  ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            margin: EdgeInsets.only(top: 20.h, left: 20.w),
+            alignment: Alignment.centerLeft,
+            width: 300.w,
+            // decoration: BoxDecoration(
+            //     color: Colors.white, borderRadius: BorderRadius.circular(21)),
+            child: Align(
+              alignment: Alignment.center,
+              child: Text(
+                'Tution Request',
+                style: TextStyle(
+                  color: Colors.red,
+                  fontSize: 24.sp,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),
-            tutionRequestInnerWidget(),
-            Container(
-              margin: EdgeInsets.only(
-                left: 40.w,
-                right: 40.w,
-              ),
-              child: const Divider(
-                thickness: 1.5,
-                color: Color(0xffE9E9E9),
-              ),
+          ),
+          Container(
+            height: 660.h,
+            child: Column(
+              children: [
+                tutionRequestInnerWidget(),
+                Container(
+                  margin: EdgeInsets.only(
+                    left: 40.w,
+                    right: 40.w,
+                  ),
+                  child: const Divider(
+                    thickness: 1.5,
+                    color: Color(0xffE9E9E9),
+                  ),
+                ),
+                tutionRequestInnerWidget(),
+                Container(
+                  margin: EdgeInsets.only(
+                    left: 40.w,
+                    right: 40.w,
+                  ),
+                  child: const Divider(
+                    thickness: 1.5,
+                    color: Color(0xffE9E9E9),
+                  ),
+                ),
+                tutionRequestInnerWidget(),
+                Container(
+                  margin: EdgeInsets.only(
+                    left: 40.w,
+                    right: 40.w,
+                  ),
+                  child: const Divider(
+                    thickness: 1.5,
+                    color: Color(0xffE9E9E9),
+                  ),
+                ),
+                tutionRequestInnerWidget(),
+                Container(
+                  margin: EdgeInsets.only(
+                    left: 40.w,
+                    right: 40.w,
+                  ),
+                  child: const Divider(
+                    thickness: 1.5,
+                    color: Color(0xffE9E9E9),
+                  ),
+                ),
+                tutionRequestInnerWidget(),
+                Container(
+                  margin: EdgeInsets.only(
+                    left: 40.w,
+                    right: 40.w,
+                  ),
+                  child: const Divider(
+                    thickness: 1.5,
+                    color: Color(0xffE9E9E9),
+                  ),
+                ),
+                tutionRequestInnerWidget(),
+              ],
             ),
-            tutionRequestInnerWidget(),
-            Container(
-              margin: EdgeInsets.only(
-                left: 40.w,
-                right: 40.w,
-              ),
-              child: const Divider(
-                thickness: 1.5,
-                color: Color(0xffE9E9E9),
-              ),
-            ),
-            tutionRequestInnerWidget(),
-            Container(
-              margin: EdgeInsets.only(
-                left: 40.w,
-                right: 40.w,
-              ),
-              child: const Divider(
-                thickness: 1.5,
-                color: Color(0xffE9E9E9),
-              ),
-            ),
-            tutionRequestInnerWidget(),
-            Container(
-              margin: EdgeInsets.only(
-                left: 40.w,
-                right: 40.w,
-              ),
-              child: const Divider(
-                thickness: 1.5,
-                color: Color(0xffE9E9E9),
-              ),
-            ),
-            tutionRequestInnerWidget(),
-            Container(
-              margin: EdgeInsets.only(
-                left: 40.w,
-                right: 40.w,
-              ),
-              child: const Divider(
-                thickness: 1.5,
-                color: Color(0xffE9E9E9),
-              ),
-            ),
-            tutionRequestInnerWidget(),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
 
   Widget upComingCard() {
     return Container(
-      height: 673.h,
+      height: 740.h,
       width: 743.w,
       // margin: EdgeInsets.only(top: 40.h),
       decoration: BoxDecoration(
@@ -423,51 +382,69 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
         color: const Color(0xffF8F8F8),
       ),
       padding: EdgeInsets.only(bottom: 20.h),
-      child: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              alignment: Alignment.centerLeft,
-              width: 300.w,
-              decoration: BoxDecoration(
-                  color: Colors.white, borderRadius: BorderRadius.circular(21)),
-              child: Align(
-                alignment: Alignment.center,
-                child: Text(
-                  'Upcoming Sessions',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 24.sp,
-                    fontWeight: FontWeight.bold,
-                  ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            alignment: Alignment.centerLeft,
+            width: 300.w,
+            decoration: BoxDecoration(
+                color: Colors.white, borderRadius: BorderRadius.circular(21)),
+            child: Align(
+              alignment: Alignment.center,
+              child: Text(
+                'Upcoming Sessions',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 24.sp,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),
-            upcomingsessionData(),
-            SizedBox(
-              height: 20.h,
+          ),
+          Container(
+            height: 670.h,
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  upcomingsessionData(),
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  upcomingsessionData(),
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  upcomingsessionData(),
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  upcomingsessionData(),
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  upcomingsessionData(),
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  upcomingsessionData(),
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  upcomingsessionData(),
+                ],
+              ),
             ),
-            upcomingsessionData(),
-            SizedBox(
-              height: 20.h,
-            ),
-            upcomingsessionData(),
-            SizedBox(
-              height: 20.h,
-            ),
-            upcomingsessionData(),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
 
   Widget tutionsCard() {
     return Container(
-      height: 573.h,
+      height: 740.h,
       width: 743.w,
       // margin: EdgeInsets.only(top: 40.h),
       decoration: BoxDecoration(
@@ -475,46 +452,55 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
         color: const Color(0xffF8F8F8),
       ),
       padding: EdgeInsets.only(bottom: 20.h),
-      child: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                Container(
-                  height: AppSizes.dynamicHeight(context, 0.06),
-                  width: AppSizes.dynamicWidth(context, 0.05),
-                  decoration: const BoxDecoration(
-                      image: DecorationImage(
-                    image: AssetImage('assets/png/trophy.png'),
-                    fit: BoxFit.contain,
-                  )),
-                ),
-                Text(
-                  'Tutions Completed',
-                  style: TextStyle(
-                    color: Colors.red,
-                    fontSize: 24.sp,
-                    fontWeight: FontWeight.bold,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                margin: EdgeInsets.all(10.w),
+                height: AppSizes.dynamicHeight(context, 0.06),
+                width: AppSizes.dynamicWidth(context, 0.05),
+                decoration: const BoxDecoration(
+                    image: DecorationImage(
+                  image: AssetImage(
+                    'assets/png/trophy.png',
                   ),
+                  fit: BoxFit.contain,
+                )),
+              ),
+              Text(
+                'Tutions Completed',
+                style: TextStyle(
+                  color: Colors.red,
+                  fontSize: 24.sp,
+                  fontWeight: FontWeight.bold,
                 ),
-              ],
+              ),
+            ],
+          ),
+          Container(
+            height: 630.h,
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                ],
+              ),
             ),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -560,7 +546,7 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
 
   Widget favoriteTutiCard() {
     return Container(
-      height: 673.h,
+      height: 740.h,
       width: 743.w,
       // margin: EdgeInsets.only(top: 40.h),
       decoration: BoxDecoration(
@@ -585,7 +571,7 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
               child: Align(
                 alignment: Alignment.center,
                 child: Text(
-                  'Favourite Tutors',
+                  'Weekly Contribution',
                   style: TextStyle(
                     color: Colors.red,
                     fontSize: 24.sp,

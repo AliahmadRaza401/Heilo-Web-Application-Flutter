@@ -9,6 +9,7 @@ import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/notification_container.dart';
 import 'package:heilo/widgets/text_widget.dart';
+import 'package:heilo/widgets/top_iconavatar.dart';
 
 import '../onDemand/onDemand_web.dart';
 
@@ -39,27 +40,7 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    const Icon(
-                      Icons.notifications,
-                      color: AppColors.greenDark,
-                    ),
-                    AppSizes.widthBox(context, .01),
-                    CircleAvatar(
-                      radius: 32.r,
-                      backgroundColor: AppColors.green,
-                      child: CircleAvatar(
-                        radius: 28.r,
-                        backgroundImage: const AssetImage(
-                          "assets/png/wp2398385 1.png",
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                topIconAvatar(context),
                 SizedBox(
                   height: 10.h,
                 ),
@@ -88,7 +69,7 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
                         });
                       },
                       child: cardWidget(
-                        'assets/png/g1.png',
+                        'assets/png/g2.png',
                         "Tutions completed",
                         SelectedCard == 2 ? 0xffFFFFFF : 0xff000000,
                         SelectedCard == 2
@@ -140,51 +121,6 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
                               : SelectedCard == 3
                                   ? quizCard()
                                   : favoriteTutiCard(),
-                      // Container(
-                      //   width: 700.w,
-                      //   height: 578.h,
-                      //   decoration: BoxDecoration(
-                      //     borderRadius: BorderRadius.circular(30),
-                      //     color: const Color(0xffF8F8F8),
-                      //   ),
-                      //   padding: EdgeInsets.only(
-                      //     left: 60.w,
-                      //     // right: 45.w,
-                      //     top: 17.h,
-                      //     // bottom: 5.h,
-                      //   ),
-                      //   // padding: EdgeInsets.symmetric(
-                      //   //   vertical: 5.h,
-                      //   //   horizontal: 25.w,
-                      //   // ),
-                      //   child: SingleChildScrollView(
-                      //     scrollDirection: Axis.vertical,
-                      //     child: Column(
-                      //       mainAxisAlignment: MainAxisAlignment.start,
-                      //       crossAxisAlignment: CrossAxisAlignment.start,
-                      //       children: [
-                      //         text(
-                      //           context,
-                      //           "Notifications",
-                      //           18.0,
-                      //           AppColors.customGreen,
-                      //           bold: false,
-                      //         ),
-                      //         SizedBox(
-                      //           height: 20.h,
-                      //         ),
-                      //         notificationCardforall(context),
-                      //         notificationCardforall(context),
-                      //         notificationCardforall(context),
-                      //         notificationCardforall(context),
-                      //         notificationCardforall(context),
-                      //         notificationCardforall(context),
-                      //         notificationCardforall(context),
-                      //       ],
-                      //     ),
-                      //   ),
-                      // ),
-
                       notificationContainer(context),
                     ],
                   ),
@@ -199,7 +135,7 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
 
   Widget upComingCard() {
     return Container(
-      height: 573.h,
+      height: 740.h,
       width: 743.w,
       // margin: EdgeInsets.only(top: 40.h),
       decoration: BoxDecoration(
@@ -257,7 +193,7 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
 
   Widget tutionsCard() {
     return Container(
-      // height: 573.h,
+      height: 740.h,
       width: 743.w,
       // margin: EdgeInsets.only(top: 40.h),
       decoration: BoxDecoration(
@@ -383,7 +319,7 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
 
   Widget quizCard() {
     return Container(
-      // height: 573.h,
+      height: 740.h,
       width: 743.w,
       // margin: EdgeInsets.only(top: 40.h),
       decoration: BoxDecoration(
@@ -548,7 +484,7 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
 
   Widget favoriteTutiCard() {
     return Container(
-      // height: 573.h,
+      height: 740.h,
       width: 743.w,
       // margin: EdgeInsets.only(top: 40.h),
       decoration: BoxDecoration(
