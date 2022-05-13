@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/screens/admin/BarChart/bar_chart.dart';
+import 'package:heilo/screens/student/Main_SideMenu/notification_mobile.dart';
 import 'package:heilo/screens/student/drawer/student_drawer.dart';
 import 'package:heilo/screens/teacher/drawer/teacher_drawer.dart';
 import 'package:heilo/utils/config.dart';
@@ -141,7 +142,7 @@ class _TeacherDashBoardMobileState extends State<TeacherDashBoardMobile> {
                     ]),
               ),
               SizedBox(
-                height: 20.h,
+                height: 60.h,
               ),
               selectedcard == 1
                   ? upcommingMainSession()
@@ -150,7 +151,8 @@ class _TeacherDashBoardMobileState extends State<TeacherDashBoardMobile> {
                       : selectedcard == 3
                           ? tutionsCompleteCard()
                           : favoriteTutiCard(),
-              notificationMain()
+              // notificationMain()\
+              NotificationMobile()
             ],
           ),
         ),

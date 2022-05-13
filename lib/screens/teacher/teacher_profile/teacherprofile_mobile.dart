@@ -89,8 +89,8 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
                   borderRadius: BorderRadius.circular(30.r),
                 ),
                 padding: EdgeInsets.only(
-                  left: 45.w,
-                  right: 45.w,
+                  // left: 45.w,
+                  // right: 45.w,
                   top: 50.h,
                 ),
                 margin: EdgeInsets.only(
@@ -113,8 +113,8 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
                       padding: EdgeInsets.only(
                         // top: 130.h,
                         top: AppSizes.dynamicHeight(context, 0.1),
-                        left: AppSizes.dynamicWidth(context, 0.17),
-                        right: AppSizes.dynamicWidth(context, 0.17),
+                        left: AppSizes.dynamicWidth(context, 0.03),
+                        right: AppSizes.dynamicWidth(context, 0.03),
                         bottom: AppSizes.dynamicHeight(context, 0.02),
                       ),
 
@@ -539,8 +539,8 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
               Container(
                 margin: EdgeInsets.only(
                   top: AppSizes.dynamicHeight(context, 0.05),
-                  left: 45.w,
-                  right: 45.w,
+                  // left: 45.w,
+                  // right: 45.w,
                 ),
                 child: Column(
                   children: [
