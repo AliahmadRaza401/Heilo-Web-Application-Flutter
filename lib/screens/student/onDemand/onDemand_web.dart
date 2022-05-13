@@ -61,7 +61,7 @@ class _OnDemandWebState extends State<OnDemandWeb> {
         color: AppColors.customWhite,
         borderRadius: BorderRadius.circular(30.r),
       ),
-      padding: EdgeInsets.all(AppSizes.dynamicWidth(context, 0.03)),
+      padding: EdgeInsets.all(AppSizes.dynamicWidth(context, 0.02)),
       child: SingleChildScrollView(
         child: Column(
           children: [

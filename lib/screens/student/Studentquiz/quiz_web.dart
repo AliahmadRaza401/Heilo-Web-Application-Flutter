@@ -36,7 +36,7 @@ class _QuizzWebState extends State<QuizzWeb> {
         color: AppColors.customWhite,
         borderRadius: BorderRadius.circular(30.r),
       ),
-      padding: EdgeInsets.all(20.r),
+      padding: EdgeInsets.all(AppSizes.dynamicWidth(context, 0.02)),
       child: SingleChildScrollView(
         child: Column(
           children: [
@@ -146,17 +146,26 @@ class _QuizzWebState extends State<QuizzWeb> {
                               SizedBox(
                                 height: 30.h,
                               ),
-                              Wrap(
-                                spacing: 50.w,
-                                runSpacing: 20.h,
-                                children: [
-                                  courseCard(context),
-                                  courseCard(context),
-                                  courseCard(context),
-                                  courseCard(context),
-                                  courseCard(context),
-                                  courseCard(context),
-                                ],
+                              Container(
+                                height: AppSizes.dynamicHeight(context, 0.55),
+                                padding: EdgeInsets.only(
+                                  right: 30.w,
+                                ),
+                                // color: Colors.amber,
+                                child: SingleChildScrollView(
+                                  child: Wrap(
+                                    spacing: 50.w,
+                                    runSpacing: 20.h,
+                                    children: [
+                                      courseCard(context),
+                                      courseCard(context),
+                                      courseCard(context),
+                                      courseCard(context),
+                                      courseCard(context),
+                                      courseCard(context),
+                                    ],
+                                  ),
+                                ),
                               ),
                             ],
                           ),
@@ -197,9 +206,8 @@ class _QuizzWebState extends State<QuizzWeb> {
                 //     ],
                 //   ),
                 // ),
-           
 
-           notificationContainer(context),
+                notificationContainer(context),
               ],
             ),
           ],
@@ -343,7 +351,7 @@ class _QuizzWebState extends State<QuizzWeb> {
               text(context, 'Congratulations!!', 28.sp, Color(0xff01B489),
                   bold: true),
               text(context, 'You have successfully completed the exam.', 14.sp,
-                  Color(0xff000000),
+                  Color(0xffA8A8A8),
                   bold: false),
             ],
           ),
@@ -373,7 +381,7 @@ class _QuizzWebState extends State<QuizzWeb> {
                 child: Align(
                   alignment: Alignment.center,
                   child: Text(
-                    'Next',
+                    'What you need to know?',
                     style: TextStyle(color: Color(0xffA8A8A8)),
                   ),
                 ),
@@ -383,7 +391,7 @@ class _QuizzWebState extends State<QuizzWeb> {
                 child: text(
                     context,
                     'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not?',
-                    20.sp,
+                    19.sp,
                     Color(0xffFFFFFF),
                     bold: true,
                     maxLines: 6),
@@ -407,7 +415,7 @@ class _QuizzWebState extends State<QuizzWeb> {
             // alignment: Alignment.centerRight,
             decoration: BoxDecoration(
                 border: Border.all(color: Color(0xff01B489), width: 2),
-                borderRadius: BorderRadius.circular(10)),
+                borderRadius: BorderRadius.circular(30.r)),
             child: Align(
               alignment: Alignment.center,
               child: Text(
@@ -518,7 +526,7 @@ class _QuizzWebState extends State<QuizzWeb> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Container(
-                height: 240.h,
+                height: 350.h,
                 child: Column(
                   // mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
