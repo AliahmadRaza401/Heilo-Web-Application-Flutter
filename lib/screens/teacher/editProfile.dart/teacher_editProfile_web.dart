@@ -37,9 +37,13 @@ class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
               color: Colors.white,
               borderRadius: BorderRadius.circular(30.r),
             ),
+            padding: EdgeInsets.all(AppSizes.dynamicWidth(context, 0.02)),
             child: Column(
               children: [
                 topIconAvatar(context),
+                SizedBox(
+                  height: 10.h,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -68,7 +72,7 @@ class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
                                 overflow: Overflow.visible,
                                 children: [
                                   Container(
-                                    // height: 710.h,
+                                    height: 810.h,
                                     decoration: BoxDecoration(
                                       color: Color(0xffF1F1F1),
                                       borderRadius: BorderRadius.circular(30.r),
@@ -79,7 +83,8 @@ class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
                                       right: 50.w,
                                     ),
                                     child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
@@ -128,7 +133,8 @@ class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
                                               // padding: EdgeInsets.all(10.h),
                                               decoration: BoxDecoration(
                                                   borderRadius:
-                                                      BorderRadius.circular(30.r),
+                                                      BorderRadius.circular(
+                                                          30.r),
                                                   color: Color(0xffF5F5F5)),
                                               height: 35.h,
                                               width: 167.w,
@@ -148,7 +154,8 @@ class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
                                               // padding: EdgeInsets.all(10.h),
                                               decoration: BoxDecoration(
                                                   borderRadius:
-                                                      BorderRadius.circular(30.r),
+                                                      BorderRadius.circular(
+                                                          30.r),
                                                   border: Border.all(
                                                       color: Color(0xffF5F5F5),
                                                       width: 1.5)),
@@ -247,7 +254,9 @@ class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
                                                           Color(0xffffffff),
                                                       function: () {},
                                                       radious: 25.r),
-                                                  coloredButton(context, 'maths',
+                                                  coloredButton(
+                                                      context,
+                                                      'maths',
                                                       Color(0xffF37171),
                                                       width: 156.w,
                                                       height: 35.h,
@@ -256,7 +265,9 @@ class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
                                                           Color(0xffffffff),
                                                       function: () {},
                                                       radious: 25.r),
-                                                  coloredButton(context, 'maths',
+                                                  coloredButton(
+                                                      context,
+                                                      'maths',
                                                       Color(0xff2196F3),
                                                       width: 113.w,
                                                       height: 35.h,
@@ -265,7 +276,9 @@ class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
                                                           Color(0xffffffff),
                                                       function: () {},
                                                       radious: 25.r),
-                                                  coloredButton(context, 'maths',
+                                                  coloredButton(
+                                                      context,
+                                                      'maths',
                                                       Color(0xffFEDB41),
                                                       width: 190.w,
                                                       height: 35.h,
@@ -274,7 +287,9 @@ class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
                                                           Color(0xffffffff),
                                                       function: () {},
                                                       radious: 25.r),
-                                                  coloredButton(context, 'maths',
+                                                  coloredButton(
+                                                      context,
+                                                      'maths',
                                                       Color(0xff915DE7),
                                                       width: 213.w,
                                                       height: 35.h,
@@ -343,7 +358,7 @@ class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
                                             ),
                                           ],
                                         ),
-      
+
                                         //
                                       )),
                                 ],

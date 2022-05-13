@@ -28,35 +28,38 @@ Widget barChart() {
   );
 }
 
-Widget dropDown(BuildContext context,String title) {
+Widget dropDown(BuildContext context, String title) {
   return DropdownButton<String>(
-    hint: text(context, title, AppSizes.dynamicWidth(context, .007), AppColors.greyText),
+    hint: text(context, title, AppSizes.dynamicWidth(context, .007),
+        AppColors.greyText),
     underline: Container(),
     isExpanded: true,
-    icon: Icon(Icons.keyboard_arrow_down_outlined,size: AppSizes.dynamicWidth(context, .015)),
+    icon: Icon(Icons.keyboard_arrow_down_outlined,
+        size: AppSizes.dynamicWidth(context, .015)),
     items: <String>['Item 1', 'Item 2', 'Item 3', 'Item 4'].map((String value) {
       return DropdownMenuItem<String>(
         value: value,
-
-        child: text(context, value, AppSizes.dynamicWidth(context, .015), AppColors.greyText),
+        child: text(context, value, AppSizes.dynamicWidth(context, .01),
+            AppColors.greyText),
       );
     }).toList(),
     onChanged: (_) {},
   );
 }
 
-
-Widget dropDownMobile(BuildContext context,String title) {
+Widget dropDownMobile(BuildContext context, String title) {
   return DropdownButton<String>(
-    hint: text(context, title, AppSizes.dynamicWidth(context, .017), AppColors.greyText),
+    hint: text(context, title, AppSizes.dynamicWidth(context, .017),
+        AppColors.greyText),
     underline: Container(),
     isExpanded: true,
-    icon: Icon(Icons.keyboard_arrow_down_outlined,size: AppSizes.dynamicWidth(context, .015)),
+    icon: Icon(Icons.keyboard_arrow_down_outlined,
+        size: AppSizes.dynamicWidth(context, .015)),
     items: <String>['Item 1', 'Item 2', 'Item 3', 'Item 4'].map((String value) {
       return DropdownMenuItem<String>(
         value: value,
-
-        child: text(context, value, AppSizes.dynamicWidth(context, .015), AppColors.greyText),
+        child: text(context, value, AppSizes.dynamicWidth(context, .015),
+            AppColors.greyText),
       );
     }).toList(),
     onChanged: (_) {},

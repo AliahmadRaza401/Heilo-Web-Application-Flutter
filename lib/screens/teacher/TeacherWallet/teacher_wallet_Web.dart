@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
+import 'package:heilo/widgets/top_iconavatar.dart';
 
 import '../../../utils/config.dart';
 
@@ -22,9 +23,7 @@ class _TeacherWalletWebState extends State<TeacherWalletWeb> {
         color: AppColors.customWhite,
         borderRadius: BorderRadius.circular(30.r),
       ),
-      padding: EdgeInsets.symmetric(
-          horizontal: AppSizes.dynamicWidth(context, .03),
-          vertical: AppSizes.dynamicHeight(context, .02)),
+      padding: EdgeInsets.all(AppSizes.dynamicWidth(context, 0.02)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -152,27 +151,31 @@ class _TeacherWalletWebState extends State<TeacherWalletWeb> {
 
                 child: Column(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 8.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Icon(
-                            Icons.notification_important_sharp,
-                            color: AppColors.green,
-                          ),
-                          CircleAvatar(
-                            backgroundColor: AppColors.green,
-                            radius: AppSizes.dynamicHeight(context, .03),
-                            child: CircleAvatar(
-                              radius: AppSizes.dynamicHeight(context, .028),
-                              backgroundImage:
-                                  AssetImage('assets/png/charles.png'),
-                            ),
-                          ),
-                        ],
-                      ),
+                    topIconAvatar(context),
+                    SizedBox(
+                      height: 10.h,
                     ),
+                    // Padding(
+                    //   padding: const EdgeInsets.only(bottom: 8.0),
+                    //   child: Row(
+                    //     mainAxisAlignment: MainAxisAlignment.end,
+                    //     children: [
+                    //       Icon(
+                    //         Icons.notification_important_sharp,
+                    //         color: AppColors.green,
+                    //       ),
+                    //       CircleAvatar(
+                    //         backgroundColor: AppColors.green,
+                    //         radius: AppSizes.dynamicHeight(context, .03),
+                    //         child: CircleAvatar(
+                    //           radius: AppSizes.dynamicHeight(context, .028),
+                    //           backgroundImage:
+                    //               AssetImage('assets/png/charles.png'),
+                    //         ),
+                    //       ),
+                    //     ],
+                    //   ),
+                    // ),
                     Expanded(
                         child: Container(
                       width: double.infinity,

@@ -40,6 +40,7 @@ Widget notificationContainer(BuildContext context) {
               width: 460.w,
               height: 660.h,
               child: ListView.builder(
+                shrinkWrap: true,
                 itemCount: 6,
                 itemBuilder: (context, i) {
                   return notificationCardforall(context);

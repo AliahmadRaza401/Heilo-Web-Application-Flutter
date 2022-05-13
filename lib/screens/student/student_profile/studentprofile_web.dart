@@ -31,12 +31,12 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
         color: Colors.white,
         borderRadius: BorderRadius.circular(30.r),
       ),
-      padding: EdgeInsets.all(AppSizes.dynamicWidth(context, 0.005)),
+      padding: EdgeInsets.all(AppSizes.dynamicWidth(context, 0.02)),
       child: Column(
         children: [
           topIconAvatar(context),
           SizedBox(
-            height: 0.h,
+            height: 10.h,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
