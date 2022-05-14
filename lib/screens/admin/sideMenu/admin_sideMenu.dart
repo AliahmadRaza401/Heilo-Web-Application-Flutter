@@ -111,7 +111,7 @@ class _AdminSideMenuState extends State<AdminSideMenu> {
                 onTap: () {
                   page.jumpToPage(0);
                 },
-                icon: "assets/png/bookicon.png",
+                icon: "assets/png/student_dashboard.png",
               ),
               SideMenuItem(
                 priority: 1,
@@ -119,7 +119,7 @@ class _AdminSideMenuState extends State<AdminSideMenu> {
                 onTap: () {
                   page.jumpToPage(1);
                 },
-                icon: "assets/png/bookicon.png",
+                icon: "assets/png/student_quiz.png",
               ),
               SideMenuItem(
                   priority: 2,
@@ -127,14 +127,14 @@ class _AdminSideMenuState extends State<AdminSideMenu> {
                   onTap: () {
                     page.jumpToPage(2);
                   },
-                  icon: "assets/png/bookicon.png",),
+                  icon: "assets/png/admin_paymentrequest.png",),
               SideMenuItem(
                 priority: 3,
                 title: 'Profile',
                 onTap: () {
                   page.jumpToPage(3);
                 },
-                icon: "assets/png/bookicon.png",
+                icon: "assets/png/admin_student.png",
               ),
               SideMenuItem(
                 priority: 4,
@@ -142,7 +142,7 @@ class _AdminSideMenuState extends State<AdminSideMenu> {
                 onTap: () {
                   page.jumpToPage(4);
                 },
-                icon: "assets/png/bookicon.png",
+                icon: "assets/png/admin_financial.png",
               ),
               SideMenuItem(
                 priority: 5,
@@ -150,7 +150,7 @@ class _AdminSideMenuState extends State<AdminSideMenu> {
                 onTap: () {
                   page.jumpToPage(5);
                 },
-                icon: "assets/png/bookicon.png",
+                icon: "assets/png/admin_contact.png",
               ),
             ],
           ),

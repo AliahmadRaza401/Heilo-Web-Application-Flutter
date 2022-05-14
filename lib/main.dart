@@ -41,8 +41,8 @@ class MyApp extends StatelessWidget {
               child: widget!,
             );
           },
-          // home: Intro(),
-          home: const AdminSideMenu(),
+          home: Intro(),
+          // home: const AdminSideMenu(),
           // home: AdminSideMenu(),
 
           // home: const StudentSideMenu(),

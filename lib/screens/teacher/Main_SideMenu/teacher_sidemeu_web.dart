@@ -103,7 +103,7 @@ class _TeacherSideMenuWebState extends State<TeacherSideMenuWeb> {
                 onTap: () {
                   page.jumpToPage(0);
                 },
-                icon: "assets/png/bookicon.png",
+                icon: "assets/png/teacher_dashboard.png",
               ),
               SideMenuItem(
                 priority: 1,
@@ -111,7 +111,7 @@ class _TeacherSideMenuWebState extends State<TeacherSideMenuWeb> {
                 onTap: () {
                   page.jumpToPage(1);
                 },
-                icon: "assets/png/bookicon.png",
+                icon: "assets/png/student_profile.png",
               ),
               SideMenuItem(
                 priority: 2,
@@ -119,7 +119,7 @@ class _TeacherSideMenuWebState extends State<TeacherSideMenuWeb> {
                 onTap: () {
                   page.jumpToPage(2);
                 },
-                icon: "assets/png/bookicon.png",
+                icon: "assets/png/student_edit_profile.png",
               ),
               SideMenuItem(
                 priority: 3,
@@ -127,7 +127,7 @@ class _TeacherSideMenuWebState extends State<TeacherSideMenuWeb> {
                 onTap: () {
                   page.jumpToPage(3);
                 },
-                icon: "assets/png/bookicon.png",
+                icon: "assets/png/teacher_wallet.png",
               ),
               SideMenuItem(
                 priority: 5,
@@ -135,7 +135,7 @@ class _TeacherSideMenuWebState extends State<TeacherSideMenuWeb> {
                 onTap: () {
                   page.jumpToPage(4);
                 },
-                icon: "assets/png/bookicon.png",
+                icon: "assets/png/student_inbox.png",
               ),
             ],
           ),
