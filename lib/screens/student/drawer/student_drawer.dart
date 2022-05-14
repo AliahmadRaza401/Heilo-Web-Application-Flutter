@@ -24,7 +24,7 @@ class StudentDrawer extends StatelessWidget {
           ListTile(
             leading: const ImageIcon(
               AssetImage(
-                'assets/png/ondemand.png',
+                'assets/png/ondemand.png.png',
               ),
               size: 100,
               color: Colors.black,

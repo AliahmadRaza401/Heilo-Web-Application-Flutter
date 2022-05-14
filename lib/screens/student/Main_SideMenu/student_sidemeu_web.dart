@@ -1,10 +1,8 @@
-
-
 import 'package:easy_sidemenu/easy_sidemenu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:heilo/screens/student/student_profile/student_profile.dart';
 import 'package:heilo/utils/config.dart';
@@ -107,7 +105,7 @@ class _StudentSideMenuWebState extends State<StudentSideMenuWeb> {
                 onTap: () {
                   page.jumpToPage(0);
                 },
-                icon: const Icon(Icons.home),
+                icon: const Icon(Icons.computer),
               ),
               SideMenuItem(
                 priority: 1,
@@ -115,7 +113,9 @@ class _StudentSideMenuWebState extends State<StudentSideMenuWeb> {
                 onTap: () {
                   page.jumpToPage(1);
                 },
-                icon: Icon(Icons.supervisor_account),
+               icon: Icon(Icons.supervisor_account),
+             
+              
               ),
               SideMenuItem(
                 priority: 2,
@@ -161,11 +161,11 @@ class _StudentSideMenuWebState extends State<StudentSideMenuWeb> {
               ),
               child: PageView(
                 controller: page,
-                children:const [
-                   OnDemand(),
+                children: const [
+                  OnDemand(),
                   Quizz(),
                   DashBoard(),
-                StudentProfile(),
+                  StudentProfile(),
                   EditProfile(),
                   StudentInbox(),
                   // Container(
