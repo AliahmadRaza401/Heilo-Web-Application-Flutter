@@ -50,16 +50,16 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                   Container(
                     alignment: Alignment.center,
                     width: 526.w,
-                    height: 780.h,
+                    height: 650.h,
                     decoration: BoxDecoration(
                       // color: Colors.amber,
                       borderRadius: BorderRadius.circular(30.r),
                     ),
-                    padding: EdgeInsets.only(
-                      left: 45.w,
-                      right: 45.w,
-                      // top: 50.h,
-                    ),
+                    // padding: EdgeInsets.only(
+                    //   left: 45.w,
+                    //   right: 45.w,
+                    //   // top: 50.h,
+                    // ),
                     // padding: EdgeInsets.symmetric(
                     //   vertical: 16.h,
                     //   horizontal: 25.w,
@@ -68,7 +68,8 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                       overflow: Overflow.visible,
                       children: [
                         Container(
-                          height: 630.h,
+                          height: 650.h,
+                          width: 426.w,
                           decoration: BoxDecoration(
                             color: Color(0xffF1F1F1),
                             borderRadius: BorderRadius.circular(30.r),
@@ -262,7 +263,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                           ),
                         ),
                         Positioned(
-                            top: -50.0,
+                            top: -80.0,
                             right: 0,
                             left: 0,
                             // (background container size) - (circle height / 2)

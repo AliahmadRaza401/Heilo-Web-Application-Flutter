@@ -56,182 +56,270 @@ class _TeacherWalletMobileState extends State<TeacherWalletMobile> {
         ),
       ),
       drawer: TeacherDrawer(),
-      body: SingleChildScrollView
-      (scrollDirection: Axis.vertical,
-        child: Container(
-          decoration: BoxDecoration(
-            color: AppColors.customWhite,
-            borderRadius: BorderRadius.circular(30.r),
-          ),
-          padding: EdgeInsets.symmetric(
-              horizontal: AppSizes.dynamicWidth(context, .03),
-              vertical: AppSizes.dynamicHeight(context, 0.0)),
-          child: Container(
-            height: double.infinity,
-            padding:
-                EdgeInsets.only(top: AppSizes.dynamicHeight(context, .0)),
-            // color: AppColors.customYellow,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      height: AppSizes.dynamicHeight(context, 0.2),
-                      width: AppSizes.dynamicWidth(context, 0.8),
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage('assets/png/card2.png')),
-                          color: AppColors.navyBlue,
-                          borderRadius: BorderRadius.circular(20)),
-                      padding: EdgeInsets.symmetric(
-                          vertical: AppSizes.dynamicHeight(context, .02),
-                          horizontal:
-                              AppSizes.dynamicWidth(context, .02)),
-                      child: Column(
+      body: Container(
+        decoration: BoxDecoration(
+          color: AppColors.customWhite,
+          borderRadius: BorderRadius.circular(30.r),
+        ),
+        padding: EdgeInsets.symmetric(
+            horizontal: AppSizes.dynamicWidth(context, .03),
+            vertical: AppSizes.dynamicHeight(context, 0.0)),
+        child: Column(
+          children: [
+            Expanded(
+                flex: 5,
+                child: Container(
+                  height: double.infinity,
+                  padding:
+                      EdgeInsets.only(top: AppSizes.dynamicHeight(context, .0)),
+                  // color: AppColors.customYellow,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Row(
-                            children: [
-                              text(
-                                  context,
-                                  'Balance',
-                                  AppSizes.dynamicWidth(context, .03),
-                                  AppColors.customWhite),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 20,
-                          ),
                           Container(
-                            margin: EdgeInsets.symmetric(
-                              horizontal: 20,
-                            ),
-                            child: Row(
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
+                            height: AppSizes.dynamicHeight(context, 0.2),
+                            width: AppSizes.dynamicWidth(context, 0.8),
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage('assets/png/card2.png')),
+                                color: AppColors.navyBlue,
+                                borderRadius: BorderRadius.circular(20)),
+                            padding: EdgeInsets.symmetric(
+                                vertical: AppSizes.dynamicHeight(context, .02),
+                                horizontal:
+                                    AppSizes.dynamicWidth(context, .02)),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                text(
-                                    context,
-                                    'Last week',
-                                    AppSizes.dynamicWidth(context, .02),
-                                    AppColors.blue),
-                                boldPopinText(
-                                    'Tk. 1437.00',
-                                    AppSizes.dynamicWidth(context, .04),
-                                    AppColors.customWhite)
-                              ],
-                            ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Container(
-                            margin: EdgeInsets.symmetric(
-                              horizontal: 20,
-                            ),
-                            child: Row(
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
-                              children: [
-                                text(
-                                    context,
-                                    '(-405.00)',
-                                    AppSizes.dynamicWidth(context, .02),
-                                    AppColors.blue),
-                                InkWell(
-                                  onTap: () {
-                                    AppRoutes.push(context, WithDraw());
-                                  },
-                                  child: Container(
-                                    padding: EdgeInsets.symmetric(
-                                      vertical: 5,
-                                      horizontal: 10,
-                                    ),
-                                    decoration: BoxDecoration(
-                                        borderRadius:
-                                            BorderRadius.circular(50),
-                                        color: Colors.transparent,
-                                        border: Border.all(
-                                            width: 1,
-                                            color: Colors.white)),
-                                    child: Center(
-                                      child: text(
+                                Row(
+                                  children: [
+                                    text(
                                         context,
-                                        'Tap to withdraw',
-                                        AppSizes.dynamicWidth(
-                                            context, .02),
-                                        AppColors.customWhite,
-                                        bold: true,
-                                      ),
-                                    ),
+                                        'Balance',
+                                        AppSizes.dynamicWidth(context, .03),
+                                        AppColors.customWhite),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Container(
+                                  margin: EdgeInsets.symmetric(
+                                    horizontal: 20,
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      text(
+                                          context,
+                                          'Last week',
+                                          AppSizes.dynamicWidth(context, .02),
+                                          AppColors.blue),
+                                      boldPopinText(
+                                          'Tk. 1437.00',
+                                          AppSizes.dynamicWidth(context, .04),
+                                          AppColors.customWhite)
+                                    ],
                                   ),
                                 ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Container(
+                                  margin: EdgeInsets.symmetric(
+                                    horizontal: 20,
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      text(
+                                          context,
+                                          '(-405.00)',
+                                          AppSizes.dynamicWidth(context, .02),
+                                          AppColors.blue),
+                                      InkWell(
+                                        onTap: () {
+                                          AppRoutes.push(context, WithDraw());
+                                        },
+                                        child: Container(
+                                          padding: EdgeInsets.symmetric(
+                                            vertical: 5,
+                                            horizontal: 10,
+                                          ),
+                                          decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(50),
+                                              color: Colors.transparent,
+                                              border: Border.all(
+                                                  width: 1,
+                                                  color: Colors.white)),
+                                          child: Center(
+                                            child: text(
+                                              context,
+                                              'Tap to withdraw',
+                                              AppSizes.dynamicWidth(
+                                                  context, .02),
+                                              AppColors.customWhite,
+                                              bold: true,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                )
                               ],
                             ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 15),
-                  child: text(
-                      context,
-                      'Transaction History',
-                      AppSizes.dynamicWidth(context, .04),
-                      AppColors.customBlack),
-                ),
-                Expanded(
-                  child: Align(
-                    alignment: Alignment.bottomCenter,
-                    child: Container(
-                      height: AppSizes.dynamicHeight(context, .56),
-                      width: double.infinity,
-                      // padding: EdgeInsets.all(30),
-                      decoration: BoxDecoration(
-                          // color: Colors.amber,
-                          color: AppColors.customWhite,
-                          // border: Border.all(color: AppColors.green),
-                          borderRadius: BorderRadius.circular(30.r)),
-                      child: Column(
-                        children: [
-                          headingRow(Color(0xffEBEBEB)),
-                          SizedBox(
-                            height: 5,
                           ),
-                          Expanded(
-                              child: Container(
-                            decoration: BoxDecoration(
-                                color: AppColors.customGrey,
-                                borderRadius: BorderRadius.circular(0)),
-                            padding: EdgeInsets.symmetric(
-                                vertical: 10.h,
-                                horizontal:
-                                    AppSizes.dynamicWidth(context, .01)),
-                            child: ListView.builder(
-                                itemCount: 10,
-                                itemBuilder: ((context, index) {
-                                  return paymentDetailsRow(
-                                      AppColors.lightGrey,
-                                      '#1112',
-                                      'Safin Riaz',
-                                      '2 hours',
-                                      'Tk. 600.00',
-                                      'Tk. 1750');
-                                })),
-                          ))
                         ],
                       ),
-                    ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 15),
+                        child: text(
+                            context,
+                            'Transaction History',
+                            AppSizes.dynamicWidth(context, .04),
+                            AppColors.customBlack),
+                      ),
+                      Expanded(
+                        child: Align(
+                          alignment: Alignment.bottomCenter,
+                          child: Container(
+                            height: AppSizes.dynamicHeight(context, .56),
+                            width: double.infinity,
+                            // padding: EdgeInsets.all(30),
+                            decoration: BoxDecoration(
+                                // color: Colors.amber,
+                                color: AppColors.customWhite,
+                                // border: Border.all(color: AppColors.green),
+                                borderRadius: BorderRadius.circular(30.r)),
+                            child: Column(
+                              children: [
+                                headingRow(Color(0xffEBEBEB)),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Expanded(
+                                    child: Container(
+                                  decoration: BoxDecoration(
+                                      color: AppColors.customGrey,
+                                      borderRadius: BorderRadius.circular(0)),
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 10.h,
+                                      horizontal:
+                                          AppSizes.dynamicWidth(context, .01)),
+                                  child: ListView.builder(
+                                      itemCount: 10,
+                                      itemBuilder: ((context, index) {
+                                        return paymentDetailsRow(
+                                            AppColors.lightGrey,
+                                            '#1112',
+                                            'Safin Riaz',
+                                            '2 hours',
+                                            'Tk. 600.00',
+                                            'Tk. 1750');
+                                      })),
+                                ))
+                              ],
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
                   ),
-                )
-              ],
-            ),
-          ),
+                )),
+            // Expanded(
+            //     flex: 2,
+            //     child: Container(
+            //       height: double.infinity,
+            //       // color: AppColors.blue,
+
+            //       child: Column(
+            //         children: [
+            //           Padding(
+            //             padding: const EdgeInsets.only(bottom: 8.0),
+            //             child: Row(
+            //               mainAxisAlignment: MainAxisAlignment.end,
+            //               children: [
+            //                 Icon(
+            //                   Icons.notification_important_sharp,
+            //                   color: AppColors.green,
+            //                 ),
+            //                 CircleAvatar(
+            //                   backgroundColor: AppColors.green,
+            //                   radius: AppSizes.dynamicHeight(context, .03),
+            //                   child: CircleAvatar(
+            //                     radius: AppSizes.dynamicHeight(context, .028),
+            //                     backgroundImage:
+            //                         AssetImage('assets/png/charles.png'),
+            //                   ),
+            //                 ),
+            //               ],
+            //             ),
+            //           ),
+            //           Expanded(
+            //               child: Container(
+            //             width: double.infinity,
+            //             child: Padding(
+            //               padding: EdgeInsets.only(
+            //                   bottom: AppSizes.dynamicHeight(context, .028)),
+            //               child: Container(
+            //                 width: double.infinity,
+            //                 decoration: BoxDecoration(
+            //                     color: AppColors.customGrey,
+            //                     borderRadius: BorderRadius.circular(30.r)),
+            //                 child: Padding(
+            //                   padding: EdgeInsets.only(bottom: 30),
+            //                   child: Column(
+            //                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            //                     children: [
+            //                       simpleContainer('00.00'),
+            //                       amoutEnter('Total Balance'),
+            //                       amoutEnter('Amount to\nbewithdrawn'),
+            //                       amoutEnter('Remaining \n Balance'),
+            //                       amoutEnter('Transfer to '),
+            //                       amoutEnter('Account number'),
+            //                       Row(
+            //                         mainAxisAlignment: MainAxisAlignment.end,
+            //                         children: [
+            //                           Padding(
+            //                             padding: EdgeInsets.only(
+            //                                 right: AppSizes.dynamicWidth(
+            //                                     context, .03)),
+            //                             child: Container(
+            //                               height: 54.h,
+            //                               width: 168.w,
+            //                               decoration: BoxDecoration(
+            //                                   color: AppColors.green,
+            //                                   border: Border.all(
+            //                                       color: AppColors.customBlack,
+            //                                       width: 2.w),
+            //                                   borderRadius:
+            //                                       BorderRadius.circular(100)),
+            //                               child: Center(
+            //                                 child: text(context, 'Withdraw', 13,
+            //                                     AppColors.customWhite),
+            //                               ),
+            //                             ),
+            //                           ),
+            //                         ],
+            //                       ),
+            //                     ],
+            //                   ),
+            //                 ),
+            //               ),
+            //             ),
+            //           )),
+            //         ],
+            //       ),
+            //     )),
+          ],
         ),
       ),
     );

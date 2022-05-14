@@ -7,6 +7,7 @@ import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/buttons.dart';
 import 'package:heilo/widgets/notification_container.dart';
 import 'package:heilo/widgets/text_widget.dart';
+import 'package:heilo/widgets/top_iconavatar.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
 import '../../../utils/config.dart';
@@ -51,6 +52,7 @@ class _OnDemandWebState extends State<OnDemandWeb> {
     'Item 5',
   ];
   int _value = 6;
+  double value = 60;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -66,27 +68,7 @@ class _OnDemandWebState extends State<OnDemandWeb> {
         child: Column(
           children: [
             // AppSizes.heightBox(context, .02),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const Icon(
-                  Icons.notifications,
-                  color: AppColors.greenDark,
-                ),
-                AppSizes.widthBox(context, .01),
-                CircleAvatar(
-                  radius: 32.r,
-                  backgroundColor: AppColors.green,
-                  child: CircleAvatar(
-                    radius: 28.r,
-                    backgroundImage: const AssetImage(
-                      "assets/png/wp2398385 1.png",
-                    ),
-                  ),
-                ),
-              ],
-            ),
+          topIconAvatar(context),
             Container(
               // color: Colors.yellow,
               padding: EdgeInsets.only(left: 0.w),
@@ -185,25 +167,42 @@ class _OnDemandWebState extends State<OnDemandWeb> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            SizedBox(
-                              width: 180.w,
-                              height: 10.h,
-                              child: Slider(
-                                  value: _value.toDouble(),
-                                  min: 1.0,
-                                  max: 20.0,
-                                  divisions: 10,
-                                  activeColor: AppColors.primaryColor,
-                                  inactiveColor: Colors.grey,
-                                  label: 'Set Price value',
-                                  onChanged: (double newValue) {
-                                    setState(() {
-                                      _value = newValue.round();
-                                    });
-                                  },
-                                  semanticFormatterCallback: (double newValue) {
-                                    return '${newValue.round()} dollars';
-                                  }),
+                            StatefulBuilder(
+                              builder:
+                                  (BuildContext context, StateSetter setStat) {
+                                return SizedBox(
+                                  width: 180.w,
+                                  height: 10.h,
+                                  child: Slider(
+                                    activeColor: AppColors.primaryColor,
+                                    inactiveColor: Colors.grey,
+                                    min: 0,
+                                    max: 100,
+                                    value: value,
+                                    onChanged: (value) {
+                                      setStat(() {
+                                        value = value;
+                                      });
+                                    },
+                                  ),
+                                  //  Slider(
+                                  //     value: _value.toDouble(),
+                                  //     min: 1.0,
+                                  //     max: 20.0,
+                                  //     divisions: 10,
+                                  //     activeColor: AppColors.primaryColor,
+                                  //     inactiveColor: Colors.grey,
+                                  //     label: 'Set Price value',
+                                  //     onChanged: (double newValue) {
+                                  //       setState(() {
+                                  //         _value = newValue.round();
+                                  //       });
+                                  //     },
+                                  //     semanticFormatterCallback: (double newValue) {
+                                  //       return '${newValue.round()} dollars';
+                                  //     }),
+                                );
+                              },
                             ),
                             Row(
                               children: [

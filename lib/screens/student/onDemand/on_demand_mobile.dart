@@ -52,6 +52,8 @@ class _OnDemandMobileState extends State<OnDemandMobile> {
     'Item 4',
     'Item 5',
   ];
+  double _value = 6;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -379,11 +381,37 @@ class _OnDemandMobileState extends State<OnDemandMobile> {
                           ),
                         ],
                       ),
-                      LinearPercentIndicator(
-                        width: 100.0,
-                        lineHeight: 5.0,
-                        percent: 0.7,
-                        progressColor: AppColors.primaryColor,
+                      SizedBox(
+                        width: 150,
+                        height: 10.h,
+                        child: Slider(
+                          activeColor: AppColors.primaryColor,
+                          inactiveColor: Colors.grey,
+                          min: 0,
+                          max: 100,
+                          value: _value,
+                          onChanged: (value) {
+                            setState(() {
+                              _value = value;
+                            });
+                          },
+                        ),
+                        //  Slider(
+                        //     value: _value.toDouble(),
+                        //     min: 1.0,
+                        //     max: 20.0,
+                        //     divisions: 10,
+                        //     activeColor: AppColors.primaryColor,
+                        //     inactiveColor: Colors.grey,
+                        //     label: 'Set Price value',
+                        //     onChanged: (double newValue) {
+                        //       setState(() {
+                        //         _value = newValue.round();
+                        //       });
+                        //     },
+                        //     semanticFormatterCallback: (double newValue) {
+                        //       return '${newValue.round()} dollars';
+                        //     }),
                       ),
                     ],
                   ),

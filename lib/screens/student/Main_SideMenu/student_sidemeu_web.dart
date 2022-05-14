@@ -105,7 +105,7 @@ class _StudentSideMenuWebState extends State<StudentSideMenuWeb> {
                 onTap: () {
                   page.jumpToPage(0);
                 },
-                icon: const Icon(Icons.computer),
+                icon: "assets/png/bookicon.png",
               ),
               SideMenuItem(
                 priority: 1,
@@ -113,9 +113,7 @@ class _StudentSideMenuWebState extends State<StudentSideMenuWeb> {
                 onTap: () {
                   page.jumpToPage(1);
                 },
-               icon: Icon(Icons.supervisor_account),
-             
-              
+                icon: "assets/png/bookicon.png",
               ),
               SideMenuItem(
                 priority: 2,
@@ -123,7 +121,7 @@ class _StudentSideMenuWebState extends State<StudentSideMenuWeb> {
                 onTap: () {
                   page.jumpToPage(2);
                 },
-                icon: Icon(Icons.file_copy_rounded),
+                icon: "assets/png/bookicon.png",
               ),
               SideMenuItem(
                 priority: 3,
@@ -131,7 +129,7 @@ class _StudentSideMenuWebState extends State<StudentSideMenuWeb> {
                 onTap: () {
                   page.jumpToPage(3);
                 },
-                icon: Icon(Icons.download),
+                icon: "assets/png/bookicon.png",
               ),
               SideMenuItem(
                 priority: 4,
@@ -139,7 +137,7 @@ class _StudentSideMenuWebState extends State<StudentSideMenuWeb> {
                 onTap: () {
                   page.jumpToPage(4);
                 },
-                icon: Icon(Icons.settings),
+                icon: "assets/png/bookicon.png",
               ),
               SideMenuItem(
                 priority: 5,
@@ -147,7 +145,7 @@ class _StudentSideMenuWebState extends State<StudentSideMenuWeb> {
                 onTap: () {
                   page.jumpToPage(5);
                 },
-                icon: Icon(Icons.exit_to_app),
+                icon: "assets/png/bookicon.png",
               ),
             ],
           ),

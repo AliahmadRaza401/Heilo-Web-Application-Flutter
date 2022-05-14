@@ -11,6 +11,7 @@ import 'package:heilo/widgets/buttons.dart';
 import 'package:heilo/widgets/form_fields.dart';
 import 'package:heilo/widgets/notification_container.dart';
 import 'package:heilo/widgets/text_widget.dart';
+import 'package:heilo/widgets/top_iconavatar.dart';
 
 import '../../../utils/config.dart';
 import '../onDemand/onDemand_web.dart';
@@ -40,27 +41,7 @@ class _QuizzWebState extends State<QuizzWeb> {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const Icon(
-                  Icons.notifications,
-                  color: AppColors.greenDark,
-                ),
-                AppSizes.widthBox(context, .01),
-                CircleAvatar(
-                  radius: 32.r,
-                  backgroundColor: AppColors.green,
-                  child: CircleAvatar(
-                    radius: 28.r,
-                    backgroundImage: const AssetImage(
-                      "assets/png/wp2398385 1.png",
-                    ),
-                  ),
-                ),
-              ],
-            ),
+            topIconAvatar(context),
             AppSizes.heightBox(context, .01),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

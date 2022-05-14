@@ -54,7 +54,7 @@ class _TeacherProfileWebState extends State<TeacherProfileWeb> {
                       Container(
                         alignment: Alignment.center,
                         width: 526.w,
-                        height: 860.h,
+                        height: 800.h,
                         decoration: BoxDecoration(
                           // color: Colors.amber,
                           borderRadius: BorderRadius.circular(30.r),
@@ -299,7 +299,7 @@ class _TeacherProfileWebState extends State<TeacherProfileWeb> {
                               ),
                             ),
                             Positioned(
-                                top: -50.0,
+                                top: -80.0,
                                 right: 0,
                                 left: 0,
                                 // (background container size) - (circle height / 2)
@@ -361,7 +361,7 @@ class _TeacherProfileWebState extends State<TeacherProfileWeb> {
                       ),
                       Container(
                         // alignment: Alignment.center,
-                        width: 400.w,
+                        width: 440.w,
                         height: 200.h,
                         decoration: BoxDecoration(
                           color: Color(0xffF8F8F8),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/utils/config.dart';
+import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
 
 class TeacherInboxWeb extends StatefulWidget {
@@ -53,7 +54,10 @@ class _TeacherInboxWebState extends State<TeacherInboxWeb> {
                             top: 30.h,
                           ),
                           width: 594.w,
-                          height: 60.h,
+                          height: 50.h,
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 20.w,
+                          ),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25),
                             color: AppColors.customGrey,
@@ -61,10 +65,13 @@ class _TeacherInboxWebState extends State<TeacherInboxWeb> {
                           // padding: EdgeInsets.only(left: 12),
                           child: TextFormField(
                             decoration: const InputDecoration(
-                                // hintText: "You phone number here...",
+                                // hintText: "Search here...",
                                 border: InputBorder.none,
                                 fillColor: Colors.white,
-                                suffixIcon: Icon(Icons.search)),
+                                suffixIcon: Icon(
+                                  Icons.search,
+                                  size: 30,
+                                )),
                           ),
                         ),
                         Container(
@@ -255,14 +262,14 @@ class _TeacherInboxWebState extends State<TeacherInboxWeb> {
                         const Icon(
                           Icons.file_present_outlined,
                           color: Color(0xff1BE59D),
-                          size: 25,
+                          size: 35,
                         ),
                         SizedBox(
                           width: 20.w,
                         ),
                         Container(
                           width: 670.w,
-                          height: 57.h,
+                          height: 50.h,
                           padding: EdgeInsets.only(
                             left: 30.w,
                           ),
@@ -291,7 +298,7 @@ class _TeacherInboxWebState extends State<TeacherInboxWeb> {
                         const Icon(
                           Icons.send,
                           color: Color(0xff1BE59D),
-                          size: 25,
+                          size: 35,
                         ),
                       ],
                     ),

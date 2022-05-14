@@ -169,7 +169,7 @@ class _TeacherSideMenuMobileState extends State<TeacherSideMenuMobile> {
               ? TeacherInboxMobile()
               : _selectedIndex == 1
                   ? TeacherDashBoardMobile()
-                  : notificationMobileContainer(context)),
+                  : NotificationMobile()),
     );
   }
 
