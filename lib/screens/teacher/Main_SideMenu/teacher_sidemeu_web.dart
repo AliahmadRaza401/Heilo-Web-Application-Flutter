@@ -1,10 +1,7 @@
-
-
 import 'package:easy_sidemenu/easy_sidemenu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 
 import 'package:heilo/screens/student/student_profile/student_profile.dart';
 import 'package:heilo/screens/teacher/TeacherWallet/teacher_wallet.dart';
@@ -15,8 +12,6 @@ import 'package:heilo/screens/teacher/teacher_profile/teacher_profile.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
-
-
 
 class TeacherSideMenuWeb extends StatefulWidget {
   const TeacherSideMenuWeb({Key? key}) : super(key: key);
@@ -108,7 +103,7 @@ class _TeacherSideMenuWebState extends State<TeacherSideMenuWeb> {
                 onTap: () {
                   page.jumpToPage(0);
                 },
-                icon: const Icon(Icons.home),
+                icon: "assets/png/bookicon.png",
               ),
               SideMenuItem(
                 priority: 1,
@@ -116,7 +111,7 @@ class _TeacherSideMenuWebState extends State<TeacherSideMenuWeb> {
                 onTap: () {
                   page.jumpToPage(1);
                 },
-                icon: Icon(Icons.supervisor_account),
+                icon: "assets/png/bookicon.png",
               ),
               SideMenuItem(
                 priority: 2,
@@ -124,7 +119,7 @@ class _TeacherSideMenuWebState extends State<TeacherSideMenuWeb> {
                 onTap: () {
                   page.jumpToPage(2);
                 },
-                icon: Icon(Icons.file_copy_rounded),
+                icon: "assets/png/bookicon.png",
               ),
               SideMenuItem(
                 priority: 3,
@@ -132,16 +127,15 @@ class _TeacherSideMenuWebState extends State<TeacherSideMenuWeb> {
                 onTap: () {
                   page.jumpToPage(3);
                 },
-                icon: Icon(Icons.download),
+                icon: "assets/png/bookicon.png",
               ),
-             
               SideMenuItem(
                 priority: 5,
                 title: 'Inbox',
                 onTap: () {
                   page.jumpToPage(4);
                 },
-                icon: Icon(Icons.exit_to_app),
+                icon: "assets/png/bookicon.png",
               ),
             ],
           ),
@@ -155,18 +149,18 @@ class _TeacherSideMenuWebState extends State<TeacherSideMenuWeb> {
               ),
               child: PageView(
                 controller: page,
-                children:const [
-                 TeacherDashBoard(),
-                 TeacherProfile(),
-                 TeacherEditProfile(),
+                children: const [
+                  TeacherDashBoard(),
+                  TeacherProfile(),
+                  TeacherEditProfile(),
                   // TeacherEditProfile(),
                   TeacherWallet(),
                   TeacherInbox(),
-                //   Quizz(),
-                //   DashBoard(),
-                // StudentProfile(),
-                //   EditProfile(),
-                // //   StudentInbox(),
+                  //   Quizz(),
+                  //   DashBoard(),
+                  // StudentProfile(),
+                  //   EditProfile(),
+                  // //   StudentInbox(),
                   // Container(
                   //   decoration: BoxDecoration(
                   //     color: AppColors.customWhite,

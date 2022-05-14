@@ -111,7 +111,7 @@ class _AdminSideMenuState extends State<AdminSideMenu> {
                 onTap: () {
                   page.jumpToPage(0);
                 },
-                icon: const Icon(Icons.computer),
+                icon: "assets/png/bookicon.png",
               ),
               SideMenuItem(
                 priority: 1,
@@ -119,7 +119,7 @@ class _AdminSideMenuState extends State<AdminSideMenu> {
                 onTap: () {
                   page.jumpToPage(1);
                 },
-                icon: Icon(Icons.report),
+                icon: "assets/png/bookicon.png",
               ),
               SideMenuItem(
                   priority: 2,
@@ -127,14 +127,14 @@ class _AdminSideMenuState extends State<AdminSideMenu> {
                   onTap: () {
                     page.jumpToPage(2);
                   },
-                  icon: Icon(Icons.request_page_sharp)),
+                  icon: "assets/png/bookicon.png",),
               SideMenuItem(
                 priority: 3,
                 title: 'Profile',
                 onTap: () {
                   page.jumpToPage(3);
                 },
-                icon: Icon(Icons.person),
+                icon: "assets/png/bookicon.png",
               ),
               SideMenuItem(
                 priority: 4,
@@ -142,7 +142,7 @@ class _AdminSideMenuState extends State<AdminSideMenu> {
                 onTap: () {
                   page.jumpToPage(4);
                 },
-                icon: Icon(Icons.receipt_rounded),
+                icon: "assets/png/bookicon.png",
               ),
               SideMenuItem(
                 priority: 5,
@@ -150,7 +150,7 @@ class _AdminSideMenuState extends State<AdminSideMenu> {
                 onTap: () {
                   page.jumpToPage(5);
                 },
-                icon: Icon(Icons.contact_page),
+                icon: "assets/png/bookicon.png",
               ),
             ],
           ),
