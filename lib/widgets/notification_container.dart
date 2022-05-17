@@ -7,7 +7,7 @@ import 'package:heilo/widgets/text_widget.dart';
 Widget notificationContainer(BuildContext context) {
   return Container(
     width: 526.w,
-    height: 740.h,
+    height: 700.h,
     decoration: BoxDecoration(
       color: AppColors.customGrey,
       borderRadius: BorderRadius.circular(30.r),
@@ -38,10 +38,10 @@ Widget notificationContainer(BuildContext context) {
           children: [
             SizedBox(
               width: 460.w,
-              height: 660.h,
+              height: 620.h,
               child: ListView.builder(
                 shrinkWrap: true,
-                itemCount: 6,
+                itemCount: 4,
                 itemBuilder: (context, i) {
                   return notificationCardforall(context);
                 },

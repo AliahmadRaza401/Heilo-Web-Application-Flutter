@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
+import 'package:heilo/widgets/top_iconavatar.dart';
 
 class TeacherInboxWeb extends StatefulWidget {
   const TeacherInboxWeb({Key? key}) : super(key: key);
@@ -119,13 +120,17 @@ class _TeacherInboxWebState extends State<TeacherInboxWeb> {
               ),
               Container(
                 margin: EdgeInsets.only(
-                  top: 88.h,
+                  top: 20.h,
                   left: 33.w,
                 ),
                 child: Column(
                   // mainAxisAlignment: MainAxisAlignment.start,
                   // crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Container(
+                        width: AppSizes.dynamicWidth(context, 0.45),
+                        // color: Colors.amber,
+                        child: topIconAvatar(context)),
                     Container(
                       height: 57.h,
                       width: 487.w,
@@ -272,6 +277,7 @@ class _TeacherInboxWebState extends State<TeacherInboxWeb> {
                           height: 50.h,
                           padding: EdgeInsets.only(
                             left: 30.w,
+                            bottom: 10.h,
                           ),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25),
@@ -365,7 +371,7 @@ class _TeacherInboxWebState extends State<TeacherInboxWeb> {
                 context,
                 'Last seen at 5:32',
                 14.0,
-                AppColors.customGrey,
+                Color(0xffCFD8DC),
                 bold: false,
               )
             ],
@@ -381,7 +387,7 @@ class _TeacherInboxWebState extends State<TeacherInboxWeb> {
                 context,
                 'You: Bhaiya kalke 5 tay set koro',
                 14.0,
-                AppColors.customGrey,
+                Color(0xffCFD8DC),
                 bold: false,
               ),
               text(

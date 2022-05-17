@@ -140,8 +140,10 @@ class _TeacherChatMainState extends State<TeacherChatMain> {
                     subtitle: Container(
                       padding: EdgeInsets.all(4),
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          color: Color(0xffB8F3DE)),
+                        borderRadius: BorderRadius.circular(8),
+                      
+                        // color: Color(0xFF040505)
+                      ),
                       child: text(
                           context,
                           'Dear Sir, I would like to study the genetics part of biology. To be precise the DNA replication. Can you help me?',

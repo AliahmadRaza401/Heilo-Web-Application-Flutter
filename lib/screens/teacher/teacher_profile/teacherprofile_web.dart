@@ -299,7 +299,7 @@ class _TeacherProfileWebState extends State<TeacherProfileWeb> {
                               ),
                             ),
                             Positioned(
-                                top: -60.0.h,
+                                top: -80.0.h,
                                 right: 0,
                                 left: 0,
                                 // (background container size) - (circle height / 2)
@@ -423,7 +423,6 @@ class _TeacherProfileWebState extends State<TeacherProfileWeb> {
                   ),
                 ),
               ),
-            
               Container(
                 height: AppSizes.dynamicHeight(context, 0.8),
                 child: SingleChildScrollView(
