@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/utils/config.dart';
 import 'package:heilo/utils/dynamic_sizes.dart';
 import 'package:heilo/widgets/text_widget.dart';
+import 'package:heilo/widgets/top_iconavatar.dart';
 
 class StudentInboxWeb extends StatefulWidget {
   const StudentInboxWeb({Key? key}) : super(key: key);
@@ -119,13 +120,17 @@ class _StudentInboxWebState extends State<StudentInboxWeb> {
               ),
               Container(
                 margin: EdgeInsets.only(
-                  top: 88.h,
+                  top: 20.h,
                   left: 33.w,
                 ),
                 child: Column(
                   // mainAxisAlignment: MainAxisAlignment.start,
                   // crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Container(
+                        width: AppSizes.dynamicWidth(context, 0.45),
+                        // color: Colors.amber,
+                        child: topIconAvatar(context)),
                     Container(
                       height: 57.h,
                       width: 487.w,
