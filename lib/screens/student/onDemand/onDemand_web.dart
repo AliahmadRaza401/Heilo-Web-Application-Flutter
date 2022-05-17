@@ -68,7 +68,7 @@ class _OnDemandWebState extends State<OnDemandWeb> {
         child: Column(
           children: [
             // AppSizes.heightBox(context, .02),
-          topIconAvatar(context),
+            topIconAvatar(context),
             Container(
               // color: Colors.yellow,
               padding: EdgeInsets.only(left: 0.w),
@@ -325,9 +325,8 @@ class _OnDemandWebState extends State<OnDemandWeb> {
                       ),
                       Container(
                         // color: Colors.amber,
-
                         width: 760.w,
-                        height: 670.h,
+                        height: 570.h,
                         child: ListView.builder(
                           itemCount: 6,
                           itemBuilder: (context, i) {

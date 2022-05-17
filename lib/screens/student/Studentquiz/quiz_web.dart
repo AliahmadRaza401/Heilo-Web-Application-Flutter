@@ -128,23 +128,26 @@ class _QuizzWebState extends State<QuizzWeb> {
                                 height: 30.h,
                               ),
                               Container(
-                                height: AppSizes.dynamicHeight(context, 0.55),
-                                padding: EdgeInsets.only(
-                                  right: 30.w,
-                                ),
+                                height: AppSizes.dynamicHeight(context, 0.52),
+
                                 // color: Colors.amber,
                                 child: SingleChildScrollView(
-                                  child: Wrap(
-                                    spacing: 50.w,
-                                    runSpacing: 20.h,
-                                    children: [
-                                      courseCard(context),
-                                      courseCard(context),
-                                      courseCard(context),
-                                      courseCard(context),
-                                      courseCard(context),
-                                      courseCard(context),
-                                    ],
+                                  child: Container(
+                                    margin: EdgeInsets.only(
+                                      right: 22.w,
+                                    ),
+                                    child: Wrap(
+                                      spacing: 50.w,
+                                      runSpacing: 20.h,
+                                      children: [
+                                        courseCard(context),
+                                        courseCard(context),
+                                        courseCard(context),
+                                        courseCard(context),
+                                        courseCard(context),
+                                        courseCard(context),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
@@ -153,41 +156,6 @@ class _QuizzWebState extends State<QuizzWeb> {
                         ),
                       )
                     : chapterTestWidget(),
-                // Container(
-                //   width: 526.w,
-                //   height: 740.h,
-                //   decoration: BoxDecoration(
-                //     color: AppColors.customGrey,
-                //     borderRadius: BorderRadius.circular(30.r),
-                //   ),
-                //   padding: EdgeInsets.symmetric(
-                //     vertical: 16.h,
-                //     horizontal: 25.w,
-                //   ),
-                //   child: Column(
-                //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                //     crossAxisAlignment: CrossAxisAlignment.start,
-                //     children: [
-                //       text(
-                //         context,
-                //         "Notifications",
-                //         18.sp,
-                //         AppColors.customGreen,
-                //       ),
-                //       SizedBox(
-                //         width: 460.w,
-                //         height: 660.h,
-                //         child: ListView.builder(
-                //           itemCount: 6,
-                //           itemBuilder: (context, i) {
-                //             return notificationCardforall(context);
-                //           },
-                //         ),
-                //       ),
-                //     ],
-                //   ),
-                // ),
-
                 notificationContainer(context),
               ],
             ),

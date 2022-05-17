@@ -272,6 +272,7 @@ class _StudentInboxWebState extends State<StudentInboxWeb> {
                           height: 50.h,
                           padding: EdgeInsets.only(
                             left: 30.w,
+                            bottom: 10.h,
                           ),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25),
@@ -365,7 +366,7 @@ class _StudentInboxWebState extends State<StudentInboxWeb> {
                 context,
                 'Last seen at 5:32',
                 14.0,
-                AppColors.customGrey,
+                Color(0xffCFD8DC),
                 bold: false,
               )
             ],
@@ -381,7 +382,7 @@ class _StudentInboxWebState extends State<StudentInboxWeb> {
                 context,
                 'You: Bhaiya kalke 5 tay set koro',
                 14.0,
-                AppColors.customGrey,
+                Color(0xffCFD8DC),
                 bold: false,
               ),
               text(
