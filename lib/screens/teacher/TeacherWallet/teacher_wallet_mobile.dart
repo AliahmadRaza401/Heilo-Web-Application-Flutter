@@ -179,55 +179,57 @@ class _TeacherWalletMobileState extends State<TeacherWalletMobile> {
                           ),
                         ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 15),
-                        child: text(
-                            context,
-                            'Transaction History',
-                            AppSizes.dynamicWidth(context, .04),
-                            AppColors.customBlack),
+                      // Padding(
+                      //   padding: const EdgeInsets.only(top: 15),
+                      //   child: text(
+                      //       context,
+                      //       'Transaction History',
+                      //       AppSizes.dynamicWidth(context, .04),
+                      //       AppColors.customBlack),
+                      // ),
+                      SizedBox(
+                        height: AppSizes.dynamicHeight(context, 0.02.h),
                       ),
-                      Expanded(
-                        child: Align(
-                          alignment: Alignment.bottomCenter,
-                          child: Container(
-                            height: AppSizes.dynamicHeight(context, .56),
-                            width: double.infinity,
-                            // padding: EdgeInsets.all(30),
-                            decoration: BoxDecoration(
-                                // color: Colors.amber,
-                                color: AppColors.customWhite,
-                                // border: Border.all(color: AppColors.green),
-                                borderRadius: BorderRadius.circular(30.r)),
-                            child: Column(
-                              children: [
-                                headingRow(Color(0xffEBEBEB)),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Expanded(
-                                    child: Container(
-                                  decoration: BoxDecoration(
-                                      color: AppColors.customGrey,
-                                      borderRadius: BorderRadius.circular(0)),
-                                  padding: EdgeInsets.symmetric(
-                                      vertical: 10.h,
-                                      horizontal:
-                                          AppSizes.dynamicWidth(context, .01)),
-                                  child: ListView.builder(
-                                      itemCount: 10,
-                                      itemBuilder: ((context, index) {
-                                        return paymentDetailsRow(
-                                            AppColors.lightGrey,
-                                            '#1112',
-                                            'Safin Riaz',
-                                            '2 hours',
-                                            'Tk. 600.00',
-                                            'Tk. 1750');
-                                      })),
-                                ))
-                              ],
-                            ),
+                      Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Container(
+                          height: AppSizes.dynamicHeight(context, .56),
+                          width: double.infinity,
+                          // padding: EdgeInsets.all(30),
+                          decoration: BoxDecoration(
+                              // color: Colors.amber,
+                              color: AppColors.customWhite,
+                              // border: Border.all(color: AppColors.green),
+                              borderRadius: BorderRadius.circular(30.r)),
+                          child: Column(
+                            children: [
+                              headingRow(Color(0xffEBEBEB)),
+                              // SizedBox(
+                              //   height: 5,
+                              // ),
+                              Expanded(
+                                  child: Container(
+                                decoration: BoxDecoration(
+                                    color: AppColors.customGrey,
+                                    borderRadius: BorderRadius.circular(0)),
+                                padding: EdgeInsets.symmetric(
+                                    vertical: 10.h,
+                                    horizontal:
+                                        AppSizes.dynamicWidth(context, .01)),
+                                child: ListView.builder(
+                                    itemCount: 15,
+                                    itemBuilder: ((context, index) {
+                                      return paymentDetailsRow(
+                                        AppColors.lightGrey,
+                                        '#1112',
+                                        'Safin Riaz',
+                                        '2 hours',
+                                        // 'Tk. 600.00',
+                                        // 'Tk. 1750',
+                                      );
+                                    })),
+                              ))
+                            ],
                           ),
                         ),
                       )
@@ -341,42 +343,57 @@ class _TeacherWalletMobileState extends State<TeacherWalletMobile> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          text(context, 'Serial  no.', AppSizes.dynamicWidth(context, 0.02),
+          text(context, 'Serial  no.', AppSizes.dynamicWidth(context, 0.04),
               AppColors.customBlack),
           VerticalDivider(
             color: AppColors.customWhite,
           ),
-          text(context, 'Details', AppSizes.dynamicWidth(context, 0.02),
+          text(context, 'Details', AppSizes.dynamicWidth(context, 0.04),
               AppColors.customBlack),
           VerticalDivider(
             color: AppColors.customWhite,
           ),
-          text(context, 'Duration', AppSizes.dynamicWidth(context, 0.02),
-              AppColors.customBlack),
+          Container(
+            padding: EdgeInsets.only(
+              top: 5,
+              bottom: 5,
+              left: 20,
+              right: 20,
+            ),
+            color: Colors.white,
+            child: text(context, 'Duration',
+                AppSizes.dynamicWidth(context, 0.04), AppColors.customBlack),
+          ),
           VerticalDivider(
             color: AppColors.customWhite,
           ),
-          text(context, 'Amount', AppSizes.dynamicWidth(context, 0.02),
-              AppColors.customBlack),
-          VerticalDivider(
-            color: AppColors.customWhite,
-          ),
-          text(context, 'Total Balance.', AppSizes.dynamicWidth(context, 0.02),
-              AppColors.customBlack),
+          // text(context, 'Amount', AppSizes.dynamicWidth(context, 0.02),
+          //     AppColors.customBlack),
+          // VerticalDivider(
+          //   color: AppColors.customWhite,
+          // ),
+          // text(context, 'Total Balance.', AppSizes.dynamicWidth(context, 0.02),
+          //     AppColors.customBlack),
         ],
       ),
     );
   }
 
-  Widget paymentDetailsRow(Color dividerColor, String serial, String details,
-      String duration, String amount, String totalBalance) {
+  Widget paymentDetailsRow(
+    Color dividerColor,
+    String serial,
+    String details,
+    String duration,
+    // String amount,
+    // String totalBalance,
+  ) {
     Size size = MediaQuery.of(context).size;
 
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Container(
         width: size.width * .82,
-        height: 61.h,
+        height: 65.h,
         decoration: BoxDecoration(
             // color:bgColor ,
             borderRadius: BorderRadius.circular(100)),
@@ -414,37 +431,30 @@ class _TeacherWalletMobileState extends State<TeacherWalletMobile> {
                             text(context, duration, 13, AppColors.customBlack)),
                   ),
                 ),
-                Expanded(
-                  flex: 3,
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                        left: AppSizes.dynamicWidth(context, .04)),
-                    child: Container(
-                        // color: Colors.amber,
-                        child: text(context, amount, 13, AppColors.green)),
-                  ),
-                ),
-                Expanded(
-                  flex: 4,
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                        left: AppSizes.dynamicWidth(context, .04)),
-                    child: Container(
-                        // color: Colors.brown,
-                        child: Row(
-                      children: [
-                        text(context, totalBalance, 13, AppColors.customBlack),
-                        // Padding(
-                        //     padding: EdgeInsets.only(left: 5),
-                        //     child: Icon(
-                        //       Icons.arrow_downward,
-                        //       color: AppColors.green,
-                        //       size: AppSizes.dynamicHeight(context, .025),
-                        //     ))
-                      ],
-                    )),
-                  ),
-                ),
+                // Expanded(
+                //   flex: 3,
+                //   child: Padding(
+                //     padding: EdgeInsets.only(
+                //         left: AppSizes.dynamicWidth(context, .04)),
+                //     child: Container(
+                //         // color: Colors.amber,
+                //         child: text(context, amount, 13, AppColors.green)),
+                //   ),
+                // ),
+                // Expanded(
+                //   flex: 4,
+                //   child: Padding(
+                //     padding: EdgeInsets.only(
+                //         left: AppSizes.dynamicWidth(context, .04)),
+                //     child: Container(
+                //         // color: Colors.brown,
+                //         child: Row(
+                //       children: [
+                //         text(context, totalBalance, 13, AppColors.customBlack),
+                //       ],
+                //     )),
+                //   ),
+                // ),
               ],
             ),
             Divider(color: dividerColor)

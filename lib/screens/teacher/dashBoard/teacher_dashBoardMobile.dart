@@ -568,8 +568,8 @@ class _TeacherDashBoardMobileState extends State<TeacherDashBoardMobile> {
   Widget tutionRequestInnerWidget() {
     return Container(
       margin: EdgeInsets.only(
-        left: AppSizes.dynamicWidth(context, 0.04),
-        right: AppSizes.dynamicWidth(context, 0.04),
+        left: AppSizes.dynamicWidth(context, 0.02),
+        right: AppSizes.dynamicWidth(context, 0.02),
         top: AppSizes.dynamicWidth(context, 0.02),
       ),
       child: Row(
@@ -581,7 +581,7 @@ class _TeacherDashBoardMobileState extends State<TeacherDashBoardMobile> {
             ),
           ),
           Container(
-            width: 30.w,
+            width: 15.w,
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -592,25 +592,35 @@ class _TeacherDashBoardMobileState extends State<TeacherDashBoardMobile> {
               Container(
                 height: 6.w,
               ),
-              text(context, 'Class- 10', 50.sp, Color(0xff444F55), bold: false)
+              text(context, 'Class- 10', 60.sp, Color(0xff444F55), bold: false)
             ],
           ),
           Container(
-            width: 20.w,
+            width: 10.w,
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              text(context, 'Date:10-22 -2021 I 5:30 pm', 65.sp,
-                  Color(0xff01B489),
-                  bold: true),
+              Wrap(
+                children: [
+                  text(context, 'Date:10-22 -2021 I 5:30 pm', 65.sp,
+                    Color(0xff01B489),
+                    bold: true),
+                ],
+              
+              ),
               Container(
                 height: 6.w,
               ),
-              text(context, 'Polygons I Gerometry I Maths B', 50.sp,
-                  Color(0xff444F55),
-                  bold: false)
+              Wrap(
+                children: [
+                  text(context, 'Polygons I Gerometry I Maths B', 50.sp,
+                    Color(0xff444F55),
+                    bold: false),
+                ],
+     
+              )
             ],
           ),
           Expanded(child: Container()),
@@ -841,10 +851,10 @@ class _TeacherDashBoardMobileState extends State<TeacherDashBoardMobile> {
             ),
             decoration: BoxDecoration(
                 color: const Color(0xffB4F4DD),
-                borderRadius: BorderRadius.circular(120.r)),
+                borderRadius: BorderRadius.circular(80.r)),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Wrap(children: [
                   text(

@@ -478,19 +478,20 @@ class _OnDemandMobileState extends State<OnDemandMobile> {
                         borderRadius: BorderRadius.circular(80.r),
                       ),
                       child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Icon(
-                            Icons.search,
-                            size: 40,
-                          ),
+                          // Icon(
+                          //   Icons.search,
+                          //   size: 90.sp,
+                          // ),
+                          Image(image: AssetImage('assets/png/searchicon.png')),
                           Container(
                             alignment: Alignment.topCenter,
                             width: AppSizes.dynamicWidth(context, 0.33),
-                            // padding: EdgeInsets.only(
-                            //   left: 10.w,
-                            //   bottom: 20.h,
-                            // ),
+                            padding: EdgeInsets.only(
+                              left:10.w,
+                              // bottom: 20.h,
+                            ),
                             child: TextField(
                               decoration: InputDecoration(
                                   border: InputBorder.none,
