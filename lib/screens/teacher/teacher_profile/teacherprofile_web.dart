@@ -299,7 +299,7 @@ class _TeacherProfileWebState extends State<TeacherProfileWeb> {
                               ),
                             ),
                             Positioned(
-                                top: -80.0,
+                                top: -60.0.h,
                                 right: 0,
                                 left: 0,
                                 // (background container size) - (circle height / 2)
@@ -423,6 +423,7 @@ class _TeacherProfileWebState extends State<TeacherProfileWeb> {
                   ),
                 ),
               ),
+            
               Container(
                 height: AppSizes.dynamicHeight(context, 0.8),
                 child: SingleChildScrollView(
@@ -974,7 +975,7 @@ class _TeacherProfileWebState extends State<TeacherProfileWeb> {
   Widget listTileWidget() {
     return Container(
       width: 241.w,
-      height: 60.h,
+      height: 65.h,
       decoration: BoxDecoration(
         color: AppColors.customGrey,
         borderRadius: BorderRadius.circular(30),

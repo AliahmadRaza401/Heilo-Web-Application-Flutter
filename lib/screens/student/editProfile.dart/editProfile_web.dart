@@ -32,7 +32,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
-          height: AppSizes.dynamicHeight(context, 0.96),
+          height: AppSizes.dynamicHeight(context,1),
           padding: EdgeInsets.all(AppSizes.dynamicWidth(context, 0.02)),
           decoration: BoxDecoration(
             color: Colors.white,
@@ -263,7 +263,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                           ),
                         ),
                         Positioned(
-                            top: -80.0,
+                            top: -80.0.h,
                             right: 0,
                             left: 0,
                             // (background container size) - (circle height / 2)
@@ -319,6 +319,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                                 ],
                               ),
 
+                
                               //
                             )
                             // CircleAvatar(

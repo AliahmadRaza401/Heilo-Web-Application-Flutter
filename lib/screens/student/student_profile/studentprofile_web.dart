@@ -175,7 +175,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
                         ),
                       ),
                       Positioned(
-                          top: -80.0,
+                          top: -80.0.h,
                           right: 0,
                           left: 0,
                           // (background container size) - (circle height / 2)
@@ -776,7 +776,7 @@ class _StudentProfileWebState extends State<StudentProfileWeb> {
   Widget listTileWidget() {
     return Container(
       width: 241.w,
-      height: 60.h,
+      height: 65.h,
       decoration: BoxDecoration(
         color: AppColors.customGrey,
         borderRadius: BorderRadius.circular(30),

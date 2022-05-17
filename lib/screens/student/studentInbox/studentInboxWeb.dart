@@ -325,7 +325,7 @@ class _StudentInboxWebState extends State<StudentInboxWeb> {
           // bottom: BorderSide(width: 16.0, color: Colors.lightBlue.shade900),
         ),
       ),
-      width: 585.w,
+      width: 620.w,
       height: 88.h,
       padding: EdgeInsets.only(
         top: 11.h,
