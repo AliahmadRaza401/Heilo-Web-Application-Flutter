@@ -53,15 +53,15 @@ Widget richTextWidget(
                 ),
               )
             : TextSpan(
-                recognizer: TapGestureRecognizer()
-                  ..onTap = () => push == true
-                      ? Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => page,
-                          ),
-                        )
-                      : Navigator.pop(context),
+                // recognizer: TapGestureRecognizer()
+                //   ..onTap = () => push == true
+                //       ? Navigator.push(
+                //           context,
+                //           MaterialPageRoute(
+                //             builder: (context) => page,
+                //           ),
+                //         )
+                //       : Navigator.pop(context),
                 text: text2,
                 style: TextStyle(
                   fontSize: size2,

@@ -332,7 +332,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                     ),
                   ),
                   Container(
-                    height: AppSizes.dynamicHeight(context, 0.7),
+                    height: AppSizes.dynamicHeight(context, 0.6),
                     child: SingleChildScrollView(
                       child: Container(
                         padding: EdgeInsets.only(

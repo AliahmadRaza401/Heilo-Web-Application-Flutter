@@ -56,22 +56,27 @@ class _StudentInboxWebState extends State<StudentInboxWeb> {
                           ),
                           width: 594.w,
                           height: 50.h,
-                          padding: EdgeInsets.symmetric(
-                            horizontal: 20.w,
-                          ),
+                          // padding: EdgeInsets.symmetric(
+                          //   horizontal: 20.w,
+                          // ),
+                          padding: EdgeInsets.only(left: 20.w,right: 20.w,bottom: 20.w),
+
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25),
                             color: AppColors.customGrey,
                           ),
+                          // alignment: Alignment.center,
                           // padding: EdgeInsets.only(left: 12),
                           child: TextFormField(
+                            // textAlign: TextAlign.center,
                             decoration: const InputDecoration(
                                 // hintText: "Search here...",
                                 border: InputBorder.none,
                                 fillColor: Colors.white,
                                 suffixIcon: Icon(
                                   Icons.search,
-                                  size: 30,
+                                  // size: 30,
+                                 
                                 )),
                           ),
                         ),

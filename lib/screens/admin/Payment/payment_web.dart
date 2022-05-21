@@ -251,7 +251,7 @@ class _PaymentPageWebState extends State<PaymentPageWeb> {
                           Icons.search,
                           color: AppColors.greyText,
                         ),
-                        contentPadding: EdgeInsets.only(top: 5, left: 10)),
+                        contentPadding: EdgeInsets.only(top: MediaQuery.of(context).size.width*0.01, left: 10)),
                   ),
               ),
             ),

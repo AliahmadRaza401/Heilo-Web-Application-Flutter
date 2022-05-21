@@ -115,7 +115,7 @@ class _AdminDashboardMobileState extends State<AdminDashboardMobile> {
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             CircularPercentIndicator(
-                              radius: 30.0,
+                              radius: 20.0,
                               lineWidth: 5,
                               percent: 0.2,
                               center: Text(
@@ -132,7 +132,7 @@ class _AdminDashboardMobileState extends State<AdminDashboardMobile> {
                               //     AppColors.greyText),
                             ),
                             CircularPercentIndicator(
-                              radius: 30,
+                              radius: 20,
                               lineWidth: 5,
                               percent: 0.5,
                               center: Text(
