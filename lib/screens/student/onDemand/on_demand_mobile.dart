@@ -245,9 +245,10 @@ class _OnDemandMobileState extends State<OnDemandMobile> {
           // height: AppSizes.dynamicHeight(context, 1),
           decoration: BoxDecoration(
             color: AppColors.customWhite,
+          //  color:Colors.black,
             borderRadius: BorderRadius.circular(30.r),
           ),
-          padding: EdgeInsets.all(20.r),
+          padding: EdgeInsets.all(40.w),
           child: SingleChildScrollView(
             child: Column(
               children: [

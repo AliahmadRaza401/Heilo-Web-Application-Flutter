@@ -150,8 +150,8 @@ class _TeacherDashBoardMobileState extends State<TeacherDashBoardMobile> {
                       : selectedcard == 3
                           ? tutionsCompleteCard()
                           : favoriteTutiCard(),
-              notificationMain()
-            ],
+   SizedBox(height: 20,)
+,            ],
           ),
         ),
       ),

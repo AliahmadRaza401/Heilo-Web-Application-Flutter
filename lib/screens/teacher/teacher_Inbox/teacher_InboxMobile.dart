@@ -72,7 +72,7 @@ class _TeacherInboxMobileState extends State<TeacherInboxMobile> {
                 margin: EdgeInsets.only(
                   top: 30.h,
                 ),
-
+                padding: EdgeInsets.only(left: 30.w),
                 // width: 594.w,
                 height: 60.h,
                 decoration: BoxDecoration(

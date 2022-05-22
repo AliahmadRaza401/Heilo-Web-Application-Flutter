@@ -44,7 +44,8 @@ class _TeacherProfileWebState extends State<TeacherProfileWeb> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Container(
-                height: AppSizes.dynamicHeight(context, 0.8),
+                  margin: EdgeInsets.only(top:10.h),
+                height: AppSizes.dynamicHeight(context, 0.78),
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
@@ -52,9 +53,10 @@ class _TeacherProfileWebState extends State<TeacherProfileWeb> {
                         height: 80.h,
                       ),
                       Container(
+
                         alignment: Alignment.center,
                         width: 526.w,
-                        height: 800.h,
+                        height: 790.h,
                         decoration: BoxDecoration(
                           // color: Colors.amber,
                           borderRadius: BorderRadius.circular(30.r),

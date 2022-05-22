@@ -189,7 +189,7 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
 
   Widget tutionsCard() {
     return Container(
-      height: 500.h,
+        height: 490.h,
       width: 743.w,
       // margin: EdgeInsets.only(top: 40.h),
       decoration: BoxDecoration(
@@ -224,21 +224,13 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
             ],
           ),
           Container(
-            height: AppSizes.dynamicHeight(context, 0.5),
+            height: AppSizes.dynamicHeight(context,  0.4),
             child: SingleChildScrollView(
               child: Column(
                 children: [
                   tutionInerWidget(),
                   tutionInerWidget(),
-                  tutionInerWidget(),
-                  tutionInerWidget(),
-                  tutionInerWidget(),
-                  tutionInerWidget(),
-                  tutionInerWidget(),
-                  tutionInerWidget(),
-                  tutionInerWidget(),
-                  tutionInerWidget(),
-                  tutionInerWidget(),
+                 
                 ],
               ),
             ),
@@ -315,7 +307,7 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
 
   Widget quizCard() {
     return Container(
-      height: 500.h,
+     height: 490.h,
       width: 743.w,
       // margin: EdgeInsets.only(top: 40.h),
       decoration: BoxDecoration(
@@ -480,7 +472,7 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
 
   Widget favoriteTutiCard() {
     return Container(
-      height: 540.h,
+         height: 490.h,
       width: 743.w,
       // margin: EdgeInsets.only(top: 40.h),
       decoration: BoxDecoration(
@@ -514,20 +506,14 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
             ],
           ),
           Container(
-            height: AppSizes.dynamicHeight(context, 0.5),
+            height: AppSizes.dynamicHeight(context,  0.4),
             child: SingleChildScrollView(
               child: Column(
                 children: [
                   favouriteInerWidet(),
                   favouriteInerWidet(),
-                  favouriteInerWidet(),
-                  favouriteInerWidet(),
-                  favouriteInerWidet(),
-                  favouriteInerWidet(),
-                  favouriteInerWidet(),
-                  favouriteInerWidet(),
-                  favouriteInerWidet(),
-                  favouriteInerWidet(),
+                
+                 
                 ],
               ),
             ),
