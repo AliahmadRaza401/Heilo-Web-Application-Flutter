@@ -62,9 +62,9 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
           width: AppSizes.dynamicWidth(context, 1),
           // height: AppSizes.dynamicHeight(context, 1),
           padding: EdgeInsets.only(
-            left: 84.w,
-            right: 84.w,
-            top: 20.h,
+            left: 130.w,
+            right: 130.w,
+            top: 10.h,
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -149,7 +149,7 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
                       : selectedcard == 3
                           ? quizCard()
                           : favoriteTutiCard(),
-              notificationMain(),
+            
             ],
           ),
         ),
@@ -611,6 +611,7 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
         color: const Color(0xffF8F8F8),
+
       ),
       padding: EdgeInsets.only(bottom: 20.h),
       child: SingleChildScrollView(
@@ -645,14 +646,7 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
             tutionInerWidget(),
             tutionInerWidget(),
             tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
+           
           ],
         ),
       ),
@@ -670,6 +664,9 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+          SizedBox(
+            width: 10.w,
+          ),
           // Container(
           //   height: 60.h,
           //   width: 50.w,
@@ -706,7 +703,7 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
             height: AppSizes.dynamicHeight(context, 0.06),
             // width: 156.w,
             padding: EdgeInsets.only(
-              top: AppSizes.dynamicHeight(context, 0.01),
+              // top: AppSizes.dynamicHeight(context, 0.01),
               left: AppSizes.dynamicWidth(context, 0.01),
               right: AppSizes.dynamicWidth(context, 0.01),
             ),
@@ -714,25 +711,25 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
                 color: const Color(0xffB4F4DD),
                 borderRadius: BorderRadius.circular(120.r)),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Wrap(children: [
                   text(
                     context,
                     'Topic- Mathematics',
-                    65.sp,
+                    12,
                     AppColors.bblackText,
                     bold: false,
                   ),
-                ]),
-                SizedBox(width: AppSizes.dynamicHeight(context, 0.02)),
+                ],),
+                // SizedBox(width: AppSizes.dynamicHeight(context, 0.02)),
                 Wrap(
                   children: [
                     text(
                       context,
                       '11-03-2022 (4pm- 6:30 pm)',
-                      65.sp,
+                     12,
                       AppColors.bblackText,
                       bold: false,
                     ),

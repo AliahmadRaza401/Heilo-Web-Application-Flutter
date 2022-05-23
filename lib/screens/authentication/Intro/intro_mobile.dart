@@ -21,7 +21,7 @@ class IntroMobile extends StatelessWidget {
       // color: Colors.amber,
       height: AppSizes.dynamicHeight(context, 1),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -42,14 +42,14 @@ class IntroMobile extends StatelessWidget {
                       },
                       child: Container(
                         alignment: Alignment.center,
-                        width: 200.w,
-                        height: 30.h,
+                        width: 400.w,
+                        height: 40.h,
                         decoration: BoxDecoration(
                           color: AppColors.blue,
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: text(context, "LOG  IN",
-                            AppSizes.dynamicWidth(context, 0.02), Colors.white,
+                            AppSizes.dynamicWidth(context, 0.04), Colors.white,
                             bold: true),
                       ),
                     ),
@@ -74,14 +74,14 @@ class IntroMobile extends StatelessWidget {
                       },
                       child: Container(
                         alignment: Alignment.center,
-                        width: 200.w,
-                        height: 30.h,
+                        width:400.w,
+                        height: 40.h,
                         decoration: BoxDecoration(
                           color: AppColors.green,
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: text(context, "SIGN  UP",
-                            AppSizes.dynamicWidth(context, 0.02), Colors.white,
+                            AppSizes.dynamicWidth(context, 0.04), Colors.white,
                             bold: true),
                       ),
                     ),
@@ -109,100 +109,100 @@ class IntroMobile extends StatelessWidget {
               ),
             ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    InkWell(
-                      onTap: () {
-                        AppRoutes.push(context, StudentPhase1());
-                      },
-                      child: Container(
-                        alignment: Alignment.center,
-                        width: 350.w,
-                        height: 40.h,
-                        decoration: BoxDecoration(
-                          color: AppColors.customWhite,
-                          borderRadius: BorderRadius.circular(50.r),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Image.asset(
-                              'assets/png/Group 1026.png',
-                              width: 50.w,
-                              height: 50.h,
-                            ),
-                            text(
-                                context,
-                                "Student",
-                                AppSizes.dynamicWidth(context, 0.025),
-                                Colors.black),
-                          ],
-                        ),
-                      ),
+                InkWell(
+                  onTap: () {
+                    AppRoutes.push(context, StudentPhase1());
+                  },
+                  child: Container(
+                    alignment: Alignment.center,
+                    width: 700.w,
+                    height: 50.h,
+                    decoration: BoxDecoration(
+                      color: AppColors.customWhite,
+                      borderRadius: BorderRadius.circular(50.r),
                     ),
-                    InkWell(
-                      onTap: () {
-                        AppRoutes.push(context, TeacherSideMenu());
-                      },
-                      child: Container(
-                        alignment: Alignment.center,
-                        width: 350.w,
-                        height: 40.h,
-                        decoration: BoxDecoration(
-                          color: AppColors.customWhite,
-                          borderRadius: BorderRadius.circular(50.r),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Image.asset(
+                          'assets/png/Group 1026.png',
+                          width: 60.w,
+                          height: 60.h,
                         ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Image.asset(
-                              'assets/png/Group 528.png',
-                              width: 50.w,
-                              height: 50.h,
-                            ),
-                            text(
-                                context,
-                                "Teacher",
-                                AppSizes.dynamicWidth(context, 0.025),
-                                Colors.black),
-                          ],
-                        ),
-                      ),
+                        text(
+                            context,
+                            "Student",
+                            AppSizes.dynamicWidth(context, 0.04),
+                            Colors.black),
+                      ],
                     ),
-                    InkWell(
-                      onTap: () {
-                        AppRoutes.push(context, AdminSideMenuMain());
-                      },
-                      child: Container(
-                        alignment: Alignment.center,
-                        width: 350.w,
-                        height: 40.h,
-                        decoration: BoxDecoration(
-                          color: AppColors.customWhite,
-                          borderRadius: BorderRadius.circular(50.r),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Image.asset(
-                              'assets/png/Group 528.png',
-                              width: 50.w,
-                              height: 50.h,
-                            ),
-                            text(
-                                context,
-                                "Admin",
-                                AppSizes.dynamicWidth(context, 0.025),
-                                Colors.black),
-                          ],
-                        ),
-                      ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20.h,
+                ),
+                InkWell(
+                  onTap: () {
+                    AppRoutes.push(context, TeacherSideMenu());
+                  },
+                  child: Container(
+                    alignment: Alignment.center,
+                    width: 700.w,
+                    height: 50.h,
+                    decoration: BoxDecoration(
+                      color: AppColors.customWhite,
+                      borderRadius: BorderRadius.circular(50.r),
                     ),
-                  ],
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Image.asset(
+                          'assets/png/Group 528.png',
+                       width: 60.w,
+                          height: 60.h,
+                        ),
+                        text(
+                            context,
+                            "Teacher",
+                            AppSizes.dynamicWidth(context, 0.04),
+                            Colors.black),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height:20.h,
+                ),
+                InkWell(
+                  onTap: () {
+                    AppRoutes.push(context, AdminSideMenuMain());
+                  },
+                  child: Container(
+                    alignment: Alignment.center,
+                       width: 700.w,
+                    height: 50.h,
+                    decoration: BoxDecoration(
+                      color: AppColors.customWhite,
+                      borderRadius: BorderRadius.circular(50.r),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Image.asset(
+                          'assets/png/Group 528.png',
+                         width: 60.w,
+                          height: 60.h,
+                        ),
+                        text(
+                            context,
+                            "Admin",
+                            AppSizes.dynamicWidth(context, 0.04),
+                            Colors.black),
+                      ],
+                    ),
+                  ),
                 ),
               ],
             ),

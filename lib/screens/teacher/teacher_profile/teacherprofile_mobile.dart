@@ -68,11 +68,10 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
-           padding: EdgeInsets.only(
-                  left: AppSizes.dynamicWidth(context, 0.03),
-                  right: AppSizes.dynamicWidth(context, 0.03),
-                
-                ),
+          padding: EdgeInsets.only(
+            left: AppSizes.dynamicWidth(context, 0.03),
+            right: AppSizes.dynamicWidth(context, 0.03),
+          ),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(13.r),
@@ -82,25 +81,15 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
             children: [
               Container(
                 alignment: Alignment.center,
-                // width: 526.w,
-                // height: 780.h,
                 decoration: BoxDecoration(
-                  // color: Colors.green,
                   borderRadius: BorderRadius.circular(30.r),
                 ),
                 padding: EdgeInsets.only(
-                  // left: 45.w,
-                  // right: 45.w,
                   top: 50.h,
                 ),
                 margin: EdgeInsets.only(
-                  // top: 130.h,
                   top: AppSizes.dynamicHeight(context, 0.04),
                 ),
-                // padding: EdgeInsets.symmetric(
-                //   vertical: 16.h,
-                //   horizontal: 25.w,
-                // ),
                 child: Stack(
                   overflow: Overflow.visible,
                   children: [
@@ -503,8 +492,8 @@ class _TeacherProfileMobileState extends State<TeacherProfileMobile> {
                                 ),
                               ),
                               Positioned(
-                                top: 70,
-                                right: -32,
+                                 top: 80,
+                                right: -20,
                                 child: Container(
                                   padding: EdgeInsets.symmetric(
                                     horizontal: 10,

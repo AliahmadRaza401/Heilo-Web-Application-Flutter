@@ -222,25 +222,37 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                       ),
                     ),
                     Positioned(
-                        top: -40.0,
+                       top: -120.0,
                         right: 0,
                         left: 0,
                         child: Center(
                           child: Stack(
                             overflow: Overflow.visible,
                             children: [
-                              CircleAvatar(
-                                radius: 190.r,
-                                backgroundImage: const AssetImage(
-                                  "assets/png/wp2398385 1.png",
+                              // CircleAvatar(
+                              //   radius: 190.r,
+                              //   backgroundImage: const AssetImage(
+                              //     "assets/png/wp2398385 1.png",
+                              //   ),
+                              // ),
+                              Container(
+                                height: AppSizes.dynamicHeight(context, 0.30),
+                                width: AppSizes.dynamicWidth(context, 0.30),
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  image: DecorationImage(
+                                    image: AssetImage(
+                                      "assets/png/wp2398385 1.png",
+                                    ),
+                                  ),
                                 ),
                               ),
-                              Positioned(
-                                top: -5,
-                                right: -30,
+                                Positioned(
+                                top: 70,
+                                right: -32,
                                 child: Container(
                                   padding: const EdgeInsets.symmetric(
-                                    horizontal: 7,
+                                    horizontal: 10,
                                     vertical: 3,
                                   ),
                                   decoration: BoxDecoration(
@@ -253,7 +265,7 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                                       text(
                                         context,
                                         "4.5",
-                                        65.sp,
+                                        15,
                                         Colors.black,
                                         bold: true,
                                       ),
@@ -261,6 +273,32 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                                   ),
                                 ),
                               ),
+                              // Positioned(
+                              //   top: -5,
+                              //   right: -30,
+                              //   child: Container(
+                              //     padding: const EdgeInsets.symmetric(
+                              //       horizontal: 7,
+                              //       vertical: 3,
+                              //     ),
+                              //     decoration: BoxDecoration(
+                              //       color: Color(0xffC4C4C4).withOpacity(0.5),
+                              //       borderRadius: BorderRadius.circular(50),
+                              //     ),
+                              //     child: Row(
+                              //       children: [
+                              //         Image.asset('assets/png/star.png'),
+                              //         text(
+                              //           context,
+                              //           "4.5",
+                              //           65.sp,
+                              //           Colors.black,
+                              //           bold: true,
+                              //         ),
+                              //       ],
+                              //     ),
+                              //   ),
+                              // ),
                             ],
                           ),
                         )),

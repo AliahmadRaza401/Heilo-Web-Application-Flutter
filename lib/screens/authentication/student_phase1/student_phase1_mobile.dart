@@ -49,8 +49,8 @@ class StudentPhase1Mobile extends StatelessWidget {
                             },
                             child: Container(
                               alignment: Alignment.center,
-                              width: 200.w,
-                              height: 30.h,
+                              width: 400.w,
+                              height: 40.h,
                               decoration: BoxDecoration(
                                 color: AppColors.customWhite,
                                 borderRadius: BorderRadius.circular(20),
@@ -58,7 +58,7 @@ class StudentPhase1Mobile extends StatelessWidget {
                               child: text(
                                   context,
                                   "LOG  IN",
-                                  AppSizes.dynamicWidth(context, 0.02),
+                                  AppSizes.dynamicWidth(context, 0.04),
                                   AppColors.blue,
                                   bold: true),
                             ),
@@ -72,8 +72,8 @@ class StudentPhase1Mobile extends StatelessWidget {
                             },
                             child: Container(
                               alignment: Alignment.center,
-                              width: 200.w,
-                              height: 30.h,
+                              width: 400.w,
+                              height: 40.h,
                               decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(20),
@@ -81,7 +81,7 @@ class StudentPhase1Mobile extends StatelessWidget {
                               child: text(
                                   context,
                                   "SIGN  UP",
-                                  AppSizes.dynamicWidth(context, 0.02),
+                                  AppSizes.dynamicWidth(context, 0.04),
                                   AppColors.blue,
                                   bold: true),
                             ),
@@ -96,39 +96,48 @@ class StudentPhase1Mobile extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          TextBtn(title: "SSC"),
+                         TextBtn(title: "SSC"),
                           TextBtn(title: "HSC"),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          TextBtn(title: "A LEVELS"),
+                             TextBtn(title: "A LEVELS"),
                           TextBtn(title: "O LEVELS"),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          InkWell(
+                            InkWell(
                               onTap: () {
                                 AppRoutes.push(context, StudentPhase2());
                               },
                               child: TextBtn(title: "ADMISSION")),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
+                      // Row(
+                      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      //   children: [
+                      //     TextBtn(title: "SSC"),
+                      //     TextBtn(title: "HSC"),
+                      //   ],
+                      // ),
+                      // Row(
+                      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      //   children: [
+                      //     TextBtn(title: "A LEVELS"),
+                      //     TextBtn(title: "O LEVELS"),
+                      //   ],
+                      // ),
+                      // Row(
+                      //   mainAxisAlignment: MainAxisAlignment.center,
+                      //   children: [
+                      //     InkWell(
+                      //         onTap: () {
+                      //           AppRoutes.push(context, StudentPhase2());
+                      //         },
+                      //         child: TextBtn(title: "ADMISSION")),
+                  //       ],
+                  //     ),
+                  //   ],
+                  // ),
+                // ),
+              // ],
+               ] ),
           ),
         ],
       ),
-    );
+    )]));
   }
 
   Widget textBtn(BuildContext context, text) {

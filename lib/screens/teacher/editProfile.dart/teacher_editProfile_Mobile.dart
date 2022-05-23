@@ -85,9 +85,10 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
                 Container(
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
+                    color: Colors.yellowAccent,
                     borderRadius: BorderRadius.circular(30.r),
                   ),
-                      padding:EdgeInsets.only(top: 40.h),
+                      // padding:EdgeInsets.only(top: 20.h),
                   child: Stack(
                     overflow: Overflow.visible,
                     children: [
@@ -98,10 +99,14 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
                           borderRadius: BorderRadius.circular(30.r),
                         ),
                         padding: EdgeInsets.only(
-                          top: 130.h,
-                          left: AppSizes.dynamicWidth(context, 0.03),
-                          right: AppSizes.dynamicWidth(context, 0.03),
-                          bottom: AppSizes.dynamicHeight(context, 0.020),
+                          // top: 130.h,
+                            top: AppSizes.dynamicHeight(context, 0.1),
+                        left: AppSizes.dynamicWidth(context, 0.03),
+                        right: AppSizes.dynamicWidth(context, 0.03),
+                        bottom: AppSizes.dynamicHeight(context, 0.02),
+                          // left: AppSizes.dynamicWidth(context, 0.03),
+                          // right: AppSizes.dynamicWidth(context, 0.03),
+                          // bottom: AppSizes.dynamicHeight(context, 0.020),
                         ),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -365,58 +370,111 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
                           ],
                         ),
                       ),
-                      Positioned(
-                          top: -110.0,
-                          right: 0,
-                          left: 0,
-                          // (background container size) - (circle height / 2)
-                          child: Center(
-                            child: Stack(
-                              overflow: Overflow.visible,
-                              children: [
-                                Container(
-                                  height: AppSizes.dynamicHeight(context, 0.30),
-                                  width: AppSizes.dynamicWidth(context, 0.30),
-                                  decoration: const BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    image: DecorationImage(
-                                      image: AssetImage(
-                                        "assets/png/wp2398385 1.png",
+                       Positioned(
+                        top: -120.0,
+                        right: 0,
+                        left: 0,
+                        // (background container size) - (circle height / 2)
+                        child: Center(
+                          child: Stack(
+                            overflow: Overflow.visible,
+                            children: [
+                              Container(
+                                height: AppSizes.dynamicHeight(context, 0.30),
+                                width: AppSizes.dynamicWidth(context, 0.30),
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  image: DecorationImage(
+                                    image: AssetImage(
+                                      "assets/png/wp2398385 1.png",
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Positioned(
+                                top: 80,
+                                right: -20,
+                                child: Container(
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: 10,
+                                    vertical: 3,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: Color(0xffC4C4C4).withOpacity(0.5),
+                                    borderRadius: BorderRadius.circular(50),
+                                  ),
+                                  child: Row(
+                                    children: [
+                                      Image.asset('assets/png/star.png'),
+                                      text(
+                                        context,
+                                        "4.5",
+                                        AppSizes.dynamicWidth(context, 0.02),
+                                        Colors.black,
+                                        bold: true,
                                       ),
-                                    ),
+                                    ],
                                   ),
                                 ),
-                                Positioned(
-                                  top: 40,
-                                  right: -32,
-                                  child: Container(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 10,
-                                      vertical: 3,
-                                    ),
-                                    decoration: BoxDecoration(
-                                      color: Color(0xffC4C4C4).withOpacity(0.5),
-                                      borderRadius: BorderRadius.circular(50),
-                                    ),
-                                    child: Row(
-                                      children: [
-                                        Image.asset('assets/png/star.png'),
-                                        text(
-                                          context,
-                                          "4.5",
-                                          15,
-                                          Colors.black,
-                                          bold: true,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
+                              ),
+                            ],
+                          ),
 
-                            //
-                          )),
+                          //
+                        )),
+                      // Positioned(
+                      //     top: -110.0,
+                      //     right: 0,
+                      //     left: 0,
+                      //     // (background container size) - (circle height / 2)
+                      //     child: Center(
+                      //       child: Stack(
+                      //         overflow: Overflow.visible,
+                      //         children: [
+                      //           Container(
+                      //             height: AppSizes.dynamicHeight(context, 0.30),
+                      //             width: AppSizes.dynamicWidth(context, 0.30),
+                      //             decoration: const BoxDecoration(
+                      //               shape: BoxShape.circle,
+                      //               image: DecorationImage(
+                      //                 image: AssetImage(
+                      //                   "assets/png/wp2398385 1.png",
+                      //                 ),
+                      //               ),
+                      //             ),
+                      //           ),
+                      //           Positioned(
+                      //             top: 40,
+                      //             right: -32,
+                      //             child: Container(
+                      //               padding: const EdgeInsets.symmetric(
+                      //                 horizontal: 10,
+                      //                 vertical: 3,
+                      //               ),
+                      //               decoration: BoxDecoration(
+                      //                 color: Color(0xffC4C4C4).withOpacity(0.5),
+                      //                 borderRadius: BorderRadius.circular(50),
+                      //               ),
+                      //               child: Row(
+                      //                 children: [
+                      //                   Image.asset('assets/png/star.png'),
+                      //                   text(
+                      //                     context,
+                      //                     "4.5",
+                      //                     15,
+                      //                     Colors.black,
+                      //                     bold: true,
+                      //                   ),
+                      //                 ],
+                      //               ),
+                      //             ),
+                      //           ),
+                      //         ],
+                      //       ),
+
+                      //       //
+                      //     )),
+                  
                     ],
                   ),
                 ),
@@ -616,6 +674,7 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
                           ),
                         );
                       }).toList(),
+                      underline: SizedBox(),
                       // After selecting the desired option,it will
                       // change button value to selected value
                       onChanged: (String? newValue) {
@@ -715,6 +774,7 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
                       ),
                     );
                   }).toList(),
+                  underline: SizedBox(),
                   // After selecting the desired option,it will
                   // change button value to selected value
                   onChanged: (String? newValue) {
@@ -952,6 +1012,7 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
                       ),
                     );
                   }).toList(),
+                  underline: SizedBox(),
                   // After selecting the desired option,it will
                   // change button value to selected value
                   onChanged: (String? newValue) {
@@ -1019,6 +1080,7 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
                       ),
                     );
                   }).toList(),
+                  underline: SizedBox(),
                   // After selecting the desired option,it will
                   // change button value to selected value
                   onChanged: (String? newValue) {
@@ -1083,6 +1145,7 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
                       ),
                     );
                   }).toList(),
+                  underline: SizedBox(),
                   // After selecting the desired option,it will
                   // change button value to selected value
                   onChanged: (String? newValue) {
@@ -1147,6 +1210,7 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
                       ),
                     );
                   }).toList(),
+                  underline: SizedBox(),
                   // After selecting the desired option,it will
                   // change button value to selected value
                   onChanged: (String? newValue) {

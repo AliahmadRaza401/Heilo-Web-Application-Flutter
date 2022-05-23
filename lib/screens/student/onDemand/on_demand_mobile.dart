@@ -92,163 +92,16 @@ class _OnDemandMobileState extends State<OnDemandMobile> {
           ),
         ),
         drawer: StudentDrawer(),
-        // body: DefaultTabController(
-        //   length: 3,
-        //   child: Container(
-        //     width: AppSizes.dynamicWidth(context, 1),
-        //     height: AppSizes.dynamicHeight(context, 1),
-        //     decoration: BoxDecoration(
-        //       color: AppColors.customWhite,
-        //       borderRadius: BorderRadius.circular(30.r),
-        //     ),
-        //     padding: EdgeInsets.all(20.r),
-        //     child: SingleChildScrollView(
-        //       child: Column(
-        //         children: [
-        //           Row(
-        //             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        //             crossAxisAlignment: CrossAxisAlignment.start,
-        //             children: [
-        //               Padding(
-        //                 padding: EdgeInsets.only(left: 180.w),
-        //                 child: SizedBox(
-        //                   width: AppSizes.dynamicWidth(context, 0.6),
-        //                   height: 128.h,
-        //                   child: Center(
-        //                     child: Container(
-        //                       width: AppSizes.dynamicWidth(context, 0.6),
-        //                       height: 40.h,
-        //                       decoration: BoxDecoration(
-        //                         // color: Colors.amber,
-        //                         borderRadius: BorderRadius.circular(100.r),
-        //                         border: Border.all(
-        //                           color: AppColors.customGrey,
-        //                           width: 2.0,
-        //                         ),
-        //                       ),
-        //                       child: TabBar(
-        //                         indicator: BoxDecoration(
-        //                           borderRadius: BorderRadius.only(
-        //                             topLeft: Radius.circular(0.0),
-        //                             topRight: Radius.circular(100.0),
-        //                             bottomRight: Radius.circular(100.0),
-        //                             bottomLeft: Radius.circular(100.0),
-        //                           ),
-        //                           color: AppColors.greenDark,
-        //                         ),
-        //                         unselectedLabelStyle: TextStyle(
-        //                           fontSize: AppSizes.dynamicWidth(context, 0.03),
-        //                           color: AppColors.greenDark,
-        //                         ),
-        //                         unselectedLabelColor: Colors.black,
-        //                         labelColor: AppColors.customWhite,
-        //                         labelStyle: TextStyle(
-        //                           color: AppColors.customWhite,
-        //                           fontWeight: FontWeight.bold,
-        //                           fontSize: AppSizes.dynamicWidth(context, 0.03),
-        //                         ),
-        //                         tabs: [
-        //                           Tab(
-        //                             text: "Subject",
-        //                           ),
-        //                           Tab(
-        //                             text: "Topic",
-        //                           ),
-        //                           Tab(
-        //                             text: "Search",
-        //                           ),
-        //                         ],
-        //                       ),
-        //                     ),
-        //                   ),
-        //                 ),
-        //               ),
-        //               Column(
-        //                 mainAxisAlignment: MainAxisAlignment.center,
-        //                 crossAxisAlignment: CrossAxisAlignment.center,
-        //                 children: [
-        //                   InkWell(
-        //                     onTap: () {
-        //                       notificationPopUp(context);
-        //                     },
-        //                     child:  Icon(
-        //                       Icons.notifications,
-        //                       color: AppColors.greenDark,
-        //                       size:130.r,
-        //                     ),
-        //                   ),
-        //                   AppSizes.widthBox(context, .01),
-        //                   CircleAvatar(
-        //                     // radius: 90.r,
-        //                     // backgroundColor: AppColors.green,
-        //                     child: CircleAvatar(
-        //                       radius: 80.r,
-        //                       backgroundImage: const AssetImage(
-        //                         "assets/png/wp2398385 1.png",
-        //                       ),
-        //                     ),
-        //                   ),
-        //                 ],
-        //               ),
-        //             ],
-        //           ),
-        //           AppSizes.heightBox(context, .02),
-        //           Container(
-        //             padding: EdgeInsets.symmetric(
-        //               horizontal: 20.w,
-        //             ),
-        //             // width: 760.w,
-        //             height: 720.h,
-        //             child: TabBarView(
-        //               children: [
-        //                 SizedBox(
-        //                   // width: 760.w,
-        //                   height: 700.h,
-        //                   child: ListView.builder(
-        //                     itemCount: 6,
-        //                     itemBuilder: (context, i) {
-        //                       return profileCard(context);
-        //                     },
-        //                   ),
-        //                 ),
-        //                 SizedBox(
-        //                   // width: 760.w,
-        //                   height: 700.h,
-        //                   child: ListView.builder(
-        //                     itemCount: 6,
-        //                     itemBuilder: (context, i) {
-        //                       return profileCard(context);
-        //                     },
-        //                   ),
-        //                 ),
-        //                 SizedBox(
-        //                   // width: 760.w,
-        //                   height: 700.h,
-        //                   child: ListView.builder(
-        //                     itemCount: 6,
-        //                     itemBuilder: (context, i) {
-        //                       return profileCard(context);
-        //                     },
-        //                   ),
-        //                 ),
-        //               ],
-        //             ),
-        //           ),
-        //         ],
-        //       ),
-        //     ),
-        //   ),
-        // ),
-
         body: Container(
           width: AppSizes.dynamicWidth(context, 1),
           // height: AppSizes.dynamicHeight(context, 1),
           decoration: BoxDecoration(
             color: AppColors.customWhite,
-          //  color:Colors.black,
+            //  color:Colors.black,
             borderRadius: BorderRadius.circular(30.r),
           ),
-          padding: EdgeInsets.all(40.w),
+          // margin: EdgeInsets.only(right: 25.w),
+          padding: EdgeInsets.only(left: 90.w,right: 90.w,top: 20.w,),
           child: SingleChildScrollView(
             child: Column(
               children: [
@@ -481,24 +334,28 @@ class _OnDemandMobileState extends State<OnDemandMobile> {
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          // Icon(
-                          //   Icons.search,
-                          //   size: 90.sp,
-                          // ),
-                          Image(image: AssetImage('assets/png/searchicon.png')),
+                          SizedBox(
+                            width: 10.w,
+                          ),
+                          Icon(
+                            Icons.search,
+                            size:25,
+                              // color: AppColors.greyText,
+                          ),
+                          // Image(image: AssetImage('assets/png/searchicon.png')),
                           Container(
                             alignment: Alignment.topCenter,
                             width: AppSizes.dynamicWidth(context, 0.33),
                             padding: EdgeInsets.only(
-                              left:10.w,
+                              left: 10.w,
                               // bottom: 20.h,
                             ),
                             child: TextField(
                               decoration: InputDecoration(
                                   border: InputBorder.none,
-                                  hintText: 'Search By ID',
+                                  hintText: 'Search By Name',
                                   hintStyle: TextStyle(
-                                    fontSize: 86.sp,
+                                    fontSize: 65.sp,
                                     color: AppColors.greyText,
                                   )),
                             ),
@@ -533,7 +390,7 @@ Widget profileCard(context) {
       height: 90.h,
       decoration: BoxDecoration(
         color: AppColors.customGrey,
-        borderRadius: BorderRadius.circular(15.r),
+        borderRadius: BorderRadius.circular(45.r),
       ),
       // padding: EdgeInsets.symmetric(
       //   horizontal: 54.w,
@@ -543,9 +400,13 @@ Widget profileCard(context) {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+                  SizedBox(
+            width: 20.w,
+          ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+         
               Stack(
                 overflow: Overflow.visible,
                 children: [
@@ -623,13 +484,14 @@ Widget profileCard(context) {
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            // crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Container(
                 height: 25.h,
                 width: AppSizes.dynamicWidth(context, 0.2),
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(10.r),
+                  borderRadius: BorderRadius.circular(75.r),
                 ),
                 child:
                     Center(child: text(context, "450/hr", 65.sp, Colors.black)),
@@ -639,12 +501,15 @@ Widget profileCard(context) {
                 width: AppSizes.dynamicWidth(context, 0.2),
                 decoration: BoxDecoration(
                   color: AppColors.greenDark,
-                  borderRadius: BorderRadius.circular(10.r),
+                   borderRadius: BorderRadius.circular(75.r),
                 ),
                 child: Center(
                     child: text(context, "Message", 65.sp, Colors.white)),
               ),
             ],
+          ),
+          SizedBox(
+            width: 20.w,
           ),
         ],
       ),

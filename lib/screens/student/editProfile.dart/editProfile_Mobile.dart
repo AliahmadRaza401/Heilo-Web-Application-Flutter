@@ -92,7 +92,8 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                       // height: 631.h,
                       decoration: BoxDecoration(
                         color: Color(0xffF1F1F1),
-                        borderRadius: BorderRadius.circular(30.r),
+                        // color: Colors.black,
+                     borderRadius: BorderRadius.circular(90.r),
                       ),
                       padding: EdgeInsets.only(
                         top: 130.h,
@@ -449,6 +450,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                       // Array list of items
                       items: items.map((String items) {
                         return DropdownMenuItem(
+                          
                           value: items,
                           child: Text(
                             items,
@@ -459,6 +461,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                           ),
                         );
                       }).toList(),
+                       underline: SizedBox(),
                       // After selecting the desired option,it will
                       // change button value to selected value
                       onChanged: (String? newValue) {
@@ -558,6 +561,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                       ),
                     );
                   }).toList(),
+                   underline: SizedBox(),
                   // After selecting the desired option,it will
                   // change button value to selected value
                   onChanged: (String? newValue) {
@@ -795,6 +799,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                       ),
                     );
                   }).toList(),
+                   underline: SizedBox(),
                   // After selecting the desired option,it will
                   // change button value to selected value
                   onChanged: (String? newValue) {
@@ -862,6 +867,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                       ),
                     );
                   }).toList(),
+                   underline: SizedBox(),
                   // After selecting the desired option,it will
                   // change button value to selected value
                   onChanged: (String? newValue) {
@@ -926,6 +932,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                       ),
                     );
                   }).toList(),
+                   underline: SizedBox(),
                   // After selecting the desired option,it will
                   // change button value to selected value
                   onChanged: (String? newValue) {
@@ -990,6 +997,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                       ),
                     );
                   }).toList(),
+                   underline: SizedBox(),
                   // After selecting the desired option,it will
                   // change button value to selected value
                   onChanged: (String? newValue) {
