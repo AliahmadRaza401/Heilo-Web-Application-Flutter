@@ -15,7 +15,7 @@ class TextBtn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: Responsive.isDesktop(context) ? 350.w : 800.w,
-      height: Responsive.isDesktop(context) ? 70.h : 60.h,
+      height: Responsive.isDesktop(context) ? 70.h : 40.h,
       alignment: Alignment.center,
       decoration: BoxDecoration(
         boxShadow: [
@@ -27,14 +27,16 @@ class TextBtn extends StatelessWidget {
           ),
         ],
         color: Colors.white,
-        borderRadius: BorderRadius.circular(50.r),
+        borderRadius: Responsive.isDesktop(context)
+            ? BorderRadius.circular(50.r)
+            : BorderRadius.circular(180.r),
       ),
       child: text(
           context,
           title,
           Responsive.isDesktop(context)
               ? 24.sp
-              : AppSizes.dynamicWidth(context, 0.05),
+              : AppSizes.dynamicWidth(context, 0.04),
           Colors.black),
     );
   }

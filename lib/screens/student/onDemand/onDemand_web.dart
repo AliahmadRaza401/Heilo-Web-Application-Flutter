@@ -167,43 +167,49 @@ class _OnDemandWebState extends State<OnDemandWeb> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            StatefulBuilder(
-                              builder:
-                                  (BuildContext context, StateSetter setStat) {
-                                return SizedBox(
-                                  width: 180.w,
+                              SizedBox(
+                                width: 180.w,
                                   height: 10.h,
-                                  child: Slider(
-                                    activeColor: AppColors.primaryColor,
-                                    inactiveColor: Colors.grey,
-                                    min: 0,
-                                    max: 100,
-                                    value: value,
-                                    onChanged: (value) {
-                                      setStat(() {
-                                        value = value;
-                                      });
-                                    },
-                                  ),
-                                  //  Slider(
-                                  //     value: _value.toDouble(),
-                                  //     min: 1.0,
-                                  //     max: 20.0,
-                                  //     divisions: 10,
-                                  //     activeColor: AppColors.primaryColor,
-                                  //     inactiveColor: Colors.grey,
-                                  //     label: 'Set Price value',
-                                  //     onChanged: (double newValue) {
-                                  //       setState(() {
-                                  //         _value = newValue.round();
-                                  //       });
-                                  //     },
-                                  //     semanticFormatterCallback: (double newValue) {
-                                  //       return '${newValue.round()} dollars';
-                                  //     }),
-                                );
-                              },
-                            ),
+                                child: Slider(
+                                        value: _value.toDouble(),
+                                        min: 1.0,
+                                        max: 20.0,
+                                        divisions: 10,
+                                        activeColor: AppColors.primaryColor,
+                                        inactiveColor: Colors.grey,
+                                        label: 'Set Price value',
+                                        onChanged: (double newValue) {
+                                          setState(() {
+                                            _value = newValue.round();
+                                          });
+                                        },
+                                        semanticFormatterCallback: (double newValue) {
+                                          return '${newValue.round()} dollars';
+                                        }),
+                              ),
+                            // StatefulBuilder(
+                            //   builder:
+                            //       (BuildContext context, StateSetter setStat) {
+                            //     return SizedBox(
+                            //       width: 180.w,
+                            //       height: 10.h,
+                            //       child: Slider(
+                            //         activeColor: AppColors.primaryColor,
+                            //         inactiveColor: Colors.grey,
+                            //         min: 0,
+                            //         max: 100,
+                            //         value: value,
+                            //         onChanged: (value) {
+                            //           setState(() {
+                                        
+                            //             value = value;
+                            //           });
+                            //         },
+                            //       ),
+                                 
+                            //     );
+                            //   },
+                            // ),
                             Row(
                               children: [
                                 Radio(

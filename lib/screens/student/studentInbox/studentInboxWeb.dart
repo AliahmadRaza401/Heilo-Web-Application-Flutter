@@ -59,7 +59,7 @@ class _StudentInboxWebState extends State<StudentInboxWeb> {
                           // padding: EdgeInsets.symmetric(
                           //   horizontal: 20.w,
                           // ),
-                          padding: EdgeInsets.only(left: 20.w,right: 20.w,bottom: 20.w),
+                          padding: EdgeInsets.only(top:10.w,left: 20.w,right: 20.w,bottom: 20.w),
 
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25),

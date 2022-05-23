@@ -238,7 +238,7 @@ loginPopUpMobile(BuildContext context) {
                               ),
                               labelText: 'Phone Number',
                               labelStyle: TextStyle(
-                                fontSize: AppSizes.dynamicWidth(context, 0.02),
+                                fontSize: AppSizes.dynamicWidth(context, 0.03),
                               )),
                         ),
                         TextField(
@@ -257,7 +257,7 @@ loginPopUpMobile(BuildContext context) {
                               ),
                               labelText: 'Password',
                               labelStyle: TextStyle(
-                                fontSize: AppSizes.dynamicWidth(context, 0.02),
+                                fontSize: AppSizes.dynamicWidth(context, 0.03),
                               )),
                         ),
                         SizedBox(
@@ -277,7 +277,7 @@ loginPopUpMobile(BuildContext context) {
                               child: text(
                                   context,
                                   "LOGIN",
-                                  AppSizes.dynamicWidth(context, 0.02),
+                                  AppSizes.dynamicWidth(context, 0.03),
                                   Colors.white),
                             ),
                           ],
@@ -291,7 +291,7 @@ loginPopUpMobile(BuildContext context) {
                             text(
                               context,
                               "Create Account",
-                              AppSizes.dynamicWidth(context, 0.02),
+                              AppSizes.dynamicWidth(context, 0.03),
                               Color(0xff444F55),
                             ),
                           ],
@@ -305,7 +305,7 @@ loginPopUpMobile(BuildContext context) {
                             text(
                               context,
                               "Forget Password ?",
-                              AppSizes.dynamicWidth(context, 0.02),
+                              AppSizes.dynamicWidth(context, 0.04),
                               Color(0xff444F55),
                             ),
                             SizedBox(
@@ -374,7 +374,7 @@ signUpPopUp(BuildContext context) {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            text(context, "Welcome to Heilo!", 30.sp,
+                            text(context, "Welcome to Heilo!",  AppSizes.dynamicWidth(context, 0.04),
                                 AppColors.greenDark),
                           ],
                         ),
@@ -411,9 +411,9 @@ signUpPopUp(BuildContext context) {
                                 ),
                               );
                             })),
-                            text(context, "I agree to the ", 14.sp,
+                            text(context, "I agree to the ",  AppSizes.dynamicWidth(context, 0.04),
                                 Color(0xff444F55)),
-                            text(context, "Terms and Conditions", 14.sp,
+                            text(context, "Terms and Conditions",  AppSizes.dynamicWidth(context, 0.04),
                                 AppColors.greenDark),
                           ],
                         ),
@@ -432,7 +432,7 @@ signUpPopUp(BuildContext context) {
                               ),
                               alignment: Alignment.center,
                               child: text(
-                                  context, "REGISTER", 20.sp, Colors.white),
+                                  context, "REGISTER", AppSizes.dynamicWidth(context, 0.04), Colors.white),
                             ),
                           ],
                         ),

@@ -29,6 +29,7 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       key: studentScafoldKey,
       appBar: AppBar(
         elevation: 0,
@@ -334,6 +335,7 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
 
   Widget greyWidget() {
     return Container(
+      padding: EdgeInsets.symmetric(vertical: 30.h),
       decoration: BoxDecoration(
         color: AppColors.customGrey,
         borderRadius: BorderRadius.circular(10),
@@ -459,9 +461,7 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
         color: AppColors.customGrey,
         borderRadius: BorderRadius.circular(10),
       ),
-      padding: EdgeInsets.only(
-        bottom: AppSizes.dynamicHeight(context, 0.03),
-      ),
+         padding: EdgeInsets.symmetric(vertical: 30.h),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -643,6 +643,7 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
 
   Widget greyWidget2() {
     return Container(
+         padding: EdgeInsets.symmetric(vertical: 30.h),
       decoration: BoxDecoration(
         border: Border.all(
           width: 2,

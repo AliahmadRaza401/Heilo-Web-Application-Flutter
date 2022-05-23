@@ -282,7 +282,7 @@ class _OnDemandMobileState extends State<OnDemandMobile> {
                         left: AppSizes.dynamicWidth(context, 0.1),
                         right: AppSizes.dynamicWidth(context, 0.1),
                       ),
-                      height: 56.h,
+                      height: 36.h,
                       decoration: BoxDecoration(
                         border: Border.all(
                             width: 1, color: AppColors.lightgreyborder),
@@ -301,7 +301,7 @@ class _OnDemandMobileState extends State<OnDemandMobile> {
                             child: Text(
                               items,
                               style: TextStyle(
-                                fontSize: 86.sp,
+                                fontSize: 66.sp,
                               ),
                             ),
                           );
@@ -320,7 +320,7 @@ class _OnDemandMobileState extends State<OnDemandMobile> {
                     ),
                     Container(
                       // width: AppSizes.dynamicWidth(context, 0.56),
-                      height: 56.h,
+                       height: 36.h,
                       margin: EdgeInsets.only(
                         left: AppSizes.dynamicWidth(context, 0.01),
                         right: AppSizes.dynamicWidth(context, 0.01),
@@ -335,11 +335,11 @@ class _OnDemandMobileState extends State<OnDemandMobile> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           SizedBox(
-                            width: 10.w,
+                            width: 20.w,
                           ),
                           Icon(
                             Icons.search,
-                            size:25,
+                            // size:25,
                               // color: AppColors.greyText,
                           ),
                           // Image(image: AssetImage('assets/png/searchicon.png')),
@@ -348,14 +348,14 @@ class _OnDemandMobileState extends State<OnDemandMobile> {
                             width: AppSizes.dynamicWidth(context, 0.33),
                             padding: EdgeInsets.only(
                               left: 10.w,
-                              // bottom: 20.h,
+                              bottom: 10.h,
                             ),
                             child: TextField(
                               decoration: InputDecoration(
                                   border: InputBorder.none,
                                   hintText: 'Search By Name',
                                   hintStyle: TextStyle(
-                                    fontSize: 65.sp,
+                                    fontSize: 66.sp,
                                     color: AppColors.greyText,
                                   )),
                             ),

@@ -24,7 +24,7 @@ Widget customInputField(BuildContext context, title) {
         labelStyle: TextStyle(
           fontSize: Responsive.isDesktop(context)
               ? 16.sp
-              : AppSizes.dynamicWidth(context, 0.02),
+              : AppSizes.dynamicWidth(context, 0.03),
         )),
   );
 }

@@ -74,7 +74,7 @@ class IntroMobile extends StatelessWidget {
                       },
                       child: Container(
                         alignment: Alignment.center,
-                        width:400.w,
+                        width: 400.w,
                         height: 40.h,
                         decoration: BoxDecoration(
                           color: AppColors.green,
@@ -109,7 +109,7 @@ class IntroMobile extends StatelessWidget {
               ),
             ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 InkWell(
                   onTap: () {
@@ -117,11 +117,19 @@ class IntroMobile extends StatelessWidget {
                   },
                   child: Container(
                     alignment: Alignment.center,
-                    width: 700.w,
-                    height: 50.h,
+                    width: 800.w,
+                    height: 40.h,
                     decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 3,
+                          blurRadius: 3,
+                          offset: Offset(0, 0), // changes position of shadow
+                        ),
+                      ],
                       color: AppColors.customWhite,
-                      borderRadius: BorderRadius.circular(50.r),
+                      borderRadius: BorderRadius.circular(180.r),
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -131,11 +139,8 @@ class IntroMobile extends StatelessWidget {
                           width: 60.w,
                           height: 60.h,
                         ),
-                        text(
-                            context,
-                            "Student",
-                            AppSizes.dynamicWidth(context, 0.04),
-                            Colors.black),
+                        text(context, "Student",
+                            AppSizes.dynamicWidth(context, 0.04), Colors.black),
                       ],
                     ),
                   ),
@@ -149,31 +154,36 @@ class IntroMobile extends StatelessWidget {
                   },
                   child: Container(
                     alignment: Alignment.center,
-                    width: 700.w,
-                    height: 50.h,
+                    width: 800.w,
+                    height: 40.h,
                     decoration: BoxDecoration(
+                       boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 3,
+                          blurRadius: 3,
+                          offset: Offset(0, 0), // changes position of shadow
+                        ),
+                      ],
                       color: AppColors.customWhite,
-                      borderRadius: BorderRadius.circular(50.r),
+                      borderRadius: BorderRadius.circular(180.r),
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Image.asset(
                           'assets/png/Group 528.png',
-                       width: 60.w,
+                          width: 60.w,
                           height: 60.h,
                         ),
-                        text(
-                            context,
-                            "Teacher",
-                            AppSizes.dynamicWidth(context, 0.04),
-                            Colors.black),
+                        text(context, "Teacher",
+                            AppSizes.dynamicWidth(context, 0.04), Colors.black),
                       ],
                     ),
                   ),
                 ),
                 SizedBox(
-                  height:20.h,
+                  height: 20.h,
                 ),
                 InkWell(
                   onTap: () {
@@ -181,25 +191,30 @@ class IntroMobile extends StatelessWidget {
                   },
                   child: Container(
                     alignment: Alignment.center,
-                       width: 700.w,
-                    height: 50.h,
+                    width: 800.w,
+                    height: 40.h,
                     decoration: BoxDecoration(
+                       boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 3,
+                          blurRadius: 3,
+                          offset: Offset(0, 0), // changes position of shadow
+                        ),
+                      ],
                       color: AppColors.customWhite,
-                      borderRadius: BorderRadius.circular(50.r),
+                      borderRadius: BorderRadius.circular(180.r),
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Image.asset(
                           'assets/png/Group 528.png',
-                         width: 60.w,
+                          width: 60.w,
                           height: 60.h,
                         ),
-                        text(
-                            context,
-                            "Admin",
-                            AppSizes.dynamicWidth(context, 0.04),
-                            Colors.black),
+                        text(context, "Admin",
+                            AppSizes.dynamicWidth(context, 0.04), Colors.black),
                       ],
                     ),
                   ),

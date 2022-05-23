@@ -20,7 +20,6 @@ class Intro extends StatelessWidget {
           mobile: IntroMobile(),
           tablet: IntroWeb(),
           desktop: IntroWeb(),
-          watch: IntroWeb(),
         ),
       ),
     );
