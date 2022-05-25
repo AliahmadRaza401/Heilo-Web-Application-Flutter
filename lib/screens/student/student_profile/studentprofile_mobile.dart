@@ -86,7 +86,7 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                 padding: EdgeInsets.only(
                   left: 45.w,
                   right: 45.w,
-                  top: 50.h,
+                  top: 70.h,
                 ),
                 margin: EdgeInsets.only(
                   // top: 130.h,
@@ -249,8 +249,8 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                                 ),
                               ),
                                 Positioned(
-                                top: 70,
-                                right: -32,
+                                top: 40,
+                                right: -12,
                                 child: Container(
                                   padding: const EdgeInsets.symmetric(
                                     horizontal: 10,

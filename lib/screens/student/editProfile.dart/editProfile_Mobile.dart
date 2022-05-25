@@ -81,6 +81,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
+                padding: EdgeInsets.only(top: 15.h),
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30.r),
