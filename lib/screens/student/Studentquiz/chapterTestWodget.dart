@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:heilo/screens/student/Studentquiz/ChapterTestWidget1.dart';
 
 import '../../../widgets/text_widget.dart';
 
@@ -15,7 +16,12 @@ class _ChapterTestWidgetState extends State<ChapterTestWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0.0,
+          
+        ),
+        drawer: Drawer(),
         body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Container(
@@ -180,7 +186,11 @@ class _ChapterTestWidgetState extends State<ChapterTestWidget> {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             InkWell(
-              onTap: () {},
+              onTap: () {
+                print('Container Pressed');
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const ChapterStateWidget1()));
+              },
               child: Container(
                 height: 50.h,
                 width: 130,

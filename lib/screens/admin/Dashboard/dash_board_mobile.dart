@@ -328,17 +328,17 @@ class _AdminDashboardMobileState extends State<AdminDashboardMobile> {
                                 text(
                                     context,
                                     'Day',
-                                    MediaQuery.of(context).size.width * .02,
+                                    MediaQuery.of(context).size.width * .04,
                                     AppColors.greyText),
                                 text(
                                     context,
                                     'Classes completed',
-                                    MediaQuery.of(context).size.width * .02,
+                                    MediaQuery.of(context).size.width * .04,
                                     AppColors.greyText),
                                 text(
                                     context,
                                     'Growth',
-                                    MediaQuery.of(context).size.width * .02,
+                                    MediaQuery.of(context).size.width * .04,
                                     AppColors.greyText),
                               ],
                             ),
@@ -360,7 +360,7 @@ class _AdminDashboardMobileState extends State<AdminDashboardMobile> {
                 )),
           ),
           Container(
-            height: 31.h,
+            height: 41.h,
             width: 516.w,
             decoration: BoxDecoration(
                 color: AppColors.customWhite,
@@ -372,38 +372,14 @@ class _AdminDashboardMobileState extends State<AdminDashboardMobile> {
                   context,
                   'Total Classes',
                   ' Completed',
-                  38.sp,
-                  38.sp,
+                  65.sp,
+                  65.sp,
                   null,
                   AppColors.greyText,
                   AppColors.green,
                   false),
             ),
           ),
-          // Positioned(
-          //   right: 0,
-          //   child: Container(
-          //     height: 20.h,
-          //     width: 316.w,
-          //     decoration: BoxDecoration(
-          //         border: Border.all(color: AppColors.green),
-          //         color: AppColors.customWhite,
-          //         borderRadius: BorderRadius.only(
-          //             topLeft: Radius.circular(100),
-          //             bottomLeft: Radius.circular(100))),
-          //     // padding: EdgeInsets.symmetric(horizontal: 10),
-          //     child: Row(
-          //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          //       children: [
-          //         text(context, 'Last 7 Days', 22.sp, AppColors.greyText),
-          //         Icon(
-          //           Icons.keyboard_arrow_down,
-          //           size: 10,
-          //         ),
-          //       ],
-          //     ),
-          //   ),
-          // ),
         ],
       ),
     );
@@ -415,11 +391,11 @@ class _AdminDashboardMobileState extends State<AdminDashboardMobile> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            text(context, day, MediaQuery.of(context).size.width * .02,
+            text(context, day, MediaQuery.of(context).size.width * .03,
                 AppColors.greyText),
-            text(context, clases, MediaQuery.of(context).size.width * .02,
+            text(context, clases, MediaQuery.of(context).size.width * .03,
                 AppColors.green),
-            text(context, growth, MediaQuery.of(context).size.width * .02,
+            text(context, growth, MediaQuery.of(context).size.width * .03,
                 AppColors.green),
           ],
         ),

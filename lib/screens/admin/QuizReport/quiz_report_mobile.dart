@@ -24,7 +24,7 @@ class _QuizReportMobileState extends State<QuizReportMobile> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-        key: adminScafoldKey,
+      key: adminScafoldKey,
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
@@ -65,34 +65,33 @@ class _QuizReportMobileState extends State<QuizReportMobile> {
           borderRadius: BorderRadius.circular(30.r),
         ),
         child: Container(
-                  height: AppSizes.dynamicHeight(context, .8),
-                  // color: Colors.amber,
-    
+          height: AppSizes.dynamicHeight(context, .8),
+          // color: Colors.amber,
           child: SingleChildScrollView(
             child: Column(
               children: [
                 Container(
-                  height: AppSizes.dynamicHeight(context, .6),
-                  // color: Colors.amber,
-                  padding: EdgeInsets.symmetric(horizontal:2,vertical: 10),
+                  height: AppSizes.dynamicHeight(context, .5),
+                  color: Colors.green,
+                  padding: EdgeInsets.symmetric(horizontal: 2, vertical: 10),
                   child: Column(
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          quizContainer(
-                              '2011', 'TOTAL QUIZ CONDUCTED', AppColors.greyText),
+                          quizContainer('2011', 'TOTAL QUIZ CONDUCTED',
+                              AppColors.greyText),
                           quizContainer('4211', 'TOTAL QUIZ AVAILABLE',
                               AppColors.greytextText),
-                          quizContainer(
-                              '2511', 'TOTAL STUDENT APPEARED ', AppColors.green),
+                          quizContainer('2511', 'TOTAL STUDENT APPEARED ',
+                              AppColors.green),
                         ],
                       ),
-                      AppSizes.heightBox(context,.02),
+                      AppSizes.heightBox(context, .02),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          AppSizes.widthBox(context,.02),
+                          AppSizes.widthBox(context, .02),
                           text(context, 'Total Quiz\nConducted', 60.sp,
                               AppColors.green),
                           // Spacer(
@@ -166,7 +165,6 @@ class _QuizReportMobileState extends State<QuizReportMobile> {
                 ),
                 Container(
                   padding: EdgeInsets.all(10),
-                  
                   decoration: BoxDecoration(
                       // color: AppColors.blue,
                       borderRadius:
@@ -175,7 +173,7 @@ class _QuizReportMobileState extends State<QuizReportMobile> {
                     child: Column(
                       children: [
                         Padding(
-                          padding:  EdgeInsets.all(0),
+                          padding: EdgeInsets.all(0),
                           child: CircularPercentIndicator(
                             radius: 30.0,
                             lineWidth: 5,
@@ -183,7 +181,7 @@ class _QuizReportMobileState extends State<QuizReportMobile> {
                             center: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                boldPopinText('4.8',58.sp, AppColors.green),
+                                boldPopinText('4.8', 58.sp, AppColors.green),
                                 Icon(
                                   Icons.star,
                                   color: AppColors.customYellow,
@@ -192,95 +190,23 @@ class _QuizReportMobileState extends State<QuizReportMobile> {
                             ),
                             progressColor: AppColors.green,
                             circularStrokeCap: CircularStrokeCap.round,
-                            footer: text(
-                                context,
-                                'AVERAGE RATING ',
-                                30.sp,
+                            footer: text(context, 'AVERAGE RATING ', 65.sp,
                                 AppColors.greyText),
                           ),
                         ),
-                        // Padding(
-                        //   padding: const EdgeInsets.only(top:5),
-                        //   child: Row(
-                        //     mainAxisAlignment: MainAxisAlignment.end,
-                        //     children: [
-                        //       Padding(
-                        //         padding: const EdgeInsets.only(right: 5),
-                        //         child: Container(
-                        //           height: 37.h,
-                        //           width: size.width * .11,
-                        //           decoration: BoxDecoration(
-                        //               border: Border.all(
-                        //                   color: AppColors.darkGrey, width: 2),
-                        //               color: AppColors.customWhite,
-                        //               borderRadius: BorderRadius.circular(100)),
-                        //           padding: EdgeInsets.symmetric(horizontal: 10),
-                        //           child: Row(
-                        //             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        //             children: [
-                        //               text(
-                        //                   context, 'Subject', 16.sp, AppColors.greyText),
-                        //               Icon(
-                        //                 Icons.keyboard_arrow_down,
-                        //                 size: 20,
-                        //                 color: AppColors.green,
-                        //               ),
-                        //               VerticalDivider(
-                        //                 thickness: 3,
-                        //               ),
-                        //               text(context, 'Class', 16.sp, AppColors.greyText),
-                        //               Icon(
-                        //                 Icons.keyboard_arrow_down,
-                        //                 size: 20,
-                        //                 color: AppColors.green,
-                        //               ),
-                        //             ],
-                        //           ),
-                        //         ),
-                        //       ),
-                        //       Padding(
-                        //         padding: const EdgeInsets.only(left: 10),
-                        //         child: Container(
-                        //           height: 34.75.h,
-                        //           width: 146.5.w,
-                        //           decoration: BoxDecoration(
-                        //               border: Border.all(color: AppColors.green),
-                        //               color: AppColors.customWhite,
-                        //               borderRadius: BorderRadius.circular(100)),
-                        //           padding: EdgeInsets.symmetric(horizontal: 10),
-                        //           child: Row(
-                        //             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        //             children: [
-                        //               text(context, 'Last 7 Days', 10,
-                        //                   AppColors.greyText),
-                        //               Icon(
-                        //                 Icons.keyboard_arrow_down,
-                        //                 size: 20,
-                        //                 color: AppColors.green,
-                        //               ),
-                        //             ],
-                        //           ),
-                        //         ),
-                        //       ),
-                        //     ],
-                        //   ),
-                        // ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 10,top: 10),
-                          child: Container(
-                            height: 100,
-                          width: size.width *.95,
-                          // color: AppColors.,
-                          child: ListView.builder(
-                              itemCount: 7,
-                              itemBuilder: (context, index) {
-                                return ratingRow(
-                                    'assets/png/charles.png',
-                                    'Ruhul Amin Tusar',
-                                    3.5,
-                                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor vulputate ut mauris sem. At platea erat diam sed proin.');
-                              })),
-                        )
+                        Container(
+                            height: 300,
+                            // width: size.width * .9,
+                            // color: Colors.black,
+                            child: ListView.builder(
+                                itemCount: 9,
+                                itemBuilder: (context, index) {
+                                  return ratingRow(
+                                      'assets/png/charles.png',
+                                      'Ruhul Amin Tusar',
+                                      3.5,
+                                      'Lorem ipsum dolor sit amet,');
+                                }))
                       ],
                     ),
                   ),
@@ -294,62 +220,59 @@ class _QuizReportMobileState extends State<QuizReportMobile> {
   }
 
   Widget ratingRow(String img, String name, double rating, String review) {
-    return Padding(
-      padding: const EdgeInsets.only(top:8.0),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Column(
-            children: [
-              CircleAvatar(
-                radius: MediaQuery.of(context).size.height * .025,
-                backgroundImage: AssetImage(img),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: text(context, name, 40.sp, AppColors.customBlack),
-              )
-            ],
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 10),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                RatingBar.builder(
-                  initialRating: rating,
-                  minRating: 1,
-                  direction: Axis.horizontal,
-                  allowHalfRating: true,
-                  itemCount: 5,
-                  itemSize: 10,
-                  itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-                  itemBuilder: (context, _) => Icon(
-                    Icons.star,
-                    color: Colors.amber,
-                  
-                  ),
-                  onRatingUpdate: (rating) {
-                    print(rating);
-                  },
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top:15),
-                  child: Container(
-                    // color:Colors.amber,
-                    width:  AppSizes.dynamicWidth(context, .6),
-                    child: Wrap(
-                      children: [
-                        text(context, review, 40.sp, AppColors.greyText,maxLines: 3,alignText: TextAlign.justify),
-                      ],
-                    ),
-                  ),
-                )
-              ],
+    return Row(
+      // crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Column(
+          children: [
+            CircleAvatar(
+              radius: MediaQuery.of(context).size.height * .025,
+              backgroundImage: AssetImage(img),
             ),
-          )
-        ],
-      ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: text(context, name, 55.sp, AppColors.customBlack),
+            )
+          ],
+        ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              color: Colors.white,
+              child: RatingBar.builder(
+                initialRating: rating,
+                minRating: 1,
+                direction: Axis.horizontal,
+                allowHalfRating: true,
+                itemCount: 5,
+                itemSize: 10,
+                itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
+                itemBuilder: (context, _) => Icon(
+                  Icons.star,
+                  color: Colors.amber,
+                ),
+                onRatingUpdate: (rating) {
+                  print(rating);
+                },
+              ),
+            ),
+            text(context, review, 55.sp, AppColors.greyText,
+                maxLines: 3, alignText: TextAlign.justify),
+            // Container(
+            //   // color:Colors.amber,
+            //   width: AppSizes.dynamicWidth(context, .6),
+            //   child: Wrap(
+            //     children: [
+            //       text(context, review, 40.sp, AppColors.greyText,
+            //           maxLines: 3, alignText: TextAlign.justify),
+            //     ],
+            //   ),
+            // )
+          ],
+        )
+      ],
     );
   }
 
@@ -372,7 +295,7 @@ class _QuizReportMobileState extends State<QuizReportMobile> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           boldPopinText(boldText, 72.sp, boldtextColor),
-          text(context, normaltext, 22.sp, AppColors.greyText,
+          text(context, normaltext, 55.sp, AppColors.greyText,
               alignText: TextAlign.center),
         ],
       ),
