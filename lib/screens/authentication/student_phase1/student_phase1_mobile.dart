@@ -18,7 +18,7 @@ class StudentPhase1Mobile extends StatefulWidget {
 }
 
 class _StudentPhase1MobileState extends State<StudentPhase1Mobile> {
-    _buildCard({
+  _buildCard({
     required Config config,
     Color backgroundColor = Colors.transparent,
     required DecorationImage backgroundImage,
@@ -64,24 +64,33 @@ class _StudentPhase1MobileState extends State<StudentPhase1Mobile> {
     _blur = _blurs[_blurIndex];
     return _blurs[_blurIndex];
   }
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: AppSizes.dynamicWidth(context, 1),
-      height: AppSizes.dynamicHeight(context, 1),
-      child: Column(
-        children: [
-          Container(
-            width: AppSizes.dynamicWidth(context, 1),
-            height: AppSizes.dynamicHeight(context, 0.8),
-            decoration: BoxDecoration(
-              // color: AppColors.green,
-              image: DecorationImage(
-                image: AssetImage("assets/png/c2.png"),
-                fit: BoxFit.fill,
+        // color: Colors.amber,
+        height: AppSizes.dynamicHeight(context, 1),
+        child: Stack(
+          children: [
+            _buildCard(
+              backgroundColor: Colors.white,
+              config: CustomConfig(
+                gradients: [
+                  [Color(0xffA6FFCB), Color(0xffA6FFCB)],
+                  [Color(0xff32E8A0), Color(0xff32E8A0)],
+                  [Color(0xFF12D8FA), Color(0xFF12D8FA)],
+                ],
+                durations: [25000, 19440, 6000],
+                heightPercentages: [0.30, 0.30, 0.30],
+                blur: _blur,
+                gradientBegin: Alignment.bottomLeft,
+                gradientEnd: Alignment.topRight,
               ),
+              backgroundImage: DecorationImage(image: AssetImage('')),
+              // backgroundImage: AssetImage(assetName),
             ),
-            child: Column(
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -105,19 +114,31 @@ class _StudentPhase1MobileState extends State<StudentPhase1Mobile> {
                               width: 400.w,
                               height: 40.h,
                               decoration: BoxDecoration(
-                                color: AppColors.customWhite,
+                                color: AppColors.blue,
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               child: text(
                                   context,
                                   "LOG  IN",
                                   AppSizes.dynamicWidth(context, 0.04),
-                                  AppColors.blue,
+                                  Colors.white,
                                   bold: true),
                             ),
                           ),
                           SizedBox(
-                            width: 20,
+                            width: 10,
+                          ),
+                          Container(
+                            alignment: Alignment.center,
+                            width: 2,
+                            height: 25.h,
+                            decoration: BoxDecoration(
+                              color: AppColors.green,
+                              borderRadius: BorderRadius.circular(2),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 10,
                           ),
                           InkWell(
                             onTap: () {
@@ -128,14 +149,14 @@ class _StudentPhase1MobileState extends State<StudentPhase1Mobile> {
                               width: 400.w,
                               height: 40.h,
                               decoration: BoxDecoration(
-                                color: Colors.white,
+                                color: AppColors.green,
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               child: text(
                                   context,
                                   "SIGN  UP",
                                   AppSizes.dynamicWidth(context, 0.04),
-                                  AppColors.blue,
+                                  Colors.white,
                                   bold: true),
                             ),
                           ),
@@ -145,52 +166,27 @@ class _StudentPhase1MobileState extends State<StudentPhase1Mobile> {
                   ],
                 ),
                 Container(
-                  height: AppSizes.dynamicHeight(context, 0.45),
+                  height: AppSizes.dynamicHeight(context, 0.5),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                         TextBtn(title: "SSC"),
-                          TextBtn(title: "HSC"),
-                             TextBtn(title: "A LEVELS"),
-                          TextBtn(title: "O LEVELS"),
-                            InkWell(
-                              onTap: () {
-                                AppRoutes.push(context, StudentPhase2());
-                              },
-                              child: TextBtn(title: "ADMISSION")),
-                      // Row(
-                      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      //   children: [
-                      //     TextBtn(title: "SSC"),
-                      //     TextBtn(title: "HSC"),
-                      //   ],
-                      // ),
-                      // Row(
-                      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      //   children: [
-                      //     TextBtn(title: "A LEVELS"),
-                      //     TextBtn(title: "O LEVELS"),
-                      //   ],
-                      // ),
-                      // Row(
-                      //   mainAxisAlignment: MainAxisAlignment.center,
-                      //   children: [
-                      //     InkWell(
-                      //         onTap: () {
-                      //           AppRoutes.push(context, StudentPhase2());
-                      //         },
-                      //         child: TextBtn(title: "ADMISSION")),
-                  //       ],
-                  //     ),
-                  //   ],
-                  // ),
-                // ),
-              // ],
-               ] ),
-          ),
-        ],
-      ),
-    )]));
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        TextBtn(title: "SSC"),
+                        TextBtn(title: "HSC"),
+                        TextBtn(title: "A LEVELS"),
+                        TextBtn(title: "O LEVELS"),
+                        InkWell(
+                            onTap: () {
+                              AppRoutes.push(context, StudentPhase2());
+                            },
+                            child: TextBtn(title: "ADMISSION")),
+                      ]),
+                ),
+              ],
+            ),
+          ],
+        ));
+
+
   }
 
   Widget textBtn(BuildContext context, text) {

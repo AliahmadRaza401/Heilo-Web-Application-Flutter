@@ -130,7 +130,7 @@ class _TeacherSideMenuWebState extends State<TeacherSideMenuWeb> {
                 icon: "assets/png/teacher_wallet.png",
               ),
               SideMenuItem(
-                priority: 5,
+                priority: 4,
                 title: 'Inbox',
                 onTap: () {
                   page.jumpToPage(4);
