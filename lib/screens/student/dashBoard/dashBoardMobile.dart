@@ -466,7 +466,7 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
             height: 10.h,
           ),
           Container(
-            height: 400,
+            height: 500,
             child: SingleChildScrollView(
               child: Column(
                 children: [
