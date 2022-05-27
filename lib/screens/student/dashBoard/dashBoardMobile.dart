@@ -56,102 +56,98 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
         ),
       ),
       drawer: StudentDrawer(),
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Container(
-          width: AppSizes.dynamicWidth(context, 1),
-          // height: AppSizes.dynamicHeight(context, 1),
-          padding: EdgeInsets.only(
-            left: 130.w,
-            right: 130.w,
-            top: 10.h,
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
-                width: AppSizes.dynamicWidth(context, 1),
-                height: AppSizes.dynamicHeight(context, 0.2),
-                margin: EdgeInsets.symmetric(
-                  vertical: 5,
-                ),
-                // color: Colors.yellow,
-                child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    physics: ClampingScrollPhysics(),
-                    children: [
-                      InkWell(
-                          onTap: () {
-                            setState(() {
-                              selectedcard = 1;
-                            });
-                          },
-                          child: cardWidget1(
-                            'assets/png/g1.png',
-                            'Upcoming Sessions',
-                            selectedcard == 1 ? 0xffFFFFFF : 0xff000000,
-                            selectedcard == 1
-                                ? Color(0xff5F5F5F)
-                                : AppColors.customGrey,
-                          )),
-                      InkWell(
-                          onTap: () {
-                            setState(() {
-                              selectedcard = 2;
-                            });
-                          },
-                          child: cardWidget1(
-                            'assets/png/g2.png',
-                            'Tutions completed',
-                            selectedcard == 2 ? 0xffFFFFFF : 0xff000000,
-                            selectedcard == 2
-                                ? Color(0xff5F5F5F)
-                                : AppColors.customGrey,
-                          )),
-                      InkWell(
-                          onTap: () {
-                            setState(() {
-                              selectedcard = 3;
-                            });
-                          },
-                          child: cardWidget1(
-                            'assets/png/g3.png',
-                            'Quiz Appeared',
-                            selectedcard == 3 ? 0xffFFFFFF : 0xff000000,
-                            selectedcard == 3
-                                ? Color(0xff5F5F5F)
-                                : AppColors.customGrey,
-                          )),
-                      InkWell(
-                          onTap: () {
-                            setState(() {
-                              selectedcard = 4;
-                            });
-                          },
-                          child: cardWidget1(
-                            'assets/png/g4.png',
-                            "Favourite Tutors",
-                            selectedcard == 4 ? 0xffFFFFFF : 0xff000000,
-                            selectedcard == 4
-                                ? Color(0xff5F5F5F)
-                                : AppColors.customGrey,
-                          )),
-                    ]),
+      body: Container(
+        width: AppSizes.dynamicWidth(context, 1),
+        // height: AppSizes.dynamicHeight(context, 1),
+        padding: EdgeInsets.only(
+          left: 80.w,
+          right: 80.w,
+          top: 10.h,
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              width: AppSizes.dynamicWidth(context, 1),
+              height: AppSizes.dynamicHeight(context, 0.2),
+              margin: EdgeInsets.symmetric(
+                vertical: 5,
               ),
-              SizedBox(
-                height: 20.h,
-              ),
-              selectedcard == 1
-                  ? upcommingMainSession()
-                  : selectedcard == 2
-                      ? tutionsCompleteCard()
-                      : selectedcard == 3
-                          ? quizCard()
-                          : favoriteTutiCard(),
-            
-            ],
-          ),
+              // color: Colors.yellow,
+              child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  physics: ClampingScrollPhysics(),
+                  children: [
+                    InkWell(
+                        onTap: () {
+                          setState(() {
+                            selectedcard = 1;
+                          });
+                        },
+                        child: cardWidget1(
+                          'assets/png/g1.png',
+                          'Upcoming Sessions',
+                          selectedcard == 1 ? 0xffFFFFFF : 0xff000000,
+                          selectedcard == 1
+                              ? Color(0xff5F5F5F)
+                              : AppColors.customGrey,
+                        )),
+                    InkWell(
+                        onTap: () {
+                          setState(() {
+                            selectedcard = 2;
+                          });
+                        },
+                        child: cardWidget1(
+                          'assets/png/g2.png',
+                          'Tutions completed',
+                          selectedcard == 2 ? 0xffFFFFFF : 0xff000000,
+                          selectedcard == 2
+                              ? Color(0xff5F5F5F)
+                              : AppColors.customGrey,
+                        )),
+                    InkWell(
+                        onTap: () {
+                          setState(() {
+                            selectedcard = 3;
+                          });
+                        },
+                        child: cardWidget1(
+                          'assets/png/g3.png',
+                          'Quiz Appeared',
+                          selectedcard == 3 ? 0xffFFFFFF : 0xff000000,
+                          selectedcard == 3
+                              ? Color(0xff5F5F5F)
+                              : AppColors.customGrey,
+                        )),
+                    InkWell(
+                        onTap: () {
+                          setState(() {
+                            selectedcard = 4;
+                          });
+                        },
+                        child: cardWidget1(
+                          'assets/png/g4.png',
+                          "Favourite Tutors",
+                          selectedcard == 4 ? 0xffFFFFFF : 0xff000000,
+                          selectedcard == 4
+                              ? Color(0xff5F5F5F)
+                              : AppColors.customGrey,
+                        )),
+                  ]),
+            ),
+            SizedBox(
+              height: 10.h,
+            ),
+            selectedcard == 1
+                ? upcommingMainSession()
+                : selectedcard == 2
+                    ? tutionsCompleteCard()
+                    : selectedcard == 3
+                        ? quizCard()
+                        : favoriteTutiCard(),
+          ],
         ),
       ),
     );
@@ -436,9 +432,9 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
       // margin: EdgeInsets.only(top: 40.h),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
-        // color: const Color(0xffF8F8F8),
+        color: const Color(0xffF8F8F8),
       ),
-      padding: EdgeInsets.only(bottom: 20.h),
+      padding: EdgeInsets.only(bottom: 10.h),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -460,13 +456,12 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
           SizedBox(
             height: 10.h,
           ),
-          Wrap(
-            spacing: 50.w,
-            runSpacing: 20.h,
+          Column(
             children: [
               courseCard(context),
-              courseCard(context),
-              courseCard(context),
+              SizedBox(
+                height: 19.h,
+              ),
               courseCard(context),
             ],
           ),
@@ -484,9 +479,9 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
           left: AppSizes.dynamicWidth(context, 0.02),
           right: AppSizes.dynamicWidth(context, 0.02),
           top: AppSizes.dynamicHeight(context, 0.02)),
-      padding: EdgeInsets.only(
-          top: AppSizes.dynamicHeight(context, 0.02),
-          bottom: AppSizes.dynamicHeight(context, 0.02)),
+      // padding: EdgeInsets.only(
+      //     top: AppSizes.dynamicHeight(context, 0.02),
+      //     bottom: AppSizes.dynamicHeight(context, 0.02)),
       decoration: const BoxDecoration(
         border: Border(
           bottom: BorderSide(
@@ -508,7 +503,7 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
           ),
           RichText(
               text: TextSpan(children: [
-            WidgetSpan(
+            const WidgetSpan(
                 child: Icon(
               Icons.star,
               color: Color(0xffFEDB41),
@@ -557,7 +552,7 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
         borderRadius: BorderRadius.circular(30),
         color: const Color(0xffF8F8F8),
       ),
-      padding: EdgeInsets.only(bottom: AppSizes.dynamicWidth(context, 0.02)),
+      padding: EdgeInsets.only(bottom: AppSizes.dynamicWidth(context, 0.01)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -588,16 +583,21 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
               ],
             ),
           ),
-          favouriteInerWidet(),
-          favouriteInerWidet(),
-          favouriteInerWidet(),
-          favouriteInerWidet(),
-          favouriteInerWidet(),
-          favouriteInerWidet(),
-          favouriteInerWidet(),
-          favouriteInerWidet(),
-          favouriteInerWidet(),
-          favouriteInerWidet(),
+          SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              children: [
+                favouriteInerWidet(),
+                favouriteInerWidet(),
+                favouriteInerWidet(),
+                favouriteInerWidet(),
+                favouriteInerWidet(),
+                favouriteInerWidet(),
+                favouriteInerWidet(),
+                favouriteInerWidet(),
+              ],
+            ),
+          ),
         ],
       ),
     );
@@ -605,13 +605,12 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
 
   Widget tutionsCompleteCard() {
     return Container(
-      height: 573.h,
+      // height: 573.h,
       // width: 743.w,
       // margin: EdgeInsets.only(top: 40.h),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
         color: const Color(0xffF8F8F8),
-
       ),
       padding: EdgeInsets.only(bottom: 20.h),
       child: SingleChildScrollView(
@@ -646,7 +645,10 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
             tutionInerWidget(),
             tutionInerWidget(),
             tutionInerWidget(),
-           
+            tutionInerWidget(),
+            tutionInerWidget(),
+            tutionInerWidget(),
+            tutionInerWidget(),
           ],
         ),
       ),
@@ -658,14 +660,18 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
       // padding: EdgeInsets.all(AppSizes.dynamicHeight(context, 0.01)),
       margin: EdgeInsets.only(top: 10.h),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
-          border: Border.all(width: 2, color: Color(0xffC4C4C4))),
+        borderRadius: BorderRadius.circular(15),
+        border: Border.all(
+          width: 2,
+          color: const Color(0xffC4C4C4),
+        ),
+      ),
       // padding: EdgeInsets.only(left: 10.w, top: 3.h, bottom: 3.h, right: 5.w),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           SizedBox(
-            width: 10.w,
+            width: 5.w,
           ),
           // Container(
           //   height: 60.h,
@@ -709,27 +715,29 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
             ),
             decoration: BoxDecoration(
                 color: const Color(0xffB4F4DD),
-                borderRadius: BorderRadius.circular(120.r)),
+                borderRadius: BorderRadius.circular(80.r)),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Wrap(children: [
-                  text(
-                    context,
-                    'Topic- Mathematics',
-                    12,
-                    AppColors.bblackText,
-                    bold: false,
-                  ),
-                ],),
+                Wrap(
+                  children: [
+                    text(
+                      context,
+                      'Topic- Mathematics',
+                      65.sp,
+                      AppColors.bblackText,
+                      bold: false,
+                    ),
+                  ],
+                ),
                 // SizedBox(width: AppSizes.dynamicHeight(context, 0.02)),
                 Wrap(
                   children: [
                     text(
                       context,
                       '11-03-2022 (4pm- 6:30 pm)',
-                     12,
+                      65.sp,
                       AppColors.bblackText,
                       bold: false,
                     ),
@@ -737,7 +745,10 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
                 ),
               ],
             ),
-          )
+          ),
+          SizedBox(
+            width: 5.w,
+          ),
         ],
       ),
     );
@@ -825,7 +836,8 @@ Widget courseCard(context) {
   return Container(
     // width: 300.w,
     // padding: EdgeInsets.all(AppSizes.dynamicHeight(context, 0.01)),
-    height: AppSizes.dynamicHeight(context, 0.35),
+
+    height: AppSizes.dynamicHeight(context, 0.30),
     decoration: BoxDecoration(
       color: AppColors.lightgreyborder,
       borderRadius: BorderRadius.circular(130.r),
@@ -848,7 +860,7 @@ Widget courseCard(context) {
             Container(
               margin: EdgeInsets.all(AppSizes.dynamicWidth(context, 0.02)),
               width: AppSizes.dynamicWidth(context, 0.6),
-              height: AppSizes.dynamicHeight(context, 0.17),
+              height: AppSizes.dynamicHeight(context, 0.14),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(130.r),
                 image: const DecorationImage(
@@ -870,12 +882,12 @@ Widget courseCard(context) {
         ),
         Container(
           margin: EdgeInsets.only(
-            top: AppSizes.dynamicWidth(context, 0.02),
-            left: AppSizes.dynamicWidth(context, 0.05),
-            right: AppSizes.dynamicWidth(context, 0.05),
-            bottom: AppSizes.dynamicWidth(context, 0.02),
+            top: AppSizes.dynamicWidth(context, 0.01),
+            left: AppSizes.dynamicWidth(context, 0.03),
+            right: AppSizes.dynamicWidth(context, 0.03),
+            bottom: AppSizes.dynamicWidth(context, 0.01),
           ),
-          padding: EdgeInsets.all(AppSizes.dynamicWidth(context, 0.02)),
+          padding: EdgeInsets.all(AppSizes.dynamicWidth(context, 0.01)),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(80.r),
               color: Color(0xffFFFFFF)),
@@ -891,8 +903,8 @@ Widget courseCard(context) {
                   children: [
                     Image.asset(
                       'assets/png/bookicon.png',
-                      height: AppSizes.dynamicHeight(context, 0.05),
-                      width: AppSizes.dynamicWidth(context, 0.08),
+                      height: AppSizes.dynamicHeight(context, 0.04),
+                      width: AppSizes.dynamicWidth(context, 0.06),
                     ),
                     SizedBox(
                       width: 10.w,

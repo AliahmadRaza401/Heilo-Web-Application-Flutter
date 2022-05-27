@@ -68,6 +68,11 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
+          padding: EdgeInsets.only(
+            left: AppSizes.dynamicWidth(context, 0.040),
+            right: AppSizes.dynamicWidth(context, 0.040),
+            top: AppSizes.dynamicHeight(context, 0.1),
+          ),
           decoration: BoxDecoration(
             // color: Colors.yellow,
             borderRadius: BorderRadius.circular(13.r),
@@ -83,11 +88,11 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                   // color: Colors.green,
                   borderRadius: BorderRadius.circular(30.r),
                 ),
-                padding: EdgeInsets.only(
-                  left: 45.w,
-                  right: 45.w,
-                  top: 70.h,
-                ),
+                // padding: EdgeInsets.only(
+                //   left: 45.w,
+                //   right: 45.w,
+                //   top: 70.h,
+                // ),
                 margin: EdgeInsets.only(
                   // top: 130.h,
                   top: AppSizes.dynamicHeight(context, 0.04),
@@ -101,12 +106,19 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                         color: AppColors.customGrey,
                         borderRadius: BorderRadius.circular(14),
                       ),
+                      // padding: EdgeInsets.only(
+                      //   // top: 130.h,
+                      //   top: AppSizes.dynamicHeight(context, 0.1),
+                      //   left: 50.w,
+                      //   right: 50.w,
+                      //   bottom: AppSizes.dynamicHeight(context, 0.02),
+                      // ),
+
                       padding: EdgeInsets.only(
-                        // top: 130.h,
-                        top: AppSizes.dynamicHeight(context, 0.1),
+                        top: 130.h,
                         left: 50.w,
                         right: 50.w,
-                        bottom: AppSizes.dynamicHeight(context, 0.02),
+                        bottom: AppSizes.dynamicHeight(context, 0.020),
                       ),
 
                       child: Column(
@@ -223,7 +235,7 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                       ),
                     ),
                     Positioned(
-                       top: -120.0,
+                        top: -120.0,
                         right: 0,
                         left: 0,
                         child: Center(
@@ -248,7 +260,7 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                                   ),
                                 ),
                               ),
-                                Positioned(
+                              Positioned(
                                 top: 40,
                                 right: -12,
                                 child: Container(
@@ -307,10 +319,14 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(
-                  top: AppSizes.dynamicHeight(context, 0.05),
-                  left: 45.w,
-                  right: 45.w,
+                // margin: EdgeInsets.only(
+                //   top: AppSizes.dynamicHeight(context, 0.05),
+                //   left: 45.w,
+                //   right: 45.w,
+                // ),
+                padding: EdgeInsets.only(
+                  right: 20.w,
+                  top: 20.h,
                 ),
                 child: Column(
                   children: [
@@ -335,10 +351,15 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
 
   Widget greyWidget() {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 30.h),
       decoration: BoxDecoration(
         color: AppColors.customGrey,
         borderRadius: BorderRadius.circular(10),
+      ),
+      padding: EdgeInsets.only(
+        left: AppSizes.dynamicHeight(context, 0.01),
+        right: AppSizes.dynamicHeight(context, 0.02),
+        top: AppSizes.dynamicHeight(context, 0.03),
+        bottom: AppSizes.dynamicHeight(context, 0.03),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -348,7 +369,7 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
             width: AppSizes.dynamicWidth(context, 0.45),
             height: AppSizes.dynamicHeight(context, 0.04),
             margin: EdgeInsets.only(
-              top: AppSizes.dynamicHeight(context, 0.01),
+              // top: AppSizes.dynamicHeight(context, 0.01),
               left: AppSizes.dynamicWidth(context, 0.02),
             ),
             decoration: BoxDecoration(
@@ -370,82 +391,68 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
             height: 10.h,
           ),
           Row(
-            // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(
-                      top: 10.h,
-                      left: 50.w,
-                    ),
-                    child: text(
-                      context,
-                      "Address",
-                      14.0,
-                      AppColors.greytextText,
-                      bold: false,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10.h,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      top: 10.h,
-                      left: 50.w,
-                    ),
-                    child: text(
-                      context,
-                      "274, sher-e-bangla road, Dhaka- 1209",
-                      14.0,
-                      AppColors.greytextText,
-                      bold: true,
-                    ),
-                  ),
-                ],
+              Padding(
+                padding: EdgeInsets.only(
+                  top: 10.h,
+                  left: 10.w,
+                ),
+                child: text(
+                  context,
+                  "Address",
+                  14.0,
+                  AppColors.greytextText,
+                  bold: false,
+                ),
               ),
-              SizedBox(
-                width: 100.w,
-                height: 10.h,
+              Padding(
+                padding: EdgeInsets.only(
+                  top: 10.h,
+                  right: 10.w,
+                ),
+                child: text(
+                  context,
+                  "Gender",
+                  14.0,
+                  AppColors.greytextText,
+                  bold: false,
+                ),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(
-                      top: 2.h,
-                      left: 50.w,
-                    ),
-                    child: text(
-                      context,
-                      "Gender",
-                      14.0,
-                      AppColors.greytextText,
-                      bold: false,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10.h,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      top: 2.h,
-                      left: 50.w,
-                    ),
-                    child: text(
-                      context,
-                      "Male",
-                      14.0,
-                      AppColors.greytextText,
-                      bold: true,
-                    ),
-                  ),
-                ],
-              )
+            ],
+          ),
+          SizedBox(
+            height: 10.h,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(
+                  top: 10.h,
+                  left: 10.w,
+                ),
+                child: text(
+                  context,
+                  "274, sher-e-bangla road, Dhaka- 1209",
+                  14.0,
+                  AppColors.greytextText,
+                  bold: true,
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                  top: 10.h,
+                  right: 10.w,
+                ),
+                child: text(
+                  context,
+                  "Male",
+                  14.0,
+                  AppColors.greytextText,
+                  bold: true,
+                ),
+              ),
             ],
           ),
         ],
@@ -461,7 +468,12 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
         color: AppColors.customGrey,
         borderRadius: BorderRadius.circular(10),
       ),
-         padding: EdgeInsets.symmetric(vertical: 30.h),
+        padding: EdgeInsets.only(
+        left: AppSizes.dynamicHeight(context, 0.01),
+        right: AppSizes.dynamicHeight(context, 0.02),
+        top: AppSizes.dynamicHeight(context, 0.03),
+        bottom: AppSizes.dynamicHeight(context, 0.03),
+      ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -643,7 +655,7 @@ class _StudentProfileMobileState extends State<StudentProfileMobile> {
 
   Widget greyWidget2() {
     return Container(
-         padding: EdgeInsets.symmetric(vertical: 30.h),
+      padding: EdgeInsets.symmetric(vertical: 30.h),
       decoration: BoxDecoration(
         border: Border.all(
           width: 2,

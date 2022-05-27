@@ -718,6 +718,8 @@ class _QuizzWebState extends State<QuizzWeb> {
       ),
     );
   }
+
+
 }
 
 // Widget notificationCard(context) {

@@ -395,7 +395,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                   "Name",
                   FontWeight.w300,
                   0xff7d7d7d,
-                  45.sp,
+                  65.sp,
                 ),
                 SizedBox(
                   height: AppSizes.dynamicHeight(context, 0.02),
@@ -404,7 +404,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                   "Sakib  Abdullah",
                   FontWeight.w600,
                   0xff7d7d7d,
-                  50.sp,
+                 75.sp,
                 ),
               ],
             ),
@@ -496,7 +496,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                       "Contact Number",
                       FontWeight.w300,
                       0xff7d7d7d,
-                      45.sp,
+                     65.sp,
                     ),
                     SizedBox(
                       height: AppSizes.dynamicHeight(context, 0.02),
@@ -505,7 +505,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                       "01765646564",
                       FontWeight.w600,
                       0xff7d7d7d,
-                      50.sp,
+                      75.sp,
                     ),
                   ],
                 ),
@@ -538,7 +538,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                     "Gender",
                     FontWeight.w300,
                     0xff7d7d7d,
-                    45.sp,
+                   65.sp,
                   ),
                 ),
                 DropdownButton(
@@ -557,7 +557,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                         items,
                         style: TextStyle(
                           color: Colors.black,
-                          fontSize: 45.sp,
+                          fontSize: 75.sp,
                         ),
                       ),
                     );
@@ -599,7 +599,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                   "Email",
                   FontWeight.w300,
                   0xff7d7d7d,
-                  45.sp,
+                  65.sp,
                 ),
                 SizedBox(
                   height: AppSizes.dynamicHeight(context, 0.02),
@@ -608,7 +608,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                   "sakib.abdullah@gmail.com",
                   FontWeight.w600,
                   0xff7d7d7d,
-                  50.sp,
+                  75.sp,
                 ),
               ],
             ),
@@ -638,7 +638,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                   "Contact Number",
                   FontWeight.w300,
                   0xff7d7d7d,
-                  45.sp,
+                  65.sp,
                 ),
                 SizedBox(
                   height: AppSizes.dynamicHeight(context, 0.02),
@@ -647,7 +647,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                   "01765646564",
                   FontWeight.w600,
                   0xff7d7d7d,
-                  50.sp,
+                 75.sp,
                 ),
               ],
             ),
@@ -737,7 +737,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                   "Current Instituite",
                   FontWeight.w300,
                   0xff7d7d7d,
-                  45.sp,
+                  65.sp,
                 ),
                 SizedBox(
                   height: AppSizes.dynamicHeight(context, 0.02),
@@ -746,7 +746,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                   "Maple Leaf International School and College",
                   FontWeight.w600,
                   0xff7d7d7d,
-                  50.sp,
+                 75.sp,
                 ),
               ],
             ),
@@ -777,7 +777,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                     "Medium",
                     FontWeight.w300,
                     0xff7d7d7d,
-                    45.sp,
+                    65.sp,
                   ),
                 ),
                 DropdownButton(
@@ -795,7 +795,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                         items,
                         style: TextStyle(
                           color: Colors.black,
-                          fontSize: 45.sp,
+                          fontSize:75.sp,
                         ),
                       ),
                     );
@@ -841,7 +841,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                     "Gender",
                     FontWeight.w300,
                     0xff7d7d7d,
-                    45.sp,
+                   65.sp,
                   ),
                 ),
                 // SizedBox(
@@ -863,7 +863,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                         items,
                         style: TextStyle(
                           color: Colors.black,
-                          fontSize: 45.sp,
+                          fontSize: 75.sp,
                         ),
                       ),
                     );
@@ -909,7 +909,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                     "Class",
                     FontWeight.w300,
                     0xff7d7d7d,
-                    45.sp,
+                   65.sp,
                   ),
                 ),
                 DropdownButton(
@@ -928,7 +928,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                         items,
                         style: TextStyle(
                           color: Colors.black,
-                          fontSize: 45.sp,
+                          fontSize: 75.sp,
                         ),
                       ),
                     );
@@ -974,7 +974,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                     "Background",
                     FontWeight.w300,
                     0xff7d7d7d,
-                    45.sp,
+                   65.sp,
                   ),
                 ),
                 DropdownButton(
@@ -993,7 +993,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                         items,
                         style: TextStyle(
                           color: Colors.black,
-                          fontSize: 45.sp,
+                          fontSize:75.sp,
                         ),
                       ),
                     );
@@ -1103,7 +1103,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
               "Current Password",
               FontWeight.w300,
               0xff7d7d7d,
-              12,
+             75.sp,
             ),
           ),
           SizedBox(height: AppSizes.dynamicHeight(context, 0.02)),
@@ -1129,7 +1129,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
               "New Password",
               FontWeight.w300,
               0xff7d7d7d,
-              12,
+              75.sp,
             ),
           ),
         ],
@@ -1197,7 +1197,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
             "Student ID",
             FontWeight.w600,
             0xff747474,
-            60.sp,
+            65.sp,
           ),
           SizedBox(height: AppSizes.dynamicHeight(context, 0.02)),
           Container(
@@ -1229,7 +1229,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                       hintText: "Attachment...",
                       hintStyle: TextStyle(
                         color: const Color(0xff747474),
-                        fontSize: 60.sp,
+                        fontSize: 65.sp,
                       ),
                       border: InputBorder.none,
                       fillColor: Colors.white,

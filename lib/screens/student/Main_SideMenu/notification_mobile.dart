@@ -18,6 +18,7 @@ class _NotificationMobileState extends State<NotificationMobile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       // key: studentScafoldKey,
       appBar: AppBar(
         elevation: 0,
@@ -54,6 +55,7 @@ class _NotificationMobileState extends State<NotificationMobile> {
       ),
       drawer: StudentDrawer(),
       body: Container(
+        
         margin: EdgeInsets.symmetric(
           horizontal: AppSizes.dynamicWidth(context, 0.03),
         ),

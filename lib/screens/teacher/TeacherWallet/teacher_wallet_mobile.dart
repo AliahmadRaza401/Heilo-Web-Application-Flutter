@@ -100,7 +100,8 @@ class _TeacherWalletMobileState extends State<TeacherWalletMobile> {
                                     text(
                                         context,
                                         'Balance',
-                                        AppSizes.dynamicWidth(context, .03),
+                                        // AppSizes.dynamicWidth(context, .03),
+                                        65.sp,
                                         AppColors.customWhite),
                                   ],
                                 ),
@@ -118,11 +119,13 @@ class _TeacherWalletMobileState extends State<TeacherWalletMobile> {
                                       text(
                                           context,
                                           'Last week',
-                                          AppSizes.dynamicWidth(context, .02),
+                                          // AppSizes.dynamicWidth(context, .02),
+                                          65.sp,
                                           AppColors.blue),
                                       boldPopinText(
                                           'Tk. 1437.00',
-                                          AppSizes.dynamicWidth(context, .04),
+                                          // AppSizes.dynamicWidth(context, .04),
+                                            65.sp,
                                           AppColors.customWhite)
                                     ],
                                   ),
@@ -141,7 +144,8 @@ class _TeacherWalletMobileState extends State<TeacherWalletMobile> {
                                       text(
                                           context,
                                           '(-405.00)',
-                                          AppSizes.dynamicWidth(context, .02),
+                                          55.sp,
+                                          // AppSizes.dynamicWidth(context, .02),
                                           AppColors.blue),
                                       InkWell(
                                         onTap: () {
@@ -163,8 +167,9 @@ class _TeacherWalletMobileState extends State<TeacherWalletMobile> {
                                             child: text(
                                               context,
                                               'Tap to withdraw',
-                                              AppSizes.dynamicWidth(
-                                                  context, .02),
+                                              65.sp,
+                                              // AppSizes.dynamicWidth(
+                                              //     context, .02),
                                               AppColors.customWhite,
                                               bold: true,
                                             ),
@@ -179,14 +184,6 @@ class _TeacherWalletMobileState extends State<TeacherWalletMobile> {
                           ),
                         ],
                       ),
-                      // Padding(
-                      //   padding: const EdgeInsets.only(top: 15),
-                      //   child: text(
-                      //       context,
-                      //       'Transaction History',
-                      //       AppSizes.dynamicWidth(context, .04),
-                      //       AppColors.customBlack),
-                      // ),
                       SizedBox(
                         height: AppSizes.dynamicHeight(context, 0.02.h),
                       ),
@@ -236,91 +233,6 @@ class _TeacherWalletMobileState extends State<TeacherWalletMobile> {
                     ],
                   ),
                 )),
-            // Expanded(
-            //     flex: 2,
-            //     child: Container(
-            //       height: double.infinity,
-            //       // color: AppColors.blue,
-
-            //       child: Column(
-            //         children: [
-            //           Padding(
-            //             padding: const EdgeInsets.only(bottom: 8.0),
-            //             child: Row(
-            //               mainAxisAlignment: MainAxisAlignment.end,
-            //               children: [
-            //                 Icon(
-            //                   Icons.notification_important_sharp,
-            //                   color: AppColors.green,
-            //                 ),
-            //                 CircleAvatar(
-            //                   backgroundColor: AppColors.green,
-            //                   radius: AppSizes.dynamicHeight(context, .03),
-            //                   child: CircleAvatar(
-            //                     radius: AppSizes.dynamicHeight(context, .028),
-            //                     backgroundImage:
-            //                         AssetImage('assets/png/charles.png'),
-            //                   ),
-            //                 ),
-            //               ],
-            //             ),
-            //           ),
-            //           Expanded(
-            //               child: Container(
-            //             width: double.infinity,
-            //             child: Padding(
-            //               padding: EdgeInsets.only(
-            //                   bottom: AppSizes.dynamicHeight(context, .028)),
-            //               child: Container(
-            //                 width: double.infinity,
-            //                 decoration: BoxDecoration(
-            //                     color: AppColors.customGrey,
-            //                     borderRadius: BorderRadius.circular(30.r)),
-            //                 child: Padding(
-            //                   padding: EdgeInsets.only(bottom: 30),
-            //                   child: Column(
-            //                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            //                     children: [
-            //                       simpleContainer('00.00'),
-            //                       amoutEnter('Total Balance'),
-            //                       amoutEnter('Amount to\nbewithdrawn'),
-            //                       amoutEnter('Remaining \n Balance'),
-            //                       amoutEnter('Transfer to '),
-            //                       amoutEnter('Account number'),
-            //                       Row(
-            //                         mainAxisAlignment: MainAxisAlignment.end,
-            //                         children: [
-            //                           Padding(
-            //                             padding: EdgeInsets.only(
-            //                                 right: AppSizes.dynamicWidth(
-            //                                     context, .03)),
-            //                             child: Container(
-            //                               height: 54.h,
-            //                               width: 168.w,
-            //                               decoration: BoxDecoration(
-            //                                   color: AppColors.green,
-            //                                   border: Border.all(
-            //                                       color: AppColors.customBlack,
-            //                                       width: 2.w),
-            //                                   borderRadius:
-            //                                       BorderRadius.circular(100)),
-            //                               child: Center(
-            //                                 child: text(context, 'Withdraw', 13,
-            //                                     AppColors.customWhite),
-            //                               ),
-            //                             ),
-            //                           ),
-            //                         ],
-            //                       ),
-            //                     ],
-            //                   ),
-            //                 ),
-            //               ),
-            //             ),
-            //           )),
-            //         ],
-            //       ),
-            //     )),
           ],
         ),
       ),
