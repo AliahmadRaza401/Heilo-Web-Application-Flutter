@@ -24,7 +24,7 @@ class StudentDrawer extends StatelessWidget {
           ListTile(
             leading: const ImageIcon(
               AssetImage(
-                'assets/png/ondemand.png.png',
+                'assets/png/ondemand.png',
               ),
               size: 100,
               color: Colors.black,
@@ -116,7 +116,7 @@ class StudentDrawer extends StatelessWidget {
             ),
             onTap: () {
               Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => EditProfileMobile()));
+                  MaterialPageRoute(builder: (context) => const EditProfileMobile()));
             },
           ),
           ListTile(
@@ -135,7 +135,7 @@ class StudentDrawer extends StatelessWidget {
             ),
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => StudentInboxMobile()));
+                  builder: (context) => const StudentInboxMobile()));
             },
           ),
         ],

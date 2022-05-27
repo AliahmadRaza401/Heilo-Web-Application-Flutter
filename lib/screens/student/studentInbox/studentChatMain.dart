@@ -180,19 +180,18 @@ class _StudentChatMainState extends State<StudentChatMain> {
                 ),
                 Container(
                   width: AppSizes.dynamicWidth(context, 0.7),
-                  height: 30.h,
+                  height: 50.h,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(25),
                     color: AppColors.customGrey,
                   ),
-                  // padding: EdgeInsets.only(left: 12),
                   child: TextFormField(
-                    decoration: const InputDecoration(
-                        // hintText: "You phone number here...",
-                        border: InputBorder.none,
-                        fillColor: Colors.white,
-                        // suffixIcon: Icon(Icons.search)
-                        ),
+                    decoration: InputDecoration(
+                      contentPadding:
+                          EdgeInsets.symmetric(horizontal: 40.w, vertical: 10),
+                      border: InputBorder.none,
+                      fillColor: Colors.white,
+                    ),
                   ),
                 ),
                 const Icon(

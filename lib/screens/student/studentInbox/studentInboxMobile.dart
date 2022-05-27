@@ -98,9 +98,9 @@ class _StudentInboxMobileState extends State<StudentInboxMobile> {
                 ),
                 child: text(
                   context,
-                  'All Messages ( 41)',
+                  'All Messages (41)',
                   18.0,
-                  AppColors.greyText,
+                  AppColors.bblackText,
                   bold: false,
                 ),
               ),

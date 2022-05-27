@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:heilo/screens/admin/QuizReport/quiz_report_web.dart';
 import 'package:heilo/screens/student/Main_SideMenu/notification_mobile.dart';
+import 'package:heilo/screens/student/Studentquiz/studentQuizMobile.dart';
 import 'package:heilo/screens/student/drawer/student_drawer.dart';
 import 'package:heilo/screens/student/onDemand/onDemand_web.dart';
 import 'package:heilo/screens/student/onDemand/on_demand_mobile.dart';
@@ -20,7 +22,7 @@ class StudentSideMenuMobile extends StatefulWidget {
 }
 
 class _StudentSideMenuMobileState extends State<StudentSideMenuMobile> {
-  int _selectedIndex = 1;
+  int _selectedIndex = 2;
   GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
 
   @override
@@ -104,10 +106,35 @@ class _StudentSideMenuMobileState extends State<StudentSideMenuMobile> {
               ),
             ),
             Container(
+              // margin: EdgeInsets.symmetric(horizontal: 50),
+              width: MediaQuery.of(context).size.width * 0.11,
+              height: MediaQuery.of(context).size.height * 0.07,
+              decoration: _selectedIndex == 1
+                  ? BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.circle,
+                      // borderRadius: BorderRadius.circular(50),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 5,
+                          blurRadius: 9,
+                          offset: Offset(0, 0), // changes position of shadow
+                        ),
+                      ],
+                    )
+                  : null,
+              child: Icon(
+                Icons.file_copy,
+                size: 30,
+                color: _selectedIndex == 1 ? Color(0xff01B489) : Colors.white,
+              ),
+            ),
+            Container(
                 // margin: EdgeInsets.symmetric(horizontal: 50),
                 width: MediaQuery.of(context).size.width * 0.11,
                 height: MediaQuery.of(context).size.height * 0.07,
-                decoration: _selectedIndex == 1
+                decoration: _selectedIndex == 2
                     ? BoxDecoration(
                         color: Colors.white,
                         shape: BoxShape.circle,
@@ -125,13 +152,13 @@ class _StudentSideMenuMobileState extends State<StudentSideMenuMobile> {
                 child: Icon(
                   Icons.home,
                   size: 30,
-                  color: _selectedIndex == 1 ? Color(0xff01B489) : Colors.white,
+                  color: _selectedIndex == 2 ? Color(0xff01B489) : Colors.white,
                 )),
             Container(
               // margin: EdgeInsets.symmetric(horizontal: 50),
               width: MediaQuery.of(context).size.width * 0.11,
               height: MediaQuery.of(context).size.height * 0.07,
-              decoration: _selectedIndex == 2
+              decoration: _selectedIndex == 3
                   ? BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.white,
@@ -149,7 +176,7 @@ class _StudentSideMenuMobileState extends State<StudentSideMenuMobile> {
               child: Icon(
                 Icons.notifications,
                 size: 30,
-                color: _selectedIndex == 2 ? Color(0xff01B489) : Colors.white,
+                color: _selectedIndex == 3 ? Color(0xff01B489) : Colors.white,
               ),
             ),
           ],
@@ -169,8 +196,10 @@ class _StudentSideMenuMobileState extends State<StudentSideMenuMobile> {
         body: _selectedIndex == 0
             ? StudentInboxMobile()
             : _selectedIndex == 1
-                ? OnDemandMobile()
-                : NotificationMobile(),
+                ? StudentQuizMobile()
+                : _selectedIndex == 2
+                    ? OnDemandMobile()
+                    : NotificationMobile(),
       ),
     );
   }

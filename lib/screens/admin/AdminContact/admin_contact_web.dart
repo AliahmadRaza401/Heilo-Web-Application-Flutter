@@ -96,7 +96,7 @@ class _AdminContactWebState extends State<AdminContactWeb> {
                                                 color: AppColors.lightGrey,
                                               ),
                                               contentPadding: EdgeInsets.only(
-                                                  top: 5, left: 10)),
+                                                  bottom:20, left: 10)),
                                         ),
                                       ),
                                     ),
@@ -286,8 +286,8 @@ class _AdminContactWebState extends State<AdminContactWeb> {
                                                 Icons.search,
                                                 color: AppColors.lightGrey,
                                               ),
-                                              contentPadding: EdgeInsets.only(
-                                                  top: 5, left: 10)),
+                                                contentPadding: EdgeInsets.only(
+                                                  bottom:20, left: 10)),
                                         ),
                                       ),
                                     ),

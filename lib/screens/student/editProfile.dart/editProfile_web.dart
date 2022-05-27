@@ -48,6 +48,7 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Container(
+                    margin: EdgeInsets.only(top:40.h),
                     alignment: Alignment.center,
                     width: 526.w,
                     height: 630.h,
@@ -332,7 +333,8 @@ class _EditProfileWebState extends State<EditProfileWeb> {
                     ),
                   ),
                   Container(
-                    height: AppSizes.dynamicHeight(context, 0.7),
+                  //  color: Colors.black,
+                     height: AppSizes.dynamicHeight(context, 0.75),
                     child: SingleChildScrollView(
                       child: Container(
                         padding: EdgeInsets.only(

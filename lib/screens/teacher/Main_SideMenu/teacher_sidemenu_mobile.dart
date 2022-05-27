@@ -3,6 +3,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/screens/student/Main_SideMenu/notification_mobile.dart';
 import 'package:heilo/screens/student/drawer/student_drawer.dart';
+import 'package:heilo/screens/teacher/TeacherWallet/teacher_wallet_mobile.dart';
 import 'package:heilo/screens/teacher/dashBoard/teacher_dashBoardMobile.dart';
 import 'package:heilo/screens/teacher/teacher_Inbox/teacher_InboxMobile.dart';
 import 'package:heilo/utils/config.dart';
@@ -17,7 +18,7 @@ class TeacherSideMenuMobile extends StatefulWidget {
 }
 
 class _TeacherSideMenuMobileState extends State<TeacherSideMenuMobile> {
-  int _selectedIndex = 1;
+  int _selectedIndex = 2;
   GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
 
   @override
@@ -33,42 +34,6 @@ class _TeacherSideMenuMobileState extends State<TeacherSideMenuMobile> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          // key: teacherScafoldKey,
-          // appBar: AppBar(
-          //   elevation: 0,
-          //   backgroundColor: Colors.white,
-          //   leading: Builder(
-          //     builder: (BuildContext context) {
-          //       return IconButton(
-          //         icon: const Icon(
-          //           Icons.menu,
-          //           color: Colors.black,
-          //           size: 30, // Changing Drawer Icon Size
-          //         ),
-          //         onPressed: () {
-          //           teacherScafoldKey.currentState!.openDrawer();
-          //         },
-          //         tooltip:
-          //             MaterialLocalizations.of(context).openAppDrawerTooltip,
-          //       );
-          //     },
-          //   ),
-          //   title: Row(
-          //     mainAxisAlignment: MainAxisAlignment.end,
-          //     children: [
-          //       CircleAvatar(
-          //         radius: 20,
-          //         backgroundColor: AppColors.primaryColor,
-          //         child: Image.asset(
-          //           'assets/png/wp2398385 1.png',
-          //           height: AppSizes.dynamicHeight(context, 0.07),
-          //           width: AppSizes.dynamicWidth(context, 0.07),
-          //         ),
-          //       ),
-          //     ],
-          //   ),
-          // ),
-          // drawer: StudentDrawer(),
           backgroundColor: Colors.transparent,
           bottomNavigationBar: CurvedNavigationBar(
             key: _bottomNavigationKey,
@@ -101,10 +66,35 @@ class _TeacherSideMenuMobileState extends State<TeacherSideMenuMobile> {
                 ),
               ),
               Container(
+                // margin: EdgeInsets.symmetric(horizontal: 50),
+                width: MediaQuery.of(context).size.width * 0.11,
+                height: MediaQuery.of(context).size.height * 0.07,
+                decoration: _selectedIndex == 1
+                    ? BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.circle,
+                        // borderRadius: BorderRadius.circular(50),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 5,
+                            blurRadius: 9,
+                            offset: Offset(0, 0), // changes position of shadow
+                          ),
+                        ],
+                      )
+                    : null,
+                child: Icon(
+                  Icons.account_balance_wallet,
+                  size: 30,
+                  color: _selectedIndex == 1 ? Color(0xff01B489) : Colors.white,
+                ),
+              ),
+              Container(
                   // margin: EdgeInsets.symmetric(horizontal: 50),
                   width: MediaQuery.of(context).size.width * 0.11,
                   height: MediaQuery.of(context).size.height * 0.07,
-                  decoration: _selectedIndex == 1
+                  decoration: _selectedIndex == 2
                       ? BoxDecoration(
                           color: Colors.white,
                           shape: BoxShape.circle,
@@ -124,13 +114,13 @@ class _TeacherSideMenuMobileState extends State<TeacherSideMenuMobile> {
                     Icons.home,
                     size: 30,
                     color:
-                        _selectedIndex == 1 ? Color(0xff01B489) : Colors.white,
+                        _selectedIndex == 2 ? Color(0xff01B489) : Colors.white,
                   )),
               Container(
                 // margin: EdgeInsets.symmetric(horizontal: 50),
                 width: MediaQuery.of(context).size.width * 0.11,
                 height: MediaQuery.of(context).size.height * 0.07,
-                decoration: _selectedIndex == 2
+                decoration: _selectedIndex == 3
                     ? BoxDecoration(
                         shape: BoxShape.circle,
                         color: Colors.white,
@@ -148,7 +138,7 @@ class _TeacherSideMenuMobileState extends State<TeacherSideMenuMobile> {
                 child: Icon(
                   Icons.notifications,
                   size: 30,
-                  color: _selectedIndex == 2 ? Color(0xff01B489) : Colors.white,
+                  color: _selectedIndex == 3 ? Color(0xff01B489) : Colors.white,
                 ),
               ),
             ],
@@ -168,8 +158,10 @@ class _TeacherSideMenuMobileState extends State<TeacherSideMenuMobile> {
           body: _selectedIndex == 0
               ? TeacherInboxMobile()
               : _selectedIndex == 1
-                  ? TeacherDashBoardMobile()
-                  : NotificationMobile()),
+                  ? TeacherWalletMobile()
+                  : _selectedIndex == 2
+                      ? TeacherDashBoardMobile()
+                      : NotificationMobile()),
     );
   }
 

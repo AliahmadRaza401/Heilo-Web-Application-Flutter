@@ -64,305 +64,313 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
         ),
       ),
       drawer: TeacherDrawer(),
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Container(
-          padding: EdgeInsets.only(
-            left: AppSizes.dynamicWidth(context, 0.040),
-            right: AppSizes.dynamicWidth(context, 0.040),
-            top: AppSizes.dynamicHeight(context, 0.1),
-          ),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(30.r),
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30.r),
-                ),
-                child: Stack(
-                  overflow: Overflow.visible,
-                  children: [
-                    Container(
-                      // height: 631.h,
-                      decoration: BoxDecoration(
-                        color: Color(0xffF1F1F1),
-                        borderRadius: BorderRadius.circular(30.r),
-                      ),
-                      padding: EdgeInsets.only(
-                        top: 130.h,
+      body: Container(
+    
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Container(
+            padding: EdgeInsets.only(
+              left: AppSizes.dynamicWidth(context, 0.040),
+              right: AppSizes.dynamicWidth(context, 0.040),
+              top: AppSizes.dynamicHeight(context, 0.1),
+            ),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(30.r),
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: Colors.yellowAccent,
+                    borderRadius: BorderRadius.circular(30.r),
+                  ),
+                      // padding:EdgeInsets.only(top: 20.h),
+                  child: Stack(
+                    overflow: Overflow.visible,
+                    children: [
+                      Container(
+                        // height: 631.h,
+                        decoration: BoxDecoration(
+                          color: Color(0xffF1F1F1),
+                          borderRadius: BorderRadius.circular(30.r),
+                        ),
+                        padding: EdgeInsets.only(
+                          // top: 130.h,
+                            top: AppSizes.dynamicHeight(context, 0.1),
                         left: AppSizes.dynamicWidth(context, 0.03),
                         right: AppSizes.dynamicWidth(context, 0.03),
-                        bottom: AppSizes.dynamicHeight(context, 0.020),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            padding: EdgeInsets.symmetric(
-                              vertical: 5,
-                              horizontal: 10,
-                            ),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(50),
-                              border: Border.all(
-                                  width: 1, color: Color(0xffC4C4C4)),
-                            ),
-                            child: text(
-                              context,
-                              "Sakib Abdullah",
-                              18.0,
-                              Color(0xff747474),
-                              bold: true,
-                            ),
-                          ),
-                          SizedBox(
-                            height: 10.h,
-                          ),
-                          text(
-                            context,
-                            "Maple Leaf International School and College",
-                            14.0,
-                            AppColors.greyText,
-                          ),
-                          SizedBox(
-                            height: 10.h,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              text(
+                        bottom: AppSizes.dynamicHeight(context, 0.02),
+                          // left: AppSizes.dynamicWidth(context, 0.03),
+                          // right: AppSizes.dynamicWidth(context, 0.03),
+                          // bottom: AppSizes.dynamicHeight(context, 0.020),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.symmetric(
+                                vertical: 5,
+                                horizontal: 10,
+                              ),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                border: Border.all(
+                                    width: 1, color: Color(0xffC4C4C4)),
+                              ),
+                              child: text(
                                 context,
-                                "Hourly Rate",
+                                "Sakib Abdullah",
                                 18.0,
                                 Color(0xff747474),
                                 bold: true,
                               ),
-                              Container(
-                                padding: EdgeInsets.symmetric(
-                                  vertical: 5,
-                                  horizontal: 10,
-                                ),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(50),
-                                  border: Border.all(
-                                      width: 1, color: Color(0xffC4C4C4)),
-                                ),
-                                child: text(
+                            ),
+                            SizedBox(
+                              height: 10.h,
+                            ),
+                            text(
+                              context,
+                              "Maple Leaf International School and College",
+                              14.0,
+                              AppColors.greyText,
+                            ),
+                            SizedBox(
+                              height: 10.h,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                text(
                                   context,
-                                  "250 BDT",
-                                  20.0,
+                                  "Hourly Rate",
+                                  18.0,
                                   Color(0xff747474),
                                   bold: true,
                                 ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 40.h,
-                          ),
-                          Container(
-                            padding: EdgeInsets.all(
-                                AppSizes.dynamicHeight(context, 0.01)),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(60.r),
-                                border: Border.all(
-                                    width: 2, color: const Color(0xffE0E0E0))),
-                            child: text(
-                                context,
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
-                                13.0,
-                                AppColors.customBlack,
-                                maxLines: 8),
-                          ),
-                          SizedBox(
-                            height: 40.h,
-                          ),
-                          Container(
-                            padding: EdgeInsets.all(
-                                AppSizes.dynamicHeight(context, 0.01)),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(60.r),
-                                border: Border.all(
-                                    width: 2, color: const Color(0xffE0E0E0))),
-                            child: Column(
-                              children: [
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    text(
-                                      context,
-                                      'Subjects Willing to Teach',
-                                      13,
-                                      Color(0xff1BE59D),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(
-                                  height: AppSizes.dynamicHeight(context, 0.02),
-                                ),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Container(
-                                      height:
-                                          AppSizes.dynamicHeight(context, 0.04),
-                                      width:
-                                          AppSizes.dynamicHeight(context, 0.12),
-                                      // padding: const EdgeInsets.only(
-                                      //   top: 5,
-                                      //   bottom: 5,
-                                      // ),
-                                      decoration: BoxDecoration(
-                                        color: Color(0xff3DDEA5),
-                                        borderRadius: BorderRadius.circular(50),
-                                      ),
-                                      child: Align(
-                                        alignment: Alignment.center,
-                                        child: text(
-                                          context,
-                                          "Math",
-                                          14.0,
-                                          Colors.white,
-                                          bold: true,
-                                          // alignText: Alignment.center
-                                        ),
-                                      ),
-                                    ),
-                                    Container(
-                                      height:
-                                          AppSizes.dynamicHeight(context, 0.04),
-                                      width:
-                                          AppSizes.dynamicHeight(context, 0.15),
-                                      // padding: const EdgeInsets.only(
-                                      //   top: 5,
-                                      //   bottom: 5,
-                                      // ),
-                                      decoration: BoxDecoration(
-                                        color: Color(0xffF37171),
-                                        borderRadius: BorderRadius.circular(50),
-                                      ),
-                                      child: Align(
-                                        alignment: Alignment.center,
-                                        child: text(
-                                          context,
-                                          "Math",
-                                          14.0,
-                                          Colors.white,
-                                          bold: true,
-                                          // alignText: Alignment.center
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(
-                                  height: AppSizes.dynamicHeight(context, 0.02),
-                                ),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Container(
-                                      height:
-                                          AppSizes.dynamicHeight(context, 0.04),
-                                      width:
-                                          AppSizes.dynamicHeight(context, 0.12),
-                                      // padding: const EdgeInsets.only(
-                                      //   top: 5,
-                                      //   bottom: 5,
-                                      // ),
-                                      decoration: BoxDecoration(
-                                        color: Color(0xff2196F3),
-                                        borderRadius: BorderRadius.circular(50),
-                                      ),
-                                      child: Align(
-                                        alignment: Alignment.center,
-                                        child: text(
-                                          context,
-                                          "Math",
-                                          14.0,
-                                          Colors.white,
-                                          bold: true,
-                                          // alignText: Alignment.center
-                                        ),
-                                      ),
-                                    ),
-                                    Container(
-                                      height:
-                                          AppSizes.dynamicHeight(context, 0.04),
-                                      width:
-                                          AppSizes.dynamicHeight(context, 0.15),
-                                      // padding: const EdgeInsets.only(
-                                      //   top: 5,
-                                      //   bottom: 5,
-                                      // ),
-                                      decoration: BoxDecoration(
-                                        color: Color(0xffFEDB41),
-                                        borderRadius: BorderRadius.circular(50),
-                                      ),
-                                      child: Align(
-                                        alignment: Alignment.center,
-                                        child: text(
-                                          context,
-                                          "Math",
-                                          14.0,
-                                          Colors.white,
-                                          bold: true,
-                                          // alignText: Alignment.center
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(
-                                  height: AppSizes.dynamicHeight(context, 0.02),
-                                ),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Container(
-                                      height:
-                                          AppSizes.dynamicHeight(context, 0.04),
-                                      width:
-                                          AppSizes.dynamicHeight(context, 0.2),
-                                      // padding: const EdgeInsets.only(
-                                      //   top: 5,
-                                      //   bottom: 5,
-                                      // ),
-                                      decoration: BoxDecoration(
-                                        color: Color(0xff915DE7),
-                                        borderRadius: BorderRadius.circular(50),
-                                      ),
-                                      child: Align(
-                                        alignment: Alignment.center,
-                                        child: text(
-                                          context,
-                                          "Math",
-                                          14.0,
-                                          Colors.white,
-                                          bold: true,
-                                          // alignText: Alignment.center
-                                        ),
-                                      ),
-                                    ),
-                                  ],
+                                Container(
+                                  padding: EdgeInsets.symmetric(
+                                    vertical: 5,
+                                    horizontal: 10,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(50),
+                                    border: Border.all(
+                                        width: 1, color: Color(0xffC4C4C4)),
+                                  ),
+                                  child: text(
+                                    context,
+                                    "250 BDT",
+                                    20.0,
+                                    Color(0xff747474),
+                                    bold: true,
+                                  ),
                                 ),
                               ],
                             ),
-                          ),
-                        ],
+                            SizedBox(
+                              height: 40.h,
+                            ),
+                            Container(
+                              padding: EdgeInsets.all(
+                                  AppSizes.dynamicHeight(context, 0.01)),
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(60.r),
+                                  border: Border.all(
+                                      width: 2, color: const Color(0xffE0E0E0))),
+                              child: text(
+                                  context,
+                                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis aenean et elementum massa. Egestas tempor viverra adipiscing ipsum, proin nunc vitae ultrices nec. Tellus in viverra pretium feugiat sit interdum ultricies. Facilisi vulputate mauris cras sapien, scelerisque ullamcorper aliquam duis viverra.",
+                                  13.0,
+                                  AppColors.customBlack,
+                                  maxLines: 8),
+                            ),
+                            SizedBox(
+                              height: 40.h,
+                            ),
+                            Container(
+                              padding: EdgeInsets.all(
+                                  AppSizes.dynamicHeight(context, 0.01)),
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(60.r),
+                                  border: Border.all(
+                                      width: 2, color: const Color(0xffE0E0E0))),
+                              child: Column(
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      text(
+                                        context,
+                                        'Subjects Willing to Teach',
+                                        13,
+                                        Color(0xff1BE59D),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: AppSizes.dynamicHeight(context, 0.02),
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Container(
+                                        height:
+                                            AppSizes.dynamicHeight(context, 0.04),
+                                        width:
+                                            AppSizes.dynamicHeight(context, 0.12),
+                                        // padding: const EdgeInsets.only(
+                                        //   top: 5,
+                                        //   bottom: 5,
+                                        // ),
+                                        decoration: BoxDecoration(
+                                          color: Color(0xff3DDEA5),
+                                          borderRadius: BorderRadius.circular(50),
+                                        ),
+                                        child: Align(
+                                          alignment: Alignment.center,
+                                          child: text(
+                                            context,
+                                            "Math",
+                                            14.0,
+                                            Colors.white,
+                                            bold: true,
+                                            // alignText: Alignment.center
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        height:
+                                            AppSizes.dynamicHeight(context, 0.04),
+                                        width:
+                                            AppSizes.dynamicHeight(context, 0.15),
+                                        // padding: const EdgeInsets.only(
+                                        //   top: 5,
+                                        //   bottom: 5,
+                                        // ),
+                                        decoration: BoxDecoration(
+                                          color: Color(0xffF37171),
+                                          borderRadius: BorderRadius.circular(50),
+                                        ),
+                                        child: Align(
+                                          alignment: Alignment.center,
+                                          child: text(
+                                            context,
+                                            "Math",
+                                            14.0,
+                                            Colors.white,
+                                            bold: true,
+                                            // alignText: Alignment.center
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: AppSizes.dynamicHeight(context, 0.02),
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Container(
+                                        height:
+                                            AppSizes.dynamicHeight(context, 0.04),
+                                        width:
+                                            AppSizes.dynamicHeight(context, 0.12),
+                                        // padding: const EdgeInsets.only(
+                                        //   top: 5,
+                                        //   bottom: 5,
+                                        // ),
+                                        decoration: BoxDecoration(
+                                          color: Color(0xff2196F3),
+                                          borderRadius: BorderRadius.circular(50),
+                                        ),
+                                        child: Align(
+                                          alignment: Alignment.center,
+                                          child: text(
+                                            context,
+                                            "Math",
+                                            14.0,
+                                            Colors.white,
+                                            bold: true,
+                                            // alignText: Alignment.center
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        height:
+                                            AppSizes.dynamicHeight(context, 0.04),
+                                        width:
+                                            AppSizes.dynamicHeight(context, 0.15),
+                                        // padding: const EdgeInsets.only(
+                                        //   top: 5,
+                                        //   bottom: 5,
+                                        // ),
+                                        decoration: BoxDecoration(
+                                          color: Color(0xffFEDB41),
+                                          borderRadius: BorderRadius.circular(50),
+                                        ),
+                                        child: Align(
+                                          alignment: Alignment.center,
+                                          child: text(
+                                            context,
+                                            "Math",
+                                            14.0,
+                                            Colors.white,
+                                            bold: true,
+                                            // alignText: Alignment.center
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: AppSizes.dynamicHeight(context, 0.02),
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Container(
+                                        height:
+                                            AppSizes.dynamicHeight(context, 0.04),
+                                        width:
+                                            AppSizes.dynamicHeight(context, 0.2),
+                                        // padding: const EdgeInsets.only(
+                                        //   top: 5,
+                                        //   bottom: 5,
+                                        // ),
+                                        decoration: BoxDecoration(
+                                          color: Color(0xff915DE7),
+                                          borderRadius: BorderRadius.circular(50),
+                                        ),
+                                        child: Align(
+                                          alignment: Alignment.center,
+                                          child: text(
+                                            context,
+                                            "Math",
+                                            14.0,
+                                            Colors.white,
+                                            bold: true,
+                                            // alignText: Alignment.center
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                    Positioned(
+                       Positioned(
                         top: -120.0,
                         right: 0,
                         left: 0,
@@ -384,10 +392,10 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
                                 ),
                               ),
                               Positioned(
-                                top: 70,
-                                right: -32,
+                                top: 80,
+                                right: -20,
                                 child: Container(
-                                  padding: const EdgeInsets.symmetric(
+                                  padding: EdgeInsets.symmetric(
                                     horizontal: 10,
                                     vertical: 3,
                                   ),
@@ -401,7 +409,7 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
                                       text(
                                         context,
                                         "4.5",
-                                        15,
+                                        AppSizes.dynamicWidth(context, 0.02),
                                         Colors.black,
                                         bold: true,
                                       ),
@@ -414,36 +422,90 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
 
                           //
                         )),
-                  ],
+                      // Positioned(
+                      //     top: -110.0,
+                      //     right: 0,
+                      //     left: 0,
+                      //     // (background container size) - (circle height / 2)
+                      //     child: Center(
+                      //       child: Stack(
+                      //         overflow: Overflow.visible,
+                      //         children: [
+                      //           Container(
+                      //             height: AppSizes.dynamicHeight(context, 0.30),
+                      //             width: AppSizes.dynamicWidth(context, 0.30),
+                      //             decoration: const BoxDecoration(
+                      //               shape: BoxShape.circle,
+                      //               image: DecorationImage(
+                      //                 image: AssetImage(
+                      //                   "assets/png/wp2398385 1.png",
+                      //                 ),
+                      //               ),
+                      //             ),
+                      //           ),
+                      //           Positioned(
+                      //             top: 40,
+                      //             right: -32,
+                      //             child: Container(
+                      //               padding: const EdgeInsets.symmetric(
+                      //                 horizontal: 10,
+                      //                 vertical: 3,
+                      //               ),
+                      //               decoration: BoxDecoration(
+                      //                 color: Color(0xffC4C4C4).withOpacity(0.5),
+                      //                 borderRadius: BorderRadius.circular(50),
+                      //               ),
+                      //               child: Row(
+                      //                 children: [
+                      //                   Image.asset('assets/png/star.png'),
+                      //                   text(
+                      //                     context,
+                      //                     "4.5",
+                      //                     15,
+                      //                     Colors.black,
+                      //                     bold: true,
+                      //                   ),
+                      //                 ],
+                      //               ),
+                      //             ),
+                      //           ),
+                      //         ],
+                      //       ),
+
+                      //       //
+                      //     )),
+                  
+                    ],
+                  ),
                 ),
-              ),
-              Container(
-                padding: EdgeInsets.only(
-                  right: 20.w,
-                  top: 20.h,
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    greyWidget1(),
-                    SizedBox(
-                      height: 40.h,
-                    ),
-                    greyWidget2(),
-                    SizedBox(
-                      height: 40.h,
-                    ),
-                    greyWidget3(),
-                    SizedBox(
-                      height: 40.h,
-                    ),
-                    greyWidget4(),
-                    SizedBox(height: AppSizes.dynamicHeight(context, 0.05)),
-                  ],
-                ),
-              )
-            ],
+                Container(
+                  padding: EdgeInsets.only(
+                    right: 20.w,
+                    top: 20.h,
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      greyWidget1(),
+                      SizedBox(
+                        height: 40.h,
+                      ),
+                      greyWidget2(),
+                      SizedBox(
+                        height: 40.h,
+                      ),
+                      greyWidget3(),
+                      SizedBox(
+                        height: 40.h,
+                      ),
+                      greyWidget4(),
+                      SizedBox(height: AppSizes.dynamicHeight(context, 0.05)),
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
@@ -475,7 +537,7 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
       padding: EdgeInsets.only(
         left: AppSizes.dynamicHeight(context, 0.02),
         right: AppSizes.dynamicHeight(context, 0.02),
-        top: AppSizes.dynamicHeight(context, 0.03),
+        top: AppSizes.dynamicHeight(context, 0.05),
         bottom: AppSizes.dynamicHeight(context, 0.03),
       ),
       child: Column(
@@ -571,7 +633,7 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
                   left: AppSizes.dynamicWidth(context, 0.02),
                   top: AppSizes.dynamicHeight(context, 0.01),
                 ),
-                height: AppSizes.dynamicHeight(context, 0.09),
+                height: AppSizes.dynamicHeight(context, 0.13),
                 width: AppSizes.dynamicWidth(context, 0.4),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
@@ -612,6 +674,7 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
                           ),
                         );
                       }).toList(),
+                      underline: SizedBox(),
                       // After selecting the desired option,it will
                       // change button value to selected value
                       onChanged: (String? newValue) {
@@ -669,7 +732,7 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
               left: AppSizes.dynamicWidth(context, 0.02),
               top: AppSizes.dynamicHeight(context, 0.01),
             ),
-            height: AppSizes.dynamicHeight(context, 0.09),
+            height: AppSizes.dynamicHeight(context, 0.11),
             width: AppSizes.dynamicWidth(context, 0.9),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
@@ -711,6 +774,7 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
                       ),
                     );
                   }).toList(),
+                  underline: SizedBox(),
                   // After selecting the desired option,it will
                   // change button value to selected value
                   onChanged: (String? newValue) {
@@ -908,7 +972,7 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
               // top: AppSizes.dynamicHeight(context, 0.01),
             ),
             width: AppSizes.dynamicWidth(context, 0.9),
-            height: AppSizes.dynamicHeight(context, 0.09),
+            height: AppSizes.dynamicHeight(context, 0.11),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
@@ -948,6 +1012,7 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
                       ),
                     );
                   }).toList(),
+                  underline: SizedBox(),
                   // After selecting the desired option,it will
                   // change button value to selected value
                   onChanged: (String? newValue) {
@@ -968,7 +1033,7 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
               top: AppSizes.dynamicHeight(context, 0.01),
             ),
             width: AppSizes.dynamicWidth(context, 0.9),
-            height: AppSizes.dynamicHeight(context, 0.09),
+            height: AppSizes.dynamicHeight(context, 0.11),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
@@ -1015,6 +1080,7 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
                       ),
                     );
                   }).toList(),
+                  underline: SizedBox(),
                   // After selecting the desired option,it will
                   // change button value to selected value
                   onChanged: (String? newValue) {
@@ -1035,7 +1101,7 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
               top: AppSizes.dynamicHeight(context, 0.01),
             ),
             width: AppSizes.dynamicWidth(context, 0.9),
-            height: AppSizes.dynamicHeight(context, 0.09),
+            height: AppSizes.dynamicHeight(context, 0.11),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
@@ -1079,6 +1145,7 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
                       ),
                     );
                   }).toList(),
+                  underline: SizedBox(),
                   // After selecting the desired option,it will
                   // change button value to selected value
                   onChanged: (String? newValue) {
@@ -1099,7 +1166,7 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
               top: AppSizes.dynamicHeight(context, 0.01),
             ),
             width: AppSizes.dynamicWidth(context, 0.9),
-            height: AppSizes.dynamicHeight(context, 0.09),
+            height: AppSizes.dynamicHeight(context, 0.11),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
@@ -1143,6 +1210,7 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
                       ),
                     );
                   }).toList(),
+                  underline: SizedBox(),
                   // After selecting the desired option,it will
                   // change button value to selected value
                   onChanged: (String? newValue) {

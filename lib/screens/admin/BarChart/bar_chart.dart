@@ -29,21 +29,24 @@ Widget barChart() {
 }
 
 Widget dropDown(BuildContext context, String title) {
-  return DropdownButton<String>(
-    hint: text(context, title, AppSizes.dynamicWidth(context, .007),
-        AppColors.greyText),
-    underline: Container(),
-    isExpanded: true,
-    icon: Icon(Icons.keyboard_arrow_down_outlined,
-        size: AppSizes.dynamicWidth(context, .015)),
-    items: <String>['Item 1', 'Item 2', 'Item 3', 'Item 4'].map((String value) {
-      return DropdownMenuItem<String>(
-        value: value,
-        child: text(context, value, AppSizes.dynamicWidth(context, .01),
-            AppColors.greyText),
-      );
-    }).toList(),
-    onChanged: (_) {},
+  return Container(
+    width:AppSizes.dynamicWidth(context, .05),
+    child: DropdownButton<String>(
+      hint: text(context, title, AppSizes.dynamicWidth(context, .007),
+          AppColors.greyText),
+      underline: Container(),
+      isExpanded: true,
+      icon: Icon(Icons.keyboard_arrow_down_outlined,
+          size: AppSizes.dynamicWidth(context, .015)),
+      items: <String>['Item 1', 'Item 2', 'Item 3', 'Item 4'].map((String value) {
+        return DropdownMenuItem<String>(
+          value: value,
+          child: text(context, value, AppSizes.dynamicWidth(context, .01),
+              AppColors.greyText),
+        );
+      }).toList(),
+      onChanged: (_) {},
+    ),
   );
 }
 

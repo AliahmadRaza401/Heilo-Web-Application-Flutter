@@ -53,7 +53,7 @@ class _TeacherEditProfileWebState extends State<TeacherEditProfileWeb> {
                         child: Column(
                           children: [
                             SizedBox(
-                              height: 70.h,
+                              height: 85.h,
                             ),
                             Container(
                               alignment: Alignment.center,

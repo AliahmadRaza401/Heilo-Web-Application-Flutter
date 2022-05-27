@@ -65,13 +65,14 @@ class _TeacherInboxWebState extends State<TeacherInboxWeb> {
                           ),
                           // padding: EdgeInsets.only(left: 12),
                           child: TextFormField(
-                            decoration: const InputDecoration(
+                            decoration:  InputDecoration(
+                              // contentPadding: EdgeInsets.only(bottom:3.h),
                                 // hintText: "Search here...",
                                 border: InputBorder.none,
                                 fillColor: Colors.white,
                                 suffixIcon: Icon(
                                   Icons.search,
-                                  size: 30,
+                                  // size: 30,
                                 )),
                           ),
                         ),

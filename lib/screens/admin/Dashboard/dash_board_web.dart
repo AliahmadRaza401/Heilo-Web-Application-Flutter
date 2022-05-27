@@ -136,30 +136,30 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
                         Positioned(
                           right: 20,
                           child: Container(
-                            height: 35.h,
-                            width: 146.w,
-                            decoration: BoxDecoration(
-                                border: Border.all(color: AppColors.green),
-                                color: AppColors.customWhite,
-                                borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(100),
-                                    bottomLeft: Radius.circular(100))),
-                            padding: EdgeInsets.symmetric(horizontal: 10),
-                            child: dropDown(context,'Last 7 days')
-                            
-                            // Row(
-                            //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            //   children: [
-                            //     text(context, 'Last 7 Days', 14.sp,
-                            //         AppColors.greyText),
-                            //     Icon(
-                            //       Icons.keyboard_arrow_down,
-                            //       size: 15,
-                            //       color: AppColors.green,
-                            //     ),
-                            //   ],
-                            // ),
-                          ),
+                              height: 35.h,
+                              width: 146.w,
+                              decoration: BoxDecoration(
+                                  border: Border.all(color: AppColors.green),
+                                  color: AppColors.customWhite,
+                                  borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(100),
+                                      bottomLeft: Radius.circular(100))),
+                              padding: EdgeInsets.symmetric(horizontal: 10),
+                              child: dropDown(context, 'Last 7 days')
+
+                              // Row(
+                              //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              //   children: [
+                              //     text(context, 'Last 7 Days', 14.sp,
+                              //         AppColors.greyText),
+                              //     Icon(
+                              //       Icons.keyboard_arrow_down,
+                              //       size: 15,
+                              //       color: AppColors.green,
+                              //     ),
+                              //   ],
+                              // ),
+                              ),
                         ),
                       ],
                     ),
@@ -226,18 +226,25 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
                   border: Border.all(color: AppColors.green),
                   color: AppColors.customWhite,
                   borderRadius: BorderRadius.circular(100)),
-              padding: EdgeInsets.symmetric(horizontal: 10),
+              // padding: EdgeInsets.symmetric(horizontal: 10,vertical:10,),
+              padding: EdgeInsets.only(
+                left: 10,
+                right: 10,
+                // top: 10,
+              ),
+
               child: Align(
                 alignment: Alignment.centerRight,
                 child: TextField(
                   cursorColor: AppColors.green,
                   decoration: InputDecoration(
-                      border: InputBorder.none,
-                      suffixIcon: Icon(
-                        Icons.search,
-                        color: AppColors.green,
-                      ),
-                      contentPadding: EdgeInsets.only(top: 5, left: 10)),
+                    border: InputBorder.none,
+                    suffixIcon: Icon(
+                      Icons.search,
+                      color: AppColors.green,
+                    ),
+                    contentPadding: EdgeInsets.only(bottom: MediaQuery.of(context).size.width*0.01, left: 10),
+                  ),
                 ),
               ),
             ),
@@ -342,27 +349,27 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
             Positioned(
               right: 20,
               child: Container(
-                height: 41.h,
-                width: 156.w,
-                decoration: BoxDecoration(
-                    border: Border.all(color: AppColors.green),
-                    color: AppColors.customWhite,
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(100),
-                        bottomLeft: Radius.circular(100))),
-                padding: EdgeInsets.symmetric(horizontal: 10),
-                child: dropDown(context, 'Last 7 days')
-                // Row(
-                //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                //   children: [
-                //     text(context, 'Last 7 Days', 15.sp, AppColors.greyText),
-                //     Icon(
-                //       Icons.keyboard_arrow_down,
-                //       size: 15,
-                //     ),
-                //   ],
-                // ),
-              ),
+                  height: 41.h,
+                  width: 156.w,
+                  decoration: BoxDecoration(
+                      border: Border.all(color: AppColors.green),
+                      color: AppColors.customWhite,
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(100),
+                          bottomLeft: Radius.circular(100))),
+                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  child: dropDown(context, 'Last 7 days')
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  //   children: [
+                  //     text(context, 'Last 7 Days', 15.sp, AppColors.greyText),
+                  //     Icon(
+                  //       Icons.keyboard_arrow_down,
+                  //       size: 15,
+                  //     ),
+                  //   ],
+                  // ),
+                  ),
             ),
           ],
         ),
@@ -414,8 +421,8 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
                     borderRadius: BorderRadius.circular(100)),
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Center(
-                  child:
-                      text(context, '27th July, 2021', 14.sp, AppColors.greyText),
+                  child: text(
+                      context, '27th July, 2021', 14.sp, AppColors.greyText),
                 )),
             SizedBox(
               width: size.width * .008,
@@ -449,4 +456,3 @@ class _AdminDashboardWebState extends State<AdminDashboardWeb> {
     );
   }
 }
-

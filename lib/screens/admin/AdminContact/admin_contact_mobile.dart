@@ -231,7 +231,7 @@ class _AdminContactMobileState extends State<AdminContactMobile> {
                                   children: [
                                     text(
                                         context,
-                                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor vulputate ut mauris sem. At platea erat diam sed proin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor vulputate ut mauris sem. At platea erat diam sed proin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor vulputate ut mauris sem. At platea erat diam sed proin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor vulputate ut mauris sem. At platea erat diam sed proin.',
+                                        'Lorem ipsum dolor sit amet, ',
                                         AppSizes.dynamicWidth(context, .02),
                                         AppColors.greyText,
                                         alignText: TextAlign.justify,
@@ -347,7 +347,7 @@ class _AdminContactMobileState extends State<AdminContactMobile> {
                                             'Dhaka University',
                                             '01824696900',
                                             'write2ratusar@gmail.com',
-                                            'You: Bhaiya kalke 5 tay set koro',
+                                            'You: Bhaiya',
                                             '11-09-2021 (6:15 pm)');
                                       })),
                                 ))
