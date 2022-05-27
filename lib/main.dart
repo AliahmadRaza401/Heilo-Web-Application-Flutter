@@ -42,9 +42,9 @@ class MyApp extends StatelessWidget {
               child: widget!,
             );
           },
-          home: Intro(),
+          // home: Intro(),
           // home: const AdminSideMenu(),
-          // home: StudentPhase1(),
+          home: StudentPhase1(),
 
           // home: const StudentSideMenu(),
           // home: const TeacherSideMenu(),
