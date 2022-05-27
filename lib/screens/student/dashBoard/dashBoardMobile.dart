@@ -65,8 +65,8 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
           top: 10.h,
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
               width: AppSizes.dynamicWidth(context, 1),
@@ -388,7 +388,7 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
         children: [
           Container(
             // alignment: Alignment.centerLeft,
-            height: 22.h,
+            height: 32.h,
             width: AppSizes.dynamicHeight(context, 0.2),
             decoration: BoxDecoration(
                 color: Colors.white, borderRadius: BorderRadius.circular(21)),
@@ -407,19 +407,28 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
           SizedBox(
             height: 20.h,
           ),
-          upcomingsessionData(),
-          SizedBox(
-            height: 20.h,
+          Container(
+            height: 550.h,
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  upcomingsessionData(),
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  upcomingsessionData(),
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  upcomingsessionData(),
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  upcomingsessionData(),
+                ],
+              ),
+            ),
           ),
-          upcomingsessionData(),
-          SizedBox(
-            height: 20.h,
-          ),
-          upcomingsessionData(),
-          SizedBox(
-            height: 20.h,
-          ),
-          upcomingsessionData(),
         ],
       ),
     );
@@ -436,8 +445,8 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
       ),
       padding: EdgeInsets.only(bottom: 10.h),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
             margin: EdgeInsets.only(left: 20.w, top: 10.h),
@@ -456,14 +465,19 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
           SizedBox(
             height: 10.h,
           ),
-          Column(
-            children: [
-              courseCard(context),
-              SizedBox(
-                height: 19.h,
+          Container(
+            height: 400,
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  courseCard(context),
+                  SizedBox(
+                    height: 19.h,
+                  ),
+                  courseCard(context),
+                ],
               ),
-              courseCard(context),
-            ],
+            ),
           ),
           SizedBox(
             height: 10.h,
@@ -642,13 +656,21 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
                 ),
               ],
             ),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
+            Container(
+              height: 500.h,
+              child: SingleChildScrollView(
+                  child: Column(
+                children: [
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                ],
+              )),
+            )
           ],
         ),
       ),
