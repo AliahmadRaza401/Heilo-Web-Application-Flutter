@@ -388,12 +388,12 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
         children: [
           Container(
             // alignment: Alignment.centerLeft,
-            height: 32.h,
-            width: AppSizes.dynamicHeight(context, 0.2),
+            height: 40.h,
+            width: AppSizes.dynamicHeight(context, 0.24),
             decoration: BoxDecoration(
                 color: Colors.white, borderRadius: BorderRadius.circular(21)),
             child: Align(
-              alignment: Alignment.center,
+              alignment: Alignment.centerLeft,
               child: Text(
                 'Upcoming Sessions',
                 style: TextStyle(
@@ -408,26 +408,44 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
             height: 20.h,
           ),
           Container(
-            height: 550.h,
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  upcomingsessionData(),
-                  SizedBox(
-                    height: 20.h,
-                  ),
-                  upcomingsessionData(),
-                  SizedBox(
-                    height: 20.h,
-                  ),
-                  upcomingsessionData(),
-                  SizedBox(
-                    height: 20.h,
-                  ),
-                  upcomingsessionData(),
-                ],
-              ),
+            height: 600.h,
+            child: ListView(
+              shrinkWrap: true,
+              children: [
+                upcomingsessionData(),
+                SizedBox(
+                  height: 20.h,
+                ),
+                upcomingsessionData(),
+                SizedBox(
+                  height: 20.h,
+                ),
+                upcomingsessionData(),
+                SizedBox(
+                  height: 20.h,
+                ),
+                upcomingsessionData(),
+              ],
             ),
+            // child: SingleChildScrollView(
+            //   child: Column(
+            //     children: [
+            //       upcomingsessionData(),
+            //       SizedBox(
+            //         height: 20.h,
+            //       ),
+            //       upcomingsessionData(),
+            //       SizedBox(
+            //         height: 20.h,
+            //       ),
+            //       upcomingsessionData(),
+            //       SizedBox(
+            //         height: 20.h,
+            //       ),
+            //       upcomingsessionData(),
+            //     ],
+            //   ),
+            // ),
           ),
         ],
       ),
@@ -466,19 +484,34 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
             height: 10.h,
           ),
           Container(
-            height: 500,
-            child: SingleChildScrollView(
-              child: Column(
+              height: 600.h,
+              child: ListView(
+                shrinkWrap: true,
                 children: [
-                  courseCard(context),
-                  SizedBox(
-                    height: 19.h,
-                  ),
-                  courseCard(context),
+                   courseCard(context),
+              //       SizedBox(
+              //         height: 19.h,
+              //       ),
+                    courseCard(context),
+                    courseCard(context),
+                    courseCard(context),
+                    courseCard(context),
+
                 ],
+              )
+              // child: SingleChildScrollView(
+              //   child: Column(
+              //     children: [
+              //       courseCard(context),
+              //       SizedBox(
+              //         height: 19.h,
+              //       ),
+              //       courseCard(context),
+              //     ],
+              //   ),
+              // ),
+
               ),
-            ),
-          ),
           SizedBox(
             height: 10.h,
           ),
@@ -597,9 +630,10 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
               ],
             ),
           ),
-          SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: Column(
+          Container(
+            height: 600.h,
+            child: ListView(
+              shrinkWrap: true,
               children: [
                 favouriteInerWidet(),
                 favouriteInerWidet(),
@@ -609,9 +643,22 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
                 favouriteInerWidet(),
                 favouriteInerWidet(),
                 favouriteInerWidet(),
+                   favouriteInerWidet(),
+                favouriteInerWidet(),
+                favouriteInerWidet(),
+                favouriteInerWidet(),
+                favouriteInerWidet(),
               ],
             ),
           ),
+          // SingleChildScrollView(
+          //   scrollDirection: Axis.vertical,
+          //   child: Column(
+          //     children: [
+
+          //     ],
+          //   ),
+          // ),
         ],
       ),
     );
@@ -657,9 +704,9 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
               ],
             ),
             Container(
-              height: 500.h,
-              child: SingleChildScrollView(
-                  child: Column(
+              height: 560.h,
+              child: ListView(
+                shrinkWrap: true,
                 children: [
                   tutionInerWidget(),
                   tutionInerWidget(),
@@ -668,8 +715,23 @@ class _DashBoardMobileState extends State<DashBoardMobile> {
                   tutionInerWidget(),
                   tutionInerWidget(),
                   tutionInerWidget(),
+                  tutionInerWidget(),
+                  tutionInerWidget(),
+                  tutionInerWidget(),
                 ],
-              )),
+              ),
+              // child: SingleChildScrollView(
+              //     child: Column(
+              //   children: [
+              //     tutionInerWidget(),
+              //     tutionInerWidget(),
+              //     tutionInerWidget(),
+              //     tutionInerWidget(),
+              //     tutionInerWidget(),
+              //     tutionInerWidget(),
+              //     tutionInerWidget(),
+              //   ],
+              // )),
             )
           ],
         ),
@@ -858,7 +920,7 @@ Widget courseCard(context) {
   return Container(
     // width: 300.w,
     // padding: EdgeInsets.all(AppSizes.dynamicHeight(context, 0.01)),
-
+margin: EdgeInsets.only(bottom: 20.h),
     height: AppSizes.dynamicHeight(context, 0.30),
     decoration: BoxDecoration(
       color: AppColors.lightgreyborder,

@@ -18,6 +18,12 @@ class TeacherWalletMobile extends StatefulWidget {
 }
 
 class _TeacherWalletMobileState extends State<TeacherWalletMobile> {
+  String dropdownvalue = 'Total Balance';
+  var items = [
+    'Total Balance',
+    'Amount',
+    'Duration',
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,13 +75,13 @@ class _TeacherWalletMobileState extends State<TeacherWalletMobile> {
             Expanded(
                 flex: 5,
                 child: Container(
+                  // color: Colors.orange,
                   height: double.infinity,
-                  padding:
-                      EdgeInsets.only(top: AppSizes.dynamicHeight(context, .0)),
+
                   // color: AppColors.customYellow,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -125,7 +131,7 @@ class _TeacherWalletMobileState extends State<TeacherWalletMobile> {
                                       boldPopinText(
                                           'Tk. 1437.00',
                                           // AppSizes.dynamicWidth(context, .04),
-                                            65.sp,
+                                          65.sp,
                                           AppColors.customWhite)
                                     ],
                                   ),
@@ -190,7 +196,7 @@ class _TeacherWalletMobileState extends State<TeacherWalletMobile> {
                       Align(
                         alignment: Alignment.bottomCenter,
                         child: Container(
-                          height: AppSizes.dynamicHeight(context, .56),
+                          height: AppSizes.dynamicHeight(context, .6),
                           width: double.infinity,
                           // padding: EdgeInsets.all(30),
                           decoration: BoxDecoration(
@@ -204,35 +210,84 @@ class _TeacherWalletMobileState extends State<TeacherWalletMobile> {
                               // SizedBox(
                               //   height: 5,
                               // ),
-                              Expanded(
-                                  child: Container(
-                                decoration: BoxDecoration(
-                                    color: AppColors.customGrey,
-                                    borderRadius: BorderRadius.circular(0)),
-                                padding: EdgeInsets.symmetric(
-                                    vertical: 10.h,
-                                    horizontal:
-                                        AppSizes.dynamicWidth(context, .01)),
-                                child: ListView.builder(
-                                    itemCount: 15,
-                                    itemBuilder: ((context, index) {
-                                      return paymentDetailsRow(
-                                        AppColors.lightGrey,
-                                        '#1112',
-                                        'Safin Riaz',
-                                        '2 hours',
-                                        // 'Tk. 600.00',
-                                        // 'Tk. 1750',
-                                      );
-                                    })),
-                              ))
+                              dropdownvalue == 'Total Balance'
+                                  ? Expanded(
+                                      child: Container(
+                                      decoration: BoxDecoration(
+                                          color: AppColors.customGrey,
+                                          borderRadius:
+                                              BorderRadius.circular(0)),
+                                      padding: EdgeInsets.symmetric(
+                                          vertical: 10.h,
+                                          horizontal: AppSizes.dynamicWidth(
+                                              context, .01)),
+                                      child: ListView.builder(
+                                          itemCount: 15,
+                                          itemBuilder: ((context, index) {
+                                            return paymentDetailsRow(
+                                              AppColors.lightGrey,
+                                              '#1112',
+                                              'Safin Riaz',
+                                              '2 hours',
+                                              // 'Tk. 600.00',
+                                              // 'Tk. 1750',
+                                            );
+                                          })),
+                                    ))
+                                  : dropdownvalue == 'Amount'
+                                      ? Expanded(
+                                          child: Container(
+                                          decoration: BoxDecoration(
+                                              color: AppColors.customGrey,
+                                              borderRadius:
+                                                  BorderRadius.circular(0)),
+                                          padding: EdgeInsets.symmetric(
+                                              vertical: 10.h,
+                                              horizontal: AppSizes.dynamicWidth(
+                                                  context, .01)),
+                                          child: ListView.builder(
+                                              itemCount: 15,
+                                              itemBuilder: ((context, index) {
+                                                return paymentDetailsRow(
+                                                  AppColors.lightGrey,
+                                                  '#1112',
+                                                  'Safin Riaz',
+                                                  'Tk. 600',
+                                                  // 'Tk. 600.00',
+                                                  // 'Tk. 1750',
+                                                );
+                                              })),
+                                        ))
+                                      : Expanded(
+                                          child: Container(
+                                          decoration: BoxDecoration(
+                                              color: AppColors.customGrey,
+                                              borderRadius:
+                                                  BorderRadius.circular(0)),
+                                          padding: EdgeInsets.symmetric(
+                                              vertical: 10.h,
+                                              horizontal: AppSizes.dynamicWidth(
+                                                  context, .01)),
+                                          child: ListView.builder(
+                                              itemCount: 15,
+                                              itemBuilder: ((context, index) {
+                                                return paymentDetailsRow(
+                                                  AppColors.lightGrey,
+                                                  '#1112',
+                                                  'Safin Riaz',
+                                                  '2 hours',
+                                                  // 'Tk. 600.00',
+                                                  // 'Tk. 1750',
+                                                );
+                                              })),
+                                        )),
                             ],
                           ),
                         ),
                       )
                     ],
                   ),
-                )),
+                ))
           ],
         ),
       ),
@@ -266,15 +321,49 @@ class _TeacherWalletMobileState extends State<TeacherWalletMobile> {
             color: AppColors.customWhite,
           ),
           Container(
+            height: 40.h,
+            width: 600.w,
             padding: EdgeInsets.only(
-              top: 5,
-              bottom: 5,
-              left: 20,
-              right: 20,
+              top: 4.h,
+              bottom: 4.h,
+              left: 10.w,
+              right: 10.w,
             ),
             color: Colors.white,
-            child: text(context, 'Duration',
-                AppSizes.dynamicWidth(context, 0.04), AppColors.customBlack),
+            child: DropdownButton(
+              iconDisabledColor: const Color(0xff11B990),
+              // Initial Value
+              value: dropdownvalue,
+              isExpanded: true,
+              // Down Arrow Icon
+              icon: const Icon(Icons.keyboard_arrow_down),
+
+              // Array list of items
+              items: items.map((String items) {
+                return DropdownMenuItem(
+                  value: items,
+                  child: Text(
+                    items,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 65.sp,
+                    ),
+                  ),
+                );
+              }).toList(),
+              underline: SizedBox(),
+              // After selecting the desired option,it will
+              // change button value to selected value
+              onChanged: (String? newValue) {
+                setState(() {
+                  dropdownvalue = newValue!;
+                  print(dropdownvalue);
+                });
+              },
+            ),
+
+            // child: text(context, 'Duration',
+            //     AppSizes.dynamicWidth(context, 0.04), AppColors.customBlack),
           ),
           VerticalDivider(
             color: AppColors.customWhite,

@@ -13,9 +13,16 @@ import 'package:heilo/screens/teacher/teacher_Inbox/teacher_InboxMobile.dart';
 import 'package:heilo/screens/teacher/teacher_profile/teacherprofile_mobile.dart';
 import 'package:heilo/utils/config.dart';
 
-class TeacherDrawer extends StatelessWidget {
+int selectiveIndex = 2;
+
+class TeacherDrawer extends StatefulWidget {
   const TeacherDrawer({Key? key}) : super(key: key);
 
+  @override
+  State<TeacherDrawer> createState() => _TeacherDrawerState();
+}
+
+class _TeacherDrawerState extends State<TeacherDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -26,108 +33,160 @@ class TeacherDrawer extends StatelessWidget {
           DrawerHeader(
             child: Image.asset("assets/png/logo.png"),
           ),
-          ListTile(
-            leading: const ImageIcon(
-              AssetImage(
-                'assets/png/ondemand.png',
+          Container(
+            color:
+                selectiveIndex == 2 ? AppColors.greenDark : Colors.transparent,
+            child: ListTile(
+              leading: ImageIcon(
+                const AssetImage(
+                  'assets/png/ondemand.png',
+                ),
+                size: 100,
+                color: selectiveIndex == 2
+              ? AppColors.customWhite
+                      : Colors.black,
               ),
-              size: 100,
-              color: Colors.black,
-            ),
-            title: const Text(
-              'Dashboard',
-              style: TextStyle(
-                color: Colors.black,
+              title: Text(
+                'Dashboard',
+                style: TextStyle(
+                  color: selectiveIndex == 2
+                 ? AppColors.customWhite
+                      : Colors.black,
+                ),
               ),
+              onTap: () {
+                setState(() {
+                  selectiveIndex = 2;
+                });
+                teacherScafoldKey.currentState!.openEndDrawer();
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => TeacherSideMenuMobile()));
+              },
             ),
-            onTap: () {
-              //             if (studentScafoldKey.currentState.isDrawerOpen) {
-              // studentScafoldKey.currentState.openEndDrawer();
-// }
-              teacherScafoldKey.currentState!.openEndDrawer();
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => TeacherSideMenuMobile()));
-            },
           ),
-          ListTile(
-            leading: const ImageIcon(
-              AssetImage(
-                'assets/png/quiz.png',
+          Container(
+              color:
+                selectiveIndex == 3 ? AppColors.greenDark : Colors.transparent,
+            child: ListTile(
+              leading: ImageIcon(
+                const AssetImage(
+                  'assets/png/quiz.png',
+                ),
+                size: 100,
+                color: selectiveIndex == 3
+                 ? AppColors.customWhite
+                      : Colors.black,
               ),
-              size: 100,
-              color: Colors.black,
-            ),
-            title: const Text(
-              'Profile',
-              style: TextStyle(
-                color: Colors.black,
+              title: Text(
+                'Profile',
+                style: TextStyle(
+                  color: selectiveIndex == 3
+                  ? AppColors.customWhite
+                      : Colors.black,
+                ),
               ),
+              onTap: () {
+                 setState(() {
+                  selectiveIndex = 3;
+                });
+                teacherScafoldKey.currentState!.openEndDrawer();
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => TeacherProfileMobile()));
+              },
             ),
-            onTap: () {
-              teacherScafoldKey.currentState!.openEndDrawer();
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => TeacherProfileMobile()));
-            },
           ),
-          ListTile(
-            leading: const ImageIcon(
-              AssetImage(
-                'assets/png/dashboard.png',
+          Container(
+              color:
+                selectiveIndex == 4 ? AppColors.greenDark : Colors.transparent,
+            child: ListTile(
+              leading: ImageIcon(
+                const AssetImage(
+                  'assets/png/dashboard.png',
+                ),
+                size: 100,
+                color: selectiveIndex == 4
+                ? AppColors.customWhite
+                      : Colors.black,
               ),
-              size: 100,
-              color: Colors.black,
-            ),
-            title: const Text(
-              'Edit Profile ',
-              style: TextStyle(
-                color: Colors.black,
+              title: Text(
+                'Edit Profile ',
+                style: TextStyle(
+                  color: selectiveIndex == 4
+                 ? AppColors.customWhite
+                      : Colors.black,
+                ),
               ),
+              onTap: () {
+                 setState(() {
+                  selectiveIndex = 4;
+                });
+                teacherScafoldKey.currentState!.openEndDrawer();
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => TeacherEditProfileMobile()));
+              },
             ),
-            onTap: () {
-              teacherScafoldKey.currentState!.openEndDrawer();
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => TeacherEditProfileMobile()));
-            },
           ),
-          ListTile(
-            leading: const ImageIcon(
-              AssetImage(
-                'assets/png/profile.png',
+          Container(
+              color:
+                selectiveIndex == 5 ? AppColors.greenDark : Colors.transparent,
+            child: ListTile(
+              leading:  ImageIcon(
+                AssetImage(
+                  'assets/png/profile.png',
+                ),
+                size: 100,
+               color: selectiveIndex == 5
+             ? AppColors.customWhite
+                      : Colors.black,
               ),
-              size: 100,
-              color: Colors.black,
-            ),
-            title: const Text(
-              'Wallet',
-              style: TextStyle(
-                color: Colors.black,
+              title:  Text(
+                'Wallet',
+                style: TextStyle(
+                color: selectiveIndex == 5
+               ? AppColors.customWhite
+                      : Colors.black,
+                ),
               ),
+              onTap: () {
+                 setState(() {
+                  selectiveIndex = 5;
+                });
+                teacherScafoldKey.currentState!.openEndDrawer();
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => TeacherWalletMobile()));
+              },
             ),
-            onTap: () {
-              teacherScafoldKey.currentState!.openEndDrawer();
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => TeacherWalletMobile()));
-            },
           ),
-          ListTile(
-            leading: const ImageIcon(
-              AssetImage(
-                'assets/png/inbox.png',
+          Container(
+              color:
+                selectiveIndex == 6 ? AppColors.greenDark : Colors.transparent,
+            child: ListTile(
+              leading:  ImageIcon(
+                AssetImage(
+                  'assets/png/inbox.png',
+                ),
+                size: 100,
+                color: selectiveIndex == 6
+                     ? AppColors.customWhite
+                      : Colors.black,
               ),
-              size: 100,
-              color: Colors.black,
-            ),
-            title: const Text(
-              'Inbox',
-              style: TextStyle(
-                color: Colors.black,
+              title:  Text(
+                'Inbox',
+                style: TextStyle(
+                  color:  selectiveIndex == 6
+                      ? AppColors.customWhite
+                      : Colors.black,
+                ),
               ),
+              onTap: () {
+                 setState(() {
+                  selectiveIndex = 6;
+                });
+                teacherScafoldKey.currentState!.openEndDrawer();
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => TeacherInboxMobile()));
+              },
             ),
-            onTap: () {
-              teacherScafoldKey.currentState!.openEndDrawer();
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => TeacherInboxMobile()));
-            },
           ),
         ],
       ),

@@ -528,12 +528,12 @@ class _TeacherDashBoardMobileState extends State<TeacherDashBoardMobile> {
         children: [
           Container(
             // alignment: Alignment.centerLeft,
-            height: 30.h,
-            width: AppSizes.dynamicHeight(context, 0.2),
+            height: 40.h,
+            width: AppSizes.dynamicHeight(context, 0.3),
             decoration: BoxDecoration(
                 color: Colors.white, borderRadius: BorderRadius.circular(21)),
             child: Align(
-              alignment: Alignment.center,
+              alignment: Alignment.centerLeft,
               child: Text(
                 'Upcoming Sessions',
                 style: TextStyle(
@@ -548,19 +548,13 @@ class _TeacherDashBoardMobileState extends State<TeacherDashBoardMobile> {
             height: 10.h,
           ),
           Container(
-            height: 430.h,
+            height: 480.h,
             // color: Colors.black,
             child: ListView(
               shrinkWrap: true,
               children: [
                 upcomingsessionData(),
-                // SizedBox(
-                //   height: 10.h,
-                // ),
                 upcomingsessionData(),
-                // SizedBox(
-                //   height: 20.h,
-                // ),
                 upcomingsessionData(),
                 upcomingsessionData(),
                 upcomingsessionData(),
@@ -687,7 +681,7 @@ class _TeacherDashBoardMobileState extends State<TeacherDashBoardMobile> {
             ),
           ),
           Container(
-            height:400.h,
+            height: 480.h,
             child: ListView(
               shrinkWrap: true,
               children: [
@@ -757,7 +751,6 @@ class _TeacherDashBoardMobileState extends State<TeacherDashBoardMobile> {
 
   Widget tutionsCompleteCard() {
     return Container(
-      height: 500.h,
       // width: 743.w,
       // margin: EdgeInsets.only(top: 40.h),
       decoration: BoxDecoration(
@@ -765,48 +758,53 @@ class _TeacherDashBoardMobileState extends State<TeacherDashBoardMobile> {
         color: const Color(0xffF8F8F8),
       ),
       padding: EdgeInsets.only(bottom: 20.h),
-      child: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                margin: EdgeInsets.only(
+                    right: AppSizes.dynamicWidth(context, 0.02)),
+                height: AppSizes.dynamicHeight(context, 0.09),
+                width: AppSizes.dynamicWidth(context, 0.09),
+                decoration: const BoxDecoration(
+                    image: DecorationImage(
+                  image: AssetImage('assets/png/trophy.png'),
+                  fit: BoxFit.contain,
+                )),
+              ),
+              Text(
+                'Tutions Completed',
+                style: TextStyle(
+                  color: Colors.red,
+                  fontSize: 90.sp,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+          Container(
+            height:450.h,
+            child: ListView(
+              shrinkWrap: true,
               children: [
-                Container(
-                  margin: EdgeInsets.only(
-                      right: AppSizes.dynamicWidth(context, 0.02)),
-                  height: AppSizes.dynamicHeight(context, 0.09),
-                  width: AppSizes.dynamicWidth(context, 0.09),
-                  decoration: const BoxDecoration(
-                      image: DecorationImage(
-                    image: AssetImage('assets/png/trophy.png'),
-                    fit: BoxFit.contain,
-                  )),
-                ),
-                Text(
-                  'Tutions Completed',
-                  style: TextStyle(
-                    color: Colors.red,
-                    fontSize: 90.sp,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+                tutionInerWidget(),
+                tutionInerWidget(),
+                tutionInerWidget(),
+                tutionInerWidget(),
+                tutionInerWidget(),
+                tutionInerWidget(),
+                tutionInerWidget(),
+                tutionInerWidget(),
+                tutionInerWidget(),
+                tutionInerWidget(),
+                tutionInerWidget(),
               ],
             ),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-            tutionInerWidget(),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -910,7 +908,7 @@ class _TeacherDashBoardMobileState extends State<TeacherDashBoardMobile> {
 
   Widget favoriteTutiCard() {
     return Container(
-      height: 500.h,
+
       // width: 743.w,
       // margin: EdgeInsets.only(top: 40.h),
       decoration: BoxDecoration(
@@ -918,42 +916,36 @@ class _TeacherDashBoardMobileState extends State<TeacherDashBoardMobile> {
         color: const Color(0xffF8F8F8),
       ),
       padding: EdgeInsets.only(bottom: 20.h),
-      child: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            alignment: Alignment.centerLeft,
+            width: AppSizes.dynamicWidth(context, 0.5),
+            padding: EdgeInsets.symmetric(
+              vertical: 10.h,
+            ),
+            decoration: BoxDecoration(
+                color: Colors.white, borderRadius: BorderRadius.circular(21)),
+            child: Align(
               alignment: Alignment.centerLeft,
-              width: AppSizes.dynamicWidth(context, 0.5),
-              padding: EdgeInsets.symmetric(
-                vertical: 10.h,
-              ),
-              decoration: BoxDecoration(
-                  color: Colors.white, borderRadius: BorderRadius.circular(21)),
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Favourite Tutors',
-                  style: TextStyle(
-                    color: Colors.red,
-                    fontSize: 90.sp,
-                    fontWeight: FontWeight.bold,
-                  ),
+              child: Text(
+                'Favourite Tutors',
+                style: TextStyle(
+                  color: Colors.red,
+                  fontSize: 90.sp,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                width: double.infinity,
-                height: AppSizes.dynamicHeight(context, .55),
-                child: barChart(),
-              ),
-            )
-          ],
-        ),
+          ),
+          Container(
+            width: double.infinity,
+            height:480.h,
+            child: barChart(),
+          )
+        ],
       ),
     );
   }
