@@ -40,7 +40,7 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
         //     );
         //   },
         // ),
-   
+
         title: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
@@ -73,27 +73,84 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      text(context, 'Payment Request ', 56.sp, AppColors.green),
+                      text(context, 'Payment Request ', 90.sp, AppColors.green),
                       Container(
                         width: AppSizes.dynamicWidth(context, 1),
-                        height: AppSizes.dynamicHeight(context, .3),
+                        height: 450.h,
                         // color: Colors.amber,
                         child: Padding(
                           padding: EdgeInsets.only(
                               bottom: AppSizes.dynamicHeight(context, .01)),
-                          child: ListView.builder(
-                              itemCount: 5,
-                              itemBuilder: ((context, index) {
-                                return paymentsRow(
-                                    'assets/png/charles.png',
-                                    'Ruhul Amin Tusar',
-                                    '11/08/2021 12:30 pm',
-                                    'Bkash',
-                                    '01824696900',
-                                    '500',
-                                    '510',
-                                    'Pending');
-                              })),
+                          child: ListView(
+                            shrinkWrap: true,
+                            children: [
+                              paymentsRow(
+                                  'assets/png/charles.png',
+                                  'Ruhul Amin Tusar',
+                                  '11/08/2021 12:30 pm',
+                                  'Bkash',
+                                  '01824696900',
+                                  '500',
+                                  '510',
+                                  'Pending'),
+
+                                    paymentsRow(
+                                  'assets/png/charles.png',
+                                  'Ruhul Amin Tusar',
+                                  '11/08/2021 12:30 pm',
+                                  'Bkash',
+                                  '01824696900',
+                                  '500',
+                                  '510',
+                                  'Pending'),
+                                    paymentsRow(
+                                  'assets/png/charles.png',
+                                  'Ruhul Amin Tusar',
+                                  '11/08/2021 12:30 pm',
+                                  'Bkash',
+                                  '01824696900',
+                                  '500',
+                                  '510',
+                                  'Pending'),
+                                    paymentsRow(
+                                  'assets/png/charles.png',
+                                  'Ruhul Amin Tusar',
+                                  '11/08/2021 12:30 pm',
+                                  'Bkash',
+                                  '01824696900',
+                                  '500',
+                                  '510',
+                                  'Pending'),
+                                    paymentsRow(
+                                  'assets/png/charles.png',
+                                  'Ruhul Amin Tusar',
+                                  '11/08/2021 12:30 pm',
+                                  'Bkash',
+                                  '01824696900',
+                                  '500',
+                                  '510',
+                                  'Pending'),
+                                    paymentsRow(
+                                  'assets/png/charles.png',
+                                  'Ruhul Amin Tusar',
+                                  '11/08/2021 12:30 pm',
+                                  'Bkash',
+                                  '01824696900',
+                                  '500',
+                                  '510',
+                                  'Pending'),  paymentsRow(
+                                  'assets/png/charles.png',
+                                  'Ruhul Amin Tusar',
+                                  '11/08/2021 12:30 pm',
+                                  'Bkash',
+                                  '01824696900',
+                                  '500',
+                                  '510',
+                                  'Pending'),
+
+                            ],
+                          ),
+                        
                         ),
                       ),
                       Container(
@@ -215,12 +272,10 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
                         ),
                       ),
                       AppSizes.heightBox(context, .02),
-
                       Container(
-                        
-                        height:AppSizes.dynamicHeight(context, .4),
-                        padding: EdgeInsets.symmetric(
-                            vertical: 20, horizontal: 10),
+                        // height: AppSizes.dynamicHeight(context, .4),
+                        padding:
+                            EdgeInsets.symmetric(vertical: 20, horizontal: 10),
                         decoration: BoxDecoration(
                             color: AppColors.lightGrey,
                             borderRadius: BorderRadius.only(
@@ -228,37 +283,33 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
                         child: Column(
                           children: [
                             Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(vertical: 15),
+                              padding: const EdgeInsets.symmetric(vertical: 15),
                               child: Container(
-                                height: 20.h,
+                                height: 30.h,
                                 width: AppSizes.dynamicWidth(context, .8),
                                 decoration: BoxDecoration(
                                     // border: Border.all(color: AppColors.green),
                                     color: AppColors.customWhite,
-                                    borderRadius:
-                                        BorderRadius.circular(100)),
-                                padding:
-                                    EdgeInsets.symmetric(horizontal: 10),
+                                    borderRadius: BorderRadius.circular(100)),
+                                padding: EdgeInsets.symmetric(horizontal: 10),
                                 child: Align(
                                   alignment: Alignment.centerRight,
                                   child: TextField(
                                     cursorColor: AppColors.green,
                                     decoration: InputDecoration(
                                         border: InputBorder.none,
-                                        // suffixIcon: Icon(
-                                        //   Icons.search,
-                                        //   color: AppColors.greyText,
-                                        // ),
-                                        contentPadding: EdgeInsets.only(
-                                            top: 5, left: 10)),
+                                        suffixIcon: Icon(
+                                          Icons.search,
+                                          color: AppColors.greyText,
+                                        ),
+                                        contentPadding:
+                                            EdgeInsets.only(bottom: 20.h, right: 15.w)),
                                   ),
                                 ),
                               ),
                             ),
-
                             Container(
-                        height:AppSizes.dynamicHeight(context, .25),
+                              height: 400.h,
                               child: ListView.builder(
                                   itemCount: 15,
                                   itemBuilder: ((context, index) {
@@ -286,7 +337,7 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      width: 594.w,
+      width: 690.w,
       height: 60.h,
       padding: EdgeInsets.symmetric(horizontal: 10),
       decoration: BoxDecoration(
@@ -299,12 +350,12 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              text(context, normaltext, 43.sp, AppColors.customWhite,
+              text(context, normaltext, 45.sp, AppColors.customWhite,
                   alignText: TextAlign.center),
               Container(
                 child: Row(
                   children: [
-                    text(context, 'last 7 days', 42.sp, AppColors.customBlack,
+                    text(context, 'last 7 days', 65.sp, AppColors.customBlack,
                         alignText: TextAlign.center),
                     Icon(
                       Icons.keyboard_arrow_down,
@@ -316,7 +367,7 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
               )
             ],
           ),
-          boldPopinText(boldText, 43.sp, boldtextColor),
+          boldPopinText(boldText, 65.sp, boldtextColor),
         ],
       ),
     );
@@ -326,95 +377,103 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
       String id, String availableBalance, String amount, String status) {
     Size size = MediaQuery.of(context).size;
 
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8.0),
-      child: Container(
-        width: size.width * 1,
-        height: 46.h,
-        decoration: BoxDecoration(
-            color: AppColors.lightGreen,
-            borderRadius: BorderRadius.circular(30)),
-        padding: EdgeInsets.symmetric(horizontal: 5),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            CircleAvatar(
-              radius: AppSizes.dynamicHeight(context, .02),
-              backgroundImage: AssetImage(image),
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                text(context, name, 24.sp, AppColors.customBlack),
-                Padding(
-                  padding: const EdgeInsets.only(top: 2),
-                  child: text(context, date, 24.sp, AppColors.greyText),
-                ),
-              ],
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                text(context, method, 24.sp, AppColors.customBlack),
-                Padding(
-                  padding: const EdgeInsets.only(top: 2),
-                  child: text(context, id, 24.sp, AppColors.greyText),
-                ),
-              ],
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    text(context, 'Requested Amount: ', 24.sp,
-                        AppColors.greyText),
-                    text(context, amount, 24.sp, AppColors.customBlack),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 2),
-                      child: text(context, 'Available Balance: ', 24.sp,
-                          AppColors.greyText),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 2),
-                      child: text(context, availableBalance, 24.sp,
-                          AppColors.customBlack),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-            Container(
-              height: 20.h,
-              width: 276.w,
-              decoration: BoxDecoration(
-                  border: Border.all(color: AppColors.green),
-                  color: AppColors.customWhite,
-                  borderRadius: BorderRadius.circular(100)),
-              padding: EdgeInsets.symmetric(horizontal: 10),
-              child: dropDown(context, 'pending')
-              
-              // Row(
-              //   crossAxisAlignment: CrossAxisAlignment.center,
-              //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    return Container(
+      margin: EdgeInsets.only(top: 10.h),
+      padding: EdgeInsets.only(left: 30.w,right: 30.w,top: 10.h),
+      // width: size.width * 1,
+      height: 120.h,
+      decoration: BoxDecoration(
+        color: AppColors.lightGreen,
+        // color: Colors.red,
+        borderRadius: BorderRadius.circular(30.r),
+      ),
+      // padding: EdgeInsets.symmetric(horizontal: 5),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              CircleAvatar(
+                radius: AppSizes.dynamicHeight(context, .02),
+                backgroundImage: AssetImage(image),
+              ),
+              text(context, name, 60.sp, AppColors.customBlack),
+              text(context, date, 60.sp, AppColors.greyText),
+
+              //      Column(
+              //   crossAxisAlignment: CrossAxisAlignment.start,
+              //   mainAxisAlignment: MainAxisAlignment.center,
               //   children: [
-              //     text(context, status, 24.sp, AppColors.greyText),
-              //     Icon(
-              //       Icons.keyboard_arrow_down,
-              //       size: 10,
-              //       color: AppColors.green,
+              //     text(context, name, 50.sp, AppColors.customBlack),
+              //     Padding(
+              //       padding: const EdgeInsets.only(top: 2),
+              //       child: text(context, date, 50.sp, AppColors.greyText),
               //     ),
               //   ],
               // ),
-            ),
-          ],
-        ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              text(context, method, 60.sp, AppColors.customBlack),
+              text(context, id, 60.sp, AppColors.greyText),
+              // Column(
+              //   mainAxisAlignment: MainAxisAlignment.center,
+              //   children: [
+              //     text(context, method, 50.sp, AppColors.customBlack),
+              //     text(context, id, 50.sp, AppColors.greyText),
+              //     Padding(
+              //       padding: const EdgeInsets.only(top: 2),
+              //       child: text(context, id, 50.sp, AppColors.greyText),
+              //     ),
+              //   ],
+              // ),
+
+              //  Row(
+              //   children: [
+              //     text(context, 'Requested Amount: ',50.sp,
+              //         AppColors.greyText),
+              //     text(context, amount, 50.sp, AppColors.customBlack),
+              //   ],
+              // ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              text(context, 'Requested Amount: ', 60.sp, AppColors.greyText),
+              text(context, amount, 60.sp, AppColors.customBlack),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              text(context, 'Available Balance: ', 60.sp, AppColors.greyText),
+              text(context, availableBalance, 60.sp, AppColors.customBlack),
+            ],
+          ),
+          // Column(
+          //   mainAxisAlignment: MainAxisAlignment.center,
+          //   crossAxisAlignment: CrossAxisAlignment.start,
+          //   children: [
+          //     Row(
+          //       children: [
+          //         Padding(
+          //           padding: const EdgeInsets.only(top: 2),
+          //           child: text(context, 'Available Balance: ', 50.sp,
+          //               AppColors.greyText),
+          //         ),
+          //         // Padding(
+          //         //   padding: const EdgeInsets.only(top: 2),
+          //         //   child: text(context, availableBalance, 50.sp,
+          //         //       AppColors.customBlack),
+          //         // ),
+          //       ],
+          //     ),
+          //   ],
+          // ),
+        ],
       ),
     );
   }
@@ -433,13 +492,13 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            text(context, 'Serial  no.', 34.sp, AppColors.customBlack),
+            text(context, 'Serial  no.', 65.sp, AppColors.customBlack),
             VerticalDivider(),
-            text(context, 'Details', 34.sp, AppColors.customBlack),
+            text(context, 'Details', 65.sp, AppColors.customBlack),
             VerticalDivider(),
-            text(context, 'Date', 34.sp, AppColors.customBlack),
+            text(context, 'Date', 65.sp, AppColors.customBlack),
             VerticalDivider(),
-            text(context, 'Amount', 34.sp, AppColors.customBlack),
+            text(context, 'Amount', 65.sp, AppColors.customBlack),
           ],
         ),
       ),
@@ -454,7 +513,7 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Container(
         width: size.width,
-        height: 40.h,
+        height: 50.h,
         decoration: BoxDecoration(
             // color:bgColor ,
             borderRadius: BorderRadius.circular(100)),
@@ -464,10 +523,10 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                text(context, serial, 34.sp, AppColors.customBlack),
-                text(context, details, 34.sp, AppColors.customBlack),
-                text(context, date, 34.sp, AppColors.customBlack),
-                text(context, amount, 34.sp, AppColors.customBlack),
+                text(context, serial, 60.sp, AppColors.customBlack),
+                text(context, details, 60.sp, AppColors.customBlack),
+                text(context, date, 60.sp, AppColors.customBlack),
+                text(context, amount, 60.sp, AppColors.customBlack),
               ],
             ),
             Divider(color: dividerColor)
@@ -483,12 +542,12 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Container(
-        width: size.width * .9,
-        height: 37.h,
+        // width: size.width * .9,
+        height: 80.h,
         decoration: BoxDecoration(
             color: AppColors.customWhite,
-            borderRadius: BorderRadius.circular(30)),
-        padding: EdgeInsets.only(left: 20, right: 5),
+            borderRadius: BorderRadius.circular(30.r)),
+        padding: EdgeInsets.only(left: 10.w, right: 5.w),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -498,7 +557,7 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
               children: [
                 Row(
                   children: [
-                    text(context, name, AppSizes.dynamicWidth(context, .02),
+                    text(context, name,65.sp,
                         AppColors.customBlack,
                         bold: true),
                   ],
@@ -510,7 +569,7 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
                       child: text(
                           context,
                           id,
-                          AppSizes.dynamicWidth(context, .02),
+                         65.sp,
                           AppColors.greyText),
                     ),
                     Padding(
@@ -518,7 +577,7 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
                       child: text(
                           context,
                           gmial,
-                          AppSizes.dynamicWidth(context, .02),
+                          50.sp,
                           AppColors.greyText),
                     ),
                   ],
@@ -536,7 +595,7 @@ class _PaymentPageMobileState extends State<PaymentPageMobile> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  text(context, status, 10, AppColors.greyText),
+                  text(context, status, 50.sp, AppColors.greyText),
                   Icon(
                     Icons.keyboard_arrow_down,
                     size: 10,

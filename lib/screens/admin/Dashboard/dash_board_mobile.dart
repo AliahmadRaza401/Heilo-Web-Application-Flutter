@@ -42,7 +42,7 @@ class _AdminDashboardMobileState extends State<AdminDashboardMobile> {
         //     );
         //   },
         // ),
-     
+
         title: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
@@ -81,7 +81,7 @@ class _AdminDashboardMobileState extends State<AdminDashboardMobile> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          text(context, 'NUMBER OF STUDENTS', 46.sp,
+                          text(context, 'NUMBER OF STUDENTS', 65.sp,
                               Color(0xffC4C4C4),
                               bold: FontWeight.bold),
                           Text(
@@ -92,7 +92,7 @@ class _AdminDashboardMobileState extends State<AdminDashboardMobile> {
                                 fontSize: 72.sp,
                                 fontWeight: FontWeight.bold),
                           ), //0xffC4C4C4
-                          text(context, 'NUMBER OF TEACHERS', 46.sp,
+                          text(context, 'NUMBER OF TEACHERS', 65.sp,
                               Color(0xffC4C4C4),
                               bold: FontWeight.bold),
                           Text(
@@ -121,7 +121,7 @@ class _AdminDashboardMobileState extends State<AdminDashboardMobile> {
                               percent: 0.2,
                               center: Text(
                                 "20%",
-                                style: TextStyle(fontSize: 45.sp),
+                                style: TextStyle(fontSize: 65.sp),
                               ),
                               progressColor: AppColors.blue,
                               circularStrokeCap: CircularStrokeCap.round,
@@ -138,7 +138,7 @@ class _AdminDashboardMobileState extends State<AdminDashboardMobile> {
                               percent: 0.5,
                               center: Text(
                                 "50%",
-                                style: TextStyle(fontSize: 45.sp),
+                                style: TextStyle(fontSize: 65.sp),
                               ),
                               progressColor: AppColors.green,
                               // footer: text(
@@ -169,53 +169,21 @@ class _AdminDashboardMobileState extends State<AdminDashboardMobile> {
                           padding: EdgeInsets.only(
                               top: 30, left: 30, right: 30, bottom: 10),
                           child: barChart()),
-                      // Container(
-                      //   child: Column(
-                      //     crossAxisAlignment: CrossAxisAlignment.start,
-                      //     children: [
-                      //       text(context, 'ACTIVITY SCALE ', 34.sp,
-                      //           AppColors.greyText),
-                      //       text(context, 'in hours', 14.sp, AppColors.greyText),
-                      //     ],
-                      //   ),
-                      // ),
-                      // Positioned(
-                      //   right: 20,
-                      //   child: Container(
-                      //     height: 37.h,
-                      //     width: 156.w,
-                      //     decoration: BoxDecoration(
-                      //         border: Border.all(color: AppColors.green),
-                      //         color: AppColors.customWhite,
-                      //         borderRadius: BorderRadius.only(
-                      //             topLeft: Radius.circular(100),
-                      //             bottomLeft: Radius.circular(100))),
-                      //     padding: EdgeInsets.symmetric(horizontal: 10),
-                      //     child: Row(
-                      //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      //       children: [
-                      //         text(context, 'Last 7 Days', 14.sp,
-                      //             AppColors.greyText),
-                      //         Icon(
-                      //           Icons.keyboard_arrow_down,
-                      //           // size: 20,
-                      //           color: AppColors.green,
-                      //         ),
-                      //       ],
-                      //     ),
-                      //   ),
-                      // ),
                     ],
                   ),
                 ),
+
+                SizedBox(
+                  height: 20.h,
+                ),
                 upCommingSessions(),
-                AppSizes.heightBox(context, .02),
-                totalClasses()
-                // Row(
-                //   crossAxisAlignment: CrossAxisAlignment.end,
-                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                //   children: [, Expanded(child: )],
-                // )
+                SizedBox(
+                  height: 20.h,
+                ),
+                totalClasses(),
+                SizedBox(
+                  height: 20.h,
+                ),
               ],
             ),
           )),
@@ -227,68 +195,69 @@ class _AdminDashboardMobileState extends State<AdminDashboardMobile> {
 
     return Container(
       // color: Colors.amber,
-      height: AppSizes.dynamicHeight(context, .3),
-      width: size.width * .95,
-      child: Stack(
+      // height: AppSizes.dynamicHeight(context, .3),
+      width: size.width,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Positioned(
-            bottom: 0,
-            child: Container(
-                height: size.height * .285,
-                width: size.width * .95,
-                decoration: BoxDecoration(
-                    color: AppColors.lightGrey,
-                    borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(30.r),
-                        bottomRight: Radius.circular(30.r),
-                        topRight: Radius.circular(30.r))),
-                padding: EdgeInsets.only(top: 5, left: 5, right: 5, bottom: 2),
-                child: ListView.builder(
-                    itemCount: 7,
-                    itemBuilder: (context, index) {
-                      return detailsRowa();
-                    })),
-          ),
           Container(
-            height: 21.h,
-            width: 450.w,
+            height: 40.h,
+            width: 800.w,
             decoration: BoxDecoration(
                 color: AppColors.customWhite,
                 borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(100),
-                    bottomRight: Radius.circular(100))),
-            child: Center(
-              child:
-                  text(context, 'Upcoming Sessions', 40.sp, AppColors.greyText),
-            ),
+                    topRight: Radius.circular(50.r),
+                    bottomRight: Radius.circular(50.r))),
+            child:
+                text(context, 'Upcoming Sessions', 65.sp, AppColors.greyText),
           ),
-          // Positioned(
-          //   right: 40,
-          //   child: Container(
-          //     height: 51.h,
-          //     width: 262.w,
-          //     decoration: BoxDecoration(
-          //         border: Border.all(color: AppColors.green),
-          //         color: AppColors.customWhite,
-          //         borderRadius: BorderRadius.circular(100)),
-          //     padding: EdgeInsets.symmetric(horizontal: 10),
-          //     child: Align(
-          //       alignment: Alignment.centerRight,
-          //       child: TextField(
-          //         cursorColor: AppColors.green,
-          //         decoration: InputDecoration(
-          //             border: InputBorder.none,
-          //             suffixIcon: Icon(
-          //               Icons.search,
-          //               color: AppColors.green,
-          //             ),
-          //             contentPadding: EdgeInsets.only(top: 5, left: 10)),
-          //       ),
-          //     ),
-          //   ),
-          // ),
+          Container(
+            height: 400.h,
+            child: ListView(shrinkWrap: true, children: [
+              detailsRowa(),
+              detailsRowa(),
+              detailsRowa(),
+              detailsRowa(),
+              detailsRowa(),
+              detailsRowa(),
+              detailsRowa(),
+            ]),
+          ),
         ],
       ),
+      // child: Stack(
+      //   children: [
+      //     Positioned(
+      //       bottom: 0,
+      //       child: Container(
+      //           height: size.height * .285,
+      //           width: size.width * .95,
+      //           decoration: BoxDecoration(
+      //               color: AppColors.lightGrey,
+      //               borderRadius: BorderRadius.only(
+      //                   bottomLeft: Radius.circular(30.r),
+      //                   bottomRight: Radius.circular(30.r),
+      //                   topRight: Radius.circular(30.r))),
+      //           padding: EdgeInsets.only(top: 5, left: 5, right: 5, bottom: 2),
+      //           child: ListView.builder(
+      //               itemCount: 7,
+      //               itemBuilder: (context, index) {
+      //                 return detailsRowa();
+      //               })),
+      //     ),
+      //     Container(
+      //       height: 60.h,
+      //       width: 600.w,
+      //       decoration: BoxDecoration(
+      //           color: AppColors.customWhite,
+      //           borderRadius: BorderRadius.only(
+      //               topRight: Radius.circular(50.r),
+      //               bottomRight: Radius.circular(50.r))),
+      //       child: text(context, 'Upcoming Sessions', 65.sp, AppColors.greyText),
+      //     ),
+      //   ],
+      // ),
     );
   }
 
@@ -410,57 +379,96 @@ class _AdminDashboardMobileState extends State<AdminDashboardMobile> {
   Widget detailsRowa() {
     Size size = MediaQuery.of(context).size;
 
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8.0),
-      child: Container(
-        width: size.width * .82,
-        height: 30.h,
-        decoration: BoxDecoration(
-            color: AppColors.customWhite,
-            borderRadius: BorderRadius.circular(100)),
-        padding: EdgeInsets.symmetric(horizontal: 5),
-        child: Row(
-          children: [
-            Container(
-                height: 20.h,
-                width: 160.w,
-                decoration: BoxDecoration(
-                    border: Border.all(color: AppColors.green),
-                    color: AppColors.customWhite,
-                    borderRadius: BorderRadius.circular(100)),
-                padding: EdgeInsets.symmetric(horizontal: 10),
-                child: Center(
-                  child: text(
-                      context, '27th July, 2021', 12.sp, AppColors.greyText),
-                )),
-            SizedBox(
-              width: size.width * .008,
-            ),
-            VerticalDivider(
-              color: AppColors.green,
-            ),
-            text(context, 'ID 11121', 7, AppColors.greyText),
-            VerticalDivider(
-              color: AppColors.green,
-            ),
-            text(context, 'Ruhul Tusar', 7, AppColors.greyText),
-            VerticalDivider(
-              color: AppColors.green,
-            ),
-            Expanded(
-              child: Container(
-                child: Center(
-                  child: text(context, 'Topic- Polygons I Gerometry I Maths B',
-                      7, AppColors.greyText),
-                ),
-              ),
-            ),
-            VerticalDivider(
-              color: AppColors.green,
-            ),
-            text(context, 'Time- 4:30-5.30 pm', 7, AppColors.green),
-          ],
-        ),
+    return Container(
+      // width: size.width * .82,
+      margin: EdgeInsets.only(top: 15.h),
+
+      height: 150.h,
+      decoration: BoxDecoration(
+          color: AppColors.customWhite,
+          borderRadius: BorderRadius.circular(30.r)),
+      // padding: EdgeInsets.symmetric(horizontal: 5),
+      padding:
+          EdgeInsets.only(top: 10.h, bottom: 10.h, right: 20.w, left: 20.w),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                  height: 40.h,
+                  width: 550.w,
+                  decoration: BoxDecoration(
+                      border: Border.all(color: AppColors.green),
+                      color: AppColors.customWhite,
+                      borderRadius: BorderRadius.circular(50.r)),
+                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  child: Center(
+                    child: text(
+                        context, '27th July, 2021', 65.sp, AppColors.greyText),
+                  )),
+              text(context, 'ID 11121', 65.sp, AppColors.greyText),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              text(context, 'ID 11121', 65.sp, AppColors.greyText),
+              text(context, 'Ruhul Tusar', 65.sp, AppColors.greyText),
+            ],
+          ),
+          text(context, 'Topic- Polygons I Gerometry I Maths B', 65.sp,
+              AppColors.greyText),
+          text(context, 'Time- 4:30-5.30 pm', 65.sp, AppColors.green),
+
+          // Row(
+          //   children: [
+          //     Container(
+          //         height: 20.h,
+          //         width: 160.w,
+          //         decoration: BoxDecoration(
+          //             border: Border.all(color: AppColors.green),
+          //             color: AppColors.customWhite,
+          //             borderRadius: BorderRadius.circular(100)),
+          //         padding: EdgeInsets.symmetric(horizontal: 10),
+          //         child: Center(
+          //           child: text(context, '27th July, 2021', 12.sp,
+          //               AppColors.greyText),
+          //         )),
+          //     SizedBox(
+          //       width: size.width * .008,
+          //     ),
+          //     VerticalDivider(
+          //       color: AppColors.green,
+          //     ),
+          //     text(context, 'ID 11121', 7, AppColors.greyText),
+          //     VerticalDivider(
+          //       color: AppColors.green,
+          //     ),
+          //     text(context, 'Ruhul Tusar', 7, AppColors.greyText),
+          //     VerticalDivider(
+          //       color: AppColors.green,
+          //     ),
+          //     Expanded(
+          //       child: Container(
+          //         child: Center(
+          //           child: text(
+          //               context,
+          //               'Topic- Polygons I Gerometry I Maths B',
+          //               7,
+          //               AppColors.greyText),
+          //         ),
+          //       ),
+          //     ),
+          //     VerticalDivider(
+          //       color: AppColors.green,
+          //     ),
+          //     text(context, 'Time- 4:30-5.30 pm', 7, AppColors.green),
+          //   ],
+          // ),
+        ],
       ),
     );
   }

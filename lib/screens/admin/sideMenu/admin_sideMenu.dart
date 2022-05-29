@@ -63,8 +63,8 @@ class _AdminSideMenuState extends State<AdminSideMenu> {
               ),
               child: ConstrainedBox(
                 constraints: BoxConstraints(
-                  maxHeight: 46.h,
-                  maxWidth: 80.w,
+                  maxHeight: 120.h,
+                  maxWidth: 250.w,
                 ),
                 child: Container(
                   margin: EdgeInsets.symmetric(

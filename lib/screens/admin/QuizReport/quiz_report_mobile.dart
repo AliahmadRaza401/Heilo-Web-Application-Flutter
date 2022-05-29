@@ -43,7 +43,7 @@ class _QuizReportMobileState extends State<QuizReportMobile> {
         //     );
         //   },
         // ),
-  
+
         title: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
@@ -66,14 +66,14 @@ class _QuizReportMobileState extends State<QuizReportMobile> {
           borderRadius: BorderRadius.circular(30.r),
         ),
         child: Container(
-          height: AppSizes.dynamicHeight(context, .8),
+          // height: AppSizes.dynamicHeight(context, .8),
           // color: Colors.amber,
           child: SingleChildScrollView(
             child: Column(
               children: [
                 Container(
-                  height: AppSizes.dynamicHeight(context, .5),
-                  color: Colors.green,
+                  height: AppSizes.dynamicHeight(context, .44),
+                  // color: Colors.green,
                   padding: EdgeInsets.symmetric(horizontal: 2, vertical: 10),
                   child: Column(
                     children: [
@@ -165,7 +165,8 @@ class _QuizReportMobileState extends State<QuizReportMobile> {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.all(10),
+                  // height: 600.h,
+                  // padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
                       // color: AppColors.blue,
                       borderRadius:
@@ -195,19 +196,66 @@ class _QuizReportMobileState extends State<QuizReportMobile> {
                                 AppColors.greyText),
                           ),
                         ),
+                        SizedBox(
+                          height: 15.h,
+                        ),
                         Container(
-                            height: 300,
-                            // width: size.width * .9,
-                            // color: Colors.black,
-                            child: ListView.builder(
-                                itemCount: 9,
-                                itemBuilder: (context, index) {
-                                  return ratingRow(
-                                      'assets/png/charles.png',
-                                      'Ruhul Amin Tusar',
-                                      3.5,
-                                      'Lorem ipsum dolor sit amet,');
-                                }))
+                          height: 600.h,
+                          // width: size.width * .9,
+                          // color: Colors.black,
+                          child: ListView(
+                            shrinkWrap: true,
+                            children: [
+                              ratingRow(
+                                  'assets/png/charles.png',
+                                  'Ruhul Amin Tusar',
+                                  3.5,
+                                  'Lorem ipsum dolor sit amet,'),
+                              ratingRow(
+                                  'assets/png/charles.png',
+                                  'Ruhul Amin Tusar',
+                                  3.5,
+                                  'Lorem ipsum dolor sit amet,'),
+                              ratingRow(
+                                  'assets/png/charles.png',
+                                  'Ruhul Amin Tusar',
+                                  3.5,
+                                  'Lorem ipsum dolor sit amet,'),
+                              ratingRow(
+                                  'assets/png/charles.png',
+                                  'Ruhul Amin Tusar',
+                                  3.5,
+                                  'Lorem ipsum dolor sit amet,'),
+                              ratingRow(
+                                  'assets/png/charles.png',
+                                  'Ruhul Amin Tusar',
+                                  3.5,
+                                  'Lorem ipsum dolor sit amet,'),
+                              ratingRow(
+                                  'assets/png/charles.png',
+                                  'Ruhul Amin Tusar',
+                                  3.5,
+                                  'Lorem ipsum dolor sit amet,'),
+                              ratingRow(
+                                  'assets/png/charles.png',
+                                  'Ruhul Amin Tusar',
+                                  3.5,
+                                  'Lorem ipsum dolor sit amet,'),
+                            ],
+                          ),
+                          // child: ListView.builder(
+                          //     itemCount: 9,
+                          //     itemBuilder: (context, index) {
+                          //       return ratingRow(
+                          //           'assets/png/charles.png',
+                          //           'Ruhul Amin Tusar',
+                          //           3.5,
+                          //           'Lorem ipsum dolor sit amet,');
+                          //     })
+                        ),
+                        SizedBox(
+                          height: 10.h,
+                        ),
                       ],
                     ),
                   ),
@@ -221,58 +269,87 @@ class _QuizReportMobileState extends State<QuizReportMobile> {
   }
 
   Widget ratingRow(String img, String name, double rating, String review) {
-    return Row(
-      // crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Column(
-          children: [
-            CircleAvatar(
-              radius: MediaQuery.of(context).size.height * .025,
-              backgroundImage: AssetImage(img),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: text(context, name, 55.sp, AppColors.customBlack),
-            )
-          ],
-        ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              color: Colors.white,
-              child: RatingBar.builder(
-                initialRating: rating,
-                minRating: 1,
-                direction: Axis.horizontal,
-                allowHalfRating: true,
-                itemCount: 5,
-                itemSize: 10,
-                itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-                itemBuilder: (context, _) => Icon(
-                  Icons.star,
-                  color: Colors.amber,
-                ),
-                onRatingUpdate: (rating) {
-                  print(rating);
-                },
+    // return Row(
+    // crossAxisAlignment: CrossAxisAlignment.start,
+    // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+    return Container(
+      margin: EdgeInsets.only(left: 20.w, right: 20.w, top: 10.h),
+      decoration: BoxDecoration(
+          color: AppColors.lightGreen,
+          borderRadius: BorderRadius.circular(30.r)),
+      padding:
+          EdgeInsets.only(left: 20.w, right: 20.w, top: 15.h, bottom: 15.h),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              CircleAvatar(
+                radius: MediaQuery.of(context).size.height * .025,
+                backgroundImage: AssetImage(img),
               ),
-            ),
-            text(context, review, 55.sp, AppColors.greyText,
-                maxLines: 3, alignText: TextAlign.justify),
-            // Container(
-            //   // color:Colors.amber,
-            //   width: AppSizes.dynamicWidth(context, .6),
-            //   child: Wrap(
-            //     children: [
-            //       text(context, review, 40.sp, AppColors.greyText,
-            //           maxLines: 3, alignText: TextAlign.justify),
-            //     ],
-            //   ),
-            // )
-          ],
-        )
+              text(context, name, 65.sp, AppColors.customBlack),
+            ],
+          ),
+          SizedBox(
+            height: 5.h,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                color: Colors.white,
+                child: RatingBar.builder(
+                  initialRating: rating,
+                  minRating: 1,
+                  direction: Axis.horizontal,
+                  allowHalfRating: true,
+                  itemCount: 5,
+                  itemSize: 10,
+                  itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
+                  itemBuilder: (context, _) => Icon(
+                    Icons.star,
+                    color: Colors.amber,
+                  ),
+                  onRatingUpdate: (rating) {
+                    print(rating);
+                  },
+                ),
+              ),
+              text(context, review, 55.sp, AppColors.greyText,
+                  maxLines: 3, alignText: TextAlign.justify),
+            ],
+          ),
+          SizedBox(
+            height: 5.h,
+          ),
+          Row(
+            children: [
+              text(context, review, 40.sp, AppColors.greyText,
+                  maxLines: 3, alignText: TextAlign.justify),
+            ],
+          ),
+          SizedBox(
+            height: 5.h,
+          ),
+        ],
+      ),
+    );
+    Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        // Container(
+        //   // color:Colors.amber,
+        //   width: AppSizes.dynamicWidth(context, .6),
+        //   child: Wrap(
+        //     children: [
+        //       text(context, review, 40.sp, AppColors.greyText,
+        //           maxLines: 3, alignText: TextAlign.justify),
+        //     ],
+        //   ),
+        // )
       ],
     );
   }

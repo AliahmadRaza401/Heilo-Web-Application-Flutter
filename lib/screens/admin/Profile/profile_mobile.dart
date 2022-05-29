@@ -40,7 +40,7 @@ class _ProfileMobileState extends State<ProfileMobile> {
         //     );
         //   },
         // ),
-   
+     
         title: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
@@ -65,11 +65,11 @@ class _ProfileMobileState extends State<ProfileMobile> {
           padding: EdgeInsets.only(left: 5),
           child: SingleChildScrollView(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
                   width: AppSizes.dynamicWidth(context,.98),
-                  height: AppSizes.dynamicHeight(context, .2),
+                  height: AppSizes.dynamicHeight(context, .33),
                   decoration: BoxDecoration(
                       color: AppColors.customWhite,
                       border: Border.all(color: AppColors.green),
@@ -80,6 +80,8 @@ class _ProfileMobileState extends State<ProfileMobile> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Spacer(flex: 1,),
                           CircleAvatar(
@@ -107,29 +109,29 @@ class _ProfileMobileState extends State<ProfileMobile> {
                           text(
                               context,
                               'Zarin Tajnim ',
-                              AppSizes.dynamicWidth(context, .02),
+                              65.sp,
                               AppColors.darkGrey,
                               bold: true),
                           Padding(
                             padding: const EdgeInsets.only(top: 2),
                             child: text(
                                 context,
-                                'Maple Leaf International School and College',
-                                AppSizes.dynamicWidth(context, .017),
+                                'Maple Leaf Inter',
+                                   65.sp,
                                 AppColors.greyText),
                           ),
                           Spacer(),
                           text(
                               context,
                               'Address',
-                              AppSizes.dynamicWidth(context, .02),
+                                65.sp,
                               AppColors.green),
                           Padding(
                             padding: const EdgeInsets.only(top: 2),
                             child: text(
                                 context,
-                                '274, sher-e-bangla road, Dhaka- 1209',
-                                AppSizes.dynamicWidth(context, .015),
+                                '274, sher-e-',
+                                65.sp,
                                 AppColors.greyText),
                           ),
                           Spacer(),
@@ -142,8 +144,7 @@ class _ProfileMobileState extends State<ProfileMobile> {
                                   text(
                                       context,
                                       'Gender',
-                                      AppSizes.dynamicWidth(
-                                          context, .02),
+                                       65.sp,
                                       AppColors.green),
                                   Padding(
                                     padding:
@@ -151,8 +152,7 @@ class _ProfileMobileState extends State<ProfileMobile> {
                                     child: text(
                                         context,
                                         'Femalr ',
-                                        AppSizes.dynamicWidth(
-                                            context, .02),
+                                           65.sp,
                                         AppColors.greyText),
                                   ),
                                 ],
@@ -166,8 +166,7 @@ class _ProfileMobileState extends State<ProfileMobile> {
                                     text(
                                         context,
                                         'Join Date',
-                                        AppSizes.dynamicWidth(
-                                            context, .02),
+                                         65.sp,
                                         AppColors.green),
                                     Padding(
                                       padding: const EdgeInsets.only(
@@ -175,8 +174,7 @@ class _ProfileMobileState extends State<ProfileMobile> {
                                       child: text(
                                           context,
                                           '11/09/2020',
-                                          AppSizes.dynamicWidth(
-                                              context, .009),
+                                             65.sp,
                                           AppColors.greyText),
                                     ),
                                   ],
@@ -221,12 +219,12 @@ class _ProfileMobileState extends State<ProfileMobile> {
                           text(
                               context,
                               'TUITION AVAIL',
-                              40.sp,
+                              60.sp,
                               // AppSizes.dynamicWidth(context, .015),
                               AppColors.green),
                           boldPopinText(
                               '41',
-                              65.sp,
+                              60.sp,
               
                               // AppSizes.dynamicWidth(context, .018),
                               AppColors.darkGrey)
@@ -239,13 +237,13 @@ class _ProfileMobileState extends State<ProfileMobile> {
                           text(
                               context,
                               'QUIZ APPEARED ',
-                              40.sp,
+                              60.sp,
               
                               // AppSizes.dynamicWidth(context, .015),
                               AppColors.green),
                           boldPopinText(
                               '25',
-                              65.sp,
+                              60.sp,
               
                               // AppSizes.dynamicWidth(context, .018),
                               AppColors.darkGrey)
@@ -258,13 +256,13 @@ class _ProfileMobileState extends State<ProfileMobile> {
                           text(
                               context,
                               'TOTAL MONEY SPEND ',
-                              40.sp,
+                              60.sp,
               
                               // AppSizes.dynamicWidth(context, .015),
                               AppColors.darkGrey),
                           boldPopinText(
                               'TK. 2511',
-                              65.sp,
+                              60.sp,
                               // AppSizes.dynamicWidth(context, .018),
                               AppColors.green)
                         ],
@@ -373,7 +371,7 @@ class _ProfileMobileState extends State<ProfileMobile> {
                     topRight: Radius.circular(100),
                     bottomRight: Radius.circular(100))),
             child: Center(
-              child: text(context, 'Upcoming Sessions', 10, AppColors.greyText),
+              child: text(context, 'Upcoming Sessions',65.sp, AppColors.greyText),
             ),
           ),
          
@@ -388,11 +386,11 @@ class _ProfileMobileState extends State<ProfileMobile> {
       padding: const EdgeInsets.symmetric(vertical: 2),
       child: Container(
         width: size.width ,
-        height: 31.h,
+        height: 50.h,
         decoration: BoxDecoration(
             color: AppColors.customWhite,
-            borderRadius: BorderRadius.circular(100)),
-        padding: EdgeInsets.symmetric(horizontal: 2),
+            borderRadius: BorderRadius.circular(30)),
+        // padding: EdgeInsets.symmetric(horizontal: 2),
         child: Row(
           children: [
             Container(
@@ -405,7 +403,7 @@ class _ProfileMobileState extends State<ProfileMobile> {
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Center(
                   child:
-                      text(context, '27th July, 2021', 15.sp, AppColors.greyText),
+                      text(context, '27th July, 2021', 55.sp, AppColors.greyText),
                 )),
             SizedBox(
               width: size.width * .002,
@@ -413,26 +411,24 @@ class _ProfileMobileState extends State<ProfileMobile> {
             VerticalDivider(
               color: AppColors.green,
             ),
-            text(context, 'ID 11121', 30.sp, AppColors.greyText),
+            text(context, 'ID 11121', 55.sp, AppColors.greyText),
             VerticalDivider(
               color: AppColors.green,
             ),
-            text(context, 'Ruhul Tusar',30.sp, AppColors.greyText),
+            text(context, 'Ruhul Tusar',55.sp, AppColors.greyText),
             VerticalDivider(
               color: AppColors.green,
             ),
-            Expanded(
-              child: Container(
-                child: Center(
-                  child: text(context, 'Topic- Polygons I Gerometry I Maths B',
-                      30.sp, AppColors.greyText),
-                ),
+            Container(
+              child: Center(
+                child: text(context, 'Topic- Polygons ',
+                    55.sp, AppColors.greyText),
               ),
             ),
             VerticalDivider(
               color: AppColors.green,
             ),
-            text(context, 'Time- 4:30-5.30 pm', 30.sp, AppColors.green),
+            text(context, 'Time- 4:30-5.30     ', 55.sp, AppColors.green),
           ],
         ),
       ),
@@ -442,19 +438,19 @@ class _ProfileMobileState extends State<ProfileMobile> {
 
   Widget smallContainer(String greenText, String greyText) {
     return Container(
-      height: 40.h,
+      height: 85.h,
       width: 500.w,
       decoration: BoxDecoration(
           border: Border.all(color: AppColors.greyText),
           borderRadius: BorderRadius.circular(15.r)),
-      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+      padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 5.h),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          text(context, greenText, AppSizes.dynamicWidth(context, .015),
+          text(context, greenText,60.sp,
               AppColors.green),
-          text(context, greyText, AppSizes.dynamicWidth(context, .015),
+          text(context, greyText, 60.sp,
               AppColors.greyText),
         ],
       ),
