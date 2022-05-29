@@ -52,7 +52,7 @@ Widget dropDown(BuildContext context, String title) {
 
 Widget dropDownMobile(BuildContext context, String title) {
   return DropdownButton<String>(
-    hint: text(context, title, AppSizes.dynamicWidth(context, .017),
+    hint: text(context, title, 65.sp,
         AppColors.greyText),
     underline: Container(),
     isExpanded: true,
@@ -61,7 +61,7 @@ Widget dropDownMobile(BuildContext context, String title) {
     items: <String>['Item 1', 'Item 2', 'Item 3', 'Item 4'].map((String value) {
       return DropdownMenuItem<String>(
         value: value,
-        child: text(context, value, AppSizes.dynamicWidth(context, .015),
+        child: text(context, value, 65.sp,
             AppColors.greyText),
       );
     }).toList(),

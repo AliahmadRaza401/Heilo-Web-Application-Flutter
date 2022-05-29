@@ -39,7 +39,7 @@ class _ProfitMobileState extends State<ProfitMobile> {
         //     );
         //   },
         // ),
-     
+
         title: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
@@ -72,14 +72,13 @@ class _ProfitMobileState extends State<ProfitMobile> {
                     profitContainer('\$ 2511', 'GROSS PROFIT', AppColors.green),
                   ],
                 ),
-
                 Container(
                   // color: Colors.pink,
                   height: 200,
                   width: AppSizes.dynamicWidth(context, .95),
                   child: barChart(),
                 ),
-                AppSizes.heightBox(context,.02),
+                AppSizes.heightBox(context, .02),
                 Container(
                   height: AppSizes.dynamicHeight(context, .4),
                   width: AppSizes.dynamicWidth(context, .95),
@@ -119,9 +118,9 @@ class _ProfitMobileState extends State<ProfitMobile> {
                                           AppColors.lightGrey,
                                           '#1112',
                                           'Safin Riaz',
-                                          '2 hours',
-                                          'Tk. 600.00',
-                                          'Tk. 1750');
+                                          '2 hours');
+                                      // 'Tk. 600.00',
+                                      // 'Tk. 1750');
                                     })),
                               ))
                             ],
@@ -129,7 +128,7 @@ class _ProfitMobileState extends State<ProfitMobile> {
                         ),
                       ),
                       Container(
-                        height: 25.h,
+                        height: 30.h,
                         width: 600.w,
                         decoration: BoxDecoration(
                             color: AppColors.customWhite,
@@ -137,7 +136,7 @@ class _ProfitMobileState extends State<ProfitMobile> {
                                 topRight: Radius.circular(100),
                                 bottomRight: Radius.circular(100))),
                         child: Center(
-                          child: text(context, 'Payment history', 49.sp,
+                          child: text(context, 'Payment history', 65.sp,
                               AppColors.greyText),
                         ),
                       ),
@@ -154,8 +153,9 @@ class _ProfitMobileState extends State<ProfitMobile> {
                   height: AppSizes.dynamicHeight(context, .9),
                   decoration: BoxDecoration(
                       color: AppColors.lightGrey,
-                      borderRadius:
-                          BorderRadius.only(topLeft: Radius.circular(30.r),bottomLeft:  Radius.circular(30.r))),
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(30.r),
+                          bottomLeft: Radius.circular(30.r))),
                   child: Column(
                     children: [
                       Expanded(
@@ -205,7 +205,7 @@ class _ProfitMobileState extends State<ProfitMobile> {
                                           width: 2.w),
                                       borderRadius: BorderRadius.circular(100)),
                                   child: Center(
-                                    child: text(context, 'Confirm.', 46.sp,
+                                    child: text(context, 'Confirm.', 65.sp,
                                         AppColors.customWhite),
                                   ),
                                 ),
@@ -216,7 +216,8 @@ class _ProfitMobileState extends State<ProfitMobile> {
                       )),
                       Expanded(
                           child: Padding(
-                        padding: EdgeInsets.only(top: AppSizes.dynamicHeight(context, .015)),
+                        padding: EdgeInsets.only(
+                            top: AppSizes.dynamicHeight(context, .015)),
                         child: Container(
                           width: double.infinity,
                           decoration: BoxDecoration(
@@ -233,35 +234,36 @@ class _ProfitMobileState extends State<ProfitMobile> {
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   Container(
-                                    height: 27.h,
-                                    width: 356.w,
-                                    decoration: BoxDecoration(
-                                        border:
-                                            Border.all(color: AppColors.green),
-                                        color: AppColors.customWhite,
-                                        borderRadius: BorderRadius.only(
-                                            topLeft: Radius.circular(10),
-                                            bottomLeft: Radius.circular(10))),
-                                    padding:
-                                        EdgeInsets.symmetric(horizontal: 10),
-                                    child: dropDownMobile(context, 'Last 7 days')
-                                    // Row(
-                                    //   mainAxisAlignment:
-                                    //       MainAxisAlignment.spaceEvenly,
-                                    //   children: [
-                                    //     text(
-                                    //         context,
-                                    //         'Last 7 Days',
-                                    //         AppSizes.dynamicWidth(
-                                    //             context, .02),
-                                    //         AppColors.greyText),
-                                    //     Icon(
-                                    //       Icons.keyboard_arrow_down,
-                                    //       size: 10,
-                                    //     ),
-                                    //   ],
-                                    // ),
-                                  ),
+                                      height: 30.h,
+                                      width:450.w,
+                                      decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: AppColors.green),
+                                          color: AppColors.customWhite,
+                                          borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(10),
+                                              bottomLeft: Radius.circular(10))),
+                                      padding:
+                                          EdgeInsets.symmetric(horizontal: 10),
+                                      child:
+                                          dropDownMobile(context, 'Last 7 days')
+                                      // Row(
+                                      //   mainAxisAlignment:
+                                      //       MainAxisAlignment.spaceEvenly,
+                                      //   children: [
+                                      //     text(
+                                      //         context,
+                                      //         'Last 7 Days',
+                                      //         AppSizes.dynamicWidth(
+                                      //             context, .02),
+                                      //         AppColors.greyText),
+                                      //     Icon(
+                                      //       Icons.keyboard_arrow_down,
+                                      //       size: 10,
+                                      //     ),
+                                      //   ],
+                                      // ),
+                                      ),
                                 ],
                               ),
                               Row(
@@ -271,7 +273,9 @@ class _ProfitMobileState extends State<ProfitMobile> {
                                   Container(
                                     height: 25.h,
                                     width: 409.w,
-                                    padding: EdgeInsets.symmetric(horizontal: AppSizes.dynamicWidth(context, .02)),
+                                    padding: EdgeInsets.symmetric(
+                                        horizontal: AppSizes.dynamicWidth(
+                                            context, .02)),
                                     decoration: BoxDecoration(
                                         color: AppColors.lightGrey,
                                         // border: Border.all(
@@ -283,7 +287,7 @@ class _ProfitMobileState extends State<ProfitMobile> {
                                       child: text(
                                           context,
                                           'Division Wise Stats.',
-                                          AppSizes.dynamicWidth(context, .017),
+                                         65.sp,
                                           AppColors.customBlack),
                                     ),
                                   ),
@@ -291,8 +295,8 @@ class _ProfitMobileState extends State<ProfitMobile> {
                                     padding: EdgeInsets.only(
                                         right: AppSizes.dynamicWidth(
                                             context, .03)),
-                                    child: text(
-                                        context, 'Count.', 45.sp, AppColors.green),
+                                    child: text(context, 'Count.', 65.sp,
+                                        AppColors.green),
                                   )
                                 ],
                               ),
@@ -327,12 +331,12 @@ class _ProfitMobileState extends State<ProfitMobile> {
             Padding(
               padding:
                   EdgeInsets.only(left: AppSizes.dynamicWidth(context, .03)),
-              child: text(context, division, 40.sp, AppColors.greyText),
+              child: text(context, division, 65.sp, AppColors.greyText),
             ),
             Padding(
               padding:
                   EdgeInsets.only(right: AppSizes.dynamicWidth(context, .03)),
-              child: text(context, count, 40.sp, AppColors.greyText),
+              child: text(context, count,65.sp, AppColors.greyText),
             )
           ],
         ),
@@ -347,7 +351,7 @@ class _ProfitMobileState extends State<ProfitMobile> {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4),
       child: Container(
-        width: size.width * .95,
+        // width: size.width * .95,
         height: 31.h,
         decoration: BoxDecoration(
             color: bgColor, borderRadius: BorderRadius.circular(100)),
@@ -355,23 +359,19 @@ class _ProfitMobileState extends State<ProfitMobile> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            text(context, 'Serial  no.', 40.sp, AppColors.customBlack),
+            text(context, 'Serial  no.', 65.sp, AppColors.customBlack),
             VerticalDivider(
               color: AppColors.customWhite,
             ),
-            text(context, 'Details', 40.sp, AppColors.customBlack),
+            text(context, 'Details', 65.sp, AppColors.customBlack),
             VerticalDivider(
               color: AppColors.customWhite,
             ),
-            text(context, 'Duration', 40.sp, AppColors.customBlack),
+            text(context, 'Duration', 65.sp, AppColors.customBlack),
             VerticalDivider(
               color: AppColors.customWhite,
             ),
-            text(context, 'Amount', 40.sp, AppColors.customBlack),
-            VerticalDivider(
-              color: AppColors.customWhite,
-            ),
-            text(context, 'Total Balance.', 40.sp, AppColors.customBlack),
+            // text(context, 'Total Balance.', 65.sp, AppColors.customBlack),
             SizedBox(
               width: AppSizes.dynamicWidth(context, .01),
             )
@@ -381,8 +381,13 @@ class _ProfitMobileState extends State<ProfitMobile> {
     );
   }
 
-  Widget paymentDetailsRow(Color dividerColor, String serial, String details,
-      String duration, String amount, String totalBalance) {
+  Widget paymentDetailsRow(
+    Color dividerColor,
+    String serial,
+    String details,
+    String duration,
+    //  String amount, String totalBalance
+  ) {
     Size size = MediaQuery.of(context).size;
 
     return Padding(
@@ -406,8 +411,8 @@ class _ProfitMobileState extends State<ProfitMobile> {
                         left: AppSizes.dynamicWidth(context, .01)),
                     child: Container(
                         // color: AppColors.blue,
-                        child:
-                            text(context, serial, 40.sp, AppColors.customBlack)),
+                        child: text(
+                            context, serial, 65.sp, AppColors.customBlack)),
                   ),
                 ),
                 Expanded(
@@ -417,8 +422,8 @@ class _ProfitMobileState extends State<ProfitMobile> {
                         left: AppSizes.dynamicWidth(context, .01)),
                     child: Container(
                         // color: Colors.pink,
-                        child:
-                            text(context, details,40.sp, AppColors.customBlack)),
+                        child: text(
+                            context, details,  65.sp, AppColors.customBlack)),
                   ),
                 ),
                 Expanded(
@@ -428,41 +433,41 @@ class _ProfitMobileState extends State<ProfitMobile> {
                         left: AppSizes.dynamicWidth(context, .01)),
                     child: Container(
                         // color: Colors.red,
-                        child:
-                            text(context, duration, 40.sp, AppColors.customBlack)),
+                        child: text(
+                            context, duration,  65.sp, AppColors.customBlack)),
                   ),
                 ),
-                Expanded(
-                  flex: 3,
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                        left: AppSizes.dynamicWidth(context, .02)),
-                    child: Container(
-                        // color: Colors.amber,
-                        child: text(context, amount, 40.sp, AppColors.green)),
-                  ),
-                ),
-                Expanded(
-                  flex: 3,
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                        left: AppSizes.dynamicWidth(context, .045)),
-                    child: Container(
-                        // color: Colors.brown,
-                        child: Row(
-                      children: [
-                        text(context, totalBalance, 40.sp, AppColors.customBlack),
-                        Padding(
-                            padding: EdgeInsets.only(left: 10),
-                            child: Icon(
-                              Icons.arrow_downward,
-                              color: AppColors.green,
-                              size: AppSizes.dynamicHeight(context, .015),
-                            ))
-                      ],
-                    )),
-                  ),
-                ),
+                // Expanded(
+                //   flex: 3,
+                //   child: Padding(
+                //     padding: EdgeInsets.only(
+                //         left: AppSizes.dynamicWidth(context, .02)),
+                //     child: Container(
+                //         // color: Colors.amber,
+                //         child: text(context, amount, 40.sp, AppColors.green)),
+                //   ),
+                // ),
+                // Expanded(
+                //   flex: 3,
+                //   child: Padding(
+                //     padding: EdgeInsets.only(
+                //         left: AppSizes.dynamicWidth(context, .045)),
+                //     child: Container(
+                //         // color: Colors.brown,
+                //         child: Row(
+                //       children: [
+                //         text(context, totalBalance, 40.sp, AppColors.customBlack),
+                //         Padding(
+                //             padding: EdgeInsets.only(left: 10),
+                //             child: Icon(
+                //               Icons.arrow_downward,
+                //               color: AppColors.green,
+                //               size: AppSizes.dynamicHeight(context, .015),
+                //             ))
+                //       ],
+                //     )),
+                //   ),
+                // ),
               ],
             ),
             Divider(color: dividerColor)
@@ -478,7 +483,7 @@ class _ProfitMobileState extends State<ProfitMobile> {
 
     return Container(
       height: 69.h,
-      width: 440.w,
+      width: 600.w,
       // width:size.width * .15,
       // height:size.height * .15,
       decoration: BoxDecoration(
@@ -490,9 +495,9 @@ class _ProfitMobileState extends State<ProfitMobile> {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          text(context, normaltext, 44.sp, AppColors.greyText,
+          text(context, normaltext, 65.sp, AppColors.greyText,
               alignText: TextAlign.center),
-          boldPopinText(boldText, 48.sp, boldtextColor),
+          boldPopinText(boldText, 65.sp, boldtextColor),
         ],
       ),
     );
@@ -504,8 +509,8 @@ class _ProfitMobileState extends State<ProfitMobile> {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      width: size.width * .3,
-      height: size.height * .07,
+      width:700.w,
+      height: 60.h,
       decoration: BoxDecoration(
         color: AppColors.green,
         borderRadius: BorderRadius.circular(15.r),
@@ -520,12 +525,12 @@ class _ProfitMobileState extends State<ProfitMobile> {
           children: [
             text(
               context, 'Enter amount\nto withrdraw',
-              AppSizes.dynamicWidth(context, .025), AppColors.customWhite,
+             65.sp, AppColors.customWhite,
               // alignText: TextAlign.center
             ),
             Padding(
               padding: const EdgeInsets.only(left: 8.0),
-              child: text(context, amount, AppSizes.dynamicWidth(context, .03),
+              child: text(context, amount,65.sp,
                   AppColors.customWhite,
                   alignText: TextAlign.center),
             ),
@@ -543,7 +548,7 @@ class _ProfitMobileState extends State<ProfitMobile> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           text(
-            context, title, AppSizes.dynamicWidth(context, .025),
+            context, title, 65.sp,
             AppColors.greyText,
             // alignText: TextAlign.center
           ),
