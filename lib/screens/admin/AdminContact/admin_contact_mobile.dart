@@ -23,21 +23,22 @@ class _AdminContactMobileState extends State<AdminContactMobile> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
-        leading: Builder(
-          builder: (BuildContext context) {
-            return IconButton(
-              icon: const Icon(
-                Icons.menu,
-                color: Colors.black,
-                size: 30, // Changing Drawer Icon Size
-              ),
-              onPressed: () {
-                adminScafoldKey.currentState!.openDrawer();
-              },
-              tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-            );
-          },
-        ),
+        // leading: Builder(
+        //   builder: (BuildContext context) {
+        //     return IconButton(
+        //       icon: const Icon(
+        //         Icons.menu,
+        //         color: Colors.black,
+        //         size: 30, // Changing Drawer Icon Size
+        //       ),
+        //       onPressed: () {
+        //         adminScafoldKey.currentState!.openDrawer();
+        //       },
+        //       tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+        //     );
+        //   },
+        // ),
+
         title: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
@@ -53,7 +54,7 @@ class _AdminContactMobileState extends State<AdminContactMobile> {
           ],
         ),
       ),
-      drawer: AdminDrawer(),
+      // drawer: AdminDrawer(),
       body: Container(
         decoration: BoxDecoration(
           color: AppColors.customWhite,
@@ -73,7 +74,7 @@ class _AdminContactMobileState extends State<AdminContactMobile> {
                     vertical: AppSizes.dynamicHeight(context, .01)),
                 child: Container(
                   width: double.infinity,
-                  height: AppSizes.dynamicHeight(context, .6),
+                  // height: AppSizes.dynamicHeight(context, .6),
                   decoration: BoxDecoration(
                     color: AppColors.lightGrey,
                     borderRadius: BorderRadius.circular(30.r),
@@ -85,7 +86,7 @@ class _AdminContactMobileState extends State<AdminContactMobile> {
                     children: [
                       Container(
                         // color: Colors.amber,
-                        height: AppSizes.dynamicHeight(context, .3),
+                        // height: AppSizes.dynamicHeight(context, .3),
                         child: Column(
                           children: [
                             Padding(
@@ -107,10 +108,7 @@ class _AdminContactMobileState extends State<AdminContactMobile> {
                                         borderRadius:
                                             BorderRadius.circular(100)),
                                     child: Center(
-                                      child: text(
-                                          context,
-                                          'Teacher ',
-                                          AppSizes.dynamicWidth(context, .022),
+                                      child: text(context, 'Teacher ', 65.sp,
                                           AppColors.customWhite),
                                     ),
                                   ),
@@ -145,31 +143,90 @@ class _AdminContactMobileState extends State<AdminContactMobile> {
                             ),
                             Row(
                               children: [
-                                text(
-                                    context,
-                                    'All Messages ( 41)',
-                                    AppSizes.dynamicWidth(context, .02),
+                                text(context, 'All Messages ( 41)', 65.sp,
                                     AppColors.greyText),
                               ],
                             ),
                             Container(
-                                height: AppSizes.dynamicHeight(context, .2),
+                                // color: Colors.green,
+                                height: 500.h,
                                 child: Padding(
                                   padding: EdgeInsets.only(
                                       bottom:
                                           AppSizes.dynamicHeight(context, .01)),
-                                  child: ListView.builder(
-                                      itemCount: 5,
-                                      itemBuilder: ((context, index) {
-                                        return messageRow(
-                                            'assets/png/26170505_879427062237691_7434598743530738532_o 1.png',
-                                            'Sakib Abdullah',
-                                            'Dhaka University',
-                                            '01824696900',
-                                            'write2ratusar@gmail.com',
-                                            'You: Bhaiya kalke 5 tay set koro',
-                                            '11-09-2021 (6:15 pm)');
-                                      })),
+                                  child: ListView(
+                                    shrinkWrap: true,
+                                    children: [
+                                      messageRow(
+                                          'assets/png/26170505_879427062237691_7434598743530738532_o 1.png',
+                                          'Sakib Abdullah',
+                                          'Dhaka University',
+                                          '01824696900',
+                                          'write2ratusar@gmail.com',
+                                          'You: Bhaiya kalke 5 tay set koro',
+                                          '11-09-2021 (6:15 pm)'),
+                                      messageRow(
+                                          'assets/png/26170505_879427062237691_7434598743530738532_o 1.png',
+                                          'Sakib Abdullah',
+                                          'Dhaka University',
+                                          '01824696900',
+                                          'write2ratusar@gmail.com',
+                                          'You: Bhaiya kalke 5 tay set koro',
+                                          '11-09-2021 (6:15 pm)'),
+                                      messageRow(
+                                          'assets/png/26170505_879427062237691_7434598743530738532_o 1.png',
+                                          'Sakib Abdullah',
+                                          'Dhaka University',
+                                          '01824696900',
+                                          'write2ratusar@gmail.com',
+                                          'You: Bhaiya kalke 5 tay set koro',
+                                          '11-09-2021 (6:15 pm)'),
+                                      messageRow(
+                                          'assets/png/26170505_879427062237691_7434598743530738532_o 1.png',
+                                          'Sakib Abdullah',
+                                          'Dhaka University',
+                                          '01824696900',
+                                          'write2ratusar@gmail.com',
+                                          'You: Bhaiya kalke 5 tay set koro',
+                                          '11-09-2021 (6:15 pm)'),
+                                      messageRow(
+                                          'assets/png/26170505_879427062237691_7434598743530738532_o 1.png',
+                                          'Sakib Abdullah',
+                                          'Dhaka University',
+                                          '01824696900',
+                                          'write2ratusar@gmail.com',
+                                          'You: Bhaiya kalke 5 tay set koro',
+                                          '11-09-2021 (6:15 pm)'),
+                                      messageRow(
+                                          'assets/png/26170505_879427062237691_7434598743530738532_o 1.png',
+                                          'Sakib Abdullah',
+                                          'Dhaka University',
+                                          '01824696900',
+                                          'write2ratusar@gmail.com',
+                                          'You: Bhaiya kalke 5 tay set koro',
+                                          '11-09-2021 (6:15 pm)'),
+                                      messageRow(
+                                          'assets/png/26170505_879427062237691_7434598743530738532_o 1.png',
+                                          'Sakib Abdullah',
+                                          'Dhaka University',
+                                          '01824696900',
+                                          'write2ratusar@gmail.com',
+                                          'You: Bhaiya kalke 5 tay set koro',
+                                          '11-09-2021 (6:15 pm)'),
+                                    ],
+                                  ),
+                                  // child: ListView.(
+                                  //     itemCount: 5,
+                                  //     itemBuilder: ((context, index) {
+                                  //       return messageRow(
+                                  //           'assets/png/26170505_879427062237691_7434598743530738532_o 1.png',
+                                  //           'Sakib Abdullah',
+                                  //           'Dhaka University',
+                                  //           '01824696900',
+                                  //           'write2ratusar@gmail.com',
+                                  //           'You: Bhaiya kalke 5 tay set koro',
+                                  //           '11-09-2021 (6:15 pm)');
+                                  //     })),
                                 ))
                           ],
                         ),
@@ -179,31 +236,27 @@ class _AdminContactMobileState extends State<AdminContactMobile> {
                       ),
                       Container(
                         // color: Colors.blue,
-                        height: AppSizes.dynamicHeight(context, .25),
+                        height: AppSizes.dynamicHeight(context, .18),
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Padding(
                               padding: EdgeInsets.only(
                                   top: AppSizes.dynamicHeight(context, .01)),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Column(
                                     crossAxisAlignment: CrossAxisAlignment.end,
                                     children: [
-                                      text(
-                                          context,
-                                          'Ruhul Amin Tusar',
-                                          AppSizes.dynamicWidth(context, .025),
+                                      text(context, 'Ruhul Amin Tusar', 65.sp,
                                           AppColors.customBlack),
                                       Padding(
                                         padding: const EdgeInsets.only(top: 4),
                                         child: text(
                                             context,
                                             'Maple Leaf International School',
-                                            AppSizes.dynamicWidth(
-                                                context, .025),
+                                            65.sp,
                                             AppColors.greyText),
                                       ),
                                     ],
@@ -231,8 +284,8 @@ class _AdminContactMobileState extends State<AdminContactMobile> {
                                   children: [
                                     text(
                                         context,
-                                        'Lorem ipsum dolor sit amet, ',
-                                        AppSizes.dynamicWidth(context, .02),
+                                        'Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, ',
+                                        60.sp,
                                         AppColors.greyText,
                                         alignText: TextAlign.justify,
                                         maxLines: 5),
@@ -243,6 +296,9 @@ class _AdminContactMobileState extends State<AdminContactMobile> {
                           ],
                         ),
                         // color: AppColors.blue,
+                      ),
+                      SizedBox(
+                        height: 20.h,
                       )
                     ],
                   ),
@@ -253,7 +309,7 @@ class _AdminContactMobileState extends State<AdminContactMobile> {
                     vertical: AppSizes.dynamicHeight(context, .01)),
                 child: Container(
                   width: double.infinity,
-                  height: AppSizes.dynamicHeight(context, .6),
+                  // height: AppSizes.dynamicHeight(context, .6),
                   decoration: BoxDecoration(
                     color: AppColors.lightGrey,
                     borderRadius: BorderRadius.circular(30.r),
@@ -265,9 +321,10 @@ class _AdminContactMobileState extends State<AdminContactMobile> {
                     children: [
                       Container(
                         // color: Colors.amber,
-                        height: AppSizes.dynamicHeight(context, .3),
+                        // height: AppSizes.dynamicHeight(context, .3),
                         child: Column(
                           children: [
+                            
                             Padding(
                               padding: EdgeInsets.symmetric(
                                   vertical:
@@ -287,10 +344,7 @@ class _AdminContactMobileState extends State<AdminContactMobile> {
                                         borderRadius:
                                             BorderRadius.circular(100)),
                                     child: Center(
-                                      child: text(
-                                          context,
-                                          'Student ',
-                                          AppSizes.dynamicWidth(context, .022),
+                                      child: text(context, 'Student ', 65.sp,
                                           AppColors.customWhite),
                                     ),
                                   ),
@@ -303,7 +357,7 @@ class _AdminContactMobileState extends State<AdminContactMobile> {
                                         borderRadius:
                                             BorderRadius.circular(100)),
                                     padding:
-                                        EdgeInsets.symmetric(horizontal: 2),
+                                        EdgeInsets.symmetric(horizontal: 2,),
                                     child: Align(
                                       alignment: Alignment.centerRight,
                                       child: TextField(
@@ -325,31 +379,87 @@ class _AdminContactMobileState extends State<AdminContactMobile> {
                             ),
                             Row(
                               children: [
-                                text(
-                                    context,
-                                    'All Messages ( 41)',
-                                    AppSizes.dynamicWidth(context, .02),
+                                text(context, 'All Messages ( 41)', 65.sp,
                                     AppColors.greyText),
                               ],
                             ),
                             Container(
-                                height: AppSizes.dynamicHeight(context, .2),
+                              margin: EdgeInsets.only(top: 10.h),
+                                // color: Colors.black,
+                                height: 400.h,
                                 child: Padding(
                                   padding: EdgeInsets.only(
                                       bottom:
                                           AppSizes.dynamicHeight(context, .01)),
-                                  child: ListView.builder(
-                                      itemCount: 5,
-                                      itemBuilder: ((context, index) {
-                                        return messageRow(
-                                            'assets/png/26170505_879427062237691_7434598743530738532_o 1.png',
-                                            'Sakib Abdullah',
-                                            'Dhaka University',
-                                            '01824696900',
-                                            'write2ratusar@gmail.com',
-                                            'You: Bhaiya',
-                                            '11-09-2021 (6:15 pm)');
-                                      })),
+                                  child: ListView(
+                                    shrinkWrap: true,
+                                    children: [
+                                      messageRow(
+                                          'assets/png/26170505_879427062237691_7434598743530738532_o 1.png',
+                                          'Sakib Abdullah',
+                                          'Dhaka University',
+                                          '01824696900',
+                                          'write2ratusar@gmail.com',
+                                          'You: Bhaiya',
+                                          '11-09-2021 (6:15 pm)'),
+                                      messageRow(
+                                          'assets/png/26170505_879427062237691_7434598743530738532_o 1.png',
+                                          'Sakib Abdullah',
+                                          'Dhaka University',
+                                          '01824696900',
+                                          'write2ratusar@gmail.com',
+                                          'You: Bhaiya',
+                                          '11-09-2021 (6:15 pm)'),
+                                      messageRow(
+                                          'assets/png/26170505_879427062237691_7434598743530738532_o 1.png',
+                                          'Sakib Abdullah',
+                                          'Dhaka University',
+                                          '01824696900',
+                                          'write2ratusar@gmail.com',
+                                          'You: Bhaiya',
+                                          '11-09-2021 (6:15 pm)'),
+                                      messageRow(
+                                          'assets/png/26170505_879427062237691_7434598743530738532_o 1.png',
+                                          'Sakib Abdullah',
+                                          'Dhaka University',
+                                          '01824696900',
+                                          'write2ratusar@gmail.com',
+                                          'You: Bhaiya',
+                                          '11-09-2021 (6:15 pm)'),
+                                      messageRow(
+                                          'assets/png/26170505_879427062237691_7434598743530738532_o 1.png',
+                                          'Sakib Abdullah',
+                                          'Dhaka University',
+                                          '01824696900',
+                                          'write2ratusar@gmail.com',
+                                          'You: Bhaiya',
+                                          '11-09-2021 (6:15 pm)'),
+                                      messageRow(
+                                          'assets/png/26170505_879427062237691_7434598743530738532_o 1.png',
+                                          'Sakib Abdullah',
+                                          'Dhaka University',
+                                          '01824696900',
+                                          'write2ratusar@gmail.com',
+                                          'You: Bhaiya',
+                                          '11-09-2021 (6:15 pm)'),
+                                      messageRow(
+                                          'assets/png/26170505_879427062237691_7434598743530738532_o 1.png',
+                                          'Sakib Abdullah',
+                                          'Dhaka University',
+                                          '01824696900',
+                                          'write2ratusar@gmail.com',
+                                          'You: Bhaiya',
+                                          '11-09-2021 (6:15 pm)'),
+                                      messageRow(
+                                          'assets/png/26170505_879427062237691_7434598743530738532_o 1.png',
+                                          'Sakib Abdullah',
+                                          'Dhaka University',
+                                          '01824696900',
+                                          'write2ratusar@gmail.com',
+                                          'You: Bhaiya',
+                                          '11-09-2021 (6:15 pm)'),
+                                    ],
+                                  ),
                                 ))
                           ],
                         ),
@@ -359,31 +469,27 @@ class _AdminContactMobileState extends State<AdminContactMobile> {
                       ),
                       Container(
                         // color: Colors.blue,
-                        height: AppSizes.dynamicHeight(context, .25),
+                        height: 250.h,
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Padding(
                               padding: EdgeInsets.only(
                                   top: AppSizes.dynamicHeight(context, .01)),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Column(
                                     crossAxisAlignment: CrossAxisAlignment.end,
                                     children: [
-                                      text(
-                                          context,
-                                          'Ruhul Amin Tusar',
-                                          AppSizes.dynamicWidth(context, .025),
+                                      text(context, 'Ruhul Amin Tusar', 65.sp,
                                           AppColors.customBlack),
                                       Padding(
                                         padding: const EdgeInsets.only(top: 4),
                                         child: text(
                                             context,
                                             'Maple Leaf International School',
-                                            AppSizes.dynamicWidth(
-                                                context, .025),
+                                            65.sp,
                                             AppColors.greyText),
                                       ),
                                     ],
@@ -399,6 +505,9 @@ class _AdminContactMobileState extends State<AdminContactMobile> {
                                   )
                                 ],
                               ),
+                            ),
+                            SizedBox(
+                              height: 20.h,
                             ),
                             Padding(
                               padding: const EdgeInsets.only(top: 4),
@@ -412,7 +521,7 @@ class _AdminContactMobileState extends State<AdminContactMobile> {
                                     text(
                                         context,
                                         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor vulputate ut mauris sem. At platea erat diam sed proin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor vulputate ut mauris sem. At platea erat diam sed proin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor vulputate ut mauris sem. At platea erat diam sed proin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor vulputate ut mauris sem. At platea erat diam sed proin.',
-                                        AppSizes.dynamicWidth(context, .02),
+                                        65.sp,
                                         AppColors.greyText,
                                         alignText: TextAlign.justify,
                                         maxLines: 5),
@@ -444,24 +553,24 @@ class _AdminContactMobileState extends State<AdminContactMobile> {
     String message,
     String date,
   ) {
-    Size size = MediaQuery.of(context).size;
+    // Size size = MediaQuery.of(context).size;
 
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Container(
-        width: size.width * .75,
+        // width: size.width * .75,
         height: 56.h,
         decoration: BoxDecoration(
           color: AppColors.customWhite,
           // borderRadius: BorderRadius.circular(30)
         ),
-        padding: EdgeInsets.only(right: 10),
+        // padding: EdgeInsets.only(right: 10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
               height: double.infinity,
-              width: 10,
+              width: 10.w,
               color: AppColors.green,
             ),
             CircleAvatar(
@@ -472,12 +581,10 @@ class _AdminContactMobileState extends State<AdminContactMobile> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                text(context, name, AppSizes.dynamicWidth(context, .02),
-                    AppColors.customBlack),
+                text(context, name, 55.sp, AppColors.customBlack),
                 Padding(
                   padding: const EdgeInsets.only(top: 2),
-                  child: text(context, uni, AppSizes.dynamicWidth(context, .02),
-                      AppColors.greyText),
+                  child: text(context, uni, 55.sp, AppColors.greyText),
                 ),
               ],
             ),
@@ -488,24 +595,23 @@ class _AdminContactMobileState extends State<AdminContactMobile> {
                     AppColors.customBlack),
                 Padding(
                   padding: const EdgeInsets.only(top: 2),
-                  child: text(context, email,
-                      AppSizes.dynamicWidth(context, .02), AppColors.greyText),
+                  child: text(context, email, 55.sp, AppColors.greyText),
                 ),
               ],
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                text(context, message, AppSizes.dynamicWidth(context, .02),
-                    AppColors.greyText),
-                Padding(
-                  padding: const EdgeInsets.only(top: 2),
-                  child: text(context, date,
-                      AppSizes.dynamicWidth(context, .02), AppColors.greyText),
-                ),
-              ],
-            ),
+            // Column(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   crossAxisAlignment: CrossAxisAlignment.start,
+            //   children: [
+            //     text(context, message, 55.sp,
+            //         AppColors.greyText),
+            //     Padding(
+            //       padding: const EdgeInsets.only(top: 2),
+            //       child: text(context, date,
+            //           55.sp, AppColors.greyText),
+            //     ),
+            //   ],
+            // ),
           ],
         ),
       ),

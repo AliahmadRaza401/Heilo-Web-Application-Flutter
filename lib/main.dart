@@ -43,11 +43,10 @@ class MyApp extends StatelessWidget {
             );
           },
           // home: Intro(),
-          // home: const AdminSideMenu(),
+          home: const AdminSideMenu(),
           // home: StudentPhase1(),
-
           // home: const StudentSideMenu(),
-          home: const TeacherSideMenu(),
+          // home: const TeacherSideMenu(),
         );
       },
     );
