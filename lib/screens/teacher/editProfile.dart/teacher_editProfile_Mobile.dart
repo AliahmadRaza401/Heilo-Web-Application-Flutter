@@ -633,7 +633,7 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
                   left: AppSizes.dynamicWidth(context, 0.02),
                   top: AppSizes.dynamicHeight(context, 0.01),
                 ),
-                height: AppSizes.dynamicHeight(context, 0.13),
+                height: AppSizes.dynamicHeight(context, 0.11),
                 width: AppSizes.dynamicWidth(context, 0.4),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
@@ -691,7 +691,7 @@ class _TeacherEditProfileMobileState extends State<TeacherEditProfileMobile> {
                   left: AppSizes.dynamicWidth(context, 0.02),
                   top: AppSizes.dynamicHeight(context, 0.01),
                 ),
-                height: AppSizes.dynamicHeight(context, 0.09),
+              height: AppSizes.dynamicHeight(context, 0.11),
                 width: AppSizes.dynamicWidth(context, 0.4),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),

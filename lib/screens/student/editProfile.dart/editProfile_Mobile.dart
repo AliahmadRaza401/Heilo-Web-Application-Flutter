@@ -379,7 +379,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
               // top: AppSizes.dynamicHeight(context, 0.01),
             ),
             width: AppSizes.dynamicWidth(context, 0.9),
-            height: AppSizes.dynamicHeight(context, 0.09),
+           height: AppSizes.dynamicHeight(context, 0.11),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
@@ -420,7 +420,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                   left: AppSizes.dynamicWidth(context, 0.02),
                   top: AppSizes.dynamicHeight(context, 0.01),
                 ),
-                height: AppSizes.dynamicHeight(context, 0.09),
+                height: AppSizes.dynamicHeight(context, 0.11),
                 width: AppSizes.dynamicWidth(context, 0.4),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
@@ -479,7 +479,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
                   left: AppSizes.dynamicWidth(context, 0.02),
                   top: AppSizes.dynamicHeight(context, 0.01),
                 ),
-                height: AppSizes.dynamicHeight(context, 0.09),
+               height: AppSizes.dynamicHeight(context, 0.11),
                 width: AppSizes.dynamicWidth(context, 0.4),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
@@ -520,7 +520,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
               left: AppSizes.dynamicWidth(context, 0.02),
               top: AppSizes.dynamicHeight(context, 0.01),
             ),
-            height: AppSizes.dynamicHeight(context, 0.09),
+           height: AppSizes.dynamicHeight(context, 0.11),
             width: AppSizes.dynamicWidth(context, 0.9),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
@@ -583,7 +583,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
               // top: AppSizes.dynamicHeight(context, 0.01),
             ),
             width: AppSizes.dynamicWidth(context, 0.9),
-            height: AppSizes.dynamicHeight(context, 0.09),
+           height: AppSizes.dynamicHeight(context, 0.11),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
@@ -622,7 +622,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
               top: AppSizes.dynamicHeight(context, 0.01),
             ),
             width: AppSizes.dynamicWidth(context, 0.9),
-            height: AppSizes.dynamicHeight(context, 0.09),
+           height: AppSizes.dynamicHeight(context, 0.11),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
@@ -721,7 +721,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
               // top: AppSizes.dynamicHeight(context, 0.01),
             ),
             width: AppSizes.dynamicWidth(context, 0.9),
-            height: AppSizes.dynamicHeight(context, 0.09),
+           height: AppSizes.dynamicHeight(context, 0.11),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
@@ -760,7 +760,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
               // top: AppSizes.dynamicHeight(context, 0.01),
             ),
             width: AppSizes.dynamicWidth(context, 0.9),
-            height: AppSizes.dynamicHeight(context, 0.09),
+           height: AppSizes.dynamicHeight(context, 0.11),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
@@ -821,7 +821,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
               top: AppSizes.dynamicHeight(context, 0.01),
             ),
             width: AppSizes.dynamicWidth(context, 0.9),
-            height: AppSizes.dynamicHeight(context, 0.09),
+           height: AppSizes.dynamicHeight(context, 0.11),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
@@ -889,7 +889,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
               top: AppSizes.dynamicHeight(context, 0.01),
             ),
             width: AppSizes.dynamicWidth(context, 0.9),
-            height: AppSizes.dynamicHeight(context, 0.09),
+           height: AppSizes.dynamicHeight(context, 0.11),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
@@ -954,7 +954,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
               top: AppSizes.dynamicHeight(context, 0.01),
             ),
             width: AppSizes.dynamicWidth(context, 0.9),
-            height: AppSizes.dynamicHeight(context, 0.09),
+           height: AppSizes.dynamicHeight(context, 0.11),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
@@ -1088,7 +1088,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
               top: AppSizes.dynamicHeight(context, 0.01),
             ),
             width: AppSizes.dynamicWidth(context, 0.9),
-            height: AppSizes.dynamicHeight(context, 0.09),
+           height: AppSizes.dynamicHeight(context, 0.11),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
@@ -1114,7 +1114,7 @@ class _EditProfileMobileState extends State<EditProfileMobile> {
               top: AppSizes.dynamicHeight(context, 0.01),
             ),
             width: AppSizes.dynamicWidth(context, 0.9),
-            height: AppSizes.dynamicHeight(context, 0.09),
+           height: AppSizes.dynamicHeight(context, 0.11),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
