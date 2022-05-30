@@ -148,14 +148,14 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
             width: 300.w,
             decoration: BoxDecoration(
                 color: Colors.white, borderRadius: BorderRadius.circular(21)),
-            child: const Align(
-              alignment: Alignment.center,
+            child:  Align(
+              alignment: Alignment.centerLeft,
               child: Text(
                 'Upcoming Sessions',
-                style: TextStyle(
+                   style: TextStyle(
                   color: Colors.black,
-                  fontSize: 21,
-                  fontWeight: FontWeight.w500,
+                  fontSize: 24.sp,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),
@@ -205,20 +205,20 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
           Row(
             children: [
               Container(
-                height: AppSizes.dynamicHeight(context, 0.06),
-                width: AppSizes.dynamicWidth(context, 0.05),
+                height: AppSizes.dynamicHeight(context, 0.03),
+                width: AppSizes.dynamicWidth(context, 0.03),
                 decoration: const BoxDecoration(
                     image: DecorationImage(
                   image: AssetImage('assets/png/trophy.png'),
                   fit: BoxFit.contain,
                 )),
               ),
-              const Text(
+               Text(
                 'Tutions Completed',
-                style: TextStyle(
+                   style: TextStyle(
                   color: Colors.black,
-                  fontSize: 21,
-                  fontWeight: FontWeight.w500,
+                  fontSize: 24.sp,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ],
@@ -323,15 +323,15 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
           children: [
             Container(
               margin: EdgeInsets.only(left: 20.w, top: 10.h),
-              child: const Align(
+              child:  Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Quiz Appeared',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 21,
-                    fontWeight: FontWeight.bold,
-                  ),
+                      style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 24.sp,
+                  fontWeight: FontWeight.bold,
+                ),
                 ),
               ),
             ),
@@ -487,20 +487,20 @@ class _DashBoaedWebState extends State<DashBoaedWeb> {
           Row(
             children: [
               Container(
-                height: AppSizes.dynamicHeight(context, 0.06),
-                width: AppSizes.dynamicWidth(context, 0.05),
+                height: AppSizes.dynamicHeight(context, 0.03),
+                width: AppSizes.dynamicWidth(context, 0.03),
                 decoration: const BoxDecoration(
                     image: DecorationImage(
                   image: AssetImage('assets/png/favouriteIcon.png'),
                   fit: BoxFit.contain,
                 )),
               ),
-              const Text(
+               Text(
                 'Favourite Tutors',
-                style: TextStyle(
+                  style: TextStyle(
                   color: Colors.black,
-                  fontSize: 21,
-                  fontWeight: FontWeight.w500,
+                  fontSize: 24.sp,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ],

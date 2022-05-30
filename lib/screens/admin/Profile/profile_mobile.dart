@@ -25,21 +25,21 @@ class _ProfileMobileState extends State<ProfileMobile> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
-        // leading: Builder(
-        //   builder: (BuildContext context) {
-        //     return IconButton(
-        //       icon: const Icon(
-        //         Icons.menu,
-        //         color: Colors.black,
-        //         size: 30, // Changing Drawer Icon Size
-        //       ),
-        //       onPressed: () {
-        //         adminScafoldKey.currentState!.openDrawer();
-        //       },
-        //       tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-        //     );
-        //   },
-        // ),
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: const Icon(
+                Icons.menu,
+                color: Colors.black,
+                size: 30, // Changing Drawer Icon Size
+              ),
+              onPressed: () {
+                adminScafoldKey.currentState!.openDrawer();
+              },
+              tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+            );
+          },
+        ),
      
         title: Row(
           mainAxisAlignment: MainAxisAlignment.end,
@@ -56,7 +56,7 @@ class _ProfileMobileState extends State<ProfileMobile> {
           ],
         ),
       ),
-      // drawer: AdminDrawer(),
+      drawer: AdminDrawer(),
       body: Container(
           decoration: BoxDecoration(
             color: AppColors.customWhite,
@@ -389,6 +389,7 @@ class _ProfileMobileState extends State<ProfileMobile> {
         height: 50.h,
         decoration: BoxDecoration(
             color: AppColors.customWhite,
+            // color: Colors.black,
             borderRadius: BorderRadius.circular(30)),
         // padding: EdgeInsets.symmetric(horizontal: 2),
         child: Row(
@@ -425,10 +426,10 @@ class _ProfileMobileState extends State<ProfileMobile> {
                     55.sp, AppColors.greyText),
               ),
             ),
-            VerticalDivider(
-              color: AppColors.green,
-            ),
-            text(context, 'Time- 4:30-5.30     ', 55.sp, AppColors.green),
+            // VerticalDivider(
+            //   color: AppColors.green,
+            // ),
+            // text(context, 'Time- 4:30-5.30     ', 55.sp, AppColors.green),
           ],
         ),
       ),

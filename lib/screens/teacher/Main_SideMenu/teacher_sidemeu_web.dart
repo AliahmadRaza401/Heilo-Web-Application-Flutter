@@ -26,6 +26,7 @@ class _TeacherSideMenuWebState extends State<TeacherSideMenuWeb> {
     PageController page = PageController();
     return Scaffold(
       backgroundColor: AppColors.greenDark,
+      // backgroundColor: Colors.black,
       body: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -33,6 +34,7 @@ class _TeacherSideMenuWebState extends State<TeacherSideMenuWeb> {
             controller: page,
             style: SideMenuStyle(
               decoration: BoxDecoration(
+                border: Border.all(width: 0,color: Colors.transparent),
                 borderRadius: BorderRadius.circular(50),
               ),
               openSideMenuWidth: 250.w,
@@ -45,6 +47,7 @@ class _TeacherSideMenuWebState extends State<TeacherSideMenuWeb> {
                 fontWeight: FontWeight.bold,
                 fontSize: 16.sp,
               ),
+              
               selectedIconColor: AppColors.customBlack,
               unselectedIconColor: AppColors.customWhite,
               unselectedTitleTextStyle: TextStyle(

@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:heilo/screens/admin/Dashboard/dash_board_mobile.dart';
 import 'package:heilo/screens/admin/sideMenu/admin_sideMenu.dart';
 import 'package:heilo/screens/authentication/student_phase1/student_phase1.dart';
 import 'package:heilo/screens/teacher/Main_SideMenu/teacher_sidemenu.dart';
@@ -44,6 +45,7 @@ class MyApp extends StatelessWidget {
           },
           home: Intro(),
           // home: const AdminSideMenu(),
+          // home: const AdminDashboardMobile(),
           // home: StudentPhase1(),
           // home: const StudentSideMenu(),
           // home: const TeacherSideMenu(),

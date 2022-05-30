@@ -344,7 +344,7 @@ signUpPopUp(BuildContext context) {
               borderRadius: BorderRadius.circular(35.r)), //this right here
           child: Container(
             width: 450.w,
-            height: 700.h,
+            height: 650.h,
             child: Padding(
               padding: const EdgeInsets.all(12.0),
               child: Column(
@@ -463,7 +463,7 @@ signUpPopUpMobile(BuildContext context) {
               borderRadius: BorderRadius.circular(35.r)), //this right here
           child: Container(
             width: 450.w,
-            height: 600.h,
+            height: 580.h,
             child: Padding(
               padding: const EdgeInsets.all(12.0),
               child: Column(

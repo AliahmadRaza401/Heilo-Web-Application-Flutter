@@ -24,7 +24,7 @@ class _AdminSideMenuMainState extends State<AdminSideMenuMain> {
       // height: AppSizes.dynamicHeight(context, 1),
      
       child: ScreenTypeLayout(
-        mobile: AdminDashBoard(),
+        mobile: AdminDashboardMobile(),
         tablet: AdminSideMenu(),
         desktop:AdminSideMenu(),
       ),

@@ -12,9 +12,16 @@ import 'package:heilo/screens/student/editProfile.dart/editProfile_Mobile.dart';
 import 'package:heilo/screens/student/onDemand/onDemand_web.dart';
 import 'package:heilo/screens/student/studentInbox/studentInboxMobile.dart';
 import 'package:heilo/screens/student/student_profile/studentprofile_mobile.dart';
-
-class AdminDrawer extends StatelessWidget {
+import 'package:heilo/utils/config.dart';
+  int selectiveIndex = 2;
+class AdminDrawer extends StatefulWidget {
   const AdminDrawer({Key? key}) : super(key: key);
+
+  @override
+  State<AdminDrawer> createState() => _AdminDrawerState();
+}
+
+class _AdminDrawerState extends State<AdminDrawer> {
 
   @override
   Widget build(BuildContext context) {
@@ -26,128 +33,191 @@ class AdminDrawer extends StatelessWidget {
           DrawerHeader(
             child: Image.asset("assets/png/logo.png"),
           ),
-          ListTile(
-            leading: const ImageIcon(
-              AssetImage(
-                'assets/png/ondemand.png',
+          Container(
+            color:
+                selectiveIndex == 2 ? AppColors.greenDark : Colors.transparent,
+            child: ListTile(
+              leading: ImageIcon(
+                AssetImage(
+                  'assets/png/student_dashboard.png',
+                ),
+                size: 100,
+                color:
+                    selectiveIndex == 2 ? AppColors.customWhite : Colors.black,
               ),
-              size: 100,
-              color: Colors.black,
-            ),
-            title: const Text(
-              'Home ',
-              style: TextStyle(
-                color: Colors.black,
+              title: Text(
+                'Home ',
+                style: TextStyle(
+                  color: selectiveIndex == 2
+                      ? AppColors.customWhite
+                      : Colors.black,
+                ),
               ),
+              onTap: () {
+                setState(() {
+                  selectiveIndex = 2;
+                  print(selectiveIndex);
+                });
+                adminScafoldKey.currentState!.openEndDrawer();
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => AdminDashboardMobile()));
+              },
             ),
-            onTap: () {
-              //             if (studentScafoldKey.currentState.isDrawerOpen) {
-              // studentScafoldKey.currentState.openEndDrawer();
-// }
-              adminScafoldKey.currentState!.openEndDrawer();
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => AdminDashboardMobile()));
-            },
           ),
-          ListTile(
-            leading: const ImageIcon(
-              AssetImage(
-                'assets/png/quiz.png',
+          Container(
+            color:
+                selectiveIndex == 3 ? AppColors.greenDark : Colors.transparent,
+            child: ListTile(
+              leading: ImageIcon(
+                AssetImage(
+                  'assets/png/student_quiz.png',
+                ),
+                size: 100,
+                color:
+                    selectiveIndex == 3 ? AppColors.customWhite : Colors.black,
               ),
-              size: 100,
-              color: Colors.black,
-            ),
-            title: const Text(
-              'Quiz',
-              style: TextStyle(
-                color: Colors.black,
+              title: Text(
+                'Quiz',
+                style: TextStyle(
+                  color: selectiveIndex == 3
+                      ? AppColors.customWhite
+                      : Colors.black,
+                ),
               ),
+              onTap: () {
+                setState(() {
+                  selectiveIndex = 3;
+                  print(selectiveIndex);
+                });
+                adminScafoldKey.currentState!.openEndDrawer();
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => QuizReportMobile()));
+              },
             ),
-            onTap: () {
-              adminScafoldKey.currentState!.openEndDrawer();
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => QuizReportMobile()));
-            },
           ),
-          ListTile(
-            leading: const ImageIcon(
-              AssetImage(
-                'assets/png/dashboard.png',
+          Container(
+            color:
+                selectiveIndex == 4 ? AppColors.greenDark : Colors.transparent,
+            child: ListTile(
+              leading: ImageIcon(
+                AssetImage(
+                  'assets/png/admin_paymentrequest.png',
+                ),
+                size: 100,
+                color:
+                    selectiveIndex == 4 ? AppColors.customWhite : Colors.black,
               ),
-              size: 100,
-              color: Colors.black,
-            ),
-            title: const Text(
-              'Teacher ',
-              style: TextStyle(
-                color: Colors.black,
+              title: Text(
+                'Teacher ',
+                style: TextStyle(
+                  color: selectiveIndex == 4
+                      ? AppColors.customWhite
+                      : Colors.black,
+                ),
               ),
+              onTap: () {
+                setState(() {
+                  selectiveIndex = 4;
+                  print(selectiveIndex);
+                });
+                adminScafoldKey.currentState!.openEndDrawer();
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => PaymentPageMobile()));
+              },
             ),
-            onTap: () {
-              adminScafoldKey.currentState!.openEndDrawer();
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => PaymentPageMobile()));
-            },
           ),
-          ListTile(
-            leading: const ImageIcon(
-              AssetImage(
-                'assets/png/profile.png',
+          Container(
+            color:
+                selectiveIndex == 5 ? AppColors.greenDark : Colors.transparent,
+            child: ListTile(
+              leading: ImageIcon(
+                AssetImage(
+                  'assets/png/admin_student.png',
+                ),
+                size: 100,
+                color:
+                    selectiveIndex == 5 ? AppColors.customWhite : Colors.black,
               ),
-              size: 100,
-              color: Colors.black,
-            ),
-            title: const Text(
-              'Student',
-              style: TextStyle(
-                color: Colors.black,
+              title: Text(
+                'Student',
+                style: TextStyle(
+                  color: selectiveIndex == 5
+                      ? AppColors.customWhite
+                      : Colors.black,
+                ),
               ),
+              onTap: () {
+                setState(() {
+                  selectiveIndex = 5;
+                  print(selectiveIndex);
+                });
+                adminScafoldKey.currentState!.openEndDrawer();
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => ProfileMobile()));
+              },
             ),
-            onTap: () {
-              adminScafoldKey.currentState!.openEndDrawer();
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => ProfileMobile()));
-            },
           ),
-          ListTile(
-            leading: const ImageIcon(
-              AssetImage(
-                'assets/png/editProfile.png',
+          Container(
+            color:
+                selectiveIndex == 6 ? AppColors.greenDark : Colors.transparent,
+            child: ListTile(
+              leading: ImageIcon(
+                AssetImage(
+                  'assets/png/admin_financial.png',
+                ),
+                size: 100,
+                color:
+                    selectiveIndex == 6 ? AppColors.customWhite : Colors.black,
               ),
-              size: 100,
-              color: Colors.black,
-            ),
-            title: const Text(
-              'Financials',
-              style: TextStyle(
-                color: Colors.black,
+              title: Text(
+                'Financials',
+                style: TextStyle(
+                  color: selectiveIndex == 6
+                      ? AppColors.customWhite
+                      : Colors.black,
+                ),
               ),
+              onTap: () {
+                setState(() {
+                  selectiveIndex = 6;
+                  print(selectiveIndex);
+                });
+                adminScafoldKey.currentState!.openEndDrawer();
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => ProfitMobile()));
+              },
             ),
-            onTap: () {
-              adminScafoldKey.currentState!.openEndDrawer();
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => ProfitMobile()));
-            },
           ),
-          ListTile(
-            leading: const ImageIcon(
-              AssetImage(
-                'assets/png/inbox.png',
+          Container(
+            color:
+                selectiveIndex == 7 ? AppColors.greenDark : Colors.transparent,
+            child: ListTile(
+              leading: ImageIcon(
+                AssetImage(
+                  'assets/png/admin_contact.png',
+                ),
+                size: 100,
+                color:
+                    selectiveIndex == 7 ? AppColors.customWhite : Colors.black,
               ),
-              size: 100,
-              color: Colors.black,
-            ),
-            title: const Text(
-              'Contact',
-              style: TextStyle(
-                color: Colors.black,
+              title: Text(
+                'Contact',
+                style: TextStyle(
+                  color: selectiveIndex == 7
+                      ? AppColors.customWhite
+                      : Colors.black,
+                ),
               ),
+              onTap: () {
+                setState(() {
+                  selectiveIndex = 7;
+                  print(selectiveIndex);
+                });
+                adminScafoldKey.currentState!.openEndDrawer();
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => AdminContactMobile()));
+              },
             ),
-            onTap: () {
-              adminScafoldKey.currentState!.openEndDrawer();
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => AdminContactMobile()));
-            },
           ),
         ],
       ),

@@ -28,21 +28,21 @@ class _QuizReportMobileState extends State<QuizReportMobile> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
-        // leading: Builder(
-        //   builder: (BuildContext context) {
-        //     return IconButton(
-        //       icon: const Icon(
-        //         Icons.menu,
-        //         color: Colors.black,
-        //         size: 30, // Changing Drawer Icon Size
-        //       ),
-        //       onPressed: () {
-        //         adminScafoldKey.currentState!.openDrawer();
-        //       },
-        //       tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-        //     );
-        //   },
-        // ),
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: const Icon(
+                Icons.menu,
+                color: Colors.black,
+                size: 30, // Changing Drawer Icon Size
+              ),
+              onPressed: () {
+                adminScafoldKey.currentState!.openDrawer();
+              },
+              tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+            );
+          },
+        ),
 
         title: Row(
           mainAxisAlignment: MainAxisAlignment.end,
@@ -59,7 +59,7 @@ class _QuizReportMobileState extends State<QuizReportMobile> {
           ],
         ),
       ),
-      // drawer: AdminDrawer(),
+      drawer: AdminDrawer(),
       body: Container(
         decoration: BoxDecoration(
           color: AppColors.customWhite,

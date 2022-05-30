@@ -282,17 +282,17 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-           margin: EdgeInsets.only(left: 20.w, top: 10.h),
+           margin: EdgeInsets.only(left: 10.w, top: 10.h),
             alignment: Alignment.centerLeft,
             width: 300.w,
             // decoration: BoxDecoration(
             //     color: Colors.white, borderRadius: BorderRadius.circular(21)),
             child: Align(
-              alignment: Alignment.center,
+              alignment: Alignment.centerLeft,
               child: Text(
                 'Tution Request',
-                style: TextStyle(
-                  color: Colors.red,
+                  style: TextStyle(
+                  color: Colors.black,
                   fontSize: 24.sp,
                   fontWeight: FontWeight.bold,
                 ),
@@ -412,8 +412,8 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
             children: [
               Container(
                 // margin: EdgeInsets.all(10.w),
-                height: AppSizes.dynamicHeight(context, 0.06),
-                width: AppSizes.dynamicWidth(context, 0.05),
+                height: AppSizes.dynamicHeight(context, 0.03),
+                width: AppSizes.dynamicWidth(context, 0.03),
                 decoration: const BoxDecoration(
                     image: DecorationImage(
                   image: AssetImage(
@@ -425,7 +425,7 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
               Text(
                 'Tutions Completed',
                 style: TextStyle(
-                  color: Colors.red,
+                  color: Colors.black,
                   fontSize: 24.sp,
                   fontWeight: FontWeight.bold,
                 ),
@@ -438,6 +438,8 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
               child: Column(
                 children: [
                   tutionInerWidget(),
+                  tutionInerWidget(),
+                   tutionInerWidget(),
                   tutionInerWidget(),
                 
                 ],
@@ -518,11 +520,11 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
                 alignment: Alignment.center,
                 child: Text(
                   'Weekly Contribution',
-                  style: TextStyle(
-                    color: Colors.red,
-                    fontSize: 24.sp,
-                    fontWeight: FontWeight.bold,
-                  ),
+                    style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 24.sp,
+                  fontWeight: FontWeight.bold,
+                ),
                 ),
               ),
             ),
