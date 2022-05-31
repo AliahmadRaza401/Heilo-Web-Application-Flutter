@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heilo/screens/student/Studentquiz/ChapterTestWidget1.dart';
 
@@ -19,9 +20,14 @@ class _ChapterTestWidgetState extends State<ChapterTestWidget> {
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0.0,
-          
+          leading: InkWell(
+              onTap: () {
+                Navigator.of(context).pop();
+              },
+              child: Icon(Icons.arrow_back)),
+          iconTheme: IconThemeData(color: Colors.black),
         ),
-        drawer: Drawer(),
+        // drawer: Drawer(),
         body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Container(

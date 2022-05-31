@@ -35,101 +35,104 @@ class _TeacherDashBoaedWebState extends State<TeacherDashBoaedWeb> {
           color: Colors.white,
           borderRadius: BorderRadius.circular(30.r),
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            topIconAvatar(context),
-            SizedBox(
-              height: 10.h,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                InkWell(
-                  onTap: () {
-                    setState(() {
-                      SelectedCard = 1;
-                    });
-                  },
-                  child: cardWidget(
-                    'assets/png/g1.png',
-                    "Upcoming Sessions",
-                    "03",
-                    SelectedCard == 1 ? 0xffFFFFFF : 0xff000000,
-                    SelectedCard == 1
-                        ? Color(0xff5F5F5F)
-                        : AppColors.customGrey,
-                  ),
-                ),
-                InkWell(
-                  onTap: () {
-                    setState(() {
-                      SelectedCard = 2;
-                    });
-                  },
-                  child: cardWidget(
-                    'assets/png/g2.png',
-                    "Tutions completed",
-                    "03",
-                    SelectedCard == 2 ? 0xffFFFFFF : 0xff000000,
-                    SelectedCard == 2
-                        ? Color(0xff5F5F5F)
-                        : AppColors.customGrey,
-                  ),
-                ),
-                InkWell(
-                  onTap: () {
-                    setState(() {
-                      SelectedCard = 3;
-                    });
-                  },
-                  child: cardWidget(
-                    'assets/png/g3.png',
-                    "Tution Request",
-                    "03",
-                    SelectedCard == 3 ? 0xffFFFFFF : 0xff000000,
-                    SelectedCard == 3
-                        ? Color(0xff5F5F5F)
-                        : AppColors.customGrey,
-                  ),
-                ),
-                InkWell(
-                  onTap: () {
-                    setState(() {
-                      SelectedCard = 4;
-                    });
-                  },
-                  child: cardWidget(
-                    'assets/png/g4.png',
-                    "Weekly Contribution",
-                    "+20%",
-                    SelectedCard == 4 ? 0xffFFFFFF : 0xff01B489,
-                    SelectedCard == 4
-                        ? Color(0xff5F5F5F)
-                        : AppColors.customGrey,
-                  ),
-                ),
-              ],
-            ),
-            Container(
-              // color: Colors.amber,
-              margin: EdgeInsets.only(top: 60.h),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        child: SingleChildScrollView(
+    
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              topIconAvatar(context),
+              SizedBox(
+                height: 10.h,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  SelectedCard == 1
-                      ? upComingCard()
-                      : SelectedCard == 2
-                          ? tutionsCard()
-                          : SelectedCard == 3
-                              ? tutionRequest()
-                              : favoriteTutiCard(),
-          dashBoardnotificationContainer(context),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        SelectedCard = 1;
+                      });
+                    },
+                    child: cardWidget(
+                      'assets/png/g1.png',
+                      "Upcoming Sessions",
+                      "03",
+                      SelectedCard == 1 ? 0xffFFFFFF : 0xff000000,
+                      SelectedCard == 1
+                          ? Color(0xff5F5F5F)
+                          : AppColors.customGrey,
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        SelectedCard = 2;
+                      });
+                    },
+                    child: cardWidget(
+                      'assets/png/g2.png',
+                      "Tutions completed",
+                      "03",
+                      SelectedCard == 2 ? 0xffFFFFFF : 0xff000000,
+                      SelectedCard == 2
+                          ? Color(0xff5F5F5F)
+                          : AppColors.customGrey,
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        SelectedCard = 3;
+                      });
+                    },
+                    child: cardWidget(
+                      'assets/png/g3.png',
+                      "Tution Request",
+                      "03",
+                      SelectedCard == 3 ? 0xffFFFFFF : 0xff000000,
+                      SelectedCard == 3
+                          ? Color(0xff5F5F5F)
+                          : AppColors.customGrey,
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        SelectedCard = 4;
+                      });
+                    },
+                    child: cardWidget(
+                      'assets/png/g4.png',
+                      "Weekly Contribution",
+                      "+20%",
+                      SelectedCard == 4 ? 0xffFFFFFF : 0xff01B489,
+                      SelectedCard == 4
+                          ? Color(0xff5F5F5F)
+                          : AppColors.customGrey,
+                    ),
+                  ),
                 ],
               ),
-            )
-          ],
+              Container(
+                // color: Colors.amber,
+                margin: EdgeInsets.only(top: 60.h),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    SelectedCard == 1
+                        ? upComingCard()
+                        : SelectedCard == 2
+                            ? tutionsCard()
+                            : SelectedCard == 3
+                                ? tutionRequest()
+                                : favoriteTutiCard(),
+            dashBoardnotificationContainer(context),
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

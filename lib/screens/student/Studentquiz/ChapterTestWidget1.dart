@@ -16,10 +16,16 @@ class _ChapterStateWidget1State extends State<ChapterStateWidget1> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0.0,
-      ),
-      drawer: const Drawer(),
+          backgroundColor: Colors.transparent,
+          elevation: 0.0,
+          leading: InkWell(
+              onTap: () {
+                Navigator.of(context).pop();
+              },
+              child: Icon(Icons.arrow_back)),
+          iconTheme: IconThemeData(color: Colors.black),
+        ),
+      // drawer: const Drawer(),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
