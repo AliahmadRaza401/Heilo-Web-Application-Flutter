@@ -37,7 +37,25 @@ class _StudentSideMenuWebState extends State<StudentSideMenuWeb> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(50),
               ),
-              openSideMenuWidth: 250.w,
+              // openSideMenuWidth: 250.w,
+              // compactSideMenuWidth: 50,
+              // displayMode: SideMenuDisplayMode.auto,
+              // hoverColor: AppColors.customSkimColor,
+              // selectedColor: AppColors.customWhite,
+              // selectedTitleTextStyle: TextStyle(
+              //   color: AppColors.customBlack,
+              //   fontWeight: FontWeight.bold,
+              //   fontSize: 16.sp,
+              // ),
+              // selectedIconColor: AppColors.customBlack,
+              // unselectedIconColor: AppColors.customWhite,
+              // unselectedTitleTextStyle: TextStyle(
+              //   color: AppColors.customWhite,
+              //   fontWeight: FontWeight.normal,
+              //   fontSize: 16.sp,
+              // ),
+              openSideMenuWidth: 150,
+
               compactSideMenuWidth: 50,
               displayMode: SideMenuDisplayMode.auto,
               hoverColor: AppColors.customSkimColor,

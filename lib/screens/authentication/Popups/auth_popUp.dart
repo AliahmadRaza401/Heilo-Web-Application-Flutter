@@ -167,6 +167,7 @@ loginPopUp(BuildContext context) {
       });
 }
 
+
 loginPopUpMobile(BuildContext context) {
   showDialog(
       context: context,
@@ -324,7 +325,7 @@ loginPopUpMobile(BuildContext context) {
                     ),
                   ),
                   SizedBox(
-                    height: 50.h,
+                    height: 15.h,
                   ),
                 ],
               ),
@@ -333,6 +334,7 @@ loginPopUpMobile(BuildContext context) {
         );
       });
 }
+
 
 signUpPopUp(BuildContext context) {
   bool agree = false;
@@ -374,7 +376,7 @@ signUpPopUp(BuildContext context) {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            text(context, "Welcome to Heilo!",  AppSizes.dynamicWidth(context, 0.04),
+                            text(context, "Welcome to Heilo!", 22.sp,
                                 AppColors.greenDark),
                           ],
                         ),
@@ -411,9 +413,9 @@ signUpPopUp(BuildContext context) {
                                 ),
                               );
                             })),
-                            text(context, "I agree to the ",  AppSizes.dynamicWidth(context, 0.04),
+                            text(context, "I agree to the ",  12.sp,
                                 Color(0xff444F55)),
-                            text(context, "Terms and Conditions",  AppSizes.dynamicWidth(context, 0.04),
+                            text(context, "Terms and Conditions",   12.sp,
                                 AppColors.greenDark),
                           ],
                         ),
@@ -432,7 +434,7 @@ signUpPopUp(BuildContext context) {
                               ),
                               alignment: Alignment.center,
                               child: text(
-                                  context, "REGISTER", AppSizes.dynamicWidth(context, 0.04), Colors.white),
+                                  context, "REGISTER", 22.sp, Colors.white),
                             ),
                           ],
                         ),
@@ -442,9 +444,7 @@ signUpPopUp(BuildContext context) {
                       ],
                     ),
                   ),
-                  SizedBox(
-                    height: 50.h,
-                  ),
+                 
                 ],
               ),
             ),
@@ -452,6 +452,7 @@ signUpPopUp(BuildContext context) {
         );
       });
 }
+
 
 signUpPopUpMobile(BuildContext context) {
   bool agree = false;
@@ -496,7 +497,7 @@ signUpPopUpMobile(BuildContext context) {
                             text(
                                 context,
                                 "Welcome to Heilo!",
-                                AppSizes.dynamicWidth(context, 0.04),
+                                65.sp,
                                 AppColors.greenDark),
                           ],
                         ),
@@ -536,12 +537,12 @@ signUpPopUpMobile(BuildContext context) {
                             text(
                                 context,
                                 "I agree to the ",
-                                AppSizes.dynamicWidth(context, 0.02),
+                              50.sp,
                                 Color(0xff444F55)),
                             text(
                                 context,
                                 "Terms and Conditions",
-                                AppSizes.dynamicWidth(context, 0.02),
+                              50.sp,
                                 AppColors.greenDark),
                           ],
                         ),
@@ -562,20 +563,18 @@ signUpPopUpMobile(BuildContext context) {
                               child: text(
                                   context,
                                   "REGISTER",
-                                  AppSizes.dynamicWidth(context, 0.02),
+                                 65.sp,
                                   Colors.white),
                             ),
                           ],
                         ),
                         SizedBox(
-                          height: 30.h,
+                          height: 15.h,
                         ),
                       ],
                     ),
                   ),
-                  SizedBox(
-                    height: 50.h,
-                  ),
+                
                 ],
               ),
             ),
@@ -583,3 +582,5 @@ signUpPopUpMobile(BuildContext context) {
         );
       });
 }
+
+

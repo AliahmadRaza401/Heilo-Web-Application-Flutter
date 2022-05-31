@@ -37,7 +37,26 @@ class _TeacherSideMenuWebState extends State<TeacherSideMenuWeb> {
                 border: Border.all(width: 0,color: Colors.transparent),
                 borderRadius: BorderRadius.circular(50),
               ),
-              openSideMenuWidth: 250.w,
+              // openSideMenuWidth: 250.w,
+              // compactSideMenuWidth: 50,
+              // displayMode: SideMenuDisplayMode.auto,
+              // hoverColor: AppColors.customSkimColor,
+              // selectedColor: AppColors.customWhite,
+              // selectedTitleTextStyle: TextStyle(
+              //   color: AppColors.customBlack,
+              //   fontWeight: FontWeight.bold,
+              //   fontSize: 16.sp,
+              // ),
+              
+              // selectedIconColor: AppColors.customBlack,
+              // unselectedIconColor: AppColors.customWhite,
+              // unselectedTitleTextStyle: TextStyle(
+              //   color: AppColors.customWhite,
+              //   fontWeight: FontWeight.normal,
+              //   fontSize: 16.sp,
+              // ),
+              openSideMenuWidth: 150,
+
               compactSideMenuWidth: 50,
               displayMode: SideMenuDisplayMode.auto,
               hoverColor: AppColors.customSkimColor,
@@ -47,7 +66,6 @@ class _TeacherSideMenuWebState extends State<TeacherSideMenuWeb> {
                 fontWeight: FontWeight.bold,
                 fontSize: 16.sp,
               ),
-              
               selectedIconColor: AppColors.customBlack,
               unselectedIconColor: AppColors.customWhite,
               unselectedTitleTextStyle: TextStyle(
