@@ -167,7 +167,6 @@ loginPopUp(BuildContext context) {
       });
 }
 
-
 loginPopUpMobile(BuildContext context) {
   showDialog(
       context: context,
@@ -335,7 +334,6 @@ loginPopUpMobile(BuildContext context) {
       });
 }
 
-
 signUpPopUp(BuildContext context) {
   bool agree = false;
   showDialog(
@@ -413,9 +411,9 @@ signUpPopUp(BuildContext context) {
                                 ),
                               );
                             })),
-                            text(context, "I agree to the ",  12.sp,
+                            text(context, "I agree to the ", 12.sp,
                                 Color(0xff444F55)),
-                            text(context, "Terms and Conditions",   12.sp,
+                            text(context, "Terms and Conditions", 12.sp,
                                 AppColors.greenDark),
                           ],
                         ),
@@ -444,7 +442,6 @@ signUpPopUp(BuildContext context) {
                       ],
                     ),
                   ),
-                 
                 ],
               ),
             ),
@@ -452,7 +449,6 @@ signUpPopUp(BuildContext context) {
         );
       });
 }
-
 
 signUpPopUpMobile(BuildContext context) {
   bool agree = false;
@@ -494,10 +490,7 @@ signUpPopUpMobile(BuildContext context) {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            text(
-                                context,
-                                "Welcome to Heilo!",
-                                65.sp,
+                            text(context, "Welcome to Heilo!", 65.sp,
                                 AppColors.greenDark),
                           ],
                         ),
@@ -534,15 +527,9 @@ signUpPopUpMobile(BuildContext context) {
                                 ),
                               );
                             })),
-                            text(
-                                context,
-                                "I agree to the ",
-                              50.sp,
+                            text(context, "I agree to the ", 50.sp,
                                 Color(0xff444F55)),
-                            text(
-                                context,
-                                "Terms and Conditions",
-                              50.sp,
+                            text(context, "Terms and Conditions", 50.sp,
                                 AppColors.greenDark),
                           ],
                         ),
@@ -561,10 +548,7 @@ signUpPopUpMobile(BuildContext context) {
                               ),
                               alignment: Alignment.center,
                               child: text(
-                                  context,
-                                  "REGISTER",
-                                 65.sp,
-                                  Colors.white),
+                                  context, "REGISTER", 65.sp, Colors.white),
                             ),
                           ],
                         ),
@@ -574,7 +558,6 @@ signUpPopUpMobile(BuildContext context) {
                       ],
                     ),
                   ),
-                
                 ],
               ),
             ),
@@ -582,5 +565,3 @@ signUpPopUpMobile(BuildContext context) {
         );
       });
 }
-
-

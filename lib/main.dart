@@ -10,6 +10,7 @@ import 'package:heilo/screens/teacher/TeacherWallet/teacher_wallet.dart';
 import 'package:heilo/screens/teacher/editProfile.dart/teacher_editProfile.dart';
 import 'package:heilo/screens/teacher/teacher_profile/teacher_profile.dart';
 
+import 'Test Side Menu/muAppTest.dart';
 import 'screens/authentication/Intro/intro.dart';
 import 'screens/student/Main_SideMenu/student_sidemenu.dart';
 
@@ -43,7 +44,8 @@ class MyApp extends StatelessWidget {
               child: widget!,
             );
           },
-          home: Intro(),
+          // home: Intro(),
+          home: MyAppp(),
           // home: const AdminSideMenu(),
           // home: const AdminDashboardMobile(),
           // home: StudentPhase1(),
